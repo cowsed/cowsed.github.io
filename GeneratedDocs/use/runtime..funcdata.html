@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.funcdata</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/symtab.go.html#line-922">funcdata</a></b></span>
+
+17 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/debugcall.go.html#line-89">debugcall.go#L89</a>: 			stkmap := (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_RegPointerMaps))
+		<a href="../src/runtime/heapdump.go.html#line-261">heapdump.go#L261</a>: 	stkmap := (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_LocalsPointerMaps))
+		<a href="../src/runtime/heapdump.go.html#line-322" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-322">#L322</a>: 	stkmap = (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_ArgsPointerMaps))
+		<a href="../src/runtime/panic.go.html#line-730">panic.go#L730</a>: 				fd := <b>funcdata</b>(f, _FUNCDATA_OpenCodedDeferInfo)
+		<a href="../src/runtime/preempt.go.html#line-424">preempt.go#L424</a>: 	if fd := <b>funcdata</b>(f, _FUNCDATA_LocalsPointerMaps); fd == nil || fd == unsafe.Pointer(&no_pointers_stackmap) {
+		<a href="../src/runtime/preempt.go.html#line-436" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-436">#L436</a>: 	if inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree); inldata != nil {
+		<a href="../src/runtime/proc.go.html#line-3623">proc.go#L3623</a>: 			stkmap := (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_ArgsPointerMaps))
+		<a href="../src/runtime/stack.go.html#line-1252">stack.go#L1252</a>: 		stkmap := (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_LocalsPointerMaps))
+		<a href="../src/runtime/stack.go.html#line-1285" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1285">#L1285</a>: 			stackmap := (*stackmap)(<b>funcdata</b>(f, _FUNCDATA_ArgsPointerMaps))
+		<a href="../src/runtime/stack.go.html#line-1302" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1302">#L1302</a>: 	p := <b>funcdata</b>(f, _FUNCDATA_StackObjects)
+		<a href="../src/runtime/symtab.go.html#line-103">symtab.go#L103</a>: 		if inldata := <b>funcdata</b>(funcInfo, _FUNCDATA_InlTree); inldata != nil {
+		<a href="../src/runtime/symtab.go.html#line-168" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-168">#L168</a>: 	inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree)
+		<a href="../src/runtime/symtab.go.html#line-573" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-573">#L573</a>: 	if inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree); inldata != nil {
+		<a href="../src/runtime/symtab.go.html#line-922" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-922">#L922</a>: func <b>funcdata</b>(f funcInfo, i uint8) unsafe.Pointer {
+		<a href="../src/runtime/traceback.go.html#line-361">traceback.go#L361</a>: 			if inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree); inldata != nil {
+		<a href="../src/runtime/traceback.go.html#line-409" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-409">#L409</a>: 			if inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree); inldata != nil {
+		<a href="../src/runtime/traceback.go.html#line-779" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-779">#L779</a>: 	if inldata := <b>funcdata</b>(f, _FUNCDATA_InlTree); inldata != nil {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

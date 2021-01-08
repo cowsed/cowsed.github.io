@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source: DateTime.go in package github.com/cowsed/ElfHouse/Helpers/Time</title>
+<link href="../../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre id="header"><code><span class="title">Source File</span>
+	DateTime.go
+
+<span class="title">Belonging Package</span>
+	<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html">github.com/cowsed/ElfHouse/Helpers/Time</a>
+</code></pre>
+<style>input[type=radio] {display: none;}
+input[id=r0]:checked ~pre label[for=r0],
+input[id=r1]:checked ~pre label[for=r1],
+input[id=r2]:checked ~pre label[for=r2],
+input[id=r3]:checked ~pre label[for=r3],
+input[id=r4]:checked ~pre label[for=r4],
+input[id=r5]:checked ~pre label[for=r5],
+input[id=r6]:checked ~pre label[for=r6],
+input[id=r7]:checked ~pre label[for=r7],
+input[id=r8]:checked ~pre label[for=r8],
+input[id=r9]:checked ~pre label[for=r9],
+input[id=r10]:checked ~pre label[for=r10],
+input[id=r11]:checked ~pre label[for=r11],
+input[id=r12]:checked ~pre label[for=r12]
+{ background: #226; color: #ff8; padding-left: 1px;}
+</style><input id="r0" type="radio" name="g"/>
+<input id="r1" type="radio" name="g"/>
+<input id="r2" type="radio" name="g"/>
+<input id="r3" type="radio" name="g"/>
+<input id="r4" type="radio" name="g"/>
+<input id="r5" type="radio" name="g"/>
+<input id="r6" type="radio" name="g"/>
+<input id="r7" type="radio" name="g"/>
+<input id="r8" type="radio" name="g"/>
+<input id="r9" type="radio" name="g"/>
+<input id="r10" type="radio" name="g"/>
+<input id="r11" type="radio" name="g"/>
+<input id="r12" type="radio" name="g"/>
+
+<pre class="line-numbers">
+<span class="codeline" id="line-1"><code><span class="keyword">package</span> time</code></span>
+<span class="codeline" id="line-2"><code></code></span>
+<span class="codeline" id="line-3"><code><span class="keyword">import</span>(<span class="lit-string">"fmt"</span></code></span>
+<span class="codeline" id="line-4"><code>        <span class="lit-string">"strings"</span></code></span>
+<span class="codeline" id="line-5"><code>        )</code></span>
+<span class="codeline" id="line-6"><code></code></span>
+<span class="codeline" id="line-7"><code><span class="comment">//Pretend year is 364 days and month is 28 days and there are 13 months</span></code></span>
+<span class="codeline" id="line-8"><code><span class="keyword">var</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html#name-Days" class="ident">Days</a> []<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a> =[]<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>{<span class="lit-string">"monday"</span>,<span class="lit-string">"tuesday"</span>,<span class="lit-string">"wednesday"</span>,<span class="lit-string">"thursday"</span>,<span class="lit-string">"friday"</span>,<span class="lit-string">"saturday"</span>,<span class="lit-string">"sunday"</span>}</code></span>
+<span class="codeline" id="line-9"><code><span class="keyword">var</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html#name-Months" class="ident">Months</a> []<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>=[]<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>{<span class="lit-string">"january"</span>,<span class="lit-string">"february"</span>,<span class="lit-string">"march"</span>,<span class="lit-string">"april"</span>,<span class="lit-string">"may"</span>,<span class="lit-string">"june"</span>,<span class="lit-string">"july"</span>,<span class="lit-string">"august"</span>,<span class="lit-string">"september"</span>,<span class="lit-string">"october"</span>,<span class="lit-string">"november"</span>,<span class="lit-string">"december"</span>,<span class="lit-string">"elevember"</span>}</code></span>
+<span class="codeline" id="line-10"><code><span class="keyword">type</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html#name-Date" class="ident">Date</a> <span class="keyword">struct</span> {</code></span>
+<span class="codeline" id="line-11"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.Year.html" class="ident">Year</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-12"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.Month.html" class="ident">Month</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-13"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.Day.html" class="ident">Day</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-14"><code>}</code></span>
+<span class="codeline" id="line-15"><code></code></span>
+<span class="codeline" id="line-16"><code><span class="keyword">type</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html#name-Time" class="ident">Time</a> <span class="keyword">struct</span>{</code></span>
+<span class="codeline" id="line-17"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Time.Hour.html" class="ident">Hour</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-18"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Time.Minute.html" class="ident">Minute</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-19"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Time.Second.html" class="ident">Second</a> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a></code></span>
+<span class="codeline" id="line-20"><code>}</code></span>
+<span class="codeline" id="line-21"><code></code></span>
+<span class="codeline" id="line-22"><code><span class="keyword">type</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Time.html#name-DateTime" class="ident">DateTime</a> <span class="keyword">struct</span>{</code></span>
+<span class="codeline" id="line-23"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..DateTime.Date.html" class="ident">Date</a> <a href="#line-10" class="ident">Date</a></code></span>
+<span class="codeline" id="line-24"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..DateTime.Time.html" class="ident">Time</a> <a href="#line-16" class="ident">Time</a></code></span>
+<span class="codeline" id="line-25"><code>}</code></span>
+<span class="codeline" id="line-26"><code></code></span>
+<span class="codeline" id="line-27"><code></code></span>
+<span class="codeline" id="line-28"><code></code></span>
+<span class="codeline" id="line-29"><code><span class="comment">//Get day/month of Date</span></code></span>
+<span class="codeline" id="line-30"><code><span class="keyword">func</span> (<label for="r0" class="ident">d</label> <a href="#line-10" class="ident">Date</a>) <label for="r1" class="ident"><a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.GetDay.html" class="ident">GetDay</a></label>()<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>{</code></span>
+<span class="codeline" id="line-31"><code>    <label for="r2" class="ident">n</label>:=<label for="r0" class="ident">d</label>.<a href="#line-13" class="ident">Day</a>+<span class="lit-number">28</span>*<label for="r0" class="ident">d</label>.<a href="#line-12" class="ident">Month</a> -<span class="lit-number">1</span> <span class="comment">//-1 because lists start at 0</span></code></span>
+<span class="codeline" id="line-32"><code>    <label for="r2" class="ident">n</label>=<label for="r2" class="ident">n</label>%<span class="lit-number">7</span></code></span>
+<span class="codeline" id="line-33"><code></code></span>
+<span class="codeline" id="line-34"><code>    <label for="r3" class="ident">day</label>:=<a href="#line-8" class="ident">Days</a>[<label for="r2" class="ident">n</label>]</code></span>
+<span class="codeline" id="line-35"><code>    <span class="keyword">return</span> <a href="../../../../../../pkg/strings.html" class="ident">strings</a>.<a href="../../../../../strings/strings.go.html#line-710" class="ident">Title</a>(<label for="r3" class="ident">day</label>)</code></span>
+<span class="codeline" id="line-36"><code></code></span>
+<span class="codeline" id="line-37"><code>}</code></span>
+<span class="codeline" id="line-38"><code><span class="keyword">func</span> (<label for="r4" class="ident">d</label> <a href="#line-10" class="ident">Date</a>) <label for="r5" class="ident"><a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.GetMonth.html" class="ident">GetMonth</a></label>()<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>{</code></span>
+<span class="codeline" id="line-39"><code>    <span class="keyword">return</span> <a href="../../../../../../pkg/strings.html" class="ident">strings</a>.<a href="../../../../../strings/strings.go.html#line-710" class="ident">Title</a>(<a href="#line-9" class="ident">Months</a>[<label for="r4" class="ident">d</label>.<a href="#line-12" class="ident">Month</a>-<span class="lit-number">1</span>])</code></span>
+<span class="codeline" id="line-40"><code>}</code></span>
+<span class="codeline" id="line-41"><code></code></span>
+<span class="codeline" id="line-42"><code></code></span>
+<span class="codeline" id="line-43"><code><span class="keyword">func</span> (<label for="r6" class="ident">d</label> <a href="#line-10" class="ident">Date</a>) <label for="r7" class="ident"><a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.GetDateString.html" class="ident">GetDateString</a></label>() <a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a> {</code></span>
+<span class="codeline" id="line-44"><code>    <span class="comment">//day number of month, year</span></code></span>
+<span class="codeline" id="line-45"><code>    <span class="keyword">return</span> <a href="../../../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../../../fmt/print.go.html#line-217" class="ident">Sprintf</a>(<span class="lit-string">"%s the %s of %s, %s year"</span>,<label for="r6" class="ident">d</label>.<a href="#line-30" class="ident">GetDay</a>(),<a href="#line-51" class="ident">getOrderString</a>(<label for="r6" class="ident">d</label>.<a href="#line-13" class="ident">Day</a>), <label for="r6" class="ident">d</label>.<a href="#line-38" class="ident">GetMonth</a>(), <a href="#line-51" class="ident">getOrderString</a>(<label for="r6" class="ident">d</label>.<a href="#line-11" class="ident">Year</a>))</code></span>
+<span class="codeline" id="line-46"><code>}</code></span>
+<span class="codeline" id="line-47"><code></code></span>
+<span class="codeline" id="line-48"><code></code></span>
+<span class="codeline" id="line-49"><code></code></span>
+<span class="codeline" id="line-50"><code></code></span>
+<span class="codeline" id="line-51"><code><span class="keyword">func</span> <a href="../../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..getOrderString.html" class="ident">getOrderString</a>(<label for="r9" class="ident">n</label> <a href="../../../../../../pkg/builtin.html#name-int" class="ident">int</a>)<a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a>{</code></span>
+<span class="codeline" id="line-52"><code></code></span>
+<span class="codeline" id="line-53"><code>    <span class="comment">//turn 1,2,3,4,5... to 1st, 2nd, 3rd, 4th 5th etc</span></code></span>
+<span class="codeline" id="line-54"><code>    <label for="r10" class="ident">h</label>:=<label for="r9" class="ident">n</label>%<span class="lit-number">100</span></code></span>
+<span class="codeline" id="line-55"><code>    <label for="r11" class="ident">t</label>:=<label for="r10" class="ident">h</label>%<span class="lit-number">10</span></code></span>
+<span class="codeline" id="line-56"><code></code></span>
+<span class="codeline" id="line-57"><code>    <span class="keyword">var</span> <label for="r12" class="ident">e</label> <a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a></code></span>
+<span class="codeline" id="line-58"><code>    <span class="keyword">if</span> <label for="r10" class="ident">h</label>&gt;<span class="lit-number">10</span> &amp;&amp; <label for="r10" class="ident">h</label>&lt;<span class="lit-number">13</span>{     <span class="comment">//Handle teens</span></code></span>
+<span class="codeline" id="line-59"><code>        <label for="r12" class="ident">e</label>=<span class="lit-string">"th"</span></code></span>
+<span class="codeline" id="line-60"><code>    } <span class="keyword">else</span> {</code></span>
+<span class="codeline" id="line-61"><code>        <span class="keyword">switch</span> <label for="r11" class="ident">t</label>{</code></span>
+<span class="codeline" id="line-62"><code>            <span class="keyword">case</span> <span class="lit-number">1</span>:</code></span>
+<span class="codeline" id="line-63"><code>                <label for="r12" class="ident">e</label>=<span class="lit-string">"st"</span></code></span>
+<span class="codeline" id="line-64"><code>            <span class="keyword">case</span> <span class="lit-number">2</span>:</code></span>
+<span class="codeline" id="line-65"><code>                <label for="r12" class="ident">e</label>=<span class="lit-string">"nd"</span></code></span>
+<span class="codeline" id="line-66"><code>            <span class="keyword">case</span> <span class="lit-number">3</span>:</code></span>
+<span class="codeline" id="line-67"><code>                <label for="r12" class="ident">e</label>=<span class="lit-string">"rd"</span></code></span>
+<span class="codeline" id="line-68"><code>            <span class="keyword">default</span>:</code></span>
+<span class="codeline" id="line-69"><code>                <label for="r12" class="ident">e</label>=<span class="lit-string">"th"</span></code></span>
+<span class="codeline" id="line-70"><code>        }</code></span>
+<span class="codeline" id="line-71"><code>    }</code></span>
+<span class="codeline" id="line-72"><code>    <span class="keyword">return</span> <a href="../../../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../../../fmt/print.go.html#line-217" class="ident">Sprintf</a>(<span class="lit-string">"%d%s"</span>,<label for="r9" class="ident">n</label>,<label for="r12" class="ident">e</label>)</code></span>
+<span class="codeline" id="line-73"><code>}</code></span>
+</pre><pre id="footer">
+<table><tr><td><img src="../../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

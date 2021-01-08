@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.npages</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-402">mspan</a>.<a href="../src/runtime/mheap.go.html#line-408">npages</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+23 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-466">heapdump.go#L466</a>: 		n := (s.<b>npages</b> << _PageShift) / size
+		<a href="../src/runtime/mbitmap.go.html#line-804">mbitmap.go#L804</a>: 	nw := (s.<b>npages</b> << _PageShift) / sys.PtrSize
+		<a href="../src/runtime/mgcsweep.go.html#line-232">mgcsweep.go#L232</a>: 		npages = s.<b>npages</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-341" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-341">#L341</a>: 		traceGCSweepSpan(s.<b>npages</b> * _PageSize)
+		<a href="../src/runtime/mgcsweep.go.html#line-344" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-344">#L344</a>: 	atomic.Xadd64(&amp;mheap_.pagesSwept, int64(s.<b>npages</b>))
+		<a href="../src/runtime/mgcsweep.go.html#line-592" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-592">#L592</a>: 		traceGCSweepSpan(s.<b>npages</b> * _PageSize)
+		<a href="../src/runtime/mgcsweep.go.html#line-595" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-595">#L595</a>: 	atomic.Xadd64(&amp;mheap_.pagesSwept, int64(s.<b>npages</b>))
+		<a href="../src/runtime/mheap.go.html#line-408">mheap.go#L408</a>: 	<b>npages</b>    uintptr // number of pages in span
+		<a href="../src/runtime/mheap.go.html#line-493" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-493">#L493</a>: 	total = s.<b>npages</b> << _PageShift
+		<a href="../src/runtime/mheap.go.html#line-862" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-862">#L862</a>: 						npages := s.<b>npages</b>
+		<a href="../src/runtime/mheap.go.html#line-912" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-912">#L912</a>: 			memclrNoHeapPointers(unsafe.Pointer(s.base()), s.<b>npages</b><<_PageShift)
+		<a href="../src/runtime/mheap.go.html#line-1221" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1221">#L1221</a>: 		s.limit = s.base() + s.<b>npages</b>*pageSize
+		<a href="../src/runtime/mheap.go.html#line-1223" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1223">#L1223</a>: 		mSysStatDec(&amp;memstats.heap_sys, s.<b>npages</b>*pageSize)
+		<a href="../src/runtime/mheap.go.html#line-1415" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1415">#L1415</a>: 			bytes := s.<b>npages</b> << _PageShift
+		<a href="../src/runtime/mheap.go.html#line-1441" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1441">#L1441</a>: 	mSysStatDec(stat, s.<b>npages</b>*pageSize)
+		<a href="../src/runtime/mheap.go.html#line-1442" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1442">#L1442</a>: 	mSysStatInc(&amp;memstats.heap_sys, s.<b>npages</b>*pageSize)
+		<a href="../src/runtime/mheap.go.html#line-1458" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1458">#L1458</a>: 		atomic.Xadd64(&amp;h.pagesInUse, -int64(s.<b>npages</b>))
+		<a href="../src/runtime/mheap.go.html#line-1468" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1468">#L1468</a>: 		mSysStatDec(&amp;memstats.heap_inuse, s.<b>npages</b>*pageSize)
+		<a href="../src/runtime/mheap.go.html#line-1471" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1471">#L1471</a>: 		mSysStatInc(&amp;memstats.heap_idle, s.<b>npages</b>*pageSize)
+		<a href="../src/runtime/mheap.go.html#line-1475" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1475">#L1475</a>: 	h.pages.free(s.base(), s.<b>npages</b>)
+		<a href="../src/runtime/mheap.go.html#line-1518" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1518">#L1518</a>: 	span.<b>npages</b> = npages
+		<a href="../src/runtime/mheap.go.html#line-1544" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1544">#L1544</a>: 		print("runtime: failed mSpanList.remove span.npages=", span.<b>npages</b>,
+		<a href="../src/runtime/stack.go.html#line-490">stack.go#L490</a>: 			log2npage := stacklog2(s.<b>npages</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

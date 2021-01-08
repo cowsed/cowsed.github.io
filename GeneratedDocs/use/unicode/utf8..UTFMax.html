@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: unicode/utf8.UTFMax</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../../pkg/unicode/utf8.html">unicode/utf8</a>.<a href="../../src/unicode/utf8/utf8.go.html#line-19">UTFMax</a></b></span>
+
+15 uses:
+
+	unicode/utf8 <i>(current package)</i>
+		<a href="../../src/unicode/utf8/utf8.go.html#line-19">utf8.go#L19</a>: 	<b>UTFMax</b>    = 4            // maximum number of bytes of a UTF-8 encoded Unicode character.
+		<a href="../../src/unicode/utf8/utf8.go.html#line-260" class="path-duplicate">utf8.go</a><a href="../../src/unicode/utf8/utf8.go.html#line-260">#L260</a>: 	lim := end - <b>UTFMax</b>
+		<a href="../../src/unicode/utf8/utf8.go.html#line-300" class="path-duplicate">utf8.go</a><a href="../../src/unicode/utf8/utf8.go.html#line-300">#L300</a>: 	lim := end - <b>UTFMax</b>
+
+	<a href="../../pkg/fmt.html">fmt</a>
+		<a href="../../src/fmt/format.go.html#line-145">format.go#L145</a>: 		width := 2 + prec + 2 + utf8.<b>UTFMax</b> + 1
+		<a href="../../src/fmt/format.go.html#line-469" class="path-duplicate">format.go</a><a href="../../src/fmt/format.go.html#line-469">#L469</a>: 	w := utf8.EncodeRune(buf[:utf8.<b>UTFMax</b>], r)
+		<a href="../../src/fmt/print.go.html#line-97">print.go#L97</a>: 	for n+utf8.<b>UTFMax</b> > cap(b) {
+		<a href="../../src/fmt/print.go.html#line-100" class="path-duplicate">print.go</a><a href="../../src/fmt/print.go.html#line-100">#L100</a>: 	w := utf8.EncodeRune(b[n:n+utf8.<b>UTFMax</b>], r)
+		<a href="../../src/fmt/scan.go.html#line-306">scan.go#L306</a>: 	buf      [utf8.<b>UTFMax</b>]byte // used only inside ReadRune
+		<a href="../../src/fmt/scan.go.html#line-308" class="path-duplicate">scan.go</a><a href="../../src/fmt/scan.go.html#line-308">#L308</a>: 	pendBuf  [utf8.<b>UTFMax</b>]byte // bytes left over
+
+	<a href="../../pkg/strconv.html">strconv</a>
+		<a href="../../src/strconv/quote.go.html#line-65">quote.go#L65</a>: 	var runeTmp [utf8.<b>UTFMax</b>]byte
+		<a href="../../src/strconv/quote.go.html#line-417" class="path-duplicate">quote.go</a><a href="../../src/strconv/quote.go.html#line-417">#L417</a>: 	var runeTmp [utf8.<b>UTFMax</b>]byte
+
+	<a href="../../pkg/strings.html">strings</a>
+		<a href="../../src/strings/builder.go.html#line-111">builder.go#L111</a>: 	if cap(b.buf)-l &lt; utf8.<b>UTFMax</b> {
+		<a href="../../src/strings/builder.go.html#line-112" class="path-duplicate">builder.go</a><a href="../../src/strings/builder.go.html#line-112">#L112</a>: 		b.grow(utf8.<b>UTFMax</b>)
+		<a href="../../src/strings/builder.go.html#line-114" class="path-duplicate">builder.go</a><a href="../../src/strings/builder.go.html#line-114">#L114</a>: 	n := utf8.EncodeRune(b.buf[l:l+utf8.<b>UTFMax</b>], r)
+		<a href="../../src/strings/strings.go.html#line-481">strings.go#L481</a>: 		b.Grow(len(s) + utf8.<b>UTFMax</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.m.preemptoff</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-488">m</a>.<a href="../src/runtime/runtime2.go.html#line-508">preemptoff</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+20 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/lock_futex.go.html#line-220">lock_futex.go#L220</a>: 	if gp != gp.m.g0 &amp;&amp; gp.m.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/mgc.go.html#line-1236">mgc.go#L1236</a>: 	if gp := getg(); gp == mp.g0 || mp.locks &gt; 1 || mp.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/mgc.go.html#line-1543" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1543">#L1543</a>: 	getg().m.<b>preemptoff</b> = "gcing"
+		<a href="../src/runtime/mgc.go.html#line-1597" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1597">#L1597</a>: 			getg().m.<b>preemptoff</b> = ""
+		<a href="../src/runtime/mgc.go.html#line-1643" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1643">#L1643</a>: 	mp.<b>preemptoff</b> = "gcing"
+		<a href="../src/runtime/mgc.go.html#line-1695" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1695">#L1695</a>: 	mp.<b>preemptoff</b> = ""
+		<a href="../src/runtime/mgc.go.html#line-1872" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1872">#L1872</a>: 	gp.m.<b>preemptoff</b> = "GC worker init"
+		<a href="../src/runtime/mgc.go.html#line-1874" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1874">#L1874</a>: 	gp.m.<b>preemptoff</b> = ""
+		<a href="../src/runtime/mgcmark.go.html#line-493">mgcmark.go#L493</a>: 	if mp := getg().m; mp.locks &gt; 0 || mp.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/panic.go.html#line-904">panic.go#L904</a>: 	if gp.m.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/panic.go.html#line-909" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-909">#L909</a>: 		print(gp.m.<b>preemptoff</b>)
+		<a href="../src/runtime/panic.go.html#line-1362" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1362">#L1362</a>: 	if _m_.locks != 0 || _m_.mallocing != 0 || _m_.throwing != 0 || _m_.<b>preemptoff</b> != "" || _m_.dying != 0 {
+		<a href="../src/runtime/preempt.go.html#line-293">preempt.go#L293</a>: 	return mp.locks == 0 &amp;&amp; mp.mallocing == 0 &amp;&amp; mp.<b>preemptoff</b> == "" && mp.p.ptr().status == _Prunning
+		<a href="../src/runtime/proc.go.html#line-902">proc.go#L902</a>: 	gp.m.<b>preemptoff</b> = reason
+		<a href="../src/runtime/proc.go.html#line-926" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-926">#L926</a>: 	getg().m.<b>preemptoff</b> = ""
+		<a href="../src/runtime/proc.go.html#line-4087" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4087">#L4087</a>: 			if mp.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/proc.go.html#line-4952" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4952">#L4952</a>: 		print("  M", mp.id, ": p=", id1, " curg=", id2, " mallocing=", mp.mallocing, " throwing=", mp.throwing, " preemptoff=", mp.<b>preemptoff</b>, ""+" locks=", mp.locks, " dying=", mp.dying, " spinning=", mp.spinning, " blocked=", mp.blocked, " lockedg=", id3, "\n")
+		<a href="../src/runtime/runtime2.go.html#line-508">runtime2.go#L508</a>: 	<b>preemptoff</b>    string // if != "", keep curg running on this m
+		<a href="../src/runtime/stack.go.html#line-363">stack.go#L363</a>: 		if stackNoCache != 0 || thisg.m.p == 0 || thisg.m.<b>preemptoff</b> != "" {
+		<a href="../src/runtime/stack.go.html#line-460" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-460">#L460</a>: 		if stackNoCache != 0 || gp.m.p == 0 || gp.m.<b>preemptoff</b> != "" {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

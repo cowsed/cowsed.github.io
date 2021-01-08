@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: time.Time</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/time.html">time</a>.<a href="../src/time/time.go.html#line-127">Time</a></b></span>
+
+112 uses:
+
+	time <i>(current package)</i>
+		<a href="../src/time/format.go.html#line-450">format.go#L450</a>: func (t <b>Time</b>) String() string {
+		<a href="../src/time/format.go.html#line-495" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-495">#L495</a>: func (t <b>Time</b>) Format(layout string) string {
+		<a href="../src/time/format.go.html#line-511" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-511">#L511</a>: func (t <b>Time</b>) AppendFormat(b []byte, layout string) []byte {
+		<a href="../src/time/format.go.html#line-814" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-814">#L814</a>: func Parse(layout, value string) (<b>Time</b>, error) {
+		<a href="../src/time/format.go.html#line-823" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-823">#L823</a>: func ParseInLocation(layout, value string, loc *Location) (<b>Time</b>, error) {
+		<a href="../src/time/format.go.html#line-827" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-827">#L827</a>: func parse(layout, value string, defaultLocation, local *Location) (<b>Time</b>, error) {
+		<a href="../src/time/format.go.html#line-855" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-855">#L855</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, prefix, value, ""}
+		<a href="../src/time/format.go.html#line-859" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-859">#L859</a>: 				return <b>Time</b>{}, &ParseError{alayout, avalue, "", value, ": extra text: " + quote(value)}
+		<a href="../src/time/format.go.html#line-1087" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1087">#L1087</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, stdstr, value, ": " + rangeErrString + " out of range"}
+		<a href="../src/time/format.go.html#line-1090" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1090">#L1090</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, stdstr, value, ""}
+		<a href="../src/time/format.go.html#line-1112" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1112">#L1112</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, "", value, ": day-of-year out of range"}
+		<a href="../src/time/format.go.html#line-1124" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1124">#L1124</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, "", value, ": day-of-year does not match month"}
+		<a href="../src/time/format.go.html#line-1128" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1128">#L1128</a>: 			return <b>Time</b>{}, &ParseError{alayout, avalue, "", value, ": day-of-year does not match day"}
+		<a href="../src/time/format.go.html#line-1142" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1142">#L1142</a>: 		return <b>Time</b>{}, &ParseError{alayout, avalue, "", value, ": day out of range"}
+		<a href="../src/time/sleep.go.html#line-49">sleep.go#L49</a>: 	C &lt;-chan <b>Time</b>
+		<a href="../src/time/sleep.go.html#line-85" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-85">#L85</a>: 	c := make(chan <b>Time</b>, 1)
+		<a href="../src/time/sleep.go.html#line-136" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-136">#L136</a>: 	case c.(chan <b>Time</b>) <- Now():
+		<a href="../src/time/sleep.go.html#line-147" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-147">#L147</a>: func After(d Duration) &lt;-chan <b>Time</b> {
+		<a href="../src/time/tick.go.html#line-12">tick.go#L12</a>: 	C &lt;-chan <b>Time</b> // The channel on which the ticks are delivered.
+		<a href="../src/time/tick.go.html#line-28" class="path-duplicate">tick.go</a><a href="../src/time/tick.go.html#line-28">#L28</a>: 	c := make(chan <b>Time</b>, 1)
+		<a href="../src/time/tick.go.html#line-63" class="path-duplicate">tick.go</a><a href="../src/time/tick.go.html#line-63">#L63</a>: func Tick(d Duration) &lt;-chan <b>Time</b> {
+		<a href="../src/time/time.go.html#line-127">time.go#L127</a>: type <b>Time</b> struct {
+		<a href="../src/time/time.go.html#line-163" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-163">#L163</a>: func (t *<b>Time</b>) nsec() int32 {
+		<a href="../src/time/time.go.html#line-168" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-168">#L168</a>: func (t *<b>Time</b>) sec() int64 {
+		<a href="../src/time/time.go.html#line-176" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-176">#L176</a>: func (t *<b>Time</b>) unixSec() int64 { return t.sec() + internalToUnix }
+		<a href="../src/time/time.go.html#line-179" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-179">#L179</a>: func (t *<b>Time</b>) addSec(d int64) {
+		<a href="../src/time/time.go.html#line-197" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-197">#L197</a>: func (t *<b>Time</b>) setLoc(loc *Location) {
+		<a href="../src/time/time.go.html#line-206" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-206">#L206</a>: func (t *<b>Time</b>) stripMono() {
+		<a href="../src/time/time.go.html#line-217" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-217">#L217</a>: func (t *<b>Time</b>) setMono(m int64) {
+		<a href="../src/time/time.go.html#line-233" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-233">#L233</a>: func (t *<b>Time</b>) mono() int64 {
+		<a href="../src/time/time.go.html#line-241" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-241">#L241</a>: func (t <b>Time</b>) After(u <b>Time</b>) bool {
+		<a href="../src/time/time.go.html#line-251" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-251">#L251</a>: func (t <b>Time</b>) Before(u <b>Time</b>) bool {
+		<a href="../src/time/time.go.html#line-265" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-265">#L265</a>: func (t <b>Time</b>) Equal(u <b>Time</b>) bool {
+		<a href="../src/time/time.go.html#line-426" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-426">#L426</a>: func (t <b>Time</b>) IsZero() bool {
+		<a href="../src/time/time.go.html#line-432" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-432">#L432</a>: func (t <b>Time</b>) abs() uint64 {
+		<a href="../src/time/time.go.html#line-452" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-452">#L452</a>: func (t <b>Time</b>) locabs() (name string, offset int, abs uint64) {
+		<a href="../src/time/time.go.html#line-475" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-475">#L475</a>: func (t <b>Time</b>) Date() (year int, month Month, day int) {
+		<a href="../src/time/time.go.html#line-481" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-481">#L481</a>: func (t <b>Time</b>) Year() int {
+		<a href="../src/time/time.go.html#line-487" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-487">#L487</a>: func (t <b>Time</b>) Month() Month {
+		<a href="../src/time/time.go.html#line-493" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-493">#L493</a>: func (t <b>Time</b>) Day() int {
+		<a href="../src/time/time.go.html#line-499" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-499">#L499</a>: func (t <b>Time</b>) Weekday() Weekday {
+		<a href="../src/time/time.go.html#line-514" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-514">#L514</a>: func (t <b>Time</b>) ISOWeek() (year, week int) {
+		<a href="../src/time/time.go.html#line-538" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-538">#L538</a>: func (t <b>Time</b>) Clock() (hour, min, sec int) {
+		<a href="../src/time/time.go.html#line-553" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-553">#L553</a>: func (t <b>Time</b>) Hour() int {
+		<a href="../src/time/time.go.html#line-558" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-558">#L558</a>: func (t <b>Time</b>) Minute() int {
+		<a href="../src/time/time.go.html#line-563" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-563">#L563</a>: func (t <b>Time</b>) Second() int {
+		<a href="../src/time/time.go.html#line-569" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-569">#L569</a>: func (t <b>Time</b>) Nanosecond() int {
+		<a href="../src/time/time.go.html#line-575" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-575">#L575</a>: func (t <b>Time</b>) YearDay() int {
+		<a href="../src/time/time.go.html#line-813" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-813">#L813</a>: func (t <b>Time</b>) Add(d Duration) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-841" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-841">#L841</a>: func (t <b>Time</b>) Sub(u <b>Time</b>) Duration {
+		<a href="../src/time/time.go.html#line-868" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-868">#L868</a>: func Since(t <b>Time</b>) Duration {
+		<a href="../src/time/time.go.html#line-869" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-869">#L869</a>: 	var now <b>Time</b>
+		<a href="../src/time/time.go.html#line-872" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-872">#L872</a>: 		now = <b>Time</b>{hasMonotonic, runtimeNano() - startNano, nil}
+		<a href="../src/time/time.go.html#line-881" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-881">#L881</a>: func Until(t <b>Time</b>) Duration {
+		<a href="../src/time/time.go.html#line-882" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-882">#L882</a>: 	var now <b>Time</b>
+		<a href="../src/time/time.go.html#line-885" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-885">#L885</a>: 		now = <b>Time</b>{hasMonotonic, runtimeNano() - startNano, nil}
+		<a href="../src/time/time.go.html#line-900" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-900">#L900</a>: func (t <b>Time</b>) AddDate(years int, months int, days int) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-918" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-918">#L918</a>: func (t <b>Time</b>) date(full bool) (year int, month Month, day int, yday int) {
+		<a href="../src/time/time.go.html#line-1066" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1066">#L1066</a>: func Now() <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1071" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1071">#L1071</a>: 		return <b>Time</b>{uint64(nsec), sec + minWall, Local}
+		<a href="../src/time/time.go.html#line-1073" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1073">#L1073</a>: 	return <b>Time</b>{hasMonotonic | uint64(sec)<<nsecShift | uint64(nsec), mono, Local}
+		<a href="../src/time/time.go.html#line-1076" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1076">#L1076</a>: func unixTime(sec int64, nsec int32) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1077" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1077">#L1077</a>: 	return <b>Time</b>{uint64(nsec), sec + unixToInternal, Local}
+		<a href="../src/time/time.go.html#line-1081" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1081">#L1081</a>: func (t <b>Time</b>) UTC() <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1087" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1087">#L1087</a>: func (t <b>Time</b>) Local() <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1097" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1097">#L1097</a>: func (t <b>Time</b>) In(loc *Location) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1106" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1106">#L1106</a>: func (t <b>Time</b>) Location() *Location {
+		<a href="../src/time/time.go.html#line-1116" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1116">#L1116</a>: func (t <b>Time</b>) Zone() (name string, offset int) {
+		<a href="../src/time/time.go.html#line-1127" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1127">#L1127</a>: func (t <b>Time</b>) Unix() int64 {
+		<a href="../src/time/time.go.html#line-1137" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1137">#L1137</a>: func (t <b>Time</b>) UnixNano() int64 {
+		<a href="../src/time/time.go.html#line-1144" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1144">#L1144</a>: func (t <b>Time</b>) MarshalBinary() ([]byte, error) {
+		<a href="../src/time/time.go.html#line-1185" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1185">#L1185</a>: func (t *<b>Time</b>) UnmarshalBinary(data []byte) error {
+		<a href="../src/time/time.go.html#line-1209" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1209">#L1209</a>: 	*t = <b>Time</b>{}
+		<a href="../src/time/time.go.html#line-1229" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1229">#L1229</a>: func (t <b>Time</b>) GobEncode() ([]byte, error) {
+		<a href="../src/time/time.go.html#line-1234" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1234">#L1234</a>: func (t *<b>Time</b>) GobDecode(data []byte) error {
+		<a href="../src/time/time.go.html#line-1240" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1240">#L1240</a>: func (t <b>Time</b>) MarshalJSON() ([]byte, error) {
+		<a href="../src/time/time.go.html#line-1256" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1256">#L1256</a>: func (t *<b>Time</b>) UnmarshalJSON(data []byte) error {
+		<a href="../src/time/time.go.html#line-1269" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1269">#L1269</a>: func (t <b>Time</b>) MarshalText() ([]byte, error) {
+		<a href="../src/time/time.go.html#line-1280" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1280">#L1280</a>: func (t *<b>Time</b>) UnmarshalText(data []byte) error {
+		<a href="../src/time/time.go.html#line-1292" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1292">#L1292</a>: func Unix(sec int64, nsec int64) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1342" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1342">#L1342</a>: func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1403" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1403">#L1403</a>: func (t <b>Time</b>) Truncate(d Duration) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1420" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1420">#L1420</a>: func (t <b>Time</b>) Round(d Duration) <b>Time</b> {
+		<a href="../src/time/time.go.html#line-1435" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1435">#L1435</a>: func div(t <b>Time</b>, d Duration) (qmod2 int, r Duration) {
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-135">fd_poll_runtime.go#L135</a>: func (fd *FD) SetDeadline(t time.<b>Time</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-140" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-140">#L140</a>: func (fd *FD) SetReadDeadline(t time.<b>Time</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-145" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-145">#L145</a>: func (fd *FD) SetWriteDeadline(t time.<b>Time</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-149" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-149">#L149</a>: func setDeadlineImpl(fd *FD, t time.<b>Time</b>, mode int) error {
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/file.go.html#line-560">file.go#L560</a>: func (f *File) SetDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/file.go.html#line-568" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-568">#L568</a>: func (f *File) SetReadDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/file.go.html#line-578" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-578">#L578</a>: func (f *File) SetWriteDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/file_posix.go.html#line-170">file_posix.go#L170</a>: func Chtimes(name string, atime time.<b>Time</b>, mtime time.<b>Time</b>) error {
+		<a href="../src/os/file_posix.go.html#line-194" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-194">#L194</a>: func (f *File) setDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/file_posix.go.html#line-202" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-202">#L202</a>: func (f *File) setReadDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/file_posix.go.html#line-210" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-210">#L210</a>: func (f *File) setWriteDeadline(t time.<b>Time</b>) error {
+		<a href="../src/os/stat_linux.go.html#line-44">stat_linux.go#L44</a>: func timespecToTime(ts syscall.Timespec) time.<b>Time</b> {
+		<a href="../src/os/stat_linux.go.html#line-49" class="path-duplicate">stat_linux.go</a><a href="../src/os/stat_linux.go.html#line-49">#L49</a>: func atime(fi FileInfo) time.<b>Time</b> {
+		<a href="../src/os/types.go.html#line-25">types.go#L25</a>: 	ModTime() time.<b>Time</b> // modification time
+		<a href="../src/os/types_unix.go.html#line-20">types_unix.go#L20</a>: 	modTime time.<b>Time</b>
+		<a href="../src/os/types_unix.go.html#line-26" class="path-duplicate">types_unix.go</a><a href="../src/os/types_unix.go.html#line-26">#L26</a>: func (fs *fileStat) ModTime() time.<b>Time</b> { return fs.modTime }
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

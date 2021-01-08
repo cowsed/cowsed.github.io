@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.semrelease</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/sema.go.html#line-155">semrelease</a></b></span>
+
+14 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgc.go.html#line-1262">mgc.go#L1262</a>: 		<b>semrelease</b>(&work.startSema)
+		<a href="../src/runtime/mgc.go.html#line-1390" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1390">#L1390</a>: 	<b>semrelease</b>(&worldsema)
+		<a href="../src/runtime/mgc.go.html#line-1399" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1399">#L1399</a>: 	<b>semrelease</b>(&work.startSema)
+		<a href="../src/runtime/mgc.go.html#line-1457" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1457">#L1457</a>: 		<b>semrelease</b>(&work.markDoneSema)
+		<a href="../src/runtime/mgc.go.html#line-1525" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1525">#L1525</a>: 		<b>semrelease</b>(&worldsema)
+		<a href="../src/runtime/mgc.go.html#line-1602" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1602">#L1602</a>: 			<b>semrelease</b>(&worldsema)
+		<a href="../src/runtime/mgc.go.html#line-1618" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1618">#L1618</a>: 	<b>semrelease</b>(&work.markDoneSema)
+		<a href="../src/runtime/mgc.go.html#line-1816" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1816">#L1816</a>: 	<b>semrelease</b>(&worldsema)
+		<a href="../src/runtime/mgc.go.html#line-1817" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1817">#L1817</a>: 	<b>semrelease</b>(&gcsema)
+		<a href="../src/runtime/proc.go.html#line-925">proc.go#L925</a>: 	<b>semrelease</b>(&worldsema)
+		<a href="../src/runtime/proc.go.html#line-940" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-940">#L940</a>: 	<b>semrelease</b>(&gcsema)
+		<a href="../src/runtime/sema.go.html#line-76">sema.go#L76</a>: 	<b>semrelease</b>(addr)
+		<a href="../src/runtime/sema.go.html#line-155" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-155">#L155</a>: func <b>semrelease</b>(addr *uint32) {
+		<a href="../src/runtime/trace.go.html#line-447">trace.go#L447</a>: 		<b>semrelease</b>(&trace.shutdownSema)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

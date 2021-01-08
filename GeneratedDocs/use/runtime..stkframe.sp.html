@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.stkframe.sp</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-933">stkframe</a>.<a href="../src/runtime/runtime2.go.html#line-938">sp</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+49 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-272">heapdump.go#L272</a>: 	dumpint(uint64(s.<b>sp</b>))                              // lowest address in frame
+		<a href="../src/runtime/heapdump.go.html#line-275" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-275">#L275</a>: 	dumpmemrange(unsafe.Pointer(s.<b>sp</b>), s.fp-s.<b>sp</b>)      // frame contents
+		<a href="../src/runtime/heapdump.go.html#line-299" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-299">#L299</a>: 		for off := child.arglen; off &lt; s.varp-s.<b>sp</b>; off += sys.PtrSize {
+		<a href="../src/runtime/heapdump.go.html#line-306" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-306">#L306</a>: 		for off := s.varp - size - s.<b>sp</b>; off &lt; s.varp-s.<b>sp</b>; off += sys.PtrSize {
+		<a href="../src/runtime/heapdump.go.html#line-313" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-313">#L313</a>: 		dumpbv(&amp;bv, s.varp-uintptr(bv.n)*sys.PtrSize-s.<b>sp</b>)
+		<a href="../src/runtime/heapdump.go.html#line-320" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-320">#L320</a>: 	child.sp = (*uint8)(unsafe.Pointer(s.<b>sp</b>))
+		<a href="../src/runtime/mbitmap.go.html#line-1949">mbitmap.go#L1949</a>: 	if frame.<b>sp</b> &lt;= target.<b>sp</b> &amp;&amp; target.<b>sp</b> < frame.varp {
+		<a href="../src/runtime/mbitmap.go.html#line-2024" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2024">#L2024</a>: 		frame.<b>sp</b> = uintptr(p)
+		<a href="../src/runtime/mgcmark.go.html#line-980">mgcmark.go#L980</a>: 			size := frame.varp - frame.<b>sp</b>
+		<a href="../src/runtime/mgcmark.go.html#line-982" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-982">#L982</a>: 				scanConservative(frame.<b>sp</b>, size, nil, gcw, state)
+		<a href="../src/runtime/mgcmark.go.html#line-1033" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1033">#L1033</a>: 			if ptr &lt; frame.<b>sp</b> {
+		<a href="../src/runtime/panic.go.html#line-723">panic.go#L723</a>: 				if prevDefer != nil &amp;&amp; prevDefer.sp == frame.<b>sp</b> {
+		<a href="../src/runtime/panic.go.html#line-740" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-740">#L740</a>: 					if frame.<b>sp</b> < dsp {
+		<a href="../src/runtime/panic.go.html#line-743" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-743">#L743</a>: 					if frame.<b>sp</b> == dsp {
+		<a href="../src/runtime/panic.go.html#line-772" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-772">#L772</a>: 				d1.sp = frame.<b>sp</b>
+		<a href="../src/runtime/runtime2.go.html#line-938">runtime2.go#L938</a>: 	<b>sp</b>       uintptr    // stack pointer at pc
+		<a href="../src/runtime/stack.go.html#line-633">stack.go#L633</a>: 		print("    adjusting ", funcname(f), " frame=[", hex(frame.<b>sp</b>), ",", hex(frame.fp), "] pc=", hex(frame.pc), " continpc=", hex(frame.continpc), "\n")
+		<a href="../src/runtime/stack.go.html#line-691" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-691">#L691</a>: 			if p &lt; frame.<b>sp</b> {
+		<a href="../src/runtime/stack.go.html#line-1242" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1242">#L1242</a>: 	size := frame.varp - frame.<b>sp</b>
+		<a href="../src/runtime/traceback.go.html#line-144">traceback.go#L144</a>: 	frame.<b>sp</b> = sp0
+		<a href="../src/runtime/traceback.go.html#line-156" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-156">#L156</a>: 			frame.pc = *(*uintptr)(unsafe.Pointer(frame.<b>sp</b>))
+		<a href="../src/runtime/traceback.go.html#line-159" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-159">#L159</a>: 			frame.pc = uintptr(*(*sys.Uintreg)(unsafe.Pointer(frame.<b>sp</b>)))
+		<a href="../src/runtime/traceback.go.html#line-160" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-160">#L160</a>: 			frame.<b>sp</b> += sys.RegSize
+		<a href="../src/runtime/traceback.go.html#line-211" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-211">#L211</a>: 					frame.<b>sp</b> = gp.m.curg.sched.sp
+		<a href="../src/runtime/traceback.go.html#line-216" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-216">#L216</a>: 					frame.<b>sp</b> = gp.m.curg.sched.sp
+		<a href="../src/runtime/traceback.go.html#line-220" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-220">#L220</a>: 			frame.fp = frame.<b>sp</b> + uintptr(funcspdelta(f, frame.pc, &cache))
+		<a href="../src/runtime/traceback.go.html#line-244" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-244">#L244</a>: 				if n == 0 &amp;&amp; frame.<b>sp</b> < frame.fp || frame.lr == 0 {
+		<a href="../src/runtime/traceback.go.html#line-245" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-245">#L245</a>: 					lrPtr = frame.<b>sp</b>
+		<a href="../src/runtime/traceback.go.html#line-286" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-286">#L286</a>: 		if frame.varp &gt; frame.<b>sp</b> && (framepointer_enabled && GOARCH == "amd64" || GOARCH == "arm64") {
+		<a href="../src/runtime/traceback.go.html#line-456" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-456">#L456</a>: 					print(" fp=", hex(frame.fp), " sp=", hex(frame.<b>sp</b>), " pc=", hex(frame.pc))
+		<a href="../src/runtime/traceback.go.html#line-489" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-489">#L489</a>: 		frame.<b>sp</b> = frame.fp
+		<a href="../src/runtime/traceback.go.html#line-496" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-496">#L496</a>: 			x := *(*uintptr)(unsafe.Pointer(frame.<b>sp</b>))
+		<a href="../src/runtime/traceback.go.html#line-497" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-497">#L497</a>: 			frame.<b>sp</b> += sys.MinFrameSize
+		<a href="../src/runtime/traceback.go.html#line-500" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-500">#L500</a>: 				frame.<b>sp</b> += sys.PtrSize
+		<a href="../src/runtime/traceback.go.html#line-556" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-556">#L556</a>: 	if callback != nil &amp;&amp; n &lt; max &amp;&amp; frame.<b>sp</b> != gp.stktopsp {
+		<a href="../src/runtime/traceback.go.html#line-557" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-557">#L557</a>: 		print("runtime: g", gp.goid, ": frame.sp=", hex(frame.<b>sp</b>), " top=", hex(gp.stktopsp), "\n")
+		<a href="../src/runtime/traceback.go.html#line-611" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-611">#L611</a>: 				arg0 := frame.<b>sp</b> + sys.MinFrameSize
+		<a href="../src/runtime/traceback.go.html#line-957" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-957">#L957</a>: 	lo, hi := frame.<b>sp</b>, frame.<b>sp</b>
+		<a href="../src/runtime/traceback.go.html#line-968" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-968">#L968</a>: 	if lo &lt; frame.<b>sp</b>-maxExpand {
+		<a href="../src/runtime/traceback.go.html#line-969" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-969">#L969</a>: 		lo = frame.<b>sp</b> - maxExpand
+		<a href="../src/runtime/traceback.go.html#line-971" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-971">#L971</a>: 	if hi &gt; frame.<b>sp</b>+maxExpand {
+		<a href="../src/runtime/traceback.go.html#line-972" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-972">#L972</a>: 		hi = frame.<b>sp</b> + maxExpand
+		<a href="../src/runtime/traceback.go.html#line-983" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-983">#L983</a>: 	print("stack: frame={sp:", hex(frame.<b>sp</b>), ", fp:", hex(frame.fp), "} stack=[", hex(stk.lo), ",", hex(stk.hi), ")\n")
+		<a href="../src/runtime/traceback.go.html#line-988" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-988">#L988</a>: 		case frame.<b>sp</b>:
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

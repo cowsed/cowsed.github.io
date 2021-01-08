@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: sync.Mutex.Lock</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/sync.html">sync</a>.<a href="../src/sync/mutex.go.html#line-25">Mutex</a>.<a href="../src/sync/mutex.go.html#line-72">Lock</a></b></span><span style="font-size: large;"><i> (<a href="../imp/sync.Mutex.html#name-Lock">method</a>)</i></span>
+
+18 uses:
+
+	sync <i>(current package)</i>
+		<a href="../src/sync/map.go.html#line-106">map.go#L106</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-142" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-142">#L142</a>: 	m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-209" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-209">#L209</a>: 	m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-272" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-272">#L272</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-329" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-329">#L329</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/mutex.go.html#line-72">mutex.go#L72</a>: func (m *Mutex) <b>Lock</b>() {
+		<a href="../src/sync/once.go.html#line-62">once.go#L62</a>: 	o.m.<b>Lock</b>()
+		<a href="../src/sync/pool.go.html#line-213">pool.go#L213</a>: 	allPoolsMu.<b>Lock</b>()
+		<a href="../src/sync/rwmutex.go.html#line-98">rwmutex.go#L98</a>: 	rw.w.<b>Lock</b>()
+
+	<a href="../pkg/io.html">io</a>
+		<a href="../src/io/pipe.go.html#line-22">pipe.go#L22</a>: 	a.<b>Lock</b>()
+		<a href="../src/io/pipe.go.html#line-30" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-30">#L30</a>: 	a.<b>Lock</b>()
+		<a href="../src/io/pipe.go.html#line-89" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-89">#L89</a>: 		p.wrMu.<b>Lock</b>()
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/getwd.go.html#line-55">getwd.go#L55</a>: 	getwdCache.<b>Lock</b>()
+		<a href="../src/os/getwd.go.html#line-118" class="path-duplicate">getwd.go</a><a href="../src/os/getwd.go.html#line-118">#L118</a>: 	getwdCache.<b>Lock</b>()
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-2012">type.go#L2012</a>: 	funcLookupCache.<b>Lock</b>()
+		<a href="../src/reflect/type.go.html#line-2644" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2644">#L2644</a>: 	structLookupCache.<b>Lock</b>()
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/syscall_unix.go.html#line-73">syscall_unix.go#L73</a>: 	m.<b>Lock</b>()
+		<a href="../src/syscall/syscall_unix.go.html#line-86" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-86">#L86</a>: 	m.<b>Lock</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

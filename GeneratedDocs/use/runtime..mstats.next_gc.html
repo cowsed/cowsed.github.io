@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.next_gc</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-24">mstats</a>.<a href="../src/runtime/mstats.go.html#line-62">next_gc</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+16 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-565">heapdump.go#L565</a>: 	dumpint(memstats.<b>next_gc</b>)
+		<a href="../src/runtime/mgc.go.html#line-428">mgc.go#L428</a>: 	if memstats.<b>next_gc</b> < memstats.heap_live+1024*1024 {
+		<a href="../src/runtime/mgc.go.html#line-429" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-429">#L429</a>: 		memstats.<b>next_gc</b> = memstats.heap_live + 1024*1024
+		<a href="../src/runtime/mgc.go.html#line-475" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-475">#L475</a>: 			memstats.<b>next_gc</b>>>20, " MB)",
+		<a href="../src/runtime/mgc.go.html#line-500" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-500">#L500</a>: 	heapGoal := int64(memstats.<b>next_gc</b>)
+		<a href="../src/runtime/mgc.go.html#line-513" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-513">#L513</a>: 	if live &gt; memstats.<b>next_gc</b> || c.scanWork > scanWorkExpected {
+		<a href="../src/runtime/mgc.go.html#line-518" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-518">#L518</a>: 		heapGoal = int64(float64(memstats.<b>next_gc</b>) * maxOvershoot)
+		<a href="../src/runtime/mgc.go.html#line-834" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-834">#L834</a>: 			print("runtime: next_gc=", memstats.<b>next_gc</b>, " heap_marked=", memstats.heap_marked, " heap_live=", memstats.heap_live, " initialHeapLive=", work.initialHeapLive, "triggerRatio=", triggerRatio, " minTrigger=", minTrigger, "\n")
+		<a href="../src/runtime/mgc.go.html#line-847" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-847">#L847</a>: 	memstats.<b>next_gc</b> = goal
+		<a href="../src/runtime/mgc.go.html#line-904" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-904">#L904</a>: 	egogc := float64(memstats.<b>next_gc</b>-memstats.heap_marked) / float64(memstats.heap_marked)
+		<a href="../src/runtime/mgc.go.html#line-1329" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1329">#L1329</a>: 	work.heapGoal = memstats.<b>next_gc</b>
+		<a href="../src/runtime/mgc.go.html#line-1702" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1702">#L1702</a>: 	memstats.last_next_gc = memstats.<b>next_gc</b>
+		<a href="../src/runtime/mgcscavenge.go.html#line-126">mgcscavenge.go#L126</a>: 	goalRatio := float64(memstats.<b>next_gc</b>) / float64(memstats.last_next_gc)
+		<a href="../src/runtime/mstats.go.html#line-62">mstats.go#L62</a>: 	<b>next_gc</b>         uint64 // goal heap_live for when next GC ends; ^0 if disabled
+		<a href="../src/runtime/trace.go.html#line-1149">trace.go#L1149</a>: 	if memstats.<b>next_gc</b> == ^uint64(0) {
+		<a href="../src/runtime/trace.go.html#line-1153" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1153">#L1153</a>: 		traceEvent(traceEvNextGC, -1, memstats.<b>next_gc</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

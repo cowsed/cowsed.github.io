@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.freeindex</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-402">mspan</a>.<a href="../src/runtime/mheap.go.html#line-427">freeindex</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+27 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/malloc.go.html#line-846">malloc.go#L846</a>: 		result := s.<b>freeindex</b> + uintptr(theBit)
+		<a href="../src/runtime/malloc.go.html#line-853" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-853">#L853</a>: 			s.<b>freeindex</b> = freeidx
+		<a href="../src/runtime/malloc.go.html#line-1073" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1073">#L1073</a>: 		span.<b>freeindex</b> = 1
+		<a href="../src/runtime/mbitmap.go.html#line-196">mbitmap.go#L196</a>: 	sfreeindex := s.<b>freeindex</b>
+		<a href="../src/runtime/mbitmap.go.html#line-212" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-212">#L212</a>: 			s.<b>freeindex</b> = snelems
+		<a href="../src/runtime/mbitmap.go.html#line-225" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-225">#L225</a>: 		s.<b>freeindex</b> = snelems
+		<a href="../src/runtime/mbitmap.go.html#line-241" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-241">#L241</a>: 	s.<b>freeindex</b> = sfreeindex
+		<a href="../src/runtime/mbitmap.go.html#line-251" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-251">#L251</a>: 	if index &lt; s.<b>freeindex</b> {
+		<a href="../src/runtime/mcentral.go.html#line-163">mcentral.go#L163</a>: 				s.<b>freeindex</b> = freeIndex
+		<a href="../src/runtime/mcentral.go.html#line-188" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-188">#L188</a>: 	if n == 0 || s.<b>freeindex</b> == s.nelems || uintptr(s.allocCount) == s.nelems {
+		<a href="../src/runtime/mcentral.go.html#line-204" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-204">#L204</a>: 	freeByteBase := s.<b>freeindex</b> &^ (64 - 1)
+		<a href="../src/runtime/mcentral.go.html#line-211" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-211">#L211</a>: 	s.allocCache &gt;&gt;= s.<b>freeindex</b> % 64
+		<a href="../src/runtime/mcentral.go.html#line-262" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-262">#L262</a>: 				s.<b>freeindex</b> = freeIndex
+		<a href="../src/runtime/mcentral.go.html#line-300" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-300">#L300</a>: 	if n == 0 || s.<b>freeindex</b> == s.nelems || uintptr(s.allocCount) == s.nelems {
+		<a href="../src/runtime/mcentral.go.html#line-316" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-316">#L316</a>: 	freeByteBase := s.<b>freeindex</b> &^ (64 - 1)
+		<a href="../src/runtime/mcentral.go.html#line-323" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-323">#L323</a>: 	s.allocCache &gt;&gt;= s.<b>freeindex</b> % 64
+		<a href="../src/runtime/mgcsweep.go.html#line-422">mgcsweep.go#L422</a>: 			if !mbits.isMarked() &amp;&amp; (abits.index &lt; s.<b>freeindex</b> || abits.isMarked()) {
+		<a href="../src/runtime/mgcsweep.go.html#line-443" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-443">#L443</a>: 	if s.<b>freeindex</b> < s.nelems {
+		<a href="../src/runtime/mgcsweep.go.html#line-449" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-449">#L449</a>: 		obj := s.<b>freeindex</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-472" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-472">#L472</a>: 	s.<b>freeindex</b> = 0 // reset allocation index to start of span.
+		<a href="../src/runtime/mgcsweep.go.html#line-675" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-675">#L675</a>: 			if !mbits.isMarked() &amp;&amp; (abits.index &lt; s.<b>freeindex</b> || abits.isMarked()) {
+		<a href="../src/runtime/mgcsweep.go.html#line-709" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-709">#L709</a>: 	s.<b>freeindex</b> = 0 // reset allocation index to start of span.
+		<a href="../src/runtime/mgcsweep.go.html#line-795" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-795">#L795</a>: 	print("runtime: marked free object in span ", s, ", elemsize=", s.elemsize, " freeindex=", s.<b>freeindex</b>, " (bad use of unsafe.Pointer? try -d=checkptr)\n")
+		<a href="../src/runtime/mgcsweep.go.html#line-801" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-801">#L801</a>: 		alloc := i &lt; s.<b>freeindex</b> || abits.isMarked()
+		<a href="../src/runtime/mheap.go.html#line-427">mheap.go#L427</a>: 	<b>freeindex</b> uintptr
+		<a href="../src/runtime/mheap.go.html#line-1249" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1249">#L1249</a>: 		s.<b>freeindex</b> = 0
+		<a href="../src/runtime/mheap.go.html#line-1525" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1525">#L1525</a>: 	span.<b>freeindex</b> = 0
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

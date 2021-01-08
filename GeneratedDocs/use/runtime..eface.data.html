@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.eface.data</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-208">eface</a>.<a href="../src/runtime/runtime2.go.html#line-210">data</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+51 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/alg.go.html#line-147">alg.go#L147</a>: 		return c1 * typehash(t, unsafe.Pointer(&amp;a.<b>data</b>), h^c0)
+		<a href="../src/runtime/alg.go.html#line-149" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-149">#L149</a>: 		return c1 * typehash(t, a.<b>data</b>, h^c0)
+		<a href="../src/runtime/alg.go.html#line-277" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-277">#L277</a>: 	return x._type == y._type &amp;&amp; efaceeq(x._type, x.<b>data</b>, y.<b>data</b>)
+		<a href="../src/runtime/cgocall.go.html#line-438">cgocall.go#L438</a>: 		p := ep.<b>data</b>
+		<a href="../src/runtime/cgocall.go.html#line-471" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-471">#L471</a>: 	cgoCheckArg(t, ep.<b>data</b>, t.kind&kindDirectIface == 0, top, cgoCheckPointerFail)
+		<a href="../src/runtime/cgocall.go.html#line-674" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-674">#L674</a>: 	cgoCheckArg(t, ep.<b>data</b>, t.kind&kindDirectIface == 0, false, cgoResultFail)
+		<a href="../src/runtime/debuglog.go.html#line-280">debuglog.go#L280</a>: 			l.w.uvarint(uint64(uintptr(v.<b>data</b>)))
+		<a href="../src/runtime/error.go.html#line-240">error.go#L240</a>: 		print(typestring, `("`, *(*string)(eface.<b>data</b>), `")`)
+		<a href="../src/runtime/error.go.html#line-242" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-242">#L242</a>: 		print(typestring, "(", *(*bool)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-244" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-244">#L244</a>: 		print(typestring, "(", *(*int)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-246" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-246">#L246</a>: 		print(typestring, "(", *(*int8)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-248" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-248">#L248</a>: 		print(typestring, "(", *(*int16)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-250" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-250">#L250</a>: 		print(typestring, "(", *(*int32)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-252" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-252">#L252</a>: 		print(typestring, "(", *(*int64)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-254" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-254">#L254</a>: 		print(typestring, "(", *(*uint)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-256" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-256">#L256</a>: 		print(typestring, "(", *(*uint8)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-258" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-258">#L258</a>: 		print(typestring, "(", *(*uint16)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-260" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-260">#L260</a>: 		print(typestring, "(", *(*uint32)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-262" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-262">#L262</a>: 		print(typestring, "(", *(*uint64)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-264" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-264">#L264</a>: 		print(typestring, "(", *(*uintptr)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-266" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-266">#L266</a>: 		print(typestring, "(", *(*float32)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-268" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-268">#L268</a>: 		print(typestring, "(", *(*float64)(eface.<b>data</b>), ")")
+		<a href="../src/runtime/error.go.html#line-270" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-270">#L270</a>: 		print(typestring, *(*complex64)(eface.<b>data</b>))
+		<a href="../src/runtime/error.go.html#line-272" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-272">#L272</a>: 		print(typestring, *(*complex128)(eface.<b>data</b>))
+		<a href="../src/runtime/error.go.html#line-274" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-274">#L274</a>: 		print("(", typestring, ") ", eface.<b>data</b>)
+		<a href="../src/runtime/heapdump.go.html#line-388">heapdump.go#L388</a>: 		dumpint(uint64(uintptr(unsafe.Pointer(eface.<b>data</b>))))
+		<a href="../src/runtime/iface.go.html#line-330">iface.go#L330</a>: 	e.<b>data</b> = x
+		<a href="../src/runtime/iface.go.html#line-401" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-401">#L401</a>: 	e.<b>data</b> = x
+		<a href="../src/runtime/iface.go.html#line-490" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-490">#L490</a>: 	r.data = e.<b>data</b>
+		<a href="../src/runtime/iface.go.html#line-504" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-504">#L504</a>: 	r.data = e.<b>data</b>
+		<a href="../src/runtime/mbitmap.go.html#line-1974">mbitmap.go#L1974</a>: 	p := e.<b>data</b>
+		<a href="../src/runtime/mfinal.go.html#line-212">mfinal.go#L212</a>: 					(*eface)(frame).<b>data</b> = f.arg
+		<a href="../src/runtime/mfinal.go.html#line-329" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-329">#L329</a>: 	base, _, _ := findObject(uintptr(e.<b>data</b>), 0, 0)
+		<a href="../src/runtime/mfinal.go.html#line-333" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-333">#L333</a>: 		if e.<b>data</b> == unsafe.Pointer(&zerobase) {
+		<a href="../src/runtime/mfinal.go.html#line-346" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-346">#L346</a>: 			if datap.noptrdata &lt;= uintptr(e.<b>data</b>) &amp;&amp; uintptr(e.<b>data</b>) < datap.enoptrdata ||
+		<a href="../src/runtime/mfinal.go.html#line-347" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-347">#L347</a>: 				datap.data &lt;= uintptr(e.<b>data</b>) &amp;&amp; uintptr(e.<b>data</b>) < datap.edata ||
+		<a href="../src/runtime/mfinal.go.html#line-348" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-348">#L348</a>: 				datap.bss &lt;= uintptr(e.<b>data</b>) &amp;&amp; uintptr(e.<b>data</b>) < datap.ebss ||
+		<a href="../src/runtime/mfinal.go.html#line-349" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-349">#L349</a>: 				datap.noptrbss &lt;= uintptr(e.<b>data</b>) &amp;&amp; uintptr(e.<b>data</b>) < datap.enoptrbss {
+		<a href="../src/runtime/mfinal.go.html#line-356" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-356">#L356</a>: 	if uintptr(e.<b>data</b>) != base {
+		<a href="../src/runtime/mfinal.go.html#line-369" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-369">#L369</a>: 			removefinalizer(e.<b>data</b>)
+		<a href="../src/runtime/mfinal.go.html#line-418" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-418">#L418</a>: 		if !addfinalizer(e.<b>data</b>, (*funcval)(f.<b>data</b>), nret, fint, ot) {
+		<a href="../src/runtime/netpoll.go.html#line-561">netpoll.go#L561</a>: 	x.<b>data</b> = unsafe.Pointer(&pd.self)
+		<a href="../src/runtime/print.go.html#line-252">print.go#L252</a>: 	print("(", e._type, ",", e.<b>data</b>, ")")
+		<a href="../src/runtime/proc.go.html#line-418">proc.go#L418</a>: 	return *(*uintptr)(efaceOf(&amp;f).<b>data</b>)
+		<a href="../src/runtime/runtime2.go.html#line-210">runtime2.go#L210</a>: 	<b>data</b>  unsafe.Pointer
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mheap.spanalloc</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-66">mheap</a>.<a href="../src/runtime/mheap.go.html#line-235">spanalloc</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+8 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mheap.go.html#line-235">mheap.go#L235</a>: 	<b>spanalloc</b>             fixalloc // allocator for span*
+		<a href="../src/runtime/mheap.go.html#line-722" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-722">#L722</a>: 	h.<b>spanalloc</b>.init(unsafe.Sizeof(mspan{}), recordspan, unsafe.Pointer(h), &memstats.mspan_sys)
+		<a href="../src/runtime/mheap.go.html#line-735" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-735">#L735</a>: 	h.<b>spanalloc</b>.zero = false
+		<a href="../src/runtime/mheap.go.html#line-1055" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1055">#L1055</a>: 		return (*mspan)(h.<b>spanalloc</b>.alloc())
+		<a href="../src/runtime/mheap.go.html#line-1061" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1061">#L1061</a>: 			pp.mspancache.buf[i] = (*mspan)(h.<b>spanalloc</b>.alloc())
+		<a href="../src/runtime/mheap.go.html#line-1091" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1091">#L1091</a>: 	h.<b>spanalloc</b>.free(unsafe.Pointer(s))
+		<a href="../src/runtime/mstats.go.html#line-523">mstats.go#L523</a>: 	memstats.mspan_inuse = uint64(mheap_.<b>spanalloc</b>.inuse)
+		<a href="../src/runtime/proc.go.html#line-4299">proc.go#L4299</a>: 			mheap_.<b>spanalloc</b>.free(unsafe.Pointer(pp.mspancache.buf[i]))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.pageAlloc.searchAddr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mpagealloc.go.html#line-175">pageAlloc</a>.<a href="../src/runtime/mpagealloc.go.html#line-242">searchAddr</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+24 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mpagealloc.go.html#line-242">mpagealloc.go#L242</a>: 	<b>searchAddr</b> offAddr
+		<a href="../src/runtime/mpagealloc.go.html#line-320" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-320">#L320</a>: 	s.<b>searchAddr</b> = maxSearchAddr
+		<a href="../src/runtime/mpagealloc.go.html#line-380" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-380">#L380</a>: 	if b := (offAddr{base}); b.lessThan(s.<b>searchAddr</b>) {
+		<a href="../src/runtime/mpagealloc.go.html#line-381" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-381">#L381</a>: 		s.<b>searchAddr</b> = b
+		<a href="../src/runtime/mpagealloc.go.html#line-667" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-667">#L667</a>: 		if searchIdx := offAddrToLevelIndex(l, s.<b>searchAddr</b>); searchIdx&^(entriesPerBlock-1) == i {
+		<a href="../src/runtime/mpagealloc.go.html#line-744" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-744">#L744</a>: 		print("runtime: s.searchAddr = ", hex(s.<b>searchAddr</b>.addr()), ", i = ", i, "\n")
+		<a href="../src/runtime/mpagealloc.go.html#line-792" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-792">#L792</a>: 	if chunkIndex(s.<b>searchAddr</b>.addr()) >= s.end {
+		<a href="../src/runtime/mpagealloc.go.html#line-799" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-799">#L799</a>: 	if pallocChunkPages-chunkPageIndex(s.<b>searchAddr</b>.addr()) >= uint(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-801" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-801">#L801</a>: 		i := chunkIndex(s.<b>searchAddr</b>.addr())
+		<a href="../src/runtime/mpagealloc.go.html#line-803" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-803">#L803</a>: 			j, searchIdx := s.chunkOf(i).find(npages, chunkPageIndex(s.<b>searchAddr</b>.addr()))
+		<a href="../src/runtime/mpagealloc.go.html#line-806" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-806">#L806</a>: 				print("runtime: searchIdx = ", chunkPageIndex(s.<b>searchAddr</b>.addr()), ", s.searchAddr = ", hex(s.<b>searchAddr</b>.addr()), "\n")
+		<a href="../src/runtime/mpagealloc.go.html#line-824" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-824">#L824</a>: 			s.<b>searchAddr</b> = maxSearchAddr
+		<a href="../src/runtime/mpagealloc.go.html#line-835" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-835">#L835</a>: 	if s.<b>searchAddr</b>.lessThan(searchAddr) {
+		<a href="../src/runtime/mpagealloc.go.html#line-836" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-836">#L836</a>: 		s.<b>searchAddr</b> = searchAddr
+		<a href="../src/runtime/mpagealloc.go.html#line-846" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-846">#L846</a>: 	if b := (offAddr{base}); b.lessThan(s.<b>searchAddr</b>) {
+		<a href="../src/runtime/mpagealloc.go.html#line-847" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-847">#L847</a>: 		s.<b>searchAddr</b> = b
+		<a href="../src/runtime/mpagecache.go.html#line-94">mpagecache.go#L94</a>: 	if b := (offAddr{c.base}); b.lessThan(s.<b>searchAddr</b>) {
+		<a href="../src/runtime/mpagecache.go.html#line-95" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-95">#L95</a>: 		s.<b>searchAddr</b> = b
+		<a href="../src/runtime/mpagecache.go.html#line-109" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-109">#L109</a>: 	if chunkIndex(s.<b>searchAddr</b>.addr()) >= s.end {
+		<a href="../src/runtime/mpagecache.go.html#line-113" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-113">#L113</a>: 	ci := chunkIndex(s.<b>searchAddr</b>.addr()) // chunk index
+		<a href="../src/runtime/mpagecache.go.html#line-117" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-117">#L117</a>: 		j, _ := chunk.find(1, chunkPageIndex(s.<b>searchAddr</b>.addr()))
+		<a href="../src/runtime/mpagecache.go.html#line-133" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-133">#L133</a>: 			s.<b>searchAddr</b> = maxSearchAddr
+		<a href="../src/runtime/mpagecache.go.html#line-159" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-159">#L159</a>: 	s.<b>searchAddr</b> = offAddr{c.base + pageSize*(pageCachePages-1)}
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

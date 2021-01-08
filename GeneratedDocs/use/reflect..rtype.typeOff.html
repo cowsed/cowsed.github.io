@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.rtype.typeOff</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-303">rtype</a>.<a href="../src/reflect/type.go.html#line-687">typeOff</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+16 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-687">type.go#L687</a>: func (t *rtype) <b>typeOff</b>(off typeOff) *rtype {
+		<a href="../src/reflect/type.go.html#line-813" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-813">#L813</a>: 	mtyp := t.<b>typeOff</b>(p.mtyp)
+		<a href="../src/reflect/type.go.html#line-1064" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1064">#L1064</a>: 	m.Type = toType(t.<b>typeOff</b>(p.typ))
+		<a href="../src/reflect/type.go.html#line-1382" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1382">#L1382</a>: 		return t.<b>typeOff</b>(t.ptrToThis)
+		<a href="../src/reflect/type.go.html#line-1491" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1491">#L1491</a>: 			if vmName.name() == tmName.name() &amp;&amp; V.<b>typeOff</b>(vm.typ) == t.<b>typeOff</b>(tm.typ) {
+		<a href="../src/reflect/type.go.html#line-1524" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1524">#L1524</a>: 		if vmName.name() == tmName.name() &amp;&amp; V.<b>typeOff</b>(vm.mtyp) == t.<b>typeOff</b>(tm.typ) {
+		<a href="../src/reflect/type.go.html#line-2423" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2423">#L2423</a>: 						mtyp    = ift.<b>typeOff</b>(m.typ)
+		<a href="../src/reflect/type.go.html#line-2492" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2492">#L2492</a>: 							mtyp: resolveReflectType(ptr.<b>typeOff</b>(m.mtyp)),
+		<a href="../src/reflect/type.go.html#line-2508" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2508">#L2508</a>: 							mtyp: resolveReflectType(ptr.elem.<b>typeOff</b>(m.mtyp)),
+		<a href="../src/reflect/type.go.html#line-2532" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2532">#L2532</a>: 							mtyp: resolveReflectType(ft.<b>typeOff</b>(m.mtyp)),
+		<a href="../src/reflect/value.go.html#line-652">value.go#L652</a>: 		t = (*funcType)(unsafe.Pointer(tt.<b>typeOff</b>(m.typ)))
+		<a href="../src/reflect/value.go.html#line-665" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-665">#L665</a>: 		t = (*funcType)(unsafe.Pointer(v.typ.<b>typeOff</b>(m.mtyp)))
+		<a href="../src/reflect/value.go.html#line-1921" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1921">#L1921</a>: 		return v.typ.<b>typeOff</b>(m.typ)
+		<a href="../src/reflect/value.go.html#line-1929" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1929">#L1929</a>: 	return v.typ.<b>typeOff</b>(m.mtyp)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

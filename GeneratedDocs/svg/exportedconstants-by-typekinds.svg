@@ -1,0 +1,35 @@
+<svg width="528" height="223" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#fff" id="canvas_background" width="530" height="225" y="-1" x="-1"/>
+<text xml:space="preserve" text-anchor="middle" font-weight="bold" font-family='"Courier New", Courier, monospace' font-size="12" x="264" y="19" fill="#000">Numbers of Exported Constants by Type (or Default Type) Kinds</text>
+<rect x="112" y="33" width="0.00" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="42" fill="#000">bool</text>
+<rect x="112" y="50" width="192.94" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="59" fill="#000">int</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="307.94" y="59" fill="#000">(82)</text>
+<circle cx="113" cy="69" r="1" fill="#000"/>
+<circle cx="113" cy="73" r="1" fill="#000"/>
+<circle cx="113" cy="77" r="1" fill="#000"/>
+<rect x="112" y="84" width="14.12" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="93" fill="#000">int64</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="129.12" y="93" fill="#000">(6)</text>
+<rect x="112" y="101" width="127.06" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="110" fill="#000">uint</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="242.06" y="110" fill="#000">(54)</text>
+<circle cx="113" cy="120" r="1" fill="#000"/>
+<circle cx="113" cy="124" r="1" fill="#000"/>
+<circle cx="113" cy="128" r="1" fill="#000"/>
+<rect x="112" y="135" width="35.29" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="144" fill="#000">uint32</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="150.29" y="144" fill="#000">(15)</text>
+<rect x="112" y="152" width="0.00" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="161" fill="#000">uint64</text>
+<rect x="112" y="169" width="320.00" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="178" fill="#000">uintptr</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="435.00" y="178" fill="#000">(136)</text>
+<circle cx="113" cy="188" r="1" fill="#000"/>
+<circle cx="113" cy="192" r="1" fill="#000"/>
+<circle cx="113" cy="196" r="1" fill="#000"/>
+<rect x="112" y="203" width="4.71" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="212" fill="#000">string</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="119.71" y="212" fill="#000">(2)</text>
+</svg>

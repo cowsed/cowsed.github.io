@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime._defer.fn</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-885">_defer</a>.<a href="../src/runtime/runtime2.go.html#line-895">fn</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+20 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-373">heapdump.go#L373</a>: 		dumpint(uint64(uintptr(unsafe.Pointer(d.<b>fn</b>))))
+		<a href="../src/runtime/heapdump.go.html#line-374" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-374">#L374</a>: 		if d.<b>fn</b> == nil {
+		<a href="../src/runtime/heapdump.go.html#line-378" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-378">#L378</a>: 			dumpint(uint64(uintptr(unsafe.Pointer(d.<b>fn</b>.fn))))
+		<a href="../src/runtime/mgcmark.go.html#line-854">mgcmark.go#L854</a>: 		if d.<b>fn</b> != nil {
+		<a href="../src/runtime/mgcmark.go.html#line-857" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-857">#L857</a>: 			scanblock(uintptr(unsafe.Pointer(&amp;d.<b>fn</b>)), sys.PtrSize, &oneptrmask[0], gcw, &state)
+		<a href="../src/runtime/panic.go.html#line-240">panic.go#L240</a>: 	d.<b>fn</b> = fn
+		<a href="../src/runtime/panic.go.html#line-445" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-445">#L445</a>: 	if d.<b>fn</b> != nil {
+		<a href="../src/runtime/panic.go.html#line-562" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-562">#L562</a>: 	fn := d.<b>fn</b>
+		<a href="../src/runtime/panic.go.html#line-563" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-563">#L563</a>: 	d.<b>fn</b> = nil
+		<a href="../src/runtime/panic.go.html#line-608" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-608">#L608</a>: 				d.<b>fn</b> = nil
+		<a href="../src/runtime/panic.go.html#line-636" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-636">#L636</a>: 			reflectcallSave(&amp;p, unsafe.Pointer(d.<b>fn</b>), deferArgs(d), uint32(d.siz))
+		<a href="../src/runtime/panic.go.html#line-652" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-652">#L652</a>: 		d.<b>fn</b> = nil
+		<a href="../src/runtime/panic.go.html#line-839" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-839">#L839</a>: 		d.<b>fn</b> = closure
+		<a href="../src/runtime/panic.go.html#line-859" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-859">#L859</a>: 		d.<b>fn</b> = nil
+		<a href="../src/runtime/panic.go.html#line-950" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-950">#L950</a>: 				d.<b>fn</b> = nil
+		<a href="../src/runtime/panic.go.html#line-975" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-975">#L975</a>: 			reflectcall(nil, unsafe.Pointer(d.<b>fn</b>), deferArgs(d), uint32(d.siz), uint32(d.siz))
+		<a href="../src/runtime/panic.go.html#line-991" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-991">#L991</a>: 			d.<b>fn</b> = nil
+		<a href="../src/runtime/runtime2.go.html#line-895">runtime2.go#L895</a>: 	<b>fn</b>        *funcval // can be nil for open-coded defers
+		<a href="../src/runtime/stack.go.html#line-741">stack.go#L741</a>: 		adjustpointer(adjinfo, unsafe.Pointer(&amp;d.<b>fn</b>))
+		<a href="../src/runtime/traceback.go.html#line-53">traceback.go#L53</a>: 		fn := d.<b>fn</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

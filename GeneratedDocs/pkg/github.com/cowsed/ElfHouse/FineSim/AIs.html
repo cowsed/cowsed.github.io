@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: github.com/cowsed/ElfHouse/FineSim/AIs</title>
+<link href="../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>ai</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../../../../../index.html#pkg-github.com/cowsed/ElfHouse/FineSim/AIs">github.com/cowsed/ElfHouse/FineSim/AIs</a><i> (on <a href="https://pkg.go.dev/github.com/cowsed/ElfHouse/FineSim/AIs" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../../../../../dep/github.com/cowsed/ElfHouse/FineSim/AIs.html">4 packages</a>, and imported by <a href="../../../../../dep/github.com/cowsed/ElfHouse/FineSim/AIs.html#imported-by">one package</a>
+
+<span class="title">Involved Source Files</span>
+	<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html#doc">d-&gt;</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html">AI.go</a>
+	    <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html">Follower.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-AI" data-popularity="750">	<a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..AI.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html#line-9">AI</a> <b<i>(interface)</i></b>
+		An interface to hold all the different kinds of minds
+
+		<input type='checkbox' class="stat" id="AI-stat-methods"><label for="AI-stat-methods">Exported Methods (2)</label><span id='AI-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html#line-11">Describe</a>(lod <a href="../../../../builtin.html#name-uint8">uint8</a>) <a href="../../../../builtin.html#name-string">string</a></span>
+			<span class="nodocs">( T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html#line-10">NextAction</a>() <a href="Actions.html">action</a>.<a href="Actions.html#name-Action">Action</a></span></span>
+		<input type='checkbox' class="stat" id="AI-stat-impledby"><label for="AI-stat-impledby">Implemented By (4+)</label><span id='AI-stat-impledby-content' class="stat-content">
+			*<a href="#name-FollowerAI">FollowerAI</a>
+			github.com/cowsed/ElfHouse/FineSim/Beings.<a href="Beings.html#name-Being">Being</a> <i>(interface)</i>
+			github.com/cowsed/ElfHouse/FineSim/Beings.<a href="Beings.html#name-Human">Human</a>
+			github.com/cowsed/ElfHouse/FineSim/Beings.<a href="Beings.html#name-Pet">Pet</a></span>
+		<input type='checkbox' class="stat" id="AI-stat-impls"><label for="AI-stat-impls">Implements (1+)</label><span id='AI-stat-impls-content' class="stat-content">
+			 T : github.com/cowsed/ElfHouse/FineSim/Beings.<a href="Beings.html#name-Being">Being</a></span></div>
+<div class="anchor" id="name-FollowerAI" data-popularity="205">	<a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-12">FollowerAI</a> <i>(struct)</i>
+
+		<input type='checkbox' class="stat" id="FollowerAI-stat-fields"><label for="FollowerAI-stat-fields">Exported Fields (10)</label><span id='FollowerAI-stat-fields-content' class="stat-content">
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-14">BaseTrust</a> <i><a href="../../../../builtin.html#name-uint8">uint8</a></i></span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-Dreams"><label for="FollowerAI-stat-field-Dreams"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-36">Dreams</a> <i>[]<a href="Actions.html">action</a>.<a href="Actions.html#name-Action">Action</a></i></label><span id='FollowerAI-stat-field-Dreams-content' class="stat-content">
+				Long term dreams
+				// Create art where art is a pattern, find family where family is a state where you have an SO and a kid
+</span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-13">Intelligence</a> <i><a href="../../../../builtin.html#name-uint8">uint8</a></i></span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-LongTasks"><label for="FollowerAI-stat-field-LongTasks"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-33">LongTasks</a> <i>[]<a href="Actions.html">action</a>.<a href="Actions.html#name-Action">Action</a></i></label><span id='FollowerAI-stat-field-LongTasks-content' class="stat-content">
+				Long term required
+				// Day to day tasks, do job, support family, etc
+</span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-16">Occupation</a> <i><a href="../../../../builtin.html#name-string">string</a></i></span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-PersonalMem"><label for="FollowerAI-stat-field-PersonalMem"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-22">PersonalMem</a> <i><a href="Memory.html">memory</a>.<a href="Memory.html#name-MemoryHolder">MemoryHolder</a></i></label><span id='FollowerAI-stat-field-PersonalMem-content' class="stat-content">
+				Memory
+				Long term stuff and knowledge about the world
+				// Holds relations to other people, other secrets only this person will know
+</span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-ShortTasks"><label for="FollowerAI-stat-field-ShortTasks"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-31">ShortTasks</a> <i>[]<a href="Actions.html">action</a>.<a href="Actions.html#name-Action">Action</a></i></label><span id='FollowerAI-stat-field-ShortTasks-content' class="stat-content">
+				Short term
+				// Non chronological Day to day tasks, Go to work, Relax, talk to friend
+</span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-SocietyMem"><label for="FollowerAI-stat-field-SocietyMem"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-24">SocietyMem</a> <i>*<a href="Memory.html">memory</a>.<a href="Memory.html#name-MemoryHolder">MemoryHolder</a></i></label><span id='FollowerAI-stat-field-SocietyMem-content' class="stat-content">
+				Society Memory
+				// Which grudges a society holds, what forests are sacred, what fields are owned by whom
+</span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-SpeciesMem"><label for="FollowerAI-stat-field-SpeciesMem"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-26">SpeciesMem</a> <i>*<a href="Memory.html">memory</a>.<a href="Memory.html#name-MemoryHolder">MemoryHolder</a></i></label><span id='FollowerAI-stat-field-SpeciesMem-content' class="stat-content">
+				Species Memory
+				// Holds things like which things are poisonous, where natural resources are etc
+</span>
+			<input type='checkbox' class="stat" id="FollowerAI-stat-field-TaskBuffer"><label for="FollowerAI-stat-field-TaskBuffer"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-29">TaskBuffer</a> <i>[]<a href="Actions.html">action</a>.<a href="Actions.html#name-BaseAction">BaseAction</a></i></label><span id='FollowerAI-stat-field-TaskBuffer-content' class="stat-content">
+				Base tasks
+				// Chronological, These include go to location index, talk to person, take item, etc
+</span></span>
+		<input type='checkbox' class="stat" id="FollowerAI-stat-methods"><label for="FollowerAI-stat-methods">Exported Methods (2)</label><span id='FollowerAI-stat-methods-content' class="stat-content">
+			<span class="nodocs">(*T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-40">Describe</a>(lod <a href="../../../../builtin.html#name-uint8">uint8</a>) <a href="../../../../builtin.html#name-string">string</a></span>
+			<span class="nodocs">(*T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-50">NextAction</a>() <a href="Actions.html">action</a>.<a href="Actions.html#name-Action">Action</a></span></span>
+		<input type='checkbox' class="stat" id="FollowerAI-stat-impls"><label for="FollowerAI-stat-impls">Implements (2+)</label><span id='FollowerAI-stat-impls-content' class="stat-content">
+			*T : <a href="#name-AI">AI</a>
+			*T : github.com/cowsed/ElfHouse/FineSim/Beings.<a href="Beings.html#name-Being">Being</a></span>
+		<input type='checkbox' class="stat" id="FollowerAI-stat-values"><label for="FollowerAI-stat-values">As Types Of (1+)</label><span id='FollowerAI-stat-values-content' class="stat-content">
+			  var <a href="#name-NormalFollowerAI">NormalFollowerAI</a></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-NormalFollowerAI">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..NormalFollowerAI.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-55">NormalFollowerAI</a> <a href="#name-FollowerAI">FollowerAI</a>
+		Definitions for stealing later</div></code></pre><pre id="footer">
+<table><tr><td><img src="../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

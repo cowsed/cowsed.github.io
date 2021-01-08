@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.float64</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-float64">float64</a></b></span>
+
+495 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/format.go.html#line-490">format.go#L490</a>: func (f *fmt) fmtFloat(v <b>float64</b>, size int, verb rune, prec int) {
+		<a href="../src/fmt/print.go.html#line-405">print.go#L405</a>: func (p *pp) fmtFloat(v <b>float64</b>, size int, verb rune) {
+		<a href="../src/fmt/print.go.html#line-668" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-668">#L668</a>: 		p.fmtFloat(<b>float64</b>(f), 32, verb)
+		<a href="../src/fmt/print.go.html#line-669" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-669">#L669</a>: 	case <b>float64</b>:
+		<a href="../src/fmt/scan.go.html#line-774">scan.go#L774</a>: func (s *ss) convertFloat(str string, n int) <b>float64</b> {
+		<a href="../src/fmt/scan.go.html#line-1005" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1005">#L1005</a>: 	case *<b>float64</b>:
+
+	<a href="../pkg/github.com/cowsed/ElfHouse/FineSim/Beings.html">github.com/cowsed/ElfHouse/FineSim/Beings</a>
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Beings/Animal.go.html#line-18">Animal.go#L18</a>: 	Age       <b>float64</b> //age of being usually in years? maybe upddate each month
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Beings/Human.go.html#line-19">Human.go#L19</a>: 	Age       <b>float64</b> //age of being usually in years? maybe upddate each month
+
+	<a href="../pkg/github.com/cowsed/ElfHouse/FineSim/Forms.html">github.com/cowsed/ElfHouse/FineSim/Forms</a>
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-16">Form.go#L16</a>: 	Height <b>float64</b> //in meters, assumes general dimensions of an animal
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-17" class="path-duplicate">Form.go</a><a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-17">#L17</a>: 	Weight <b>float64</b> //in kg
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-48" class="path-duplicate">Form.go</a><a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-48">#L48</a>: 		s += fmt.Sprintf("/Ps/ /tb/ %s strong and can vertically jump %.2f meters. ", grammar.WordFromValue(p.Strength), <b>float64</b>(p.JumpStrength)/10.0)
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-204">sort.go#L204</a>: func floatCompare(a, b <b>float64</b>) int {
+		<a href="../src/internal/fmtsort/sort.go.html#line-218" class="path-duplicate">sort.go</a><a href="../src/internal/fmtsort/sort.go.html#line-218">#L218</a>: func isNaN(a <b>float64</b>) bool {
+
+	<a href="../pkg/math.html">math</a>
+		<a href="../src/math/abs.go.html#line-12">abs.go#L12</a>: func Abs(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/acosh.go.html#line-42">acosh.go#L42</a>: func Acosh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/acosh.go.html#line-44" class="path-duplicate">acosh.go</a><a href="../src/math/acosh.go.html#line-44">#L44</a>: func acosh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/asin.go.html#line-19">asin.go#L19</a>: func Asin(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/asin.go.html#line-21" class="path-duplicate">asin.go</a><a href="../src/math/asin.go.html#line-21">#L21</a>: func asin(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/asin.go.html#line-51" class="path-duplicate">asin.go</a><a href="../src/math/asin.go.html#line-51">#L51</a>: func Acos(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/asin.go.html#line-53" class="path-duplicate">asin.go</a><a href="../src/math/asin.go.html#line-53">#L53</a>: func acos(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/asinh.go.html#line-39">asinh.go#L39</a>: func Asinh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/asinh.go.html#line-41" class="path-duplicate">asinh.go</a><a href="../src/math/asinh.go.html#line-41">#L41</a>: func asinh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/asinh.go.html#line-56" class="path-duplicate">asinh.go</a><a href="../src/math/asinh.go.html#line-56">#L56</a>: 	var temp <b>float64</b>
+		<a href="../src/math/atan.go.html#line-55">atan.go#L55</a>: func xatan(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/atan.go.html#line-76" class="path-duplicate">atan.go</a><a href="../src/math/atan.go.html#line-76">#L76</a>: func satan(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/atan.go.html#line-95" class="path-duplicate">atan.go</a><a href="../src/math/atan.go.html#line-95">#L95</a>: func Atan(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/atan.go.html#line-97" class="path-duplicate">atan.go</a><a href="../src/math/atan.go.html#line-97">#L97</a>: func atan(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/atan2.go.html#line-29">atan2.go#L29</a>: func Atan2(y, x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/atan2.go.html#line-31" class="path-duplicate">atan2.go</a><a href="../src/math/atan2.go.html#line-31">#L31</a>: func atan2(y, x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/atanh.go.html#line-47">atanh.go#L47</a>: func Atanh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/atanh.go.html#line-49" class="path-duplicate">atanh.go</a><a href="../src/math/atanh.go.html#line-49">#L49</a>: func atanh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/atanh.go.html#line-65" class="path-duplicate">atanh.go</a><a href="../src/math/atanh.go.html#line-65">#L65</a>: 	var temp <b>float64</b>
+		<a href="../src/math/bits.go.html#line-20">bits.go#L20</a>: func Inf(sign int) <b>float64</b> {
+		<a href="../src/math/bits.go.html#line-31" class="path-duplicate">bits.go</a><a href="../src/math/bits.go.html#line-31">#L31</a>: func NaN() <b>float64</b> { return Float64frombits(uvnan) }
+		<a href="../src/math/bits.go.html#line-34" class="path-duplicate">bits.go</a><a href="../src/math/bits.go.html#line-34">#L34</a>: func IsNaN(f <b>float64</b>) (is bool) {
+		<a href="../src/math/bits.go.html#line-46" class="path-duplicate">bits.go</a><a href="../src/math/bits.go.html#line-46">#L46</a>: func IsInf(f <b>float64</b>, sign int) bool {
+		<a href="../src/math/bits.go.html#line-56" class="path-duplicate">bits.go</a><a href="../src/math/bits.go.html#line-56">#L56</a>: func normalize(x <b>float64</b>) (y <b>float64</b>, exp int) {
+		<a href="../src/math/cbrt.go.html#line-25">cbrt.go#L25</a>: func Cbrt(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/cbrt.go.html#line-27" class="path-duplicate">cbrt.go</a><a href="../src/math/cbrt.go.html#line-27">#L27</a>: func cbrt(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/cbrt.go.html#line-54" class="path-duplicate">cbrt.go</a><a href="../src/math/cbrt.go.html#line-54">#L54</a>: 		t = <b>float64</b>(1 << 54) // set t= 2**54
+		<a href="../src/math/copysign.go.html#line-9">copysign.go#L9</a>: func Copysign(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/dim.go.html#line-13">dim.go#L13</a>: func Dim(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/dim.go.html#line-35" class="path-duplicate">dim.go</a><a href="../src/math/dim.go.html#line-35">#L35</a>: func Max(x, y <b>float64</b>) <b>float64</b>
+		<a href="../src/math/dim.go.html#line-37" class="path-duplicate">dim.go</a><a href="../src/math/dim.go.html#line-37">#L37</a>: func max(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/dim.go.html#line-62" class="path-duplicate">dim.go</a><a href="../src/math/dim.go.html#line-62">#L62</a>: func Min(x, y <b>float64</b>) <b>float64</b>
+		<a href="../src/math/dim.go.html#line-64" class="path-duplicate">dim.go</a><a href="../src/math/dim.go.html#line-64">#L64</a>: func min(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/erf.go.html#line-188">erf.go#L188</a>: func Erf(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/erf.go.html#line-190" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-190">#L190</a>: func erf(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/erf.go.html#line-210" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-210">#L210</a>: 		var temp <b>float64</b>
+		<a href="../src/math/erf.go.html#line-245" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-245">#L245</a>: 	var R, S <b>float64</b>
+		<a href="../src/math/erf.go.html#line-267" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-267">#L267</a>: func Erfc(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/erf.go.html#line-269" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-269">#L269</a>: func erfc(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/erf.go.html#line-286" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-286">#L286</a>: 		var temp <b>float64</b>
+		<a href="../src/math/erf.go.html#line-317" class="path-duplicate">erf.go</a><a href="../src/math/erf.go.html#line-317">#L317</a>: 		var R, S <b>float64</b>
+		<a href="../src/math/erfinv.go.html#line-76">erfinv.go#L76</a>: func Erfinv(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/erfinv.go.html#line-91" class="path-duplicate">erfinv.go</a><a href="../src/math/erfinv.go.html#line-91">#L91</a>: 	var ans <b>float64</b>
+		<a href="../src/math/erfinv.go.html#line-98" class="path-duplicate">erfinv.go</a><a href="../src/math/erfinv.go.html#line-98">#L98</a>: 		var z1, z2 <b>float64</b>
+		<a href="../src/math/erfinv.go.html#line-125" class="path-duplicate">erfinv.go</a><a href="../src/math/erfinv.go.html#line-125">#L125</a>: func Erfcinv(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/exp.go.html#line-14">exp.go#L14</a>: func Exp(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/exp.go.html#line-92" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-92">#L92</a>: func exp(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/exp.go.html#line-125" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-125">#L125</a>: 	hi := x - <b>float64</b>(k)*Ln2Hi
+		<a href="../src/math/exp.go.html#line-126" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-126">#L126</a>: 	lo := <b>float64</b>(k) * Ln2Lo
+		<a href="../src/math/exp.go.html#line-135" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-135">#L135</a>: func Exp2(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/exp.go.html#line-137" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-137">#L137</a>: func exp2(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/exp.go.html#line-167" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-167">#L167</a>: 	t := x - <b>float64</b>(k)
+		<a href="../src/math/exp.go.html#line-176" class="path-duplicate">exp.go</a><a href="../src/math/exp.go.html#line-176">#L176</a>: func expmulti(hi, lo <b>float64</b>, k int) <b>float64</b> {
+		<a href="../src/math/expm1.go.html#line-124">expm1.go#L124</a>: func Expm1(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/expm1.go.html#line-126" class="path-duplicate">expm1.go</a><a href="../src/math/expm1.go.html#line-126">#L126</a>: func expm1(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/expm1.go.html#line-170" class="path-duplicate">expm1.go</a><a href="../src/math/expm1.go.html#line-170">#L170</a>: 	var c <b>float64</b>
+		<a href="../src/math/expm1.go.html#line-173" class="path-duplicate">expm1.go</a><a href="../src/math/expm1.go.html#line-173">#L173</a>: 		var hi, lo <b>float64</b>
+		<a href="../src/math/expm1.go.html#line-190" class="path-duplicate">expm1.go</a><a href="../src/math/expm1.go.html#line-190">#L190</a>: 			t := <b>float64</b>(k)
+		<a href="../src/math/floor.go.html#line-13">floor.go#L13</a>: func Floor(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/floor.go.html#line-15" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-15">#L15</a>: func floor(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/floor.go.html#line-36" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-36">#L36</a>: func Ceil(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/floor.go.html#line-38" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-38">#L38</a>: func ceil(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/floor.go.html#line-48" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-48">#L48</a>: func Trunc(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/floor.go.html#line-50" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-50">#L50</a>: func trunc(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/floor.go.html#line-64" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-64">#L64</a>: func Round(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/floor.go.html#line-101" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-101">#L101</a>: func RoundToEven(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/fma.go.html#line-95">fma.go#L95</a>: func FMA(x, y, z <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/frexp.go.html#line-16">frexp.go#L16</a>: func Frexp(f <b>float64</b>) (frac <b>float64</b>, exp int)
+		<a href="../src/math/frexp.go.html#line-18" class="path-duplicate">frexp.go</a><a href="../src/math/frexp.go.html#line-18">#L18</a>: func frexp(f <b>float64</b>) (frac <b>float64</b>, exp int) {
+		<a href="../src/math/gamma.go.html#line-66">gamma.go#L66</a>: var _gamP = [...]<b>float64</b>{
+		<a href="../src/math/gamma.go.html#line-75" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-75">#L75</a>: var _gamQ = [...]<b>float64</b>{
+		<a href="../src/math/gamma.go.html#line-85" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-85">#L85</a>: var _gamS = [...]<b>float64</b>{
+		<a href="../src/math/gamma.go.html#line-100" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-100">#L100</a>: func stirling(x <b>float64</b>) (<b>float64</b>, <b>float64</b>) {
+		<a href="../src/math/gamma.go.html#line-130" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-130">#L130</a>: func Gamma(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/gamma.go.html#line-175" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-175">#L175</a>: 		return <b>float64</b>(signgam) * z
+		<a href="../src/math/gamma.go.html#line-215" class="path-duplicate">gamma.go</a><a href="../src/math/gamma.go.html#line-215">#L215</a>: func isNegInt(x <b>float64</b>) bool {
+		<a href="../src/math/hypot.go.html#line-19">hypot.go#L19</a>: func Hypot(p, q <b>float64</b>) <b>float64</b>
+		<a href="../src/math/hypot.go.html#line-21" class="path-duplicate">hypot.go</a><a href="../src/math/hypot.go.html#line-21">#L21</a>: func hypot(p, q <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j0.go.html#line-76">j0.go#L76</a>: func J0(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j0.go.html#line-121" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-121">#L121</a>: 		var z <b>float64</b>
+		<a href="../src/math/j0.go.html#line-154" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-154">#L154</a>: func Y0(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j0.go.html#line-209" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-209">#L209</a>: 		var z <b>float64</b>
+		<a href="../src/math/j0.go.html#line-238" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-238">#L238</a>: var p0R8 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-246" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-246">#L246</a>: var p0S8 = [5]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-255" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-255">#L255</a>: var p0R5 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-263" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-263">#L263</a>: var p0S5 = [5]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-272" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-272">#L272</a>: var p0R3 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-280" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-280">#L280</a>: var p0S3 = [5]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-289" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-289">#L289</a>: var p0R2 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-297" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-297">#L297</a>: var p0S2 = [5]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-305" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-305">#L305</a>: func pzero(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j0.go.html#line-306" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-306">#L306</a>: 	var p *[6]<b>float64</b>
+		<a href="../src/math/j0.go.html#line-307" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-307">#L307</a>: 	var q *[5]<b>float64</b>
+		<a href="../src/math/j0.go.html#line-337" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-337">#L337</a>: var q0R8 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-345" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-345">#L345</a>: var q0S8 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-355" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-355">#L355</a>: var q0R5 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-363" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-363">#L363</a>: var q0S5 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-373" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-373">#L373</a>: var q0R3 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-381" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-381">#L381</a>: var q0S3 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-391" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-391">#L391</a>: var q0R2 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-399" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-399">#L399</a>: var q0S2 = [6]<b>float64</b>{
+		<a href="../src/math/j0.go.html#line-408" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-408">#L408</a>: func qzero(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j0.go.html#line-409" class="path-duplicate">j0.go</a><a href="../src/math/j0.go.html#line-409">#L409</a>: 	var p, q *[6]<b>float64</b>
+		<a href="../src/math/j1.go.html#line-74">j1.go#L74</a>: func J1(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j1.go.html#line-120" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-120">#L120</a>: 		var z <b>float64</b>
+		<a href="../src/math/j1.go.html#line-154" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-154">#L154</a>: func Y1(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j1.go.html#line-204" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-204">#L204</a>: 		var z <b>float64</b>
+		<a href="../src/math/j1.go.html#line-233" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-233">#L233</a>: var p1R8 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-241" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-241">#L241</a>: var p1S8 = [5]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-250" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-250">#L250</a>: var p1R5 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-258" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-258">#L258</a>: var p1S5 = [5]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-267" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-267">#L267</a>: var p1R3 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-275" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-275">#L275</a>: var p1S3 = [5]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-284" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-284">#L284</a>: var p1R2 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-292" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-292">#L292</a>: var p1S2 = [5]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-300" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-300">#L300</a>: func pone(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j1.go.html#line-301" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-301">#L301</a>: 	var p *[6]<b>float64</b>
+		<a href="../src/math/j1.go.html#line-302" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-302">#L302</a>: 	var q *[5]<b>float64</b>
+		<a href="../src/math/j1.go.html#line-332" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-332">#L332</a>: var q1R8 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-340" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-340">#L340</a>: var q1S8 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-350" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-350">#L350</a>: var q1R5 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-358" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-358">#L358</a>: var q1S5 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-368" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-368">#L368</a>: var q1R3 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-376" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-376">#L376</a>: var q1S3 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-386" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-386">#L386</a>: var q1R2 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-394" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-394">#L394</a>: var q1S2 = [6]<b>float64</b>{
+		<a href="../src/math/j1.go.html#line-403" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-403">#L403</a>: func qone(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/j1.go.html#line-404" class="path-duplicate">j1.go</a><a href="../src/math/j1.go.html#line-404">#L404</a>: 	var p, q *[6]<b>float64</b>
+		<a href="../src/math/jn.go.html#line-53">jn.go#L53</a>: func Jn(n int, x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/jn.go.html#line-87" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-87">#L87</a>: 	var b <b>float64</b>
+		<a href="../src/math/jn.go.html#line-88" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-88">#L88</a>: 	if <b>float64</b>(n) <= x {
+		<a href="../src/math/jn.go.html#line-105" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-105">#L105</a>: 			var temp <b>float64</b>
+		<a href="../src/math/jn.go.html#line-120" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-120">#L120</a>: 				a, b = b, b*(<b>float64</b>(i+i)/x)-a // avoid underflow
+		<a href="../src/math/jn.go.html#line-135" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-135">#L135</a>: 					a *= <b>float64</b>(i) // a = n!
+		<a href="../src/math/jn.go.html#line-170" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-170">#L170</a>: 			w := <b>float64</b>(n+n) / x
+		<a href="../src/math/jn.go.html#line-184" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-184">#L184</a>: 				t = 1 / (<b>float64</b>(i)/x - t)
+		<a href="../src/math/jn.go.html#line-196" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-196">#L196</a>: 			tmp := <b>float64</b>(n)
+		<a href="../src/math/jn.go.html#line-201" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-201">#L201</a>: 					di := <b>float64</b>(i + i)
+		<a href="../src/math/jn.go.html#line-206" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-206">#L206</a>: 					di := <b>float64</b>(i + i)
+		<a href="../src/math/jn.go.html#line-233" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-233">#L233</a>: func Yn(n int, x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/jn.go.html#line-265" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-265">#L265</a>: 	var b <b>float64</b>
+		<a href="../src/math/jn.go.html#line-280" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-280">#L280</a>: 		var temp <b>float64</b>
+		<a href="../src/math/jn.go.html#line-297" class="path-duplicate">jn.go</a><a href="../src/math/jn.go.html#line-297">#L297</a>: 			a, b = b, (<b>float64</b>(i+i)/x)*b-a
+		<a href="../src/math/ldexp.go.html#line-14">ldexp.go#L14</a>: func Ldexp(frac <b>float64</b>, exp int) <b>float64</b>
+		<a href="../src/math/ldexp.go.html#line-16" class="path-duplicate">ldexp.go</a><a href="../src/math/ldexp.go.html#line-16">#L16</a>: func ldexp(frac <b>float64</b>, exp int) <b>float64</b> {
+		<a href="../src/math/ldexp.go.html#line-37" class="path-duplicate">ldexp.go</a><a href="../src/math/ldexp.go.html#line-37">#L37</a>: 	var m <b>float64</b> = 1
+		<a href="../src/math/lgamma.go.html#line-91">lgamma.go#L91</a>: var _lgamA = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-105" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-105">#L105</a>: var _lgamR = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-114" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-114">#L114</a>: var _lgamS = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-123" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-123">#L123</a>: var _lgamT = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-140" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-140">#L140</a>: var _lgamU = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-148" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-148">#L148</a>: var _lgamV = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-156" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-156">#L156</a>: var _lgamW = [...]<b>float64</b>{
+		<a href="../src/math/lgamma.go.html#line-174" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-174">#L174</a>: func Lgamma(x <b>float64</b>) (lgamma <b>float64</b>, sign int) {
+		<a href="../src/math/lgamma.go.html#line-213" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-213">#L213</a>: 	var nadj <b>float64</b>
+		<a href="../src/math/lgamma.go.html#line-235" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-235">#L235</a>: 		var y <b>float64</b>
+		<a href="../src/math/lgamma.go.html#line-286" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-286">#L286</a>: 		y := x - <b>float64</b>(i)
+		<a href="../src/math/lgamma.go.html#line-324" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-324">#L324</a>: func sinPi(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/lgamma.go.html#line-348" class="path-duplicate">lgamma.go</a><a href="../src/math/lgamma.go.html#line-348">#L348</a>: 			x = <b>float64</b>(n)
+		<a href="../src/math/log.go.html#line-80">log.go#L80</a>: func Log(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/log.go.html#line-82" class="path-duplicate">log.go</a><a href="../src/math/log.go.html#line-82">#L82</a>: func log(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/log.go.html#line-112" class="path-duplicate">log.go</a><a href="../src/math/log.go.html#line-112">#L112</a>: 	k := <b>float64</b>(ki)
+		<a href="../src/math/log10.go.html#line-9">log10.go#L9</a>: func Log10(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/log10.go.html#line-11" class="path-duplicate">log10.go</a><a href="../src/math/log10.go.html#line-11">#L11</a>: func log10(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/log10.go.html#line-17" class="path-duplicate">log10.go</a><a href="../src/math/log10.go.html#line-17">#L17</a>: func Log2(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/log10.go.html#line-19" class="path-duplicate">log10.go</a><a href="../src/math/log10.go.html#line-19">#L19</a>: func log2(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/log10.go.html#line-24" class="path-duplicate">log10.go</a><a href="../src/math/log10.go.html#line-24">#L24</a>: 		return <b>float64</b>(exp - 1)
+		<a href="../src/math/log10.go.html#line-26" class="path-duplicate">log10.go</a><a href="../src/math/log10.go.html#line-26">#L26</a>: 	return Log(frac)*(1/Ln2) + <b>float64</b>(exp)
+		<a href="../src/math/log1p.go.html#line-95">log1p.go#L95</a>: func Log1p(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/log1p.go.html#line-97" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-97">#L97</a>: func log1p(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/log1p.go.html#line-130" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-130">#L130</a>: 	var f <b>float64</b>
+		<a href="../src/math/log1p.go.html#line-147" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-147">#L147</a>: 	var c <b>float64</b>
+		<a href="../src/math/log1p.go.html#line-149" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-149">#L149</a>: 		var u <b>float64</b>
+		<a href="../src/math/log1p.go.html#line-178" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-178">#L178</a>: 	var s, R, z <b>float64</b>
+		<a href="../src/math/log1p.go.html#line-184" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-184">#L184</a>: 			c += <b>float64</b>(k) * Ln2Lo
+		<a href="../src/math/log1p.go.html#line-185" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-185">#L185</a>: 			return <b>float64</b>(k)*Ln2Hi + c
+		<a href="../src/math/log1p.go.html#line-191" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-191">#L191</a>: 		return <b>float64</b>(k)*Ln2Hi - ((R - (<b>float64</b>(k)*Ln2Lo + c)) - f)
+		<a href="../src/math/log1p.go.html#line-199" class="path-duplicate">log1p.go</a><a href="../src/math/log1p.go.html#line-199">#L199</a>: 	return <b>float64</b>(k)*Ln2Hi - ((hfsq - (s*(hfsq+R) + (<b>float64</b>(k)*Ln2Lo + c))) - f)
+		<a href="../src/math/logb.go.html#line-13">logb.go#L13</a>: func Logb(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/logb.go.html#line-23" class="path-duplicate">logb.go</a><a href="../src/math/logb.go.html#line-23">#L23</a>: 	return <b>float64</b>(ilogb(x))
+		<a href="../src/math/logb.go.html#line-32" class="path-duplicate">logb.go</a><a href="../src/math/logb.go.html#line-32">#L32</a>: func Ilogb(x <b>float64</b>) int {
+		<a href="../src/math/logb.go.html#line-47" class="path-duplicate">logb.go</a><a href="../src/math/logb.go.html#line-47">#L47</a>: func ilogb(x <b>float64</b>) int {
+		<a href="../src/math/mod.go.html#line-21">mod.go#L21</a>: func Mod(x, y <b>float64</b>) <b>float64</b>
+		<a href="../src/math/mod.go.html#line-23" class="path-duplicate">mod.go</a><a href="../src/math/mod.go.html#line-23">#L23</a>: func mod(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/modf.go.html#line-13">modf.go#L13</a>: func Modf(f <b>float64</b>) (int <b>float64</b>, frac <b>float64</b>)
+		<a href="../src/math/modf.go.html#line-15" class="path-duplicate">modf.go</a><a href="../src/math/modf.go.html#line-15">#L15</a>: func modf(f <b>float64</b>) (int <b>float64</b>, frac <b>float64</b>) {
+		<a href="../src/math/nextafter.go.html#line-15">nextafter.go#L15</a>: 	case IsNaN(<b>float64</b>(x)) || IsNaN(<b>float64</b>(y)): // special case
+		<a href="../src/math/nextafter.go.html#line-20" class="path-duplicate">nextafter.go</a><a href="../src/math/nextafter.go.html#line-20">#L20</a>: 		r = float32(Copysign(<b>float64</b>(Float32frombits(1)), <b>float64</b>(y)))
+		<a href="../src/math/nextafter.go.html#line-35" class="path-duplicate">nextafter.go</a><a href="../src/math/nextafter.go.html#line-35">#L35</a>: func Nextafter(x, y <b>float64</b>) (r <b>float64</b>) {
+		<a href="../src/math/pow.go.html#line-7">pow.go#L7</a>: func isOddInt(x <b>float64</b>) bool {
+		<a href="../src/math/pow.go.html#line-38" class="path-duplicate">pow.go</a><a href="../src/math/pow.go.html#line-38">#L38</a>: func Pow(x, y <b>float64</b>) <b>float64</b>
+		<a href="../src/math/pow.go.html#line-40" class="path-duplicate">pow.go</a><a href="../src/math/pow.go.html#line-40">#L40</a>: func pow(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/pow10.go.html#line-8">pow10.go#L8</a>: var pow10tab = [...]<b>float64</b>{
+		<a href="../src/math/pow10.go.html#line-16" class="path-duplicate">pow10.go</a><a href="../src/math/pow10.go.html#line-16">#L16</a>: var pow10postab32 = [...]<b>float64</b>{
+		<a href="../src/math/pow10.go.html#line-21" class="path-duplicate">pow10.go</a><a href="../src/math/pow10.go.html#line-21">#L21</a>: var pow10negtab32 = [...]<b>float64</b>{
+		<a href="../src/math/pow10.go.html#line-30" class="path-duplicate">pow10.go</a><a href="../src/math/pow10.go.html#line-30">#L30</a>: func Pow10(n int) <b>float64</b> {
+		<a href="../src/math/remainder.go.html#line-37">remainder.go#L37</a>: func Remainder(x, y <b>float64</b>) <b>float64</b>
+		<a href="../src/math/remainder.go.html#line-39" class="path-duplicate">remainder.go</a><a href="../src/math/remainder.go.html#line-39">#L39</a>: func remainder(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/signbit.go.html#line-8">signbit.go#L8</a>: func Signbit(x <b>float64</b>) bool {
+		<a href="../src/math/sin.go.html#line-93">sin.go#L93</a>: var _sin = [...]<b>float64</b>{
+		<a href="../src/math/sin.go.html#line-103" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-103">#L103</a>: var _cos = [...]<b>float64</b>{
+		<a href="../src/math/sin.go.html#line-117" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-117">#L117</a>: func Cos(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/sin.go.html#line-119" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-119">#L119</a>: func cos(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/sin.go.html#line-136" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-136">#L136</a>: 	var y, z <b>float64</b>
+		<a href="../src/math/sin.go.html#line-141" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-141">#L141</a>: 		y = <b>float64</b>(j)           // integer part of x/(Pi/4), as float
+		<a href="../src/math/sin.go.html#line-178" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-178">#L178</a>: func Sin(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/sin.go.html#line-180" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-180">#L180</a>: func sin(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/sin.go.html#line-202" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-202">#L202</a>: 	var y, z <b>float64</b>
+		<a href="../src/math/sin.go.html#line-207" class="path-duplicate">sin.go</a><a href="../src/math/sin.go.html#line-207">#L207</a>: 		y = <b>float64</b>(j)           // integer part of x/(Pi/4), as float
+		<a href="../src/math/sincos.go.html#line-15">sincos.go#L15</a>: func Sincos(x <b>float64</b>) (sin, cos <b>float64</b>) {
+		<a href="../src/math/sincos.go.html#line-37" class="path-duplicate">sincos.go</a><a href="../src/math/sincos.go.html#line-37">#L37</a>: 	var y, z <b>float64</b>
+		<a href="../src/math/sincos.go.html#line-42" class="path-duplicate">sincos.go</a><a href="../src/math/sincos.go.html#line-42">#L42</a>: 		y = <b>float64</b>(j)           // integer part of x/(Pi/4), as float
+		<a href="../src/math/sinh.go.html#line-25">sinh.go#L25</a>: func Sinh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/sinh.go.html#line-27" class="path-duplicate">sinh.go</a><a href="../src/math/sinh.go.html#line-27">#L27</a>: func sinh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/sinh.go.html#line-45" class="path-duplicate">sinh.go</a><a href="../src/math/sinh.go.html#line-45">#L45</a>: 	var temp <b>float64</b>
+		<a href="../src/math/sinh.go.html#line-72" class="path-duplicate">sinh.go</a><a href="../src/math/sinh.go.html#line-72">#L72</a>: func Cosh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/sinh.go.html#line-74" class="path-duplicate">sinh.go</a><a href="../src/math/sinh.go.html#line-74">#L74</a>: func cosh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/sqrt.go.html#line-92">sqrt.go#L92</a>: func Sqrt(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/sqrt.go.html#line-99" class="path-duplicate">sqrt.go</a><a href="../src/math/sqrt.go.html#line-99">#L99</a>: func sqrt(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/tan.go.html#line-63">tan.go#L63</a>: var _tanP = [...]<b>float64</b>{
+		<a href="../src/math/tan.go.html#line-68" class="path-duplicate">tan.go</a><a href="../src/math/tan.go.html#line-68">#L68</a>: var _tanQ = [...]<b>float64</b>{
+		<a href="../src/math/tan.go.html#line-82" class="path-duplicate">tan.go</a><a href="../src/math/tan.go.html#line-82">#L82</a>: func Tan(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/tan.go.html#line-84" class="path-duplicate">tan.go</a><a href="../src/math/tan.go.html#line-84">#L84</a>: func tan(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/tan.go.html#line-105" class="path-duplicate">tan.go</a><a href="../src/math/tan.go.html#line-105">#L105</a>: 	var y, z <b>float64</b>
+		<a href="../src/math/tan.go.html#line-110" class="path-duplicate">tan.go</a><a href="../src/math/tan.go.html#line-110">#L110</a>: 		y = <b>float64</b>(j)           // integer part of x/(Pi/4), as float
+		<a href="../src/math/tanh.go.html#line-57">tanh.go#L57</a>: var tanhP = [...]<b>float64</b>{
+		<a href="../src/math/tanh.go.html#line-62" class="path-duplicate">tanh.go</a><a href="../src/math/tanh.go.html#line-62">#L62</a>: var tanhQ = [...]<b>float64</b>{
+		<a href="../src/math/tanh.go.html#line-74" class="path-duplicate">tanh.go</a><a href="../src/math/tanh.go.html#line-74">#L74</a>: func Tanh(x <b>float64</b>) <b>float64</b>
+		<a href="../src/math/tanh.go.html#line-76" class="path-duplicate">tanh.go</a><a href="../src/math/tanh.go.html#line-76">#L76</a>: func tanh(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/math/trig_reduce.go.html#line-29">trig_reduce.go#L29</a>: func trigReduce(x <b>float64</b>) (j uint64, z <b>float64</b>) {
+		<a href="../src/math/unsafe.go.html#line-23">unsafe.go#L23</a>: func Float64bits(f <b>float64</b>) uint64 { return *(*uint64)(unsafe.Pointer(&f)) }
+		<a href="../src/math/unsafe.go.html#line-29" class="path-duplicate">unsafe.go</a><a href="../src/math/unsafe.go.html#line-29">#L29</a>: func Float64frombits(b uint64) <b>float64</b> { return *(*<b>float64</b>)(unsafe.Pointer(&b)) }
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/value.go.html#line-923">value.go#L923</a>: func (v Value) Float() <b>float64</b> {
+		<a href="../src/reflect/value.go.html#line-927" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-927">#L927</a>: 		return <b>float64</b>(*(*float32)(v.ptr))
+		<a href="../src/reflect/value.go.html#line-929" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-929">#L929</a>: 		return *(*<b>float64</b>)(v.ptr)
+		<a href="../src/reflect/value.go.html#line-1389" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1389">#L1389</a>: func (v Value) OverflowFloat(x <b>float64</b>) bool {
+		<a href="../src/reflect/value.go.html#line-1400" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1400">#L1400</a>: func overflowFloat32(x <b>float64</b>) bool {
+		<a href="../src/reflect/value.go.html#line-1618" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1618">#L1618</a>: func (v Value) SetFloat(x <b>float64</b>) {
+		<a href="../src/reflect/value.go.html#line-1626" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1626">#L1626</a>: 		*(*<b>float64</b>)(v.ptr) = x
+		<a href="../src/reflect/value.go.html#line-2560" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2560">#L2560</a>: func makeFloat(f flag, v <b>float64</b>, t Type) Value {
+		<a href="../src/reflect/value.go.html#line-2567" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2567">#L2567</a>: 		*(*<b>float64</b>)(ptr) = v
+		<a href="../src/reflect/value.go.html#line-2642" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2642">#L2642</a>: 	return makeFloat(v.flag.ro(), <b>float64</b>(v.Int()), t)
+		<a href="../src/reflect/value.go.html#line-2647" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2647">#L2647</a>: 	return makeFloat(v.flag.ro(), <b>float64</b>(v.Uint()), t)
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/alg.go.html#line-94">alg.go#L94</a>: 	f := *(*<b>float64</b>)(p)
+		<a href="../src/runtime/alg.go.html#line-111" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-111">#L111</a>: 	x := (*[2]<b>float64</b>)(p)
+		<a href="../src/runtime/alg.go.html#line-258" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-258">#L258</a>: 	return *(*<b>float64</b>)(p) == *(*<b>float64</b>)(q)
+		<a href="../src/runtime/complex.go.html#line-9">complex.go#L9</a>: func inf2one(f <b>float64</b>) <b>float64</b> {
+		<a href="../src/runtime/complex.go.html#line-18" class="path-duplicate">complex.go</a><a href="../src/runtime/complex.go.html#line-18">#L18</a>: 	var e, f <b>float64</b> // complex(e, f) = n/m
+		<a href="../src/runtime/error.go.html#line-221">error.go#L221</a>: 	case <b>float64</b>:
+		<a href="../src/runtime/error.go.html#line-268" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-268">#L268</a>: 		print(typestring, "(", *(*<b>float64</b>)(eface.data), ")")
+		<a href="../src/runtime/fastlog2.go.html#line-14">fastlog2.go#L14</a>: func fastlog2(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/runtime/fastlog2.go.html#line-26" class="path-duplicate">fastlog2.go</a><a href="../src/runtime/fastlog2.go.html#line-26">#L26</a>: 	return <b>float64</b>(xExp) + low + (high-low)*<b>float64</b>(xManScale)*fastlogScaleRatio
+		<a href="../src/runtime/fastlog2table.go.html#line-9">fastlog2table.go#L9</a>: var fastlog2Table = [1&lt;&lt;fastlogNumBits + 1]<b>float64</b>{
+		<a href="../src/runtime/float.go.html#line-12">float.go#L12</a>: func isNaN(f <b>float64</b>) (is bool) {
+		<a href="../src/runtime/float.go.html#line-18" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-18">#L18</a>: func isFinite(f <b>float64</b>) bool {
+		<a href="../src/runtime/float.go.html#line-23" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-23">#L23</a>: func isInf(f <b>float64</b>) bool {
+		<a href="../src/runtime/float.go.html#line-32" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-32">#L32</a>: func abs(x <b>float64</b>) <b>float64</b> {
+		<a href="../src/runtime/float.go.html#line-39" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-39">#L39</a>: func copysign(x, y <b>float64</b>) <b>float64</b> {
+		<a href="../src/runtime/float.go.html#line-45" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-45">#L45</a>: func float64bits(f <b>float64</b>) uint64 {
+		<a href="../src/runtime/float.go.html#line-51" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-51">#L51</a>: func float64frombits(b uint64) <b>float64</b> {
+		<a href="../src/runtime/float.go.html#line-52" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-52">#L52</a>: 	return *(*<b>float64</b>)(unsafe.Pointer(&b))
+		<a href="../src/runtime/malloc.go.html#line-1279">malloc.go#L1279</a>: 	qlog := fastlog2(<b>float64</b>(q)) - randomBitCount
+		<a href="../src/runtime/malloc.go.html#line-1284" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1284">#L1284</a>: 	return int32(qlog*(minusLog2*<b>float64</b>(mean))) + 1
+		<a href="../src/runtime/mgc.go.html#line-186">mgc.go#L186</a>: 	memstats.heap_marked = uint64(<b>float64</b>(heapminimum) / (1 + memstats.triggerRatio))
+		<a href="../src/runtime/mgc.go.html#line-391" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-391">#L391</a>: 	assistWorkPerByte <b>float64</b>
+		<a href="../src/runtime/mgc.go.html#line-394" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-394">#L394</a>: 	assistBytesPerWork <b>float64</b>
+		<a href="../src/runtime/mgc.go.html#line-406" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-406">#L406</a>: 	fractionalUtilizationGoal <b>float64</b>
+		<a href="../src/runtime/mgc.go.html#line-437" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-437">#L437</a>: 	totalUtilizationGoal := <b>float64</b>(gomaxprocs) * gcBackgroundUtilization
+		<a href="../src/runtime/mgc.go.html#line-439" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-439">#L439</a>: 	utilError := <b>float64</b>(c.dedicatedMarkWorkersNeeded)/totalUtilizationGoal - 1
+		<a href="../src/runtime/mgc.go.html#line-446" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-446">#L446</a>: 		if <b>float64</b>(c.dedicatedMarkWorkersNeeded) > totalUtilizationGoal {
+		<a href="../src/runtime/mgc.go.html#line-450" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-450">#L450</a>: 		c.fractionalUtilizationGoal = (totalUtilizationGoal - <b>float64</b>(c.dedicatedMarkWorkersNeeded)) / <b>float64</b>(gomaxprocs)
+		<a href="../src/runtime/mgc.go.html#line-511" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-511">#L511</a>: 	scanWorkExpected := int64(<b>float64</b>(memstats.heap_scan) * 100 / <b>float64</b>(100+gcpercent))
+		<a href="../src/runtime/mgc.go.html#line-518" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-518">#L518</a>: 		heapGoal = int64(<b>float64</b>(memstats.next_gc) * maxOvershoot)
+		<a href="../src/runtime/mgc.go.html#line-555" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-555">#L555</a>: 	c.assistWorkPerByte = <b>float64</b>(scanWorkRemaining) / <b>float64</b>(heapRemaining)
+		<a href="../src/runtime/mgc.go.html#line-556" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-556">#L556</a>: 	c.assistBytesPerWork = <b>float64</b>(heapRemaining) / <b>float64</b>(scanWorkRemaining)
+		<a href="../src/runtime/mgc.go.html#line-560" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-560">#L560</a>: func (c *gcControllerState) endCycle() <b>float64</b> {
+		<a href="../src/runtime/mgc.go.html#line-586" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-586">#L586</a>: 	actualGrowthRatio := <b>float64</b>(memstats.heap_live)/<b>float64</b>(memstats.heap_marked) - 1
+		<a href="../src/runtime/mgc.go.html#line-593" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-593">#L593</a>: 		utilization += <b>float64</b>(c.assistTime) / <b>float64</b>(assistDuration*int64(gomaxprocs))
+		<a href="../src/runtime/mgc.go.html#line-611" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-611">#L611</a>: 		H_g := int64(<b>float64</b>(H_m_prev) * (1 + h_g))
+		<a href="../src/runtime/mgc.go.html#line-718" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-718">#L718</a>: 		if delta &gt; 0 &amp;&amp; <b>float64</b>(_p_.gcFractionalMarkTime)/<b>float64</b>(delta) > c.fractionalUtilizationGoal {
+		<a href="../src/runtime/mgc.go.html#line-750" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-750">#L750</a>: 	return <b>float64</b>(selfTime)/<b>float64</b>(delta) > 1.2*gcController.fractionalUtilizationGoal
+		<a href="../src/runtime/mgc.go.html#line-764" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-764">#L764</a>: func gcSetTriggerRatio(triggerRatio <b>float64</b>) {
+		<a href="../src/runtime/mgc.go.html#line-775" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-775">#L775</a>: 		scalingFactor := <b>float64</b>(gcpercent) / 100
+		<a href="../src/runtime/mgc.go.html#line-816" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-816">#L816</a>: 		trigger = uint64(<b>float64</b>(memstats.heap_marked) * (1 + triggerRatio))
+		<a href="../src/runtime/mgc.go.html#line-882" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-882">#L882</a>: 			mheap_.sweepPagesPerByte = <b>float64</b>(sweepDistancePages) / <b>float64</b>(heapDistance)
+		<a href="../src/runtime/mgc.go.html#line-903" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-903">#L903</a>: func gcEffectiveGrowthRatio() <b>float64</b> {
+		<a href="../src/runtime/mgc.go.html#line-904" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-904">#L904</a>: 	egogc := <b>float64</b>(memstats.next_gc-memstats.heap_marked) / <b>float64</b>(memstats.heap_marked)
+		<a href="../src/runtime/mgc.go.html#line-1633" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1633">#L1633</a>: func gcMarkTermination(nextTriggerRatio <b>float64</b>) {
+		<a href="../src/runtime/mgc.go.html#line-1731" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1731">#L1731</a>: 	memstats.gc_cpu_fraction = <b>float64</b>(work.totaltime) / <b>float64</b>(totalCpu)
+		<a href="../src/runtime/mgcmark.go.html#line-504">mgcmark.go#L504</a>: 	scanWork := int64(gcController.assistWorkPerByte * <b>float64</b>(debtBytes))
+		<a href="../src/runtime/mgcmark.go.html#line-507" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-507">#L507</a>: 		debtBytes = int64(gcController.assistBytesPerWork * <b>float64</b>(scanWork))
+		<a href="../src/runtime/mgcmark.go.html#line-521" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-521">#L521</a>: 			gp.gcAssistBytes += 1 + int64(gcController.assistBytesPerWork*<b>float64</b>(stolen))
+		<a href="../src/runtime/mgcmark.go.html#line-646" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-646">#L646</a>: 	gp.gcAssistBytes += 1 + int64(gcController.assistBytesPerWork*<b>float64</b>(workDone))
+		<a href="../src/runtime/mgcmark.go.html#line-740" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-740">#L740</a>: 	scanBytes := int64(<b>float64</b>(scanWork) * gcController.assistBytesPerWork)
+		<a href="../src/runtime/mgcmark.go.html#line-773" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-773">#L773</a>: 		scanWork = int64(<b>float64</b>(scanBytes) * gcController.assistWorkPerByte)
+		<a href="../src/runtime/mgcscavenge.go.html#line-126">mgcscavenge.go#L126</a>: 	goalRatio := <b>float64</b>(memstats.next_gc) / <b>float64</b>(memstats.last_next_gc)
+		<a href="../src/runtime/mgcscavenge.go.html#line-127" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-127">#L127</a>: 	retainedGoal := uint64(<b>float64</b>(memstats.last_heap_inuse) * goalRatio)
+		<a href="../src/runtime/mgcscavenge.go.html#line-282" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-282">#L282</a>: 	scavengeEWMA := <b>float64</b>(idealFraction)
+		<a href="../src/runtime/mgcscavenge.go.html#line-288" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-288">#L288</a>: 		crit := <b>float64</b>(0)
+		<a href="../src/runtime/mgcscavenge.go.html#line-306" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-306">#L306</a>: 			crit = <b>float64</b>(nanotime() - start)
+		<a href="../src/runtime/mgcscavenge.go.html#line-337" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-337">#L337</a>: 			crit = approxCritNSPerPhysicalPage * <b>float64</b>(released/physPageSize)
+		<a href="../src/runtime/mgcscavenge.go.html#line-369" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-369">#L369</a>: 		fraction := crit / (crit + <b>float64</b>(slept))
+		<a href="../src/runtime/mgcsweep.go.html#line-862">mgcsweep.go#L862</a>: 	pagesTarget := int64(mheap_.sweepPagesPerByte*<b>float64</b>(newHeapLive)) - int64(callerSweepPages)
+		<a href="../src/runtime/mheap.go.html#line-125">mheap.go#L125</a>: 	sweepPagesPerByte  <b>float64</b> // proportional sweep ratio; written with lock, read without
+		<a href="../src/runtime/mprof.go.html#line-388">mprof.go#L388</a>: 		r = int64(<b>float64</b>(rate) * <b>float64</b>(tickspersecond()) / (1000 * 1000 * 1000))
+		<a href="../src/runtime/mstats.go.html#line-69">mstats.go#L69</a>: 	gc_cpu_fraction <b>float64</b> // fraction of CPU time used by GC
+		<a href="../src/runtime/mstats.go.html#line-95" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-95">#L95</a>: 	triggerRatio <b>float64</b>
+		<a href="../src/runtime/mstats.go.html#line-390" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-390">#L390</a>: 	GCCPUFraction <b>float64</b>
+		<a href="../src/runtime/print.go.html#line-122">print.go#L122</a>: func printfloat(v <b>float64</b>) {
+		<a href="../src/runtime/print.go.html#line-175" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-175">#L175</a>: 		v -= <b>float64</b>(s)
+		<a href="../src/runtime/proc.go.html#line-2972">proc.go#L2972</a>: 		scanCredit := int64(gcController.assistWorkPerByte * <b>float64</b>(gp.gcAssistBytes))
+		<a href="../src/runtime/runtime1.go.html#line-147">runtime1.go#L147</a>: 		j, j1 <b>float64</b>
+		<a href="../src/runtime/softfloat64.go.html#line-565">softfloat64.go#L565</a>: func f64touint64(x <b>float64</b>) uint64 {
+		<a href="../src/runtime/softfloat64.go.html#line-566" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-566">#L566</a>: 	if x &lt; <b>float64</b>(1<<63) {
+		<a href="../src/runtime/softfloat64.go.html#line-569" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-569">#L569</a>: 	y := x - <b>float64</b>(1<<63)
+		<a href="../src/runtime/softfloat64.go.html#line-583" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-583">#L583</a>: func fuint64to64(x uint64) <b>float64</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-585" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-585">#L585</a>: 		return <b>float64</b>(int64(x))
+		<a href="../src/runtime/softfloat64.go.html#line-591" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-591">#L591</a>: 	r := <b>float64</b>(int64(z))
+		<a href="../src/runtime/trace.go.html#line-425">trace.go#L425</a>: 		freq := <b>float64</b>(trace.ticksEnd-trace.ticksStart) * 1e9 / <b>float64</b>(trace.timeEnd-trace.timeStart) / traceTickDiv
+
+	<a href="../pkg/sort.html">sort</a>
+		<a href="../src/sort/search.go.html#line-92">search.go#L92</a>: func SearchFloat64s(a []<b>float64</b>, x <b>float64</b>) int {
+		<a href="../src/sort/search.go.html#line-109" class="path-duplicate">search.go</a><a href="../src/sort/search.go.html#line-109">#L109</a>: func (p Float64Slice) Search(x <b>float64</b>) int { return SearchFloat64s(p, x) }
+		<a href="../src/sort/sort.go.html#line-280">sort.go#L280</a>: type Float64Slice []<b>float64</b>
+		<a href="../src/sort/sort.go.html#line-287" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-287">#L287</a>: func isNaN(f <b>float64</b>) bool {
+		<a href="../src/sort/sort.go.html#line-311" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-311">#L311</a>: func Float64s(a []<b>float64</b>) { Sort(Float64Slice(a)) }
+		<a href="../src/sort/sort.go.html#line-321" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-321">#L321</a>: func Float64sAreSorted(a []<b>float64</b>) bool { return IsSorted(Float64Slice(a)) }
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atof.go.html#line-42">atof.go#L42</a>: func special(s string) (f <b>float64</b>, n int, ok bool) {
+		<a href="../src/strconv/atof.go.html#line-413" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-413">#L413</a>: var float64pow10 = []<b>float64</b>{
+		<a href="../src/strconv/atof.go.html#line-427" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-427">#L427</a>: func atof64exact(mantissa uint64, exp int, neg bool) (f <b>float64</b>, ok bool) {
+		<a href="../src/strconv/atof.go.html#line-431" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-431">#L431</a>: 	f = <b>float64</b>(mantissa)
+		<a href="../src/strconv/atof.go.html#line-497" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-497">#L497</a>: func atofHex(s string, flt *floatInfo, mantissa uint64, exp int, neg, trunc bool) (<b>float64</b>, error) {
+		<a href="../src/strconv/atof.go.html#line-557" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-557">#L557</a>: 		return <b>float64</b>(math.Float32frombits(uint32(bits))), err
+		<a href="../src/strconv/atof.go.html#line-611" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-611">#L611</a>: func atof64(s string) (f <b>float64</b>, n int, err error) {
+		<a href="../src/strconv/atof.go.html#line-682" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-682">#L682</a>: func ParseFloat(s string, bitSize int) (<b>float64</b>, error) {
+		<a href="../src/strconv/atof.go.html#line-690" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-690">#L690</a>: func parseFloatPrefix(s string, bitSize int) (<b>float64</b>, int, error) {
+		<a href="../src/strconv/atof.go.html#line-693" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-693">#L693</a>: 		return <b>float64</b>(f), n, err
+		<a href="../src/strconv/ftoa.go.html#line-47">ftoa.go#L47</a>: func FormatFloat(f <b>float64</b>, fmt byte, prec, bitSize int) string {
+		<a href="../src/strconv/ftoa.go.html#line-53" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-53">#L53</a>: func AppendFloat(dst []byte, f <b>float64</b>, fmt byte, prec, bitSize int) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-57" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-57">#L57</a>: func genericFtoa(dst []byte, val <b>float64</b>, fmt byte, prec, bitSize int) []byte {
+
+	<a href="../pkg/time.html">time</a>
+		<a href="../src/time/format.go.html#line-1330">format.go#L1330</a>: func leadingFraction(s string) (x int64, scale <b>float64</b>, rem string) {
+		<a href="../src/time/format.go.html#line-1398" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1398">#L1398</a>: 			scale <b>float64</b> = 1 // value = v + f/scale
+		<a href="../src/time/format.go.html#line-1453" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1453">#L1453</a>: 			v += int64(<b>float64</b>(f) * (<b>float64</b>(unit) / scale))
+		<a href="../src/time/time.go.html#line-747">time.go#L747</a>: func (d Duration) Seconds() <b>float64</b> {
+		<a href="../src/time/time.go.html#line-750" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-750">#L750</a>: 	return <b>float64</b>(sec) + <b>float64</b>(nsec)/1e9
+		<a href="../src/time/time.go.html#line-754" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-754">#L754</a>: func (d Duration) Minutes() <b>float64</b> {
+		<a href="../src/time/time.go.html#line-757" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-757">#L757</a>: 	return <b>float64</b>(min) + <b>float64</b>(nsec)/(60*1e9)
+		<a href="../src/time/time.go.html#line-761" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-761">#L761</a>: func (d Duration) Hours() <b>float64</b> {
+		<a href="../src/time/time.go.html#line-764" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-764">#L764</a>: 	return <b>float64</b>(hour) + <b>float64</b>(nsec)/(60*60*1e9)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

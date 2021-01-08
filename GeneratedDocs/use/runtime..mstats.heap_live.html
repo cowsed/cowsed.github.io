@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.heap_live</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-24">mstats</a>.<a href="../src/runtime/mstats.go.html#line-131">heap_live</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+25 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mcentral.go.html#line-195">mcentral.go#L195</a>: 	atomic.Xadd64(&amp;memstats.<b>heap_live</b>, int64(spanBytes)-int64(usedBytes))
+		<a href="../src/runtime/mcentral.go.html#line-307" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-307">#L307</a>: 	atomic.Xadd64(&amp;memstats.<b>heap_live</b>, int64(spanBytes)-int64(usedBytes))
+		<a href="../src/runtime/mcentral.go.html#line-375" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-375">#L375</a>: 			atomic.Xadd64(&amp;memstats.<b>heap_live</b>, -int64(n)*int64(s.elemsize))
+		<a href="../src/runtime/mcentral.go.html#line-438" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-438">#L438</a>: 			atomic.Xadd64(&amp;memstats.<b>heap_live</b>, -int64(n)*int64(s.elemsize))
+		<a href="../src/runtime/mgc.go.html#line-428">mgc.go#L428</a>: 	if memstats.next_gc &lt; memstats.<b>heap_live</b>+1024*1024 {
+		<a href="../src/runtime/mgc.go.html#line-429" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-429">#L429</a>: 		memstats.next_gc = memstats.<b>heap_live</b> + 1024*1024
+		<a href="../src/runtime/mgc.go.html#line-496" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-496">#L496</a>: 	live := atomic.Load64(&amp;memstats.<b>heap_live</b>)
+		<a href="../src/runtime/mgc.go.html#line-586" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-586">#L586</a>: 	actualGrowthRatio := float64(memstats.<b>heap_live</b>)/float64(memstats.heap_marked) - 1
+		<a href="../src/runtime/mgc.go.html#line-609" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-609">#L609</a>: 		H_a := memstats.<b>heap_live</b>
+		<a href="../src/runtime/mgc.go.html#line-825" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-825">#L825</a>: 			sweepMin := atomic.Load64(&amp;memstats.<b>heap_live</b>) + sweepMinHeapDistance
+		<a href="../src/runtime/mgc.go.html#line-834" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-834">#L834</a>: 			print("runtime: next_gc=", memstats.next_gc, " heap_marked=", memstats.heap_marked, " heap_live=", memstats.<b>heap_live</b>, " initialHeapLive=", work.initialHeapLive, "triggerRatio=", triggerRatio, " minTrigger=", minTrigger, "\n")
+		<a href="../src/runtime/mgc.go.html#line-866" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-866">#L866</a>: 		heapLiveBasis := atomic.Load64(&amp;memstats.<b>heap_live</b>)
+		<a href="../src/runtime/mgc.go.html#line-1210" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1210">#L1210</a>: 		return memstats.<b>heap_live</b> >= memstats.gc_trigger
+		<a href="../src/runtime/mgc.go.html#line-1306" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1306">#L1306</a>: 	work.heap0 = atomic.Load64(&amp;memstats.<b>heap_live</b>)
+		<a href="../src/runtime/mgc.go.html#line-1639" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1639">#L1639</a>: 	work.heap1 = memstats.<b>heap_live</b>
+		<a href="../src/runtime/mgc.go.html#line-2130" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2130">#L2130</a>: 	memstats.<b>heap_live</b> = work.bytesMarked
+		<a href="../src/runtime/mgc.go.html#line-2232" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2232">#L2232</a>: 	work.initialHeapLive = atomic.Load64(&amp;memstats.<b>heap_live</b>)
+		<a href="../src/runtime/mgcsweep.go.html#line-271">mgcsweep.go#L271</a>: 			print("pacer: sweep done at heap size ", memstats.<b>heap_live</b>&gt;&gt;20, "MB; allocated ", (memstats.<b>heap_live</b>-mheap_.sweepHeapLiveBasis)>>20, "MB during sweep; swept ", mheap_.pagesSwept, " pages at ", sweepRatio, " pages/byte\n")
+		<a href="../src/runtime/mgcsweep.go.html#line-861" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-861">#L861</a>: 	newHeapLive := uintptr(atomic.Load64(&amp;memstats.<b>heap_live</b>)-mheap_.sweepHeapLiveBasis) + spanBytes
+		<a href="../src/runtime/mheap.go.html#line-1200">mheap.go#L1200</a>: 			atomic.Xadd64(&amp;memstats.<b>heap_live</b>, int64(npages*pageSize))
+		<a href="../src/runtime/mstats.go.html#line-131">mstats.go#L131</a>: 	<b>heap_live</b> uint64
+		<a href="../src/runtime/mstats.go.html#line-436" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-436">#L436</a>: 	if unsafe.Offsetof(memstats.<b>heap_live</b>)%8 != 0 {
+		<a href="../src/runtime/mstats.go.html#line-437" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-437">#L437</a>: 		println(unsafe.Offsetof(memstats.<b>heap_live</b>))
+		<a href="../src/runtime/trace.go.html#line-1145">trace.go#L1145</a>: 	traceEvent(traceEvHeapAlloc, -1, memstats.<b>heap_live</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

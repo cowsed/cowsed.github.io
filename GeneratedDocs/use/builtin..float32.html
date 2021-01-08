@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.float32</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-float32">float32</a></b></span>
+
+39 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-667">print.go#L667</a>: 	case <b>float32</b>:
+		<a href="../src/fmt/scan.go.html#line-999">scan.go#L999</a>: 	case *<b>float32</b>:
+		<a href="../src/fmt/scan.go.html#line-1003" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1003">#L1003</a>: 			*v = <b>float32</b>(s.convertFloat(s.floatToken(), 32))
+
+	<a href="../pkg/math.html">math</a>
+		<a href="../src/math/nextafter.go.html#line-13">nextafter.go#L13</a>: func Nextafter32(x, y <b>float32</b>) (r <b>float32</b>) {
+		<a href="../src/math/nextafter.go.html#line-16" class="path-duplicate">nextafter.go</a><a href="../src/math/nextafter.go.html#line-16">#L16</a>: 		r = <b>float32</b>(NaN())
+		<a href="../src/math/nextafter.go.html#line-20" class="path-duplicate">nextafter.go</a><a href="../src/math/nextafter.go.html#line-20">#L20</a>: 		r = <b>float32</b>(Copysign(float64(Float32frombits(1)), float64(y)))
+		<a href="../src/math/unsafe.go.html#line-12">unsafe.go#L12</a>: func Float32bits(f <b>float32</b>) uint32 { return *(*uint32)(unsafe.Pointer(&f)) }
+		<a href="../src/math/unsafe.go.html#line-18" class="path-duplicate">unsafe.go</a><a href="../src/math/unsafe.go.html#line-18">#L18</a>: func Float32frombits(b uint32) <b>float32</b> { return *(*<b>float32</b>)(unsafe.Pointer(&b)) }
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/value.go.html#line-927">value.go#L927</a>: 		return float64(*(*<b>float32</b>)(v.ptr))
+		<a href="../src/reflect/value.go.html#line-1624" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1624">#L1624</a>: 		*(*<b>float32</b>)(v.ptr) = <b>float32</b>(x)
+		<a href="../src/reflect/value.go.html#line-2565" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2565">#L2565</a>: 		*(*<b>float32</b>)(ptr) = <b>float32</b>(v)
+		<a href="../src/reflect/value.go.html#line-2573" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2573">#L2573</a>: func makeFloat32(f flag, v <b>float32</b>, t Type) Value {
+		<a href="../src/reflect/value.go.html#line-2576" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2576">#L2576</a>: 	*(*<b>float32</b>)(ptr) = v
+		<a href="../src/reflect/value.go.html#line-2656" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2656">#L2656</a>: 		return makeFloat32(v.flag.ro(), *(*<b>float32</b>)(v.ptr), t)
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/alg.go.html#line-82">alg.go#L82</a>: 	f := *(*<b>float32</b>)(p)
+		<a href="../src/runtime/alg.go.html#line-106" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-106">#L106</a>: 	x := (*[2]<b>float32</b>)(p)
+		<a href="../src/runtime/alg.go.html#line-255" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-255">#L255</a>: 	return *(*<b>float32</b>)(p) == *(*<b>float32</b>)(q)
+		<a href="../src/runtime/error.go.html#line-219">error.go#L219</a>: 	case <b>float32</b>:
+		<a href="../src/runtime/error.go.html#line-266" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-266">#L266</a>: 		print(typestring, "(", *(*<b>float32</b>)(eface.data), ")")
+		<a href="../src/runtime/runtime1.go.html#line-146">runtime1.go#L146</a>: 		i, i1 <b>float32</b>
+		<a href="../src/runtime/softfloat64.go.html#line-574">softfloat64.go#L574</a>: func f32touint64(x <b>float32</b>) uint64 {
+		<a href="../src/runtime/softfloat64.go.html#line-575" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-575">#L575</a>: 	if x &lt; <b>float32</b>(1<<63) {
+		<a href="../src/runtime/softfloat64.go.html#line-578" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-578">#L578</a>: 	y := x - <b>float32</b>(1<<63)
+		<a href="../src/runtime/softfloat64.go.html#line-595" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-595">#L595</a>: func fuint64to32(x uint64) <b>float32</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-596" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-596">#L596</a>: 	return <b>float32</b>(fuint64to64(x))
+		<a href="../src/runtime/stubs.go.html#line-106">stubs.go#L106</a>: var hashLoad = <b>float32</b>(loadFactorNum) / <b>float32</b>(loadFactorDen)
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atof.go.html#line-418">atof.go#L418</a>: var float32pow10 = []<b>float32</b>{1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10}
+		<a href="../src/strconv/atof.go.html#line-461" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-461">#L461</a>: func atof32exact(mantissa uint64, exp int, neg bool) (f <b>float32</b>, ok bool) {
+		<a href="../src/strconv/atof.go.html#line-465" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-465">#L465</a>: 	f = <b>float32</b>(mantissa)
+		<a href="../src/strconv/atof.go.html#line-564" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-564">#L564</a>: func atof32(s string) (f <b>float32</b>, n int, err error) {
+		<a href="../src/strconv/atof.go.html#line-566" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-566">#L566</a>: 		return <b>float32</b>(val), n, nil
+		<a href="../src/strconv/atof.go.html#line-576" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-576">#L576</a>: 		return <b>float32</b>(f), n, err
+		<a href="../src/strconv/ftoa.go.html#line-62">ftoa.go#L62</a>: 		bits = uint64(math.Float32bits(<b>float32</b>(val)))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

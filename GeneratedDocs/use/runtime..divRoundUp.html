@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.divRoundUp</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/stubs.go.html#line-314">divRoundUp</a></b></span>
+
+11 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/malloc.go.html#line-1052">malloc.go#L1052</a>: 				sizeclass = size_to_class8[<b>divRoundUp</b>(size, smallSizeDiv)]
+		<a href="../src/runtime/malloc.go.html#line-1054" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1054">#L1054</a>: 				sizeclass = size_to_class128[<b>divRoundUp</b>(size-smallSizeMax, largeSizeDiv)]
+		<a href="../src/runtime/mbitmap.go.html#line-872">mbitmap.go#L872</a>: 	bytes := <b>divRoundUp</b>(s.nelems, 8)
+		<a href="../src/runtime/mbitmap.go.html#line-1889" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1889">#L1889</a>: 	bitmapBytes := <b>divRoundUp</b>(ptrdata, 8*sys.PtrSize)
+		<a href="../src/runtime/mbitmap.go.html#line-1891" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1891">#L1891</a>: 	pages := <b>divRoundUp</b>(bitmapBytes, pageSize)
+		<a href="../src/runtime/mgcmark.go.html#line-65">mgcmark.go#L65</a>: 		return int(<b>divRoundUp</b>(bytes, rootBlockBytes))
+		<a href="../src/runtime/mgcsweep.go.html#line-454">mgcsweep.go#L454</a>: 		for i := obj/8 + 1; i &lt; <b>divRoundUp</b>(s.nelems, 8); i++ {
+		<a href="../src/runtime/mgcsweepbuf.go.html#line-147">mgcsweepbuf.go#L147</a>: 	return int(<b>divRoundUp</b>(uintptr(atomic.Load(&b.index)), gcSweepBlockEntries))
+		<a href="../src/runtime/msize.go.html#line-16">msize.go#L16</a>: 			return uintptr(class_to_size[size_to_class8[<b>divRoundUp</b>(size, smallSizeDiv)]])
+		<a href="../src/runtime/msize.go.html#line-18" class="path-duplicate">msize.go</a><a href="../src/runtime/msize.go.html#line-18">#L18</a>: 			return uintptr(class_to_size[size_to_class128[<b>divRoundUp</b>(size-smallSizeMax, largeSizeDiv)]])
+		<a href="../src/runtime/stubs.go.html#line-314">stubs.go#L314</a>: func <b>divRoundUp</b>(n, a uintptr) uintptr {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

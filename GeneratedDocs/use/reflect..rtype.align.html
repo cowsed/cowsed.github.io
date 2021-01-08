@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.rtype.align</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-303">rtype</a>.<a href="../src/reflect/type.go.html#line-308">align</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+19 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-308">type.go#L308</a>: 	<b>align</b>      uint8   // alignment of variable with this type
+		<a href="../src/reflect/type.go.html#line-774" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-774">#L774</a>: func (t *rtype) Align() int { return int(t.<b>align</b>) }
+		<a href="../src/reflect/type.go.html#line-2180" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2180">#L2180</a>: 	if size&amp;uintptr(ktyp.<b>align</b>-1) != 0 || size&amp;uintptr(etyp.<b>align</b>-1) != 0 {
+		<a href="../src/reflect/type.go.html#line-2212" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2212">#L2212</a>: 		<b>align</b>:   ptrSize,
+		<a href="../src/reflect/type.go.html#line-2219" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2219">#L2219</a>: 		b.<b>align</b> = 8
+		<a href="../src/reflect/type.go.html#line-2559" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2559">#L2559</a>: 		offset := align(size, uintptr(ft.<b>align</b>))
+		<a href="../src/reflect/type.go.html#line-2560" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2560">#L2560</a>: 		if ft.<b>align</b> > typalign {
+		<a href="../src/reflect/type.go.html#line-2561" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2561">#L2561</a>: 			typalign = ft.<b>align</b>
+		<a href="../src/reflect/type.go.html#line-2679" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2679">#L2679</a>: 	typ.<b>align</b> = typalign
+		<a href="../src/reflect/type.go.html#line-2864" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2864">#L2864</a>: 	array.<b>align</b> = typ.<b>align</b>
+		<a href="../src/reflect/type.go.html#line-3019" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3019">#L3019</a>: 		offset += -offset &amp; uintptr(arg.<b>align</b>-1)
+		<a href="../src/reflect/type.go.html#line-3027" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3027">#L3027</a>: 		offset += -offset &amp; uintptr(res.<b>align</b>-1)
+		<a href="../src/reflect/type.go.html#line-3035" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3035">#L3035</a>: 		<b>align</b>:   ptrSize,
+		<a href="../src/reflect/value.go.html#line-455">value.go#L455</a>: 		a := uintptr(targ.<b>align</b>)
+		<a href="../src/reflect/value.go.html#line-545" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-545">#L545</a>: 		off += -off &amp; uintptr(typ.<b>align</b>-1)
+		<a href="../src/reflect/value.go.html#line-584" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-584">#L584</a>: 			off += -off &amp; uintptr(typ.<b>align</b>-1)
+		<a href="../src/reflect/value.go.html#line-723" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-723">#L723</a>: 		argOffset = align(argOffset, uintptr(t.in()[0].<b>align</b>))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.stackmap.n</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/symtab.go.html#line-976">stackmap</a>.<a href="../src/runtime/symtab.go.html#line-977">n</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+13 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-264">heapdump.go#L264</a>: 	if stkmap != nil &amp;&amp; stkmap.<b>n</b> > 0 {
+		<a href="../src/runtime/heapdump.go.html#line-303" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-303">#L303</a>: 	} else if stkmap.<b>n</b> < 0 {
+		<a href="../src/runtime/heapdump.go.html#line-305" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-305">#L305</a>: 		size := uintptr(-stkmap.<b>n</b>)
+		<a href="../src/runtime/heapdump.go.html#line-310" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-310">#L310</a>: 	} else if stkmap.<b>n</b> > 0 {
+		<a href="../src/runtime/stack.go.html#line-1253">stack.go#L1253</a>: 		if stkmap == nil || stkmap.<b>n</b> <= 0 {
+		<a href="../src/runtime/stack.go.html#line-1259" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1259">#L1259</a>: 			if stackid &lt; 0 || stackid &gt;= stkmap.<b>n</b> {
+		<a href="../src/runtime/stack.go.html#line-1261" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1261">#L1261</a>: 				print("runtime: pcdata is ", stackid, " and ", stkmap.<b>n</b>, " locals stack map entries for ", funcname(f), " (targetpc=", hex(targetpc), ")\n")
+		<a href="../src/runtime/stack.go.html#line-1266" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1266">#L1266</a>: 				print("      locals ", stackid, "/", stkmap.<b>n</b>, " ", locals.n, " words ", locals.bytedata, "\n")
+		<a href="../src/runtime/stack.go.html#line-1286" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1286">#L1286</a>: 			if stackmap == nil || stackmap.<b>n</b> <= 0 {
+		<a href="../src/runtime/stack.go.html#line-1290" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1290">#L1290</a>: 			if pcdata &lt; 0 || pcdata &gt;= stackmap.<b>n</b> {
+		<a href="../src/runtime/stack.go.html#line-1292" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1292">#L1292</a>: 				print("runtime: pcdata is ", pcdata, " and ", stackmap.<b>n</b>, " args stack map entries for ", funcname(f), " (targetpc=", hex(targetpc), ")\n")
+		<a href="../src/runtime/symtab.go.html#line-977">symtab.go#L977</a>: 	<b>n</b>        int32   // number of bitmaps
+		<a href="../src/runtime/symtab.go.html#line-987" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-987">#L987</a>: 	if stackDebug &gt; 0 &amp;&amp; (n &lt; 0 || n &gt;= stkmap.<b>n</b>) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

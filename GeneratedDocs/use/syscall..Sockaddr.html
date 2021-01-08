@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.Sockaddr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/syscall_unix.go.html#line-227">Sockaddr</a></b></span>
+
+21 uses:
+
+	syscall <i>(current package)</i>
+		<a href="../src/syscall/syscall_linux.go.html#line-456">syscall_linux.go#L456</a>: func anyToSockaddr(rsa *RawSockaddrAny) (<b>Sockaddr</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-529" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-529">#L529</a>: func Accept(fd int) (nfd int, sa <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-544" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-544">#L544</a>: func Accept4(fd int, flags int) (nfd int, sa <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-562" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-562">#L562</a>: func Getsockname(fd int) (sa <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-623" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-623">#L623</a>: func Recvmsg(fd int, p, oob []byte, flags int) (n, oobn int, recvflags int, from <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-664" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-664">#L664</a>: func Sendmsg(fd int, p, oob []byte, to <b>Sockaddr</b>, flags int) (err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-669" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-669">#L669</a>: func SendmsgN(fd int, p, oob []byte, to <b>Sockaddr</b>, flags int) (n int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-227">syscall_unix.go#L227</a>: type <b>Sockaddr</b> interface {
+		<a href="../src/syscall/syscall_unix.go.html#line-249" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-249">#L249</a>: func Bind(fd int, sa <b>Sockaddr</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-257" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-257">#L257</a>: func Connect(fd int, sa <b>Sockaddr</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-265" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-265">#L265</a>: func Getpeername(fd int) (sa <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-281" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-281">#L281</a>: func Recvfrom(fd int, p []byte, flags int) (n int, from <b>Sockaddr</b>, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-293" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-293">#L293</a>: func Sendto(fd int, p []byte, flags int, to <b>Sockaddr</b>) (err error) {
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/fd_unix.go.html#line-199">fd_unix.go#L199</a>: func (fd *FD) ReadFrom(p []byte) (int, syscall.<b>Sockaddr</b>, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-226" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-226">#L226</a>: func (fd *FD) ReadMsg(p []byte, oob []byte) (int, int, int, syscall.<b>Sockaddr</b>, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-323" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-323">#L323</a>: func (fd *FD) WriteTo(p []byte, sa syscall.<b>Sockaddr</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-349" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-349">#L349</a>: func (fd *FD) WriteMsg(p []byte, oob []byte, sa syscall.<b>Sockaddr</b>) (int, int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-375" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-375">#L375</a>: func (fd *FD) Accept() (int, syscall.<b>Sockaddr</b>, string, error) {
+		<a href="../src/internal/poll/hook_cloexec.go.html#line-12">hook_cloexec.go#L12</a>: var Accept4Func func(int, int) (int, syscall.<b>Sockaddr</b>, error) = syscall.Accept4
+		<a href="../src/internal/poll/hook_unix.go.html#line-15">hook_unix.go#L15</a>: var AcceptFunc func(int) (int, syscall.<b>Sockaddr</b>, error) = syscall.Accept
+		<a href="../src/internal/poll/sock_cloexec.go.html#line-16">sock_cloexec.go#L16</a>: func accept(s int) (int, syscall.<b>Sockaddr</b>, string, error) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: strconv.Itoa</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/strconv.html">strconv</a>.<a href="../src/strconv/itoa.go.html#line-34">Itoa</a></b></span>
+
+9 uses:
+
+	strconv <i>(current package)</i>
+		<a href="../src/strconv/atoi.go.html#line-45">atoi.go#L45</a>: 	return &amp;NumError{fn, str, errors.New("invalid base " + <b>Itoa</b>(base))}
+		<a href="../src/strconv/atoi.go.html#line-49" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-49">#L49</a>: 	return &amp;NumError{fn, str, errors.New("invalid bit size " + <b>Itoa</b>(bitSize))}
+		<a href="../src/strconv/itoa.go.html#line-34">itoa.go#L34</a>: func <b>Itoa</b>(i int) string {
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-593">type.go#L593</a>: 	return "kind" + strconv.<b>Itoa</b>(int(k))
+		<a href="../src/reflect/type.go.html#line-1047" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1047">#L1047</a>: 	return "ChanDir" + strconv.<b>Itoa</b>(int(d))
+		<a href="../src/reflect/type.go.html#line-2378" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2378">#L2378</a>: 			panic("reflect.StructOf: field " + strconv.<b>Itoa</b>(i) + " has no name")
+		<a href="../src/reflect/type.go.html#line-2381" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2381">#L2381</a>: 			panic("reflect.StructOf: field " + strconv.<b>Itoa</b>(i) + " has invalid name")
+		<a href="../src/reflect/type.go.html#line-2384" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2384">#L2384</a>: 			panic("reflect.StructOf: field " + strconv.<b>Itoa</b>(i) + " has no type")
+		<a href="../src/reflect/type.go.html#line-2832" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2832">#L2832</a>: 	s := "[" + strconv.<b>Itoa</b>(count) + "]" + typ.String()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

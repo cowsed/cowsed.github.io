@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.schedt.lock</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-698">schedt</a>.<a href="../src/runtime/runtime2.go.html#line-704">lock</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+99 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/debug.go.html#line-22">debug.go#L22</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/debug.go.html#line-24" class="path-duplicate">debug.go</a><a href="../src/runtime/debug.go.html#line-24">#L24</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/debugcall.go.html#line-232">debugcall.go#L232</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/debugcall.go.html#line-234" class="path-duplicate">debugcall.go</a><a href="../src/runtime/debugcall.go.html#line-234">#L234</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/mgc.go.html#line-1965">mgc.go#L1965</a>: 					lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/mgc.go.html#line-1973" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1973">#L1973</a>: 					unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-535">proc.go#L535</a>: 	lockInit(&amp;sched.<b>lock</b>, lockRankSched)
+		<a href="../src/runtime/proc.go.html#line-649" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-649">#L649</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-675" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-675">#L675</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-985" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-985">#L985</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1014" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1014">#L1014</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1058" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1058">#L1058</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1071" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1071">#L1071</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1226" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1226">#L1226</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1229" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1229">#L1229</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1248" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1248">#L1248</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1270" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1270">#L1270</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1279" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1279">#L1279</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1282" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1282">#L1282</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1320" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1320">#L1320</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1349" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1349">#L1349</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1391" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1391">#L1391</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1393" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1393">#L1393</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1417" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1417">#L1417</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1422" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1422">#L1422</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1455" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1455">#L1455</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1469" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1469">#L1469</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1874" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1874">#L1874</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1877" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1877">#L1877</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1915" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1915">#L1915</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1917" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1917">#L1917</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1936" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1936">#L1936</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1940" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1940">#L1940</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1966" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1966">#L1966</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-1976" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1976">#L1976</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2015" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2015">#L2015</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2022" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2022">#L2022</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2033" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2033">#L2033</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2040" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2040">#L2040</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2048" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2048">#L2048</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2129" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2129">#L2129</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2135" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2135">#L2135</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2218" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2218">#L2218</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2220" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2220">#L2220</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2354" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2354">#L2354</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2356" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2356">#L2356</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2361" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2361">#L2361</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2368" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2368">#L2368</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2394" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2394">#L2394</a>: 			lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2396" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2396">#L2396</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2411" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2411">#L2411</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2417" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2417">#L2417</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2451" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2451">#L2451</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2453" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2453">#L2453</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2579" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2579">#L2579</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2581" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2581">#L2581</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2586" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2586">#L2586</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2592" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2592">#L2592</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2666" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2666">#L2666</a>: 			lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2668" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2668">#L2668</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2691" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2691">#L2691</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2695" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2695">#L2695</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2699" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2699">#L2699</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2856" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2856">#L2856</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-2858" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2858">#L2858</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3139" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3139">#L3139</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3144" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3144">#L3144</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3151" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3151">#L3151</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3162" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3162">#L3162</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3365" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3365">#L3365</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3371" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3371">#L3371</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3388" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3388">#L3388</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-3399" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3399">#L3399</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4191" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4191">#L4191</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4193" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4193">#L4193</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4515" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4515">#L4515</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4520" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4520">#L4520</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4587" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4587">#L4587</a>: 		unlock(&amp;sched.<b>lock</b>) // unlock so that GODEBUG=scheddetail=1 doesn't hang
+		<a href="../src/runtime/proc.go.html#line-4622" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4622">#L4622</a>: 	unlock(&amp;sched.<b>lock</b>)    // unlock so that GODEBUG=scheddetail=1 doesn't hang
+		<a href="../src/runtime/proc.go.html#line-4637" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4637">#L4637</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4640" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4640">#L4640</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4658" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4658">#L4658</a>: 			lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4662" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4662">#L4662</a>: 					unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4679" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4679">#L4679</a>: 					lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4686" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4686">#L4686</a>: 			unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4899" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4899">#L4899</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4932" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4932">#L4932</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4971" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4971">#L4971</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4980" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4980">#L4980</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4982" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4982">#L4982</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4990" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4990">#L4990</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-4995" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4995">#L4995</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5215" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5215">#L5215</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5217" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5217">#L5217</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5249" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5249">#L5249</a>: 		lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5251" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5251">#L5251</a>: 		unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5465" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5465">#L5465</a>: 	lock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/proc.go.html#line-5473" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5473">#L5473</a>: 	unlock(&amp;sched.<b>lock</b>)
+		<a href="../src/runtime/runtime2.go.html#line-704">runtime2.go#L704</a>: 	<b>lock</b> mutex
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

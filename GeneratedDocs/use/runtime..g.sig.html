@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.g.sig</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-406">g</a>.<a href="../src/runtime/runtime2.go.html#line-461">sig</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+10 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/panic.go.html#line-1048">panic.go#L1048</a>: 				gp.<b>sig</b> = 0
+		<a href="../src/runtime/panic.go.html#line-1296" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1296">#L1296</a>: 	if gp.<b>sig</b> != 0 {
+		<a href="../src/runtime/panic.go.html#line-1297" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1297">#L1297</a>: 		signame := signame(gp.<b>sig</b>)
+		<a href="../src/runtime/panic.go.html#line-1301" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1301">#L1301</a>: 			print("[signal ", hex(gp.<b>sig</b>))
+		<a href="../src/runtime/runtime2.go.html#line-461">runtime2.go#L461</a>: 	<b>sig</b>            uint32
+		<a href="../src/runtime/signal_unix.go.html#line-592">signal_unix.go#L592</a>: 		gp.<b>sig</b> = sig
+		<a href="../src/runtime/signal_unix.go.html#line-729" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-729">#L729</a>: 	switch g.<b>sig</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-760" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-760">#L760</a>: 	if g.<b>sig</b> >= uint32(len(sigtable)) {
+		<a href="../src/runtime/signal_unix.go.html#line-764" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-764">#L764</a>: 	panic(errorString(sigtable[g.<b>sig</b>].name))
+		<a href="../src/runtime/signal_unix.go.html#line-1225" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-1225">#L1225</a>: 	g.<b>sig</b> = _SIGSEGV
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

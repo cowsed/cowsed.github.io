@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.Value.Kind</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/value.go.html#line-37">Value</a>.<a href="../src/reflect/value.go.html#line-1140">Kind</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+22 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/deepequal.go.html#line-39">deepequal.go#L39</a>: 		switch v1.<b>Kind</b>() {
+		<a href="../src/reflect/deepequal.go.html#line-63" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-63">#L63</a>: 			switch v.<b>Kind</b>() {
+		<a href="../src/reflect/deepequal.go.html#line-89" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-89">#L89</a>: 	switch v1.<b>Kind</b>() {
+		<a href="../src/reflect/swapper.go.html#line-18">swapper.go#L18</a>: 	if v.<b>Kind</b>() != Slice {
+		<a href="../src/reflect/swapper.go.html#line-19" class="path-duplicate">swapper.go</a><a href="../src/reflect/swapper.go.html#line-19">#L19</a>: 		panic(&amp;ValueError{Method: "Swapper", Kind: v.<b>Kind</b>()})
+		<a href="../src/reflect/value.go.html#line-400">value.go#L400</a>: 		if x.<b>Kind</b>() == Invalid {
+		<a href="../src/reflect/value.go.html#line-887" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-887">#L887</a>: 			if v.<b>Kind</b>() == Ptr && v.typ.Elem().Kind() == Struct {
+		<a href="../src/reflect/value.go.html#line-1134" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1134">#L1134</a>: 		panic(&amp;ValueError{"reflect.Value.IsZero", v.<b>Kind</b>()})
+		<a href="../src/reflect/value.go.html#line-1140" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1140">#L1140</a>: func (v Value) <b>Kind</b>() Kind {
+		<a href="../src/reflect/value.go.html#line-2339" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2339">#L2339</a>: 	if v.<b>Kind</b>() != Ptr {
+		<a href="../src/reflect/value.go.html#line-2419" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2419">#L2419</a>: 		if v.<b>Kind</b>() == Interface && v.IsNil() {
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-292">print.go#L292</a>: 	if val.<b>Kind</b>() == reflect.Interface && !val.IsNil() {
+		<a href="../src/fmt/print.go.html#line-504" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-504">#L504</a>: 	switch value.<b>Kind</b>() {
+		<a href="../src/fmt/print.go.html#line-545" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-545">#L545</a>: 		if v := reflect.ValueOf(arg); v.<b>Kind</b>() == reflect.Ptr && v.IsNil() {
+		<a href="../src/fmt/print.go.html#line-734" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-734">#L734</a>: 	switch f := value; value.<b>Kind</b>() {
+		<a href="../src/fmt/print.go.html#line-832" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-832">#L832</a>: 				if f.<b>Kind</b>() == reflect.Slice {
+		<a href="../src/fmt/print.go.html#line-851" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-851">#L851</a>: 			if f.<b>Kind</b>() == reflect.Slice && f.IsNil() {
+		<a href="../src/fmt/print.go.html#line-877" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-877">#L877</a>: 			switch a := f.Elem(); a.<b>Kind</b>() {
+		<a href="../src/fmt/print.go.html#line-899" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-899">#L899</a>: 			switch v := reflect.ValueOf(a[argNum]); v.<b>Kind</b>() {
+		<a href="../src/fmt/scan.go.html#line-1020">scan.go#L1020</a>: 		if ptr.<b>Kind</b>() != reflect.Ptr {
+		<a href="../src/fmt/scan.go.html#line-1024" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1024">#L1024</a>: 		switch v := ptr.Elem(); v.<b>Kind</b>() {
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-84">sort.go#L84</a>: 	switch aVal.<b>Kind</b>() {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

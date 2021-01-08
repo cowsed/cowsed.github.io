@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: sync.RWMutex</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/sync.html">sync</a>.<a href="../src/sync/rwmutex.go.html#line-28">RWMutex</a></b></span>
+
+13 uses:
+
+	sync <i>(current package)</i>
+		<a href="../src/sync/rwmutex.go.html#line-28">rwmutex.go#L28</a>: type <b>RWMutex</b> struct {
+		<a href="../src/sync/rwmutex.go.html#line-43" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-43">#L43</a>: func (rw *<b>RWMutex</b>) RLock() {
+		<a href="../src/sync/rwmutex.go.html#line-62" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-62">#L62</a>: func (rw *<b>RWMutex</b>) RUnlock() {
+		<a href="../src/sync/rwmutex.go.html#line-77" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-77">#L77</a>: func (rw *<b>RWMutex</b>) rUnlockSlow(r int32) {
+		<a href="../src/sync/rwmutex.go.html#line-92" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-92">#L92</a>: func (rw *<b>RWMutex</b>) Lock() {
+		<a href="../src/sync/rwmutex.go.html#line-118" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-118">#L118</a>: func (rw *<b>RWMutex</b>) Unlock() {
+		<a href="../src/sync/rwmutex.go.html#line-144" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-144">#L144</a>: func (rw *<b>RWMutex</b>) RLocker() Locker {
+		<a href="../src/sync/rwmutex.go.html#line-148" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-148">#L148</a>: type rlocker <b>RWMutex</b>
+		<a href="../src/sync/rwmutex.go.html#line-150" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-150">#L150</a>: func (r *rlocker) Lock()   { (*<b>RWMutex</b>)(r).RLock() }
+		<a href="../src/sync/rwmutex.go.html#line-151" class="path-duplicate">rwmutex.go</a><a href="../src/sync/rwmutex.go.html#line-151">#L151</a>: func (r *rlocker) Unlock() { (*<b>RWMutex</b>)(r).RUnlock() }
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/exec.go.html#line-21">exec.go#L21</a>: 	sigMu  sync.<b>RWMutex</b> // avoid race between wait and signal
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/env_unix.go.html#line-21">env_unix.go#L21</a>: 	envLock sync.<b>RWMutex</b>
+		<a href="../src/syscall/exec_unix.go.html#line-66">exec_unix.go#L66</a>: var ForkLock sync.<b>RWMutex</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

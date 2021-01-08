@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: internal/poll.FD.incref</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../pkg/internal/poll.html">internal/poll</a>.<a href="../../src/internal/poll/fd_unix.go.html#line-17">FD</a>.<a href="../../src/internal/poll/fd_mutex.go.html#line-201">incref</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+23 uses:
+
+	internal/poll <i>(current package)</i>
+		<a href="../../src/internal/poll/fd_fsync_posix.go.html#line-13">fd_fsync_posix.go#L13</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_mutex.go.html#line-201">fd_mutex.go#L201</a>: func (fd *FD) <b>incref</b>() error {
+		<a href="../../src/internal/poll/fd_poll_runtime.go.html#line-157">fd_poll_runtime.go#L157</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_posix.go.html#line-25">fd_posix.go#L25</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_posix.go.html#line-34" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-34">#L34</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_posix.go.html#line-43" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-43">#L43</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_posix.go.html#line-52" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-52">#L52</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_posix.go.html#line-62" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-62">#L62</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-116">fd_unix.go#L116</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-174" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-174">#L174</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-293" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-293">#L293</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-410" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-410">#L410</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-421" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-421">#L421</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-442" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-442">#L442</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-451" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-451">#L451</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-497" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-497">#L497</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockopt.go.html#line-13">sockopt.go#L13</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockopt.go.html#line-22" class="path-duplicate">sockopt.go</a><a href="../../src/internal/poll/sockopt.go.html#line-22">#L22</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockopt.go.html#line-31" class="path-duplicate">sockopt.go</a><a href="../../src/internal/poll/sockopt.go.html#line-31">#L31</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockopt_linux.go.html#line-11">sockopt_linux.go#L11</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockopt_unix.go.html#line-13">sockopt_unix.go#L13</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockoptip.go.html#line-13">sockoptip.go#L13</a>: 	if err := fd.<b>incref</b>(); err != nil {
+		<a href="../../src/internal/poll/sockoptip.go.html#line-22" class="path-duplicate">sockoptip.go</a><a href="../../src/internal/poll/sockoptip.go.html#line-22">#L22</a>: 	if err := fd.<b>incref</b>(); err != nil {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

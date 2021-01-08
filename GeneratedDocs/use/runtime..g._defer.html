@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.g._defer</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-406">g</a>.<a href="../src/runtime/runtime2.go.html#line-419">_defer</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+30 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-355">heapdump.go#L355</a>: 	dumpint(uint64(uintptr(unsafe.Pointer(gp.<b>_defer</b>))))
+		<a href="../src/runtime/heapdump.go.html#line-367" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-367">#L367</a>: 	for d := gp.<b>_defer</b>; d != nil; d = d.link {
+		<a href="../src/runtime/mgcmark.go.html#line-853">mgcmark.go#L853</a>: 	for d := gp.<b>_defer</b>; d != nil; d = d.link {
+		<a href="../src/runtime/panic.go.html#line-238">panic.go#L238</a>: 	d.link = gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-239" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-239">#L239</a>: 	gp.<b>_defer</b> = d
+		<a href="../src/runtime/panic.go.html#line-300" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-300">#L300</a>: 	*(*uintptr)(unsafe.Pointer(&amp;d.link)) = uintptr(unsafe.Pointer(gp.<b>_defer</b>))
+		<a href="../src/runtime/panic.go.html#line-301" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-301">#L301</a>: 	*(*uintptr)(unsafe.Pointer(&amp;gp.<b>_defer</b>)) = uintptr(unsafe.Pointer(d))
+		<a href="../src/runtime/panic.go.html#line-424" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-424">#L424</a>: 			d.link = gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-425" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-425">#L425</a>: 			gp.<b>_defer</b> = d
+		<a href="../src/runtime/panic.go.html#line-530" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-530">#L530</a>: 	d := gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-543" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-543">#L543</a>: 		gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-564" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-564">#L564</a>: 	gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-598" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-598">#L598</a>: 		d := gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-609" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-609">#L609</a>: 				gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-648" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-648">#L648</a>: 		if gp.<b>_defer</b> != d {
+		<a href="../src/runtime/panic.go.html#line-653" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-653">#L653</a>: 		gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-716" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-716">#L716</a>: 		prevDefer = gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-736" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-736">#L736</a>: 				d := gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-775" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-775">#L775</a>: 					gp.<b>_defer</b> = d1
+		<a href="../src/runtime/panic.go.html#line-932" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-932">#L932</a>: 		d := gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-951" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-951">#L951</a>: 				gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-980" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-980">#L980</a>: 		if gp.<b>_defer</b> != d {
+		<a href="../src/runtime/panic.go.html#line-992" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-992">#L992</a>: 			gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/panic.go.html#line-1014" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1014">#L1014</a>: 				d := gp.<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-1027" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1027">#L1027</a>: 							gp.<b>_defer</b> = d.link
+		<a href="../src/runtime/proc.go.html#line-2960">proc.go#L2960</a>: 	gp.<b>_defer</b> = nil // should be true already but just in case.
+		<a href="../src/runtime/runtime2.go.html#line-419">runtime2.go#L419</a>: 	<b>_defer</b>       *_defer // innermost defer
+		<a href="../src/runtime/stack.go.html#line-739">stack.go#L739</a>: 	adjustpointer(adjinfo, unsafe.Pointer(&amp;gp.<b>_defer</b>))
+		<a href="../src/runtime/stack.go.html#line-740" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-740">#L740</a>: 	for d := gp.<b>_defer</b>; d != nil; d = d.link {
+		<a href="../src/runtime/traceback.go.html#line-52">traceback.go#L52</a>: 	for d := gp.<b>_defer</b>; d != nil; d = d.link {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.lockRankNetpollInit</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/lockrank.go.html#line-65">lockRankNetpollInit</a></b></span>
+
+6 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/lockrank.go.html#line-65">lockrank.go#L65</a>: 	<b>lockRankNetpollInit</b>
+		<a href="../src/runtime/lockrank.go.html#line-147" class="path-duplicate">lockrank.go</a><a href="../src/runtime/lockrank.go.html#line-147">#L147</a>: 	<b>lockRankNetpollInit</b>:   "netpollInit",
+		<a href="../src/runtime/lockrank.go.html#line-226" class="path-duplicate">lockrank.go</a><a href="../src/runtime/lockrank.go.html#line-226">#L226</a>: 	<b>lockRankNetpollInit</b>:   {lockRankTimers},
+		<a href="../src/runtime/lockrank.go.html#line-234" class="path-duplicate">lockrank.go</a><a href="../src/runtime/lockrank.go.html#line-234">#L234</a>: 	lockRankGscan:        {lockRankSysmon, lockRankScavenge, lockRankForcegc, lockRankSweepWaiters, lockRankAssistQueue, lockRankCpuprof, lockRankSweep, lockRankSched, lockRankTimers, lockRankItab, lockRankReflectOffs, lockRankHchan, lockRankFin, lockRankTraceBuf, lockRankTraceStrings, lockRankRoot, lockRankNotifyList, lockRankProf, lockRankGcBitsArenas, lockRankTrace, lockRankTraceStackTab, <b>lockRankNetpollInit</b>, lockRankMcentral, lockRankSpine, lockRankSpanSetSpine},
+		<a href="../src/runtime/lockrank.go.html#line-235" class="path-duplicate">lockrank.go</a><a href="../src/runtime/lockrank.go.html#line-235">#L235</a>: 	lockRankStackpool:    {lockRankSysmon, lockRankScavenge, lockRankSweepWaiters, lockRankAssistQueue, lockRankCpuprof, lockRankSweep, lockRankSched, lockRankPollDesc, lockRankTimers, lockRankItab, lockRankReflectOffs, lockRankHchan, lockRankFin, lockRankNotifyList, lockRankTraceBuf, lockRankTraceStrings, lockRankProf, lockRankGcBitsArenas, lockRankRoot, lockRankTrace, lockRankTraceStackTab, <b>lockRankNetpollInit</b>, lockRankRwmutexR, lockRankMcentral, lockRankSpine, lockRankSpanSetSpine, lockRankGscan},
+		<a href="../src/runtime/netpoll.go.html#line-120">netpoll.go#L120</a>: 		lockInit(&amp;netpollInitLock, <b>lockRankNetpollInit</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

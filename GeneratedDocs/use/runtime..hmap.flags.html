@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.hmap.flags</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/map.go.html#line-115">hmap</a>.<a href="../src/runtime/map.go.html#line-119">flags</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+68 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/map.go.html#line-119">map.go#L119</a>: 	<b>flags</b>     uint8
+		<a href="../src/runtime/map.go.html#line-410" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-410">#L410</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-468" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-468">#L468</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-584" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-584">#L584</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-591" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-591">#L591</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map.go.html#line-675" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-675">#L675</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map.go.html#line-678" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-678">#L678</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map.go.html#line-701" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-701">#L701</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-709" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-709">#L709</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map.go.html#line-787" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-787">#L787</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map.go.html#line-790" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-790">#L790</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map.go.html#line-839" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-839">#L839</a>: 	if old := h.<b>flags</b>; old&(iterator|oldIterator) != iterator|oldIterator {
+		<a href="../src/runtime/map.go.html#line-840" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-840">#L840</a>: 		atomic.Or8(&amp;h.<b>flags</b>, iterator|oldIterator)
+		<a href="../src/runtime/map.go.html#line-852" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-852">#L852</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-984" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-984">#L984</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map.go.html#line-988" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-988">#L988</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map.go.html#line-990" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-990">#L990</a>: 	h.<b>flags</b> &^= sameSizeGrow
+		<a href="../src/runtime/map.go.html#line-1011" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1011">#L1011</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map.go.html#line-1014" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1014">#L1014</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map.go.html#line-1024" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1024">#L1024</a>: 		h.<b>flags</b> |= sameSizeGrow
+		<a href="../src/runtime/map.go.html#line-1029" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1029">#L1029</a>: 	flags := h.<b>flags</b> &^ (iterator | oldIterator)
+		<a href="../src/runtime/map.go.html#line-1030" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1030">#L1030</a>: 	if h.<b>flags</b>&iterator != 0 {
+		<a href="../src/runtime/map.go.html#line-1035" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1035">#L1035</a>: 	h.<b>flags</b> = flags
+		<a href="../src/runtime/map.go.html#line-1087" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1087">#L1087</a>: 	return h.<b>flags</b>&sameSizeGrow != 0
+		<a href="../src/runtime/map.go.html#line-1172" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1172">#L1172</a>: 					if h.<b>flags</b>&iterator != 0 && !t.reflexivekey() && !t.key.equal(k2, k2) {
+		<a href="../src/runtime/map.go.html#line-1227" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1227">#L1227</a>: 		if h.<b>flags</b>&oldIterator == 0 && t.bucket.ptrdata != 0 {
+		<a href="../src/runtime/map.go.html#line-1262" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1262">#L1262</a>: 		h.<b>flags</b> &^= sameSizeGrow
+		<a href="../src/runtime/map_fast32.go.html#line-20">map_fast32.go#L20</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-60" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-60">#L60</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-100" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-100">#L100</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-106" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-106">#L106</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-175" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-175">#L175</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-178" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-178">#L178</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-190" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-190">#L190</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-196" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-196">#L196</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-265" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-265">#L265</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-268" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-268">#L268</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-280" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-280">#L280</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-287" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-287">#L287</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-347" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-347">#L347</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast32.go.html#line-350" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-350">#L350</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast32.go.html#line-439" class="path-duplicate">map_fast32.go</a><a href="../src/runtime/map_fast32.go.html#line-439">#L439</a>: 		if h.<b>flags</b>&oldIterator == 0 && t.bucket.ptrdata != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-20">map_fast64.go#L20</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-60" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-60">#L60</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-100" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-100">#L100</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-106" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-106">#L106</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-175" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-175">#L175</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-178" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-178">#L178</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-190" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-190">#L190</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-196" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-196">#L196</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-265" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-265">#L265</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-268" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-268">#L268</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-280" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-280">#L280</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-287" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-287">#L287</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-347" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-347">#L347</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_fast64.go.html#line-350" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-350">#L350</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_fast64.go.html#line-445" class="path-duplicate">map_fast64.go</a><a href="../src/runtime/map_fast64.go.html#line-445">#L445</a>: 		if h.<b>flags</b>&oldIterator == 0 && t.bucket.ptrdata != 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-20">map_faststr.go#L20</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-115" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-115">#L115</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-210" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-210">#L210</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-217" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-217">#L217</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_faststr.go.html#line-290" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-290">#L290</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-293" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-293">#L293</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_faststr.go.html#line-305" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-305">#L305</a>: 	if h.<b>flags</b>&hashWriting != 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-313" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-313">#L313</a>: 	h.<b>flags</b> ^= hashWriting
+		<a href="../src/runtime/map_faststr.go.html#line-376" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-376">#L376</a>: 	if h.<b>flags</b>&hashWriting == 0 {
+		<a href="../src/runtime/map_faststr.go.html#line-379" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-379">#L379</a>: 	h.<b>flags</b> &^= hashWriting
+		<a href="../src/runtime/map_faststr.go.html#line-463" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-463">#L463</a>: 		if h.<b>flags</b>&oldIterator == 0 && t.bucket.ptrdata != 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

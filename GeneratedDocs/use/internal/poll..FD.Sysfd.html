@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: internal/poll.FD.Sysfd</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../pkg/internal/poll.html">internal/poll</a>.<a href="../../src/internal/poll/fd_unix.go.html#line-17">FD</a>.<a href="../../src/internal/poll/fd_unix.go.html#line-22">Sysfd</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+43 uses:
+
+	internal/poll <i>(current package)</i>
+		<a href="../../src/internal/poll/copy_file_range_linux.go.html#line-101">copy_file_range_linux.go#L101</a>: 		n, err = unix.CopyFileRange(src.<b>Sysfd</b>, nil, dst.<b>Sysfd</b>, nil, max, 0)
+		<a href="../../src/internal/poll/fd_fsync_posix.go.html#line-17">fd_fsync_posix.go#L17</a>: 	return syscall.Fsync(fd.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/fd_poll_runtime.go.html#line-39">fd_poll_runtime.go#L39</a>: 	ctx, errno := runtime_pollOpen(uintptr(fd.<b>Sysfd</b>))
+		<a href="../../src/internal/poll/fd_posix.go.html#line-29">fd_posix.go#L29</a>: 	return syscall.Shutdown(fd.<b>Sysfd</b>, how)
+		<a href="../../src/internal/poll/fd_posix.go.html#line-38" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-38">#L38</a>: 	return syscall.Fchmod(fd.<b>Sysfd</b>, mode)
+		<a href="../../src/internal/poll/fd_posix.go.html#line-47" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-47">#L47</a>: 	return syscall.Fchown(fd.<b>Sysfd</b>, uid, gid)
+		<a href="../../src/internal/poll/fd_posix.go.html#line-56" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-56">#L56</a>: 	return syscall.Ftruncate(fd.<b>Sysfd</b>, size)
+		<a href="../../src/internal/poll/fd_posix.go.html#line-66" class="path-duplicate">fd_posix.go</a><a href="../../src/internal/poll/fd_posix.go.html#line-66">#L66</a>: 	f(uintptr(fd.<b>Sysfd</b>))
+		<a href="../../src/internal/poll/fd_unix.go.html#line-22">fd_unix.go#L22</a>: 	<b>Sysfd</b> int
+		<a href="../../src/internal/poll/fd_unix.go.html#line-77" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-77">#L77</a>: 	err := CloseFunc(fd.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-78" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-78">#L78</a>: 	fd.<b>Sysfd</b> = -1
+		<a href="../../src/internal/poll/fd_unix.go.html#line-124" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-124">#L124</a>: 	return syscall.SetNonblock(fd.<b>Sysfd</b>, false)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-155" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-155">#L155</a>: 		n, err := ignoringEINTR(func() (int, error) { return syscall.Read(fd.<b>Sysfd</b>, p) })
+		<a href="../../src/internal/poll/fd_unix.go.html#line-185" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-185">#L185</a>: 		n, err = syscall.Pread(fd.<b>Sysfd</b>, p, off)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-208" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-208">#L208</a>: 		n, sa, err := syscall.Recvfrom(fd.<b>Sysfd</b>, p, 0)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-235" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-235">#L235</a>: 		n, oobn, flags, sa, err := syscall.Recvmsg(fd.<b>Sysfd</b>, p, oob, 0)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-267" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-267">#L267</a>: 		n, err := ignoringEINTR(func() (int, error) { return syscall.Write(fd.<b>Sysfd</b>, p[nn:max]) })
+		<a href="../../src/internal/poll/fd_unix.go.html#line-303" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-303">#L303</a>: 		n, err := syscall.Pwrite(fd.<b>Sysfd</b>, p[nn:max], off+int64(nn))
+		<a href="../../src/internal/poll/fd_unix.go.html#line-332" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-332">#L332</a>: 		err := syscall.Sendto(fd.<b>Sysfd</b>, p, 0, sa)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-358" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-358">#L358</a>: 		n, err := syscall.SendmsgN(fd.<b>Sysfd</b>, p, oob, sa, 0)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-385" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-385">#L385</a>: 		s, rsa, errcall, err := accept(fd.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-414" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-414">#L414</a>: 	return syscall.Seek(fd.<b>Sysfd</b>, offset, whence)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-426" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-426">#L426</a>: 		n, err := ignoringEINTR(func() (int, error) { return syscall.ReadDirent(fd.<b>Sysfd</b>, buf) })
+		<a href="../../src/internal/poll/fd_unix.go.html#line-446" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-446">#L446</a>: 	return syscall.Fchdir(fd.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-455" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-455">#L455</a>: 	return syscall.Fstat(fd.<b>Sysfd</b>, s)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-501" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-501">#L501</a>: 	return DupCloseOnExec(fd.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/fd_unix.go.html#line-517" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-517">#L517</a>: 	return ignoringEINTR(func() (int, error) { return syscall.Write(fd.<b>Sysfd</b>, p) })
+		<a href="../../src/internal/poll/fd_unix.go.html#line-530" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-530">#L530</a>: 		if f(uintptr(fd.<b>Sysfd</b>)) {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-549" class="path-duplicate">fd_unix.go</a><a href="../../src/internal/poll/fd_unix.go.html#line-549">#L549</a>: 		if f(uintptr(fd.<b>Sysfd</b>)) {
+		<a href="../../src/internal/poll/sendfile_linux.go.html#line-20">sendfile_linux.go#L20</a>: 	dst := int(dstFD.<b>Sysfd</b>)
+		<a href="../../src/internal/poll/sockopt.go.html#line-17">sockopt.go#L17</a>: 	return syscall.SetsockoptInt(fd.<b>Sysfd</b>, level, name, arg)
+		<a href="../../src/internal/poll/sockopt.go.html#line-26" class="path-duplicate">sockopt.go</a><a href="../../src/internal/poll/sockopt.go.html#line-26">#L26</a>: 	return syscall.SetsockoptInet4Addr(fd.<b>Sysfd</b>, level, name, arg)
+		<a href="../../src/internal/poll/sockopt.go.html#line-35" class="path-duplicate">sockopt.go</a><a href="../../src/internal/poll/sockopt.go.html#line-35">#L35</a>: 	return syscall.SetsockoptLinger(fd.<b>Sysfd</b>, level, name, l)
+		<a href="../../src/internal/poll/sockopt_linux.go.html#line-15">sockopt_linux.go#L15</a>: 	return syscall.SetsockoptIPMreqn(fd.<b>Sysfd</b>, level, name, mreq)
+		<a href="../../src/internal/poll/sockopt_unix.go.html#line-17">sockopt_unix.go#L17</a>: 	return syscall.SetsockoptByte(fd.<b>Sysfd</b>, level, name, arg)
+		<a href="../../src/internal/poll/sockoptip.go.html#line-17">sockoptip.go#L17</a>: 	return syscall.SetsockoptIPMreq(fd.<b>Sysfd</b>, level, name, mreq)
+		<a href="../../src/internal/poll/sockoptip.go.html#line-26" class="path-duplicate">sockoptip.go</a><a href="../../src/internal/poll/sockoptip.go.html#line-26">#L26</a>: 	return syscall.SetsockoptIPv6Mreq(fd.<b>Sysfd</b>, level, name, mreq)
+		<a href="../../src/internal/poll/splice_linux.go.html#line-89">splice_linux.go#L89</a>: 		n, err := splice(pipefd, sock.<b>Sysfd</b>, max, spliceNonblock)
+		<a href="../../src/internal/poll/splice_linux.go.html#line-125" class="path-duplicate">splice_linux.go</a><a href="../../src/internal/poll/splice_linux.go.html#line-125">#L125</a>: 		n, err := splice(sock.<b>Sysfd</b>, pipefd, inPipe, spliceNonblock)
+		<a href="../../src/internal/poll/writev.go.html#line-60">writev.go#L60</a>: 		wrote, err = writev(fd.<b>Sysfd</b>, iovecs)
+
+	<a href="../../pkg/os.html">os</a>
+		<a href="../../src/os/file_unix.go.html#line-79">file_unix.go#L79</a>: 	return uintptr(f.pfd.<b>Sysfd</b>)
+		<a href="../../src/os/file_unix.go.html#line-115" class="path-duplicate">file_unix.go</a><a href="../../src/os/file_unix.go.html#line-115">#L115</a>: 			<b>Sysfd</b>:         fdi,
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

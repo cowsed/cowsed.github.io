@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source: Follower.go in package github.com/cowsed/ElfHouse/FineSim/AIs</title>
+<link href="../../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre id="header"><code><span class="title">Source File</span>
+	Follower.go
+
+<span class="title">Belonging Package</span>
+	<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/AIs.html">github.com/cowsed/ElfHouse/FineSim/AIs</a>
+</code></pre>
+<style>input[type=radio] {display: none;}
+input[id=r0]:checked ~pre label[for=r0],
+input[id=r1]:checked ~pre label[for=r1],
+input[id=r2]:checked ~pre label[for=r2],
+input[id=r3]:checked ~pre label[for=r3],
+input[id=r4]:checked ~pre label[for=r4],
+input[id=r5]:checked ~pre label[for=r5]
+{ background: #226; color: #ff8; padding-left: 1px;}
+</style><input id="r0" type="radio" name="g"/>
+<input id="r1" type="radio" name="g"/>
+<input id="r2" type="radio" name="g"/>
+<input id="r3" type="radio" name="g"/>
+<input id="r4" type="radio" name="g"/>
+<input id="r5" type="radio" name="g"/>
+
+<pre class="line-numbers">
+<span class="codeline" id="line-1"><code><span class="keyword">package</span> ai</code></span>
+<span class="codeline" id="line-2"><code></code></span>
+<span class="codeline" id="line-3"><code><span class="keyword">import</span> (</code></span>
+<span class="codeline" id="line-4"><code>	<span class="lit-string">"github.com/cowsed/ElfHouse/FineSim/Actions"</span></code></span>
+<span class="codeline" id="line-5"><code>	<span class="lit-string">"github.com/cowsed/ElfHouse/FineSim/Memory"</span></code></span>
+<span class="codeline" id="line-6"><code></code></span>
+<span class="codeline" id="line-7"><code>	<span class="lit-string">"github.com/cowsed/ElfHouse/Helpers/Grammar"</span></code></span>
+<span class="codeline" id="line-8"><code></code></span>
+<span class="codeline" id="line-9"><code>	<span class="lit-string">"fmt"</span></code></span>
+<span class="codeline" id="line-10"><code>)</code></span>
+<span class="codeline" id="line-11"><code></code></span>
+<span class="codeline" id="line-12"><code><span class="keyword">type</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/AIs.html#name-FollowerAI" class="ident">FollowerAI</a> <span class="keyword">struct</span> {</code></span>
+<span class="codeline" id="line-13"><code>	<a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.Intelligence.html" class="ident">Intelligence</a> <a href="../../../../../../pkg/builtin.html#name-uint8" class="ident">uint8</a></code></span>
+<span class="codeline" id="line-14"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.BaseTrust.html" class="ident">BaseTrust</a>    <a href="../../../../../../pkg/builtin.html#name-uint8" class="ident">uint8</a></code></span>
+<span class="codeline" id="line-15"><code></code></span>
+<span class="codeline" id="line-16"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.Occupation.html" class="ident">Occupation</a>  <a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a></code></span>
+<span class="codeline" id="line-17"><code></code></span>
+<span class="codeline" id="line-18"><code></code></span>
+<span class="codeline" id="line-19"><code></code></span>
+<span class="codeline" id="line-20"><code>	<span class="comment">//Memory</span></code></span>
+<span class="codeline" id="line-21"><code><span class="comment">    //Long term stuff and knowledge about the world</span></code></span>
+<span class="codeline" id="line-22"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.PersonalMem.html" class="ident">PersonalMem</a> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="../Memory/MemoryHolder.go.html#line-5" class="ident">MemoryHolder</a> <span class="comment">//Holds relations to other people, other secrets only this person will know</span></code></span>
+<span class="codeline" id="line-23"><code>    <span class="comment">//Society Memory</span></code></span>
+<span class="codeline" id="line-24"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.SocietyMem.html" class="ident">SocietyMem</a> *<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="../Memory/MemoryHolder.go.html#line-5" class="ident">MemoryHolder</a> <span class="comment">//Which grudges a society holds, what forests are sacred, what fields are owned by whom</span></code></span>
+<span class="codeline" id="line-25"><code>    <span class="comment">//Species Memory</span></code></span>
+<span class="codeline" id="line-26"><code>    <a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.SpeciesMem.html" class="ident">SpeciesMem</a> *<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="../Memory/MemoryHolder.go.html#line-5" class="ident">MemoryHolder</a> <span class="comment">//Holds things like which things are poisonous, where natural resources are etc</span></code></span>
+<span class="codeline" id="line-27"><code></code></span>
+<span class="codeline" id="line-28"><code>	<span class="comment">//Base tasks</span></code></span>
+<span class="codeline" id="line-29"><code>	<a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.TaskBuffer.html" class="ident">TaskBuffer</a> []<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-10" class="ident">BaseAction</a> <span class="comment">//Chronological, These include go to location index, talk to person, take item, etc</span></code></span>
+<span class="codeline" id="line-30"><code>	<span class="comment">//Short term</span></code></span>
+<span class="codeline" id="line-31"><code>	<a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.ShortTasks.html" class="ident">ShortTasks</a> []<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-4" class="ident">Action</a> <span class="comment">//Non chronological Day to day tasks, Go to work, Relax, talk to friend</span></code></span>
+<span class="codeline" id="line-32"><code>	<span class="comment">//Long term required</span></code></span>
+<span class="codeline" id="line-33"><code>	<a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.LongTasks.html" class="ident">LongTasks</a> []<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-4" class="ident">Action</a> <span class="comment">//Day to day tasks, do job, support family, etc</span></code></span>
+<span class="codeline" id="line-34"><code></code></span>
+<span class="codeline" id="line-35"><code>	<span class="comment">//Long term dreams</span></code></span>
+<span class="codeline" id="line-36"><code>	<a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.Dreams.html" class="ident">Dreams</a> []<a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-4" class="ident">Action</a> <span class="comment">//Create art where art is a pattern, find family where family is a state where you have an SO and a kid</span></code></span>
+<span class="codeline" id="line-37"><code></code></span>
+<span class="codeline" id="line-38"><code>}</code></span>
+<span class="codeline" id="line-39"><code></code></span>
+<span class="codeline" id="line-40"><code><span class="keyword">func</span> (<label for="r0" class="ident">a</label> *<a href="#line-12" class="ident">FollowerAI</a>) <label for="r1" class="ident"><a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.Describe.html" class="ident">Describe</a></label>(<label for="r2" class="ident">lod</label> <a href="../../../../../../pkg/builtin.html#name-uint8" class="ident">uint8</a>) <a href="../../../../../../pkg/builtin.html#name-string" class="ident">string</a> {</code></span>
+<span class="codeline" id="line-41"><code>	<label for="r3" class="ident">s</label> := <span class="lit-string">""</span></code></span>
+<span class="codeline" id="line-42"><code>	<span class="keyword">if</span> <label for="r2" class="ident">lod</label> == <span class="lit-number">1</span> {</code></span>
+<span class="codeline" id="line-43"><code>		<label for="r3" class="ident">s</label> = <a href="../../../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../../../fmt/print.go.html#line-217" class="ident">Sprintf</a>(<span class="lit-string">"/Ps/ /tb/ %s smart"</span>, <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Grammar.html" class="ident">grammar</a>.<a href="../../Helpers/Grammar/pronouns.go.html#line-135" class="ident">WordFromValue</a>(<label for="r0" class="ident">a</label>.<a href="#line-13" class="ident">Intelligence</a>))</code></span>
+<span class="codeline" id="line-44"><code>	} <span class="keyword">else</span> {</code></span>
+<span class="codeline" id="line-45"><code>		<label for="r3" class="ident">s</label> = <a href="../../../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../../../fmt/print.go.html#line-217" class="ident">Sprintf</a>(<span class="lit-string">"/Ps/ /tb/ %s smart"</span>, <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Grammar.html" class="ident">grammar</a>.<a href="../../Helpers/Grammar/pronouns.go.html#line-135" class="ident">WordFromValue</a>(<label for="r0" class="ident">a</label>.<a href="#line-13" class="ident">Intelligence</a>))</code></span>
+<span class="codeline" id="line-46"><code>	}</code></span>
+<span class="codeline" id="line-47"><code>	<span class="keyword">return</span> <label for="r3" class="ident">s</label></code></span>
+<span class="codeline" id="line-48"><code>}</code></span>
+<span class="codeline" id="line-49"><code></code></span>
+<span class="codeline" id="line-50"><code><span class="keyword">func</span> (<label for="r4" class="ident">a</label> *<a href="#line-12" class="ident">FollowerAI</a>) <label for="r5" class="ident"><a href="../../../../../../use/github.com/cowsed/ElfHouse/FineSim/AIs..FollowerAI.NextAction.html" class="ident">NextAction</a></label>() <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-4" class="ident">Action</a> {</code></span>
+<span class="codeline" id="line-51"><code>	<span class="keyword">return</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html" class="ident">action</a>.<a href="../Actions/action.go.html#line-4" class="ident">Action</a>{<a href="../Actions/action.go.html#line-5" class="ident">Action</a>: <span class="lit-string">"move"</span>, <a href="../Actions/action.go.html#line-6" class="ident">DirectObject</a>: <span class="lit-string">"you"</span>}</code></span>
+<span class="codeline" id="line-52"><code>}</code></span>
+<span class="codeline" id="line-53"><code></code></span>
+<span class="codeline" id="line-54"><code><span class="comment">//Definitions for stealing later</span></code></span>
+<span class="codeline" id="line-55"><code><span class="keyword">var</span> <a href="../../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/AIs.html#name-NormalFollowerAI" class="ident">NormalFollowerAI</a> <a href="#line-12" class="ident">FollowerAI</a> = <a href="#line-12" class="ident">FollowerAI</a>{</code></span>
+<span class="codeline" id="line-56"><code>	<a href="#line-13" class="ident">Intelligence</a>: <span class="lit-number">100</span>,</code></span>
+<span class="codeline" id="line-57"><code>}</code></span>
+<span class="codeline" id="line-58"><code></code></span>
+<span class="codeline" id="line-59"><code><span class="comment">/*</span></code></span>
+<span class="codeline" id="line-60"><code><span class="comment">Simple human - does very little scheming</span></code></span>
+<span class="codeline" id="line-61"><code></code></span>
+<span class="codeline" id="line-62"><code><span class="comment">Actions to do</span></code></span>
+<span class="codeline" id="line-63"><code><span class="comment">find object -&gt; go to position of object if known or ask around trusted people until a location is found, object can be knowledge, a person, a good, an animal etc</span></code></span>
+<span class="codeline" id="line-64"><code><span class="comment">    object can be reffered to with pointers if specific or else by a topic</span></code></span>
+<span class="codeline" id="line-65"><code></code></span>
+<span class="codeline" id="line-66"><code></code></span>
+<span class="codeline" id="line-67"><code><span class="comment">"memories"</span></code></span>
+<span class="codeline" id="line-68"><code><span class="comment">trusted people - skewed by wisdom/street sense</span></code></span>
+<span class="codeline" id="line-69"><code><span class="comment">    tiered</span></code></span>
+<span class="codeline" id="line-70"><code><span class="comment">    -oo is least trust +oo is most trust 0 is neutral</span></code></span>
+<span class="codeline" id="line-71"><code></code></span>
+<span class="codeline" id="line-72"><code><span class="comment">things to do</span></code></span>
+<span class="codeline" id="line-73"><code><span class="comment">    collection of actions char wants to do or orders they have been given</span></code></span>
+<span class="codeline" id="line-74"><code></code></span>
+<span class="codeline" id="line-75"><code><span class="comment">*/</span></code></span>
+</pre><pre id="footer">
+<table><tr><td><img src="../../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

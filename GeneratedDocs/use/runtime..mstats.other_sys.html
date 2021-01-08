@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.other_sys</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-24">mstats</a>.<a href="../src/runtime/mstats.go.html#line-58">other_sys</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+22 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-564">heapdump.go#L564</a>: 	dumpint(memstats.<b>other_sys</b>)
+		<a href="../src/runtime/heapdump.go.html#line-682" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-682">#L682</a>: 		sysFree(unsafe.Pointer(&amp;tmpbuf[0]), uintptr(len(tmpbuf)), &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/heapdump.go.html#line-700" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-700">#L700</a>: 			sysFree(unsafe.Pointer(&amp;tmpbuf[0]), uintptr(len(tmpbuf)), &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/heapdump.go.html#line-703" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-703">#L703</a>: 		p := sysAlloc(n, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/iface.go.html#line-66">iface.go#L66</a>: 	m = (*itab)(persistentalloc(unsafe.Sizeof(itab{})+uintptr(len(inter.mhdr)-1)*sys.PtrSize, 0, &amp;memstats.<b>other_sys</b>))
+		<a href="../src/runtime/malloc.go.html#line-932">malloc.go#L932</a>: 		return persistentalloc(size, align, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/malloc.go.html#line-1371" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1371">#L1371</a>: 		persistent.base = (*notInHeap)(sysAlloc(persistentChunkSize, &amp;memstats.<b>other_sys</b>))
+		<a href="../src/runtime/malloc.go.html#line-1396" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1396">#L1396</a>: 	if sysStat != &amp;memstats.<b>other_sys</b> {
+		<a href="../src/runtime/malloc.go.html#line-1398" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1398">#L1398</a>: 		mSysStatDec(&amp;memstats.<b>other_sys</b>, size)
+		<a href="../src/runtime/mbitmap.go.html#line-1041">mbitmap.go#L1041</a>: 				debugPtrmask.data = (*byte)(persistentalloc(1&lt;&lt;20, 1, &amp;memstats.<b>other_sys</b>))
+		<a href="../src/runtime/mheap.go.html#line-522">mheap.go#L522</a>: 		sp.array = sysAlloc(uintptr(n)*sys.PtrSize, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/mheap.go.html#line-534" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-534">#L534</a>: 			sysFree(unsafe.Pointer(&amp;oldAllspans[0]), uintptr(cap(oldAllspans))*unsafe.Sizeof(oldAllspans[0]), &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/mheap.go.html#line-724" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-724">#L724</a>: 	h.specialfinalizeralloc.init(unsafe.Sizeof(specialfinalizer{}), nil, nil, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/mheap.go.html#line-725" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-725">#L725</a>: 	h.specialprofilealloc.init(unsafe.Sizeof(specialprofile{}), nil, nil, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/mheap.go.html#line-726" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-726">#L726</a>: 	h.arenaHintAlloc.init(unsafe.Sizeof(arenaHint{}), nil, nil, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/mstats.go.html#line-58">mstats.go#L58</a>: 	<b>other_sys</b>    uint64 // updated atomically or during STW
+		<a href="../src/runtime/mstats.go.html#line-525" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-525">#L525</a>: 		memstats.mcache_sys + memstats.buckhash_sys + memstats.gc_sys + memstats.<b>other_sys</b>
+		<a href="../src/runtime/netpoll.go.html#line-539">netpoll.go#L539</a>: 		mem := persistentalloc(n*pdSize, 0, &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/trace.go.html#line-363">trace.go#L363</a>: 		sysFree(unsafe.Pointer(buf), unsafe.Sizeof(*buf.ptr()), &amp;memstats.<b>other_sys</b>)
+		<a href="../src/runtime/trace.go.html#line-642" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-642">#L642</a>: 		buf = traceBufPtr(sysAlloc(unsafe.Sizeof(traceBuf{}), &amp;memstats.<b>other_sys</b>))
+		<a href="../src/runtime/trace.go.html#line-946" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-946">#L946</a>: 		block := (*traceAllocBlock)(sysAlloc(unsafe.Sizeof(traceAllocBlock{}), &amp;memstats.<b>other_sys</b>))
+		<a href="../src/runtime/trace.go.html#line-964" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-964">#L964</a>: 		sysFree(unsafe.Pointer(block), unsafe.Sizeof(traceAllocBlock{}), &amp;memstats.<b>other_sys</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

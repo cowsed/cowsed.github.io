@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.usleep</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/stubs2.go.html#line-23">usleep</a></b></span>
+
+10 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/proc.go.html#line-737">proc.go#L737</a>: 		<b>usleep</b>(1000)
+		<a href="../src/runtime/proc.go.html#line-740" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-740">#L740</a>: 	<b>usleep</b>(1000)
+		<a href="../src/runtime/proc.go.html#line-742" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-742">#L742</a>: 	<b>usleep</b>(1000)
+		<a href="../src/runtime/proc.go.html#line-1740" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1740">#L1740</a>: 			<b>usleep</b>(1)
+		<a href="../src/runtime/proc.go.html#line-4654" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4654">#L4654</a>: 		<b>usleep</b>(delay)
+		<a href="../src/runtime/proc.go.html#line-5310" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5310">#L5310</a>: 							<b>usleep</b>(3)
+		<a href="../src/runtime/runtime.go.html#line-33">runtime.go#L33</a>: 		<b>usleep</b>(100 * 1000)
+		<a href="../src/runtime/signal_unix.go.html#line-697">signal_unix.go#L697</a>: 			<b>usleep</b>(5 * 1000 * 1000)
+		<a href="../src/runtime/signal_unix.go.html#line-845" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-845">#L845</a>: 	<b>usleep</b>(1000)
+		<a href="../src/runtime/stubs2.go.html#line-23">stubs2.go#L23</a>: func <b>usleep</b>(usec uint32)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

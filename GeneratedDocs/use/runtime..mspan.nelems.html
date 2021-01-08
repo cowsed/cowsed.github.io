@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.nelems</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-402">mspan</a>.<a href="../src/runtime/mheap.go.html#line-430">nelems</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+40 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-471">heapdump.go#L471</a>: 		for freeIndex := uintptr(0); freeIndex &lt; s.<b>nelems</b>; freeIndex++ {
+		<a href="../src/runtime/malloc.go.html#line-847">malloc.go#L847</a>: 		if result &lt; s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-849" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-849">#L849</a>: 			if freeidx%64 == 0 &amp;&amp; freeidx != s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-874" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-874">#L874</a>: 	if freeIndex == s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-876" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-876">#L876</a>: 		if uintptr(s.allocCount) != s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-877" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-877">#L877</a>: 			println("runtime: s.allocCount=", s.allocCount, "s.nelems=", s.<b>nelems</b>)
+		<a href="../src/runtime/malloc.go.html#line-887" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-887">#L887</a>: 	if freeIndex &gt;= s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-893" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-893">#L893</a>: 	if uintptr(s.allocCount) &gt; s.<b>nelems</b> {
+		<a href="../src/runtime/malloc.go.html#line-894" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-894">#L894</a>: 		println("s.allocCount=", s.allocCount, "s.nelems=", s.<b>nelems</b>)
+		<a href="../src/runtime/mbitmap.go.html#line-197">mbitmap.go#L197</a>: 	snelems := s.<b>nelems</b>
+		<a href="../src/runtime/mbitmap.go.html#line-872" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-872">#L872</a>: 	bytes := divRoundUp(s.<b>nelems</b>, 8)
+		<a href="../src/runtime/mcache.go.html#line-126">mcache.go#L126</a>: 	if uintptr(s.allocCount) != s.<b>nelems</b> {
+		<a href="../src/runtime/mcache.go.html#line-147" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-147">#L147</a>: 	if uintptr(s.allocCount) == s.<b>nelems</b> {
+		<a href="../src/runtime/mcentral.go.html#line-162">mcentral.go#L162</a>: 			if freeIndex != s.<b>nelems</b> {
+		<a href="../src/runtime/mcentral.go.html#line-187" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-187">#L187</a>: 	n := int(s.<b>nelems</b>) - int(s.allocCount)
+		<a href="../src/runtime/mcentral.go.html#line-188" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-188">#L188</a>: 	if n == 0 || s.freeindex == s.<b>nelems</b> || uintptr(s.allocCount) == s.<b>nelems</b> {
+		<a href="../src/runtime/mcentral.go.html#line-261" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-261">#L261</a>: 			if freeIndex != s.<b>nelems</b> {
+		<a href="../src/runtime/mcentral.go.html#line-299" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-299">#L299</a>: 	n := int(s.<b>nelems</b>) - int(s.allocCount)
+		<a href="../src/runtime/mcentral.go.html#line-300" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-300">#L300</a>: 	if n == 0 || s.freeindex == s.<b>nelems</b> || uintptr(s.allocCount) == s.<b>nelems</b> {
+		<a href="../src/runtime/mcentral.go.html#line-357" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-357">#L357</a>: 	n := int(s.<b>nelems</b>) - int(s.allocCount)
+		<a href="../src/runtime/mcentral.go.html#line-419" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-419">#L419</a>: 	n := int(s.<b>nelems</b>) - int(s.allocCount)
+		<a href="../src/runtime/mgcsweep.go.html#line-421">mgcsweep.go#L421</a>: 		for i := uintptr(0); i &lt; s.<b>nelems</b>; i++ {
+		<a href="../src/runtime/mgcsweep.go.html#line-443" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-443">#L443</a>: 	if s.freeindex &lt; s.<b>nelems</b> {
+		<a href="../src/runtime/mgcsweep.go.html#line-454" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-454">#L454</a>: 		for i := obj/8 + 1; i &lt; divRoundUp(s.<b>nelems</b>, 8); i++ {
+		<a href="../src/runtime/mgcsweep.go.html#line-467" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-467">#L467</a>: 		print("runtime: nelems=", s.<b>nelems</b>, " nalloc=", nalloc, " previous allocCount=", s.allocCount, " nfreed=", nfreed, "\n")
+		<a href="../src/runtime/mgcsweep.go.html#line-480" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-480">#L480</a>: 	s.gcmarkBits = newMarkBits(s.<b>nelems</b>)
+		<a href="../src/runtime/mgcsweep.go.html#line-529" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-529">#L529</a>: 			if uintptr(nalloc) == s.<b>nelems</b> {
+		<a href="../src/runtime/mgcsweep.go.html#line-674" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-674">#L674</a>: 		for i := uintptr(0); i &lt; s.<b>nelems</b>; i++ {
+		<a href="../src/runtime/mgcsweep.go.html#line-703" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-703">#L703</a>: 		print("runtime: nelems=", s.<b>nelems</b>, " nalloc=", nalloc, " previous allocCount=", s.allocCount, " nfreed=", nfreed, "\n")
+		<a href="../src/runtime/mgcsweep.go.html#line-708" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-708">#L708</a>: 	wasempty := s.nextFreeIndex() == s.<b>nelems</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-717" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-717">#L717</a>: 	s.gcmarkBits = newMarkBits(s.<b>nelems</b>)
+		<a href="../src/runtime/mgcsweep.go.html#line-798" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-798">#L798</a>: 	for i := uintptr(0); i &lt; s.<b>nelems</b>; i++ {
+		<a href="../src/runtime/mheap.go.html#line-430">mheap.go#L430</a>: 	<b>nelems</b> uintptr // number of object in the span.
+		<a href="../src/runtime/mheap.go.html#line-1220" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1220">#L1220</a>: 		s.<b>nelems</b> = 0
+		<a href="../src/runtime/mheap.go.html#line-1231" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1231">#L1231</a>: 			s.<b>nelems</b> = 1
+		<a href="../src/runtime/mheap.go.html#line-1239" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1239">#L1239</a>: 			s.<b>nelems</b> = nbytes / s.elemsize
+		<a href="../src/runtime/mheap.go.html#line-1251" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1251">#L1251</a>: 		s.gcmarkBits = newMarkBits(s.<b>nelems</b>)
+		<a href="../src/runtime/mheap.go.html#line-1252" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1252">#L1252</a>: 		s.allocBits = newAllocBits(s.<b>nelems</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

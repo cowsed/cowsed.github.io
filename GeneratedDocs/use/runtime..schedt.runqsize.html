@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.schedt.runqsize</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-698">schedt</a>.<a href="../src/runtime/runtime2.go.html#line-725">runqsize</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+16 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/proc.go.html#line-2000">proc.go#L2000</a>: 	if !runqempty(_p_) || sched.<b>runqsize</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-2032" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2032">#L2032</a>: 	if sched.<b>runqsize</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-2217" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2217">#L2217</a>: 	if sched.<b>runqsize</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-2359" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2359">#L2359</a>: 	if sched.<b>runqsize</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-2488" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2488">#L2488</a>: 	if sched.<b>runqsize</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-2665" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2665">#L2665</a>: 		if _g_.m.p.ptr().schedtick%61 == 0 &amp;&amp; sched.<b>runqsize</b> > 0 {
+		<a href="../src/runtime/proc.go.html#line-4900" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4900">#L4900</a>: 	print("SCHED ", (now-starttime)/1e6, "ms: gomaxprocs=", gomaxprocs, " idleprocs=", sched.npidle, " threads=", mcount(), " spinningthreads=", sched.nmspinning, " idlethreads=", sched.nmidle, " runqueue=", sched.<b>runqsize</b>)
+		<a href="../src/runtime/proc.go.html#line-5038" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5038">#L5038</a>: 	sched.<b>runqsize</b>++
+		<a href="../src/runtime/proc.go.html#line-5047" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5047">#L5047</a>: 	sched.<b>runqsize</b>++
+		<a href="../src/runtime/proc.go.html#line-5055" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5055">#L5055</a>: 	sched.<b>runqsize</b> += n
+		<a href="../src/runtime/proc.go.html#line-5062" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5062">#L5062</a>: 	if sched.<b>runqsize</b> == 0 {
+		<a href="../src/runtime/proc.go.html#line-5066" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5066">#L5066</a>: 	n := sched.<b>runqsize</b>/gomaxprocs + 1
+		<a href="../src/runtime/proc.go.html#line-5067" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5067">#L5067</a>: 	if n &gt; sched.<b>runqsize</b> {
+		<a href="../src/runtime/proc.go.html#line-5068" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5068">#L5068</a>: 		n = sched.<b>runqsize</b>
+		<a href="../src/runtime/proc.go.html#line-5077" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5077">#L5077</a>: 	sched.<b>runqsize</b> -= n
+		<a href="../src/runtime/runtime2.go.html#line-725">runtime2.go#L725</a>: 	<b>runqsize</b> int32
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

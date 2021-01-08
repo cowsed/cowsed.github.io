@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.funcname</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/symtab.go.html#line-824">funcname</a></b></span>
+
+37 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/debugcall.go.html#line-49">debugcall.go#L49</a>: 		name := <b>funcname</b>(f)
+		<a href="../src/runtime/debuglog.go.html#line-815">debuglog.go#L815</a>: 		name := <b>funcname</b>(fn)
+		<a href="../src/runtime/error.go.html#line-284">error.go#L284</a>: 	name := <b>funcname</b>(findfunc(pc))
+		<a href="../src/runtime/heapdump.go.html#line-279">heapdump.go#L279</a>: 	name := <b>funcname</b>(f)
+		<a href="../src/runtime/heapdump.go.html#line-608" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-608">#L608</a>: 			dumpstr(<b>funcname</b>(f))
+		<a href="../src/runtime/mgcmark.go.html#line-961">mgcmark.go#L961</a>: 		print("scanframe ", <b>funcname</b>(frame.fn), "\n")
+		<a href="../src/runtime/mgcmark.go.html#line-968" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-968">#L968</a>: 			println("conservatively scanning function", <b>funcname</b>(frame.fn), "at PC", hex(frame.continpc))
+		<a href="../src/runtime/panic.go.html#line-32">panic.go#L32</a>: 	if sys.GoarchWasm == 0 &amp;&amp; hasPrefix(<b>funcname</b>(findfunc(pc)), "runtime.") {
+		<a href="../src/runtime/plugin.go.html#line-105">plugin.go#L105</a>: 		name := <b>funcname</b>(f)
+		<a href="../src/runtime/plugin.go.html#line-114" class="path-duplicate">plugin.go</a><a href="../src/runtime/plugin.go.html#line-114">#L114</a>: 			name2 = <b>funcname</b>(f2)
+		<a href="../src/runtime/preempt.go.html#line-435">preempt.go#L435</a>: 	name := <b>funcname</b>(f)
+		<a href="../src/runtime/print.go.html#line-304">print.go#L304</a>: 			print("&lt;", <b>funcname</b>(fn), "+", val-fn.entry, "> ")
+		<a href="../src/runtime/proc.go.html#line-3955">proc.go#L3955</a>: 			if hasPrefix(<b>funcname</b>(f), "runtime/internal/atomic") {
+		<a href="../src/runtime/stack.go.html#line-604">stack.go#L604</a>: 				print("runtime: bad pointer in frame ", <b>funcname</b>(f), " at ", pp, ": ", hex(p), "\n")
+		<a href="../src/runtime/stack.go.html#line-609" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-609">#L609</a>: 					print("adjust ptr ", hex(p), " ", <b>funcname</b>(f), "\n")
+		<a href="../src/runtime/stack.go.html#line-633" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-633">#L633</a>: 		print("    adjusting ", <b>funcname</b>(f), " frame=[", hex(frame.sp), ",", hex(frame.fp), "] pc=", hex(frame.pc), " continpc=", hex(frame.continpc), "\n")
+		<a href="../src/runtime/stack.go.html#line-963" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-963">#L963</a>: 			pcname = <b>funcname</b>(f)
+		<a href="../src/runtime/stack.go.html#line-1254" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1254">#L1254</a>: 			print("runtime: frame ", <b>funcname</b>(f), " untyped locals ", hex(frame.varp-size), "+", hex(size), "\n")
+		<a href="../src/runtime/stack.go.html#line-1261" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1261">#L1261</a>: 				print("runtime: pcdata is ", stackid, " and ", stkmap.n, " locals stack map entries for ", <b>funcname</b>(f), " (targetpc=", hex(targetpc), ")\n")
+		<a href="../src/runtime/stack.go.html#line-1287" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1287">#L1287</a>: 				print("runtime: frame ", <b>funcname</b>(f), " untyped args ", hex(frame.argp), "+", hex(frame.arglen), "\n")
+		<a href="../src/runtime/stack.go.html#line-1292" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1292">#L1292</a>: 				print("runtime: pcdata is ", pcdata, " and ", stackmap.n, " args stack map entries for ", <b>funcname</b>(f), " (targetpc=", hex(targetpc), ")\n")
+		<a href="../src/runtime/symtab.go.html#line-102">symtab.go#L102</a>: 		name := <b>funcname</b>(funcInfo)
+		<a href="../src/runtime/symtab.go.html#line-536" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-536">#L536</a>: 				f2name = <b>funcname</b>(f2)
+		<a href="../src/runtime/symtab.go.html#line-538" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-538">#L538</a>: 			println("function symbol table not sorted by program counter:", hex(datap.ftab[i].entry), <b>funcname</b>(f1), ">", hex(datap.ftab[i+1].entry), f2name)
+		<a href="../src/runtime/symtab.go.html#line-540" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-540">#L540</a>: 				print("\t", hex(datap.ftab[j].entry), " ", <b>funcname</b>(funcInfo{(*_func)(unsafe.Pointer(&datap.pclntable[datap.ftab[j].funcoff])), datap}), "\n")
+		<a href="../src/runtime/symtab.go.html#line-604" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-604">#L604</a>: 	return <b>funcname</b>(f.funcInfo())
+		<a href="../src/runtime/symtab.go.html#line-799" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-799">#L799</a>: 	print("runtime: invalid pc-encoded table f=", <b>funcname</b>(f), " pc=", hex(pc), " targetpc=", hex(targetpc), " tab=", p, "\n")
+		<a href="../src/runtime/symtab.go.html#line-824" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-824">#L824</a>: func <b>funcname</b>(f funcInfo) string {
+		<a href="../src/runtime/symtab.go.html#line-869" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-869">#L869</a>: 		print("invalid spdelta ", <b>funcname</b>(f), " ", hex(f.entry), " ", hex(targetpc), " ", hex(f.pcsp), " ", x, "\n")
+		<a href="../src/runtime/traceback.go.html#line-269">traceback.go#L269</a>: 					print("runtime: unexpected return pc for ", <b>funcname</b>(f), " called from ", hex(frame.lr), "\n")
+		<a href="../src/runtime/traceback.go.html#line-433" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-433">#L433</a>: 				name := <b>funcname</b>(f)
+		<a href="../src/runtime/traceback.go.html#line-594" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-594">#L594</a>: 		switch <b>funcname</b>(f) {
+		<a href="../src/runtime/traceback.go.html#line-619" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-619">#L619</a>: 				print("runtime: confused by ", <b>funcname</b>(f), "\n")
+		<a href="../src/runtime/traceback.go.html#line-676" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-676">#L676</a>: 	print("created by ", <b>funcname</b>(f), "\n")
+		<a href="../src/runtime/traceback.go.html#line-778" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-778">#L778</a>: 	name := <b>funcname</b>(f)
+		<a href="../src/runtime/traceback.go.html#line-840" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-840">#L840</a>: 	name := <b>funcname</b>(f)
+		<a href="../src/runtime/traceback.go.html#line-1040" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1040">#L1040</a>: 	return hasPrefix(<b>funcname</b>(f), "runtime.")
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

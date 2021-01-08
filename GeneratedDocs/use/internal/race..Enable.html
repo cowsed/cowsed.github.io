@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: internal/race.Enable</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../pkg/internal/race.html">internal/race</a>.<a href="../../src/internal/race/norace.go.html#line-27">Enable</a></b></span>
+
+12 uses:
+
+	internal/race <i>(current package)</i>
+		<a href="../../src/internal/race/norace.go.html#line-27">norace.go#L27</a>: func <b>Enable</b>() {
+
+	<a href="../../pkg/sync.html">sync</a>
+		<a href="../../src/sync/pool.go.html#line-112">pool.go#L112</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/pool.go.html#line-142" class="path-duplicate">pool.go</a><a href="../../src/sync/pool.go.html#line-142">#L142</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-53">rwmutex.go#L53</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-73" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-73">#L73</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-79" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-79">#L79</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-106" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-106">#L106</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-128" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-128">#L128</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/rwmutex.go.html#line-138" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-138">#L138</a>: 		race.<b>Enable</b>()
+		<a href="../../src/sync/waitgroup.go.html#line-62">waitgroup.go#L62</a>: 		defer race.<b>Enable</b>()
+		<a href="../../src/sync/waitgroup.go.html#line-116" class="path-duplicate">waitgroup.go</a><a href="../../src/sync/waitgroup.go.html#line-116">#L116</a>: 				race.<b>Enable</b>()
+		<a href="../../src/sync/waitgroup.go.html#line-135" class="path-duplicate">waitgroup.go</a><a href="../../src/sync/waitgroup.go.html#line-135">#L135</a>: 				race.<b>Enable</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

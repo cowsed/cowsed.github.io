@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method Implmentations: io.Reader</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+<pre><code><span style="font-size:x-large;">type <a href="../pkg/io.html">io</a>.<b><a href="../src/io/io.go.html#line-77">Reader</a></b></span><span style="font-size:large;"> <b<i>(interface)</i></b></span>
+
+<code><span class="title">Method Implmentations</span>
+
+<div class="anchor" id="name-Read">	<a href="../use/io..Reader.Read.html">Read</a>(p []<a href="../pkg/builtin.html#name-byte">byte</a>) (n <a href="../pkg/builtin.html#name-int">int</a>, err <a href="../pkg/builtin.html#name-error">error</a>)
+		<a href="../src/io/multi.go.html#line-7">eofReader</a>.<b><a href="../src/io/multi.go.html#line-9">Read</a></b>
+		*<a href="../pkg/io.html#name-LimitedReader">LimitedReader</a>.<b><a href="../src/io/io.go.html#line-448">Read</a></b>
+		*<a href="../src/io/multi.go.html#line-13">multiReader</a>.<b><a href="../src/io/multi.go.html#line-17">Read</a></b>
+		*<a href="../src/io/pipe.go.html#line-39">pipe</a>.<b><a href="../src/io/pipe.go.html#line-50">Read</a></b>
+		*<a href="../pkg/io.html#name-PipeReader">PipeReader</a>.<b><a href="../src/io/pipe.go.html#line-133">Read</a></b>
+		<a href="../pkg/io.html#name-ReadCloser">ReadCloser</a>.<b><a href="../src/io/io.go.html#line-78">Read</a></b>
+		<a href="../pkg/io.html#name-ReadSeeker">ReadSeeker</a>.<b><a href="../src/io/io.go.html#line-78">Read</a></b>
+		<a href="../pkg/io.html#name-ReadWriteCloser">ReadWriteCloser</a>.<b><a href="../src/io/io.go.html#line-78">Read</a></b>
+		<a href="../pkg/io.html#name-ReadWriter">ReadWriter</a>.<b><a href="../src/io/io.go.html#line-78">Read</a></b>
+		<a href="../pkg/io.html#name-ReadWriteSeeker">ReadWriteSeeker</a>.<b><a href="../src/io/io.go.html#line-78">Read</a></b>
+		*<a href="../pkg/io.html#name-SectionReader">SectionReader</a>.<b><a href="../src/io/io.go.html#line-475">Read</a></b>
+		*<a href="../src/io/io.go.html#line-536">teeReader</a>.<b><a href="../src/io/io.go.html#line-541">Read</a></b>
+		fmt.<a href="../pkg/fmt.html#name-ScanState">ScanState</a>.<b><a href="../src/fmt/scan.go.html#line-48">Read</a></b>
+		fmt.(*<a href="../src/fmt/scan.go.html#line-157">ss</a>).<b><a href="../src/fmt/scan.go.html#line-179">Read</a></b>
+		fmt.(*<a href="../src/fmt/scan.go.html#line-84">stringReader</a>).<b><a href="../src/fmt/scan.go.html#line-86">Read</a></b>
+		internal/poll.(*<a href="../pkg/internal/poll.html#name-FD">FD</a>).<b><a href="../src/internal/poll/fd_unix.go.html#line-135">Read</a></b>
+		os.(*<a href="../pkg/os.html#name-File">File</a>).<b><a href="../src/os/file.go.html#line-112">Read</a></b>
+		strings.(*<a href="../pkg/strings.html#name-Reader">Reader</a>).<b><a href="../src/strings/reader.go.html#line-38">Read</a></b></div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

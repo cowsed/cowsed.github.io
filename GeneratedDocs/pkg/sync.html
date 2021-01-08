@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: sync</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>sync</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../index.html#pkg-sync">sync</a><i> (on <a href="https://golang.org/pkg/sync/" target="_blank">golang.org</a> and <a href="https://pkg.go.dev/sync" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../dep/sync.html">4 packages</a>, and imported by <a href="../dep/sync.html#imported-by">8 packages</a>
+
+<span class="title">Involved Source Files</span>
+	    <a href="../src/sync/cond.go.html">cond.go</a>
+	    <a href="../src/sync/map.go.html">map.go</a>
+	<a href="../src/sync/mutex.go.html#doc">d-&gt;</a> <a href="../src/sync/mutex.go.html">mutex.go</a>
+	    <a href="../src/sync/once.go.html">once.go</a>
+	    <a href="../src/sync/pool.go.html">pool.go</a>
+	    <a href="../src/sync/poolqueue.go.html">poolqueue.go</a>
+	    <a href="../src/sync/runtime.go.html">runtime.go</a>
+	    <a href="../src/sync/runtime2.go.html">runtime2.go</a>
+	    <a href="../src/sync/rwmutex.go.html">rwmutex.go</a>
+	    <a href="../src/sync/waitgroup.go.html">waitgroup.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-Cond" data-popularity="225">	<a href="../use/sync..Cond.html">type</a> <a href="../src/sync/cond.go.html#line-21">Cond</a> <i>(struct)</i>
+		Cond implements a condition variable, a rendezvous point
+		for goroutines waiting for or announcing the occurrence
+		of an event.
+
+		Each Cond has an associated Locker L (often a *Mutex or *RWMutex),
+		which must be held when changing the condition and
+		when calling the Wait method.
+
+		A Cond must not be copied after first use.
+
+		<input type='checkbox' class="stat" id="Cond-stat-fields"><label for="Cond-stat-fields">One Exported Field</label><span id='Cond-stat-fields-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Cond-stat-field-L"><label for="Cond-stat-field-L"><a href="../src/sync/cond.go.html#line-25">L</a> <i><a href="#name-Locker">Locker</a></i></label><span id='Cond-stat-field-L-content' class="stat-content">
+				L is held while observing or changing the condition
+</span></span>
+		<input type='checkbox' class="stat" id="Cond-stat-methods"><label for="Cond-stat-methods">Exported Methods (3)</label><span id='Cond-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Cond-stat-method-Broadcast"><label for="Cond-stat-method-Broadcast">(*T) <a href="../src/sync/cond.go.html#line-73">Broadcast</a>()</label><span id='Cond-stat-method-Broadcast-content' class="stat-content">
+				Broadcast wakes all goroutines waiting on c.
+
+				It is allowed but not required for the caller to hold c.L
+				during the call.
+</span>
+			<input type='checkbox' class="stat" id="Cond-stat-method-Signal"><label for="Cond-stat-method-Signal">(*T) <a href="../src/sync/cond.go.html#line-64">Signal</a>()</label><span id='Cond-stat-method-Signal-content' class="stat-content">
+				Signal wakes one goroutine waiting on c, if there is any.
+
+				It is allowed but not required for the caller to hold c.L
+				during the call.
+</span>
+			<input type='checkbox' class="stat" id="Cond-stat-method-Wait"><label for="Cond-stat-method-Wait">(*T) <a href="../src/sync/cond.go.html#line-52">Wait</a>()</label><span id='Cond-stat-method-Wait-content' class="stat-content">
+				Wait atomically unlocks c.L and suspends execution
+				of the calling goroutine. After later resuming execution,
+				Wait locks c.L before returning. Unlike in other systems,
+				Wait cannot return unless awoken by Broadcast or Signal.
+
+				Because c.L is not locked when Wait first resumes, the caller
+				typically cannot assume that the condition is true when
+				Wait returns. Instead, the caller should Wait in a loop:
+
+				   c.L.Lock()
+				   for !condition() {
+				       c.Wait()
+				   }
+				   ... make use of condition ...
+				   c.L.Unlock()
+</span></span>
+		<input type='checkbox' class="stat" id="Cond-stat-results"><label for="Cond-stat-results">As Outputs Of (1+)</label><span id='Cond-stat-results-content' class="stat-content">
+			func <a href="#name-NewCond">NewCond</a>(l <a href="#name-Locker">Locker</a>) *<b>Cond</b></span></div>
+<div class="anchor" id="name-Locker" data-popularity="510">	<a href="../use/sync..Locker.html">type</a> <a href="../src/sync/mutex.go.html#line-31">Locker</a> <b<i>(interface)</i></b>
+		A Locker represents an object that can be locked and unlocked.
+
+		<input type='checkbox' class="stat" id="Locker-stat-methods"><label for="Locker-stat-methods">Exported Methods (2)</label><span id='Locker-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/sync/mutex.go.html#line-32">Lock</a>()</span>
+			<span class="nodocs">( T) <a href="../src/sync/mutex.go.html#line-33">Unlock</a>()</span></span>
+		<input type='checkbox' class="stat" id="Locker-stat-impledby"><label for="Locker-stat-impledby">Implemented By (2+)</label><span id='Locker-stat-impledby-content' class="stat-content">
+			*<a href="#name-Mutex">Mutex</a>
+			*<a href="#name-RWMutex">RWMutex</a></span>
+		<input type='checkbox' class="stat" id="Locker-stat-results"><label for="Locker-stat-results">As Outputs Of (1+)</label><span id='Locker-stat-results-content' class="stat-content">
+			func (*<a href="#name-RWMutex">RWMutex</a>).<a href="../src/sync/rwmutex.go.html#line-144">RLocker</a>() <b>Locker</b></span>
+		<input type='checkbox' class="stat" id="Locker-stat-params"><label for="Locker-stat-params">As Inputs Of (1+)</label><span id='Locker-stat-params-content' class="stat-content">
+			func <a href="#name-NewCond">NewCond</a>(l <b>Locker</b>) *<a href="#name-Cond">Cond</a></span></div>
+<div class="anchor" id="name-Map" data-popularity="300">	<a href="../use/sync..Map.html">type</a> <a href="../src/sync/map.go.html#line-27">Map</a> <i>(struct)</i>
+		Map is like a Go map[interface{}]interface{} but is safe for concurrent use
+		by multiple goroutines without additional locking or coordination.
+		Loads, stores, and deletes run in amortized constant time.
+
+		The Map type is specialized. Most code should use a plain Go map instead,
+		with separate locking or coordination, for better type safety and to make it
+		easier to maintain other invariants along with the map content.
+
+		The Map type is optimized for two common use cases: (1) when the entry for a given
+		key is only ever written once but read many times, as in caches that only grow,
+		or (2) when multiple goroutines read, write, and overwrite entries for disjoint
+		sets of keys. In these two cases, use of a Map may significantly reduce lock
+		contention compared to a Go map paired with a separate Mutex or RWMutex.
+
+		The zero Map is empty and ready for use. A Map must not be copied after first use.
+
+		<input type='checkbox' class="stat" id="Map-stat-methods"><label for="Map-stat-methods">Exported Methods (6)</label><span id='Map-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Map-stat-method-Delete"><label for="Map-stat-method-Delete">(*T) <a href="../src/sync/map.go.html#line-292">Delete</a>(key interface{})</label><span id='Map-stat-method-Delete-content' class="stat-content">
+				Delete deletes the value for a key.
+</span>
+			<input type='checkbox' class="stat" id="Map-stat-method-Load"><label for="Map-stat-method-Load">(*T) <a href="../src/sync/map.go.html#line-102">Load</a>(key interface{}) (value interface{}, ok <a href="builtin.html#name-bool">bool</a>)</label><span id='Map-stat-method-Load-content' class="stat-content">
+				Load returns the value stored in the map for a key, or nil if no
+				value is present.
+				The ok result indicates whether value was found in the map.
+</span>
+			<input type='checkbox' class="stat" id="Map-stat-method-LoadAndDelete"><label for="Map-stat-method-LoadAndDelete">(*T) <a href="../src/sync/map.go.html#line-268">LoadAndDelete</a>(key interface{}) (value interface{}, loaded <a href="builtin.html#name-bool">bool</a>)</label><span id='Map-stat-method-LoadAndDelete-content' class="stat-content">
+				LoadAndDelete deletes the value for a key, returning the previous value if any.
+				The loaded result reports whether the key was present.
+</span>
+			<input type='checkbox' class="stat" id="Map-stat-method-LoadOrStore"><label for="Map-stat-method-LoadOrStore">(*T) <a href="../src/sync/map.go.html#line-199">LoadOrStore</a>(key, value interface{}) (actual interface{}, loaded <a href="builtin.html#name-bool">bool</a>)</label><span id='Map-stat-method-LoadOrStore-content' class="stat-content">
+				LoadOrStore returns the existing value for the key if present.
+				Otherwise, it stores and returns the given value.
+				The loaded result is true if the value was loaded, false if stored.
+</span>
+			<input type='checkbox' class="stat" id="Map-stat-method-Range"><label for="Map-stat-method-Range">(*T) <a href="../src/sync/map.go.html#line-318">Range</a>(f func(key, value interface{}) <a href="builtin.html#name-bool">bool</a>)</label><span id='Map-stat-method-Range-content' class="stat-content">
+				Range calls f sequentially for each key and value present in the map.
+				If f returns false, range stops the iteration.
+
+				Range does not necessarily correspond to any consistent snapshot of the Map's
+				contents: no key will be visited more than once, but if the value for any key
+				is stored or deleted concurrently, Range may reflect any mapping for that key
+				from any point during the Range call.
+
+				Range may be O(N) with the number of elements in the map even if f returns
+				false after a constant number of calls.
+</span>
+			<input type='checkbox' class="stat" id="Map-stat-method-Store"><label for="Map-stat-method-Store">(*T) <a href="../src/sync/map.go.html#line-136">Store</a>(key, value interface{})</label><span id='Map-stat-method-Store-content' class="stat-content">
+				Store sets the value for a key.
+</span></span></div>
+<div class="anchor" id="name-Mutex" data-popularity="150">	<a href="../use/sync..Mutex.html">type</a> <a href="../src/sync/mutex.go.html#line-25">Mutex</a> <i>(struct)</i>
+		A Mutex is a mutual exclusion lock.
+		The zero value for a Mutex is an unlocked mutex.
+
+		A Mutex must not be copied after first use.
+
+		<input type='checkbox' class="stat" id="Mutex-stat-methods"><label for="Mutex-stat-methods">Exported Methods (2)</label><span id='Mutex-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Mutex-stat-method-Lock"><label for="Mutex-stat-method-Lock">(*T) <a href="../src/sync/mutex.go.html#line-72">Lock</a>()</label><span id='Mutex-stat-method-Lock-content' class="stat-content">
+				Lock locks m.
+				If the lock is already in use, the calling goroutine
+				blocks until the mutex is available.
+</span>
+			<input type='checkbox' class="stat" id="Mutex-stat-method-Unlock"><label for="Mutex-stat-method-Unlock">(*T) <a href="../src/sync/mutex.go.html#line-179">Unlock</a>()</label><span id='Mutex-stat-method-Unlock-content' class="stat-content">
+				Unlock unlocks m.
+				It is a run-time error if m is not locked on entry to Unlock.
+
+				A locked Mutex is not associated with a particular goroutine.
+				It is allowed for one goroutine to lock a Mutex and then
+				arrange for another goroutine to unlock it.
+</span></span>
+		<input type='checkbox' class="stat" id="Mutex-stat-impls"><label for="Mutex-stat-impls">Implements (1+)</label><span id='Mutex-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Locker">Locker</a></span></div>
+<div class="anchor" id="name-Once" data-popularity="50">	<a href="../use/sync..Once.html">type</a> <a href="../src/sync/once.go.html#line-12">Once</a> <i>(struct)</i>
+		Once is an object that will perform exactly one action.
+
+		<input type='checkbox' class="stat" id="Once-stat-methods"><label for="Once-stat-methods">One Exported Method</label><span id='Once-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Once-stat-method-Do"><label for="Once-stat-method-Do">(*T) <a href="../src/sync/once.go.html#line-40">Do</a>(f func())</label><span id='Once-stat-method-Do-content' class="stat-content">
+				Do calls the function f if and only if Do is being called for the
+				first time for this instance of Once. In other words, given
+					var once Once
+				if once.Do(f) is called multiple times, only the first call will invoke f,
+				even if f has a different value in each invocation. A new instance of
+				Once is required for each function to execute.
+
+				Do is intended for initialization that must be run exactly once. Since f
+				is niladic, it may be necessary to use a function literal to capture the
+				arguments to a function to be invoked by Do:
+					config.once.Do(func() { config.init(filename) })
+
+				Because no call to Do returns until the one call to f returns, if f causes
+				Do to be called, it will deadlock.
+
+				If f panics, Do considers it to have returned; future calls of Do return
+				without calling f.
+</span></span></div>
+<div class="anchor" id="name-Pool" data-popularity="100">	<a href="../use/sync..Pool.html">type</a> <a href="../src/sync/pool.go.html#line-44">Pool</a> <i>(struct)</i>
+		A Pool is a set of temporary objects that may be individually saved and
+		retrieved.
+
+		Any item stored in the Pool may be removed automatically at any time without
+		notification. If the Pool holds the only reference when this happens, the
+		item might be deallocated.
+
+		A Pool is safe for use by multiple goroutines simultaneously.
+
+		Pool's purpose is to cache allocated but unused items for later reuse,
+		relieving pressure on the garbage collector. That is, it makes it easy to
+		build efficient, thread-safe free lists. However, it is not suitable for all
+		free lists.
+
+		An appropriate use of a Pool is to manage a group of temporary items
+		silently shared among and potentially reused by concurrent independent
+		clients of a package. Pool provides a way to amortize allocation overhead
+		across many clients.
+
+		An example of good use of a Pool is in the fmt package, which maintains a
+		dynamically-sized store of temporary output buffers. The store scales under
+		load (when many goroutines are actively printing) and shrinks when
+		quiescent.
+
+		On the other hand, a free list maintained as part of a short-lived object is
+		not a suitable use for a Pool, since the overhead does not amortize well in
+		that scenario. It is more efficient to have such objects implement their own
+		free list.
+
+		A Pool must not be copied after first use.
+
+		<input type='checkbox' class="stat" id="Pool-stat-fields"><label for="Pool-stat-fields">One Exported Field</label><span id='Pool-stat-fields-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Pool-stat-field-New"><label for="Pool-stat-field-New"><a href="../src/sync/pool.go.html#line-56">New</a> <i>func() interface{}</i></label><span id='Pool-stat-field-New-content' class="stat-content">
+				New optionally specifies a function to generate
+				a value when Get would otherwise return nil.
+				It may not be changed concurrently with calls to Get.
+</span></span>
+		<input type='checkbox' class="stat" id="Pool-stat-methods"><label for="Pool-stat-methods">Exported Methods (2)</label><span id='Pool-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Pool-stat-method-Get"><label for="Pool-stat-method-Get">(*T) <a href="../src/sync/pool.go.html#line-124">Get</a>() interface{}</label><span id='Pool-stat-method-Get-content' class="stat-content">
+				Get selects an arbitrary item from the Pool, removes it from the
+				Pool, and returns it to the caller.
+				Get may choose to ignore the pool and treat it as empty.
+				Callers should not assume any relation between values passed to Put and
+				the values returned by Get.
+
+				If Get would otherwise return nil and p.New is non-nil, Get returns
+				the result of calling p.New.
+</span>
+			<input type='checkbox' class="stat" id="Pool-stat-method-Put"><label for="Pool-stat-method-Put">(*T) <a href="../src/sync/pool.go.html#line-90">Put</a>(x interface{})</label><span id='Pool-stat-method-Put-content' class="stat-content">
+				Put adds x to the pool.
+</span></span></div>
+<div class="anchor" id="name-RWMutex" data-popularity="305">	<a href="../use/sync..RWMutex.html">type</a> <a href="../src/sync/rwmutex.go.html#line-28">RWMutex</a> <i>(struct)</i>
+		A RWMutex is a reader/writer mutual exclusion lock.
+		The lock can be held by an arbitrary number of readers or a single writer.
+		The zero value for a RWMutex is an unlocked mutex.
+
+		A RWMutex must not be copied after first use.
+
+		If a goroutine holds a RWMutex for reading and another goroutine might
+		call Lock, no goroutine should expect to be able to acquire a read lock
+		until the initial read lock is released. In particular, this prohibits
+		recursive read locking. This is to ensure that the lock eventually becomes
+		available; a blocked Lock call excludes new readers from acquiring the
+		lock.
+
+		<input type='checkbox' class="stat" id="RWMutex-stat-methods"><label for="RWMutex-stat-methods">Exported Methods (5)</label><span id='RWMutex-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="RWMutex-stat-method-Lock"><label for="RWMutex-stat-method-Lock">(*T) <a href="../src/sync/rwmutex.go.html#line-92">Lock</a>()</label><span id='RWMutex-stat-method-Lock-content' class="stat-content">
+				Lock locks rw for writing.
+				If the lock is already locked for reading or writing,
+				Lock blocks until the lock is available.
+</span>
+			<input type='checkbox' class="stat" id="RWMutex-stat-method-RLock"><label for="RWMutex-stat-method-RLock">(*T) <a href="../src/sync/rwmutex.go.html#line-43">RLock</a>()</label><span id='RWMutex-stat-method-RLock-content' class="stat-content">
+				RLock locks rw for reading.
+
+				It should not be used for recursive read locking; a blocked Lock
+				call excludes new readers from acquiring the lock. See the
+				documentation on the RWMutex type.
+</span>
+			<input type='checkbox' class="stat" id="RWMutex-stat-method-RLocker"><label for="RWMutex-stat-method-RLocker">(*T) <a href="../src/sync/rwmutex.go.html#line-144">RLocker</a>() <a href="#name-Locker">Locker</a></label><span id='RWMutex-stat-method-RLocker-content' class="stat-content">
+				RLocker returns a Locker interface that implements
+				the Lock and Unlock methods by calling rw.RLock and rw.RUnlock.
+</span>
+			<input type='checkbox' class="stat" id="RWMutex-stat-method-RUnlock"><label for="RWMutex-stat-method-RUnlock">(*T) <a href="../src/sync/rwmutex.go.html#line-62">RUnlock</a>()</label><span id='RWMutex-stat-method-RUnlock-content' class="stat-content">
+				RUnlock undoes a single RLock call;
+				it does not affect other simultaneous readers.
+				It is a run-time error if rw is not locked for reading
+				on entry to RUnlock.
+</span>
+			<input type='checkbox' class="stat" id="RWMutex-stat-method-Unlock"><label for="RWMutex-stat-method-Unlock">(*T) <a href="../src/sync/rwmutex.go.html#line-118">Unlock</a>()</label><span id='RWMutex-stat-method-Unlock-content' class="stat-content">
+				Unlock unlocks rw for writing. It is a run-time error if rw is
+				not locked for writing on entry to Unlock.
+
+				As with Mutexes, a locked RWMutex is not associated with a particular
+				goroutine. One goroutine may RLock (Lock) a RWMutex and then
+				arrange for another goroutine to RUnlock (Unlock) it.
+</span></span>
+		<input type='checkbox' class="stat" id="RWMutex-stat-impls"><label for="RWMutex-stat-impls">Implements (1+)</label><span id='RWMutex-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Locker">Locker</a></span>
+		<input type='checkbox' class="stat" id="RWMutex-stat-values"><label for="RWMutex-stat-values">As Types Of (1+)</label><span id='RWMutex-stat-values-content' class="stat-content">
+			  var syscall.<a href="syscall.html#name-ForkLock">ForkLock</a></span></div>
+<div class="anchor" id="name-WaitGroup" data-popularity="150">	<a href="../use/sync..WaitGroup.html">type</a> <a href="../src/sync/waitgroup.go.html#line-20">WaitGroup</a> <i>(struct)</i>
+		A WaitGroup waits for a collection of goroutines to finish.
+		The main goroutine calls Add to set the number of
+		goroutines to wait for. Then each of the goroutines
+		runs and calls Done when finished. At the same time,
+		Wait can be used to block until all goroutines have finished.
+
+		A WaitGroup must not be copied after first use.
+
+		<input type='checkbox' class="stat" id="WaitGroup-stat-methods"><label for="WaitGroup-stat-methods">Exported Methods (3)</label><span id='WaitGroup-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="WaitGroup-stat-method-Add"><label for="WaitGroup-stat-method-Add">(*T) <a href="../src/sync/waitgroup.go.html#line-53">Add</a>(delta <a href="builtin.html#name-int">int</a>)</label><span id='WaitGroup-stat-method-Add-content' class="stat-content">
+				Add adds delta, which may be negative, to the WaitGroup counter.
+				If the counter becomes zero, all goroutines blocked on Wait are released.
+				If the counter goes negative, Add panics.
+
+				Note that calls with a positive delta that occur when the counter is zero
+				must happen before a Wait. Calls with a negative delta, or calls with a
+				positive delta that start when the counter is greater than zero, may happen
+				at any time.
+				Typically this means the calls to Add should execute before the statement
+				creating the goroutine or other event to be waited for.
+				If a WaitGroup is reused to wait for several independent sets of events,
+				new Add calls must happen after all previous Wait calls have returned.
+				See the WaitGroup example.
+</span>
+			<input type='checkbox' class="stat" id="WaitGroup-stat-method-Done"><label for="WaitGroup-stat-method-Done">(*T) <a href="../src/sync/waitgroup.go.html#line-98">Done</a>()</label><span id='WaitGroup-stat-method-Done-content' class="stat-content">
+				Done decrements the WaitGroup counter by one.
+</span>
+			<input type='checkbox' class="stat" id="WaitGroup-stat-method-Wait"><label for="WaitGroup-stat-method-Wait">(*T) <a href="../src/sync/waitgroup.go.html#line-103">Wait</a>()</label><span id='WaitGroup-stat-method-Wait-content' class="stat-content">
+				Wait blocks until the WaitGroup counter is zero.
+</span></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-NewCond">	 <a href="../use/sync..NewCond.html">func</a> <a href="../src/sync/cond.go.html#line-32">NewCond</a>(l <a href="#name-Locker">Locker</a>) *<a href="#name-Cond">Cond</a>
+		NewCond returns a new Cond with Locker l.</div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

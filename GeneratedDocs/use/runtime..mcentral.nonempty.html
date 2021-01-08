@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mcentral.nonempty</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mcentral.go.html#line-20">mcentral</a>.<a href="../src/runtime/mcentral.go.html#line-25">nonempty</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+8 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mcentral.go.html#line-25">mcentral.go#L25</a>: 	<b>nonempty</b> mSpanList // list of spans with a free object, ie a nonempty free list
+		<a href="../src/runtime/mcentral.go.html#line-64" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-64">#L64</a>: 		c.<b>nonempty</b>.init()
+		<a href="../src/runtime/mcentral.go.html#line-232" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-232">#L232</a>: 	for s = c.<b>nonempty</b>.first; s != nil; s = s.next {
+		<a href="../src/runtime/mcentral.go.html#line-234" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-234">#L234</a>: 			c.<b>nonempty</b>.remove(s)
+		<a href="../src/runtime/mcentral.go.html#line-245" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-245">#L245</a>: 		c.<b>nonempty</b>.remove(s)
+		<a href="../src/runtime/mcentral.go.html#line-429" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-429">#L429</a>: 		c.<b>nonempty</b>.insert(s)
+		<a href="../src/runtime/mcentral.go.html#line-481" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-481">#L481</a>: 		c.<b>nonempty</b>.insert(s)
+		<a href="../src/runtime/mcentral.go.html#line-495" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-495">#L495</a>: 	c.<b>nonempty</b>.remove(s)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

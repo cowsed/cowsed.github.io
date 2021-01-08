@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.addrRanges.ranges</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mranges.go.html#line-154">addrRanges</a>.<a href="../src/runtime/mranges.go.html#line-156">ranges</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+61 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-166">mpagealloc_64bit.go#L166</a>: 			need = need.subtract(addrRangeToSumAddrRange(l, s.inUse.<b>ranges</b>[inUseIndex-1]))
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-168" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-168">#L168</a>: 		if inUseIndex &lt; len(s.inUse.<b>ranges</b>) {
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-169" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-169">#L169</a>: 			need = need.subtract(addrRangeToSumAddrRange(l, s.inUse.<b>ranges</b>[inUseIndex]))
+		<a href="../src/runtime/mranges.go.html#line-156">mranges.go#L156</a>: 	<b>ranges</b> []addrRange
+		<a href="../src/runtime/mranges.go.html#line-167" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-167">#L167</a>: 	ranges := (*notInHeapSlice)(unsafe.Pointer(&amp;a.<b>ranges</b>))
+		<a href="../src/runtime/mranges.go.html#line-183" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-183">#L183</a>: 	for i := range a.<b>ranges</b> {
+		<a href="../src/runtime/mranges.go.html#line-184" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-184">#L184</a>: 		if base.lessThan(a.<b>ranges</b>[i].base) {
+		<a href="../src/runtime/mranges.go.html#line-188" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-188">#L188</a>: 	return len(a.<b>ranges</b>)
+		<a href="../src/runtime/mranges.go.html#line-199" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-199">#L199</a>: 		return a.<b>ranges</b>[0].base.addr(), true
+		<a href="../src/runtime/mranges.go.html#line-201" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-201">#L201</a>: 	if a.<b>ranges</b>[i-1].contains(addr) {
+		<a href="../src/runtime/mranges.go.html#line-204" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-204">#L204</a>: 	if i &lt; len(a.<b>ranges</b>) {
+		<a href="../src/runtime/mranges.go.html#line-205" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-205">#L205</a>: 		return a.<b>ranges</b>[i].base.addr(), true
+		<a href="../src/runtime/mranges.go.html#line-216" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-216">#L216</a>: 	return a.<b>ranges</b>[i-1].contains(addr)
+		<a href="../src/runtime/mranges.go.html#line-235" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-235">#L235</a>: 	coalescesDown := i &gt; 0 &amp;&amp; a.<b>ranges</b>[i-1].limit.equal(r.base)
+		<a href="../src/runtime/mranges.go.html#line-236" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-236">#L236</a>: 	coalescesUp := i &lt; len(a.<b>ranges</b>) &amp;&amp; r.limit.equal(a.<b>ranges</b>[i].base)
+		<a href="../src/runtime/mranges.go.html#line-240" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-240">#L240</a>: 		a.<b>ranges</b>[i-1].limit = a.<b>ranges</b>[i].limit
+		<a href="../src/runtime/mranges.go.html#line-243" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-243">#L243</a>: 		copy(a.<b>ranges</b>[i:], a.<b>ranges</b>[i+1:])
+		<a href="../src/runtime/mranges.go.html#line-244" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-244">#L244</a>: 		a.<b>ranges</b> = a.<b>ranges</b>[:len(a.<b>ranges</b>)-1]
+		<a href="../src/runtime/mranges.go.html#line-248" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-248">#L248</a>: 		a.<b>ranges</b>[i-1].limit = r.limit
+		<a href="../src/runtime/mranges.go.html#line-252" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-252">#L252</a>: 		a.<b>ranges</b>[i].base = r.base
+		<a href="../src/runtime/mranges.go.html#line-256" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-256">#L256</a>: 		if len(a.<b>ranges</b>)+1 &gt; cap(a.<b>ranges</b>) {
+		<a href="../src/runtime/mranges.go.html#line-261" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-261">#L261</a>: 			oldRanges := a.<b>ranges</b>
+		<a href="../src/runtime/mranges.go.html#line-262" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-262">#L262</a>: 			ranges := (*notInHeapSlice)(unsafe.Pointer(&amp;a.<b>ranges</b>))
+		<a href="../src/runtime/mranges.go.html#line-268" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-268">#L268</a>: 			copy(a.<b>ranges</b>[:i], oldRanges[:i])
+		<a href="../src/runtime/mranges.go.html#line-269" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-269">#L269</a>: 			copy(a.<b>ranges</b>[i+1:], oldRanges[i:])
+		<a href="../src/runtime/mranges.go.html#line-271" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-271">#L271</a>: 			a.<b>ranges</b> = a.<b>ranges</b>[:len(a.<b>ranges</b>)+1]
+		<a href="../src/runtime/mranges.go.html#line-272" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-272">#L272</a>: 			copy(a.<b>ranges</b>[i+1:], a.<b>ranges</b>[i:])
+		<a href="../src/runtime/mranges.go.html#line-274" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-274">#L274</a>: 		a.<b>ranges</b>[i] = r
+		<a href="../src/runtime/mranges.go.html#line-283" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-283">#L283</a>: 	if len(a.<b>ranges</b>) == 0 {
+		<a href="../src/runtime/mranges.go.html#line-286" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-286">#L286</a>: 	r := a.<b>ranges</b>[len(a.<b>ranges</b>)-1]
+		<a href="../src/runtime/mranges.go.html#line-290" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-290">#L290</a>: 		a.<b>ranges</b>[len(a.<b>ranges</b>)-1].limit = newEnd
+		<a href="../src/runtime/mranges.go.html#line-294" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-294">#L294</a>: 	a.<b>ranges</b> = a.<b>ranges</b>[:len(a.<b>ranges</b>)-1]
+		<a href="../src/runtime/mranges.go.html#line-306" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-306">#L306</a>: 		a.<b>ranges</b> = a.<b>ranges</b>[:0]
+		<a href="../src/runtime/mranges.go.html#line-310" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-310">#L310</a>: 	for _, r := range a.<b>ranges</b>[pivot:] {
+		<a href="../src/runtime/mranges.go.html#line-313" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-313">#L313</a>: 	if r := a.<b>ranges</b>[pivot-1]; r.contains(addr) {
+		<a href="../src/runtime/mranges.go.html#line-320" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-320">#L320</a>: 			a.<b>ranges</b>[pivot-1] = r
+		<a href="../src/runtime/mranges.go.html#line-323" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-323">#L323</a>: 	a.<b>ranges</b> = a.<b>ranges</b>[:pivot]
+		<a href="../src/runtime/mranges.go.html#line-330" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-330">#L330</a>: 	if len(a.<b>ranges</b>) &gt; cap(b.<b>ranges</b>) {
+		<a href="../src/runtime/mranges.go.html#line-332" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-332">#L332</a>: 		ranges := (*notInHeapSlice)(unsafe.Pointer(&amp;b.<b>ranges</b>))
+		<a href="../src/runtime/mranges.go.html#line-334" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-334">#L334</a>: 		ranges.cap = cap(a.<b>ranges</b>)
+		<a href="../src/runtime/mranges.go.html#line-337" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-337">#L337</a>: 	b.<b>ranges</b> = b.<b>ranges</b>[:len(a.<b>ranges</b>)]
+		<a href="../src/runtime/mranges.go.html#line-339" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-339">#L339</a>: 	copy(b.<b>ranges</b>, a.<b>ranges</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.StructField.Type</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-1088">StructField</a>.<a href="../src/reflect/type.go.html#line-1096">Type</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+12 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-1096">type.go#L1096</a>: 	<b>Type</b>      Type      // field type
+		<a href="../src/reflect/type.go.html#line-1189" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1189">#L1189</a>: 	f.<b>Type</b> = toType(p.typ)
+		<a href="../src/reflect/type.go.html#line-1216" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1216">#L1216</a>: 	f.<b>Type</b> = toType(&t.rtype)
+		<a href="../src/reflect/type.go.html#line-1219" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1219">#L1219</a>: 			ft := f.<b>Type</b>
+		<a href="../src/reflect/type.go.html#line-1223" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1223">#L1223</a>: 			f.<b>Type</b> = ft
+		<a href="../src/reflect/type.go.html#line-1225" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1225">#L1225</a>: 		f = f.<b>Type</b>.Field(x)
+		<a href="../src/reflect/type.go.html#line-2383" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2383">#L2383</a>: 		if field.<b>Type</b> == nil {
+		<a href="../src/reflect/type.go.html#line-2596" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2596">#L2596</a>: 			{Name: "S", <b>Type</b>: TypeOf(structType{})},
+		<a href="../src/reflect/type.go.html#line-2597" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2597">#L2597</a>: 			{Name: "U", <b>Type</b>: TypeOf(uncommonType{})},
+		<a href="../src/reflect/type.go.html#line-2598" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2598">#L2598</a>: 			{Name: "M", <b>Type</b>: ArrayOf(len(methods), TypeOf(methods[0]))},
+		<a href="../src/reflect/type.go.html#line-2779" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2779">#L2779</a>: 	resolveReflectType(field.<b>Type</b>.common()) // install in runtime
+		<a href="../src/reflect/type.go.html#line-2782" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2782">#L2782</a>: 		typ:         field.<b>Type</b>.common(),
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

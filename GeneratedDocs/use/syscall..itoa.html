@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.itoa</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/str.go.html#line-7">itoa</a></b></span>
+
+10 uses:
+
+	syscall <i>(current package)</i>
+		<a href="../src/syscall/exec_linux.go.html#line-572">exec_linux.go#L572</a>: 		data = append(data, []byte(<b>itoa</b>(im.ContainerID)+" "+<b>itoa</b>(im.HostID)+" "+<b>itoa</b>(im.Size)+"\n")...)
+		<a href="../src/syscall/exec_linux.go.html#line-601" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-601">#L601</a>: 	sgf := "/proc/" + <b>itoa</b>(pid) + "/setgroups"
+		<a href="../src/syscall/exec_linux.go.html#line-626" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-626">#L626</a>: 		uidf := "/proc/" + <b>itoa</b>(pid) + "/uid_map"
+		<a href="../src/syscall/exec_linux.go.html#line-637" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-637">#L637</a>: 		gidf := "/proc/" + <b>itoa</b>(pid) + "/gid_map"
+		<a href="../src/syscall/str.go.html#line-7">str.go#L7</a>: func <b>itoa</b>(val int) string { // do it here rather than with fmt to avoid dependency
+		<a href="../src/syscall/syscall_linux.go.html#line-228">syscall_linux.go#L228</a>: 	return Utimes("/proc/self/fd/"+<b>itoa</b>(fd), tv)
+		<a href="../src/syscall/syscall_unix.go.html#line-123">syscall_unix.go#L123</a>: 	return "errno " + <b>itoa</b>(int(e))
+		<a href="../src/syscall/syscall_unix.go.html#line-183" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-183">#L183</a>: 	return "signal " + <b>itoa</b>(int(s))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.rtype.Kind</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-303">rtype</a>.<a href="../src/reflect/type.go.html#line-778">Kind</a></b></span><span style="font-size: large;"><i> (<a href="../imp/reflect.rtype.html#name-Kind">method</a>)</i></span>
+
+73 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/makefunc.go.html#line-102">makefunc.go#L102</a>: 	fl |= flag(v.typ.<b>Kind</b>())
+		<a href="../src/reflect/swapper.go.html#line-43">swapper.go#L43</a>: 		if typ.<b>Kind</b>() == String {
+		<a href="../src/reflect/type.go.html#line-699">type.go#L699</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-767" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-767">#L767</a>: 	k := t.<b>Kind</b>()
+		<a href="../src/reflect/type.go.html#line-778" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-778">#L778</a>: func (t *rtype) <b>Kind</b>() Kind { return Kind(t.kind & kindMask) }
+		<a href="../src/reflect/type.go.html#line-793" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-793">#L793</a>: 	if t.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/type.go.html#line-801" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-801">#L801</a>: 	if t.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/type.go.html#line-835" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-835">#L835</a>: 	if t.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/type.go.html#line-880" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-880">#L880</a>: 	if t.<b>Kind</b>() != Chan {
+		<a href="../src/reflect/type.go.html#line-888" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-888">#L888</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-896" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-896">#L896</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-917" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-917">#L917</a>: 	if t.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-925" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-925">#L925</a>: 	if t.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-933" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-933">#L933</a>: 	if t.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-941" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-941">#L941</a>: 	if t.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-949" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-949">#L949</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-957" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-957">#L957</a>: 	if t.<b>Kind</b>() != Map {
+		<a href="../src/reflect/type.go.html#line-965" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-965">#L965</a>: 	if t.<b>Kind</b>() != Array {
+		<a href="../src/reflect/type.go.html#line-973" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-973">#L973</a>: 	if t.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-981" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-981">#L981</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-989" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-989">#L989</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-997" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-997">#L997</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-1291" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1291">#L1291</a>: 					if ntyp.<b>Kind</b>() == Ptr {
+		<a href="../src/reflect/type.go.html#line-1314" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1314">#L1314</a>: 				if ok || ntyp == nil || ntyp.<b>Kind</b>() != Struct {
+		<a href="../src/reflect/type.go.html#line-1463" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1463">#L1463</a>: 	if T.<b>Kind</b>() != Interface {
+		<a href="../src/reflect/type.go.html#line-1483" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1483">#L1483</a>: 	if V.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/type.go.html#line-1571" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1571">#L1571</a>: 	if T.hasName() &amp;&amp; V.hasName() || T.<b>Kind</b>() != V.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-1575" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1575">#L1575</a>: 	if T.<b>Kind</b>() == Chan && specialChannelAssignability(T, V) {
+		<a href="../src/reflect/type.go.html#line-1600" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1600">#L1600</a>: 	kind := T.<b>Kind</b>()
+		<a href="../src/reflect/type.go.html#line-1601" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1601">#L1601</a>: 	if kind != V.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2082" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2082">#L2082</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2106" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2106">#L2106</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2133" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2133">#L2133</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2405" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2405">#L2405</a>: 			if f.typ.<b>Kind</b>() == Ptr {
+		<a href="../src/reflect/type.go.html#line-2413" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2413">#L2413</a>: 			switch f.typ.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2792" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2792">#L2792</a>: 	switch t.<b>Kind</b>() {
+		<a href="../src/reflect/type.go.html#line-2992" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2992">#L2992</a>: 	if t.<b>Kind</b>() != Func {
+		<a href="../src/reflect/type.go.html#line-2995" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2995">#L2995</a>: 	if rcvr != nil &amp;&amp; rcvr.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-149">value.go#L149</a>: 	f := flag(t.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-546" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-546">#L546</a>: 		v := Value{typ, nil, flag(typ.<b>Kind</b>())}
+		<a href="../src/reflect/value.go.html#line-593" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-593">#L593</a>: 			if typ.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-637" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-637">#L637</a>: 	if v.typ.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-676" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-676">#L676</a>: 	if t.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-840" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-840">#L840</a>: 		fl |= flag(typ.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-860" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-860">#L860</a>: 	fl := v.flag&amp;(flagStickyRO|flagIndir|flagAddr) | flag(typ.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-954" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-954">#L954</a>: 		fl := v.flag&amp;(flagIndir|flagAddr) | v.flag.ro() | flag(typ.<b>Kind</b>()) // bits same as overall array
+		<a href="../src/reflect/value.go.html#line-967" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-967">#L967</a>: 		fl := flagAddr | flagIndir | v.flag.ro() | flag(typ.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-1195" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1195">#L1195</a>: 	fl |= flag(typ.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-1208" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1208">#L1208</a>: 	fl := v.flag.ro() | flag(keyType.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-1250" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1250">#L1250</a>: 	return copyVal(ktype, it.m.flag.ro()|flag(ktype.<b>Kind</b>()), mapiterkey(it.it))
+		<a href="../src/reflect/value.go.html#line-1264" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1264">#L1264</a>: 	return copyVal(vtype, it.m.flag.ro()|flag(vtype.<b>Kind</b>()), mapiterelem(it.it))
+		<a href="../src/reflect/value.go.html#line-1327" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1327">#L1327</a>: 	if v.typ.<b>Kind</b>() == Interface && v.IsNil() {
+		<a href="../src/reflect/value.go.html#line-1511" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1511">#L1511</a>: 	val = Value{t, nil, flag(t.<b>Kind</b>())}
+		<a href="../src/reflect/value.go.html#line-1914" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1914">#L1914</a>: 	if v.typ.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-2265" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2265">#L2265</a>: 		fl := flag(t.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-2371" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2371">#L2371</a>: 	fl := flag(t.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-2412" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2412">#L2412</a>: 		fl |= flag(dst.<b>Kind</b>())
+		<a href="../src/reflect/value.go.html#line-2455" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2455">#L2455</a>: 	switch src.<b>Kind</b>() {
+		<a href="../src/reflect/value.go.html#line-2457" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2457">#L2457</a>: 		switch dst.<b>Kind</b>() {
+		<a href="../src/reflect/value.go.html#line-2467" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2467">#L2467</a>: 		switch dst.<b>Kind</b>() {
+		<a href="../src/reflect/value.go.html#line-2477" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2477">#L2477</a>: 		switch dst.<b>Kind</b>() {
+		<a href="../src/reflect/value.go.html#line-2487" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2487">#L2487</a>: 		switch dst.<b>Kind</b>() {
+		<a href="../src/reflect/value.go.html#line-2493" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2493">#L2493</a>: 		if dst.<b>Kind</b>() == Slice && dst.Elem().PkgPath() == "" {
+		<a href="../src/reflect/value.go.html#line-2503" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2503">#L2503</a>: 		if dst.<b>Kind</b>() == String && src.Elem().PkgPath() == "" {
+		<a href="../src/reflect/value.go.html#line-2513" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2513">#L2513</a>: 		if dst.<b>Kind</b>() == Chan && specialChannelAssignability(dst, src) {
+		<a href="../src/reflect/value.go.html#line-2524" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2524">#L2524</a>: 	if dst.<b>Kind</b>() == Ptr && dst.Name() == "" &&
+		<a href="../src/reflect/value.go.html#line-2525" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2525">#L2525</a>: 		src.<b>Kind</b>() == Ptr && src.Name() == "" &&
+		<a href="../src/reflect/value.go.html#line-2531" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2531">#L2531</a>: 		if src.<b>Kind</b>() == Interface {
+		<a href="../src/reflect/value.go.html#line-2555" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2555">#L2555</a>: 	return Value{typ, ptr, f | flagIndir | flag(typ.<b>Kind</b>())}
+		<a href="../src/reflect/value.go.html#line-2569" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2569">#L2569</a>: 	return Value{typ, ptr, f | flagIndir | flag(typ.<b>Kind</b>())}
+		<a href="../src/reflect/value.go.html#line-2577" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2577">#L2577</a>: 	return Value{typ, ptr, f | flagIndir | flag(typ.<b>Kind</b>())}
+		<a href="../src/reflect/value.go.html#line-2591" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2591">#L2591</a>: 	return Value{typ, ptr, f | flagIndir | flag(typ.<b>Kind</b>())}
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

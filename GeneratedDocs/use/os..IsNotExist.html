@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: os.IsNotExist</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/os.html">os</a>.<a href="../src/os/error.go.html#line-102">IsNotExist</a></b></span>
+
+10 uses:
+
+	os <i>(current package)</i>
+		<a href="../src/os/error.go.html#line-102">error.go#L102</a>: func <b>IsNotExist</b>(err error) bool {
+		<a href="../src/os/file_unix.go.html#line-192">file_unix.go#L192</a>: 		if _, err := Stat(name); <b>IsNotExist</b>(err) {
+		<a href="../src/os/file_unix.go.html#line-345" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-345">#L345</a>: 		if <b>IsNotExist</b>(lerr) {
+		<a href="../src/os/removeall_at.go.html#line-30">removeall_at.go#L30</a>: 	if err == nil || <b>IsNotExist</b>(err) {
+		<a href="../src/os/removeall_at.go.html#line-39" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-39">#L39</a>: 	if <b>IsNotExist</b>(err) {
+		<a href="../src/os/removeall_at.go.html#line-62" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-62">#L62</a>: 	if err == nil || <b>IsNotExist</b>(err) {
+		<a href="../src/os/removeall_at.go.html#line-80" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-80">#L80</a>: 		if <b>IsNotExist</b>(statErr) {
+		<a href="../src/os/removeall_at.go.html#line-99" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-99">#L99</a>: 			if <b>IsNotExist</b>(err) {
+		<a href="../src/os/removeall_at.go.html#line-113" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-113">#L113</a>: 				if <b>IsNotExist</b>(readErr) {
+		<a href="../src/os/removeall_at.go.html#line-155" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-155">#L155</a>: 	if unlinkError == nil || <b>IsNotExist</b>(unlinkError) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

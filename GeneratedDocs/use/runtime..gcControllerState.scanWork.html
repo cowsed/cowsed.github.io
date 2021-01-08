@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.gcControllerState.scanWork</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mgc.go.html#line-336">gcControllerState</a>.<a href="../src/runtime/mgc.go.html#line-346">scanWork</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+10 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgc.go.html#line-346">mgc.go#L346</a>: 	<b>scanWork</b> int64
+		<a href="../src/runtime/mgc.go.html#line-414" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-414">#L414</a>: 	c.<b>scanWork</b> = 0
+		<a href="../src/runtime/mgc.go.html#line-513" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-513">#L513</a>: 	if live &gt; memstats.next_gc || c.<b>scanWork</b> > scanWorkExpected {
+		<a href="../src/runtime/mgc.go.html#line-531" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-531">#L531</a>: 	scanWorkRemaining := scanWorkExpected - c.<b>scanWork</b>
+		<a href="../src/runtime/mgc.go.html#line-614" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-614">#L614</a>: 		W_a := c.<b>scanWork</b>
+		<a href="../src/runtime/mgc.go.html#line-2131" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2131">#L2131</a>: 	memstats.heap_scan = uint64(gcController.<b>scanWork</b>)
+		<a href="../src/runtime/mgcmark.go.html#line-1149">mgcmark.go#L1149</a>: 			atomic.Xaddint64(&amp;gcController.<b>scanWork</b>, gcw.scanWork)
+		<a href="../src/runtime/mgcmark.go.html#line-1169" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1169">#L1169</a>: 		atomic.Xaddint64(&amp;gcController.<b>scanWork</b>, gcw.scanWork)
+		<a href="../src/runtime/mgcmark.go.html#line-1241" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1241">#L1241</a>: 			atomic.Xaddint64(&amp;gcController.<b>scanWork</b>, gcw.scanWork)
+		<a href="../src/runtime/mgcwork.go.html#line-350">mgcwork.go#L350</a>: 		atomic.Xaddint64(&amp;gcController.<b>scanWork</b>, w.scanWork)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

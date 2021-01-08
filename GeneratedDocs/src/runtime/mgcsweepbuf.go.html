@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source: mgcsweepbuf.go in package runtime</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre id="header"><code><span class="title">Source File</span>
+	mgcsweepbuf.go
+
+<span class="title">Belonging Package</span>
+	<a href="../../pkg/runtime.html">runtime</a>
+</code></pre>
+<style>input[type=radio] {display: none;}
+input[id=r0]:checked ~pre label[for=r0],
+input[id=r1]:checked ~pre label[for=r1],
+input[id=r2]:checked ~pre label[for=r2],
+input[id=r3]:checked ~pre label[for=r3],
+input[id=r4]:checked ~pre label[for=r4],
+input[id=r5]:checked ~pre label[for=r5],
+input[id=r6]:checked ~pre label[for=r6],
+input[id=r7]:checked ~pre label[for=r7],
+input[id=r8]:checked ~pre label[for=r8],
+input[id=r9]:checked ~pre label[for=r9],
+input[id=r10]:checked ~pre label[for=r10],
+input[id=r11]:checked ~pre label[for=r11],
+input[id=r12]:checked ~pre label[for=r12],
+input[id=r13]:checked ~pre label[for=r13],
+input[id=r14]:checked ~pre label[for=r14],
+input[id=r15]:checked ~pre label[for=r15],
+input[id=r16]:checked ~pre label[for=r16],
+input[id=r17]:checked ~pre label[for=r17],
+input[id=r18]:checked ~pre label[for=r18],
+input[id=r19]:checked ~pre label[for=r19],
+input[id=r20]:checked ~pre label[for=r20],
+input[id=r21]:checked ~pre label[for=r21],
+input[id=r22]:checked ~pre label[for=r22],
+input[id=r23]:checked ~pre label[for=r23],
+input[id=r24]:checked ~pre label[for=r24],
+input[id=r25]:checked ~pre label[for=r25],
+input[id=r26]:checked ~pre label[for=r26],
+input[id=r27]:checked ~pre label[for=r27],
+input[id=r28]:checked ~pre label[for=r28],
+input[id=r29]:checked ~pre label[for=r29],
+input[id=r30]:checked ~pre label[for=r30],
+input[id=r31]:checked ~pre label[for=r31],
+input[id=r32]:checked ~pre label[for=r32],
+input[id=r33]:checked ~pre label[for=r33]
+{ background: #226; color: #ff8; padding-left: 1px;}
+</style><input id="r0" type="radio" name="g"/>
+<input id="r1" type="radio" name="g"/>
+<input id="r2" type="radio" name="g"/>
+<input id="r3" type="radio" name="g"/>
+<input id="r4" type="radio" name="g"/>
+<input id="r5" type="radio" name="g"/>
+<input id="r6" type="radio" name="g"/>
+<input id="r7" type="radio" name="g"/>
+<input id="r8" type="radio" name="g"/>
+<input id="r9" type="radio" name="g"/>
+<input id="r10" type="radio" name="g"/>
+<input id="r11" type="radio" name="g"/>
+<input id="r12" type="radio" name="g"/>
+<input id="r13" type="radio" name="g"/>
+<input id="r14" type="radio" name="g"/>
+<input id="r15" type="radio" name="g"/>
+<input id="r16" type="radio" name="g"/>
+<input id="r17" type="radio" name="g"/>
+<input id="r18" type="radio" name="g"/>
+<input id="r19" type="radio" name="g"/>
+<input id="r20" type="radio" name="g"/>
+<input id="r21" type="radio" name="g"/>
+<input id="r22" type="radio" name="g"/>
+<input id="r23" type="radio" name="g"/>
+<input id="r24" type="radio" name="g"/>
+<input id="r25" type="radio" name="g"/>
+<input id="r26" type="radio" name="g"/>
+<input id="r27" type="radio" name="g"/>
+<input id="r28" type="radio" name="g"/>
+<input id="r29" type="radio" name="g"/>
+<input id="r30" type="radio" name="g"/>
+<input id="r31" type="radio" name="g"/>
+<input id="r32" type="radio" name="g"/>
+<input id="r33" type="radio" name="g"/>
+
+<pre class="line-numbers">
+<span class="codeline" id="line-1"><code><span class="comment">// Copyright 2016 The Go Authors. All rights reserved.</span></code></span>
+<span class="codeline" id="line-2"><code><span class="comment">// Use of this source code is governed by a BSD-style</span></code></span>
+<span class="codeline" id="line-3"><code><span class="comment">// license that can be found in the LICENSE file.</span></code></span>
+<span class="codeline" id="line-4"><code></code></span>
+<span class="codeline" id="line-5"><code><span class="keyword">package</span> runtime</code></span>
+<span class="codeline" id="line-6"><code></code></span>
+<span class="codeline" id="line-7"><code><span class="keyword">import</span> (</code></span>
+<span class="codeline" id="line-8"><code>	<span class="lit-string">"internal/cpu"</span></code></span>
+<span class="codeline" id="line-9"><code>	<span class="lit-string">"runtime/internal/atomic"</span></code></span>
+<span class="codeline" id="line-10"><code>	<span class="lit-string">"runtime/internal/sys"</span></code></span>
+<span class="codeline" id="line-11"><code>	<span class="lit-string">"unsafe"</span></code></span>
+<span class="codeline" id="line-12"><code>)</code></span>
+<span class="codeline" id="line-13"><code></code></span>
+<span class="codeline" id="line-14"><code><span class="comment">// A gcSweepBuf is a set of *mspans.</span></code></span>
+<span class="codeline" id="line-15"><code><span class="comment">//</span></code></span>
+<span class="codeline" id="line-16"><code><span class="comment">// gcSweepBuf is safe for concurrent push operations *or* concurrent</span></code></span>
+<span class="codeline" id="line-17"><code><span class="comment">// pop operations, but not both simultaneously.</span></code></span>
+<span class="codeline" id="line-18"><code><span class="keyword">type</span> <a href="../../use/runtime..gcSweepBuf.html" class="ident">gcSweepBuf</a> <span class="keyword">struct</span> {</code></span>
+<span class="codeline" id="line-19"><code>	<span class="comment">// A gcSweepBuf is a two-level data structure consisting of a</span></code></span>
+<span class="codeline" id="line-20"><code><span class="comment">	// growable spine that points to fixed-sized blocks. The spine</span></code></span>
+<span class="codeline" id="line-21"><code><span class="comment">	// can be accessed without locks, but adding a block or</span></code></span>
+<span class="codeline" id="line-22"><code><span class="comment">	// growing it requires taking the spine lock.</span></code></span>
+<span class="codeline" id="line-23"><code><span class="comment">	//</span></code></span>
+<span class="codeline" id="line-24"><code><span class="comment">	// Because each mspan covers at least 8K of heap and takes at</span></code></span>
+<span class="codeline" id="line-25"><code><span class="comment">	// most 8 bytes in the gcSweepBuf, the growth of the spine is</span></code></span>
+<span class="codeline" id="line-26"><code><span class="comment">	// quite limited.</span></code></span>
+<span class="codeline" id="line-27"><code><span class="comment">	//</span></code></span>
+<span class="codeline" id="line-28"><code><span class="comment">	// The spine and all blocks are allocated off-heap, which</span></code></span>
+<span class="codeline" id="line-29"><code><span class="comment">	// allows this to be used in the memory manager and avoids the</span></code></span>
+<span class="codeline" id="line-30"><code><span class="comment">	// need for write barriers on all of these. We never release</span></code></span>
+<span class="codeline" id="line-31"><code><span class="comment">	// this memory because there could be concurrent lock-free</span></code></span>
+<span class="codeline" id="line-32"><code><span class="comment">	// access and we're likely to reuse it anyway. (In principle,</span></code></span>
+<span class="codeline" id="line-33"><code><span class="comment">	// we could do this during STW.)</span></code></span>
+<span class="codeline" id="line-34"><code></code></span>
+<span class="codeline" id="line-35"><code>	<a href="../../use/runtime..gcSweepBuf.spineLock.html" class="ident">spineLock</a> <a href="runtime2.go.html#line-162" class="ident">mutex</a></code></span>
+<span class="codeline" id="line-36"><code>	<a href="../../use/runtime..gcSweepBuf.spine.html" class="ident">spine</a>     <a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a> <span class="comment">// *[N]*gcSweepBlock, accessed atomically</span></code></span>
+<span class="codeline" id="line-37"><code>	<a href="../../use/runtime..gcSweepBuf.spineLen.html" class="ident">spineLen</a>  <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>        <span class="comment">// Spine array length, accessed atomically</span></code></span>
+<span class="codeline" id="line-38"><code>	<a href="../../use/runtime..gcSweepBuf.spineCap.html" class="ident">spineCap</a>  <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>        <span class="comment">// Spine array cap, accessed under lock</span></code></span>
+<span class="codeline" id="line-39"><code></code></span>
+<span class="codeline" id="line-40"><code>	<span class="comment">// index is the first unused slot in the logical concatenation</span></code></span>
+<span class="codeline" id="line-41"><code><span class="comment">	// of all blocks. It is accessed atomically.</span></code></span>
+<span class="codeline" id="line-42"><code>	<a href="../../use/runtime..gcSweepBuf.index.html" class="ident">index</a> <a href="../../pkg/builtin.html#name-uint32" class="ident">uint32</a></code></span>
+<span class="codeline" id="line-43"><code>}</code></span>
+<span class="codeline" id="line-44"><code></code></span>
+<span class="codeline" id="line-45"><code><span class="keyword">const</span> (</code></span>
+<span class="codeline" id="line-46"><code>	<a href="../../use/runtime..gcSweepBlockEntries.html" class="ident">gcSweepBlockEntries</a>    = <span class="lit-number">512</span> <span class="comment">// 4KB on 64-bit</span></code></span>
+<span class="codeline" id="line-47"><code>	<a href="../../use/runtime..gcSweepBufInitSpineCap.html" class="ident">gcSweepBufInitSpineCap</a> = <span class="lit-number">256</span> <span class="comment">// Enough for 1GB heap on 64-bit</span></code></span>
+<span class="codeline" id="line-48"><code>)</code></span>
+<span class="codeline" id="line-49"><code></code></span>
+<span class="codeline" id="line-50"><code><span class="keyword">type</span> <a href="../../use/runtime..gcSweepBlock.html" class="ident">gcSweepBlock</a> <span class="keyword">struct</span> {</code></span>
+<span class="codeline" id="line-51"><code>	<a href="../../use/runtime..gcSweepBlock.spans.html" class="ident">spans</a> [<a href="#line-46" class="ident">gcSweepBlockEntries</a>]*<a href="mheap.go.html#line-402" class="ident">mspan</a></code></span>
+<span class="codeline" id="line-52"><code>}</code></span>
+<span class="codeline" id="line-53"><code></code></span>
+<span class="codeline" id="line-54"><code><span class="comment">// push adds span s to buffer b. push is safe to call concurrently</span></code></span>
+<span class="codeline" id="line-55"><code><span class="comment">// with other push operations, but NOT to call concurrently with pop.</span></code></span>
+<span class="codeline" id="line-56"><code><span class="keyword">func</span> (<label for="r0" class="ident">b</label> *<a href="#line-18" class="ident">gcSweepBuf</a>) <label for="r1" class="ident"><a href="../../use/runtime..gcSweepBuf.push.html" class="ident">push</a></label>(<label for="r2" class="ident">s</label> *<a href="mheap.go.html#line-402" class="ident">mspan</a>) {</code></span>
+<span class="codeline" id="line-57"><code>	<span class="comment">// Obtain our slot.</span></code></span>
+<span class="codeline" id="line-58"><code>	<label for="r3" class="ident">cursor</label> := <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-39" class="ident">Xadd</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-42" class="ident">index</a>, +<span class="lit-number">1</span>) - <span class="lit-number">1</span>)</code></span>
+<span class="codeline" id="line-59"><code>	<label for="r4" class="ident">top</label>, <label for="r5" class="ident">bottom</label> := <label for="r3" class="ident">cursor</label>/<a href="#line-46" class="ident">gcSweepBlockEntries</a>, <label for="r3" class="ident">cursor</label>%<a href="#line-46" class="ident">gcSweepBlockEntries</a></code></span>
+<span class="codeline" id="line-60"><code></code></span>
+<span class="codeline" id="line-61"><code>	<span class="comment">// Do we need to add a block?</span></code></span>
+<span class="codeline" id="line-62"><code>	<label for="r6" class="ident">spineLen</label> := <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/stubs.go.html#line-24" class="ident">Loaduintptr</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-37" class="ident">spineLen</a>)</code></span>
+<span class="codeline" id="line-63"><code>	<span class="keyword">var</span> <label for="r7" class="ident">block</label> *<a href="#line-50" class="ident">gcSweepBlock</a></code></span>
+<span class="codeline" id="line-64"><code><label for="r8" class="ident">retry</label>:</code></span>
+<span class="codeline" id="line-65"><code>	<span class="keyword">if</span> <label for="r4" class="ident">top</label> &lt; <label for="r6" class="ident">spineLen</label> {</code></span>
+<span class="codeline" id="line-66"><code>		<label for="r9" class="ident">spine</label> := <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-22" class="ident">Loadp</a>(<a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>))</code></span>
+<span class="codeline" id="line-67"><code>		<label for="r10" class="ident">blockp</label> := <a href="stubs.go.html#line-11" class="ident">add</a>(<label for="r9" class="ident">spine</label>, <a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>*<label for="r4" class="ident">top</label>)</code></span>
+<span class="codeline" id="line-68"><code>		<label for="r7" class="ident">block</label> = (*<a href="#line-50" class="ident">gcSweepBlock</a>)(<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-22" class="ident">Loadp</a>(<label for="r10" class="ident">blockp</label>))</code></span>
+<span class="codeline" id="line-69"><code>	} <span class="keyword">else</span> {</code></span>
+<span class="codeline" id="line-70"><code>		<span class="comment">// Add a new block to the spine, potentially growing</span></code></span>
+<span class="codeline" id="line-71"><code><span class="comment">		// the spine.</span></code></span>
+<span class="codeline" id="line-72"><code>		<a href="lock_futex.go.html#line-46" class="ident">lock</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-35" class="ident">spineLock</a>)</code></span>
+<span class="codeline" id="line-73"><code>		<span class="comment">// spineLen cannot change until we release the lock,</span></code></span>
+<span class="codeline" id="line-74"><code><span class="comment">		// but may have changed while we were waiting.</span></code></span>
+<span class="codeline" id="line-75"><code>		<label for="r6" class="ident">spineLen</label> = <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/stubs.go.html#line-24" class="ident">Loaduintptr</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-37" class="ident">spineLen</a>)</code></span>
+<span class="codeline" id="line-76"><code>		<span class="keyword">if</span> <label for="r4" class="ident">top</label> &lt; <label for="r6" class="ident">spineLen</label> {</code></span>
+<span class="codeline" id="line-77"><code>			<a href="lock_futex.go.html#line-110" class="ident">unlock</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-35" class="ident">spineLock</a>)</code></span>
+<span class="codeline" id="line-78"><code>			<span class="keyword">goto</span> <label for="r8" class="ident">retry</label></code></span>
+<span class="codeline" id="line-79"><code>		}</code></span>
+<span class="codeline" id="line-80"><code></code></span>
+<span class="codeline" id="line-81"><code>		<span class="keyword">if</span> <label for="r6" class="ident">spineLen</label> == <label for="r0" class="ident">b</label>.<a href="#line-38" class="ident">spineCap</a> {</code></span>
+<span class="codeline" id="line-82"><code>			<span class="comment">// Grow the spine.</span></code></span>
+<span class="codeline" id="line-83"><code>			<label for="r11" class="ident">newCap</label> := <label for="r0" class="ident">b</label>.<a href="#line-38" class="ident">spineCap</a> * <span class="lit-number">2</span></code></span>
+<span class="codeline" id="line-84"><code>			<span class="keyword">if</span> <label for="r11" class="ident">newCap</label> == <span class="lit-number">0</span> {</code></span>
+<span class="codeline" id="line-85"><code>				<label for="r11" class="ident">newCap</label> = <a href="#line-47" class="ident">gcSweepBufInitSpineCap</a></code></span>
+<span class="codeline" id="line-86"><code>			}</code></span>
+<span class="codeline" id="line-87"><code>			<label for="r12" class="ident">newSpine</label> := <a href="malloc.go.html#line-1327" class="ident">persistentalloc</a>(<label for="r11" class="ident">newCap</label>*<a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>, <a href="../../pkg/internal/cpu.html" class="ident">cpu</a>.<a href="../internal/cpu/cpu.go.html#line-20" class="ident">CacheLineSize</a>, &amp;<a href="mstats.go.html#line-147" class="ident">memstats</a>.<a href="mstats.go.html#line-57" class="ident">gc_sys</a>)</code></span>
+<span class="codeline" id="line-88"><code>			<span class="keyword">if</span> <label for="r0" class="ident">b</label>.<a href="#line-38" class="ident">spineCap</a> != <span class="lit-number">0</span> {</code></span>
+<span class="codeline" id="line-89"><code>				<span class="comment">// Blocks are allocated off-heap, so</span></code></span>
+<span class="codeline" id="line-90"><code><span class="comment">				// no write barriers.</span></code></span>
+<span class="codeline" id="line-91"><code>				<a href="stubs.go.html#line-98" class="ident">memmove</a>(<label for="r12" class="ident">newSpine</label>, <label for="r0" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>, <label for="r0" class="ident">b</label>.<a href="#line-38" class="ident">spineCap</a>*<a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>)</code></span>
+<span class="codeline" id="line-92"><code>			}</code></span>
+<span class="codeline" id="line-93"><code>			<span class="comment">// Spine is allocated off-heap, so no write barrier.</span></code></span>
+<span class="codeline" id="line-94"><code>			<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-92" class="ident">StorepNoWB</a>(<a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>), <label for="r12" class="ident">newSpine</label>)</code></span>
+<span class="codeline" id="line-95"><code>			<label for="r0" class="ident">b</label>.<a href="#line-38" class="ident">spineCap</a> = <label for="r11" class="ident">newCap</label></code></span>
+<span class="codeline" id="line-96"><code>			<span class="comment">// We can't immediately free the old spine</span></code></span>
+<span class="codeline" id="line-97"><code><span class="comment">			// since a concurrent push with a lower index</span></code></span>
+<span class="codeline" id="line-98"><code><span class="comment">			// could still be reading from it. We let it</span></code></span>
+<span class="codeline" id="line-99"><code><span class="comment">			// leak because even a 1TB heap would waste</span></code></span>
+<span class="codeline" id="line-100"><code><span class="comment">			// less than 2MB of memory on old spines. If</span></code></span>
+<span class="codeline" id="line-101"><code><span class="comment">			// this is a problem, we could free old spines</span></code></span>
+<span class="codeline" id="line-102"><code><span class="comment">			// during STW.</span></code></span>
+<span class="codeline" id="line-103"><code>		}</code></span>
+<span class="codeline" id="line-104"><code></code></span>
+<span class="codeline" id="line-105"><code>		<span class="comment">// Allocate a new block and add it to the spine.</span></code></span>
+<span class="codeline" id="line-106"><code>		<label for="r7" class="ident">block</label> = (*<a href="#line-50" class="ident">gcSweepBlock</a>)(<a href="malloc.go.html#line-1327" class="ident">persistentalloc</a>(<a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Sizeof" class="ident">Sizeof</a>(<a href="#line-50" class="ident">gcSweepBlock</a>{}), <a href="../../pkg/internal/cpu.html" class="ident">cpu</a>.<a href="../internal/cpu/cpu.go.html#line-20" class="ident">CacheLineSize</a>, &amp;<a href="mstats.go.html#line-147" class="ident">memstats</a>.<a href="mstats.go.html#line-57" class="ident">gc_sys</a>))</code></span>
+<span class="codeline" id="line-107"><code>		<label for="r13" class="ident">blockp</label> := <a href="stubs.go.html#line-11" class="ident">add</a>(<label for="r0" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>, <a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>*<label for="r4" class="ident">top</label>)</code></span>
+<span class="codeline" id="line-108"><code>		<span class="comment">// Blocks are allocated off-heap, so no write barrier.</span></code></span>
+<span class="codeline" id="line-109"><code>		<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-92" class="ident">StorepNoWB</a>(<label for="r13" class="ident">blockp</label>, <a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(<label for="r7" class="ident">block</label>))</code></span>
+<span class="codeline" id="line-110"><code>		<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/stubs.go.html#line-21" class="ident">Storeuintptr</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-37" class="ident">spineLen</a>, <label for="r6" class="ident">spineLen</label>+<span class="lit-number">1</span>)</code></span>
+<span class="codeline" id="line-111"><code>		<a href="lock_futex.go.html#line-110" class="ident">unlock</a>(&amp;<label for="r0" class="ident">b</label>.<a href="#line-35" class="ident">spineLock</a>)</code></span>
+<span class="codeline" id="line-112"><code>	}</code></span>
+<span class="codeline" id="line-113"><code></code></span>
+<span class="codeline" id="line-114"><code>	<span class="comment">// We have a block. Insert the span atomically, since there may be</span></code></span>
+<span class="codeline" id="line-115"><code><span class="comment">	// concurrent readers via the block API.</span></code></span>
+<span class="codeline" id="line-116"><code>	<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-92" class="ident">StorepNoWB</a>(<a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(&amp;<label for="r7" class="ident">block</label>.<a href="#line-51" class="ident">spans</a>[<label for="r5" class="ident">bottom</label>]), <a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(<label for="r2" class="ident">s</label>))</code></span>
+<span class="codeline" id="line-117"><code>}</code></span>
+<span class="codeline" id="line-118"><code></code></span>
+<span class="codeline" id="line-119"><code><span class="comment">// pop removes and returns a span from buffer b, or nil if b is empty.</span></code></span>
+<span class="codeline" id="line-120"><code><span class="comment">// pop is safe to call concurrently with other pop operations, but NOT</span></code></span>
+<span class="codeline" id="line-121"><code><span class="comment">// to call concurrently with push.</span></code></span>
+<span class="codeline" id="line-122"><code><span class="keyword">func</span> (<label for="r14" class="ident">b</label> *<a href="#line-18" class="ident">gcSweepBuf</a>) <label for="r15" class="ident"><a href="../../use/runtime..gcSweepBuf.pop.html" class="ident">pop</a></label>() *<a href="mheap.go.html#line-402" class="ident">mspan</a> {</code></span>
+<span class="codeline" id="line-123"><code>	<label for="r16" class="ident">cursor</label> := <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-39" class="ident">Xadd</a>(&amp;<label for="r14" class="ident">b</label>.<a href="#line-42" class="ident">index</a>, -<span class="lit-number">1</span>)</code></span>
+<span class="codeline" id="line-124"><code>	<span class="keyword">if</span> <a href="../../pkg/builtin.html#name-int32" class="ident">int32</a>(<label for="r16" class="ident">cursor</label>) &lt; <span class="lit-number">0</span> {</code></span>
+<span class="codeline" id="line-125"><code>		<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-39" class="ident">Xadd</a>(&amp;<label for="r14" class="ident">b</label>.<a href="#line-42" class="ident">index</a>, +<span class="lit-number">1</span>)</code></span>
+<span class="codeline" id="line-126"><code>		<span class="keyword">return</span> <a href="../../pkg/builtin.html#name-nil" class="ident">nil</a></code></span>
+<span class="codeline" id="line-127"><code>	}</code></span>
+<span class="codeline" id="line-128"><code></code></span>
+<span class="codeline" id="line-129"><code>	<span class="comment">// There are no concurrent spine or block modifications during</span></code></span>
+<span class="codeline" id="line-130"><code><span class="comment">	// pop, so we can omit the atomics.</span></code></span>
+<span class="codeline" id="line-131"><code>	<label for="r17" class="ident">top</label>, <label for="r18" class="ident">bottom</label> := <label for="r16" class="ident">cursor</label>/<a href="#line-46" class="ident">gcSweepBlockEntries</a>, <label for="r16" class="ident">cursor</label>%<a href="#line-46" class="ident">gcSweepBlockEntries</a></code></span>
+<span class="codeline" id="line-132"><code>	<label for="r19" class="ident">blockp</label> := (**<a href="#line-50" class="ident">gcSweepBlock</a>)(<a href="stubs.go.html#line-11" class="ident">add</a>(<label for="r14" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>, <a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>*<a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<label for="r17" class="ident">top</label>)))</code></span>
+<span class="codeline" id="line-133"><code>	<label for="r20" class="ident">block</label> := *<label for="r19" class="ident">blockp</label></code></span>
+<span class="codeline" id="line-134"><code>	<label for="r21" class="ident">s</label> := <label for="r20" class="ident">block</label>.<a href="#line-51" class="ident">spans</a>[<label for="r18" class="ident">bottom</label>]</code></span>
+<span class="codeline" id="line-135"><code>	<span class="comment">// Clear the pointer for block(i).</span></code></span>
+<span class="codeline" id="line-136"><code>	<label for="r20" class="ident">block</label>.<a href="#line-51" class="ident">spans</a>[<label for="r18" class="ident">bottom</label>] = <a href="../../pkg/builtin.html#name-nil" class="ident">nil</a></code></span>
+<span class="codeline" id="line-137"><code>	<span class="keyword">return</span> <label for="r21" class="ident">s</label></code></span>
+<span class="codeline" id="line-138"><code>}</code></span>
+<span class="codeline" id="line-139"><code></code></span>
+<span class="codeline" id="line-140"><code><span class="comment">// numBlocks returns the number of blocks in buffer b. numBlocks is</span></code></span>
+<span class="codeline" id="line-141"><code><span class="comment">// safe to call concurrently with any other operation. Spans that have</span></code></span>
+<span class="codeline" id="line-142"><code><span class="comment">// been pushed prior to the call to numBlocks are guaranteed to appear</span></code></span>
+<span class="codeline" id="line-143"><code><span class="comment">// in some block in the range [0, numBlocks()), assuming there are no</span></code></span>
+<span class="codeline" id="line-144"><code><span class="comment">// intervening pops. Spans that are pushed after the call may also</span></code></span>
+<span class="codeline" id="line-145"><code><span class="comment">// appear in these blocks.</span></code></span>
+<span class="codeline" id="line-146"><code><span class="keyword">func</span> (<label for="r22" class="ident">b</label> *<a href="#line-18" class="ident">gcSweepBuf</a>) <label for="r23" class="ident"><a href="../../use/runtime..gcSweepBuf.numBlocks.html" class="ident">numBlocks</a></label>() <a href="../../pkg/builtin.html#name-int" class="ident">int</a> {</code></span>
+<span class="codeline" id="line-147"><code>	<span class="keyword">return</span> <a href="../../pkg/builtin.html#name-int" class="ident">int</a>(<a href="stubs.go.html#line-314" class="ident">divRoundUp</a>(<a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-16" class="ident">Load</a>(&amp;<label for="r22" class="ident">b</label>.<a href="#line-42" class="ident">index</a>)), <a href="#line-46" class="ident">gcSweepBlockEntries</a>))</code></span>
+<span class="codeline" id="line-148"><code>}</code></span>
+<span class="codeline" id="line-149"><code></code></span>
+<span class="codeline" id="line-150"><code><span class="comment">// block returns the spans in the i'th block of buffer b. block is</span></code></span>
+<span class="codeline" id="line-151"><code><span class="comment">// safe to call concurrently with push. The block may contain nil</span></code></span>
+<span class="codeline" id="line-152"><code><span class="comment">// pointers that must be ignored, and each entry in the block must be</span></code></span>
+<span class="codeline" id="line-153"><code><span class="comment">// loaded atomically.</span></code></span>
+<span class="codeline" id="line-154"><code><span class="keyword">func</span> (<label for="r24" class="ident">b</label> *<a href="#line-18" class="ident">gcSweepBuf</a>) <label for="r25" class="ident"><a href="../../use/runtime..gcSweepBuf.block.html" class="ident">block</a></label>(<label for="r26" class="ident">i</label> <a href="../../pkg/builtin.html#name-int" class="ident">int</a>) []*<a href="mheap.go.html#line-402" class="ident">mspan</a> {</code></span>
+<span class="codeline" id="line-155"><code>	<span class="comment">// Perform bounds check before loading spine address since</span></code></span>
+<span class="codeline" id="line-156"><code><span class="comment">	// push ensures the allocated length is at least spineLen.</span></code></span>
+<span class="codeline" id="line-157"><code>	<span class="keyword">if</span> <label for="r26" class="ident">i</label> &lt; <span class="lit-number">0</span> || <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<label for="r26" class="ident">i</label>) &gt;= <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/stubs.go.html#line-24" class="ident">Loaduintptr</a>(&amp;<label for="r24" class="ident">b</label>.<a href="#line-37" class="ident">spineLen</a>) {</code></span>
+<span class="codeline" id="line-158"><code>		<a href="panic.go.html#line-1106" class="ident">throw</a>(<span class="lit-string">"block index out of range"</span>)</code></span>
+<span class="codeline" id="line-159"><code>	}</code></span>
+<span class="codeline" id="line-160"><code></code></span>
+<span class="codeline" id="line-161"><code>	<span class="comment">// Get block i.</span></code></span>
+<span class="codeline" id="line-162"><code>	<label for="r27" class="ident">spine</label> := <a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-22" class="ident">Loadp</a>(<a href="../../pkg/unsafe.html" class="ident">unsafe</a>.<a href="../../pkg/unsafe.html#name-Pointer" class="ident">Pointer</a>(&amp;<label for="r24" class="ident">b</label>.<a href="#line-36" class="ident">spine</a>))</code></span>
+<span class="codeline" id="line-163"><code>	<label for="r28" class="ident">blockp</label> := <a href="stubs.go.html#line-11" class="ident">add</a>(<label for="r27" class="ident">spine</label>, <a href="../../pkg/runtime/internal/sys.html" class="ident">sys</a>.<a href="internal/sys/stubs.go.html#line-9" class="ident">PtrSize</a>*<a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<label for="r26" class="ident">i</label>))</code></span>
+<span class="codeline" id="line-164"><code>	<label for="r29" class="ident">block</label> := (*<a href="#line-50" class="ident">gcSweepBlock</a>)(<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-22" class="ident">Loadp</a>(<label for="r28" class="ident">blockp</label>))</code></span>
+<span class="codeline" id="line-165"><code></code></span>
+<span class="codeline" id="line-166"><code>	<span class="comment">// Slice the block if necessary.</span></code></span>
+<span class="codeline" id="line-167"><code>	<label for="r30" class="ident">cursor</label> := <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<a href="../../pkg/runtime/internal/atomic.html" class="ident">atomic</a>.<a href="internal/atomic/atomic_amd64.go.html#line-16" class="ident">Load</a>(&amp;<label for="r24" class="ident">b</label>.<a href="#line-42" class="ident">index</a>))</code></span>
+<span class="codeline" id="line-168"><code>	<label for="r31" class="ident">top</label>, <label for="r32" class="ident">bottom</label> := <label for="r30" class="ident">cursor</label>/<a href="#line-46" class="ident">gcSweepBlockEntries</a>, <label for="r30" class="ident">cursor</label>%<a href="#line-46" class="ident">gcSweepBlockEntries</a></code></span>
+<span class="codeline" id="line-169"><code>	<span class="keyword">var</span> <label for="r33" class="ident">spans</label> []*<a href="mheap.go.html#line-402" class="ident">mspan</a></code></span>
+<span class="codeline" id="line-170"><code>	<span class="keyword">if</span> <a href="../../pkg/builtin.html#name-uintptr" class="ident">uintptr</a>(<label for="r26" class="ident">i</label>) &lt; <label for="r31" class="ident">top</label> {</code></span>
+<span class="codeline" id="line-171"><code>		<label for="r33" class="ident">spans</label> = <label for="r29" class="ident">block</label>.<a href="#line-51" class="ident">spans</a>[:]</code></span>
+<span class="codeline" id="line-172"><code>	} <span class="keyword">else</span> {</code></span>
+<span class="codeline" id="line-173"><code>		<label for="r33" class="ident">spans</label> = <label for="r29" class="ident">block</label>.<a href="#line-51" class="ident">spans</a>[:<label for="r32" class="ident">bottom</label>]</code></span>
+<span class="codeline" id="line-174"><code>	}</code></span>
+<span class="codeline" id="line-175"><code>	<span class="keyword">return</span> <label for="r33" class="ident">spans</label></code></span>
+<span class="codeline" id="line-176"><code>}</code></span>
+</pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

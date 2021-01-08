@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.timer</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/time.go.html#line-17">timer</a></b></span>
+
+24 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgcscavenge.go.html#line-165">mgcscavenge.go#L165</a>: 	timer      *<b>timer</b>
+		<a href="../src/runtime/mgcscavenge.go.html#line-259" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-259">#L259</a>: 	scavenge.timer = new(<b>timer</b>)
+		<a href="../src/runtime/netpoll.go.html#line-86">netpoll.go#L86</a>: 	rt      <b>timer</b>     // read deadline timer (set if rt.f != nil)
+		<a href="../src/runtime/netpoll.go.html#line-90" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-90">#L90</a>: 	wt      <b>timer</b>     // write deadline timer
+		<a href="../src/runtime/runtime2.go.html#line-473">runtime2.go#L473</a>: 	timer          *<b>timer</b>         // cached timer for time.Sleep
+		<a href="../src/runtime/runtime2.go.html#line-672" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-672">#L672</a>: 	timers []*<b>timer</b>
+		<a href="../src/runtime/time.go.html#line-17">time.go#L17</a>: type <b>timer</b> struct {
+		<a href="../src/runtime/time.go.html#line-182" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-182">#L182</a>: 		t = new(<b>timer</b>)
+		<a href="../src/runtime/time.go.html#line-196" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-196">#L196</a>: 	t := (*<b>timer</b>)(ut)
+		<a href="../src/runtime/time.go.html#line-203" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-203">#L203</a>: func startTimer(t *<b>timer</b>) {
+		<a href="../src/runtime/time.go.html#line-213" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-213">#L213</a>: func stopTimer(t *<b>timer</b>) bool {
+		<a href="../src/runtime/time.go.html#line-220" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-220">#L220</a>: func resetTimer(t *<b>timer</b>, when int64) bool {
+		<a href="../src/runtime/time.go.html#line-229" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-229">#L229</a>: func modTimer(t *<b>timer</b>, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr) {
+		<a href="../src/runtime/time.go.html#line-244" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-244">#L244</a>: func addtimer(t *<b>timer</b>) {
+		<a href="../src/runtime/time.go.html#line-268" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-268">#L268</a>: func doaddtimer(pp *p, t *<b>timer</b>) {
+		<a href="../src/runtime/time.go.html#line-292" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-292">#L292</a>: func deltimer(t *<b>timer</b>) bool {
+		<a href="../src/runtime/time.go.html#line-408" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-408">#L408</a>: func modtimer(t *<b>timer</b>, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr) bool {
+		<a href="../src/runtime/time.go.html#line-528" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-528">#L528</a>: func resettimer(t *<b>timer</b>, when int64) bool {
+		<a href="../src/runtime/time.go.html#line-591" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-591">#L591</a>: func moveTimers(pp *p, timers []*<b>timer</b>) {
+		<a href="../src/runtime/time.go.html#line-650" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-650">#L650</a>: 	var moved []*<b>timer</b>
+		<a href="../src/runtime/time.go.html#line-710" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-710">#L710</a>: func addAdjustedTimers(pp *p, moved []*<b>timer</b>) {
+		<a href="../src/runtime/time.go.html#line-810" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-810">#L810</a>: func runOneTimer(pp *p, t *<b>timer</b>, now int64) {
+		<a href="../src/runtime/time.go.html#line-1052" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-1052">#L1052</a>: func siftupTimer(t []*<b>timer</b>, i int) {
+		<a href="../src/runtime/time.go.html#line-1071" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-1071">#L1071</a>: func siftdownTimer(t []*<b>timer</b>, i int) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

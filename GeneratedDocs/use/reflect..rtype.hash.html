@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.rtype.hash</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-303">rtype</a>.<a href="../src/reflect/type.go.html#line-306">hash</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+33 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-306">type.go#L306</a>: 	<b>hash</b>       uint32  // hash of type; avoids computation in hash tables
+		<a href="../src/reflect/type.go.html#line-1415" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1415">#L1415</a>: 	pp.<b>hash</b> = fnv1(t.<b>hash</b>, '*')
+		<a href="../src/reflect/type.go.html#line-1819" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1819">#L1819</a>: 	ch.<b>hash</b> = fnv1(typ.<b>hash</b>, 'c', byte(dir))
+		<a href="../src/reflect/type.go.html#line-1863" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1863">#L1863</a>: 	mt.<b>hash</b> = fnv1(etyp.<b>hash</b>, 'm', byte(ktyp.<b>hash</b>&gt;&gt;24), byte(ktyp.<b>hash</b>&gt;&gt;16), byte(ktyp.<b>hash</b>&gt;&gt;8), byte(ktyp.<b>hash</b>))
+		<a href="../src/reflect/type.go.html#line-1980" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1980">#L1980</a>: 		hash = fnv1(hash, byte(t.<b>hash</b>&gt;&gt;24), byte(t.<b>hash</b>&gt;&gt;16), byte(t.<b>hash</b>&gt;&gt;8), byte(t.<b>hash</b>))
+		<a href="../src/reflect/type.go.html#line-1989" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1989">#L1989</a>: 		hash = fnv1(hash, byte(t.<b>hash</b>&gt;&gt;24), byte(t.<b>hash</b>&gt;&gt;16), byte(t.<b>hash</b>&gt;&gt;8), byte(t.<b>hash</b>))
+		<a href="../src/reflect/type.go.html#line-1995" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1995">#L1995</a>: 	ft.<b>hash</b> = hash
+		<a href="../src/reflect/type.go.html#line-2302" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2302">#L2302</a>: 	slice.<b>hash</b> = fnv1(typ.<b>hash</b>, '[')
+		<a href="../src/reflect/type.go.html#line-2546" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2546">#L2546</a>: 		hash = fnv1(hash, byte(ft.<b>hash</b>&gt;&gt;24), byte(ft.<b>hash</b>&gt;&gt;16), byte(ft.<b>hash</b>&gt;&gt;8), byte(ft.<b>hash</b>))
+		<a href="../src/reflect/type.go.html#line-2676" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2676">#L2676</a>: 	typ.<b>hash</b> = hash
+		<a href="../src/reflect/type.go.html#line-2847" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2847">#L2847</a>: 	array.<b>hash</b> = fnv1(typ.<b>hash</b>, '[')
+		<a href="../src/reflect/type.go.html#line-2849" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2849">#L2849</a>: 		array.<b>hash</b> = fnv1(array.<b>hash</b>, byte(n))
+		<a href="../src/reflect/type.go.html#line-2851" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2851">#L2851</a>: 	array.<b>hash</b> = fnv1(array.<b>hash</b>, ']')
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

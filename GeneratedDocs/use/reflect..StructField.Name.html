@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.StructField.Name</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-1088">StructField</a>.<a href="../src/reflect/type.go.html#line-1090">Name</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+12 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-1090">type.go#L1090</a>: 	<b>Name</b> string
+		<a href="../src/reflect/type.go.html#line-1190" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1190">#L1190</a>: 	f.<b>Name</b> = p.name.name()
+		<a href="../src/reflect/type.go.html#line-2377" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2377">#L2377</a>: 		if field.<b>Name</b> == "" {
+		<a href="../src/reflect/type.go.html#line-2380" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2380">#L2380</a>: 		if !isValidFieldName(field.<b>Name</b>) {
+		<a href="../src/reflect/type.go.html#line-2596" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2596">#L2596</a>: 			{<b>Name</b>: "S", Type: TypeOf(structType{})},
+		<a href="../src/reflect/type.go.html#line-2597" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2597">#L2597</a>: 			{<b>Name</b>: "U", Type: TypeOf(uncommonType{})},
+		<a href="../src/reflect/type.go.html#line-2598" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2598">#L2598</a>: 			{<b>Name</b>: "M", Type: ArrayOf(len(methods), TypeOf(methods[0]))},
+		<a href="../src/reflect/type.go.html#line-2761" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2761">#L2761</a>: 		panic("reflect.StructOf: field \"" + field.<b>Name</b> + "\" is anonymous but has PkgPath set")
+		<a href="../src/reflect/type.go.html#line-2768" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2768">#L2768</a>: 		c := field.<b>Name</b>[0]
+		<a href="../src/reflect/type.go.html#line-2770" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2770">#L2770</a>: 			panic("reflect.StructOf: field \"" + field.<b>Name</b> + "\" is unexported but missing PkgPath")
+		<a href="../src/reflect/type.go.html#line-2781" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2781">#L2781</a>: 		name:        newName(field.<b>Name</b>, string(field.Tag), exported),
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-805">print.go#L805</a>: 				if name := f.Type().Field(i).<b>Name</b>; name != "" {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

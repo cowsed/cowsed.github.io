@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.lockInit</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/lockrank_off.go.html#line-14">lockInit</a></b></span>
+
+43 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/chan.go.html#line-112">chan.go#L112</a>: 	<b>lockInit</b>(&c.lock, lockRankHchan)
+		<a href="../src/runtime/iface.go.html#line-246">iface.go#L246</a>: 	<b>lockInit</b>(&itabLock, lockRankItab)
+		<a href="../src/runtime/lockrank_off.go.html#line-14">lockrank_off.go#L14</a>: func <b>lockInit</b>(l *mutex, rank lockRank) {
+		<a href="../src/runtime/malloc.go.html#line-482">malloc.go#L482</a>: 	<b>lockInit</b>(&gcBitsArenas.lock, lockRankGcBitsArenas)
+		<a href="../src/runtime/malloc.go.html#line-483" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-483">#L483</a>: 	<b>lockInit</b>(&proflock, lockRankProf)
+		<a href="../src/runtime/malloc.go.html#line-484" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-484">#L484</a>: 	<b>lockInit</b>(&globalAlloc.mutex, lockRankGlobalAlloc)
+		<a href="../src/runtime/mcentral.go.html#line-59">mcentral.go#L59</a>: 		<b>lockInit</b>(&c.partial[0].spineLock, lockRankSpanSetSpine)
+		<a href="../src/runtime/mcentral.go.html#line-60" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-60">#L60</a>: 		<b>lockInit</b>(&c.partial[1].spineLock, lockRankSpanSetSpine)
+		<a href="../src/runtime/mcentral.go.html#line-61" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-61">#L61</a>: 		<b>lockInit</b>(&c.full[0].spineLock, lockRankSpanSetSpine)
+		<a href="../src/runtime/mcentral.go.html#line-62" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-62">#L62</a>: 		<b>lockInit</b>(&c.full[1].spineLock, lockRankSpanSetSpine)
+		<a href="../src/runtime/mcentral.go.html#line-66" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-66">#L66</a>: 		<b>lockInit</b>(&c.lock, lockRankMcentral)
+		<a href="../src/runtime/mgc.go.html#line-194">mgc.go#L194</a>: 	<b>lockInit</b>(&work.sweepWaiters.lock, lockRankSweepWaiters)
+		<a href="../src/runtime/mgc.go.html#line-195" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-195">#L195</a>: 	<b>lockInit</b>(&work.assistQueue.lock, lockRankAssistQueue)
+		<a href="../src/runtime/mgc.go.html#line-196" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-196">#L196</a>: 	<b>lockInit</b>(&work.wbufSpans.lock, lockRankWbufSpans)
+		<a href="../src/runtime/mgcscavenge.go.html#line-255">mgcscavenge.go#L255</a>: 	<b>lockInit</b>(&scavenge.lock, lockRankScavenge)
+		<a href="../src/runtime/mgcsweep.go.html#line-159">mgcsweep.go#L159</a>: 	<b>lockInit</b>(&sweep.lock, lockRankSweep)
+		<a href="../src/runtime/mheap.go.html#line-717">mheap.go#L717</a>: 	<b>lockInit</b>(&h.lock, lockRankMheap)
+		<a href="../src/runtime/mheap.go.html#line-718" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-718">#L718</a>: 	<b>lockInit</b>(&h.sweepSpans[0].spineLock, lockRankSpine)
+		<a href="../src/runtime/mheap.go.html#line-719" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-719">#L719</a>: 	<b>lockInit</b>(&h.sweepSpans[1].spineLock, lockRankSpine)
+		<a href="../src/runtime/mheap.go.html#line-720" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-720">#L720</a>: 	<b>lockInit</b>(&h.speciallock, lockRankMheapSpecial)
+		<a href="../src/runtime/mheap.go.html#line-1529" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1529">#L1529</a>: 	<b>lockInit</b>(&span.speciallock, lockRankMspanSpecial)
+		<a href="../src/runtime/netpoll.go.html#line-120">netpoll.go#L120</a>: 		<b>lockInit</b>(&netpollInitLock, lockRankNetpollInit)
+		<a href="../src/runtime/netpoll.go.html#line-548" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-548">#L548</a>: 	<b>lockInit</b>(&pd.lock, lockRankPollDesc)
+		<a href="../src/runtime/proc.go.html#line-248">proc.go#L248</a>: 	<b>lockInit</b>(&forcegc.lock, lockRankForcegc)
+		<a href="../src/runtime/proc.go.html#line-535" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-535">#L535</a>: 	<b>lockInit</b>(&sched.lock, lockRankSched)
+		<a href="../src/runtime/proc.go.html#line-536" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-536">#L536</a>: 	<b>lockInit</b>(&sched.sysmonlock, lockRankSysmon)
+		<a href="../src/runtime/proc.go.html#line-537" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-537">#L537</a>: 	<b>lockInit</b>(&sched.deferlock, lockRankDefer)
+		<a href="../src/runtime/proc.go.html#line-538" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-538">#L538</a>: 	<b>lockInit</b>(&sched.sudoglock, lockRankSudog)
+		<a href="../src/runtime/proc.go.html#line-539" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-539">#L539</a>: 	<b>lockInit</b>(&deadlock, lockRankDeadlock)
+		<a href="../src/runtime/proc.go.html#line-540" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-540">#L540</a>: 	<b>lockInit</b>(&paniclk, lockRankPanic)
+		<a href="../src/runtime/proc.go.html#line-541" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-541">#L541</a>: 	<b>lockInit</b>(&allglock, lockRankAllg)
+		<a href="../src/runtime/proc.go.html#line-542" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-542">#L542</a>: 	<b>lockInit</b>(&allpLock, lockRankAllp)
+		<a href="../src/runtime/proc.go.html#line-543" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-543">#L543</a>: 	<b>lockInit</b>(&reflectOffs.lock, lockRankReflectOffs)
+		<a href="../src/runtime/proc.go.html#line-544" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-544">#L544</a>: 	<b>lockInit</b>(&finlock, lockRankFin)
+		<a href="../src/runtime/proc.go.html#line-545" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-545">#L545</a>: 	<b>lockInit</b>(&trace.bufLock, lockRankTraceBuf)
+		<a href="../src/runtime/proc.go.html#line-546" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-546">#L546</a>: 	<b>lockInit</b>(&trace.stringsLock, lockRankTraceStrings)
+		<a href="../src/runtime/proc.go.html#line-547" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-547">#L547</a>: 	<b>lockInit</b>(&trace.lock, lockRankTrace)
+		<a href="../src/runtime/proc.go.html#line-548" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-548">#L548</a>: 	<b>lockInit</b>(&cpuprof.lock, lockRankCpuprof)
+		<a href="../src/runtime/proc.go.html#line-549" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-549">#L549</a>: 	<b>lockInit</b>(&trace.stackTab.lock, lockRankTraceStackTab)
+		<a href="../src/runtime/proc.go.html#line-4232" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4232">#L4232</a>: 	<b>lockInit</b>(&pp.timersLock, lockRankTimers)
+		<a href="../src/runtime/stack.go.html#line-164">stack.go#L164</a>: 		<b>lockInit</b>(&stackpool[i].item.mu, lockRankStackpool)
+		<a href="../src/runtime/stack.go.html#line-168" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-168">#L168</a>: 		<b>lockInit</b>(&stackLarge.lock, lockRankStackLarge)
+		<a href="../src/runtime/trace.go.html#line-884">trace.go#L884</a>: 	<b>lockInit</b>(&((*tab).lock), lockRankTraceStackTab)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: github.com/cowsed/ElfHouse/FineSim/Actions.Action</title>
+<link href="../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Actions.html">github.com/cowsed/ElfHouse/FineSim/Actions</a>.<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Actions/action.go.html#line-4">Action</a></b></span>
+
+12 uses:
+
+	github.com/cowsed/ElfHouse/FineSim/Actions <i>(current package)</i>
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Actions/action.go.html#line-4">action.go#L4</a>: type <b>Action</b> struct {
+
+	<a href="../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/AIs.html">github.com/cowsed/ElfHouse/FineSim/AIs</a>
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/AI.go.html#line-10">AI.go#L10</a>: 	NextAction() action.<b>Action</b>
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-31">Follower.go#L31</a>: 	ShortTasks []action.<b>Action</b> //Non chronological Day to day tasks, Go to work, Relax, talk to friend
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-33" class="path-duplicate">Follower.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-33">#L33</a>: 	LongTasks []action.<b>Action</b> //Day to day tasks, do job, support family, etc
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-36" class="path-duplicate">Follower.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-36">#L36</a>: 	Dreams []action.<b>Action</b> //Create art where art is a pattern, find family where family is a state where you have an SO and a kid
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-50" class="path-duplicate">Follower.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-50">#L50</a>: func (a *FollowerAI) NextAction() action.<b>Action</b> {
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-51" class="path-duplicate">Follower.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/AIs/Follower.go.html#line-51">#L51</a>: 	return action.<b>Action</b>{Action: "move", DirectObject: "you"}
+
+	<a href="../../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Beings.html">github.com/cowsed/ElfHouse/FineSim/Beings</a>
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Animal.go.html#line-51">Animal.go#L51</a>: func (p Pet) NextAction() action.<b>Action</b> {
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Animal.go.html#line-52" class="path-duplicate">Animal.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Animal.go.html#line-52">#L52</a>:     return action.<b>Action</b>{}  //Not implemented yet
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Human.go.html#line-52">Human.go#L52</a>: func (h Human) NextAction() action.<b>Action</b> {
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Human.go.html#line-53" class="path-duplicate">Human.go</a><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/Human.go.html#line-53">#L53</a>:     return action.<b>Action</b>{}  //Not implemented yet
+		<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Beings/being.go.html#line-11">being.go#L11</a>: 	NextAction() action.<b>Action</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

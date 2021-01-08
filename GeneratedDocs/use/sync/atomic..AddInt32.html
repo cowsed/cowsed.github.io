@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: sync/atomic.AddInt32</title>
+<link href="../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../pkg/sync/atomic.html">sync/atomic</a>.<a href="../../src/sync/atomic/doc.go.html#line-93">AddInt32</a></b></span>
+
+9 uses:
+
+	sync/atomic <i>(current package)</i>
+		<a href="../../src/sync/atomic/doc.go.html#line-93">doc.go#L93</a>: func <b>AddInt32</b>(addr *int32, delta int32) (new int32)
+
+	<a href="../../pkg/sync.html">sync</a>
+		<a href="../../src/sync/mutex.go.html#line-158">mutex.go#L158</a>: 				atomic.<b>AddInt32</b>(&m.state, delta)
+		<a href="../../src/sync/mutex.go.html#line-186" class="path-duplicate">mutex.go</a><a href="../../src/sync/mutex.go.html#line-186">#L186</a>: 	new := atomic.<b>AddInt32</b>(&m.state, -mutexLocked)
+		<a href="../../src/sync/rwmutex.go.html#line-48">rwmutex.go#L48</a>: 	if atomic.<b>AddInt32</b>(&rw.readerCount, 1) < 0 {
+		<a href="../../src/sync/rwmutex.go.html#line-68" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-68">#L68</a>: 	if r := atomic.<b>AddInt32</b>(&rw.readerCount, -1); r < 0 {
+		<a href="../../src/sync/rwmutex.go.html#line-83" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-83">#L83</a>: 	if atomic.<b>AddInt32</b>(&rw.readerWait, -1) == 0 {
+		<a href="../../src/sync/rwmutex.go.html#line-100" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-100">#L100</a>: 	r := atomic.<b>AddInt32</b>(&rw.readerCount, -rwmutexMaxReaders) + rwmutexMaxReaders
+		<a href="../../src/sync/rwmutex.go.html#line-102" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-102">#L102</a>: 	if r != 0 &amp;&amp; atomic.<b>AddInt32</b>(&rw.readerWait, r) != 0 {
+		<a href="../../src/sync/rwmutex.go.html#line-126" class="path-duplicate">rwmutex.go</a><a href="../../src/sync/rwmutex.go.html#line-126">#L126</a>: 	r := atomic.<b>AddInt32</b>(&rw.readerCount, rwmutexMaxReaders)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

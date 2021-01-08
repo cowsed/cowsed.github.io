@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.byte</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-byte">byte</a></b></span>
+
+940 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/format.go.html#line-51">format.go#L51</a>: 	intbuf [68]<b>byte</b>
+		<a href="../src/fmt/format.go.html#line-77" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-77">#L77</a>: 	padByte := <b>byte</b>(' ')
+		<a href="../src/fmt/format.go.html#line-79" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-79">#L79</a>: 		padByte = <b>byte</b>('0')
+		<a href="../src/fmt/format.go.html#line-90" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-90">#L90</a>: func (f *fmt) pad(b []<b>byte</b>) {
+		<a href="../src/fmt/format.go.html#line-147" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-147">#L147</a>: 			buf = make([]<b>byte</b>, width)
+		<a href="../src/fmt/format.go.html#line-208" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-208">#L208</a>: 			buf = make([]<b>byte</b>, width)
+		<a href="../src/fmt/format.go.html#line-244" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-244">#L244</a>: 			buf[i] = <b>byte</b>('0' + u - next*10)
+		<a href="../src/fmt/format.go.html#line-256" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-256">#L256</a>: 			buf[i] = <b>byte</b>('0' + u&7)
+		<a href="../src/fmt/format.go.html#line-262" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-262">#L262</a>: 			buf[i] = <b>byte</b>('0' + u&1)
+		<a href="../src/fmt/format.go.html#line-338" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-338">#L338</a>: func (f *fmt) truncate(b []<b>byte</b>) []<b>byte</b> {
+		<a href="../src/fmt/format.go.html#line-363" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-363">#L363</a>: func (f *fmt) fmtBs(b []<b>byte</b>) {
+		<a href="../src/fmt/format.go.html#line-369" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-369">#L369</a>: func (f *fmt) fmtSbx(s string, b []<b>byte</b>, digits string) {
+		<a href="../src/fmt/format.go.html#line-409" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-409">#L409</a>: 	var c <b>byte</b>
+		<a href="../src/fmt/format.go.html#line-440" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-440">#L440</a>: func (f *fmt) fmtBx(b []<b>byte</b>, digits string) {
+		<a href="../src/fmt/format.go.html#line-496" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-496">#L496</a>: 	num := strconv.AppendFloat(f.intbuf[:1], v, <b>byte</b>(verb), prec, size)
+		<a href="../src/fmt/format.go.html#line-535" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-535">#L535</a>: 		var tailBuf [6]<b>byte</b>
+		<a href="../src/fmt/print.go.html#line-40">print.go#L40</a>: 	Write(b []<b>byte</b>) (n int, err error)
+		<a href="../src/fmt/print.go.html#line-75" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-75">#L75</a>: type buffer []<b>byte</b>
+		<a href="../src/fmt/print.go.html#line-77" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-77">#L77</a>: func (b *buffer) write(p []<b>byte</b>) {
+		<a href="../src/fmt/print.go.html#line-85" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-85">#L85</a>: func (b *buffer) writeByte(c <b>byte</b>) {
+		<a href="../src/fmt/print.go.html#line-91" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-91">#L91</a>: 		*bp = append(*bp, <b>byte</b>(r))
+		<a href="../src/fmt/print.go.html#line-186" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-186">#L186</a>: func (p *pp) Write(b []<b>byte</b>) (ret int, err error) {
+		<a href="../src/fmt/print.go.html#line-462" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-462">#L462</a>: func (p *pp) fmtBytes(v []<b>byte</b>, verb rune, typeString string) {
+		<a href="../src/fmt/print.go.html#line-699" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-699">#L699</a>: 	case []<b>byte</b>:
+		<a href="../src/fmt/print.go.html#line-831" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-831">#L831</a>: 				var bytes []<b>byte</b>
+		<a href="../src/fmt/print.go.html#line-840" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-840">#L840</a>: 					bytes = make([]<b>byte</b>, f.Len())
+		<a href="../src/fmt/print.go.html#line-842" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-842">#L842</a>: 						bytes[i] = <b>byte</b>(f.Index(i).Uint())
+		<a href="../src/fmt/scan.go.html#line-41">scan.go#L41</a>: 	Token(skipSpace bool, f func(rune) bool) (token []<b>byte</b>, err error)
+		<a href="../src/fmt/scan.go.html#line-48" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-48">#L48</a>: 	Read(buf []<b>byte</b>) (n int, err error)
+		<a href="../src/fmt/scan.go.html#line-86" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-86">#L86</a>: func (r *stringReader) Read(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/fmt/scan.go.html#line-179" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-179">#L179</a>: func (s *ss) Read(buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/fmt/scan.go.html#line-247" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-247">#L247</a>: func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []<b>byte</b>, err error) {
+		<a href="../src/fmt/scan.go.html#line-306" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-306">#L306</a>: 	buf      [utf8.UTFMax]<b>byte</b> // used only inside ReadRune
+		<a href="../src/fmt/scan.go.html#line-308" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-308">#L308</a>: 	pendBuf  [utf8.UTFMax]<b>byte</b> // bytes left over
+		<a href="../src/fmt/scan.go.html#line-314" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-314">#L314</a>: func (r *readRune) readByte() (b <b>byte</b>, err error) {
+		<a href="../src/fmt/scan.go.html#line-446" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-446">#L446</a>: func (s *ss) token(skipSpace bool, f func(rune) bool) []<b>byte</b> {
+		<a href="../src/fmt/scan.go.html#line-899" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-899">#L899</a>: func (s *ss) hexByte() (b <b>byte</b>, ok bool) {
+		<a href="../src/fmt/scan.go.html#line-914" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-914">#L914</a>: 	return <b>byte</b>(value1<<4 | value2), true
+		<a href="../src/fmt/scan.go.html#line-1013" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1013">#L1013</a>: 	case *[]<b>byte</b>:
+		<a href="../src/fmt/scan.go.html#line-1016" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1016">#L1016</a>: 		*v = []<b>byte</b>(s.convertString(verb))
+
+	<a href="../pkg/internal/bytealg.html">internal/bytealg</a>
+		<a href="../src/internal/bytealg/bytealg.go.html#line-35">bytealg.go#L35</a>: func HashStrBytes(sep []<b>byte</b>) (uint32, uint32) {
+		<a href="../src/internal/bytealg/bytealg.go.html#line-69" class="path-duplicate">bytealg.go</a><a href="../src/internal/bytealg/bytealg.go.html#line-69">#L69</a>: func HashStrRevBytes(sep []<b>byte</b>) (uint32, uint32) {
+		<a href="../src/internal/bytealg/bytealg.go.html#line-103" class="path-duplicate">bytealg.go</a><a href="../src/internal/bytealg/bytealg.go.html#line-103">#L103</a>: func IndexRabinKarpBytes(s, sep []<b>byte</b>) int {
+		<a href="../src/internal/bytealg/compare_native.go.html#line-12">compare_native.go#L12</a>: func Compare(a, b []<b>byte</b>) int
+		<a href="../src/internal/bytealg/count_native.go.html#line-10">count_native.go#L10</a>: func Count(b []<b>byte</b>, c <b>byte</b>) int
+		<a href="../src/internal/bytealg/count_native.go.html#line-13" class="path-duplicate">count_native.go</a><a href="../src/internal/bytealg/count_native.go.html#line-13">#L13</a>: func CountString(s string, c <b>byte</b>) int
+		<a href="../src/internal/bytealg/count_native.go.html#line-16" class="path-duplicate">count_native.go</a><a href="../src/internal/bytealg/count_native.go.html#line-16">#L16</a>: func countGeneric(b []<b>byte</b>, c <b>byte</b>) int {
+		<a href="../src/internal/bytealg/count_native.go.html#line-25" class="path-duplicate">count_native.go</a><a href="../src/internal/bytealg/count_native.go.html#line-25">#L25</a>: func countGenericString(s string, c <b>byte</b>) int {
+		<a href="../src/internal/bytealg/equal_generic.go.html#line-14">equal_generic.go#L14</a>: func Equal(a, b []<b>byte</b>) bool {
+		<a href="../src/internal/bytealg/index_native.go.html#line-13">index_native.go#L13</a>: func Index(a, b []<b>byte</b>) int
+		<a href="../src/internal/bytealg/indexbyte_native.go.html#line-10">indexbyte_native.go#L10</a>: func IndexByte(b []<b>byte</b>, c <b>byte</b>) int
+		<a href="../src/internal/bytealg/indexbyte_native.go.html#line-13" class="path-duplicate">indexbyte_native.go</a><a href="../src/internal/bytealg/indexbyte_native.go.html#line-13">#L13</a>: func IndexByteString(s string, c <b>byte</b>) int
+
+	<a href="../pkg/internal/cpu.html">internal/cpu</a>
+		<a href="../src/internal/cpu/cpu.go.html#line-15">cpu.go#L15</a>: type CacheLinePad struct{ _ [CacheLinePadSize]<b>byte</b> }
+		<a href="../src/internal/cpu/cpu.go.html#line-234" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-234">#L234</a>: func indexByte(s string, c <b>byte</b>) int {
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/fd.go.html#line-58">fd.go#L58</a>: func consume(v *[][]<b>byte</b>, n int64) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-135">fd_unix.go#L135</a>: func (fd *FD) Read(p []<b>byte</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-170" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-170">#L170</a>: func (fd *FD) Pread(p []<b>byte</b>, off int64) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-199" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-199">#L199</a>: func (fd *FD) ReadFrom(p []<b>byte</b>) (int, syscall.Sockaddr, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-226" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-226">#L226</a>: func (fd *FD) ReadMsg(p []<b>byte</b>, oob []<b>byte</b>) (int, int, int, syscall.Sockaddr, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-253" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-253">#L253</a>: func (fd *FD) Write(p []<b>byte</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-289" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-289">#L289</a>: func (fd *FD) Pwrite(p []<b>byte</b>, off int64) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-323" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-323">#L323</a>: func (fd *FD) WriteTo(p []<b>byte</b>, sa syscall.Sockaddr) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-349" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-349">#L349</a>: func (fd *FD) WriteMsg(p []<b>byte</b>, oob []<b>byte</b>, sa syscall.Sockaddr) (int, int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-420" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-420">#L420</a>: func (fd *FD) ReadDirent(buf []<b>byte</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-512" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-512">#L512</a>: func (fd *FD) WriteOnce(p []<b>byte</b>) (int, error) {
+		<a href="../src/internal/poll/sockopt.go.html#line-21">sockopt.go#L21</a>: func (fd *FD) SetsockoptInet4Addr(level, name int, arg [4]<b>byte</b>) error {
+		<a href="../src/internal/poll/sockopt_unix.go.html#line-12">sockopt_unix.go#L12</a>: func (fd *FD) SetsockoptByte(level, name int, arg <b>byte</b>) error {
+		<a href="../src/internal/poll/writev.go.html#line-15">writev.go#L15</a>: func (fd *FD) Writev(v *[][]<b>byte</b>) (int64, error) {
+
+	<a href="../pkg/internal/reflectlite.html">internal/reflectlite</a>
+		<a href="../src/internal/reflectlite/type.go.html#line-162">type.go#L162</a>: 	gcdata    *<b>byte</b>   // garbage collection data
+		<a href="../src/internal/reflectlite/type.go.html#line-313" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-313">#L313</a>: 	bytes *<b>byte</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-316" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-316">#L316</a>: func (n name) data(off int, whySafe string) *<b>byte</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-317" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-317">#L317</a>: 	return (*<b>byte</b>)(add(unsafe.Pointer(n.bytes), uintptr(off), whySafe))
+		<a href="../src/internal/reflectlite/type.go.html#line-340" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-340">#L340</a>: 	b := (*[4]<b>byte</b>)(unsafe.Pointer(n.bytes))
+		<a href="../src/internal/reflectlite/type.go.html#line-371" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-371">#L371</a>: 	copy((*[4]<b>byte</b>)(unsafe.Pointer(&amp;nameOff))[:], (*[4]<b>byte</b>)(unsafe.Pointer(n.data(off, "name offset field")))[:])
+		<a href="../src/internal/reflectlite/type.go.html#line-372" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-372">#L372</a>: 	pkgPathName := name{(*<b>byte</b>)(resolveTypeOff(unsafe.Pointer(n.bytes), nameOff))}
+		<a href="../src/internal/reflectlite/type.go.html#line-416" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-416">#L416</a>: 	return name{(*<b>byte</b>)(resolveNameOff(unsafe.Pointer(t), int32(off)))}
+
+	<a href="../pkg/internal/syscall/unix.html">internal/syscall/unix</a>
+		<a href="../src/internal/syscall/unix/at.go.html#line-15">at.go#L15</a>: 	var p *<b>byte</b>
+		<a href="../src/internal/syscall/unix/at.go.html#line-30" class="path-duplicate">at.go</a><a href="../src/internal/syscall/unix/at.go.html#line-30">#L30</a>: 	var p *<b>byte</b>
+		<a href="../src/internal/syscall/unix/at.go.html#line-45" class="path-duplicate">at.go</a><a href="../src/internal/syscall/unix/at.go.html#line-45">#L45</a>: 	var p *<b>byte</b>
+		<a href="../src/internal/syscall/unix/getrandom_linux.go.html#line-28">getrandom_linux.go#L28</a>: func GetRandom(p []<b>byte</b>, flags GetRandomFlag) (n int, err error) {
+
+	<a href="../pkg/io.html">io</a>
+		<a href="../src/io/io.go.html#line-78">io.go#L78</a>: 	Read(p []<b>byte</b>) (n int, err error)
+		<a href="../src/io/io.go.html#line-91" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-91">#L91</a>: 	Write(p []<b>byte</b>) (n int, err error)
+		<a href="../src/io/io.go.html#line-212" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-212">#L212</a>: 	ReadAt(p []<b>byte</b>, off int64) (n int, err error)
+		<a href="../src/io/io.go.html#line-231" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-231">#L231</a>: 	WriteAt(p []<b>byte</b>, off int64) (n int, err error)
+		<a href="../src/io/io.go.html#line-244" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-244">#L244</a>: 	ReadByte() (<b>byte</b>, error)
+		<a href="../src/io/io.go.html#line-261" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-261">#L261</a>: 	WriteByte(c <b>byte</b>) error
+		<a href="../src/io/io.go.html#line-297" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-297">#L297</a>: 	return w.Write([]<b>byte</b>(s))
+		<a href="../src/io/io.go.html#line-308" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-308">#L308</a>: func ReadAtLeast(r Reader, buf []<b>byte</b>, min int) (n int, err error) {
+		<a href="../src/io/io.go.html#line-332" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-332">#L332</a>: func ReadFull(r Reader, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/io.go.html#line-378" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-378">#L378</a>: func CopyBuffer(dst Writer, src Reader, buf []<b>byte</b>) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-387" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-387">#L387</a>: func copyBuffer(dst Writer, src Reader, buf []<b>byte</b>) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-406" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-406">#L406</a>: 		buf = make([]<b>byte</b>, size)
+		<a href="../src/io/io.go.html#line-448" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-448">#L448</a>: func (l *LimitedReader) Read(p []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/io.go.html#line-475" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-475">#L475</a>: func (s *SectionReader) Read(p []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/io.go.html#line-508" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-508">#L508</a>: func (s *SectionReader) ReadAt(p []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/io/io.go.html#line-541" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-541">#L541</a>: func (t *teeReader) Read(p []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/multi.go.html#line-9">multi.go#L9</a>: func (eofReader) Read([]<b>byte</b>) (int, error) {
+		<a href="../src/io/multi.go.html#line-17" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-17">#L17</a>: func (mr *multiReader) Read(p []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/multi.go.html#line-58" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-58">#L58</a>: func (t *multiWriter) Write(p []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/multi.go.html#line-75" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-75">#L75</a>: 	var p []<b>byte</b> // lazily initialized if/when needed
+		<a href="../src/io/multi.go.html#line-81" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-81">#L81</a>: 				p = []<b>byte</b>(s)
+		<a href="../src/io/pipe.go.html#line-41">pipe.go#L41</a>: 	wrCh chan []<b>byte</b>
+		<a href="../src/io/pipe.go.html#line-50" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-50">#L50</a>: func (p *pipe) Read(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/pipe.go.html#line-84" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-84">#L84</a>: func (p *pipe) Write(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/pipe.go.html#line-133" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-133">#L133</a>: func (r *PipeReader) Read(data []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/pipe.go.html#line-162" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-162">#L162</a>: func (w *PipeWriter) Write(data []<b>byte</b>) (n int, err error) {
+		<a href="../src/io/pipe.go.html#line-199" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-199">#L199</a>: 		wrCh: make(chan []<b>byte</b>),
+
+	<a href="../pkg/math/bits.html">math/bits</a>
+		<a href="../src/math/bits/bits.go.html#line-38">bits.go#L38</a>: var deBruijn32tab = [32]<b>byte</b>{
+		<a href="../src/math/bits/bits.go.html#line-45" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-45">#L45</a>: var deBruijn64tab = [64]<b>byte</b>{
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/dir_unix.go.html#line-17">dir_unix.go#L17</a>: 	buf  []<b>byte</b> // buffer for directory I/O
+		<a href="../src/os/dir_unix.go.html#line-34" class="path-duplicate">dir_unix.go</a><a href="../src/os/dir_unix.go.html#line-34">#L34</a>: 		f.dirinfo.buf = make([]<b>byte</b>, blockSize)
+		<a href="../src/os/env.go.html#line-17">env.go#L17</a>: 	var buf []<b>byte</b>
+		<a href="../src/os/env.go.html#line-23" class="path-duplicate">env.go</a><a href="../src/os/env.go.html#line-23">#L23</a>: 				buf = make([]<b>byte</b>, 0, 2*len(s))
+		<a href="../src/os/file.go.html#line-112">file.go#L112</a>: func (f *File) Read(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/os/file.go.html#line-124" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-124">#L124</a>: func (f *File) ReadAt(b []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/os/file.go.html#line-169" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-169">#L169</a>: func (f *File) Write(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/os/file.go.html#line-197" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-197">#L197</a>: func (f *File) WriteAt(b []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/os/file.go.html#line-248" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-248">#L248</a>: 	return f.Write([]<b>byte</b>(s))
+		<a href="../src/os/file_posix.go.html#line-30">file_posix.go#L30</a>: func (f *File) read(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/os/file_posix.go.html#line-39" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-39">#L39</a>: func (f *File) pread(b []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/os/file_posix.go.html#line-47" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-47">#L47</a>: func (f *File) write(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/os/file_posix.go.html#line-55" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-55">#L55</a>: func (f *File) pwrite(b []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/os/file_unix.go.html#line-367">file_unix.go#L367</a>: 		b := make([]<b>byte</b>, len)
+		<a href="../src/os/str.go.html#line-22">str.go#L22</a>: 	var buf [20]<b>byte</b> // big enough for 64bit value base 10
+		<a href="../src/os/str.go.html#line-26" class="path-duplicate">str.go</a><a href="../src/os/str.go.html#line-26">#L26</a>: 		buf[i] = <b>byte</b>('0' + val - q*10)
+		<a href="../src/os/str.go.html#line-31" class="path-duplicate">str.go</a><a href="../src/os/str.go.html#line-31">#L31</a>: 	buf[i] = <b>byte</b>('0' + val)
+		<a href="../src/os/sys_linux.go.html#line-18">sys_linux.go#L18</a>: 	var buf [512]<b>byte</b> // Enough for a DNS name.
+		<a href="../src/os/types.go.html#line-67">types.go#L67</a>: 	var buf [32]<b>byte</b> // Mode is uint32.
+		<a href="../src/os/types.go.html#line-71" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-71">#L71</a>: 			buf[w] = <b>byte</b>(c)
+		<a href="../src/os/types.go.html#line-82" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-82">#L82</a>: 			buf[w] = <b>byte</b>(c)
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-314">type.go#L314</a>: 	gcdata    *<b>byte</b>   // garbage collection data
+		<a href="../src/reflect/type.go.html#line-465" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-465">#L465</a>: 	bytes *<b>byte</b>
+		<a href="../src/reflect/type.go.html#line-468" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-468">#L468</a>: func (n name) data(off int, whySafe string) *<b>byte</b> {
+		<a href="../src/reflect/type.go.html#line-469" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-469">#L469</a>: 	return (*<b>byte</b>)(add(unsafe.Pointer(n.bytes), uintptr(off), whySafe))
+		<a href="../src/reflect/type.go.html#line-492" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-492">#L492</a>: 	b := (*[4]<b>byte</b>)(unsafe.Pointer(n.bytes))
+		<a href="../src/reflect/type.go.html#line-523" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-523">#L523</a>: 	copy((*[4]<b>byte</b>)(unsafe.Pointer(&amp;nameOff))[:], (*[4]<b>byte</b>)(unsafe.Pointer(n.data(off, "name offset field")))[:])
+		<a href="../src/reflect/type.go.html#line-524" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-524">#L524</a>: 	pkgPathName := name{(*<b>byte</b>)(resolveTypeOff(unsafe.Pointer(n.bytes), nameOff))}
+		<a href="../src/reflect/type.go.html#line-536" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-536">#L536</a>: 	var bits <b>byte</b>
+		<a href="../src/reflect/type.go.html#line-546" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-546">#L546</a>: 	b := make([]<b>byte</b>, l)
+		<a href="../src/reflect/type.go.html#line-684" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-684">#L684</a>: 	return name{(*<b>byte</b>)(resolveNameOff(unsafe.Pointer(t), int32(off)))}
+		<a href="../src/reflect/type.go.html#line-1424" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1424">#L1424</a>: func fnv1(x uint32, list ...<b>byte</b>) uint32 {
+		<a href="../src/reflect/type.go.html#line-1819" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1819">#L1819</a>: 	ch.hash = fnv1(typ.hash, 'c', <b>byte</b>(dir))
+		<a href="../src/reflect/type.go.html#line-1863" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1863">#L1863</a>: 	mt.hash = fnv1(etyp.hash, 'm', <b>byte</b>(ktyp.hash&gt;&gt;24), <b>byte</b>(ktyp.hash&gt;&gt;16), <b>byte</b>(ktyp.hash&gt;&gt;8), <b>byte</b>(ktyp.hash))
+		<a href="../src/reflect/type.go.html#line-1980" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1980">#L1980</a>: 		hash = fnv1(hash, <b>byte</b>(t.hash&gt;&gt;24), <b>byte</b>(t.hash&gt;&gt;16), <b>byte</b>(t.hash&gt;&gt;8), <b>byte</b>(t.hash))
+		<a href="../src/reflect/type.go.html#line-1989" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1989">#L1989</a>: 		hash = fnv1(hash, <b>byte</b>(t.hash&gt;&gt;24), <b>byte</b>(t.hash&gt;&gt;16), <b>byte</b>(t.hash&gt;&gt;8), <b>byte</b>(t.hash))
+		<a href="../src/reflect/type.go.html#line-2047" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2047">#L2047</a>: 	repr := make([]<b>byte</b>, 0, 64)
+		<a href="../src/reflect/type.go.html#line-2175" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2175">#L2175</a>: 	var gcdata *<b>byte</b>
+		<a href="../src/reflect/type.go.html#line-2186" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2186">#L2186</a>: 		mask := make([]<b>byte</b>, (nptr+7)/8)
+		<a href="../src/reflect/type.go.html#line-2226" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2226">#L2226</a>: func (t *rtype) gcSlice(begin, end uintptr) []<b>byte</b> {
+		<a href="../src/reflect/type.go.html#line-2227" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2227">#L2227</a>: 	return (*[1 &lt;&lt; 30]<b>byte</b>)(unsafe.Pointer(t.gcdata))[begin:end:end]
+		<a href="../src/reflect/type.go.html#line-2232" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2232">#L2232</a>: func emitGCMask(out []<b>byte</b>, base uintptr, typ *rtype, n uintptr) {
+		<a href="../src/reflect/type.go.html#line-2251" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2251">#L2251</a>: func appendGCProg(dst []<b>byte</b>, typ *rtype) []<b>byte</b> {
+		<a href="../src/reflect/type.go.html#line-2270" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2270">#L2270</a>: 	dst = append(dst, <b>byte</b>(ptrs))
+		<a href="../src/reflect/type.go.html#line-2360" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2360">#L2360</a>: 		hash       = fnv1(0, []<b>byte</b>("struct {")...)
+		<a href="../src/reflect/type.go.html#line-2367" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2367">#L2367</a>: 		repr = make([]<b>byte</b>, 0, 64)
+		<a href="../src/reflect/type.go.html#line-2401" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2401">#L2401</a>: 		hash = fnv1(hash, []<b>byte</b>(name)...)
+		<a href="../src/reflect/type.go.html#line-2546" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2546">#L2546</a>: 		hash = fnv1(hash, <b>byte</b>(ft.hash&gt;&gt;24), <b>byte</b>(ft.hash&gt;&gt;16), <b>byte</b>(ft.hash&gt;&gt;8), <b>byte</b>(ft.hash))
+		<a href="../src/reflect/type.go.html#line-2550" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2550">#L2550</a>: 			hash = fnv1(hash, []<b>byte</b>(f.name.tag())...)
+		<a href="../src/reflect/type.go.html#line-2693" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2693">#L2693</a>: 		prog := []<b>byte</b>{0, 0, 0, 0} // will be length of prog
+		<a href="../src/reflect/type.go.html#line-2849" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2849">#L2849</a>: 		array.hash = fnv1(array.hash, <b>byte</b>(n))
+		<a href="../src/reflect/type.go.html#line-2885" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2885">#L2885</a>: 		mask := make([]<b>byte</b>, (array.ptrdata/ptrSize+7)/8)
+		<a href="../src/reflect/type.go.html#line-2892" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2892">#L2892</a>: 		prog := []<b>byte</b>{0, 0, 0, 0} // will be length of prog
+		<a href="../src/reflect/type.go.html#line-2907" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2907">#L2907</a>: 			prog = append(prog, <b>byte</b>(elemWords|0x80))
+		<a href="../src/reflect/type.go.html#line-2950" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2950">#L2950</a>: func appendVarint(x []<b>byte</b>, v uintptr) []<b>byte</b> {
+		<a href="../src/reflect/type.go.html#line-2952" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2952">#L2952</a>: 		x = append(x, <b>byte</b>(v|0x80))
+		<a href="../src/reflect/type.go.html#line-2954" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2954">#L2954</a>: 	x = append(x, <b>byte</b>(v))
+		<a href="../src/reflect/type.go.html#line-3074" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3074">#L3074</a>: 	data []<b>byte</b>
+		<a href="../src/reflect/value.go.html#line-206">value.go#L206</a>: 		_    [4]<b>byte</b>
+		<a href="../src/reflect/value.go.html#line-288" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-288">#L288</a>: func (v Value) Bytes() []<b>byte</b> {
+		<a href="../src/reflect/value.go.html#line-294" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-294">#L294</a>: 	return *(*[]<b>byte</b>)(v.ptr)
+		<a href="../src/reflect/value.go.html#line-1582" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1582">#L1582</a>: func (v Value) SetBytes(x []<b>byte</b>) {
+		<a href="../src/reflect/value.go.html#line-1588" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1588">#L1588</a>: 	*(*[]<b>byte</b>)(v.ptr) = x
+		<a href="../src/reflect/value.go.html#line-2601" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2601">#L2601</a>: func makeBytes(f flag, v []<b>byte</b>, t Type) Value {
+		<a href="../src/reflect/value.go.html#line-2683" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2683">#L2683</a>: 	return makeBytes(v.flag.ro(), []<b>byte</b>(v.String()), t)
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/alg.go.html#line-316">alg.go#L316</a>: func bytesHash(b []<b>byte</b>, seed uintptr) uintptr {
+		<a href="../src/runtime/alg.go.html#line-342" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-342">#L342</a>: var aeskeysched [hashRandomBytes]<b>byte</b>
+		<a href="../src/runtime/alg.go.html#line-360" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-360">#L360</a>: 	getRandomData((*[len(hashkey) * sys.PtrSize]<b>byte</b>)(unsafe.Pointer(&hashkey))[:])
+		<a href="../src/runtime/alg.go.html#line-375" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-375">#L375</a>: 	q := (*[4]<b>byte</b>)(p)
+		<a href="../src/runtime/alg.go.html#line-383" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-383">#L383</a>: 	q := (*[8]<b>byte</b>)(p)
+		<a href="../src/runtime/cgocallback.go.html#line-11">cgocallback.go#L11</a>: func _cgo_panic_internal(p *<b>byte</b>) {
+		<a href="../src/runtime/cgocheck.go.html#line-171">cgocheck.go#L171</a>: func cgoCheckBits(src unsafe.Pointer, gcbits *<b>byte</b>, off, size uintptr) {
+		<a href="../src/runtime/cpuprof.go.html#line-188">cpuprof.go#L188</a>: func CPUProfile() []<b>byte</b> {
+		<a href="../src/runtime/debuglog.go.html#line-304">debuglog.go#L304</a>: 		var b []<b>byte</b>
+		<a href="../src/runtime/debuglog.go.html#line-374" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-374">#L374</a>: 	buf [10]<b>byte</b>
+		<a href="../src/runtime/debuglog.go.html#line-378" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-378">#L378</a>: type debugLogBuf [debugLogBytes]<b>byte</b>
+		<a href="../src/runtime/debuglog.go.html#line-425" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-425">#L425</a>: 	var b [8]<b>byte</b>
+		<a href="../src/runtime/debuglog.go.html#line-426" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-426">#L426</a>: 	b[0] = <b>byte</b>(x)
+		<a href="../src/runtime/debuglog.go.html#line-427" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-427">#L427</a>: 	b[1] = <b>byte</b>(x >> 8)
+		<a href="../src/runtime/debuglog.go.html#line-428" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-428">#L428</a>: 	b[2] = <b>byte</b>(x >> 16)
+		<a href="../src/runtime/debuglog.go.html#line-429" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-429">#L429</a>: 	b[3] = <b>byte</b>(x >> 24)
+		<a href="../src/runtime/debuglog.go.html#line-430" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-430">#L430</a>: 	b[4] = <b>byte</b>(x >> 32)
+		<a href="../src/runtime/debuglog.go.html#line-431" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-431">#L431</a>: 	b[5] = <b>byte</b>(x >> 40)
+		<a href="../src/runtime/debuglog.go.html#line-432" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-432">#L432</a>: 	b[6] = <b>byte</b>(x >> 48)
+		<a href="../src/runtime/debuglog.go.html#line-433" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-433">#L433</a>: 	b[7] = <b>byte</b>(x >> 56)
+		<a href="../src/runtime/debuglog.go.html#line-438" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-438">#L438</a>: func (l *debugLogWriter) byte(x <b>byte</b>) {
+		<a href="../src/runtime/debuglog.go.html#line-446" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-446">#L446</a>: func (l *debugLogWriter) bytes(x []<b>byte</b>) {
+		<a href="../src/runtime/debuglog.go.html#line-472" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-472">#L472</a>: 		l.buf[i] = <b>byte</b>(u) | 0x80
+		<a href="../src/runtime/debuglog.go.html#line-476" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-476">#L476</a>: 	l.buf[i] = <b>byte</b>(u)
+		<a href="../src/runtime/debuglog.go.html#line-520" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-520">#L520</a>: 	var b [8]<b>byte</b>
+		<a href="../src/runtime/debuglog.go.html#line-770" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-770">#L770</a>: 		var tmpbuf [21]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-139">defs_linux_amd64.go#L139</a>: 	data   [8]<b>byte</b> // unaligned uintptr
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-209" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-209">#L209</a>: 	ss_sp     *<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-211" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-211">#L211</a>: 	pad_cgo_0 [4]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-263" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-263">#L263</a>: 	path   [108]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-269" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-269">#L269</a>: 	sysname    [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-270" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-270">#L270</a>: 	nodename   [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-271" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-271">#L271</a>: 	release    [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-272" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-272">#L272</a>: 	version    [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-273" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-273">#L273</a>: 	machine    [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-274" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-274">#L274</a>: 	domainname [__NEW_UTS_LEN + 1]<b>byte</b>
+		<a href="../src/runtime/env_posix.go.html#line-40">env_posix.go#L40</a>: func lowerASCII(c <b>byte</b>) <b>byte</b> {
+		<a href="../src/runtime/env_posix.go.html#line-73" class="path-duplicate">env_posix.go</a><a href="../src/runtime/env_posix.go.html#line-73">#L73</a>: 	p := make([]<b>byte</b>, len(s)+1)
+		<a href="../src/runtime/error.go.html#line-60">error.go#L60</a>: func itoa(buf []<b>byte</b>, val uint64) []<b>byte</b> {
+		<a href="../src/runtime/error.go.html#line-63" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-63">#L63</a>: 		buf[i] = <b>byte</b>(val%10 + '0')
+		<a href="../src/runtime/error.go.html#line-67" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-67">#L67</a>: 	buf[i] = <b>byte</b>(val + '0')
+		<a href="../src/runtime/error.go.html#line-148" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-148">#L148</a>: func appendIntStr(b []<b>byte</b>, v int64, signed bool) []<b>byte</b> {
+		<a href="../src/runtime/error.go.html#line-153" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-153">#L153</a>: 	var buf [20]<b>byte</b>
+		<a href="../src/runtime/error.go.html#line-165" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-165">#L165</a>: 	b := make([]<b>byte</b>, 0, 100)
+		<a href="../src/runtime/hash64.go.html#line-29">hash64.go#L29</a>: 		h ^= uint64(*(*<b>byte</b>)(p))
+		<a href="../src/runtime/hash64.go.html#line-30" class="path-duplicate">hash64.go</a><a href="../src/runtime/hash64.go.html#line-30">#L30</a>: 		h ^= uint64(*(*<b>byte</b>)(add(p, s>>1))) << 8
+		<a href="../src/runtime/hash64.go.html#line-31" class="path-duplicate">hash64.go</a><a href="../src/runtime/hash64.go.html#line-31">#L31</a>: 		h ^= uint64(*(*<b>byte</b>)(add(p, s-1))) << 16
+		<a href="../src/runtime/heapdump.go.html#line-56">heapdump.go#L56</a>: var tmpbuf []<b>byte</b>
+		<a href="../src/runtime/heapdump.go.html#line-63" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-63">#L63</a>: var buf [bufSize]<b>byte</b>
+		<a href="../src/runtime/heapdump.go.html#line-71" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-71">#L71</a>: 		copy(buf[nbuf:], (*[bufSize]<b>byte</b>)(data)[:len])
+		<a href="../src/runtime/heapdump.go.html#line-81" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-81">#L81</a>: 		copy(buf[:], (*[bufSize]<b>byte</b>)(data)[:len])
+		<a href="../src/runtime/heapdump.go.html#line-86" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-86">#L86</a>: func dwritebyte(b <b>byte</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-114" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-114">#L114</a>: 	var buf [10]<b>byte</b>
+		<a href="../src/runtime/heapdump.go.html#line-117" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-117">#L117</a>: 		buf[n] = <b>byte</b>(v | 0x80)
+		<a href="../src/runtime/heapdump.go.html#line-121" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-121">#L121</a>: 	buf[n] = <b>byte</b>(v)
+		<a href="../src/runtime/heapdump.go.html#line-140" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-140">#L140</a>: func dumpslice(b []<b>byte</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-490" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-490">#L490</a>: 	if *(*<b>byte</b>)(unsafe.Pointer(&x)) == 1 {
+		<a href="../src/runtime/heapdump.go.html#line-584" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-584">#L584</a>: 			var buf [64]<b>byte</b>
+		<a href="../src/runtime/heapdump.go.html#line-640" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-640">#L640</a>: var dumphdr = []<b>byte</b>("go1.7 heap dump\n")
+		<a href="../src/runtime/heapdump.go.html#line-707" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-707">#L707</a>: 		tmpbuf = (*[1 &lt;&lt; 30]<b>byte</b>)(p)[:n]
+		<a href="../src/runtime/iface.go.html#line-294">iface.go#L294</a>: 	sliceInterfacePtr  []<b>byte</b>
+		<a href="../src/runtime/iface.go.html#line-380" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-380">#L380</a>: func convTslice(val []<b>byte</b>) (x unsafe.Pointer) {
+		<a href="../src/runtime/iface.go.html#line-386" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-386">#L386</a>: 		*(*[]<b>byte</b>)(x) = val
+		<a href="../src/runtime/map.go.html#line-1375">map.go#L1375</a>: var zeroVal [maxZero]<b>byte</b>
+		<a href="../src/runtime/map_faststr.go.html#line-57">map_faststr.go#L57</a>: 			if *((*[4]<b>byte</b>)(key.str)) != *((*[4]<b>byte</b>)(k.str)) {
+		<a href="../src/runtime/map_faststr.go.html#line-61" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-61">#L61</a>: 			if *((*[4]<b>byte</b>)(add(key.str, uintptr(key.len)-4))) != *((*[4]<b>byte</b>)(add(k.str, uintptr(key.len)-4))) {
+		<a href="../src/runtime/map_faststr.go.html#line-152" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-152">#L152</a>: 			if *((*[4]<b>byte</b>)(key.str)) != *((*[4]<b>byte</b>)(k.str)) {
+		<a href="../src/runtime/map_faststr.go.html#line-156" class="path-duplicate">map_faststr.go</a><a href="../src/runtime/map_faststr.go.html#line-156">#L156</a>: 			if *((*[4]<b>byte</b>)(add(key.str, uintptr(key.len)-4))) != *((*[4]<b>byte</b>)(add(k.str, uintptr(key.len)-4))) {
+		<a href="../src/runtime/mbitmap.go.html#line-98">mbitmap.go#L98</a>: func addb(p *<b>byte</b>, n uintptr) *<b>byte</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-102" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-102">#L102</a>: 	return (*<b>byte</b>)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + n))
+		<a href="../src/runtime/mbitmap.go.html#line-108" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-108">#L108</a>: func subtractb(p *<b>byte</b>, n uintptr) *<b>byte</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-112" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-112">#L112</a>: 	return (*<b>byte</b>)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) - n))
+		<a href="../src/runtime/mbitmap.go.html#line-118" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-118">#L118</a>: func add1(p *<b>byte</b>) *<b>byte</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-122" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-122">#L122</a>: 	return (*<b>byte</b>)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + 1))
+		<a href="../src/runtime/mbitmap.go.html#line-130" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-130">#L130</a>: func subtract1(p *<b>byte</b>) *<b>byte</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-134" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-134">#L134</a>: 	return (*<b>byte</b>)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) - 1))
+		<a href="../src/runtime/mbitmap.go.html#line-1009" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1009">#L1009</a>: 		p     *<b>byte</b>   // last ptrmask byte read
+		<a href="../src/runtime/mbitmap.go.html#line-1012" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1012">#L1012</a>: 		endp  *<b>byte</b>   // final ptrmask byte to read (then repeat)
+		<a href="../src/runtime/mbitmap.go.html#line-1019" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1019">#L1019</a>: 		hbitp *<b>byte</b>   // next heap bitmap byte to write
+		<a href="../src/runtime/mbitmap.go.html#line-1041" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1041">#L1041</a>: 				debugPtrmask.data = (*<b>byte</b>)(persistentalloc(1<<20, 1, &memstats.other_sys))
+		<a href="../src/runtime/mbitmap.go.html#line-1120" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1120">#L1120</a>: 				endnb = uintptr(maxBits/<b>byte</b>(nb)) * nb
+		<a href="../src/runtime/mbitmap.go.html#line-1480" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1480">#L1480</a>: 	data *<b>byte</b>
+		<a href="../src/runtime/mbitmap.go.html#line-1493" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1493">#L1493</a>: func heapBitsSetTypeGCProg(h heapBits, progSize, elemSize, dataSize, allocSize uintptr, prog *<b>byte</b>) {
+		<a href="../src/runtime/mbitmap.go.html#line-1514" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1514">#L1514</a>: 		var trailer [40]<b>byte</b> // 3 varints (max 10 each) + some bytes
+		<a href="../src/runtime/mbitmap.go.html#line-1528" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1528">#L1528</a>: 					trailer[i] = <b>byte</b>(n | 0x80)
+		<a href="../src/runtime/mbitmap.go.html#line-1531" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1531">#L1531</a>: 				trailer[i] = <b>byte</b>(n)
+		<a href="../src/runtime/mbitmap.go.html#line-1540" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1540">#L1540</a>: 			trailer[i] = <b>byte</b>(n | 0x80)
+		<a href="../src/runtime/mbitmap.go.html#line-1543" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1543">#L1543</a>: 		trailer[i] = <b>byte</b>(n)
+		<a href="../src/runtime/mbitmap.go.html#line-1547" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1547">#L1547</a>: 			trailer[i] = <b>byte</b>(n | 0x80)
+		<a href="../src/runtime/mbitmap.go.html#line-1550" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1550">#L1550</a>: 		trailer[i] = <b>byte</b>(n)
+		<a href="../src/runtime/mbitmap.go.html#line-1572" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1572">#L1572</a>: func progToPointerMask(prog *<b>byte</b>, size uintptr) bitvector {
+		<a href="../src/runtime/mbitmap.go.html#line-1574" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1574">#L1574</a>: 	x := (*[1 &lt;&lt; 30]<b>byte</b>)(persistentalloc(n+1, 1, &memstats.buckhash_sys))[:n+1]
+		<a href="../src/runtime/mbitmap.go.html#line-1605" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1605">#L1605</a>: func runGCProg(prog, trailer, dst *<b>byte</b>, size int) uintptr {
+		<a href="../src/runtime/mbitmap.go.html#line-1887" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1887">#L1887</a>: func materializeGCProg(ptrdata uintptr, prog *<b>byte</b>) *mspan {
+		<a href="../src/runtime/mbitmap.go.html#line-1893" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1893">#L1893</a>: 	runGCProg(addb(prog, 4), nil, (*<b>byte</b>)(unsafe.Pointer(s.startAddr)), 1)
+		<a href="../src/runtime/mbitmap.go.html#line-1900" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1900">#L1900</a>: func dumpGCProg(p *<b>byte</b>) {
+		<a href="../src/runtime/mbitmap.go.html#line-1959" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1959">#L1959</a>: func reflect_gcbits(x interface{}) []<b>byte</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-1972" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1972">#L1972</a>: func getgcmask(ep interface{}) (mask []<b>byte</b>) {
+		<a href="../src/runtime/mbitmap.go.html#line-1982" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1982">#L1982</a>: 			mask = make([]<b>byte</b>, n/sys.PtrSize)
+		<a href="../src/runtime/mbitmap.go.html#line-1994" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1994">#L1994</a>: 			mask = make([]<b>byte</b>, n/sys.PtrSize)
+		<a href="../src/runtime/mbitmap.go.html#line-2007" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2007">#L2007</a>: 		mask = make([]<b>byte</b>, n/sys.PtrSize)
+		<a href="../src/runtime/mbitmap.go.html#line-2034" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2034">#L2034</a>: 			mask = make([]<b>byte</b>, n/sys.PtrSize)
+		<a href="../src/runtime/mfinal.go.html#line-35">mfinal.go#L35</a>: var finptrmask [_FinBlockSize / sys.PtrSize / 8]<b>byte</b>
+		<a href="../src/runtime/mfinal.go.html#line-49" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-49">#L49</a>: var finalizer1 = [...]<b>byte</b>{
+		<a href="../src/runtime/mgc.go.html#line-259">mgc.go#L259</a>: 	pad     [3]<b>byte</b> // compiler uses 32-bit load for "enabled" field
+		<a href="../src/runtime/mgc.go.html#line-1782" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1782">#L1782</a>: 		var sbuf [24]<b>byte</b>
+		<a href="../src/runtime/mgc.go.html#line-2282" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2282">#L2282</a>: func itoaDiv(buf []<b>byte</b>, val uint64, dec int) []<b>byte</b> {
+		<a href="../src/runtime/mgc.go.html#line-2286" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2286">#L2286</a>: 		buf[i] = <b>byte</b>(val%10 + '0')
+		<a href="../src/runtime/mgc.go.html#line-2294" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2294">#L2294</a>: 	buf[i] = <b>byte</b>(val + '0')
+		<a href="../src/runtime/mgc.go.html#line-2299" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2299">#L2299</a>: func fmtNSAsMS(buf []<b>byte</b>, ns uint64) []<b>byte</b> {
+		<a href="../src/runtime/mgcmark.go.html#line-919">mgcmark.go#L919</a>: 			gcdata = (*<b>byte</b>)(unsafe.Pointer(s.startAddr))
+		<a href="../src/runtime/mgcmark.go.html#line-1406" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1406">#L1406</a>: 		hexdumpWords(b, b+n, func(p uintptr) <b>byte</b> {
+		<a href="../src/runtime/mheap.go.html#line-232">mheap.go#L232</a>: 		pad      [cpu.CacheLinePadSize - unsafe.Sizeof(mcentral{})%cpu.CacheLinePadSize]<b>byte</b>
+		<a href="../src/runtime/mheap.go.html#line-255" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-255">#L255</a>: 	bitmap [heapArenaBitmapBytes]<b>byte</b>
+		<a href="../src/runtime/mheap.go.html#line-711" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-711">#L711</a>: 	pageMask = <b>byte</b>(1 << ((p / pageSize) % 8))
+		<a href="../src/runtime/mheap.go.html#line-1640" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1640">#L1640</a>: 	kind   <b>byte</b>     // kind of special
+		<a href="../src/runtime/mprof.go.html#line-803">mprof.go#L803</a>: func Stack(buf []<b>byte</b>, all bool) int {
+		<a href="../src/runtime/netpoll_epoll.go.html#line-84">netpoll_epoll.go#L84</a>: 			var b <b>byte</b>
+		<a href="../src/runtime/netpoll_epoll.go.html#line-155" class="path-duplicate">netpoll_epoll.go</a><a href="../src/runtime/netpoll_epoll.go.html#line-155">#L155</a>: 				var tmp [16]<b>byte</b>
+		<a href="../src/runtime/os_linux.go.html#line-81">os_linux.go#L81</a>: 	var buf [maxCPUs / 8]<b>byte</b>
+		<a href="../src/runtime/os_linux.go.html#line-180" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-180">#L180</a>: var failallocatestack = []<b>byte</b>("runtime: failed to allocate stack for the new OS thread\n")
+		<a href="../src/runtime/os_linux.go.html#line-181" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-181">#L181</a>: var failthreadcreate = []<b>byte</b>("runtime: failed to create new OS thread\n")
+		<a href="../src/runtime/os_linux.go.html#line-191" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-191">#L191</a>: var procAuxv = []<b>byte</b>("/proc/self/auxv\x00")
+		<a href="../src/runtime/os_linux.go.html#line-193" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-193">#L193</a>: var addrspace_vec [1]<b>byte</b>
+		<a href="../src/runtime/os_linux.go.html#line-195" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-195">#L195</a>: func mincore(addr unsafe.Pointer, n uintptr, dst *<b>byte</b>) int32
+		<a href="../src/runtime/os_linux.go.html#line-197" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-197">#L197</a>: func sysargs(argc int32, argv **<b>byte</b>) {
+		<a href="../src/runtime/os_linux.go.html#line-260" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-260">#L260</a>: 			startupRandomData = (*[16]<b>byte</b>)(unsafe.Pointer(val))[:]
+		<a href="../src/runtime/os_linux.go.html#line-272" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-272">#L272</a>: var sysTHPSizePath = []<b>byte</b>("/sys/kernel/mm/transparent_hugepage/hpage_pmd_size\x00")
+		<a href="../src/runtime/os_linux.go.html#line-275" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-275">#L275</a>: 	var numbuf [20]<b>byte</b>
+		<a href="../src/runtime/os_linux.go.html#line-287" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-287">#L287</a>: 	v, ok := atoi(slicebytetostringtmp((*<b>byte</b>)(ptr), int(n)))
+		<a href="../src/runtime/os_linux.go.html#line-304" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-304">#L304</a>: var urandom_dev = []<b>byte</b>("/dev/urandom\x00")
+		<a href="../src/runtime/os_linux.go.html#line-306" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-306">#L306</a>: func getRandomData(r []<b>byte</b>) {
+		<a href="../src/runtime/os_linux.go.html#line-393" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-393">#L393</a>: func sched_getaffinity(pid, len uintptr, buf *<b>byte</b>) int32
+		<a href="../src/runtime/os_linux_x86.go.html#line-63">os_linux_x86.go#L63</a>: 		procVersion := []<b>byte</b>("/proc/version\000")
+		<a href="../src/runtime/os_linux_x86.go.html#line-66" class="path-duplicate">os_linux_x86.go</a><a href="../src/runtime/os_linux_x86.go.html#line-66">#L66</a>: 			var buf [512]<b>byte</b>
+		<a href="../src/runtime/os_linux_x86.go.html#line-71" class="path-duplicate">os_linux_x86.go</a><a href="../src/runtime/os_linux_x86.go.html#line-71">#L71</a>: 			needle := []<b>byte</b>("Ubuntu")
+		<a href="../src/runtime/print.go.html#line-17">print.go#L17</a>: func bytes(s string) (ret []<b>byte</b>) {
+		<a href="../src/runtime/print.go.html#line-29" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-29">#L29</a>: 	printBacklog      [512]<b>byte</b>
+		<a href="../src/runtime/print.go.html#line-40" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-40">#L40</a>: func recordForPanic(b []<b>byte</b>) {
+		<a href="../src/runtime/print.go.html#line-86" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-86">#L86</a>: func gwrite(b []<b>byte</b>) {
+		<a href="../src/runtime/print.go.html#line-136" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-136">#L136</a>: 	var buf [n + 7]<b>byte</b>
+		<a href="../src/runtime/print.go.html#line-174" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-174">#L174</a>: 		buf[i+2] = <b>byte</b>(s + '0')
+		<a href="../src/runtime/print.go.html#line-188" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-188">#L188</a>: 	buf[n+4] = <b>byte</b>(e/100) + '0'
+		<a href="../src/runtime/print.go.html#line-189" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-189">#L189</a>: 	buf[n+5] = <b>byte</b>(e/10)%10 + '0'
+		<a href="../src/runtime/print.go.html#line-190" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-190">#L190</a>: 	buf[n+6] = <b>byte</b>(e%10) + '0'
+		<a href="../src/runtime/print.go.html#line-199" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-199">#L199</a>: 	var buf [100]<b>byte</b>
+		<a href="../src/runtime/print.go.html#line-202" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-202">#L202</a>: 		buf[i] = <b>byte</b>(v%10 + '0')
+		<a href="../src/runtime/print.go.html#line-221" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-221">#L221</a>: 	var buf [100]<b>byte</b>
+		<a href="../src/runtime/print.go.html#line-245" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-245">#L245</a>: func printslice(s []<b>byte</b>) {
+		<a href="../src/runtime/print.go.html#line-264" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-264">#L264</a>: func hexdumpWords(p, end uintptr, mark func(uintptr) <b>byte</b>) {
+		<a href="../src/runtime/print.go.html#line-266" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-266">#L266</a>: 		var buf [2 * sys.PtrSize]<b>byte</b>
+		<a href="../src/runtime/print.go.html#line-269" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-269">#L269</a>: 				buf[i] = <b>byte</b>(x&0xF) + '0'
+		<a href="../src/runtime/print.go.html#line-271" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-271">#L271</a>: 				buf[i] = <b>byte</b>(x&0xF) - 10 + 'a'
+		<a href="../src/runtime/print.go.html#line-279" class="path-duplicate">print.go</a><a href="../src/runtime/print.go.html#line-279">#L279</a>: 	var markbuf [1]<b>byte</b>
+		<a href="../src/runtime/proc.go.html#line-289">proc.go#L289</a>: func gopark(unlockf func(*g, unsafe.Pointer) bool, lock unsafe.Pointer, reason waitReason, traceEv <b>byte</b>, traceskip int) {
+		<a href="../src/runtime/proc.go.html#line-311" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-311">#L311</a>: func goparkunlock(lock *mutex, reason waitReason, traceEv <b>byte</b>, traceskip int) {
+		<a href="../src/runtime/proc.go.html#line-686" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-686">#L686</a>: 	s := (*[unsafe.Sizeof(fastrandseed)]<b>byte</b>)(unsafe.Pointer(&fastrandseed))[:]
+		<a href="../src/runtime/proc.go.html#line-1527" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1527">#L1527</a>: func needm(x <b>byte</b>) {
+		<a href="../src/runtime/proc.go.html#line-1585" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1585">#L1585</a>: var earlycgocallback = []<b>byte</b>("fatal error: cgo callback before cgo call\n")
+		<a href="../src/runtime/runtime1.go.html#line-51">runtime1.go#L51</a>: 	argv **<b>byte</b>
+		<a href="../src/runtime/runtime1.go.html#line-56" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-56">#L56</a>: func argv_index(argv **<b>byte</b>, i int32) *<b>byte</b> {
+		<a href="../src/runtime/runtime1.go.html#line-57" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-57">#L57</a>: 	return *(**<b>byte</b>)(add(unsafe.Pointer(argv), uintptr(i)*sys.PtrSize))
+		<a href="../src/runtime/runtime1.go.html#line-60" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-60">#L60</a>: func args(c int32, v **<b>byte</b>) {
+		<a href="../src/runtime/runtime1.go.html#line-150" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-150">#L150</a>: 		m     [4]<b>byte</b>
+		<a href="../src/runtime/runtime1.go.html#line-237" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-237">#L237</a>: 	m = [4]<b>byte</b>{1, 1, 1, 1}
+		<a href="../src/runtime/runtime1.go.html#line-243" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-243">#L243</a>: 	m = [4]<b>byte</b>{0xff, 0xff, 0xff, 0xff}
+		<a href="../src/runtime/runtime2.go.html#line-462">runtime2.go#L462</a>: 	writebuf       []<b>byte</b>
+		<a href="../src/runtime/runtime2.go.html#line-535" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-535">#L535</a>: 	waittraceev   <b>byte</b>
+		<a href="../src/runtime/runtime2.go.html#line-835" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-835">#L835</a>: 	_     [4]<b>byte</b>
+		<a href="../src/runtime/runtime2.go.html#line-854" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-854">#L854</a>: var startupRandomData []<b>byte</b>
+		<a href="../src/runtime/runtime2.go.html#line-858" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-858">#L858</a>: func extendRandom(r []<b>byte</b>, n int) {
+		<a href="../src/runtime/runtime2.go.html#line-870" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-870">#L870</a>: 			r[n] = <b>byte</b>(h)
+		<a href="../src/runtime/sema.go.html#line-51">sema.go#L51</a>: 	pad  [cpu.CacheLinePadSize - unsafe.Sizeof(semaRoot{})]<b>byte</b>
+		<a href="../src/runtime/signal_amd64.go.html#line-53">signal_amd64.go#L53</a>: 		pc := (*[4]<b>byte</b>)(unsafe.Pointer(gp.sigpc))
+		<a href="../src/runtime/signal_unix.go.html#line-659">signal_unix.go#L659</a>: 		b := (*[maxN]<b>byte</b>)(unsafe.Pointer(pc))
+		<a href="../src/runtime/slice.go.html#line-274">slice.go#L274</a>: 		*(*<b>byte</b>)(toPtr) = *(*<b>byte</b>)(fmPtr) // known to be a byte pointer
+		<a href="../src/runtime/slice.go.html#line-281" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-281">#L281</a>: func slicestringcopy(toPtr *<b>byte</b>, toLen int, fm string) int {
+		<a href="../src/runtime/stack.go.html#line-143">stack.go#L143</a>: 	_    [cpu.CacheLinePadSize - unsafe.Sizeof(stackpoolItem{})%cpu.CacheLinePadSize]<b>byte</b>
+		<a href="../src/runtime/stack.go.html#line-703" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-703">#L703</a>: 				gcdata = (*<b>byte</b>)(unsafe.Pointer(s.startAddr))
+		<a href="../src/runtime/stack.go.html#line-769" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-769">#L769</a>: func fillstack(stk stack, b <b>byte</b>) {
+		<a href="../src/runtime/stack.go.html#line-771" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-771">#L771</a>: 		*(*<b>byte</b>)(unsafe.Pointer(p)) = b
+		<a href="../src/runtime/string.go.html#line-17">string.go#L17</a>: type tmpBuf [tmpStringBufSize]<b>byte</b>
+		<a href="../src/runtime/string.go.html#line-80" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-80">#L80</a>: func slicebytetostring(buf *tmpBuf, ptr *<b>byte</b>, n int) (str string) {
+		<a href="../src/runtime/string.go.html#line-126" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-126">#L126</a>: func rawstringtmp(buf *tmpBuf, l int) (s string, b []<b>byte</b>) {
+		<a href="../src/runtime/string.go.html#line-150" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-150">#L150</a>: func slicebytetostringtmp(ptr *<b>byte</b>, n int) (str string) {
+		<a href="../src/runtime/string.go.html#line-165" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-165">#L165</a>: func stringtoslicebyte(buf *tmpBuf, s string) []<b>byte</b> {
+		<a href="../src/runtime/string.go.html#line-166" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-166">#L166</a>: 	var b []<b>byte</b>
+		<a href="../src/runtime/string.go.html#line-211" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-211">#L211</a>: 	var dum [4]<b>byte</b>
+		<a href="../src/runtime/string.go.html#line-235" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-235">#L235</a>: 	str *<b>byte</b>
+		<a href="../src/runtime/string.go.html#line-243" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-243">#L243</a>: func intstring(buf *[4]<b>byte</b>, v int64) (s string) {
+		<a href="../src/runtime/string.go.html#line-244" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-244">#L244</a>: 	var b []<b>byte</b>
+		<a href="../src/runtime/string.go.html#line-262" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-262">#L262</a>: func rawstring(size int) (s string, b []<b>byte</b>) {
+		<a href="../src/runtime/string.go.html#line-274" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-274">#L274</a>: func rawbyteslice(size int) (b []<b>byte</b>) {
+		<a href="../src/runtime/string.go.html#line-301" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-301">#L301</a>: func gobytes(p *<b>byte</b>, n int) (b []<b>byte</b>) {
+		<a href="../src/runtime/string.go.html#line-303" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-303">#L303</a>: 		return make([]<b>byte</b>, 0)
+		<a href="../src/runtime/string.go.html#line-319" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-319">#L319</a>: func gostring(p *<b>byte</b>) string {
+		<a href="../src/runtime/string.go.html#line-329" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-329">#L329</a>: func gostringn(p *<b>byte</b>, l int) string {
+		<a href="../src/runtime/string.go.html#line-421" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-421">#L421</a>: func findnull(s *<b>byte</b>) int {
+		<a href="../src/runtime/string.go.html#line-430" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-430">#L430</a>: 		p := (*[maxAlloc/2 - 1]<b>byte</b>)(unsafe.Pointer(s))
+		<a href="../src/runtime/string.go.html#line-477" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-477">#L477</a>: func gostringnocopy(str *<b>byte</b>) string {
+		<a href="../src/runtime/string.go.html#line-484" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-484">#L484</a>: 	var buf [8]<b>byte</b>
+		<a href="../src/runtime/stubs2.go.html#line-31">stubs2.go#L31</a>: func open(name *<b>byte</b>, mode, perm int32) int32
+		<a href="../src/runtime/stubs_linux.go.html#line-17">stubs_linux.go#L17</a>: func access(name *<b>byte</b>, mode int32) int32
+		<a href="../src/runtime/symtab.go.html#line-343">symtab.go#L343</a>: 	pclntable    []<b>byte</b>
+		<a href="../src/runtime/symtab.go.html#line-454" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-454">#L454</a>: 			md.gcdatamask = progToPointerMask((*<b>byte</b>)(unsafe.Pointer(md.gcdata)), md.edata-md.data)
+		<a href="../src/runtime/symtab.go.html#line-455" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-455">#L455</a>: 			md.gcbssmask = progToPointerMask((*<b>byte</b>)(unsafe.Pointer(md.gcbss)), md.ebss-md.bss)
+		<a href="../src/runtime/symtab.go.html#line-505" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-505">#L505</a>: 	subbuckets [16]<b>byte</b>
+		<a href="../src/runtime/symtab.go.html#line-520" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-520">#L520</a>: 	pcln := *(**[8]<b>byte</b>)(unsafe.Pointer(&datap.pclntable))
+		<a href="../src/runtime/symtab.go.html#line-817" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-817">#L817</a>: func cfuncname(f funcInfo) *<b>byte</b> {
+		<a href="../src/runtime/symtab.go.html#line-828" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-828">#L828</a>: func cfuncnameFromNameoff(f funcInfo, nameoff int32) *<b>byte</b> {
+		<a href="../src/runtime/symtab.go.html#line-937" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-937">#L937</a>: func step(p []<b>byte</b>, pc *uintptr, val *int32, first bool) (newp []<b>byte</b>, ok bool) {
+		<a href="../src/runtime/symtab.go.html#line-962" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-962">#L962</a>: func readvarint(p []<b>byte</b>) (read uint32, val uint32) {
+		<a href="../src/runtime/symtab.go.html#line-979" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-979">#L979</a>: 	bytedata [1]<b>byte</b> // bitmaps, each starting on a byte boundary
+		<a href="../src/runtime/symtab.go.html#line-997" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-997">#L997</a>: 	_        <b>byte</b>
+		<a href="../src/runtime/trace.go.html#line-104">trace.go#L104</a>: 	traceFutileWakeup <b>byte</b> = 128
+		<a href="../src/runtime/trace.go.html#line-159" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-159">#L159</a>: 	arr [64&lt;&lt;10 - unsafe.Sizeof(traceBufHeader{})]<b>byte</b> // underlying buffer for traceBufHeader.buf
+		<a href="../src/runtime/trace.go.html#line-375" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-375">#L375</a>: func ReadTrace() []<b>byte</b> {
+		<a href="../src/runtime/trace.go.html#line-405" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-405">#L405</a>: 		return []<b>byte</b>("go 1.11 trace\x00\x00\x00")
+		<a href="../src/runtime/trace.go.html#line-428" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-428">#L428</a>: 		var data []<b>byte</b>
+		<a href="../src/runtime/trace.go.html#line-515" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-515">#L515</a>: func traceEvent(ev <b>byte</b>, skip int, args ...uint64) {
+		<a href="../src/runtime/trace.go.html#line-542" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-542">#L542</a>: func traceEventLocked(extraBytes int, mp *m, pid int32, bufp *traceBufPtr, ev <b>byte</b>, skip int, args ...uint64) {
+		<a href="../src/runtime/trace.go.html#line-554" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-554">#L554</a>: 	narg := <b>byte</b>(len(args))
+		<a href="../src/runtime/trace.go.html#line-565" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-565">#L565</a>: 	var lenp *<b>byte</b>
+		<a href="../src/runtime/trace.go.html#line-586" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-586">#L586</a>: 		*lenp = <b>byte</b>(evSize - 2)
+		<a href="../src/runtime/trace.go.html#line-724" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-724">#L724</a>: func traceAppend(buf []<b>byte</b>, v uint64) []<b>byte</b> {
+		<a href="../src/runtime/trace.go.html#line-726" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-726">#L726</a>: 		buf = append(buf, 0x80|<b>byte</b>(v))
+		<a href="../src/runtime/trace.go.html#line-728" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-728">#L728</a>: 	buf = append(buf, <b>byte</b>(v))
+		<a href="../src/runtime/trace.go.html#line-736" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-736">#L736</a>: 		buf.arr[pos] = 0x80 | <b>byte</b>(v)
+		<a href="../src/runtime/trace.go.html#line-739" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-739">#L739</a>: 	buf.arr[pos] = <b>byte</b>(v)
+		<a href="../src/runtime/trace.go.html#line-745" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-745">#L745</a>: func (buf *traceBuf) byte(v <b>byte</b>) {
+		<a href="../src/runtime/trace.go.html#line-849" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-849">#L849</a>: 	var tmp [(2 + 4*traceStackSize) * traceBytesPerNumber]<b>byte</b>
+		<a href="../src/runtime/trace.go.html#line-930" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-930">#L930</a>: 	data [64&lt;&lt;10 - sys.PtrSize]<b>byte</b>
+		<a href="../src/runtime/trace.go.html#line-1092" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1092">#L1092</a>: func traceGoPark(traceEv <b>byte</b>, skip int) {
+		<a href="../src/runtime/traceback.go.html#line-984">traceback.go#L984</a>: 	hexdumpWords(lo, hi, func(p uintptr) <b>byte</b> {
+		<a href="../src/runtime/traceback.go.html#line-1246" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1246">#L1246</a>: 	file     *<b>byte</b>
+		<a href="../src/runtime/traceback.go.html#line-1248" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1248">#L1248</a>: 	funcName *<b>byte</b>
+		<a href="../src/runtime/type.go.html#line-45">type.go#L45</a>: 	gcdata    *<b>byte</b>
+		<a href="../src/runtime/type.go.html#line-197" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-197">#L197</a>: 			return name{(*<b>byte</b>)(unsafe.Pointer(res))}
+		<a href="../src/runtime/type.go.html#line-212" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-212">#L212</a>: 	return name{(*<b>byte</b>)(res)}
+		<a href="../src/runtime/type.go.html#line-444" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-444">#L444</a>: 	bytes *<b>byte</b>
+		<a href="../src/runtime/type.go.html#line-447" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-447">#L447</a>: func (n name) data(off int) *<b>byte</b> {
+		<a href="../src/runtime/type.go.html#line-448" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-448">#L448</a>: 	return (*<b>byte</b>)(add(unsafe.Pointer(n.bytes), uintptr(off)))
+		<a href="../src/runtime/type.go.html#line-502" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-502">#L502</a>: 	copy((*[4]<b>byte</b>)(unsafe.Pointer(&amp;nameOff))[:], (*[4]<b>byte</b>)(unsafe.Pointer(n.data(off)))[:])
+		<a href="../src/runtime/utf8.go.html#line-104">utf8.go#L104</a>: func encoderune(p []<b>byte</b>, r rune) int {
+		<a href="../src/runtime/utf8.go.html#line-108" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-108">#L108</a>: 		p[0] = <b>byte</b>(r)
+		<a href="../src/runtime/utf8.go.html#line-112" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-112">#L112</a>: 		p[0] = t2 | <b>byte</b>(r>>6)
+		<a href="../src/runtime/utf8.go.html#line-113" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-113">#L113</a>: 		p[1] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/runtime/utf8.go.html#line-120" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-120">#L120</a>: 		p[0] = t3 | <b>byte</b>(r>>12)
+		<a href="../src/runtime/utf8.go.html#line-121" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-121">#L121</a>: 		p[1] = tx | <b>byte</b>(r>>6)&maskx
+		<a href="../src/runtime/utf8.go.html#line-122" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-122">#L122</a>: 		p[2] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/runtime/utf8.go.html#line-126" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-126">#L126</a>: 		p[0] = t4 | <b>byte</b>(r>>18)
+		<a href="../src/runtime/utf8.go.html#line-127" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-127">#L127</a>: 		p[1] = tx | <b>byte</b>(r>>12)&maskx
+		<a href="../src/runtime/utf8.go.html#line-128" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-128">#L128</a>: 		p[2] = tx | <b>byte</b>(r>>6)&maskx
+		<a href="../src/runtime/utf8.go.html#line-129" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-129">#L129</a>: 		p[3] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/runtime/vdso_elf64.go.html#line-14">vdso_elf64.go#L14</a>: 	st_info  <b>byte</b>
+		<a href="../src/runtime/vdso_elf64.go.html#line-15" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-15">#L15</a>: 	st_other <b>byte</b>
+		<a href="../src/runtime/vdso_elf64.go.html#line-32" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-32">#L32</a>: 	e_ident     [_EI_NIDENT]<b>byte</b> /* Magic number and other info */
+		<a href="../src/runtime/vdso_linux.go.html#line-66">vdso_linux.go#L66</a>: func _ELF_ST_BIND(val <b>byte</b>) <b>byte</b> { return val >> 4 }
+		<a href="../src/runtime/vdso_linux.go.html#line-67" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-67">#L67</a>: func _ELF_ST_TYPE(val <b>byte</b>) <b>byte</b> { return val & 0xf }
+		<a href="../src/runtime/vdso_linux.go.html#line-90" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-90">#L90</a>: 	symstrings *[vdsoSymStringsSize]<b>byte</b>
+		<a href="../src/runtime/vdso_linux.go.html#line-143" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-143">#L143</a>: 			info.symstrings = (*[vdsoSymStringsSize]<b>byte</b>)(unsafe.Pointer(p))
+		<a href="../src/runtime/write_err.go.html#line-11">write_err.go#L11</a>: func writeErr(b []<b>byte</b>) {
+
+	<a href="../pkg/runtime/internal/sys.html">runtime/internal/sys</a>
+		<a href="../src/runtime/internal/sys/intrinsics.go.html#line-16">intrinsics.go#L16</a>: var deBruijnIdx64ctz = [64]<b>byte</b>{
+		<a href="../src/runtime/internal/sys/intrinsics.go.html#line-29" class="path-duplicate">intrinsics.go</a><a href="../src/runtime/internal/sys/intrinsics.go.html#line-29">#L29</a>: var deBruijnIdx32ctz = [32]<b>byte</b>{
+		<a href="../src/runtime/internal/sys/intrinsics_common.go.html#line-101">intrinsics_common.go#L101</a>: var deBruijn64tab = [64]<b>byte</b>{
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atob.go.html#line-30">atob.go#L30</a>: func AppendBool(dst []<b>byte</b>, b bool) []<b>byte</b> {
+		<a href="../src/strconv/atof.go.html#line-193">atof.go#L193</a>: 	expChar := <b>byte</b>('e')
+		<a href="../src/strconv/atoi.go.html#line-13">atoi.go#L13</a>: func lower(c <b>byte</b>) <b>byte</b> {
+		<a href="../src/strconv/atoi.go.html#line-120" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-120">#L120</a>: 	for _, c := range []<b>byte</b>(s) {
+		<a href="../src/strconv/atoi.go.html#line-121" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-121">#L121</a>: 		var d <b>byte</b>
+		<a href="../src/strconv/atoi.go.html#line-134" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-134">#L134</a>: 		if d &gt;= <b>byte</b>(base) {
+		<a href="../src/strconv/atoi.go.html#line-240" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-240">#L240</a>: 		for _, ch := range []<b>byte</b>(s) {
+		<a href="../src/strconv/ctoa.go.html#line-14">ctoa.go#L14</a>: func FormatComplex(c complex128, fmt <b>byte</b>, prec, bitSize int) string {
+		<a href="../src/strconv/decimal.go.html#line-15">decimal.go#L15</a>: 	d     [800]<b>byte</b> // digits, big-endian representation
+		<a href="../src/strconv/decimal.go.html#line-31" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-31">#L31</a>: 	buf := make([]<b>byte</b>, n)
+		<a href="../src/strconv/decimal.go.html#line-61" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-61">#L61</a>: func digitZero(dst []<b>byte</b>) int {
+		<a href="../src/strconv/decimal.go.html#line-82" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-82">#L82</a>: 	var buf [24]<b>byte</b>
+		<a href="../src/strconv/decimal.go.html#line-89" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-89">#L89</a>: 		buf[n] = <b>byte</b>(v + '0')
+		<a href="../src/strconv/decimal.go.html#line-141" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-141">#L141</a>: 		a.d[w] = <b>byte</b>(dig + '0')
+		<a href="../src/strconv/decimal.go.html#line-151" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-151">#L151</a>: 			a.d[w] = <b>byte</b>(dig + '0')
+		<a href="../src/strconv/decimal.go.html#line-256" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-256">#L256</a>: func prefixIsLessThan(b []<b>byte</b>, s string) bool {
+		<a href="../src/strconv/decimal.go.html#line-286" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-286">#L286</a>: 			a.d[w] = <b>byte</b>(rem + '0')
+		<a href="../src/strconv/decimal.go.html#line-299" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-299">#L299</a>: 			a.d[w] = <b>byte</b>(rem + '0')
+		<a href="../src/strconv/extfloat.go.html#line-412">extfloat.go#L412</a>: 	var buf [32]<b>byte</b>
+		<a href="../src/strconv/extfloat.go.html#line-418" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-418">#L418</a>: 		buf[pos] = <b>byte</b>(v + '0')
+		<a href="../src/strconv/extfloat.go.html#line-443" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-443">#L443</a>: 			d.d[nd] = <b>byte</b>(digit + '0')
+		<a href="../src/strconv/extfloat.go.html#line-533" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-533">#L533</a>: 		var buf [24]<b>byte</b>
+		<a href="../src/strconv/extfloat.go.html#line-538" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-538">#L538</a>: 			buf[n] = <b>byte</b>(v + '0')
+		<a href="../src/strconv/extfloat.go.html#line-595" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-595">#L595</a>: 		d.d[i] = <b>byte</b>(digit + '0')
+		<a href="../src/strconv/extfloat.go.html#line-619" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-619">#L619</a>: 		d.d[d.nd] = <b>byte</b>(digit + '0')
+		<a href="../src/strconv/ftoa.go.html#line-47">ftoa.go#L47</a>: func FormatFloat(f float64, fmt <b>byte</b>, prec, bitSize int) string {
+		<a href="../src/strconv/ftoa.go.html#line-48" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-48">#L48</a>: 	return string(genericFtoa(make([]<b>byte</b>, 0, max(prec+4, 24)), f, fmt, prec, bitSize))
+		<a href="../src/strconv/ftoa.go.html#line-53" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-53">#L53</a>: func AppendFloat(dst []<b>byte</b>, f float64, fmt <b>byte</b>, prec, bitSize int) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-57" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-57">#L57</a>: func genericFtoa(dst []<b>byte</b>, val float64, fmt <b>byte</b>, prec, bitSize int) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-119" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-119">#L119</a>: 		var buf [32]<b>byte</b>
+		<a href="../src/strconv/ftoa.go.html#line-148" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-148">#L148</a>: 			var buf [24]<b>byte</b>
+		<a href="../src/strconv/ftoa.go.html#line-161" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-161">#L161</a>: func bigFtoa(dst []<b>byte</b>, prec int, fmt <b>byte</b>, neg bool, mant uint64, exp int, flt *floatInfo) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-197" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-197">#L197</a>: func formatDigits(dst []<b>byte</b>, shortest bool, neg bool, digs decimalSlice, prec int, fmt <b>byte</b>) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-316" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-316">#L316</a>: 		l := <b>byte</b>('0') // lower digit
+		<a href="../src/strconv/ftoa.go.html#line-320" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-320">#L320</a>: 		m := <b>byte</b>('0') // middle digit
+		<a href="../src/strconv/ftoa.go.html#line-324" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-324">#L324</a>: 		u := <b>byte</b>('0') // upper digit
+		<a href="../src/strconv/ftoa.go.html#line-372" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-372">#L372</a>: 	d      []<b>byte</b>
+		<a href="../src/strconv/ftoa.go.html#line-378" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-378">#L378</a>: func fmtE(dst []<b>byte</b>, neg bool, d decimalSlice, prec int, fmt <b>byte</b>) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-385" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-385">#L385</a>: 	ch := <b>byte</b>('0')
+		<a href="../src/strconv/ftoa.go.html#line-422" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-422">#L422</a>: 		dst = append(dst, '0', <b>byte</b>(exp)+'0')
+		<a href="../src/strconv/ftoa.go.html#line-424" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-424">#L424</a>: 		dst = append(dst, <b>byte</b>(exp/10)+'0', <b>byte</b>(exp%10)+'0')
+		<a href="../src/strconv/ftoa.go.html#line-426" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-426">#L426</a>: 		dst = append(dst, <b>byte</b>(exp/100)+'0', <b>byte</b>(exp/10)%10+'0', <b>byte</b>(exp%10)+'0')
+		<a href="../src/strconv/ftoa.go.html#line-433" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-433">#L433</a>: func fmtF(dst []<b>byte</b>, neg bool, d decimalSlice, prec int) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-454" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-454">#L454</a>: 			ch := <b>byte</b>('0')
+		<a href="../src/strconv/ftoa.go.html#line-466" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-466">#L466</a>: func fmtB(dst []<b>byte</b>, neg bool, mant uint64, exp int, flt *floatInfo) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-489" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-489">#L489</a>: func fmtX(dst []<b>byte</b>, prec int, fmt <b>byte</b>, neg bool, mant uint64, exp int, flt *floatInfo) []<b>byte</b> {
+		<a href="../src/strconv/ftoa.go.html#line-526" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-526">#L526</a>: 	dst = append(dst, '0', fmt, '0'+<b>byte</b>((mant>>60)&1))
+		<a href="../src/strconv/ftoa.go.html#line-545" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-545">#L545</a>: 	ch := <b>byte</b>('P')
+		<a href="../src/strconv/ftoa.go.html#line-561" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-561">#L561</a>: 		dst = append(dst, <b>byte</b>(exp/10)+'0', <b>byte</b>(exp%10)+'0')
+		<a href="../src/strconv/ftoa.go.html#line-563" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-563">#L563</a>: 		dst = append(dst, <b>byte</b>(exp/100)+'0', <b>byte</b>((exp/10)%10)+'0', <b>byte</b>(exp%10)+'0')
+		<a href="../src/strconv/ftoa.go.html#line-565" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-565">#L565</a>: 		dst = append(dst, <b>byte</b>(exp/1000)+'0', <b>byte</b>(exp/100)%10+'0', <b>byte</b>((exp/10)%10)+'0', <b>byte</b>(exp%10)+'0')
+		<a href="../src/strconv/itoa.go.html#line-40">itoa.go#L40</a>: func AppendInt(dst []<b>byte</b>, i int64, base int) []<b>byte</b> {
+		<a href="../src/strconv/itoa.go.html#line-50" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-50">#L50</a>: func AppendUint(dst []<b>byte</b>, i uint64, base int) []<b>byte</b> {
+		<a href="../src/strconv/itoa.go.html#line-89" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-89">#L89</a>: func formatBits(dst []<b>byte</b>, u uint64, base int, neg, append_ bool) (d []<b>byte</b>, s string) {
+		<a href="../src/strconv/itoa.go.html#line-95" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-95">#L95</a>: 	var a [64 + 1]<b>byte</b> // +1 for sign of 64bit value in base 2
+		<a href="../src/strconv/quote.go.html#line-19">quote.go#L19</a>: func quoteWith(s string, quote <b>byte</b>, ASCIIonly, graphicOnly bool) string {
+		<a href="../src/strconv/quote.go.html#line-20" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-20">#L20</a>: 	return string(appendQuotedWith(make([]<b>byte</b>, 0, 3*len(s)/2), s, quote, ASCIIonly, graphicOnly))
+		<a href="../src/strconv/quote.go.html#line-23" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-23">#L23</a>: func quoteRuneWith(r rune, quote <b>byte</b>, ASCIIonly, graphicOnly bool) string {
+		<a href="../src/strconv/quote.go.html#line-27" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-27">#L27</a>: func appendQuotedWith(buf []<b>byte</b>, s string, quote <b>byte</b>, ASCIIonly, graphicOnly bool) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-31" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-31">#L31</a>: 		nBuf := make([]<b>byte</b>, len(buf), len(buf)+1+len(s)+1)
+		<a href="../src/strconv/quote.go.html#line-54" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-54">#L54</a>: func appendQuotedRuneWith(buf []<b>byte</b>, r rune, quote <b>byte</b>, ASCIIonly, graphicOnly bool) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-64" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-64">#L64</a>: func appendEscapedRune(buf []<b>byte</b>, r rune, quote <b>byte</b>, ASCIIonly, graphicOnly bool) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-65" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-65">#L65</a>: 	var runeTmp [utf8.UTFMax]<b>byte</b>
+		<a href="../src/strconv/quote.go.html#line-68" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-68">#L68</a>: 		buf = append(buf, <b>byte</b>(r))
+		<a href="../src/strconv/quote.go.html#line-73" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-73">#L73</a>: 			buf = append(buf, <b>byte</b>(r))
+		<a href="../src/strconv/quote.go.html#line-100" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-100">#L100</a>: 			buf = append(buf, lowerhex[<b>byte</b>(r)>>4])
+		<a href="../src/strconv/quote.go.html#line-101" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-101">#L101</a>: 			buf = append(buf, lowerhex[<b>byte</b>(r)&0xF])
+		<a href="../src/strconv/quote.go.html#line-130" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-130">#L130</a>: func AppendQuote(dst []<b>byte</b>, s string) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-143" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-143">#L143</a>: func AppendQuoteToASCII(dst []<b>byte</b>, s string) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-157" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-157">#L157</a>: func AppendQuoteToGraphic(dst []<b>byte</b>, s string) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-170" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-170">#L170</a>: func AppendQuoteRune(dst []<b>byte</b>, r rune) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-184" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-184">#L184</a>: func AppendQuoteRuneToASCII(dst []<b>byte</b>, r rune) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-198" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-198">#L198</a>: func AppendQuoteRuneToGraphic(dst []<b>byte</b>, r rune) []<b>byte</b> {
+		<a href="../src/strconv/quote.go.html#line-225" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-225">#L225</a>: func unhex(b <b>byte</b>) (v rune, ok bool) {
+		<a href="../src/strconv/quote.go.html#line-252" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-252">#L252</a>: func UnquoteChar(s string, quote <b>byte</b>) (value rune, multibyte bool, tail string, err error) {
+		<a href="../src/strconv/quote.go.html#line-385" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-385">#L385</a>: 			buf := make([]<b>byte</b>, 0, len(s)-1)
+		<a href="../src/strconv/quote.go.html#line-417" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-417">#L417</a>: 	var runeTmp [utf8.UTFMax]<b>byte</b>
+		<a href="../src/strconv/quote.go.html#line-418" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-418">#L418</a>: 	buf := make([]<b>byte</b>, 0, 3*len(s)/2) // Try to avoid more allocations.
+		<a href="../src/strconv/quote.go.html#line-426" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-426">#L426</a>: 			buf = append(buf, <b>byte</b>(c))
+		<a href="../src/strconv/quote.go.html#line-440" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-440">#L440</a>: func contains(s string, c <b>byte</b>) bool {
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/builder.go.html#line-17">builder.go#L17</a>: 	buf  []<b>byte</b>
+		<a href="../src/strings/builder.go.html#line-68" class="path-duplicate">builder.go</a><a href="../src/strings/builder.go.html#line-68">#L68</a>: 	buf := make([]<b>byte</b>, len(b.buf), 2*cap(b.buf)+n)
+		<a href="../src/strings/builder.go.html#line-88" class="path-duplicate">builder.go</a><a href="../src/strings/builder.go.html#line-88">#L88</a>: func (b *Builder) Write(p []<b>byte</b>) (int, error) {
+		<a href="../src/strings/builder.go.html#line-96" class="path-duplicate">builder.go</a><a href="../src/strings/builder.go.html#line-96">#L96</a>: func (b *Builder) WriteByte(c <b>byte</b>) error {
+		<a href="../src/strings/builder.go.html#line-107" class="path-duplicate">builder.go</a><a href="../src/strings/builder.go.html#line-107">#L107</a>: 		b.buf = append(b.buf, <b>byte</b>(r))
+		<a href="../src/strings/reader.go.html#line-38">reader.go#L38</a>: func (r *Reader) Read(b []<b>byte</b>) (n int, err error) {
+		<a href="../src/strings/reader.go.html#line-48" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-48">#L48</a>: func (r *Reader) ReadAt(b []<b>byte</b>, off int64) (n int, err error) {
+		<a href="../src/strings/reader.go.html#line-63" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-63">#L63</a>: func (r *Reader) ReadByte() (<b>byte</b>, error) {
+		<a href="../src/strings/replace.go.html#line-63">replace.go#L63</a>: 			r[i] = <b>byte</b>(i)
+		<a href="../src/strings/replace.go.html#line-86" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-86">#L86</a>: 			r.toReplace = append(r.toReplace, string([]<b>byte</b>{o}))
+		<a href="../src/strings/replace.go.html#line-88" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-88">#L88</a>: 		r.replacements[o] = []<b>byte</b>(n)
+		<a href="../src/strings/replace.go.html#line-265" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-265">#L265</a>: 	mapping [256]<b>byte</b>
+		<a href="../src/strings/replace.go.html#line-282" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-282">#L282</a>: 	var index <b>byte</b>
+		<a href="../src/strings/replace.go.html#line-285" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-285">#L285</a>: 			r.mapping[i] = <b>byte</b>(r.tableSize)
+		<a href="../src/strings/replace.go.html#line-300" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-300">#L300</a>: type appendSliceWriter []<b>byte</b>
+		<a href="../src/strings/replace.go.html#line-303" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-303">#L303</a>: func (w *appendSliceWriter) Write(p []<b>byte</b>) (int, error) {
+		<a href="../src/strings/replace.go.html#line-319" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-319">#L319</a>: 	return w.w.Write([]<b>byte</b>(s))
+		<a href="../src/strings/replace.go.html#line-390" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-390">#L390</a>: 	var buf []<b>byte</b>
+		<a href="../src/strings/replace.go.html#line-437" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-437">#L437</a>: type byteReplacer [256]<b>byte</b>
+		<a href="../src/strings/replace.go.html#line-440" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-440">#L440</a>: 	var buf []<b>byte</b> // lazily allocated
+		<a href="../src/strings/replace.go.html#line-445" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-445">#L445</a>: 				buf = []<b>byte</b>(s)
+		<a href="../src/strings/replace.go.html#line-462" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-462">#L462</a>: 	buf := make([]<b>byte</b>, bufsize)
+		<a href="../src/strings/replace.go.html#line-484" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-484">#L484</a>: 	replacements [256][]<b>byte</b>
+		<a href="../src/strings/replace.go.html#line-526" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-526">#L526</a>: 	buf := make([]<b>byte</b>, newSize)
+		<a href="../src/strings/strings.go.html#line-113">strings.go#L113</a>: func IndexByte(s string, c <b>byte</b>) int {
+		<a href="../src/strings/strings.go.html#line-124" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-124">#L124</a>: 		return IndexByte(s, <b>byte</b>(r))
+		<a href="../src/strings/strings.go.html#line-225" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-225">#L225</a>: func LastIndexByte(s string, c <b>byte</b>) int {
+		<a href="../src/strings/strings.go.html#line-504" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-504">#L504</a>: 				b.WriteByte(<b>byte</b>(r))
+		<a href="../src/strings/strings.go.html#line-816" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-816">#L816</a>: func (as *asciiSet) contains(c <b>byte</b>) bool {
+		<a href="../src/strings/strings.go.html#line-828" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-828">#L828</a>: 			return r &lt; utf8.RuneSelf &amp;&amp; as.contains(<b>byte</b>(r))
+		<a href="../src/strings/strings.go.html#line-937" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-937">#L937</a>: 	t := make([]<b>byte</b>, len(s)+n*(len(new)-len(old)))
+
+	<a href="../pkg/sync.html">sync</a>
+		<a href="../src/sync/pool.go.html#line-70">pool.go#L70</a>: 	pad [128 - unsafe.Sizeof(poolLocalInternal{})%128]<b>byte</b>
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/dirent.go.html#line-12">dirent.go#L12</a>: func readInt(b []<b>byte</b>, off, size uintptr) (u uint64, ok bool) {
+		<a href="../src/syscall/dirent.go.html#line-22" class="path-duplicate">dirent.go</a><a href="../src/syscall/dirent.go.html#line-22">#L22</a>: func readIntBE(b []<b>byte</b>, size uintptr) uint64 {
+		<a href="../src/syscall/dirent.go.html#line-41" class="path-duplicate">dirent.go</a><a href="../src/syscall/dirent.go.html#line-41">#L41</a>: func readIntLE(b []<b>byte</b>, size uintptr) uint64 {
+		<a href="../src/syscall/dirent.go.html#line-64" class="path-duplicate">dirent.go</a><a href="../src/syscall/dirent.go.html#line-64">#L64</a>: func ParseDirent(buf []<b>byte</b>, max int, names []string) (consumed int, count int, newnames []string) {
+		<a href="../src/syscall/exec_linux.go.html#line-61">exec_linux.go#L61</a>: 	none  = [...]<b>byte</b>{'n', 'o', 'n', 'e', 0}
+		<a href="../src/syscall/exec_linux.go.html#line-62" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-62">#L62</a>: 	slash = [...]<b>byte</b>{'/', 0}
+		<a href="../src/syscall/exec_linux.go.html#line-80" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-80">#L80</a>: func forkAndExecInChild(argv0 *<b>byte</b>, argv, envv []*<b>byte</b>, chroot, dir *<b>byte</b>, attr *ProcAttr, sys *SysProcAttr, pipe int) (pid int, err Errno) {
+		<a href="../src/syscall/exec_linux.go.html#line-144" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-144">#L144</a>: func forkAndExecInChild1(argv0 *<b>byte</b>, argv, envv []*<b>byte</b>, chroot, dir *<b>byte</b>, attr *ProcAttr, sys *SysProcAttr, pipe int) (r1 uintptr, err1 Errno, p [2]int, locked bool) {
+		<a href="../src/syscall/exec_linux.go.html#line-164" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-164">#L164</a>: 		puid, psetgroups, pgid    []<b>byte</b>
+		<a href="../src/syscall/exec_linux.go.html#line-165" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-165">#L165</a>: 		uidmap, setgroups, gidmap []<b>byte</b>
+		<a href="../src/syscall/exec_linux.go.html#line-169" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-169">#L169</a>: 		puid = []<b>byte</b>("/proc/self/uid_map\000")
+		<a href="../src/syscall/exec_linux.go.html#line-174" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-174">#L174</a>: 		psetgroups = []<b>byte</b>("/proc/self/setgroups\000")
+		<a href="../src/syscall/exec_linux.go.html#line-175" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-175">#L175</a>: 		pgid = []<b>byte</b>("/proc/self/gid_map\000")
+		<a href="../src/syscall/exec_linux.go.html#line-178" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-178">#L178</a>: 			setgroups = []<b>byte</b>("allow\000")
+		<a href="../src/syscall/exec_linux.go.html#line-180" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-180">#L180</a>: 			setgroups = []<b>byte</b>("deny\000")
+		<a href="../src/syscall/exec_linux.go.html#line-569" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-569">#L569</a>: func formatIDMappings(idMap []SysProcIDMap) []<b>byte</b> {
+		<a href="../src/syscall/exec_linux.go.html#line-570" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-570">#L570</a>: 	var data []<b>byte</b>
+		<a href="../src/syscall/exec_linux.go.html#line-572" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-572">#L572</a>: 		data = append(data, []<b>byte</b>(itoa(im.ContainerID)+" "+itoa(im.HostID)+" "+itoa(im.Size)+"\n")...)
+		<a href="../src/syscall/exec_linux.go.html#line-607" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-607">#L607</a>: 	var data []<b>byte</b>
+		<a href="../src/syscall/exec_linux.go.html#line-609" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-609">#L609</a>: 		data = []<b>byte</b>("allow")
+		<a href="../src/syscall/exec_linux.go.html#line-611" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-611">#L611</a>: 		data = []<b>byte</b>("deny")
+		<a href="../src/syscall/exec_unix.go.html#line-73">exec_unix.go#L73</a>: func StringSlicePtr(ss []string) []*<b>byte</b> {
+		<a href="../src/syscall/exec_unix.go.html#line-74" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-74">#L74</a>: 	bb := make([]*<b>byte</b>, len(ss)+1)
+		<a href="../src/syscall/exec_unix.go.html#line-85" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-85">#L85</a>: func SlicePtrFromStrings(ss []string) ([]*<b>byte</b>, error) {
+		<a href="../src/syscall/exec_unix.go.html#line-93" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-93">#L93</a>: 	bb := make([]*<b>byte</b>, len(ss)+1)
+		<a href="../src/syscall/exec_unix.go.html#line-94" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-94">#L94</a>: 	b := make([]<b>byte</b>, n)
+		<a href="../src/syscall/exec_unix.go.html#line-176" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-176">#L176</a>: 	var chroot *<b>byte</b>
+		<a href="../src/syscall/exec_unix.go.html#line-183" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-183">#L183</a>: 	var dir *<b>byte</b>
+		<a href="../src/syscall/exec_unix.go.html#line-221" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-221">#L221</a>: 		n, err = readlen(p[0], (*<b>byte</b>)(unsafe.Pointer(&err1)), int(unsafe.Sizeof(err1)))
+		<a href="../src/syscall/exec_unix.go.html#line-274" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-274">#L274</a>: var execveDarwin func(path *<b>byte</b>, argv **<b>byte</b>, envp **<b>byte</b>) error
+		<a href="../src/syscall/lsf_linux.go.html#line-32">lsf_linux.go#L32</a>: 	p := (*[2]<b>byte</b>)(unsafe.Pointer(&lsall.Protocol))
+		<a href="../src/syscall/lsf_linux.go.html#line-33" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-33">#L33</a>: 	p[0] = <b>byte</b>(proto >> 8)
+		<a href="../src/syscall/lsf_linux.go.html#line-34" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-34">#L34</a>: 	p[1] = <b>byte</b>(proto)
+		<a href="../src/syscall/lsf_linux.go.html#line-45" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-45">#L45</a>: 	name  [IFNAMSIZ]<b>byte</b>
+		<a href="../src/syscall/lsf_linux.go.html#line-57" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-57">#L57</a>: 	copy(ifl.name[:], []<b>byte</b>(name))
+		<a href="../src/syscall/netlink_linux.go.html#line-29">netlink_linux.go#L29</a>: func (rr *NetlinkRouteRequest) toWireFormat() []<b>byte</b> {
+		<a href="../src/syscall/netlink_linux.go.html#line-30" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-30">#L30</a>: 	b := make([]<b>byte</b>, rr.Header.Len)
+		<a href="../src/syscall/netlink_linux.go.html#line-36" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-36">#L36</a>: 	b[16] = <b>byte</b>(rr.Data.Family)
+		<a href="../src/syscall/netlink_linux.go.html#line-40" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-40">#L40</a>: func newNetlinkRouteRequest(proto, seq, family int) []<b>byte</b> {
+		<a href="../src/syscall/netlink_linux.go.html#line-52" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-52">#L52</a>: func NetlinkRIB(proto, family int) ([]<b>byte</b>, error) {
+		<a href="../src/syscall/netlink_linux.go.html#line-66" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-66">#L66</a>: 	var tab []<b>byte</b>
+		<a href="../src/syscall/netlink_linux.go.html#line-67" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-67">#L67</a>: 	rbNew := make([]<b>byte</b>, Getpagesize())
+		<a href="../src/syscall/netlink_linux.go.html#line-111" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-111">#L111</a>: 	Data   []<b>byte</b>
+		<a href="../src/syscall/netlink_linux.go.html#line-116" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-116">#L116</a>: func ParseNetlinkMessage(b []<b>byte</b>) ([]NetlinkMessage, error) {
+		<a href="../src/syscall/netlink_linux.go.html#line-130" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-130">#L130</a>: func netlinkMessageHeaderAndData(b []<b>byte</b>) (*NlMsghdr, []<b>byte</b>, int, error) {
+		<a href="../src/syscall/netlink_linux.go.html#line-142" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-142">#L142</a>: 	Value []<b>byte</b>
+		<a href="../src/syscall/netlink_linux.go.html#line-149" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-149">#L149</a>: 	var b []<b>byte</b>
+		<a href="../src/syscall/netlink_linux.go.html#line-173" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-173">#L173</a>: func netlinkRouteAttrAndValue(b []<b>byte</b>) (*RtAttr, []<b>byte</b>, int, error) {
+		<a href="../src/syscall/sockcmsg_linux.go.html#line-14">sockcmsg_linux.go#L14</a>: func UnixCredentials(ucred *Ucred) []<b>byte</b> {
+		<a href="../src/syscall/sockcmsg_linux.go.html#line-15" class="path-duplicate">sockcmsg_linux.go</a><a href="../src/syscall/sockcmsg_linux.go.html#line-15">#L15</a>: 	b := make([]<b>byte</b>, CmsgSpace(SizeofUcred))
+		<a href="../src/syscall/sockcmsg_unix.go.html#line-34">sockcmsg_unix.go#L34</a>: 	Data   []<b>byte</b>
+		<a href="../src/syscall/sockcmsg_unix.go.html#line-39" class="path-duplicate">sockcmsg_unix.go</a><a href="../src/syscall/sockcmsg_unix.go.html#line-39">#L39</a>: func ParseSocketControlMessage(b []<b>byte</b>) ([]SocketControlMessage, error) {
+		<a href="../src/syscall/sockcmsg_unix.go.html#line-54" class="path-duplicate">sockcmsg_unix.go</a><a href="../src/syscall/sockcmsg_unix.go.html#line-54">#L54</a>: func socketControlMessageHeaderAndData(b []<b>byte</b>) (*Cmsghdr, []<b>byte</b>, error) {
+		<a href="../src/syscall/sockcmsg_unix.go.html#line-64" class="path-duplicate">sockcmsg_unix.go</a><a href="../src/syscall/sockcmsg_unix.go.html#line-64">#L64</a>: func UnixRights(fds ...int) []<b>byte</b> {
+		<a href="../src/syscall/sockcmsg_unix.go.html#line-66" class="path-duplicate">sockcmsg_unix.go</a><a href="../src/syscall/sockcmsg_unix.go.html#line-66">#L66</a>: 	b := make([]<b>byte</b>, CmsgSpace(datalen))
+		<a href="../src/syscall/str.go.html#line-15">str.go#L15</a>: 	var buf [32]<b>byte</b> // big enough for int64
+		<a href="../src/syscall/str.go.html#line-18" class="path-duplicate">str.go</a><a href="../src/syscall/str.go.html#line-18">#L18</a>: 		buf[i] = <b>byte</b>(val%10 + '0')
+		<a href="../src/syscall/str.go.html#line-22" class="path-duplicate">str.go</a><a href="../src/syscall/str.go.html#line-22">#L22</a>: 	buf[i] = <b>byte</b>(val + '0')
+		<a href="../src/syscall/syscall.go.html#line-36">syscall.go#L36</a>: func StringByteSlice(s string) []<b>byte</b> {
+		<a href="../src/syscall/syscall.go.html#line-47" class="path-duplicate">syscall.go</a><a href="../src/syscall/syscall.go.html#line-47">#L47</a>: func ByteSliceFromString(s string) ([]<b>byte</b>, error) {
+		<a href="../src/syscall/syscall.go.html#line-53" class="path-duplicate">syscall.go</a><a href="../src/syscall/syscall.go.html#line-53">#L53</a>: 	a := make([]<b>byte</b>, len(s)+1)
+		<a href="../src/syscall/syscall.go.html#line-63" class="path-duplicate">syscall.go</a><a href="../src/syscall/syscall.go.html#line-63">#L63</a>: func StringBytePtr(s string) *<b>byte</b> { return &StringByteSlice(s)[0] }
+		<a href="../src/syscall/syscall.go.html#line-68" class="path-duplicate">syscall.go</a><a href="../src/syscall/syscall.go.html#line-68">#L68</a>: func BytePtrFromString(s string) (*<b>byte</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-163">syscall_linux.go#L163</a>: func Readlink(path string, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-236" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-236">#L236</a>: 	var buf [PathMax]<b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-363" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-363">#L363</a>: 	p := (*[2]<b>byte</b>)(unsafe.Pointer(&sa.raw.Port))
+		<a href="../src/syscall/syscall_linux.go.html#line-364" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-364">#L364</a>: 	p[0] = <b>byte</b>(sa.Port >> 8)
+		<a href="../src/syscall/syscall_linux.go.html#line-365" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-365">#L365</a>: 	p[1] = <b>byte</b>(sa.Port)
+		<a href="../src/syscall/syscall_linux.go.html#line-377" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-377">#L377</a>: 	p := (*[2]<b>byte</b>)(unsafe.Pointer(&sa.raw.Port))
+		<a href="../src/syscall/syscall_linux.go.html#line-378" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-378">#L378</a>: 	p[0] = <b>byte</b>(sa.Port >> 8)
+		<a href="../src/syscall/syscall_linux.go.html#line-379" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-379">#L379</a>: 	p[1] = <b>byte</b>(sa.Port)
+		<a href="../src/syscall/syscall_linux.go.html#line-420" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-420">#L420</a>: 	Addr     [8]<b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-501" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-501">#L501</a>: 		bytes := (*[len(pp.Path)]<b>byte</b>)(unsafe.Pointer(&pp.Path[0]))[0:n]
+		<a href="../src/syscall/syscall_linux.go.html#line-508" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-508">#L508</a>: 		p := (*[2]<b>byte</b>)(unsafe.Pointer(&pp.Port))
+		<a href="../src/syscall/syscall_linux.go.html#line-518" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-518">#L518</a>: 		p := (*[2]<b>byte</b>)(unsafe.Pointer(&pp.Port))
+		<a href="../src/syscall/syscall_linux.go.html#line-571" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-571">#L571</a>: func GetsockoptInet4Addr(fd, level, opt int) (value [4]<b>byte</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-623" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-623">#L623</a>: func Recvmsg(fd int, p, oob []<b>byte</b>, flags int) (n, oobn int, recvflags int, from Sockaddr, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-626" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-626">#L626</a>: 	msg.Name = (*<b>byte</b>)(unsafe.Pointer(&rsa))
+		<a href="../src/syscall/syscall_linux.go.html#line-633" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-633">#L633</a>: 	var dummy <b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-664" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-664">#L664</a>: func Sendmsg(fd int, p, oob []<b>byte</b>, to Sockaddr, flags int) (err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-669" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-669">#L669</a>: func SendmsgN(fd int, p, oob []<b>byte</b>, to Sockaddr, flags int) (n int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-680" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-680">#L680</a>: 	msg.Name = (*<b>byte</b>)(ptr)
+		<a href="../src/syscall/syscall_linux.go.html#line-687" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-687">#L687</a>: 	var dummy <b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-722" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-722">#L722</a>: func ptracePeek(req int, pid int, addr uintptr, out []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-729" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-729">#L729</a>: 	var buf [sizeofPtr]<b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-762" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-762">#L762</a>: func PtracePeekText(pid int, addr uintptr, out []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-766" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-766">#L766</a>: func PtracePeekData(pid int, addr uintptr, out []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-770" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-770">#L770</a>: func ptracePoke(pokeReq int, peekReq int, pid int, addr uintptr, data []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-777" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-777">#L777</a>: 		var buf [sizeofPtr]<b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-804" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-804">#L804</a>: 		var buf [sizeofPtr]<b>byte</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-821" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-821">#L821</a>: func PtracePokeText(pid int, addr uintptr, data []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-825" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-825">#L825</a>: func PtracePokeData(pid int, addr uintptr, data []<b>byte</b>) (count int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-868" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-868">#L868</a>: func ReadDirent(fd int, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-872" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-872">#L872</a>: func direntIno(buf []<b>byte</b>) (uint64, bool) {
+		<a href="../src/syscall/syscall_linux.go.html#line-876" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-876">#L876</a>: func direntReclen(buf []<b>byte</b>) (uint64, bool) {
+		<a href="../src/syscall/syscall_linux.go.html#line-880" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-880">#L880</a>: func direntNamlen(buf []<b>byte</b>) (uint64, bool) {
+		<a href="../src/syscall/syscall_linux.go.html#line-993" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-993">#L993</a>: 	active: make(map[*<b>byte</b>][]<b>byte</b>),
+		<a href="../src/syscall/syscall_linux.go.html#line-998" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-998">#L998</a>: func Mmap(fd int, offset int64, length int, prot int, flags int) (data []<b>byte</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-1002" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1002">#L1002</a>: func Munmap(b []<b>byte</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-35">syscall_unix.go#L35</a>: func clen(n []<b>byte</b>) int {
+		<a href="../src/syscall/syscall_unix.go.html#line-48" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-48">#L48</a>: 	active map[*<b>byte</b>][]<b>byte</b> // active mappings; key is last byte in mapping
+		<a href="../src/syscall/syscall_unix.go.html#line-53" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-53">#L53</a>: func (m *mmapper) Mmap(fd int, offset int64, length int, prot int, flags int) (data []<b>byte</b>, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-65" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-65">#L65</a>: 	var b []<b>byte</b>
+		<a href="../src/syscall/syscall_unix.go.html#line-79" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-79">#L79</a>: func (m *mmapper) Munmap(data []<b>byte</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-186" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-186">#L186</a>: func Read(fd int, p []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-202" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-202">#L202</a>: func Write(fd int, p []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-233" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-233">#L233</a>: 	Addr [4]<b>byte</b>
+		<a href="../src/syscall/syscall_unix.go.html#line-240" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-240">#L240</a>: 	Addr   [16]<b>byte</b>
+		<a href="../src/syscall/syscall_unix.go.html#line-281" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-281">#L281</a>: func Recvfrom(fd int, p []<b>byte</b>, flags int) (n int, from Sockaddr, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-293" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-293">#L293</a>: func Sendto(fd int, p []<b>byte</b>, flags int, to Sockaddr) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-301" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-301">#L301</a>: func SetsockoptByte(fd, level, opt int, value <b>byte</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-310" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-310">#L310</a>: func SetsockoptInet4Addr(fd, level, opt int, value [4]<b>byte</b>) (err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-333" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-333">#L333</a>: 		p = unsafe.Pointer(&amp;[]<b>byte</b>(s)[0])
+		<a href="../src/syscall/time_nofake.go.html#line-11">time_nofake.go#L11</a>: func faketimeWrite(fd int, p []<b>byte</b>) int {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-13">zsyscall_linux_amd64.go#L13</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-28" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-28">#L28</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-43" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-43">#L43</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-48" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-48">#L48</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-63" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-63">#L63</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-78" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-78">#L78</a>: func readlinkat(dirfd int, path string, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-79" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-79">#L79</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-101" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-101">#L101</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-106" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-106">#L106</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-121" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-121">#L121</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-136" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-136">#L136</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-150" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-150">#L150</a>: func Getcwd(buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-189" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-189">#L189</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-203" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-203">#L203</a>: func mount(source string, target string, fstype string, flags uintptr, data *<b>byte</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-204" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-204">#L204</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-209" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-209">#L209</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-214" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-214">#L214</a>: 	var _p2 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-229" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-229">#L229</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-255" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-255">#L255</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-270" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-270">#L270</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-367" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-367">#L367</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-422" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-422">#L422</a>: func Getdents(fd int, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-495" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-495">#L495</a>: func Getxattr(path string, attr string, dest []<b>byte</b>) (sz int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-496" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-496">#L496</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-501" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-501">#L501</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-523" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-523">#L523</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-570" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-570">#L570</a>: func Klogctl(typ int, buf []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-587" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-587">#L587</a>: func Listxattr(path string, dest []<b>byte</b>) (sz int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-588" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-588">#L588</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-610" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-610">#L610</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-625" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-625">#L625</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-650" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-650">#L650</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-655" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-655">#L655</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-679" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-679">#L679</a>: func read(fd int, p []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-697" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-697">#L697</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-702" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-702">#L702</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-716" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-716">#L716</a>: func Setdomainname(p []<b>byte</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-732" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-732">#L732</a>: func Sethostname(p []<b>byte</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-789" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-789">#L789</a>: func Setxattr(path string, attr string, data []<b>byte</b>, flags int) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-790" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-790">#L790</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-795" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-795">#L795</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-883" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-883">#L883</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-907" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-907">#L907</a>: func write(fd int, p []<b>byte</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-934" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-934">#L934</a>: func readlen(fd int, p *<b>byte</b>, np int) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-945" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-945">#L945</a>: func writelen(fd int, p *<b>byte</b>, np int) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-966" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-966">#L966</a>: func Madvise(b []<b>byte</b>, advice int) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-982" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-982">#L982</a>: func Mprotect(b []<b>byte</b>, prot int) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-998" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-998">#L998</a>: func Mlock(b []<b>byte</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1014" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1014">#L1014</a>: func Munlock(b []<b>byte</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1204" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1204">#L1204</a>: func Pread(fd int, p []<b>byte</b>, offset int64) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1221" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1221">#L1221</a>: func Pwrite(fd int, p []<b>byte</b>, offset int64) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1239" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1239">#L1239</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1244" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1244">#L1244</a>: 	var _p1 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1383" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1383">#L1383</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1408" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1408">#L1408</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1475" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1475">#L1475</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1571" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1571">#L1571</a>: func recvfrom(fd int, p []<b>byte</b>, flags int, from *RawSockaddrAny, fromlen *_Socklen) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1588" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1588">#L1588</a>: func sendto(s int, buf []<b>byte</b>, flags int, to unsafe.Pointer, addrlen _Socklen) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1655" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1655">#L1655</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1670" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1670">#L1670</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1685" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1685">#L1685</a>: 	var _p0 *<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-36">ztypes_linux_amd64.go#L36</a>: 	Pad_cgo_0 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-42" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-42">#L42</a>: 	Pad_cgo_1 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-51" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-51">#L51</a>: 	Pad_cgo_2 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-58" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-58">#L58</a>: 	Pad_cgo_3 [44]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-140" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-140">#L140</a>: 	Pad_cgo_0 [5]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-150" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-150">#L150</a>: 	Pad_cgo_0 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-154" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-154">#L154</a>: 	Pad_cgo_1 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-160" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-160">#L160</a>: 	Addr   [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-168" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-168">#L168</a>: 	Addr     [16]<b>byte</b> /* in6_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-212" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-212">#L212</a>: 	Base *<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-217" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-217">#L217</a>: 	Multiaddr [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-218" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-218">#L218</a>: 	Interface [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-222" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-222">#L222</a>: 	Multiaddr [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-223" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-223">#L223</a>: 	Address   [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-228" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-228">#L228</a>: 	Multiaddr [16]<b>byte</b> /* in6_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-233" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-233">#L233</a>: 	Name       *<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-235" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-235">#L235</a>: 	Pad_cgo_0  [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-238" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-238">#L238</a>: 	Control    *<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-241" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-241">#L241</a>: 	Pad_cgo_1  [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-252" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-252">#L252</a>: 	Spec_dst [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-253" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-253">#L253</a>: 	Addr     [4]<b>byte</b> /* in_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-257" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-257">#L257</a>: 	Addr    [16]<b>byte</b> /* in6_addr */
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-283" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-283">#L283</a>: 	Pad_cgo_0      [2]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-502" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-502">#L502</a>: 	Pad_cgo_0 [6]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-561" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-561">#L561</a>: 	Pad_cgo_0 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-565" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-565">#L565</a>: 	X_f       [0]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-566" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-566">#L566</a>: 	Pad_cgo_1 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-580" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-580">#L580</a>: 	Pad_cgo_0 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-584" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-584">#L584</a>: 	Pad_cgo_1 [4]<b>byte</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-613" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-613">#L613</a>: 	Pad_cgo_0 [3]<b>byte</b>
+
+	<a href="../pkg/time.html">time</a>
+		<a href="../src/time/format.go.html#line-366">format.go#L366</a>: func appendInt(b []<b>byte</b>, x int, width int) []<b>byte</b> {
+		<a href="../src/time/format.go.html#line-374" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-374">#L374</a>: 	var buf [20]<b>byte</b>
+		<a href="../src/time/format.go.html#line-379" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-379">#L379</a>: 		buf[i] = <b>byte</b>('0' + u - q*10)
+		<a href="../src/time/format.go.html#line-383" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-383">#L383</a>: 	buf[i] = <b>byte</b>('0' + u)
+		<a href="../src/time/format.go.html#line-416" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-416">#L416</a>: func formatNano(b []<b>byte</b>, nanosec uint, n int, trim bool) []<b>byte</b> {
+		<a href="../src/time/format.go.html#line-418" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-418">#L418</a>: 	var buf [9]<b>byte</b>
+		<a href="../src/time/format.go.html#line-421" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-421">#L421</a>: 		buf[start] = <b>byte</b>(u%10 + '0')
+		<a href="../src/time/format.go.html#line-456" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-456">#L456</a>: 		sign := <b>byte</b>('+')
+		<a href="../src/time/format.go.html#line-463" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-463">#L463</a>: 		var buf []<b>byte</b>
+		<a href="../src/time/format.go.html#line-497" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-497">#L497</a>: 	var b []<b>byte</b>
+		<a href="../src/time/format.go.html#line-500" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-500">#L500</a>: 		var buf [bufSize]<b>byte</b>
+		<a href="../src/time/format.go.html#line-503" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-503">#L503</a>: 		b = make([]<b>byte</b>, 0, max)
+		<a href="../src/time/format.go.html#line-511" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-511">#L511</a>: func (t Time) AppendFormat(b []<b>byte</b>, layout string) []<b>byte</b> {
+		<a href="../src/time/sys_unix.go.html#line-27">sys_unix.go#L27</a>: func read(fd uintptr, buf []<b>byte</b>) (int, error) {
+		<a href="../src/time/sys_unix.go.html#line-35" class="path-duplicate">sys_unix.go</a><a href="../src/time/sys_unix.go.html#line-35">#L35</a>: func preadn(fd uintptr, buf []<b>byte</b>, off int) error {
+		<a href="../src/time/time.go.html#line-295">time.go#L295</a>: 	buf := make([]<b>byte</b>, 20)
+		<a href="../src/time/time.go.html#line-318" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-318">#L318</a>: 	buf := make([]<b>byte</b>, 20)
+		<a href="../src/time/time.go.html#line-616" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-616">#L616</a>: 	var buf [32]<b>byte</b>
+		<a href="../src/time/time.go.html#line-691" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-691">#L691</a>: func fmtFrac(buf []<b>byte</b>, v uint64, prec int) (nw int, nv uint64) {
+		<a href="../src/time/time.go.html#line-700" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-700">#L700</a>: 			buf[w] = <b>byte</b>(digit) + '0'
+		<a href="../src/time/time.go.html#line-713" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-713">#L713</a>: func fmtInt(buf []<b>byte</b>, v uint64) int {
+		<a href="../src/time/time.go.html#line-721" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-721">#L721</a>: 			buf[w] = <b>byte</b>(v%10) + '0'
+		<a href="../src/time/time.go.html#line-1141" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1141">#L1141</a>: const timeBinaryVersion <b>byte</b> = 1
+		<a href="../src/time/time.go.html#line-1144" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1144">#L1144</a>: func (t Time) MarshalBinary() ([]<b>byte</b>, error) {
+		<a href="../src/time/time.go.html#line-1163" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1163">#L1163</a>: 	enc := []<b>byte</b>{
+		<a href="../src/time/time.go.html#line-1165" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1165">#L1165</a>: 		<b>byte</b>(sec >> 56),   // bytes 1-8: seconds
+		<a href="../src/time/time.go.html#line-1166" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1166">#L1166</a>: 		<b>byte</b>(sec >> 48),
+		<a href="../src/time/time.go.html#line-1167" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1167">#L1167</a>: 		<b>byte</b>(sec >> 40),
+		<a href="../src/time/time.go.html#line-1168" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1168">#L1168</a>: 		<b>byte</b>(sec >> 32),
+		<a href="../src/time/time.go.html#line-1169" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1169">#L1169</a>: 		<b>byte</b>(sec >> 24),
+		<a href="../src/time/time.go.html#line-1170" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1170">#L1170</a>: 		<b>byte</b>(sec >> 16),
+		<a href="../src/time/time.go.html#line-1171" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1171">#L1171</a>: 		<b>byte</b>(sec >> 8),
+		<a href="../src/time/time.go.html#line-1172" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1172">#L1172</a>: 		<b>byte</b>(sec),
+		<a href="../src/time/time.go.html#line-1173" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1173">#L1173</a>: 		<b>byte</b>(nsec >> 24), // bytes 9-12: nanoseconds
+		<a href="../src/time/time.go.html#line-1174" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1174">#L1174</a>: 		<b>byte</b>(nsec >> 16),
+		<a href="../src/time/time.go.html#line-1175" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1175">#L1175</a>: 		<b>byte</b>(nsec >> 8),
+		<a href="../src/time/time.go.html#line-1176" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1176">#L1176</a>: 		<b>byte</b>(nsec),
+		<a href="../src/time/time.go.html#line-1177" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1177">#L1177</a>: 		<b>byte</b>(offsetMin >> 8), // bytes 13-14: zone offset in minutes
+		<a href="../src/time/time.go.html#line-1178" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1178">#L1178</a>: 		<b>byte</b>(offsetMin),
+		<a href="../src/time/time.go.html#line-1185" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1185">#L1185</a>: func (t *Time) UnmarshalBinary(data []<b>byte</b>) error {
+		<a href="../src/time/time.go.html#line-1229" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1229">#L1229</a>: func (t Time) GobEncode() ([]<b>byte</b>, error) {
+		<a href="../src/time/time.go.html#line-1234" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1234">#L1234</a>: func (t *Time) GobDecode(data []<b>byte</b>) error {
+		<a href="../src/time/time.go.html#line-1240" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1240">#L1240</a>: func (t Time) MarshalJSON() ([]<b>byte</b>, error) {
+		<a href="../src/time/time.go.html#line-1247" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1247">#L1247</a>: 	b := make([]<b>byte</b>, 0, len(RFC3339Nano)+2)
+		<a href="../src/time/time.go.html#line-1256" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1256">#L1256</a>: func (t *Time) UnmarshalJSON(data []<b>byte</b>) error {
+		<a href="../src/time/time.go.html#line-1269" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1269">#L1269</a>: func (t Time) MarshalText() ([]<b>byte</b>, error) {
+		<a href="../src/time/time.go.html#line-1274" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1274">#L1274</a>: 	b := make([]<b>byte</b>, 0, len(RFC3339Nano))
+		<a href="../src/time/time.go.html#line-1280" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1280">#L1280</a>: func (t *Time) UnmarshalText(data []<b>byte</b>) error {
+		<a href="../src/time/zoneinfo_read.go.html#line-50">zoneinfo_read.go#L50</a>: 	p     []<b>byte</b>
+		<a href="../src/time/zoneinfo_read.go.html#line-54" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-54">#L54</a>: func (d *dataIO) read(n int) []<b>byte</b> {
+		<a href="../src/time/zoneinfo_read.go.html#line-84" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-84">#L84</a>: func (d *dataIO) byte() (n <b>byte</b>, ok bool) {
+		<a href="../src/time/zoneinfo_read.go.html#line-94" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-94">#L94</a>: func (d *dataIO) rest() []<b>byte</b> {
+		<a href="../src/time/zoneinfo_read.go.html#line-101" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-101">#L101</a>: func byteString(p []<b>byte</b>) string {
+		<a href="../src/time/zoneinfo_read.go.html#line-116" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-116">#L116</a>: func LoadLocationFromTZData(name string, data []<b>byte</b>) (*Location, error) {
+		<a href="../src/time/zoneinfo_read.go.html#line-126" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-126">#L126</a>: 	var p []<b>byte</b>
+		<a href="../src/time/zoneinfo_read.go.html#line-261" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-261">#L261</a>: 		var b <b>byte</b>
+		<a href="../src/time/zoneinfo_read.go.html#line-355" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-355">#L355</a>: func loadTzinfoFromDirOrZip(dir, name string) ([]<b>byte</b>, error) {
+		<a href="../src/time/zoneinfo_read.go.html#line-374" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-374">#L374</a>: func get4(b []<b>byte</b>) int {
+		<a href="../src/time/zoneinfo_read.go.html#line-382" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-382">#L382</a>: func get2(b []<b>byte</b>) int {
+		<a href="../src/time/zoneinfo_read.go.html#line-391" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-391">#L391</a>: func loadTzinfoFromZip(zipfile, name string) ([]<b>byte</b>, error) {
+		<a href="../src/time/zoneinfo_read.go.html#line-407" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-407">#L407</a>: 	buf := make([]<b>byte</b>, ztailsize)
+		<a href="../src/time/zoneinfo_read.go.html#line-415" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-415">#L415</a>: 	buf = make([]<b>byte</b>, size)
+		<a href="../src/time/zoneinfo_read.go.html#line-478" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-478">#L478</a>: 		buf = make([]<b>byte</b>, zheadersize+namelen)
+		<a href="../src/time/zoneinfo_read.go.html#line-488" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-488">#L488</a>: 		buf = make([]<b>byte</b>, size)
+		<a href="../src/time/zoneinfo_read.go.html#line-502" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-502">#L502</a>: var loadTzinfoFromTzdata func(file, name string) ([]<b>byte</b>, error)
+		<a href="../src/time/zoneinfo_read.go.html#line-508" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-508">#L508</a>: func loadTzinfo(name string, source string) ([]<b>byte</b>, error) {
+		<a href="../src/time/zoneinfo_read.go.html#line-534" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-534">#L534</a>: 			if z, err = LoadLocationFromTZData(name, []<b>byte</b>(zonedata)); err == nil {
+		<a href="../src/time/zoneinfo_read.go.html#line-552" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-552">#L552</a>: func readFile(name string) ([]<b>byte</b>, error) {
+		<a href="../src/time/zoneinfo_read.go.html#line-559" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-559">#L559</a>: 		buf [4096]<b>byte</b>
+		<a href="../src/time/zoneinfo_read.go.html#line-560" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-560">#L560</a>: 		ret []<b>byte</b>
+
+	<a href="../pkg/unicode/utf8.html">unicode/utf8</a>
+		<a href="../src/unicode/utf8/utf8.go.html#line-104">utf8.go#L104</a>: func FullRune(p []<b>byte</b>) bool {
+		<a href="../src/unicode/utf8/utf8.go.html#line-151" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-151">#L151</a>: func DecodeRune(p []<b>byte</b>) (r rune, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-247" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-247">#L247</a>: func DecodeLastRune(p []<b>byte</b>) (r rune, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-341" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-341">#L341</a>: func EncodeRune(p []<b>byte</b>, r rune) int {
+		<a href="../src/unicode/utf8/utf8.go.html#line-345" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-345">#L345</a>: 		p[0] = <b>byte</b>(r)
+		<a href="../src/unicode/utf8/utf8.go.html#line-349" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-349">#L349</a>: 		p[0] = t2 | <b>byte</b>(r>>6)
+		<a href="../src/unicode/utf8/utf8.go.html#line-350" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-350">#L350</a>: 		p[1] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-357" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-357">#L357</a>: 		p[0] = t3 | <b>byte</b>(r>>12)
+		<a href="../src/unicode/utf8/utf8.go.html#line-358" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-358">#L358</a>: 		p[1] = tx | <b>byte</b>(r>>6)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-359" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-359">#L359</a>: 		p[2] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-363" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-363">#L363</a>: 		p[0] = t4 | <b>byte</b>(r>>18)
+		<a href="../src/unicode/utf8/utf8.go.html#line-364" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-364">#L364</a>: 		p[1] = tx | <b>byte</b>(r>>12)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-365" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-365">#L365</a>: 		p[2] = tx | <b>byte</b>(r>>6)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-366" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-366">#L366</a>: 		p[3] = tx | <b>byte</b>(r)&maskx
+		<a href="../src/unicode/utf8/utf8.go.html#line-373" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-373">#L373</a>: func RuneCount(p []<b>byte</b>) int {
+		<a href="../src/unicode/utf8/utf8.go.html#line-447" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-447">#L447</a>: func RuneStart(b <b>byte</b>) bool { return b&0xC0 != 0x80 }
+		<a href="../src/unicode/utf8/utf8.go.html#line-450" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-450">#L450</a>: func Valid(p []<b>byte</b>) bool {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

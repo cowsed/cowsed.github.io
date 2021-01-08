@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: fmt.pp.fmt</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/fmt.html">fmt</a>.<a href="../src/fmt/print.go.html#line-105">pp</a>.<a href="../src/fmt/print.go.html#line-115">fmt</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+111 uses:
+
+	fmt <i>(current package)</i>
+		<a href="../src/fmt/print.go.html#line-115">print.go#L115</a>: 	<b>fmt</b> fmt
+		<a href="../src/fmt/print.go.html#line-141" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-141">#L141</a>: 	p.<b>fmt</b>.init(&p.buf)
+		<a href="../src/fmt/print.go.html#line-164" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-164">#L164</a>: func (p *pp) Width() (wid int, ok bool) { return p.<b>fmt</b>.wid, p.<b>fmt</b>.widPresent }
+		<a href="../src/fmt/print.go.html#line-166" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-166">#L166</a>: func (p *pp) Precision() (prec int, ok bool) { return p.<b>fmt</b>.prec, p.<b>fmt</b>.precPresent }
+		<a href="../src/fmt/print.go.html#line-171" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-171">#L171</a>: 		return p.<b>fmt</b>.minus
+		<a href="../src/fmt/print.go.html#line-173" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-173">#L173</a>: 		return p.<b>fmt</b>.plus || p.<b>fmt</b>.plusV
+		<a href="../src/fmt/print.go.html#line-175" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-175">#L175</a>: 		return p.<b>fmt</b>.sharp || p.<b>fmt</b>.sharpV
+		<a href="../src/fmt/print.go.html#line-177" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-177">#L177</a>: 		return p.<b>fmt</b>.space
+		<a href="../src/fmt/print.go.html#line-179" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-179">#L179</a>: 		return p.<b>fmt</b>.zero
+		<a href="../src/fmt/print.go.html#line-354" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-354">#L354</a>: 		p.<b>fmt</b>.fmtBoolean(v)
+		<a href="../src/fmt/print.go.html#line-363" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-363">#L363</a>: 	sharp := p.<b>fmt</b>.sharp
+		<a href="../src/fmt/print.go.html#line-364" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-364">#L364</a>: 	p.<b>fmt</b>.sharp = leading0x
+		<a href="../src/fmt/print.go.html#line-365" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-365">#L365</a>: 	p.<b>fmt</b>.fmtInteger(v, 16, unsigned, 'v', ldigits)
+		<a href="../src/fmt/print.go.html#line-366" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-366">#L366</a>: 	p.<b>fmt</b>.sharp = sharp
+		<a href="../src/fmt/print.go.html#line-373" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-373">#L373</a>: 		if p.<b>fmt</b>.sharpV && !isSigned {
+		<a href="../src/fmt/print.go.html#line-376" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-376">#L376</a>: 			p.<b>fmt</b>.fmtInteger(v, 10, isSigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-379" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-379">#L379</a>: 		p.<b>fmt</b>.fmtInteger(v, 10, isSigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-381" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-381">#L381</a>: 		p.<b>fmt</b>.fmtInteger(v, 2, isSigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-383" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-383">#L383</a>: 		p.<b>fmt</b>.fmtInteger(v, 8, isSigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-385" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-385">#L385</a>: 		p.<b>fmt</b>.fmtInteger(v, 16, isSigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-387" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-387">#L387</a>: 		p.<b>fmt</b>.fmtInteger(v, 16, isSigned, verb, udigits)
+		<a href="../src/fmt/print.go.html#line-389" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-389">#L389</a>: 		p.<b>fmt</b>.fmtC(v)
+		<a href="../src/fmt/print.go.html#line-392" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-392">#L392</a>: 			p.<b>fmt</b>.fmtQc(v)
+		<a href="../src/fmt/print.go.html#line-397" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-397">#L397</a>: 		p.<b>fmt</b>.fmtUnicode(v)
+		<a href="../src/fmt/print.go.html#line-408" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-408">#L408</a>: 		p.<b>fmt</b>.fmtFloat(v, size, 'g', -1)
+		<a href="../src/fmt/print.go.html#line-410" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-410">#L410</a>: 		p.<b>fmt</b>.fmtFloat(v, size, verb, -1)
+		<a href="../src/fmt/print.go.html#line-412" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-412">#L412</a>: 		p.<b>fmt</b>.fmtFloat(v, size, verb, 6)
+		<a href="../src/fmt/print.go.html#line-414" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-414">#L414</a>: 		p.<b>fmt</b>.fmtFloat(v, size, 'f', 6)
+		<a href="../src/fmt/print.go.html#line-428" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-428">#L428</a>: 		oldPlus := p.<b>fmt</b>.plus
+		<a href="../src/fmt/print.go.html#line-432" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-432">#L432</a>: 		p.<b>fmt</b>.plus = true
+		<a href="../src/fmt/print.go.html#line-435" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-435">#L435</a>: 		p.<b>fmt</b>.plus = oldPlus
+		<a href="../src/fmt/print.go.html#line-444" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-444">#L444</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-445" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-445">#L445</a>: 			p.<b>fmt</b>.fmtQ(v)
+		<a href="../src/fmt/print.go.html#line-447" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-447">#L447</a>: 			p.<b>fmt</b>.fmtS(v)
+		<a href="../src/fmt/print.go.html#line-450" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-450">#L450</a>: 		p.<b>fmt</b>.fmtS(v)
+		<a href="../src/fmt/print.go.html#line-452" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-452">#L452</a>: 		p.<b>fmt</b>.fmtSx(v, ldigits)
+		<a href="../src/fmt/print.go.html#line-454" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-454">#L454</a>: 		p.<b>fmt</b>.fmtSx(v, udigits)
+		<a href="../src/fmt/print.go.html#line-456" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-456">#L456</a>: 		p.<b>fmt</b>.fmtQ(v)
+		<a href="../src/fmt/print.go.html#line-465" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-465">#L465</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-485" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-485">#L485</a>: 				p.<b>fmt</b>.fmtInteger(uint64(c), 10, unsigned, verb, ldigits)
+		<a href="../src/fmt/print.go.html#line-490" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-490">#L490</a>: 		p.<b>fmt</b>.fmtBs(v)
+		<a href="../src/fmt/print.go.html#line-492" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-492">#L492</a>: 		p.<b>fmt</b>.fmtBx(v, ldigits)
+		<a href="../src/fmt/print.go.html#line-494" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-494">#L494</a>: 		p.<b>fmt</b>.fmtBx(v, udigits)
+		<a href="../src/fmt/print.go.html#line-496" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-496">#L496</a>: 		p.<b>fmt</b>.fmtQ(string(v))
+		<a href="../src/fmt/print.go.html#line-514" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-514">#L514</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-526" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-526">#L526</a>: 				p.<b>fmt</b>.padString(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-528" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-528">#L528</a>: 				p.fmt0x64(uint64(u), !p.<b>fmt</b>.sharp)
+		<a href="../src/fmt/print.go.html#line-532" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-532">#L532</a>: 		p.fmt0x64(uint64(u), !p.<b>fmt</b>.sharp)
+		<a href="../src/fmt/print.go.html#line-556" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-556">#L556</a>: 		oldFlags := p.<b>fmt</b>.fmtFlags
+		<a href="../src/fmt/print.go.html#line-558" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-558">#L558</a>: 		p.<b>fmt</b>.clearflags()
+		<a href="../src/fmt/print.go.html#line-570" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-570">#L570</a>: 		p.<b>fmt</b>.fmtFlags = oldFlags
+		<a href="../src/fmt/print.go.html#line-602" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-602">#L602</a>: 	if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-607" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-607">#L607</a>: 			p.<b>fmt</b>.fmtS(stringer.GoString())
+		<a href="../src/fmt/print.go.html#line-645" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-645">#L645</a>: 			p.<b>fmt</b>.padString(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-656" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-656">#L656</a>: 		p.<b>fmt</b>.fmtS(reflect.TypeOf(arg).String())
+		<a href="../src/fmt/print.go.html#line-763" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-763">#L763</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-776" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-776">#L776</a>: 				if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-786" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-786">#L786</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-792" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-792">#L792</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-798" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-798">#L798</a>: 				if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-804" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-804">#L804</a>: 			if p.<b>fmt</b>.plusV || p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-816" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-816">#L816</a>: 			if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-849" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-849">#L849</a>: 		if p.<b>fmt</b>.sharpV {
+		<a href="../src/fmt/print.go.html#line-1002" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1002">#L1002</a>: 		p.<b>fmt</b>.clearflags()
+		<a href="../src/fmt/print.go.html#line-1008" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1008">#L1008</a>: 				p.<b>fmt</b>.sharp = true
+		<a href="../src/fmt/print.go.html#line-1010" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1010">#L1010</a>: 				p.<b>fmt</b>.zero = !p.<b>fmt</b>.minus // Only allow zero padding to the left.
+		<a href="../src/fmt/print.go.html#line-1012" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1012">#L1012</a>: 				p.<b>fmt</b>.plus = true
+		<a href="../src/fmt/print.go.html#line-1014" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1014">#L1014</a>: 				p.<b>fmt</b>.minus = true
+		<a href="../src/fmt/print.go.html#line-1015" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1015">#L1015</a>: 				p.<b>fmt</b>.zero = false // Do not pad with zeros to the right.
+		<a href="../src/fmt/print.go.html#line-1017" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1017">#L1017</a>: 				p.<b>fmt</b>.space = true
+		<a href="../src/fmt/print.go.html#line-1024" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1024">#L1024</a>: 						p.<b>fmt</b>.sharpV = p.<b>fmt</b>.sharp
+		<a href="../src/fmt/print.go.html#line-1025" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1025">#L1025</a>: 						p.<b>fmt</b>.sharp = false
+		<a href="../src/fmt/print.go.html#line-1027" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1027">#L1027</a>: 						p.<b>fmt</b>.plusV = p.<b>fmt</b>.plus
+		<a href="../src/fmt/print.go.html#line-1028" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1028">#L1028</a>: 						p.<b>fmt</b>.plus = false
+		<a href="../src/fmt/print.go.html#line-1046" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1046">#L1046</a>: 			p.<b>fmt</b>.wid, p.<b>fmt</b>.widPresent, argNum = intFromArg(a, argNum)
+		<a href="../src/fmt/print.go.html#line-1048" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1048">#L1048</a>: 			if !p.<b>fmt</b>.widPresent {
+		<a href="../src/fmt/print.go.html#line-1054" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1054">#L1054</a>: 			if p.<b>fmt</b>.wid < 0 {
+		<a href="../src/fmt/print.go.html#line-1055" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1055">#L1055</a>: 				p.<b>fmt</b>.wid = -p.<b>fmt</b>.wid
+		<a href="../src/fmt/print.go.html#line-1056" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1056">#L1056</a>: 				p.<b>fmt</b>.minus = true
+		<a href="../src/fmt/print.go.html#line-1057" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1057">#L1057</a>: 				p.<b>fmt</b>.zero = false // Do not pad with zeros to the right.
+		<a href="../src/fmt/print.go.html#line-1061" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1061">#L1061</a>: 			p.<b>fmt</b>.wid, p.<b>fmt</b>.widPresent, i = parsenum(format, i, end)
+		<a href="../src/fmt/print.go.html#line-1062" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1062">#L1062</a>: 			if afterIndex &amp;&amp; p.<b>fmt</b>.widPresent { // "%[3]2d"
+		<a href="../src/fmt/print.go.html#line-1076" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1076">#L1076</a>: 				p.<b>fmt</b>.prec, p.<b>fmt</b>.precPresent, argNum = intFromArg(a, argNum)
+		<a href="../src/fmt/print.go.html#line-1078" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1078">#L1078</a>: 				if p.<b>fmt</b>.prec < 0 {
+		<a href="../src/fmt/print.go.html#line-1079" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1079">#L1079</a>: 					p.<b>fmt</b>.prec = 0
+		<a href="../src/fmt/print.go.html#line-1080" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1080">#L1080</a>: 					p.<b>fmt</b>.precPresent = false
+		<a href="../src/fmt/print.go.html#line-1082" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1082">#L1082</a>: 				if !p.<b>fmt</b>.precPresent {
+		<a href="../src/fmt/print.go.html#line-1087" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1087">#L1087</a>: 				p.<b>fmt</b>.prec, p.<b>fmt</b>.precPresent, i = parsenum(format, i, end)
+		<a href="../src/fmt/print.go.html#line-1088" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1088">#L1088</a>: 				if !p.<b>fmt</b>.precPresent {
+		<a href="../src/fmt/print.go.html#line-1089" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1089">#L1089</a>: 					p.<b>fmt</b>.prec = 0
+		<a href="../src/fmt/print.go.html#line-1090" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1090">#L1090</a>: 					p.<b>fmt</b>.precPresent = true
+		<a href="../src/fmt/print.go.html#line-1119" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1119">#L1119</a>: 			p.<b>fmt</b>.sharpV = p.<b>fmt</b>.sharp
+		<a href="../src/fmt/print.go.html#line-1120" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1120">#L1120</a>: 			p.<b>fmt</b>.sharp = false
+		<a href="../src/fmt/print.go.html#line-1122" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1122">#L1122</a>: 			p.<b>fmt</b>.plusV = p.<b>fmt</b>.plus
+		<a href="../src/fmt/print.go.html#line-1123" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1123">#L1123</a>: 			p.<b>fmt</b>.plus = false
+		<a href="../src/fmt/print.go.html#line-1135" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1135">#L1135</a>: 		p.<b>fmt</b>.clearflags()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

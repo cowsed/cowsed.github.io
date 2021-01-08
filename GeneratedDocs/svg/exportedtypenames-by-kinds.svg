@@ -1,0 +1,73 @@
+<svg width="528" height="427" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#fff" id="canvas_background" width="530" height="429" y="-1" x="-1"/>
+<text xml:space="preserve" text-anchor="middle" font-weight="bold" font-family='"Courier New", Courier, monospace' font-size="12" x="264" y="19" fill="#000">Numbers of Exported Type Names by Kinds</text>
+<rect x="112" y="33" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="42" fill="#000">bool</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="42" fill="#000">(1)</text>
+<rect x="112" y="50" width="16.84" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="59" fill="#000">int</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="131.84" y="59" fill="#000">(7)</text>
+<rect x="112" y="67" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="76" fill="#000">int8</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="76" fill="#000">(1)</text>
+<rect x="112" y="84" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="93" fill="#000">int16</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="93" fill="#000">(1)</text>
+<rect x="112" y="101" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="110" fill="#000">int32</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="110" fill="#000">(1)</text>
+<rect x="112" y="118" width="7.22" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="127" fill="#000">int64</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="122.22" y="127" fill="#000">(3)</text>
+<rect x="112" y="135" width="7.22" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="144" fill="#000">uint</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="122.22" y="144" fill="#000">(3)</text>
+<rect x="112" y="152" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="161" fill="#000">uint8</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="161" fill="#000">(1)</text>
+<rect x="112" y="169" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="178" fill="#000">uint16</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="178" fill="#000">(1)</text>
+<rect x="112" y="186" width="7.22" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="195" fill="#000">uint32</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="122.22" y="195" fill="#000">(3)</text>
+<rect x="112" y="203" width="4.81" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="212" fill="#000">uint64</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="119.81" y="212" fill="#000">(2)</text>
+<rect x="112" y="220" width="7.22" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="229" fill="#000">uintptr</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="122.22" y="229" fill="#000">(3)</text>
+<rect x="112" y="237" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="246" fill="#000">float32</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="246" fill="#000">(1)</text>
+<rect x="112" y="254" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="263" fill="#000">float64</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="263" fill="#000">(1)</text>
+<rect x="112" y="271" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="280" fill="#000">complex64</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="280" fill="#000">(1)</text>
+<rect x="112" y="288" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="297" fill="#000">complex128</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="297" fill="#000">(1)</text>
+<circle cx="113" cy="307" r="1" fill="#000"/>
+<circle cx="113" cy="311" r="1" fill="#000"/>
+<circle cx="113" cy="315" r="1" fill="#000"/>
+<rect x="112" y="322" width="98.65" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="331" fill="#000">interface</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="213.65" y="331" fill="#000">(41)</text>
+<circle cx="113" cy="341" r="1" fill="#000"/>
+<circle cx="113" cy="345" r="1" fill="#000"/>
+<circle cx="113" cy="349" r="1" fill="#000"/>
+<rect x="112" y="356" width="9.62" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="365" fill="#000">[ ]T</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="124.62" y="365" fill="#000">(4)</text>
+<rect x="112" y="373" width="4.81" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="382" fill="#000">string</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="119.81" y="382" fill="#000">(2)</text>
+<rect x="112" y="390" width="320.00" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="399" fill="#000">struct</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="435.00" y="399" fill="#000">(133)</text>
+<rect x="112" y="407" width="2.41" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="416" fill="#000">unsafe.Pointer</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.41" y="416" fill="#000">(1)</text>
+</svg>

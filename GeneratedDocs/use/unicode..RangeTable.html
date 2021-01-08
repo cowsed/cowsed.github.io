@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: unicode.RangeTable</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/unicode.html">unicode</a>.<a href="../src/unicode/letter.go.html#line-21">RangeTable</a></b></span>
+
+243 uses:
+
+	unicode <i>(current package)</i>
+		<a href="../src/unicode/graphic.go.html#line-23">graphic.go#L23</a>: var GraphicRanges = []*<b>RangeTable</b>{
+		<a href="../src/unicode/graphic.go.html#line-29" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-29">#L29</a>: var PrintRanges = []*<b>RangeTable</b>{
+		<a href="../src/unicode/graphic.go.html#line-59" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-59">#L59</a>: func IsOneOf(ranges []*<b>RangeTable</b>, r rune) bool {
+		<a href="../src/unicode/graphic.go.html#line-69" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-69">#L69</a>: func In(r rune, ranges ...*<b>RangeTable</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-21">letter.go#L21</a>: type <b>RangeTable</b> struct {
+		<a href="../src/unicode/letter.go.html#line-155" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-155">#L155</a>: func Is(rangeTab *<b>RangeTable</b>, r rune) bool {
+		<a href="../src/unicode/letter.go.html#line-167" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-167">#L167</a>: func isExcludingLatin(rangeTab *<b>RangeTable</b>, r rune) bool {
+		<a href="../src/unicode/tables.go.html#line-9">tables.go#L9</a>: var Categories = map[string]*<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-48" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-48">#L48</a>: var _C = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-78" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-78">#L78</a>: var _Cc = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-86" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-86">#L86</a>: var _Cf = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-110" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-110">#L110</a>: var _Co = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-120" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-120">#L120</a>: var _Cs = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-126" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-126">#L126</a>: var _L = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-709" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-709">#L709</a>: var _Ll = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-871" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-871">#L871</a>: var _Lm = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-924" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-924">#L924</a>: var _Lo = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1384" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1384">#L1384</a>: var _Lt = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1396" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1396">#L1396</a>: var _Lu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1547" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1547">#L1547</a>: var _M = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1824" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1824">#L1824</a>: var _Mc = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1978" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1978">#L1978</a>: var _Me = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-1988" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-1988">#L1988</a>: var _Mn = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2280" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2280">#L2280</a>: var _N = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2416" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2416">#L2416</a>: var _Nd = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2483" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2483">#L2483</a>: var _Nl = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2501" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2501">#L2501</a>: var _No = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2578" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2578">#L2578</a>: var _P = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2743" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2743">#L2743</a>: var _Pc = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2753" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2753">#L2753</a>: var _Pd = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2769" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2769">#L2769</a>: var _Pe = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2797" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2797">#L2797</a>: var _Pf = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2807" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2807">#L2807</a>: var _Pi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2818" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2818">#L2818</a>: var _Po = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-2981" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-2981">#L2981</a>: var _Ps = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3012" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3012">#L3012</a>: var _S = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3216" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3216">#L3216</a>: var _Sc = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3239" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3239">#L3239</a>: var _Sk = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3271" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3271">#L3271</a>: var _Sm = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3328" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3328">#L3328</a>: var _So = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3499" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3499">#L3499</a>: var _Z = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3511" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3511">#L3511</a>: var _Zl = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3517" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3517">#L3517</a>: var _Zp = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3523" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3523">#L3523</a>: var _Zs = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3586" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3586">#L3586</a>: var Scripts = map[string]*<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3741" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3741">#L3741</a>: var _Adlam = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3750" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3750">#L3750</a>: var _Ahom = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3759" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3759">#L3759</a>: var _Anatolian_Hieroglyphs = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3766" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3766">#L3766</a>: var _Arabic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3820" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3820">#L3820</a>: var _Armenian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3830" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3830">#L3830</a>: var _Avestan = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3838" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3838">#L3838</a>: var _Balinese = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3845" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3845">#L3845</a>: var _Bamum = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3854" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3854">#L3854</a>: var _Bassa_Vah = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3862" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3862">#L3862</a>: var _Batak = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3869" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3869">#L3869</a>: var _Bengali = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3888" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3888">#L3888</a>: var _Bhaiksuki = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3898" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3898">#L3898</a>: var _Bopomofo = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3906" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3906">#L3906</a>: var _Brahmi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3915" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3915">#L3915</a>: var _Braille = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3921" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3921">#L3921</a>: var _Buginese = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3928" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3928">#L3928</a>: var _Buhid = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3934" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3934">#L3934</a>: var _Canadian_Aboriginal = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3941" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3941">#L3941</a>: var _Carian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3948" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3948">#L3948</a>: var _Caucasian_Albanian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3956" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3956">#L3956</a>: var _Chakma = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3964" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3964">#L3964</a>: var _Cham = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3973" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3973">#L3973</a>: var _Cherokee = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-3981" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-3981">#L3981</a>: var _Common = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4151" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4151">#L4151</a>: var _Coptic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4159" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4159">#L4159</a>: var _Cuneiform = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4169" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4169">#L4169</a>: var _Cypriot = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4180" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4180">#L4180</a>: var _Cyrillic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4192" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4192">#L4192</a>: var _Deseret = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4199" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4199">#L4199</a>: var _Devanagari = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4208" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4208">#L4208</a>: var _Dogra = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4215" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4215">#L4215</a>: var _Duployan = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4226" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4226">#L4226</a>: var _Egyptian_Hieroglyphs = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4234" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4234">#L4234</a>: var _Elbasan = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4241" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4241">#L4241</a>: var _Elymaic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4248" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4248">#L4248</a>: var _Ethiopic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4285" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4285">#L4285</a>: var _Georgian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4298" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4298">#L4298</a>: var _Glagolitic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4312" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4312">#L4312</a>: var _Gothic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4319" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4319">#L4319</a>: var _Grantha = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4339" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4339">#L4339</a>: var _Greek = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4378" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4378">#L4378</a>: var _Gujarati = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4397" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4397">#L4397</a>: var _Gunjala_Gondi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4409" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4409">#L4409</a>: var _Gurmukhi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4430" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4430">#L4430</a>: var _Han = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4453" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4453">#L4453</a>: var _Hangul = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4472" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4472">#L4472</a>: var _Hanifi_Rohingya = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4480" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4480">#L4480</a>: var _Hanunoo = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4486" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4486">#L4486</a>: var _Hatran = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4495" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4495">#L4495</a>: var _Hebrew = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4509" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4509">#L4509</a>: var _Hiragana = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4521" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4521">#L4521</a>: var _Imperial_Aramaic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4529" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4529">#L4529</a>: var _Inherited = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4562" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4562">#L4562</a>: var _Inscriptional_Pahlavi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4570" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4570">#L4570</a>: var _Inscriptional_Parthian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4578" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4578">#L4578</a>: var _Javanese = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4586" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4586">#L4586</a>: var _Kaithi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4594" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4594">#L4594</a>: var _Kannada = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4612" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4612">#L4612</a>: var _Katakana = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4628" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4628">#L4628</a>: var _Kayah_Li = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4635" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4635">#L4635</a>: var _Kharoshthi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4649" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4649">#L4649</a>: var _Khmer = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4658" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4658">#L4658</a>: var _Khojki = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4666" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4666">#L4666</a>: var _Khudawadi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4674" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4674">#L4674</a>: var _Lao = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4690" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4690">#L4690</a>: var _Latin = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4725" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4725">#L4725</a>: var _Lepcha = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4733" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4733">#L4733</a>: var _Limbu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4743" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4743">#L4743</a>: var _Linear_A = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4752" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4752">#L4752</a>: var _Linear_B = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4765" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4765">#L4765</a>: var _Lisu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4771" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4771">#L4771</a>: var _Lycian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4778" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4778">#L4778</a>: var _Lydian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4786" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4786">#L4786</a>: var _Mahajani = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4793" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4793">#L4793</a>: var _Makasar = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4800" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4800">#L4800</a>: var _Malayalam = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4813" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4813">#L4813</a>: var _Mandaic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4820" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4820">#L4820</a>: var _Manichaean = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4828" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4828">#L4828</a>: var _Marchen = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4837" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4837">#L4837</a>: var _Masaram_Gondi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4850" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4850">#L4850</a>: var _Medefaidrin = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4857" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4857">#L4857</a>: var _Meetei_Mayek = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4865" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4865">#L4865</a>: var _Mende_Kikakui = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4873" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4873">#L4873</a>: var _Meroitic_Cursive = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4882" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4882">#L4882</a>: var _Meroitic_Hieroglyphs = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4889" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4889">#L4889</a>: var _Miao = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4898" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4898">#L4898</a>: var _Modi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4906" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4906">#L4906</a>: var _Mongolian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4920" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4920">#L4920</a>: var _Mro = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4929" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4929">#L4929</a>: var _Multani = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4940" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4940">#L4940</a>: var _Myanmar = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4948" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4948">#L4948</a>: var _Nabataean = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4956" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4956">#L4956</a>: var _Nandinagari = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4965" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4965">#L4965</a>: var _New_Tai_Lue = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4974" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4974">#L4974</a>: var _Newa = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4983" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4983">#L4983</a>: var _Nko = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4990" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4990">#L4990</a>: var _Nushu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-4998" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-4998">#L4998</a>: var _Nyiakeng_Puachue_Hmong = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5008" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5008">#L5008</a>: var _Ogham = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5014" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5014">#L5014</a>: var _Ol_Chiki = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5020" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5020">#L5020</a>: var _Old_Hungarian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5029" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5029">#L5029</a>: var _Old_Italic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5037" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5037">#L5037</a>: var _Old_North_Arabian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5044" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5044">#L5044</a>: var _Old_Permic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5051" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5051">#L5051</a>: var _Old_Persian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5059" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5059">#L5059</a>: var _Old_Sogdian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5066" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5066">#L5066</a>: var _Old_South_Arabian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5073" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5073">#L5073</a>: var _Old_Turkic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5080" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5080">#L5080</a>: var _Oriya = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5099" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5099">#L5099</a>: var _Osage = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5107" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5107">#L5107</a>: var _Osmanya = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5115" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5115">#L5115</a>: var _Pahawh_Hmong = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5126" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5126">#L5126</a>: var _Palmyrene = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5133" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5133">#L5133</a>: var _Pau_Cin_Hau = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5140" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5140">#L5140</a>: var _Phags_Pa = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5146" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5146">#L5146</a>: var _Phoenician = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5154" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5154">#L5154</a>: var _Psalter_Pahlavi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5163" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5163">#L5163</a>: var _Rejang = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5170" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5170">#L5170</a>: var _Runic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5177" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5177">#L5177</a>: var _Samaritan = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5184" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5184">#L5184</a>: var _Saurashtra = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5191" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5191">#L5191</a>: var _Sharada = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5199" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5199">#L5199</a>: var _Shavian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5206" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5206">#L5206</a>: var _Siddham = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5214" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5214">#L5214</a>: var _SignWriting = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5223" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5223">#L5223</a>: var _Sinhala = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5243" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5243">#L5243</a>: var _Sogdian = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5250" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5250">#L5250</a>: var _Sora_Sompeng = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5258" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5258">#L5258</a>: var _Soyombo = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5265" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5265">#L5265</a>: var _Sundanese = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5272" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5272">#L5272</a>: var _Syloti_Nagri = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5278" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5278">#L5278</a>: var _Syriac = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5287" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5287">#L5287</a>: var _Tagalog = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5294" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5294">#L5294</a>: var _Tagbanwa = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5302" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5302">#L5302</a>: var _Tai_Le = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5309" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5309">#L5309</a>: var _Tai_Tham = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5319" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5319">#L5319</a>: var _Tai_Viet = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5326" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5326">#L5326</a>: var _Takri = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5334" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5334">#L5334</a>: var _Tamil = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5358" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5358">#L5358</a>: var _Tangut = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5367" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5367">#L5367</a>: var _Telugu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5384" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5384">#L5384</a>: var _Thaana = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5390" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5390">#L5390</a>: var _Thai = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5397" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5397">#L5397</a>: var _Tibetan = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5409" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5409">#L5409</a>: var _Tifinagh = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5417" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5417">#L5417</a>: var _Tirhuta = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5425" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5425">#L5425</a>: var _Ugaritic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5433" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5433">#L5433</a>: var _Vai = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5439" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5439">#L5439</a>: var _Wancho = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5447" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5447">#L5447</a>: var _Warang_Citi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5455" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5455">#L5455</a>: var _Yi = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5462" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5462">#L5462</a>: var _Zanabazar_Square = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5626" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5626">#L5626</a>: var Properties = map[string]*<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5664" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5664">#L5664</a>: var _ASCII_Hex_Digit = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5673" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5673">#L5673</a>: var _Bidi_Control = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5682" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5682">#L5682</a>: var _Dash = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5700" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5700">#L5700</a>: var _Deprecated = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5713" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5713">#L5713</a>: var _Diacritic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5863" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5863">#L5863</a>: var _Extender = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5892" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5892">#L5892</a>: var _Hex_Digit = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5904" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5904">#L5904</a>: var _Hyphen = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5916" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5916">#L5916</a>: var _IDS_Binary_Operator = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5923" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5923">#L5923</a>: var _IDS_Trinary_Operator = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5929" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5929">#L5929</a>: var _Ideographic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5952" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5952">#L5952</a>: var _Join_Control = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5958" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5958">#L5958</a>: var _Logical_Order_Exception = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5969" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5969">#L5969</a>: var _Noncharacter_Code_Point = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-5994" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-5994">#L5994</a>: var _Other_Alphabetic = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6214" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6214">#L6214</a>: var _Other_Default_Ignorable_Code_Point = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6230" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6230">#L6230</a>: var _Other_Grapheme_Extend = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6252" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6252">#L6252</a>: var _Other_ID_Continue = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6260" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6260">#L6260</a>: var _Other_ID_Start = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6268" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6268">#L6268</a>: var _Other_Lowercase = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6291" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6291">#L6291</a>: var _Other_Math = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6416" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6416">#L6416</a>: var _Other_Uppercase = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6428" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6428">#L6428</a>: var _Pattern_Syntax = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6458" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6458">#L6458</a>: var _Pattern_White_Space = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6468" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6468">#L6468</a>: var _Prepended_Concatenation_Mark = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6479" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6479">#L6479</a>: var _Quotation_Mark = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6495" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6495">#L6495</a>: var _Radical = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6503" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6503">#L6503</a>: var _Regional_Indicator = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6510" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6510">#L6510</a>: var _Sentence_Terminal = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6578" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6578">#L6578</a>: var _Soft_Dotted = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6609" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6609">#L6609</a>: var _Terminal_Punctuation = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6704" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6704">#L6704</a>: var _Unified_Ideograph = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6724" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6724">#L6724</a>: var _Variation_Selector = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-6734" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-6734">#L6734</a>: var _White_Space = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7593" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7593">#L7593</a>: var FoldCategory = map[string]*<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7602" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7602">#L7602</a>: var foldL = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7608" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7608">#L7608</a>: var foldLl = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7728" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7728">#L7728</a>: var foldLt = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7742" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7742">#L7742</a>: var foldLu = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7862" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7862">#L7862</a>: var foldM = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7869" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7869">#L7869</a>: var foldMn = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7880" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7880">#L7880</a>: var FoldScript = map[string]*<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7886" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7886">#L7886</a>: var foldCommon = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7892" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7892">#L7892</a>: var foldGreek = &amp;<b>RangeTable</b>{
+		<a href="../src/unicode/tables.go.html#line-7898" class="path-duplicate">tables.go</a><a href="../src/unicode/tables.go.html#line-7898">#L7898</a>: var foldInherited = &amp;<b>RangeTable</b>{
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

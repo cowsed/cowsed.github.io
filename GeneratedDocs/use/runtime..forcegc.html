@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.forcegc</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">var <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-1040">forcegc</a></b></span>
+
+12 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/proc.go.html#line-247">proc.go#L247</a>: 	<b>forcegc</b>.g = getg()
+		<a href="../src/runtime/proc.go.html#line-248" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-248">#L248</a>: 	lockInit(&amp;<b>forcegc</b>.lock, lockRankForcegc)
+		<a href="../src/runtime/proc.go.html#line-250" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-250">#L250</a>: 		lock(&amp;<b>forcegc</b>.lock)
+		<a href="../src/runtime/proc.go.html#line-251" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-251">#L251</a>: 		if <b>forcegc</b>.idle != 0 {
+		<a href="../src/runtime/proc.go.html#line-254" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-254">#L254</a>: 		atomic.Store(&amp;<b>forcegc</b>.idle, 1)
+		<a href="../src/runtime/proc.go.html#line-255" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-255">#L255</a>: 		goparkunlock(&amp;<b>forcegc</b>.lock, waitReasonForceGCIdle, traceEvGoBlock, 1)
+		<a href="../src/runtime/proc.go.html#line-4740" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4740">#L4740</a>: 		if t := (gcTrigger{kind: gcTriggerTime, now: now}); t.test() &amp;&amp; atomic.Load(&amp;<b>forcegc</b>.idle) != 0 {
+		<a href="../src/runtime/proc.go.html#line-4741" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4741">#L4741</a>: 			lock(&amp;<b>forcegc</b>.lock)
+		<a href="../src/runtime/proc.go.html#line-4742" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4742">#L4742</a>: 			<b>forcegc</b>.idle = 0
+		<a href="../src/runtime/proc.go.html#line-4744" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4744">#L4744</a>: 			list.push(<b>forcegc</b>.g)
+		<a href="../src/runtime/proc.go.html#line-4746" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4746">#L4746</a>: 			unlock(&amp;<b>forcegc</b>.lock)
+		<a href="../src/runtime/runtime2.go.html#line-1040">runtime2.go#L1040</a>: 	<b>forcegc</b>    forcegcstate
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

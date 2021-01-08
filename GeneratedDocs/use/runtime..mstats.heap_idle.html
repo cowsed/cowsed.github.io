@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.heap_idle</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-24">mstats</a>.<a href="../src/runtime/mstats.go.html#line-40">heap_idle</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+5 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-552">heapdump.go#L552</a>: 	dumpint(memstats.<b>heap_idle</b>)
+		<a href="../src/runtime/mheap.go.html#line-1281">mheap.go#L1281</a>: 	mSysStatDec(&amp;memstats.<b>heap_idle</b>, nbytes)
+		<a href="../src/runtime/mheap.go.html#line-1374" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1374">#L1374</a>: 		mSysStatInc(&amp;memstats.<b>heap_idle</b>, asize)
+		<a href="../src/runtime/mheap.go.html#line-1471" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1471">#L1471</a>: 		mSysStatInc(&amp;memstats.<b>heap_idle</b>, s.npages*pageSize)
+		<a href="../src/runtime/mstats.go.html#line-40">mstats.go#L40</a>: 	<b>heap_idle</b>     uint64 // bytes in idle spans
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

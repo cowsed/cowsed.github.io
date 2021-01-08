@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.acquirem</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime1.go.html#line-446">acquirem</a></b></span>
+
+35 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/cgocall.go.html#line-354">cgocall.go#L354</a>: 		mp := <b>acquirem</b>()
+		<a href="../src/runtime/malloc.go.html#line-957">malloc.go#L957</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/malloc.go.html#line-1139" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1139">#L1139</a>: 			mp := <b>acquirem</b>()
+		<a href="../src/runtime/malloc.go.html#line-1361" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1361">#L1361</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mgc.go.html#line-1129">mgc.go#L1129</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mgc.go.html#line-1235" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1235">#L1235</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mgc.go.html#line-1377" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1377">#L1377</a>: 	mp = <b>acquirem</b>()
+		<a href="../src/runtime/mgc.go.html#line-1642" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1642">#L1642</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mgc.go.html#line-1876" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1876">#L1876</a>: 	park.m.set(<b>acquirem</b>())
+		<a href="../src/runtime/mgc.go.html#line-1930" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1930">#L1930</a>: 		park.m.set(<b>acquirem</b>())
+		<a href="../src/runtime/mgc.go.html#line-2026" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2026">#L2026</a>: 			park.m.set(<b>acquirem</b>())
+		<a href="../src/runtime/mheap.go.html#line-766">mheap.go#L766</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mheap.go.html#line-1674" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1674">#L1674</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mheap.go.html#line-1725" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1725">#L1725</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/mheap.go.html#line-1786" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1786">#L1786</a>: 			mp := <b>acquirem</b>()
+		<a href="../src/runtime/proc.go.html#line-293">proc.go#L293</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/proc.go.html#line-331" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-331">#L331</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/proc.go.html#line-383" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-383">#L383</a>: 	mp := <b>acquirem</b>() // avoid rescheduling to another P
+		<a href="../src/runtime/proc.go.html#line-700" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-700">#L700</a>: 	mp := <b>acquirem</b>() // disable preemption because it can be holding p in a local var
+		<a href="../src/runtime/proc.go.html#line-1053" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1053">#L1053</a>: 	mp := <b>acquirem</b>() // disable preemption because it can be holding p in a local var
+		<a href="../src/runtime/proc.go.html#line-1317" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1317">#L1317</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/proc.go.html#line-1447" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1447">#L1447</a>: 	<b>acquirem</b>() // disable GC because it can be called from sysmon
+		<a href="../src/runtime/proc.go.html#line-1852" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1852">#L1852</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/proc.go.html#line-3576" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3576">#L3576</a>: 	<b>acquirem</b>() // disable preemption because it can be holding p in a local var
+		<a href="../src/runtime/runtime1.go.html#line-446">runtime1.go#L446</a>: func <b>acquirem</b>() *m {
+		<a href="../src/runtime/rwmutex.go.html#line-38">rwmutex.go#L38</a>: 	<b>acquirem</b>()
+		<a href="../src/runtime/time.go.html#line-298">time.go#L298</a>: 			mp := <b>acquirem</b>()
+		<a href="../src/runtime/time.go.html#line-317" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-317">#L317</a>: 			mp := <b>acquirem</b>()
+		<a href="../src/runtime/time.go.html#line-423" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-423">#L423</a>: 			mp = <b>acquirem</b>()
+		<a href="../src/runtime/time.go.html#line-432" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-432">#L432</a>: 			mp = <b>acquirem</b>()
+		<a href="../src/runtime/time.go.html#line-445" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-445">#L445</a>: 			mp = <b>acquirem</b>()
+		<a href="../src/runtime/trace.go.html#line-218">trace.go#L218</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/trace.go.html#line-612" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-612">#L612</a>: 	mp = <b>acquirem</b>()
+		<a href="../src/runtime/trace.go.html#line-981" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-981">#L981</a>: 	mp := <b>acquirem</b>()
+		<a href="../src/runtime/trace.go.html#line-1136" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1136">#L1136</a>: 	mp := <b>acquirem</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

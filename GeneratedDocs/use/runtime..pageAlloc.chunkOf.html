@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.pageAlloc.chunkOf</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mpagealloc.go.html#line-175">pageAlloc</a>.<a href="../src/runtime/mpagealloc.go.html#line-343">chunkOf</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+24 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgcscavenge.go.html#line-608">mgcscavenge.go#L608</a>: 		base, npages := s.<b>chunkOf</b>(maxChunk).findScavengeCandidate(chunkPageIndex(maxAddr), minPages, maxPages)
+		<a href="../src/runtime/mgcscavenge.go.html#line-673" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-673">#L673</a>: 		chunk := s.<b>chunkOf</b>(candidateChunkIdx)
+		<a href="../src/runtime/mgcscavenge.go.html#line-695" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-695">#L695</a>: 	s.<b>chunkOf</b>(ci).scavenged.setRange(base, npages)
+		<a href="../src/runtime/mpagealloc.go.html#line-343">mpagealloc.go#L343</a>: func (s *pageAlloc) <b>chunkOf</b>(ci chunkIdx) *pallocData {
+		<a href="../src/runtime/mpagealloc.go.html#line-398" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-398">#L398</a>: 		s.<b>chunkOf</b>(c).scavenged.setRange(0, pallocChunkPages)
+		<a href="../src/runtime/mpagealloc.go.html#line-425" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-425">#L425</a>: 		y := s.<b>chunkOf</b>(sc).summarize()
+		<a href="../src/runtime/mpagealloc.go.html#line-436" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-436">#L436</a>: 		summary[sc] = s.<b>chunkOf</b>(sc).summarize()
+		<a href="../src/runtime/mpagealloc.go.html#line-453" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-453">#L453</a>: 		summary[ec] = s.<b>chunkOf</b>(ec).summarize()
+		<a href="../src/runtime/mpagealloc.go.html#line-462" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-462">#L462</a>: 			summary[c] = s.<b>chunkOf</b>(c).summarize()
+		<a href="../src/runtime/mpagealloc.go.html#line-509" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-509">#L509</a>: 		chunk := s.<b>chunkOf</b>(sc)
+		<a href="../src/runtime/mpagealloc.go.html#line-514" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-514">#L514</a>: 		chunk := s.<b>chunkOf</b>(sc)
+		<a href="../src/runtime/mpagealloc.go.html#line-518" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-518">#L518</a>: 			chunk := s.<b>chunkOf</b>(c)
+		<a href="../src/runtime/mpagealloc.go.html#line-522" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-522">#L522</a>: 		chunk = s.<b>chunkOf</b>(ec)
+		<a href="../src/runtime/mpagealloc.go.html#line-761" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-761">#L761</a>: 	j, searchIdx := s.<b>chunkOf</b>(ci).find(npages, 0)
+		<a href="../src/runtime/mpagealloc.go.html#line-803" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-803">#L803</a>: 			j, searchIdx := s.<b>chunkOf</b>(i).find(npages, chunkPageIndex(s.searchAddr.addr()))
+		<a href="../src/runtime/mpagealloc.go.html#line-858" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-858">#L858</a>: 		s.<b>chunkOf</b>(i).free1(chunkPageIndex(base))
+		<a href="../src/runtime/mpagealloc.go.html#line-866" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-866">#L866</a>: 			s.<b>chunkOf</b>(sc).free(si, ei+1-si)
+		<a href="../src/runtime/mpagealloc.go.html#line-869" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-869">#L869</a>: 			s.<b>chunkOf</b>(sc).free(si, pallocChunkPages-si)
+		<a href="../src/runtime/mpagealloc.go.html#line-871" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-871">#L871</a>: 				s.<b>chunkOf</b>(c).freeAll()
+		<a href="../src/runtime/mpagealloc.go.html#line-873" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-873">#L873</a>: 			s.<b>chunkOf</b>(ec).free(0, ei+1)
+		<a href="../src/runtime/mpagecache.go.html#line-86">mpagecache.go#L86</a>: 			s.<b>chunkOf</b>(ci).free1(pi + i)
+		<a href="../src/runtime/mpagecache.go.html#line-89" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-89">#L89</a>: 			s.<b>chunkOf</b>(ci).scavenged.setRange(pi+i, 1)
+		<a href="../src/runtime/mpagecache.go.html#line-116" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-116">#L116</a>: 		chunk := s.<b>chunkOf</b>(ci)
+		<a href="../src/runtime/mpagecache.go.html#line-137" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-137">#L137</a>: 		chunk := s.<b>chunkOf</b>(ci)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

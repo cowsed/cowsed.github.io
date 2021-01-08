@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: github.com/cowsed/ElfHouse/Helpers/Time</title>
+<link href="../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>time</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../../../../../index.html#pkg-github.com/cowsed/ElfHouse/Helpers/Time">github.com/cowsed/ElfHouse/Helpers/Time</a><i> (on <a href="https://pkg.go.dev/github.com/cowsed/ElfHouse/Helpers/Time" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../../../../../dep/github.com/cowsed/ElfHouse/Helpers/Time.html">2 packages</a>, and imported by <a href="../../../../../dep/github.com/cowsed/ElfHouse/Helpers/Time.html#imported-by">one package</a>
+
+<span class="title">Involved Source Files</span>
+	<a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html">DateTime.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-Date" data-popularity="150">	<a href="../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Date.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-10">Date</a> <i>(struct)</i>
+
+		<input type='checkbox' class="stat" id="Date-stat-fields"><label for="Date-stat-fields">Exported Fields (3)</label><span id='Date-stat-fields-content' class="stat-content">
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-13">Day</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-12">Month</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-11">Year</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span></span>
+		<input type='checkbox' class="stat" id="Date-stat-methods"><label for="Date-stat-methods">Exported Methods (3)</label><span id='Date-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-43">GetDateString</a>() <a href="../../../../builtin.html#name-string">string</a></span>
+			<input type='checkbox' class="stat" id="Date-stat-method-GetDay"><label for="Date-stat-method-GetDay">( T) <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-30">GetDay</a>() <a href="../../../../builtin.html#name-string">string</a></label><span id='Date-stat-method-GetDay-content' class="stat-content">
+				Get day/month of Date
+</span>
+			<span class="nodocs">( T) <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-38">GetMonth</a>() <a href="../../../../builtin.html#name-string">string</a></span></span></div>
+<div class="anchor" id="name-DateTime" data-popularity="0">	<a href="../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..DateTime.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-22">DateTime</a> <i>(struct)</i>
+
+		<input type='checkbox' class="stat" id="DateTime-stat-fields"><label for="DateTime-stat-fields">Exported Fields (2)</label><span id='DateTime-stat-fields-content' class="stat-content">
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-23">Date</a> <i><a href="#name-Date">Date</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-24">Time</a> <i><a href="#name-Time">Time</a></i></span></span></div>
+<div class="anchor" id="name-Time" data-popularity="0">	<a href="../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Time.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-16">Time</a> <i>(struct)</i>
+
+		<input type='checkbox' class="stat" id="Time-stat-fields"><label for="Time-stat-fields">Exported Fields (3)</label><span id='Time-stat-fields-content' class="stat-content">
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-17">Hour</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-18">Minute</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-19">Second</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-Days">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Days.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-8">Days</a> []<a href="../../../../builtin.html#name-string">string</a>
+		Pretend year is 364 days and month is 28 days and there are 13 months</div>
+<div class="anchor" id="name-Months">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/Helpers/Time..Months.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/Helpers/Time/DateTime.go.html#line-9">Months</a> []<a href="../../../../builtin.html#name-string">string</a></div></code></pre><pre id="footer">
+<table><tr><td><img src="../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

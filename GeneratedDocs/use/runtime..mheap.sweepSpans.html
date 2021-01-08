@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mheap.sweepSpans</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-66">mheap</a>.<a href="../src/runtime/mheap.go.html#line-99">sweepSpans</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+9 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgc.go.html#line-2152">mgc.go#L2152</a>: 	if !go115NewMCentralImpl &amp;&amp; mheap_.<b>sweepSpans</b>[mheap_.sweepgen/2%2].index != 0 {
+		<a href="../src/runtime/mgcmark.go.html#line-106">mgcmark.go#L106</a>: 		work.nSpanRoots = mheap_.<b>sweepSpans</b>[mheap_.sweepgen/2%2].numBlocks()
+		<a href="../src/runtime/mgcmark.go.html#line-419" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-419">#L419</a>: 	spans := mheap_.<b>sweepSpans</b>[mheap_.sweepgen/2%2].block(shard)
+		<a href="../src/runtime/mgcsweep.go.html#line-208">mgcsweep.go#L208</a>: 			s = mheap_.<b>sweepSpans</b>[1-sg/2%2].pop()
+		<a href="../src/runtime/mgcsweep.go.html#line-774" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-774">#L774</a>: 		mheap_.<b>sweepSpans</b>[sweepgen/2%2].push(s)
+		<a href="../src/runtime/mheap.go.html#line-99">mheap.go#L99</a>: 	<b>sweepSpans</b> [2]gcSweepBuf
+		<a href="../src/runtime/mheap.go.html#line-718" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-718">#L718</a>: 	lockInit(&amp;h.<b>sweepSpans</b>[0].spineLock, lockRankSpine)
+		<a href="../src/runtime/mheap.go.html#line-719" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-719">#L719</a>: 	lockInit(&amp;h.<b>sweepSpans</b>[1].spineLock, lockRankSpine)
+		<a href="../src/runtime/mheap.go.html#line-1300" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1300">#L1300</a>: 			h.<b>sweepSpans</b>[h.sweepgen/2%2].push(s)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

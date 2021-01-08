@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mheap.sweepgen</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-66">mheap</a>.<a href="../src/runtime/mheap.go.html#line-71">sweepgen</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+34 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/malloc.go.html#line-1184">malloc.go#L1184</a>: 		mheap_.central[spc].mcentral.fullSwept(mheap_.<b>sweepgen</b>).push(s)
+		<a href="../src/runtime/mcache.go.html#line-90">mcache.go#L90</a>: 		c.flushGen = mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcache.go.html#line-131" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-131">#L131</a>: 		if s.sweepgen != mheap_.<b>sweepgen</b>+3 {
+		<a href="../src/runtime/mcache.go.html#line-137" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-137">#L137</a>: 			atomic.Store(&amp;s.sweepgen, mheap_.<b>sweepgen</b>)
+		<a href="../src/runtime/mcache.go.html#line-153" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-153">#L153</a>: 	s.sweepgen = mheap_.<b>sweepgen</b> + 3
+		<a href="../src/runtime/mcache.go.html#line-182" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-182">#L182</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcache.go.html#line-191" class="path-duplicate">mcache.go</a><a href="../src/runtime/mcache.go.html#line-191">#L191</a>: 	atomic.Store(&amp;c.flushGen, mheap_.<b>sweepgen</b>) // Synchronizes with gcStart
+		<a href="../src/runtime/mcentral.go.html#line-103">mcentral.go#L103</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcentral.go.html#line-229" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-229">#L229</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcentral.go.html#line-341" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-341">#L341</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcentral.go.html#line-404" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-404">#L404</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mcentral.go.html#line-461" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-461">#L461</a>: 	if sg := mheap_.<b>sweepgen</b>; s.sweepgen == sg+1 || s.sweepgen == sg+3 {
+		<a href="../src/runtime/mcentral.go.html#line-472" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-472">#L472</a>: 		atomic.Store(&amp;s.sweepgen, mheap_.<b>sweepgen</b>)
+		<a href="../src/runtime/mcentral.go.html#line-488" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-488">#L488</a>: 	atomic.Store(&amp;s.sweepgen, mheap_.<b>sweepgen</b>)
+		<a href="../src/runtime/mgc.go.html#line-1290">mgc.go#L1290</a>: 		if fg := atomic.Load(&amp;p.mcache.flushGen); fg != mheap_.<b>sweepgen</b> {
+		<a href="../src/runtime/mgc.go.html#line-1291" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1291">#L1291</a>: 			println("runtime: p", p.id, "flushGen", fg, "!= sweepgen", mheap_.<b>sweepgen</b>)
+		<a href="../src/runtime/mgc.go.html#line-2150" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2150">#L2150</a>: 	mheap_.<b>sweepgen</b> += 2
+		<a href="../src/runtime/mgc.go.html#line-2152" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2152">#L2152</a>: 	if !go115NewMCentralImpl &amp;&amp; mheap_.sweepSpans[mheap_.<b>sweepgen</b>/2%2].index != 0 {
+		<a href="../src/runtime/mgcmark.go.html#line-106">mgcmark.go#L106</a>: 		work.nSpanRoots = mheap_.sweepSpans[mheap_.<b>sweepgen</b>/2%2].numBlocks()
+		<a href="../src/runtime/mgcmark.go.html#line-332" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-332">#L332</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcmark.go.html#line-418" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-418">#L418</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcmark.go.html#line-419" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-419">#L419</a>: 	spans := mheap_.sweepSpans[mheap_.<b>sweepgen</b>/2%2].block(shard)
+		<a href="../src/runtime/mgcsweep.go.html#line-97">mgcsweep.go#L97</a>: 	sg := h.<b>sweepgen</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-140" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-140">#L140</a>: 		sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-203" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-203">#L203</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-299" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-299">#L299</a>: 	sg := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-334" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-334">#L334</a>: 	sweepgen := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-585" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-585">#L585</a>: 	sweepgen := mheap_.<b>sweepgen</b>
+		<a href="../src/runtime/mheap.go.html#line-71">mheap.go#L71</a>: 	<b>sweepgen</b>  uint32    // sweep generation, see comment in mspan; written during STW
+		<a href="../src/runtime/mheap.go.html#line-836" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-836">#L836</a>: 	sg := h.<b>sweepgen</b>
+		<a href="../src/runtime/mheap.go.html#line-1257" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1257">#L1257</a>: 		atomic.Store(&amp;s.sweepgen, h.<b>sweepgen</b>)
+		<a href="../src/runtime/mheap.go.html#line-1300" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1300">#L1300</a>: 			h.sweepSpans[h.<b>sweepgen</b>/2%2].push(s)
+		<a href="../src/runtime/mheap.go.html#line-1454" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1454">#L1454</a>: 		if s.allocCount != 0 || s.sweepgen != h.<b>sweepgen</b> {
+		<a href="../src/runtime/mheap.go.html#line-1455" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1455">#L1455</a>: 			print("mheap.freeSpanLocked - span ", s, " ptr ", hex(s.base()), " allocCount ", s.allocCount, " sweepgen ", s.sweepgen, "/", h.<b>sweepgen</b>, "\n")
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

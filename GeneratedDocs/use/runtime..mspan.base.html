@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.base</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-402">mspan</a>.<a href="../src/runtime/mheap.go.html#line-488">base</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+63 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-445">heapdump.go#L445</a>: 				p := unsafe.Pointer(s.<b>base</b>() + uintptr(spf.special.offset))
+		<a href="../src/runtime/heapdump.go.html#line-464" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-464">#L464</a>: 		p := s.<b>base</b>()
+		<a href="../src/runtime/heapdump.go.html#line-632" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-632">#L632</a>: 			p := s.<b>base</b>() + uintptr(spp.special.offset)
+		<a href="../src/runtime/malloc.go.html#line-855">malloc.go#L855</a>: 			return gclinkptr(result*s.elemsize + s.<b>base</b>())
+		<a href="../src/runtime/malloc.go.html#line-891" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-891">#L891</a>: 	v = gclinkptr(freeIndex*s.elemsize + s.<b>base</b>())
+		<a href="../src/runtime/malloc.go.html#line-1075" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1075">#L1075</a>: 		x = unsafe.Pointer(span.<b>base</b>())
+		<a href="../src/runtime/malloc.go.html#line-1186" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1186">#L1186</a>: 	s.limit = s.<b>base</b>() + size
+		<a href="../src/runtime/malloc.go.html#line-1187" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1187">#L1187</a>: 	heapBitsForAddr(s.<b>base</b>()).initSpan(s)
+		<a href="../src/runtime/mbitmap.go.html#line-259">mbitmap.go#L259</a>: 	byteOffset := p - s.<b>base</b>()
+		<a href="../src/runtime/mbitmap.go.html#line-374" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-374">#L374</a>: 	print(" span.base()=", hex(s.<b>base</b>()), " span.limit=", hex(s.limit), " span.state=", state, "\n")
+		<a href="../src/runtime/mbitmap.go.html#line-408" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-408">#L408</a>: 	if state := s.state.get(); state != mSpanInUse || p &lt; s.<b>base</b>() || p >= s.limit {
+		<a href="../src/runtime/mbitmap.go.html#line-424" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-424">#L424</a>: 		base = s.<b>base</b>()
+		<a href="../src/runtime/mbitmap.go.html#line-426" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-426">#L426</a>: 		objIndex = (base - s.<b>base</b>()) >> s.divShift
+		<a href="../src/runtime/mbitmap.go.html#line-431" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-431">#L431</a>: 		base = s.<b>base</b>()
+		<a href="../src/runtime/mbitmap.go.html#line-631" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-631">#L631</a>: 	} else if s.state.get() != mSpanInUse || dst &lt; s.<b>base</b>() || s.limit <= dst {
+		<a href="../src/runtime/mcentral.go.html#line-514">mcentral.go#L514</a>: 	s.limit = s.<b>base</b>() + size*n
+		<a href="../src/runtime/mcentral.go.html#line-515" class="path-duplicate">mcentral.go</a><a href="../src/runtime/mcentral.go.html#line-515">#L515</a>: 	heapBitsForAddr(s.<b>base</b>()).initSpan(s)
+		<a href="../src/runtime/mgcmark.go.html#line-384">mgcmark.go#L384</a>: 				p := s.<b>base</b>() + uintptr(spf.special.offset)/s.elemsize*s.elemsize
+		<a href="../src/runtime/mgcmark.go.html#line-468" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-468">#L468</a>: 			p := s.<b>base</b>() + uintptr(spf.special.offset)/s.elemsize*s.elemsize
+		<a href="../src/runtime/mgcmark.go.html#line-1316" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1316">#L1316</a>: 		if b == s.<b>base</b>() {
+		<a href="../src/runtime/mgcmark.go.html#line-1333" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1333">#L1333</a>: 			for oblet := b + maxObletBytes; oblet &lt; s.<b>base</b>()+s.elemsize; oblet += maxObletBytes {
+		<a href="../src/runtime/mgcmark.go.html#line-1343" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1343">#L1343</a>: 		n = s.<b>base</b>() + s.elemsize - b
+		<a href="../src/runtime/mgcmark.go.html#line-1484" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1484">#L1484</a>: 		obj := span.<b>base</b>() + idx*span.elemsize
+		<a href="../src/runtime/mgcmark.go.html#line-1553" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1553">#L1553</a>: 		arena, pageIdx, pageMask := pageIndexOf(span.<b>base</b>())
+		<a href="../src/runtime/mgcmark.go.html#line-1586" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1586">#L1586</a>: 	print(" s.base()=", hex(s.<b>base</b>()), " s.limit=", hex(s.limit), " s.spanclass=", s.spanclass, " s.elemsize=", s.elemsize, " s.state=")
+		<a href="../src/runtime/mgcmark.go.html#line-1641" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1641">#L1641</a>: 	arena, pageIdx, pageMask := pageIndexOf(span.<b>base</b>())
+		<a href="../src/runtime/mgcmark.go.html#line-1694" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1694">#L1694</a>: 			heapBitsForAddr(s.<b>base</b>()).initCheckmarkSpan(s.layout())
+		<a href="../src/runtime/mgcmark.go.html#line-1703" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1703">#L1703</a>: 			heapBitsForAddr(s.<b>base</b>()).clearCheckmarkSpan(s.layout())
+		<a href="../src/runtime/mgcsweep.go.html#line-373">mgcsweep.go#L373</a>: 		p := s.<b>base</b>() + objIndex*size
+		<a href="../src/runtime/mgcsweep.go.html#line-379" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-379">#L379</a>: 			endOffset := p - s.<b>base</b>() + size
+		<a href="../src/runtime/mgcsweep.go.html#line-392" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-392">#L392</a>: 				p := s.<b>base</b>() + uintptr(special.offset)
+		<a href="../src/runtime/mgcsweep.go.html#line-423" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-423">#L423</a>: 				x := s.<b>base</b>() + i*s.elemsize
+		<a href="../src/runtime/mgcsweep.go.html#line-556" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-556">#L556</a>: 				sysFault(unsafe.Pointer(s.<b>base</b>()), size)
+		<a href="../src/runtime/mgcsweep.go.html#line-626" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-626">#L626</a>: 		p := s.<b>base</b>() + objIndex*size
+		<a href="../src/runtime/mgcsweep.go.html#line-632" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-632">#L632</a>: 			endOffset := p - s.<b>base</b>() + size
+		<a href="../src/runtime/mgcsweep.go.html#line-645" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-645">#L645</a>: 				p := s.<b>base</b>() + uintptr(special.offset)
+		<a href="../src/runtime/mgcsweep.go.html#line-676" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-676">#L676</a>: 				x := s.<b>base</b>() + i*s.elemsize
+		<a href="../src/runtime/mgcsweep.go.html#line-763" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-763">#L763</a>: 			sysFault(unsafe.Pointer(s.<b>base</b>()), size)
+		<a href="../src/runtime/mgcsweep.go.html#line-799" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-799">#L799</a>: 		addr := s.<b>base</b>() + i*s.elemsize
+		<a href="../src/runtime/mgcwork.go.html#line-461">mgcwork.go#L461</a>: 			newb := (*workbuf)(unsafe.Pointer(s.<b>base</b>() + i))
+		<a href="../src/runtime/mheap.go.html#line-488">mheap.go#L488</a>: func (s *mspan) <b>base</b>() uintptr {
+		<a href="../src/runtime/mheap.go.html#line-624" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-624">#L624</a>: 	if s == nil || b &lt; s.<b>base</b>() {
+		<a href="../src/runtime/mheap.go.html#line-699" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-699">#L699</a>: 	if s == nil || s.state.get() != mSpanInUse || p &lt; s.<b>base</b>() || p >= s.limit {
+		<a href="../src/runtime/mheap.go.html#line-912" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-912">#L912</a>: 			memclrNoHeapPointers(unsafe.Pointer(s.<b>base</b>()), s.npages<<_PageShift)
+		<a href="../src/runtime/mheap.go.html#line-1221" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1221">#L1221</a>: 		s.limit = s.<b>base</b>() + s.npages*pageSize
+		<a href="../src/runtime/mheap.go.html#line-1290" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1290">#L1290</a>: 	h.setSpans(s.<b>base</b>(), npages, s)
+		<a href="../src/runtime/mheap.go.html#line-1308" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1308">#L1308</a>: 		arena, pageIdx, pageMask := pageIndexOf(s.<b>base</b>())
+		<a href="../src/runtime/mheap.go.html#line-1414" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1414">#L1414</a>: 			base := unsafe.Pointer(s.<b>base</b>())
+		<a href="../src/runtime/mheap.go.html#line-1455" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1455">#L1455</a>: 			print("mheap.freeSpanLocked - span ", s, " ptr ", hex(s.<b>base</b>()), " allocCount ", s.allocCount, " sweepgen ", s.sweepgen, "/", h.sweepgen, "\n")
+		<a href="../src/runtime/mheap.go.html#line-1461" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1461">#L1461</a>: 		arena, pageIdx, pageMask := pageIndexOf(s.<b>base</b>())
+		<a href="../src/runtime/mheap.go.html#line-1475" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1475">#L1475</a>: 	h.pages.free(s.<b>base</b>(), s.npages)
+		<a href="../src/runtime/mheap.go.html#line-1645" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1645">#L1645</a>: 	arenaPage := (s.<b>base</b>() / pageSize) % pagesPerArena
+		<a href="../src/runtime/mheap.go.html#line-1646" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1646">#L1646</a>: 	ai := arenaIndex(s.<b>base</b>())
+		<a href="../src/runtime/mheap.go.html#line-1653" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1653">#L1653</a>: 	arenaPage := (s.<b>base</b>() / pageSize) % pagesPerArena
+		<a href="../src/runtime/mheap.go.html#line-1654" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1654">#L1654</a>: 	ai := arenaIndex(s.<b>base</b>())
+		<a href="../src/runtime/mheap.go.html#line-1677" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1677">#L1677</a>: 	offset := uintptr(p) - span.<b>base</b>()
+		<a href="../src/runtime/mheap.go.html#line-1728" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1728">#L1728</a>: 	offset := uintptr(p) - span.<b>base</b>()
+		<a href="../src/runtime/mwbbuf.go.html#line-301">mwbbuf.go#L301</a>: 		arena, pageIdx, pageMask := pageIndexOf(span.<b>base</b>())
+		<a href="../src/runtime/signal_unix.go.html#line-406">signal_unix.go#L406</a>: 			if s != nil &amp;&amp; s.state.get() == mSpanManual &amp;&amp; s.<b>base</b>() < sp && sp < s.limit {
+		<a href="../src/runtime/signal_unix.go.html#line-407" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-407">#L407</a>: 				gp := *(**g)(unsafe.Pointer(s.<b>base</b>()))
+		<a href="../src/runtime/stack.go.html#line-203">stack.go#L203</a>: 			x := gclinkptr(s.<b>base</b>() + i)
+		<a href="../src/runtime/stack.go.html#line-406" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-406">#L406</a>: 		v = unsafe.Pointer(s.<b>base</b>())
+		<a href="../src/runtime/stack.go.html#line-476" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-476">#L476</a>: 			println(hex(s.<b>base</b>()), v)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

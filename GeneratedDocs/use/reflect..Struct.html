@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.Struct</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-258">Struct</a></b></span>
+
+27 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/deepequal.go.html#line-123">deepequal.go#L123</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-258">type.go#L258</a>: 	<b>Struct</b>
+		<a href="../src/reflect/type.go.html#line-622" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-622">#L622</a>: 	<b>Struct</b>:        "struct",
+		<a href="../src/reflect/type.go.html#line-700" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-700">#L700</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-917" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-917">#L917</a>: 	if t.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-925" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-925">#L925</a>: 	if t.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-933" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-933">#L933</a>: 	if t.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-941" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-941">#L941</a>: 	if t.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-973" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-973">#L973</a>: 	if t.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-1220" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1220">#L1220</a>: 			if ft.Kind() == Ptr &amp;&amp; ft.Elem().Kind() == <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-1314" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1314">#L1314</a>: 				if ok || ntyp == nil || ntyp.Kind() != <b>Struct</b> {
+		<a href="../src/reflect/type.go.html#line-1653" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1653">#L1653</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-2090" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2090">#L2090</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-2117" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2117">#L2117</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-2139" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2139">#L2139</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-2214" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2214">#L2214</a>: 		kind:    uint8(<b>Struct</b>),
+		<a href="../src/reflect/type.go.html#line-2793" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2793">#L2793</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/type.go.html#line-3114" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3114">#L3114</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/value.go.html#line-849">value.go#L849</a>: 	if v.kind() != <b>Struct</b> {
+		<a href="../src/reflect/value.go.html#line-884" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-884">#L884</a>: 	v.mustBe(<b>Struct</b>)
+		<a href="../src/reflect/value.go.html#line-887" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-887">#L887</a>: 			if v.Kind() == Ptr &amp;&amp; v.typ.Elem().Kind() == <b>Struct</b> {
+		<a href="../src/reflect/value.go.html#line-903" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-903">#L903</a>: 	v.mustBe(<b>Struct</b>)
+		<a href="../src/reflect/value.go.html#line-1124" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1124">#L1124</a>: 	case <b>Struct</b>:
+		<a href="../src/reflect/value.go.html#line-1369" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1369">#L1369</a>: 	v.mustBe(<b>Struct</b>)
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-791">print.go#L791</a>: 	case reflect.<b>Struct</b>:
+		<a href="../src/fmt/print.go.html#line-878" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-878">#L878</a>: 			case reflect.Array, reflect.Slice, reflect.<b>Struct</b>, reflect.Map:
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-156">sort.go#L156</a>: 	case reflect.<b>Struct</b>:
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

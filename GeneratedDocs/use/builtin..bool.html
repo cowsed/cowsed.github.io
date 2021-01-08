@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.bool</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-bool">bool</a></b></span>
+
+947 uses:
+
+	<a href="../pkg/errors.html">errors</a>
+		<a href="../src/errors/wrap.go.html#line-39">wrap.go#L39</a>: func Is(err, target error) <b>bool</b> {
+		<a href="../src/errors/wrap.go.html#line-49" class="path-duplicate">wrap.go</a><a href="../src/errors/wrap.go.html#line-49">#L49</a>: 		if x, ok := err.(interface{ Is(error) <b>bool</b> }); ok && x.Is(target) {
+		<a href="../src/errors/wrap.go.html#line-77" class="path-duplicate">wrap.go</a><a href="../src/errors/wrap.go.html#line-77">#L77</a>: func As(err error, target interface{}) <b>bool</b> {
+		<a href="../src/errors/wrap.go.html#line-95" class="path-duplicate">wrap.go</a><a href="../src/errors/wrap.go.html#line-95">#L95</a>: 		if x, ok := err.(interface{ As(interface{}) <b>bool</b> }); ok && x.As(target) {
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/format.go.html#line-24">format.go#L24</a>: 	widPresent  <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-25" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-25">#L25</a>: 	precPresent <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-26" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-26">#L26</a>: 	minus       <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-27" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-27">#L27</a>: 	plus        <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-28" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-28">#L28</a>: 	sharp       <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-29" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-29">#L29</a>: 	space       <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-30" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-30">#L30</a>: 	zero        <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-35" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-35">#L35</a>: 	plusV  <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-36" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-36">#L36</a>: 	sharpV <b>bool</b>
+		<a href="../src/fmt/format.go.html#line-126" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-126">#L126</a>: func (f *fmt) fmtBoolean(v <b>bool</b>) {
+		<a href="../src/fmt/format.go.html#line-194" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-194">#L194</a>: func (f *fmt) fmtInteger(u uint64, base int, isSigned <b>bool</b>, verb rune, digits string) {
+		<a href="../src/fmt/print.go.html#line-42">print.go#L42</a>: 	Width() (wid int, ok <b>bool</b>)
+		<a href="../src/fmt/print.go.html#line-44" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-44">#L44</a>: 	Precision() (prec int, ok <b>bool</b>)
+		<a href="../src/fmt/print.go.html#line-47" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-47">#L47</a>: 	Flag(c int) <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-118" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-118">#L118</a>: 	reordered <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-120" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-120">#L120</a>: 	goodArgNum <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-122" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-122">#L122</a>: 	panicking <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-124" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-124">#L124</a>: 	erroring <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-126" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-126">#L126</a>: 	wrapErrs <b>bool</b>
+		<a href="../src/fmt/print.go.html#line-164" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-164">#L164</a>: func (p *pp) Width() (wid int, ok <b>bool</b>) { return p.fmt.wid, p.fmt.widPresent }
+		<a href="../src/fmt/print.go.html#line-166" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-166">#L166</a>: func (p *pp) Precision() (prec int, ok <b>bool</b>) { return p.fmt.prec, p.fmt.precPresent }
+		<a href="../src/fmt/print.go.html#line-168" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-168">#L168</a>: func (p *pp) Flag(b int) <b>bool</b> {
+		<a href="../src/fmt/print.go.html#line-300" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-300">#L300</a>: func tooLarge(x int) <b>bool</b> {
+		<a href="../src/fmt/print.go.html#line-306" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-306">#L306</a>: func parsenum(s string, start, end int) (num int, isnum <b>bool</b>, newi int) {
+		<a href="../src/fmt/print.go.html#line-351" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-351">#L351</a>: func (p *pp) fmtBool(v <b>bool</b>, verb rune) {
+		<a href="../src/fmt/print.go.html#line-362" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-362">#L362</a>: func (p *pp) fmt0x64(v uint64, leading0x <b>bool</b>) {
+		<a href="../src/fmt/print.go.html#line-370" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-370">#L370</a>: func (p *pp) fmtInteger(v uint64, isSigned <b>bool</b>, verb rune) {
+		<a href="../src/fmt/print.go.html#line-574" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-574">#L574</a>: func (p *pp) handleMethods(verb rune) (handled <b>bool</b>) {
+		<a href="../src/fmt/print.go.html#line-665" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-665">#L665</a>: 	case <b>bool</b>:
+		<a href="../src/fmt/print.go.html#line-893" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-893">#L893</a>: func intFromArg(a []interface{}, argNum int) (num int, isInt <b>bool</b>, newArgNum int) {
+		<a href="../src/fmt/print.go.html#line-931" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-931">#L931</a>: func parseArgNumber(format string) (index int, wid int, ok <b>bool</b>) {
+		<a href="../src/fmt/print.go.html#line-953" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-953">#L953</a>: func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found <b>bool</b>) {
+		<a href="../src/fmt/scan.go.html#line-41">scan.go#L41</a>: 	Token(skipSpace <b>bool</b>, f func(rune) <b>bool</b>) (token []byte, err error)
+		<a href="../src/fmt/scan.go.html#line-44" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-44">#L44</a>: 	Width() (wid int, ok <b>bool</b>)
+		<a href="../src/fmt/scan.go.html#line-161" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-161">#L161</a>: 	atEOF <b>bool</b>           // already read EOF
+		<a href="../src/fmt/scan.go.html#line-168" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-168">#L168</a>: 	validSave <b>bool</b> // is or was a part of an actual ss.
+		<a href="../src/fmt/scan.go.html#line-169" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-169">#L169</a>: 	nlIsEnd   <b>bool</b> // whether newline terminates scan
+		<a href="../src/fmt/scan.go.html#line-170" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-170">#L170</a>: 	nlIsSpace <b>bool</b> // whether newline counts as white space
+		<a href="../src/fmt/scan.go.html#line-201" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-201">#L201</a>: func (s *ss) Width() (wid int, ok <b>bool</b>) {
+		<a href="../src/fmt/scan.go.html#line-247" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-247">#L247</a>: func (s *ss) Token(skipSpace <b>bool</b>, f func(rune) <b>bool</b>) (tok []byte, err error) {
+		<a href="../src/fmt/scan.go.html#line-280" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-280">#L280</a>: func isSpace(r rune) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-297" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-297">#L297</a>: func notSpace(r rune) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-383" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-383">#L383</a>: func newScanState(r io.Reader, nlIsSpace, nlIsEnd <b>bool</b>) (s *ss, old ssave) {
+		<a href="../src/fmt/scan.go.html#line-446" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-446">#L446</a>: func (s *ss) token(skipSpace <b>bool</b>, f func(rune) <b>bool</b>) []byte {
+		<a href="../src/fmt/scan.go.html#line-479" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-479">#L479</a>: func (s *ss) consume(ok string, accept <b>bool</b>) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-497" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-497">#L497</a>: func (s *ss) peek(ok string) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-515" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-515">#L515</a>: func (s *ss) accept(ok string) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-520" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-520">#L520</a>: func (s *ss) okVerb(verb rune, okVerbs, typ string) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-531" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-531">#L531</a>: func (s *ss) scanBool(verb rune) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-588" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-588">#L588</a>: func (s *ss) scanNumber(digits string, haveDigits <b>bool</b>) string {
+		<a href="../src/fmt/scan.go.html#line-615" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-615">#L615</a>: func (s *ss) scanBasePrefix() (base int, digits string, zeroFound <b>bool</b>) {
+		<a href="../src/fmt/scan.go.html#line-764" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-764">#L764</a>: func hasX(s string) <b>bool</b> {
+		<a href="../src/fmt/scan.go.html#line-883" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-883">#L883</a>: func hexDigit(d rune) (int, <b>bool</b>) {
+		<a href="../src/fmt/scan.go.html#line-899" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-899">#L899</a>: func (s *ss) hexByte() (b byte, ok <b>bool</b>) {
+		<a href="../src/fmt/scan.go.html#line-969" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-969">#L969</a>: 	case *<b>bool</b>:
+		<a href="../src/fmt/scan.go.html#line-1203" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-1203">#L1203</a>: 		var widPresent <b>bool</b>
+
+	<a href="../pkg/github.com/cowsed/ElfHouse/FineSim/Forms.html">github.com/cowsed/ElfHouse/FineSim/Forms</a>
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-25">Form.go#L25</a>: 	Flammable <b>bool</b>
+		<a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-26" class="path-duplicate">Form.go</a><a href="../src/github.com/cowsed/ElfHouse/FineSim/Forms/Form.go.html#line-26">#L26</a>: 	Freezable <b>bool</b>
+
+	<a href="../pkg/github.com/cowsed/ElfHouse/Helpers/Grammar.html">github.com/cowsed/ElfHouse/Helpers/Grammar</a>
+		<a href="../src/github.com/cowsed/ElfHouse/Helpers/Grammar/pronouns.go.html#line-73">pronouns.go#L73</a>: func conditionalUppercase(s string, upper <b>bool</b>) string {
+
+	<a href="../pkg/internal/bytealg.html">internal/bytealg</a>
+		<a href="../src/internal/bytealg/equal_generic.go.html#line-14">equal_generic.go#L14</a>: func Equal(a, b []byte) <b>bool</b> {
+		<a href="../src/internal/bytealg/equal_native.go.html#line-18">equal_native.go#L18</a>: func abigen_runtime_memequal(a, b unsafe.Pointer, size uintptr) <b>bool</b>
+		<a href="../src/internal/bytealg/equal_native.go.html#line-21" class="path-duplicate">equal_native.go</a><a href="../src/internal/bytealg/equal_native.go.html#line-21">#L21</a>: func abigen_runtime_memequal_varlen(a, b unsafe.Pointer) <b>bool</b>
+
+	<a href="../pkg/internal/cpu.html">internal/cpu</a>
+		<a href="../src/internal/cpu/cpu.go.html#line-12">cpu.go#L12</a>: var DebugOptions <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-28" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-28">#L28</a>: 	HasAES       <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-29" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-29">#L29</a>: 	HasADX       <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-30" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-30">#L30</a>: 	HasAVX       <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-31" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-31">#L31</a>: 	HasAVX2      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-32" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-32">#L32</a>: 	HasBMI1      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-33" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-33">#L33</a>: 	HasBMI2      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-34" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-34">#L34</a>: 	HasERMS      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-35" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-35">#L35</a>: 	HasFMA       <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-36" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-36">#L36</a>: 	HasOSXSAVE   <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-37" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-37">#L37</a>: 	HasPCLMULQDQ <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-38" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-38">#L38</a>: 	HasPOPCNT    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-39" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-39">#L39</a>: 	HasSSE2      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-40" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-40">#L40</a>: 	HasSSE3      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-41" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-41">#L41</a>: 	HasSSSE3     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-42" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-42">#L42</a>: 	HasSSE41     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-43" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-43">#L43</a>: 	HasSSE42     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-51" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-51">#L51</a>: 	HasVFPv4 <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-52" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-52">#L52</a>: 	HasIDIVA <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-60" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-60">#L60</a>: 	HasFP       <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-61" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-61">#L61</a>: 	HasASIMD    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-62" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-62">#L62</a>: 	HasEVTSTRM  <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-63" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-63">#L63</a>: 	HasAES      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-64" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-64">#L64</a>: 	HasPMULL    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-65" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-65">#L65</a>: 	HasSHA1     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-66" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-66">#L66</a>: 	HasSHA2     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-67" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-67">#L67</a>: 	HasCRC32    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-68" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-68">#L68</a>: 	HasATOMICS  <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-69" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-69">#L69</a>: 	HasFPHP     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-70" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-70">#L70</a>: 	HasASIMDHP  <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-71" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-71">#L71</a>: 	HasCPUID    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-72" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-72">#L72</a>: 	HasASIMDRDM <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-73" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-73">#L73</a>: 	HasJSCVT    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-74" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-74">#L74</a>: 	HasFCMA     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-75" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-75">#L75</a>: 	HasLRCPC    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-76" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-76">#L76</a>: 	HasDCPOP    <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-77" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-77">#L77</a>: 	HasSHA3     <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-78" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-78">#L78</a>: 	HasSM3      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-79" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-79">#L79</a>: 	HasSM4      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-80" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-80">#L80</a>: 	HasASIMDDP  <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-81" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-81">#L81</a>: 	HasSHA512   <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-82" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-82">#L82</a>: 	HasSVE      <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-83" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-83">#L83</a>: 	HasASIMDFHM <b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-89" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-89">#L89</a>: 	HasMSA <b>bool</b> // MIPS SIMD architecture
+		<a href="../src/internal/cpu/cpu.go.html#line-100" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-100">#L100</a>: 	HasDARN  <b>bool</b> // Hardware random number generator (requires kernel enablement)
+		<a href="../src/internal/cpu/cpu.go.html#line-101" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-101">#L101</a>: 	HasSCV   <b>bool</b> // Syscall vectored (requires kernel enablement)
+		<a href="../src/internal/cpu/cpu.go.html#line-102" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-102">#L102</a>: 	IsPOWER8 <b>bool</b> // ISA v2.07 (POWER8)
+		<a href="../src/internal/cpu/cpu.go.html#line-103" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-103">#L103</a>: 	IsPOWER9 <b>bool</b> // ISA v3.00 (POWER9)
+		<a href="../src/internal/cpu/cpu.go.html#line-109" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-109">#L109</a>: 	HasZARCH  <b>bool</b> // z architecture mode is active [mandatory]
+		<a href="../src/internal/cpu/cpu.go.html#line-110" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-110">#L110</a>: 	HasSTFLE  <b>bool</b> // store facility list extended [mandatory]
+		<a href="../src/internal/cpu/cpu.go.html#line-111" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-111">#L111</a>: 	HasLDISP  <b>bool</b> // long (20-bit) displacements [mandatory]
+		<a href="../src/internal/cpu/cpu.go.html#line-112" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-112">#L112</a>: 	HasEIMM   <b>bool</b> // 32-bit immediates [mandatory]
+		<a href="../src/internal/cpu/cpu.go.html#line-113" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-113">#L113</a>: 	HasDFP    <b>bool</b> // decimal floating point
+		<a href="../src/internal/cpu/cpu.go.html#line-114" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-114">#L114</a>: 	HasETF3EH <b>bool</b> // ETF-3 enhanced
+		<a href="../src/internal/cpu/cpu.go.html#line-115" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-115">#L115</a>: 	HasMSA    <b>bool</b> // message security assist (CPACF)
+		<a href="../src/internal/cpu/cpu.go.html#line-116" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-116">#L116</a>: 	HasAES    <b>bool</b> // KM-AES{128,192,256} functions
+		<a href="../src/internal/cpu/cpu.go.html#line-117" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-117">#L117</a>: 	HasAESCBC <b>bool</b> // KMC-AES{128,192,256} functions
+		<a href="../src/internal/cpu/cpu.go.html#line-118" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-118">#L118</a>: 	HasAESCTR <b>bool</b> // KMCTR-AES{128,192,256} functions
+		<a href="../src/internal/cpu/cpu.go.html#line-119" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-119">#L119</a>: 	HasAESGCM <b>bool</b> // KMA-GCM-AES{128,192,256} functions
+		<a href="../src/internal/cpu/cpu.go.html#line-120" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-120">#L120</a>: 	HasGHASH  <b>bool</b> // KIMD-GHASH function
+		<a href="../src/internal/cpu/cpu.go.html#line-121" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-121">#L121</a>: 	HasSHA1   <b>bool</b> // K{I,L}MD-SHA-1 functions
+		<a href="../src/internal/cpu/cpu.go.html#line-122" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-122">#L122</a>: 	HasSHA256 <b>bool</b> // K{I,L}MD-SHA-256 functions
+		<a href="../src/internal/cpu/cpu.go.html#line-123" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-123">#L123</a>: 	HasSHA512 <b>bool</b> // K{I,L}MD-SHA-512 functions
+		<a href="../src/internal/cpu/cpu.go.html#line-124" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-124">#L124</a>: 	HasSHA3   <b>bool</b> // K{I,L}MD-SHA3-{224,256,384,512} and K{I,L}MD-SHAKE-{128,256} functions
+		<a href="../src/internal/cpu/cpu.go.html#line-125" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-125">#L125</a>: 	HasVX     <b>bool</b> // vector facility. Note: the runtime sets this when it processes auxv records.
+		<a href="../src/internal/cpu/cpu.go.html#line-126" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-126">#L126</a>: 	HasVXE    <b>bool</b> // vector-enhancements facility 1
+		<a href="../src/internal/cpu/cpu.go.html#line-127" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-127">#L127</a>: 	HasKDSA   <b>bool</b> // elliptic curve functions
+		<a href="../src/internal/cpu/cpu.go.html#line-128" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-128">#L128</a>: 	HasECDSA  <b>bool</b> // NIST curves
+		<a href="../src/internal/cpu/cpu.go.html#line-129" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-129">#L129</a>: 	HasEDDSA  <b>bool</b> // Edwards curves
+		<a href="../src/internal/cpu/cpu.go.html#line-151" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-151">#L151</a>: 	Feature   *<b>bool</b>
+		<a href="../src/internal/cpu/cpu.go.html#line-152" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-152">#L152</a>: 	Specified <b>bool</b> // whether feature value was specified in GODEBUG
+		<a href="../src/internal/cpu/cpu.go.html#line-153" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-153">#L153</a>: 	Enable    <b>bool</b> // whether feature should be enabled
+		<a href="../src/internal/cpu/cpu.go.html#line-154" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-154">#L154</a>: 	Required  <b>bool</b> // whether feature is mandatory and can not be disabled
+		<a href="../src/internal/cpu/cpu.go.html#line-183" class="path-duplicate">cpu.go</a><a href="../src/internal/cpu/cpu.go.html#line-183">#L183</a>: 		var enable <b>bool</b>
+		<a href="../src/internal/cpu/cpu_x86.go.html#line-103">cpu_x86.go#L103</a>: func isSet(hwc uint32, value uint32) <b>bool</b> {
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-27">sort.go#L27</a>: func (o *SortedMap) Less(i, j int) <b>bool</b> { return compare(o.Key[i], o.Key[j]) < 0 }
+		<a href="../src/internal/fmtsort/sort.go.html#line-190" class="path-duplicate">sort.go</a><a href="../src/internal/fmtsort/sort.go.html#line-190">#L190</a>: func nilCompare(aVal, bVal reflect.Value) (int, <b>bool</b>) {
+		<a href="../src/internal/fmtsort/sort.go.html#line-218" class="path-duplicate">sort.go</a><a href="../src/internal/fmtsort/sort.go.html#line-218">#L218</a>: func isNaN(a float64) <b>bool</b> {
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/copy_file_range_linux.go.html#line-19">copy_file_range_linux.go#L19</a>: func CopyFileRange(dst, src *FD, remain int64) (written int64, handled <b>bool</b>, err error) {
+		<a href="../src/internal/poll/fd.go.html#line-31">fd.go#L31</a>: func errClosing(isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd.go.html#line-50" class="path-duplicate">fd.go</a><a href="../src/internal/poll/fd.go.html#line-50">#L50</a>: func (e *DeadlineExceededError) Timeout() <b>bool</b>   { return true }
+		<a href="../src/internal/poll/fd.go.html#line-51" class="path-duplicate">fd.go</a><a href="../src/internal/poll/fd.go.html#line-51">#L51</a>: func (e *DeadlineExceededError) Temporary() <b>bool</b> { return true }
+		<a href="../src/internal/poll/fd_mutex.go.html#line-53">fd_mutex.go#L53</a>: func (mu *fdMutex) incref() <b>bool</b> {
+		<a href="../src/internal/poll/fd_mutex.go.html#line-71" class="path-duplicate">fd_mutex.go</a><a href="../src/internal/poll/fd_mutex.go.html#line-71">#L71</a>: func (mu *fdMutex) increfAndClose() <b>bool</b> {
+		<a href="../src/internal/poll/fd_mutex.go.html#line-102" class="path-duplicate">fd_mutex.go</a><a href="../src/internal/poll/fd_mutex.go.html#line-102">#L102</a>: func (mu *fdMutex) decref() <b>bool</b> {
+		<a href="../src/internal/poll/fd_mutex.go.html#line-117" class="path-duplicate">fd_mutex.go</a><a href="../src/internal/poll/fd_mutex.go.html#line-117">#L117</a>: func (mu *fdMutex) rwlock(read <b>bool</b>) <b>bool</b> {
+		<a href="../src/internal/poll/fd_mutex.go.html#line-162" class="path-duplicate">fd_mutex.go</a><a href="../src/internal/poll/fd_mutex.go.html#line-162">#L162</a>: func (mu *fdMutex) rwunlock(read <b>bool</b>) <b>bool</b> {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-29">fd_poll_runtime.go#L29</a>: func runtime_isPollServerDescriptor(fd uintptr) <b>bool</b>
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-67" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-67">#L67</a>: func (pd *pollDesc) prepare(mode int, isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-75" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-75">#L75</a>: func (pd *pollDesc) prepareRead(isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-79" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-79">#L79</a>: func (pd *pollDesc) prepareWrite(isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-83" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-83">#L83</a>: func (pd *pollDesc) wait(mode int, isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-91" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-91">#L91</a>: func (pd *pollDesc) waitRead(isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-95" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-95">#L95</a>: func (pd *pollDesc) waitWrite(isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-106" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-106">#L106</a>: func (pd *pollDesc) pollable() <b>bool</b> {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-119" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-119">#L119</a>: func convertErr(res int, isFile <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-170" class="path-duplicate">fd_poll_runtime.go</a><a href="../src/internal/poll/fd_poll_runtime.go.html#line-170">#L170</a>: func IsPollDescriptor(fd uintptr) <b>bool</b> {
+		<a href="../src/internal/poll/fd_unix.go.html#line-38">fd_unix.go#L38</a>: 	IsStream <b>bool</b>
+		<a href="../src/internal/poll/fd_unix.go.html#line-42" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-42">#L42</a>: 	ZeroReadIsEOF <b>bool</b>
+		<a href="../src/internal/poll/fd_unix.go.html#line-45" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-45">#L45</a>: 	isFile <b>bool</b>
+		<a href="../src/internal/poll/fd_unix.go.html#line-53" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-53">#L53</a>: func (fd *FD) Init(net string, pollable <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_unix.go.html#line-521" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-521">#L521</a>: func (fd *FD) RawRead(f func(uintptr) <b>bool</b>) error {
+		<a href="../src/internal/poll/fd_unix.go.html#line-540" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-540">#L540</a>: func (fd *FD) RawWrite(f func(uintptr) <b>bool</b>) error {
+		<a href="../src/internal/poll/splice_linux.go.html#line-30">splice_linux.go#L30</a>: func Splice(dst, src *FD, remain int64) (written int64, handled <b>bool</b>, sc string, err error) {
+		<a href="../src/internal/poll/splice_linux.go.html#line-156" class="path-duplicate">splice_linux.go</a><a href="../src/internal/poll/splice_linux.go.html#line-156">#L156</a>: 	p := (*<b>bool</b>)(atomic.LoadPointer(&disableSplice))
+		<a href="../src/internal/poll/splice_linux.go.html#line-172" class="path-duplicate">splice_linux.go</a><a href="../src/internal/poll/splice_linux.go.html#line-172">#L172</a>: 		p = new(<b>bool</b>)
+
+	<a href="../pkg/internal/reflectlite.html">internal/reflectlite</a>
+		<a href="../src/internal/reflectlite/type.go.html#line-47">type.go#L47</a>: 	Implements(u Type) <b>bool</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-50" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-50">#L50</a>: 	AssignableTo(u Type) <b>bool</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-53" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-53">#L53</a>: 	Comparable() <b>bool</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-161" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-161">#L161</a>: 	equal     func(unsafe.Pointer, unsafe.Pointer) <b>bool</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-278" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-278">#L278</a>: func (f *structField) embedded() <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-320" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-320">#L320</a>: func (n name) isExported() <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-493" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-493">#L493</a>: func (t *rtype) pointers() <b>bool</b> { return t.ptrdata != 0 }
+		<a href="../src/internal/reflectlite/type.go.html#line-524" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-524">#L524</a>: func (t *rtype) hasName() <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-669" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-669">#L669</a>: func (t *rtype) Implements(u Type) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-679" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-679">#L679</a>: func (t *rtype) AssignableTo(u Type) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-687" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-687">#L687</a>: func (t *rtype) Comparable() <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-692" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-692">#L692</a>: func implements(T, V *rtype) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-781" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-781">#L781</a>: func directlyAssignable(T, V *rtype) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-797" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-797">#L797</a>: func haveIdenticalType(T, V Type, cmpTags <b>bool</b>) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-809" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-809">#L809</a>: func haveIdenticalUnderlyingType(T, V *rtype, cmpTags <b>bool</b>) <b>bool</b> {
+		<a href="../src/internal/reflectlite/type.go.html#line-924" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-924">#L924</a>: func ifaceIndir(t *rtype) <b>bool</b> {
+		<a href="../src/internal/reflectlite/value.go.html#line-215">value.go#L215</a>: func (v Value) CanSet() <b>bool</b> {
+		<a href="../src/internal/reflectlite/value.go.html#line-286" class="path-duplicate">value.go</a><a href="../src/internal/reflectlite/value.go.html#line-286">#L286</a>: func (v Value) IsNil() <b>bool</b> {
+		<a href="../src/internal/reflectlite/value.go.html#line-311" class="path-duplicate">value.go</a><a href="../src/internal/reflectlite/value.go.html#line-311">#L311</a>: func (v Value) IsValid() <b>bool</b> {
+		<a href="../src/internal/reflectlite/value.go.html#line-472" class="path-duplicate">value.go</a><a href="../src/internal/reflectlite/value.go.html#line-472">#L472</a>: 	b <b>bool</b>
+
+	<a href="../pkg/internal/syscall/unix.html">internal/syscall/unix</a>
+		<a href="../src/internal/syscall/unix/nonblocking.go.html#line-15">nonblocking.go#L15</a>: func IsNonblock(fd int) (nonblocking <b>bool</b>, err error) {
+
+	<a href="../pkg/math.html">math</a>
+		<a href="../src/math/bits.go.html#line-34">bits.go#L34</a>: func IsNaN(f float64) (is <b>bool</b>) {
+		<a href="../src/math/bits.go.html#line-46" class="path-duplicate">bits.go</a><a href="../src/math/bits.go.html#line-46">#L46</a>: func IsInf(f float64, sign int) <b>bool</b> {
+		<a href="../src/math/gamma.go.html#line-215">gamma.go#L215</a>: func isNegInt(x float64) <b>bool</b> {
+		<a href="../src/math/pow.go.html#line-7">pow.go#L7</a>: func isOddInt(x float64) <b>bool</b> {
+		<a href="../src/math/signbit.go.html#line-8">signbit.go#L8</a>: func Signbit(x float64) <b>bool</b> {
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/env.go.html#line-56">env.go#L56</a>: func isShellSpecialVar(c uint8) <b>bool</b> {
+		<a href="../src/os/env.go.html#line-65" class="path-duplicate">env.go</a><a href="../src/os/env.go.html#line-65">#L65</a>: func isAlphaNum(c uint8) <b>bool</b> {
+		<a href="../src/os/env.go.html#line-112" class="path-duplicate">env.go</a><a href="../src/os/env.go.html#line-112">#L112</a>: func LookupEnv(key string) (string, <b>bool</b>) {
+		<a href="../src/os/error.go.html#line-46">error.go#L46</a>: 	Timeout() <b>bool</b>
+		<a href="../src/os/error.go.html#line-61" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-61">#L61</a>: func (e *PathError) Timeout() <b>bool</b> {
+		<a href="../src/os/error.go.html#line-77" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-77">#L77</a>: func (e *SyscallError) Timeout() <b>bool</b> {
+		<a href="../src/os/error.go.html#line-95" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-95">#L95</a>: func IsExist(err error) <b>bool</b> {
+		<a href="../src/os/error.go.html#line-102" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-102">#L102</a>: func IsNotExist(err error) <b>bool</b> {
+		<a href="../src/os/error.go.html#line-109" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-109">#L109</a>: func IsPermission(err error) <b>bool</b> {
+		<a href="../src/os/error.go.html#line-115" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-115">#L115</a>: func IsTimeout(err error) <b>bool</b> {
+		<a href="../src/os/error.go.html#line-120" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-120">#L120</a>: func underlyingErrorIs(err, target error) <b>bool</b> {
+		<a href="../src/os/exec.go.html#line-34">exec.go#L34</a>: func (p *Process) done() <b>bool</b> {
+		<a href="../src/os/exec.go.html#line-145" class="path-duplicate">exec.go</a><a href="../src/os/exec.go.html#line-145">#L145</a>: func (p *ProcessState) Exited() <b>bool</b> {
+		<a href="../src/os/exec.go.html#line-151" class="path-duplicate">exec.go</a><a href="../src/os/exec.go.html#line-151">#L151</a>: func (p *ProcessState) Success() <b>bool</b> {
+		<a href="../src/os/exec_posix.go.html#line-81">exec_posix.go#L81</a>: func (p *ProcessState) exited() <b>bool</b> {
+		<a href="../src/os/exec_posix.go.html#line-85" class="path-duplicate">exec_posix.go</a><a href="../src/os/exec_posix.go.html#line-85">#L85</a>: func (p *ProcessState) success() <b>bool</b> {
+		<a href="../src/os/file.go.html#line-593">file.go#L593</a>: func isWindowsNulName(name string) <b>bool</b> {
+		<a href="../src/os/file_unix.go.html#line-57">file_unix.go#L57</a>: 	nonblock    <b>bool</b>     // whether we set nonblocking mode
+		<a href="../src/os/file_unix.go.html#line-58" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-58">#L58</a>: 	stdoutOrErr <b>bool</b>     // whether this is stdout or stderr
+		<a href="../src/os/file_unix.go.html#line-59" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-59">#L59</a>: 	appendMode  <b>bool</b>     // whether file is opened for appending
+		<a href="../src/os/getwd.go.html#line-20">getwd.go#L20</a>: var useSyscallwd = func(error) <b>bool</b> { return true }
+		<a href="../src/os/path.go.html#line-71">path.go#L71</a>: func endsWithDot(path string) <b>bool</b> {
+		<a href="../src/os/path_unix.go.html#line-15">path_unix.go#L15</a>: func IsPathSeparator(c uint8) <b>bool</b> {
+		<a href="../src/os/rawconn.go.html#line-27">rawconn.go#L27</a>: func (c *rawConn) Read(f func(uintptr) <b>bool</b>) error {
+		<a href="../src/os/rawconn.go.html#line-36" class="path-duplicate">rawconn.go</a><a href="../src/os/rawconn.go.html#line-36">#L36</a>: func (c *rawConn) Write(f func(uintptr) <b>bool</b>) error {
+		<a href="../src/os/readfrom_linux.go.html#line-14">readfrom_linux.go#L14</a>: func (f *File) readFrom(r io.Reader) (written int64, handled <b>bool</b>, err error) {
+		<a href="../src/os/types.go.html#line-26">types.go#L26</a>: 	IsDir() <b>bool</b>        // abbreviation for Mode().IsDir()
+		<a href="../src/os/types.go.html#line-93" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-93">#L93</a>: func (m FileMode) IsDir() <b>bool</b> {
+		<a href="../src/os/types.go.html#line-99" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-99">#L99</a>: func (m FileMode) IsRegular() <b>bool</b> {
+		<a href="../src/os/types.go.html#line-109" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-109">#L109</a>: func (fs *fileStat) IsDir() <b>bool</b>  { return fs.Mode().IsDir() }
+		<a href="../src/os/types.go.html#line-117" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-117">#L117</a>: func SameFile(fi1, fi2 FileInfo) <b>bool</b> {
+		<a href="../src/os/types_unix.go.html#line-29">types_unix.go#L29</a>: func sameFile(fs1, fs2 *fileStat) <b>bool</b> {
+		<a href="../src/os/wait_waitid.go.html#line-23">wait_waitid.go#L23</a>: func (p *Process) blockUntilWaitable() (<b>bool</b>, error) {
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/deepequal.go.html#line-24">deepequal.go#L24</a>: func deepValueEqual(v1, v2 Value, visited map[visit]<b>bool</b>, depth int) <b>bool</b> {
+		<a href="../src/reflect/deepequal.go.html#line-38" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-38">#L38</a>: 	hard := func(v1, v2 Value) <b>bool</b> {
+		<a href="../src/reflect/deepequal.go.html#line-211" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-211">#L211</a>: func DeepEqual(x, y interface{}) <b>bool</b> {
+		<a href="../src/reflect/deepequal.go.html#line-220" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-220">#L220</a>: 	return deepValueEqual(v1, v2, make(map[visit]<b>bool</b>), 0)
+		<a href="../src/reflect/type.go.html#line-70">type.go#L70</a>: 	MethodByName(string) (Method, <b>bool</b>)
+		<a href="../src/reflect/type.go.html#line-101" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-101">#L101</a>: 	Implements(u Type) <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-104" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-104">#L104</a>: 	AssignableTo(u Type) <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-107" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-107">#L107</a>: 	ConvertibleTo(u Type) <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-110" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-110">#L110</a>: 	Comparable() <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-145" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-145">#L145</a>: 	IsVariadic() <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-164" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-164">#L164</a>: 	FieldByName(name string) (StructField, <b>bool</b>)
+		<a href="../src/reflect/type.go.html#line-178" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-178">#L178</a>: 	FieldByNameFunc(match func(string) <b>bool</b>) (StructField, <b>bool</b>)
+		<a href="../src/reflect/type.go.html#line-313" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-313">#L313</a>: 	equal     func(unsafe.Pointer, unsafe.Pointer) <b>bool</b>
+		<a href="../src/reflect/type.go.html#line-430" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-430">#L430</a>: func (f *structField) embedded() <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-472" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-472">#L472</a>: func (n name) isExported() <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-528" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-528">#L528</a>: func newName(n, tag string, exported <b>bool</b>) name {
+		<a href="../src/reflect/type.go.html#line-780" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-780">#L780</a>: func (t *rtype) pointers() <b>bool</b> { return t.ptrdata != 0 }
+		<a href="../src/reflect/type.go.html#line-834" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-834">#L834</a>: func (t *rtype) MethodByName(name string) (m Method, ok <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-863" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-863">#L863</a>: func (t *rtype) hasName() <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-887" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-887">#L887</a>: func (t *rtype) IsVariadic() <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-932" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-932">#L932</a>: func (t *rtype) FieldByName(name string) (StructField, <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-940" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-940">#L940</a>: func (t *rtype) FieldByNameFunc(match func(string) <b>bool</b>) (StructField, <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-1073" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1073">#L1073</a>: func (t *interfaceType) MethodByName(name string) (m Method, ok <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-1100" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1100">#L1100</a>: 	Anonymous <b>bool</b>      // is an embedded field
+		<a href="../src/reflect/type.go.html#line-1129" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1129">#L1129</a>: func (tag StructTag) Lookup(key string) (value string, ok <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-1238" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1238">#L1238</a>: func (t *structType) FieldByNameFunc(match func(string) <b>bool</b>) (result StructField, ok <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-1263" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1263">#L1263</a>: 	visited := map[*structType]<b>bool</b>{}
+		<a href="../src/reflect/type.go.html#line-1344" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1344">#L1344</a>: func (t *structType) FieldByName(name string) (f StructField, present <b>bool</b>) {
+		<a href="../src/reflect/type.go.html#line-1361" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1361">#L1361</a>: 	return t.FieldByNameFunc(func(s string) <b>bool</b> { return s == name })
+		<a href="../src/reflect/type.go.html#line-1431" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1431">#L1431</a>: func (t *rtype) Implements(u Type) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1441" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1441">#L1441</a>: func (t *rtype) AssignableTo(u Type) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1449" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1449">#L1449</a>: func (t *rtype) ConvertibleTo(u Type) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1457" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1457">#L1457</a>: func (t *rtype) Comparable() <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1462" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1462">#L1462</a>: func implements(T, V *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1550" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1550">#L1550</a>: func specialChannelAssignability(T, V *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1563" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1563">#L1563</a>: func directlyAssignable(T, V *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1583" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1583">#L1583</a>: func haveIdenticalType(T, V Type, cmpTags <b>bool</b>) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1595" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1595">#L1595</a>: func haveIdenticalUnderlyingType(T, V *rtype, cmpTags <b>bool</b>) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-1933" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1933">#L1933</a>: func FuncOf(in, out []Type, variadic <b>bool</b>) Type {
+		<a href="../src/reflect/type.go.html#line-2081" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2081">#L2081</a>: func isReflexive(t *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2105" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2105">#L2105</a>: func needKeyUpdate(t *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2132" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2132">#L2132</a>: func hashMightPanic(t *rtype) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2327" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2327">#L2327</a>: func isLetter(ch rune) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2337" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2337">#L2337</a>: func isValidFieldName(fieldName string) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2733" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2733">#L2733</a>: 		typ.equal = func(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-2925" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2925">#L2925</a>: 		array.equal = func(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/reflect/type.go.html#line-3067" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3067">#L3067</a>: func ifaceIndir(t *rtype) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-281">value.go#L281</a>: func (v Value) Bool() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-283" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-283">#L283</a>: 	return *(*<b>bool</b>)(v.ptr)
+		<a href="../src/reflect/value.go.html#line-313" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-313">#L313</a>: func (v Value) CanAddr() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-322" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-322">#L322</a>: func (v Value) CanSet() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-353" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-353">#L353</a>: var callGC <b>bool</b> // for testing; see TestCallMethodJump
+		<a href="../src/reflect/value.go.html#line-536" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-536">#L536</a>: func callReflect(ctxt *makeFuncImpl, frame unsafe.Pointer, retValid *<b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-709" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-709">#L709</a>: func callMethod(ctxt *methodValue, frame unsafe.Pointer, retValid *<b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-914" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-914">#L914</a>: func (v Value) FieldByNameFunc(match func(string) <b>bool</b>) Value {
+		<a href="../src/reflect/value.go.html#line-1003" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1003">#L1003</a>: func (v Value) CanInterface() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1019" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1019">#L1019</a>: func valueInterface(v Value, safe <b>bool</b>) interface{} {
+		<a href="../src/reflect/value.go.html#line-1069" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1069">#L1069</a>: func (v Value) IsNil() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1094" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1094">#L1094</a>: func (v Value) IsValid() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1100" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1100">#L1100</a>: func (v Value) IsZero() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1270" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1270">#L1270</a>: func (it *MapIter) Next() <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1376" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1376">#L1376</a>: func (v Value) OverflowComplex(x complex128) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1389" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1389">#L1389</a>: func (v Value) OverflowFloat(x float64) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1400" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1400">#L1400</a>: func overflowFloat32(x float64) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1409" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1409">#L1409</a>: func (v Value) OverflowInt(x int64) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1422" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1422">#L1422</a>: func (v Value) OverflowUint(x uint64) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-1497" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1497">#L1497</a>: func (v Value) Recv() (x Value, ok <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-1505" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1505">#L1505</a>: func (v Value) recv(nb <b>bool</b>) (val Value, ok <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-1538" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1538">#L1538</a>: func (v Value) send(x Value, nb <b>bool</b>) (selected <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-1574" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1574">#L1574</a>: func (v Value) SetBool(x <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-1577" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1577">#L1577</a>: 	*(*<b>bool</b>)(v.ptr) = x
+		<a href="../src/reflect/value.go.html#line-1884" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1884">#L1884</a>: func (v Value) TryRecv() (x Value, ok <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-1894" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1894">#L1894</a>: func (v Value) TrySend(x Value) <b>bool</b> {
+		<a href="../src/reflect/value.go.html#line-2081" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2081">#L2081</a>: 	var stringCopy <b>bool</b>
+		<a href="../src/reflect/value.go.html#line-2134" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2134">#L2134</a>: func rselect([]runtimeSelect) (chosen int, recvOK <b>bool</b>)
+		<a href="../src/reflect/value.go.html#line-2179" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2179">#L2179</a>: func Select(cases []SelectCase) (chosen int, recv Value, recvOK <b>bool</b>) {
+		<a href="../src/reflect/value.go.html#line-2747" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2747">#L2747</a>: func chanrecv(ch unsafe.Pointer, nb <b>bool</b>, val unsafe.Pointer) (selected, received <b>bool</b>)
+		<a href="../src/reflect/value.go.html#line-2750" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2750">#L2750</a>: func chansend(ch unsafe.Pointer, val unsafe.Pointer, nb <b>bool</b>) <b>bool</b>
+		<a href="../src/reflect/value.go.html#line-2832" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2832">#L2832</a>: 	b <b>bool</b>
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/alg.go.html#line-63">alg.go#L63</a>: var useAeshash <b>bool</b>
+		<a href="../src/runtime/alg.go.html#line-236" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-236">#L236</a>: func memequal0(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-239" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-239">#L239</a>: func memequal8(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-242" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-242">#L242</a>: func memequal16(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-245" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-245">#L245</a>: func memequal32(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-248" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-248">#L248</a>: func memequal64(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-251" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-251">#L251</a>: func memequal128(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-254" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-254">#L254</a>: func f32equal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-257" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-257">#L257</a>: func f64equal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-260" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-260">#L260</a>: func c64equal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-263" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-263">#L263</a>: func c128equal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-266" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-266">#L266</a>: func strequal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-269" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-269">#L269</a>: func interequal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-274" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-274">#L274</a>: func nilinterequal(p, q unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-279" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-279">#L279</a>: func efaceeq(t *_type, x, y unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/alg.go.html#line-295" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-295">#L295</a>: func ifaceeq(tab *itab, x, y unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/atomic_pointer.go.html#line-68">atomic_pointer.go#L68</a>: func sync_atomic_CompareAndSwapUintptr(ptr *uintptr, old, new uintptr) <b>bool</b>
+		<a href="../src/runtime/atomic_pointer.go.html#line-72" class="path-duplicate">atomic_pointer.go</a><a href="../src/runtime/atomic_pointer.go.html#line-72">#L72</a>: func sync_atomic_CompareAndSwapPointer(ptr *unsafe.Pointer, old, new unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/cgo.go.html#line-32">cgo.go#L32</a>: var iscgo <b>bool</b>
+		<a href="../src/runtime/cgo.go.html#line-36" class="path-duplicate">cgo.go</a><a href="../src/runtime/cgo.go.html#line-36">#L36</a>: var cgoHasExtraM <b>bool</b>
+		<a href="../src/runtime/cgo.go.html#line-52" class="path-duplicate">cgo.go</a><a href="../src/runtime/cgo.go.html#line-52">#L52</a>: var cgoAlwaysFalse <b>bool</b>
+		<a href="../src/runtime/cgocall.go.html#line-350">cgocall.go#L350</a>: func unwindm(restore *<b>bool</b>) {
+		<a href="../src/runtime/cgocall.go.html#line-481" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-481">#L481</a>: func cgoCheckArg(t *_type, p unsafe.Pointer, indir, top <b>bool</b>, msg string) {
+		<a href="../src/runtime/cgocall.go.html#line-639" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-639">#L639</a>: func cgoIsGoPointer(p unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/cgocall.go.html#line-660" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-660">#L660</a>: func cgoInRange(p unsafe.Pointer, start, end uintptr) <b>bool</b> {
+		<a href="../src/runtime/chan.go.html#line-129">chan.go#L129</a>: func full(c *hchan) <b>bool</b> {
+		<a href="../src/runtime/chan.go.html#line-158" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-158">#L158</a>: func chansend(c *hchan, ep unsafe.Pointer, block <b>bool</b>, callerpc uintptr) <b>bool</b> {
+		<a href="../src/runtime/chan.go.html#line-428" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-428">#L428</a>: func empty(c *hchan) <b>bool</b> {
+		<a href="../src/runtime/chan.go.html#line-443" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-443">#L443</a>: func chanrecv2(c *hchan, elem unsafe.Pointer) (received <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-454" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-454">#L454</a>: func chanrecv(c *hchan, ep unsafe.Pointer, block <b>bool</b>) (selected, received <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-651" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-651">#L651</a>: func chanparkcommit(gp *g, chanLock unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/chan.go.html#line-688" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-688">#L688</a>: func selectnbsend(c *hchan, elem unsafe.Pointer) (selected <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-709" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-709">#L709</a>: func selectnbrecv(elem unsafe.Pointer, c *hchan) (selected <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-731" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-731">#L731</a>: func selectnbrecv2(elem unsafe.Pointer, received *<b>bool</b>, c *hchan) (selected <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-738" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-738">#L738</a>: func reflect_chansend(c *hchan, elem unsafe.Pointer, nb <b>bool</b>) (selected <b>bool</b>) {
+		<a href="../src/runtime/chan.go.html#line-743" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-743">#L743</a>: func reflect_chanrecv(c *hchan, nb <b>bool</b>, elem unsafe.Pointer) (selected <b>bool</b>, received <b>bool</b>) {
+		<a href="../src/runtime/cpuflags.go.html#line-27">cpuflags.go#L27</a>: 	x86HasPOPCNT <b>bool</b>
+		<a href="../src/runtime/cpuflags.go.html#line-28" class="path-duplicate">cpuflags.go</a><a href="../src/runtime/cpuflags.go.html#line-28">#L28</a>: 	x86HasSSE41  <b>bool</b>
+		<a href="../src/runtime/cpuflags.go.html#line-29" class="path-duplicate">cpuflags.go</a><a href="../src/runtime/cpuflags.go.html#line-29">#L29</a>: 	x86HasFMA    <b>bool</b>
+		<a href="../src/runtime/cpuflags.go.html#line-31" class="path-duplicate">cpuflags.go</a><a href="../src/runtime/cpuflags.go.html#line-31">#L31</a>: 	armHasVFPv4 <b>bool</b>
+		<a href="../src/runtime/cpuflags.go.html#line-33" class="path-duplicate">cpuflags.go</a><a href="../src/runtime/cpuflags.go.html#line-33">#L33</a>: 	arm64HasATOMICS <b>bool</b>
+		<a href="../src/runtime/cpuflags_amd64.go.html#line-11">cpuflags_amd64.go#L11</a>: var useAVXmemmove <b>bool</b>
+		<a href="../src/runtime/cpuprof.go.html#line-25">cpuprof.go#L25</a>: 	on   <b>bool</b>     // profiling is on
+		<a href="../src/runtime/cpuprof.go.html#line-204" class="path-duplicate">cpuprof.go</a><a href="../src/runtime/cpuprof.go.html#line-204">#L204</a>: func runtime_pprof_readProfile() ([]uint64, []unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/debugcall.go.html#line-120">debugcall.go#L120</a>: 	var lockedm <b>bool</b>
+		<a href="../src/runtime/debugcall.go.html#line-250" class="path-duplicate">debugcall.go</a><a href="../src/runtime/debugcall.go.html#line-250">#L250</a>: 	var ok <b>bool</b>
+		<a href="../src/runtime/debuglog.go.html#line-181">debuglog.go#L181</a>: func (l *dlogger) b(x <b>bool</b>) *dlogger {
+		<a href="../src/runtime/debuglog.go.html#line-406" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-406">#L406</a>: func (l *debugLogWriter) writeFrameAt(pos, size uint64) <b>bool</b> {
+		<a href="../src/runtime/debuglog.go.html#line-610" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-610">#L610</a>: func (r *debugLogReader) printVal() <b>bool</b> {
+		<a href="../src/runtime/debuglog.go.html#line-713" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-713">#L713</a>: 		first    <b>bool</b>
+		<a href="../src/runtime/debuglog.go.html#line-803" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-803">#L803</a>: func printDebugLogPC(pc uintptr, returnPC <b>bool</b>) {
+		<a href="../src/runtime/debuglog_off.go.html#line-17">debuglog_off.go#L17</a>: func putCachedDlogger(l *dlogger) <b>bool</b> {
+		<a href="../src/runtime/env_posix.go.html#line-26">env_posix.go#L26</a>: func envKeyEqual(a, b string) <b>bool</b> {
+		<a href="../src/runtime/error.go.html#line-99">error.go#L99</a>: 	signed <b>bool</b>
+		<a href="../src/runtime/error.go.html#line-148" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-148">#L148</a>: func appendIntStr(b []byte, v int64, signed <b>bool</b>) []byte {
+		<a href="../src/runtime/error.go.html#line-195" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-195">#L195</a>: 	case <b>bool</b>:
+		<a href="../src/runtime/error.go.html#line-242" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-242">#L242</a>: 		print(typestring, "(", *(*<b>bool</b>)(eface.data), ")")
+		<a href="../src/runtime/extern.go.html#line-186">extern.go#L186</a>: func Caller(skip int) (pc uintptr, file string, line int, ok <b>bool</b>) {
+		<a href="../src/runtime/float.go.html#line-12">float.go#L12</a>: func isNaN(f float64) (is <b>bool</b>) {
+		<a href="../src/runtime/float.go.html#line-18" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-18">#L18</a>: func isFinite(f float64) <b>bool</b> {
+		<a href="../src/runtime/float.go.html#line-23" class="path-duplicate">float.go</a><a href="../src/runtime/float.go.html#line-23">#L23</a>: func isInf(f float64) <b>bool</b> {
+		<a href="../src/runtime/heapdump.go.html#line-126">heapdump.go#L126</a>: func dumpbool(b <b>bool</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-244" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-244">#L244</a>: func dumpframe(s *stkframe, arg unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/heapdump.go.html#line-457" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-457">#L457</a>: var freemark [_PageSize / 8]<b>bool</b>
+		<a href="../src/runtime/iface.go.html#line-33">iface.go#L33</a>: func getitab(inter *interfacetype, typ *_type, canfail <b>bool</b>) *itab {
+		<a href="../src/runtime/iface.go.html#line-466" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-466">#L466</a>: func assertI2I2(inter *interfacetype, i iface) (r iface, b <b>bool</b>) {
+		<a href="../src/runtime/iface.go.html#line-494" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-494">#L494</a>: func assertE2I2(inter *interfacetype, e eface) (r iface, b <b>bool</b>) {
+		<a href="../src/runtime/lfstack.go.html#line-55">lfstack.go#L55</a>: func (head *lfstack) empty() <b>bool</b> {
+		<a href="../src/runtime/lock_futex.go.html#line-172">lock_futex.go#L172</a>: func notetsleep_internal(n *note, ns int64) <b>bool</b> {
+		<a href="../src/runtime/lock_futex.go.html#line-218" class="path-duplicate">lock_futex.go</a><a href="../src/runtime/lock_futex.go.html#line-218">#L218</a>: func notetsleep(n *note, ns int64) <b>bool</b> {
+		<a href="../src/runtime/lock_futex.go.html#line-229" class="path-duplicate">lock_futex.go</a><a href="../src/runtime/lock_futex.go.html#line-229">#L229</a>: func notetsleepg(n *note, ns int64) <b>bool</b> {
+		<a href="../src/runtime/lock_futex.go.html#line-241" class="path-duplicate">lock_futex.go</a><a href="../src/runtime/lock_futex.go.html#line-241">#L241</a>: func beforeIdle(int64) (*g, <b>bool</b>) {
+		<a href="../src/runtime/malloc.go.html#line-870">malloc.go#L870</a>: func (c *mcache) nextFree(spc spanClass) (v gclinkptr, s *mspan, shouldhelpgc <b>bool</b>) {
+		<a href="../src/runtime/malloc.go.html#line-903" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-903">#L903</a>: func mallocgc(size uintptr, typ *_type, needzero <b>bool</b>) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1160" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1160">#L1160</a>: func largeAlloc(size uintptr, needzero <b>bool</b>, noscan <b>bool</b>) *mspan {
+		<a href="../src/runtime/malloc.go.html#line-1407" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1407">#L1407</a>: func inPersistentAlloc(p uintptr) <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-110">map.go#L110</a>: func isEmpty(x uint8) <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-175" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-175">#L175</a>: 	wrapped     <b>bool</b>           // already wrapped around from end of bucket array to beginning
+		<a href="../src/runtime/map.go.html#line-202" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-202">#L202</a>: func evacuated(b *bmap) <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-452" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-452">#L452</a>: func mapaccess2(t *maptype, h *hmap, key unsafe.Pointer) (unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/map.go.html#line-562" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-562">#L562</a>: func mapaccess2_fat(t *maptype, h *hmap, key, zero unsafe.Pointer) (unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/map.go.html#line-1061" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1061">#L1061</a>: func overLoadFactor(count int, B uint8) <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-1068" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1068">#L1068</a>: func tooManyOverflowBuckets(noverflow uint16, B uint8) <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-1081" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1081">#L1081</a>: func (h *hmap) growing() <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-1086" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1086">#L1086</a>: func (h *hmap) sameSizeGrow() <b>bool</b> {
+		<a href="../src/runtime/map.go.html#line-1115" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1115">#L1115</a>: func bucketEvacuated(t *maptype, h *hmap, bucket uintptr) <b>bool</b> {
+		<a href="../src/runtime/map_fast32.go.html#line-52">map_fast32.go#L52</a>: func mapaccess2_fast32(t *maptype, h *hmap, key uint32) (unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/map_fast64.go.html#line-52">map_fast64.go#L52</a>: func mapaccess2_fast64(t *maptype, h *hmap, key uint64) (unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/map_faststr.go.html#line-107">map_faststr.go#L107</a>: func mapaccess2_faststr(t *maptype, h *hmap, ky string) (unsafe.Pointer, <b>bool</b>) {
+		<a href="../src/runtime/mbitmap.go.html#line-250">mbitmap.go#L250</a>: func (s *mspan) isFree(index uintptr) <b>bool</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-286" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-286">#L286</a>: func (m markBits) isMarked() <b>bool</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-542" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-542">#L542</a>: func (h heapBits) morePointers() <b>bool</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-550" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-550">#L550</a>: func (h heapBits) isPointer() <b>bool</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-558" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-558">#L558</a>: func (h heapBits) isCheckmarked(size uintptr) <b>bool</b> {
+		<a href="../src/runtime/mbitmap.go.html#line-1947" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1947">#L1947</a>: func getgcmaskcb(frame *stkframe, ctxt unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/mcentral.go.html#line-460">mcentral.go#L460</a>: func (c *mcentral) freeSpan(s *mspan, preserve <b>bool</b>, wasempty <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/mfinal.go.html#line-36">mfinal.go#L36</a>: var fingwait <b>bool</b>
+		<a href="../src/runtime/mfinal.go.html#line-37" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-37">#L37</a>: var fingwake <b>bool</b>
+		<a href="../src/runtime/mfinal.go.html#line-150" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-150">#L150</a>: 	fingRunning <b>bool</b>
+		<a href="../src/runtime/mfixalloc.go.html#line-36">mfixalloc.go#L36</a>: 	zero   <b>bool</b> // zero allocations
+		<a href="../src/runtime/mgc.go.html#line-258">mgc.go#L258</a>: 	enabled <b>bool</b>    // compiler emits a check of this before calling write barrier
+		<a href="../src/runtime/mgc.go.html#line-260" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-260">#L260</a>: 	needed  <b>bool</b>    // whether we need a write barrier for current GC phase
+		<a href="../src/runtime/mgc.go.html#line-261" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-261">#L261</a>: 	cgo     <b>bool</b>    // whether we need a write barrier for a cgo check
+		<a href="../src/runtime/mgc.go.html#line-694" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-694">#L694</a>: 	decIfPositive := func(ptr *int64) <b>bool</b> {
+		<a href="../src/runtime/mgc.go.html#line-738" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-738">#L738</a>: func pollFractionalWorkerExit() <b>bool</b> {
+		<a href="../src/runtime/mgc.go.html#line-1019" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1019">#L1019</a>: 	userForced <b>bool</b>
+		<a href="../src/runtime/mgc.go.html#line-1200" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1200">#L1200</a>: func (t gcTrigger) test() <b>bool</b> {
+		<a href="../src/runtime/mgc.go.html#line-1891" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1891">#L1891</a>: 		gopark(func(g *g, parkp unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/mgc.go.html#line-2035" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2035">#L2035</a>: func gcMarkWorkAvailable(p *p) <b>bool</b> {
+		<a href="../src/runtime/mgcmark.go.html#line-689">mgcmark.go#L689</a>: func gcParkAssist() <b>bool</b> {
+		<a href="../src/runtime/mgcmark.go.html#line-840" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-840">#L840</a>: 	scanframe := func(frame *stkframe, unused unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/mgcmark.go.html#line-1091" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1091">#L1091</a>: 	var check func() <b>bool</b>
+		<a href="../src/runtime/mgcscavenge.go.html#line-164">mgcscavenge.go#L164</a>: 	parked     <b>bool</b>
+		<a href="../src/runtime/mgcscavenge.go.html#line-399" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-399">#L399</a>: func (s *pageAlloc) scavenge(nbytes uintptr, mayUnlock <b>bool</b>) uintptr {
+		<a href="../src/runtime/mgcscavenge.go.html#line-426" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-426">#L426</a>: func printScavTrace(gen uint32, released uintptr, forced <b>bool</b>) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-554" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-554">#L554</a>: func (s *pageAlloc) scavengeOne(work addrRange, max uintptr, mayUnlock <b>bool</b>) (uintptr, addrRange) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-624" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-624">#L624</a>: 	findCandidate := func(work addrRange) (chunkIdx, <b>bool</b>) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-782" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-782">#L782</a>: func (m *pallocData) hasScavengeCandidate(min uintptr) <b>bool</b> {
+		<a href="../src/runtime/mgcstack.go.html#line-178">mgcstack.go#L178</a>: 	conservative <b>bool</b>
+		<a href="../src/runtime/mgcstack.go.html#line-206" class="path-duplicate">mgcstack.go</a><a href="../src/runtime/mgcstack.go.html#line-206">#L206</a>: func (s *stackScanState) putPtr(p uintptr, conservative <b>bool</b>) {
+		<a href="../src/runtime/mgcstack.go.html#line-241" class="path-duplicate">mgcstack.go</a><a href="../src/runtime/mgcstack.go.html#line-241">#L241</a>: func (s *stackScanState) getPtr() (p uintptr, conservative <b>bool</b>) {
+		<a href="../src/runtime/mgcsweep.go.html#line-38">mgcsweep.go#L38</a>: 	parked  <b>bool</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-39" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-39">#L39</a>: 	started <b>bool</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-89" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-89">#L89</a>: func (s sweepClass) split() (spc spanClass, full <b>bool</b>) {
+		<a href="../src/runtime/mgcsweep.go.html#line-284" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-284">#L284</a>: func isSweepDone() <b>bool</b> {
+		<a href="../src/runtime/mgcsweep.go.html#line-324" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-324">#L324</a>: func (s *mspan) sweep(preserve <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/mgcsweep.go.html#line-578" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-578">#L578</a>: func (s *mspan) oldSweep(preserve <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/mgcwork.go.html#line-30">mgcwork.go#L30</a>: var throwOnGCWork <b>bool</b>
+		<a href="../src/runtime/mgcwork.go.html#line-95" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-95">#L95</a>: 	flushedWork <b>bool</b>
+		<a href="../src/runtime/mgcwork.go.html#line-216" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-216">#L216</a>: func (w *gcWork) putFast(obj uintptr) <b>bool</b> {
+		<a href="../src/runtime/mgcwork.go.html#line-382" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-382">#L382</a>: func (w *gcWork) empty() <b>bool</b> {
+		<a href="../src/runtime/mgcwork.go.html#line-535" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-535">#L535</a>: func freeSomeWbufs(preemptible <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-322">mheap.go#L322</a>: 	down <b>bool</b>
+		<a href="../src/runtime/mheap.go.html#line-554" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-554">#L554</a>: func makeSpanClass(sizeclass uint8, noscan <b>bool</b>) spanClass {
+		<a href="../src/runtime/mheap.go.html#line-562" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-562">#L562</a>: func (sc spanClass) noscan() <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-613" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-613">#L613</a>: func inheap(b uintptr) <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-622" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-622">#L622</a>: func inHeapOrStack(b uintptr) <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-896" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-896">#L896</a>: func (h *mheap) alloc(npages uintptr, spanclass spanClass, needzero <b>bool</b>) *mspan {
+		<a href="../src/runtime/mheap.go.html#line-963" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-963">#L963</a>: func (h *mheap) allocNeedsZero(base, npage uintptr) (needZero <b>bool</b>) {
+		<a href="../src/runtime/mheap.go.html#line-1111" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1111">#L1111</a>: func (h *mheap) allocSpan(npages uintptr, manual <b>bool</b>, spanclass spanClass, sysStat *uint64) (s *mspan) {
+		<a href="../src/runtime/mheap.go.html#line-1331" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1331">#L1331</a>: func (h *mheap) grow(npage uintptr) <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-1447" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1447">#L1447</a>: func (h *mheap) freeSpanLocked(s *mspan, acctinuse, acctidle <b>bool</b>) {
+		<a href="../src/runtime/mheap.go.html#line-1532" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1532">#L1532</a>: func (span *mspan) inList() <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-1563" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1563">#L1563</a>: func (list *mSpanList) isEmpty() <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-1665" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1665">#L1665</a>: func addspecial(p unsafe.Pointer, s *special) <b>bool</b> {
+		<a href="../src/runtime/mheap.go.html#line-1770" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1770">#L1770</a>: func addfinalizer(p unsafe.Pointer, f *funcval, nret uintptr, fint *_type, ot *ptrtype) <b>bool</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-299">mpagealloc.go#L299</a>: 	test <b>bool</b>
+		<a href="../src/runtime/mpagealloc.go.html#line-415" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-415">#L415</a>: func (s *pageAlloc) update(base, npages uintptr, contig, alloc <b>bool</b>) {
+		<a href="../src/runtime/mpagecache.go.html#line-26">mpagecache.go#L26</a>: func (c *pageCache) empty() <b>bool</b> {
+		<a href="../src/runtime/mprof.go.html#line-155">mprof.go#L155</a>: 		flushed <b>bool</b>
+		<a href="../src/runtime/mprof.go.html#line-205" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-205">#L205</a>: func stkbucket(typ bucketType, size uintptr, stk []uintptr, alloc <b>bool</b>) *bucket {
+		<a href="../src/runtime/mprof.go.html#line-259" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-259">#L259</a>: func eqslice(x, y []uintptr) <b>bool</b> {
+		<a href="../src/runtime/mprof.go.html#line-406" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-406">#L406</a>: func blocksampled(cycles int64) <b>bool</b> {
+		<a href="../src/runtime/mprof.go.html#line-543" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-543">#L543</a>: func MemProfile(p []MemProfileRecord, inuseZero <b>bool</b>) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-634" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-634">#L634</a>: func BlockProfile(p []BlockProfileRecord) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-669" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-669">#L669</a>: func MutexProfile(p []BlockProfileRecord) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-698" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-698">#L698</a>: func ThreadCreateProfile(p []StackRecord) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-715" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-715">#L715</a>: func runtime_goroutineProfileWithLabels(p []StackRecord, labels []unsafe.Pointer) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-720" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-720">#L720</a>: func goroutineProfileWithLabels(p []StackRecord, labels []unsafe.Pointer) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-726" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-726">#L726</a>: 	isOK := func(gp1 *g) <b>bool</b> {
+		<a href="../src/runtime/mprof.go.html#line-787" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-787">#L787</a>: func GoroutineProfile(p []StackRecord) (n int, ok <b>bool</b>) {
+		<a href="../src/runtime/mprof.go.html#line-803" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-803">#L803</a>: func Stack(buf []byte, all <b>bool</b>) int {
+		<a href="../src/runtime/mranges.go.html#line-51">mranges.go#L51</a>: func (a addrRange) contains(addr uintptr) <b>bool</b> {
+		<a href="../src/runtime/mranges.go.html#line-122" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-122">#L122</a>: func (l1 offAddr) lessThan(l2 offAddr) <b>bool</b> {
+		<a href="../src/runtime/mranges.go.html#line-128" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-128">#L128</a>: func (l1 offAddr) lessEqual(l2 offAddr) <b>bool</b> {
+		<a href="../src/runtime/mranges.go.html#line-133" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-133">#L133</a>: func (l1 offAddr) equal(l2 offAddr) <b>bool</b> {
+		<a href="../src/runtime/mranges.go.html#line-196" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-196">#L196</a>: func (a *addrRanges) findAddrGreaterEqual(addr uintptr) (uintptr, <b>bool</b>) {
+		<a href="../src/runtime/mranges.go.html#line-211" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-211">#L211</a>: func (a *addrRanges) contains(addr uintptr) <b>bool</b> {
+		<a href="../src/runtime/mspanset.go.html#line-326">mspanset.go#L326</a>: func (h *headTailIndex) cas(old, new headTailIndex) <b>bool</b> {
+		<a href="../src/runtime/mstats.go.html#line-70">mstats.go#L70</a>: 	enablegc        <b>bool</b>
+		<a href="../src/runtime/mstats.go.html#line-71" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-71">#L71</a>: 	debuggc         <b>bool</b>
+		<a href="../src/runtime/mstats.go.html#line-394" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-394">#L394</a>: 	EnableGC <b>bool</b>
+		<a href="../src/runtime/mstats.go.html#line-397" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-397">#L397</a>: 	DebugGC <b>bool</b>
+		<a href="../src/runtime/mwbbuf.go.html#line-118">mwbbuf.go#L118</a>: func (b *wbBuf) empty() <b>bool</b> {
+		<a href="../src/runtime/mwbbuf.go.html#line-150" class="path-duplicate">mwbbuf.go</a><a href="../src/runtime/mwbbuf.go.html#line-150">#L150</a>: func (b *wbBuf) putFast(old, new uintptr) <b>bool</b> {
+		<a href="../src/runtime/netpoll.go.html#line-81">netpoll.go#L81</a>: 	closing <b>bool</b>
+		<a href="../src/runtime/netpoll.go.html#line-82" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-82">#L82</a>: 	everr   <b>bool</b>      // marks event scanning error happened
+		<a href="../src/runtime/netpoll.go.html#line-130" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-130">#L130</a>: func netpollinited() <b>bool</b> {
+		<a href="../src/runtime/netpoll.go.html#line-138" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-138">#L138</a>: func poll_runtime_isPollServerDescriptor(fd uintptr) <b>bool</b> {
+		<a href="../src/runtime/netpoll.go.html#line-395" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-395">#L395</a>: func netpollblockcommit(gp *g, gpp unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/netpoll.go.html#line-413" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-413">#L413</a>: func netpollblock(pd *pollDesc, mode int32, waitio <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/netpoll.go.html#line-448" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-448">#L448</a>: func netpollunblock(pd *pollDesc, mode int32, ioready <b>bool</b>) *g {
+		<a href="../src/runtime/netpoll.go.html#line-477" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-477">#L477</a>: func netpolldeadlineimpl(pd *pollDesc, seq uintptr, read, write <b>bool</b>) {
+		<a href="../src/runtime/netpoll_epoll.go.html#line-60">netpoll_epoll.go#L60</a>: func netpollIsPollDescriptor(fd uintptr) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-722">panic.go#L722</a>: 			func(frame *stkframe, unused unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-814" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-814">#L814</a>: func runOpenDeferFrame(gp *g, d *_defer) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-1193" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1193">#L1193</a>: 	var docrash <b>bool</b>
+		<a href="../src/runtime/panic.go.html#line-1238" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1238">#L1238</a>: func startpanic_m() <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-1292" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1292">#L1292</a>: var didothers <b>bool</b>
+		<a href="../src/runtime/panic.go.html#line-1295" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1295">#L1295</a>: func dopanic_m(gp *g, pc, sp uintptr) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-1349" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1349">#L1349</a>: func canpanic(gp *g) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-1380" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1380">#L1380</a>: func shouldPushSigpanic(gp *g, pc, lr uintptr) <b>bool</b> {
+		<a href="../src/runtime/panic.go.html#line-1420" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1420">#L1420</a>: func isAbortPC(pc uintptr) <b>bool</b> {
+		<a href="../src/runtime/plugin.go.html#line-126">plugin.go#L126</a>: func inRange(r0, r1, v0, v1 uintptr) <b>bool</b> {
+		<a href="../src/runtime/preempt.go.html#line-73">preempt.go#L73</a>: 	dead <b>bool</b>
+		<a href="../src/runtime/preempt.go.html#line-78" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-78">#L78</a>: 	stopped <b>bool</b>
+		<a href="../src/runtime/preempt.go.html#line-292" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-292">#L292</a>: func canPreemptM(mp *m) <b>bool</b> {
+		<a href="../src/runtime/preempt.go.html#line-347" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-347">#L347</a>: func wantAsyncPreempt(gp *g) <b>bool</b> {
+		<a href="../src/runtime/preempt.go.html#line-368" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-368">#L368</a>: func isAsyncSafePoint(gp *g, pc, sp, lr uintptr) (<b>bool</b>, uintptr) {
+		<a href="../src/runtime/print.go.html#line-114">print.go#L114</a>: func printbool(v <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-99">proc.go#L99</a>: var main_init_done chan <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-105" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-105">#L105</a>: var mainStarted <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-169" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-169">#L169</a>: 	main_init_done = make(chan <b>bool</b>)
+		<a href="../src/runtime/proc.go.html#line-289" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-289">#L289</a>: func gopark(unlockf func(*g, unsafe.Pointer) <b>bool</b>, lock unsafe.Pointer, reason waitReason, traceEv byte, traceskip int) {
+		<a href="../src/runtime/proc.go.html#line-457" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-457">#L457</a>: func lockedOSThread() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-691" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-691">#L691</a>: func ready(gp *g, traceskip int, next <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-784" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-784">#L784</a>: func castogscanstatus(gp *g, oldval, newval uint32) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-878" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-878">#L878</a>: func casGFromPreempted(gp *g, old, new uint32) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-1052" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1052">#L1052</a>: func startTheWorldWithSema(emitTraceEvent <b>bool</b>) int64 {
+		<a href="../src/runtime/proc.go.html#line-1209" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1209">#L1209</a>: func mexit(osStack <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-1722" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1722">#L1722</a>: func lockextra(nilokay <b>bool</b>) *m {
+		<a href="../src/runtime/proc.go.html#line-1772" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1772">#L1772</a>: 	waiting <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-1935" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1935">#L1935</a>: func startm(_p_ *p, spinning <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-2148" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2148">#L2148</a>: func execute(gp *g, inheritTime <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-2183" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2183">#L2183</a>: func findrunnable() (gp *g, inheritTime <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-2487" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2487">#L2487</a>: func pollWork() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-2643" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2643">#L2643</a>: 	var inheritTime <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-2742" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2742">#L2742</a>: func checkTimers(pp *p, now int64) (rnow, pollUntil int64, ran <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-2802" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2802">#L2802</a>: func shouldStealTimers(p2 *p) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-2817" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2817">#L2817</a>: func parkunlock_c(gp *g, lock unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-3302" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3302">#L3302</a>: func exitsyscallfast(oldp *p) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-3320" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3320">#L3320</a>: 		var ok <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-3364" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3364">#L3364</a>: func exitsyscallfast_pidle() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-3457" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3457">#L3457</a>: var inForkedChild <b>bool</b>
+		<a href="../src/runtime/proc.go.html#line-4150" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4150">#L4150</a>: func setsSP(pc uintptr) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-4841" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4841">#L4841</a>: func preemptall() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-4864" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4864">#L4864</a>: func preemptone(_p_ *p) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-4893" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4893">#L4893</a>: func schedtrace(detailed <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-4979" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4979">#L4979</a>: func schedEnableUser(enable <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-5001" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5001">#L5001</a>: func schedEnabled(gp *g) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5116" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5116">#L5116</a>: func runqempty(_p_ *p) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5147" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5147">#L5147</a>: func runqput(_p_ *p, gp *g, next <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-5182" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5182">#L5182</a>: func runqputslow(_p_ *p, gp *g, h, t uint32) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5259" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5259">#L5259</a>: func runqget(_p_ *p) (gp *g, inheritTime <b>bool</b>) {
+		<a href="../src/runtime/proc.go.html#line-5288" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5288">#L5288</a>: func runqgrab(_p_ *p, batch *[256]guintptr, batchHead uint32, stealRunNextG <b>bool</b>) uint32 {
+		<a href="../src/runtime/proc.go.html#line-5343" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5343">#L5343</a>: func runqsteal(_p_, p2 *p, stealRunNextG <b>bool</b>) *g {
+		<a href="../src/runtime/proc.go.html#line-5370" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5370">#L5370</a>: func (q *gQueue) empty() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5436" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5436">#L5436</a>: func (l *gList) empty() <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5477" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5477">#L5477</a>: func haveexperiment(name string) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5542" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5542">#L5542</a>: func sync_runtime_canSpin(i int) <b>bool</b> {
+		<a href="../src/runtime/proc.go.html#line-5599" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5599">#L5599</a>: func (enum *randomEnum) done() <b>bool</b> {
+		<a href="../src/runtime/profbuf.go.html#line-125">profbuf.go#L125</a>: func (x *profAtomic) cas(old, new profIndex) <b>bool</b> {
+		<a href="../src/runtime/profbuf.go.html#line-153" class="path-duplicate">profbuf.go</a><a href="../src/runtime/profbuf.go.html#line-153">#L153</a>: func (b *profBuf) hasOverflow() <b>bool</b> {
+		<a href="../src/runtime/profbuf.go.html#line-238" class="path-duplicate">profbuf.go</a><a href="../src/runtime/profbuf.go.html#line-238">#L238</a>: func (b *profBuf) canWriteRecord(nstk int) <b>bool</b> {
+		<a href="../src/runtime/profbuf.go.html#line-264" class="path-duplicate">profbuf.go</a><a href="../src/runtime/profbuf.go.html#line-264">#L264</a>: func (b *profBuf) canWriteTwoRecords(nstk1, nstk2 int) <b>bool</b> {
+		<a href="../src/runtime/profbuf.go.html#line-432" class="path-duplicate">profbuf.go</a><a href="../src/runtime/profbuf.go.html#line-432">#L432</a>: func (b *profBuf) read(mode profBufReadMode) (data []uint64, tags []unsafe.Pointer, eof <b>bool</b>) {
+		<a href="../src/runtime/rdebug.go.html#line-17">rdebug.go#L17</a>: func setPanicOnFault(new <b>bool</b>) (old <b>bool</b>) {
+		<a href="../src/runtime/relax_stub.go.html#line-17">relax_stub.go#L17</a>: func osRelax(relax <b>bool</b>) {}
+		<a href="../src/runtime/runtime1.go.html#line-36">runtime1.go#L36</a>: func gotraceback() (level int32, all, crash <b>bool</b>) {
+		<a href="../src/runtime/runtime2.go.html#line-268">runtime2.go#L268</a>: func (gp *guintptr) cas(old, new guintptr) <b>bool</b> {
+		<a href="../src/runtime/runtime2.go.html#line-367" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-367">#L367</a>: 	isSelect <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-389" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-389">#L389</a>: 	cleanstack   <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-433" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-433">#L433</a>: 	preempt       <b>bool</b> // preemption signal, duplicates stackguard0 = stackpreempt
+		<a href="../src/runtime/runtime2.go.html#line-434" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-434">#L434</a>: 	preemptStop   <b>bool</b> // transition to _Gpreempted on preemption; otherwise, just deschedule
+		<a href="../src/runtime/runtime2.go.html#line-435" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-435">#L435</a>: 	preemptShrink <b>bool</b> // shrink stack at synchronous safe point
+		<a href="../src/runtime/runtime2.go.html#line-440" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-440">#L440</a>: 	asyncSafePoint <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-442" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-442">#L442</a>: 	paniconfault <b>bool</b> // panic (instead of crash) on unexpected fault address
+		<a href="../src/runtime/runtime2.go.html#line-443" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-443">#L443</a>: 	gcscandone   <b>bool</b> // g has scanned stack; protected by _Gscan bit in status
+		<a href="../src/runtime/runtime2.go.html#line-444" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-444">#L444</a>: 	throwsplit   <b>bool</b> // must not split stack
+		<a href="../src/runtime/runtime2.go.html#line-449" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-449">#L449</a>: 	activeStackChans <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-456" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-456">#L456</a>: 	sysblocktraced <b>bool</b>     // StartTrace has emitted EvGoInSyscall about this goroutine
+		<a href="../src/runtime/runtime2.go.html#line-512" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-512">#L512</a>: 	spinning      <b>bool</b> // m is out of work and is actively looking for work
+		<a href="../src/runtime/runtime2.go.html#line-513" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-513">#L513</a>: 	blocked       <b>bool</b> // m is blocked on a note
+		<a href="../src/runtime/runtime2.go.html#line-514" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-514">#L514</a>: 	newSigstack   <b>bool</b> // minit on C thread called sigaltstack
+		<a href="../src/runtime/runtime2.go.html#line-516" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-516">#L516</a>: 	incgo         <b>bool</b>   // m is executing a cgo call
+		<a href="../src/runtime/runtime2.go.html#line-519" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-519">#L519</a>: 	needextram    <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-533" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-533">#L533</a>: 	waitunlockf   func(*g, unsafe.Pointer) <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-537" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-537">#L537</a>: 	startingtrace <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-629" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-629">#L629</a>: 	traceSweep <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-693" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-693">#L693</a>: 	preempt <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-734" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-734">#L734</a>: 		user     <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-887" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-887">#L887</a>: 	started <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-888" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-888">#L888</a>: 	heap    <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-892" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-892">#L892</a>: 	openDefer <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-927" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-927">#L927</a>: 	recovered <b>bool</b>           // whether this panic is over
+		<a href="../src/runtime/runtime2.go.html#line-928" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-928">#L928</a>: 	aborted   <b>bool</b>           // the panic was aborted
+		<a href="../src/runtime/runtime2.go.html#line-929" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-929">#L929</a>: 	goexit    <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-1049" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1049">#L1049</a>: 	isIntel              <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-1050" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1050">#L1050</a>: 	lfenceBeforeRdtsc    <b>bool</b>
+		<a href="../src/runtime/runtime2.go.html#line-1053" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1053">#L1053</a>: 	framepointer_enabled <b>bool</b>  // set by cmd/link
+		<a href="../src/runtime/runtime2.go.html#line-1058" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1058">#L1058</a>: 	islibrary <b>bool</b> // -buildmode=c-shared
+		<a href="../src/runtime/runtime2.go.html#line-1059" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1059">#L1059</a>: 	isarchive <b>bool</b> // -buildmode=c-archive
+		<a href="../src/runtime/select.go.html#line-78">select.go#L78</a>: func selparkcommit(gp *g, _ unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/select.go.html#line-133" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-133">#L133</a>: func selectgo(cas0 *scase, order0 *uint16, ncases int) (int, <b>bool</b>) {
+		<a href="../src/runtime/select.go.html#line-244" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-244">#L244</a>: 	var recvOK <b>bool</b>
+		<a href="../src/runtime/select.go.html#line-545" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-545">#L545</a>: func reflect_rselect(cases []runtimeSelect) (int, <b>bool</b>) {
+		<a href="../src/runtime/sema.go.html#line-65">sema.go#L65</a>: func sync_runtime_Semrelease(addr *uint32, handoff <b>bool</b>, skipframes int) {
+		<a href="../src/runtime/sema.go.html#line-70" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-70">#L70</a>: func sync_runtime_SemacquireMutex(addr *uint32, lifo <b>bool</b>, skipframes int) {
+		<a href="../src/runtime/sema.go.html#line-98" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-98">#L98</a>: func semacquire1(addr *uint32, lifo <b>bool</b>, profile semaProfileFlags, skipframes int) {
+		<a href="../src/runtime/sema.go.html#line-159" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-159">#L159</a>: func semrelease1(addr *uint32, handoff <b>bool</b>, skipframes int) {
+		<a href="../src/runtime/sema.go.html#line-221" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-221">#L221</a>: func cansemacquire(addr *uint32) <b>bool</b> {
+		<a href="../src/runtime/sema.go.html#line-234" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-234">#L234</a>: func (root *semaRoot) queue(addr *uint32, s *sudog, lifo <b>bool</b>) {
+		<a href="../src/runtime/sema.go.html#line-471" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-471">#L471</a>: func less(a, b uint32) <b>bool</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-105">signal_unix.go#L105</a>: var signalsOK <b>bool</b>
+		<a href="../src/runtime/signal_unix.go.html#line-111" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-111">#L111</a>: func initsig(preinit <b>bool</b>) {
+		<a href="../src/runtime/signal_unix.go.html#line-151" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-151">#L151</a>: func sigInstallGoHandler(sig uint32) <b>bool</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-484" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-484">#L484</a>: func adjustSignalStack(sig uint32, mp *m, gsigStack *gsignalStack) <b>bool</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-530" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-530">#L530</a>: var testSigtrap func(info *siginfo, ctxt *sigctxt, gp *g) <b>bool</b>
+		<a href="../src/runtime/signal_unix.go.html#line-531" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-531">#L531</a>: var testSigusr1 func(gp *g) <b>bool</b>
+		<a href="../src/runtime/signal_unix.go.html#line-973" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-973">#L973</a>: func sigfwdgo(sig uint32, info *siginfo, ctx unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-1155" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-1155">#L1155</a>: func blockableSig(sig uint32) <b>bool</b> {
+		<a href="../src/runtime/sigqueue.go.html#line-55">sigqueue.go#L55</a>: 	inuse      <b>bool</b>
+		<a href="../src/runtime/sigqueue.go.html#line-67" class="path-duplicate">sigqueue.go</a><a href="../src/runtime/sigqueue.go.html#line-67">#L67</a>: func sigsend(s uint32) <b>bool</b> {
+		<a href="../src/runtime/sigqueue.go.html#line-261" class="path-duplicate">sigqueue.go</a><a href="../src/runtime/sigqueue.go.html#line-261">#L261</a>: func signal_ignored(s uint32) <b>bool</b> {
+		<a href="../src/runtime/slice.go.html#line-39">slice.go#L39</a>: 		var overflow <b>bool</b>
+		<a href="../src/runtime/slice.go.html#line-165" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-165">#L165</a>: 	var overflow <b>bool</b>
+		<a href="../src/runtime/slice.go.html#line-242" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-242">#L242</a>: func isPowerOfTwo(x uintptr) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-29">softfloat64.go#L29</a>: func funpack64(f uint64) (sign, mant uint64, exp int, inf, nan <b>bool</b>) {
+		<a href="../src/runtime/softfloat64.go.html#line-61" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-61">#L61</a>: func funpack32(f uint32) (sign, mant uint32, exp int, inf, nan <b>bool</b>) {
+		<a href="../src/runtime/softfloat64.go.html#line-343" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-343">#L343</a>: func fcmp64(f, g uint64) (cmp int32, isnan <b>bool</b>) {
+		<a href="../src/runtime/softfloat64.go.html#line-374" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-374">#L374</a>: func f64toint(f uint64) (val int64, ok <b>bool</b>) {
+		<a href="../src/runtime/softfloat64.go.html#line-499" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-499">#L499</a>: func feq32(x, y uint32) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-504" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-504">#L504</a>: func fgt32(x, y uint32) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-509" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-509">#L509</a>: func fge32(x, y uint32) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-514" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-514">#L514</a>: func feq64(x, y uint64) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-519" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-519">#L519</a>: func fgt64(x, y uint64) <b>bool</b> {
+		<a href="../src/runtime/softfloat64.go.html#line-524" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-524">#L524</a>: func fge64(x, y uint64) <b>bool</b> {
+		<a href="../src/runtime/stack.go.html#line-625">stack.go#L625</a>: func adjustframe(frame *stkframe, arg unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/stack.go.html#line-1104" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1104">#L1104</a>: func isShrinkStackSafe(gp *g) <b>bool</b> {
+		<a href="../src/runtime/stack.go.html#line-1217" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1217">#L1217</a>: func getStackMap(frame *stkframe, cache *pcvalueCache, debug <b>bool</b>) (locals, args bitvector, objs []stackObjectRecord) {
+		<a href="../src/runtime/string.go.html#line-120">string.go#L120</a>: func stringDataOnStack(s string) <b>bool</b> {
+		<a href="../src/runtime/string.go.html#line-350" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-350">#L350</a>: func contains(s, t string) <b>bool</b> {
+		<a href="../src/runtime/string.go.html#line-354" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-354">#L354</a>: func hasPrefix(s, prefix string) <b>bool</b> {
+		<a href="../src/runtime/string.go.html#line-366" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-366">#L366</a>: func atoi(s string) (int, <b>bool</b>) {
+		<a href="../src/runtime/string.go.html#line-413" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-413">#L413</a>: func atoi32(s string) (int32, <b>bool</b>) {
+		<a href="../src/runtime/string.go.html#line-506" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-506">#L506</a>: func parseRelease(rel string) (major, minor, patch int, ok <b>bool</b>) {
+		<a href="../src/runtime/string.go.html#line-515" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-515">#L515</a>: 	next := func() (int, <b>bool</b>) {
+		<a href="../src/runtime/stubs.go.html#line-135">stubs.go#L135</a>: func memequal(a, b unsafe.Pointer, size uintptr) <b>bool</b>
+		<a href="../src/runtime/stubs.go.html#line-321" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-321">#L321</a>: func checkASM() <b>bool</b>
+		<a href="../src/runtime/stubs.go.html#line-323" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-323">#L323</a>: func memequal_varlen(a, b unsafe.Pointer) <b>bool</b>
+		<a href="../src/runtime/stubs.go.html#line-326" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-326">#L326</a>: func bool2int(x <b>bool</b>) int {
+		<a href="../src/runtime/symtab.go.html#line-73">symtab.go#L73</a>: func (ci *Frames) Next() (frame Frame, more <b>bool</b>) {
+		<a href="../src/runtime/symtab.go.html#line-375" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-375">#L375</a>: 	bad <b>bool</b> // module failed to load and should be ignored
+		<a href="../src/runtime/symtab.go.html#line-647" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-647">#L647</a>: func (f funcInfo) valid() <b>bool</b> {
+		<a href="../src/runtime/symtab.go.html#line-725" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-725">#L725</a>: func pcvalue(f funcInfo, off int32, targetpc uintptr, cache *pcvalueCache, strict <b>bool</b>) (int32, uintptr) {
+		<a href="../src/runtime/symtab.go.html#line-764" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-764">#L764</a>: 		var ok <b>bool</b>
+		<a href="../src/runtime/symtab.go.html#line-805" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-805">#L805</a>: 		var ok <b>bool</b>
+		<a href="../src/runtime/symtab.go.html#line-847" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-847">#L847</a>: func funcline1(f funcInfo, targetpc uintptr, strict <b>bool</b>) (file string, line int32) {
+		<a href="../src/runtime/symtab.go.html#line-882" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-882">#L882</a>: 		var ok <b>bool</b>
+		<a href="../src/runtime/symtab.go.html#line-905" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-905">#L905</a>: func pcdatavalue1(f funcInfo, table int32, targetpc uintptr, cache *pcvalueCache, strict <b>bool</b>) int32 {
+		<a href="../src/runtime/symtab.go.html#line-937" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-937">#L937</a>: func step(p []byte, pc *uintptr, val *int32, first <b>bool</b>) (newp []byte, ok <b>bool</b>) {
+		<a href="../src/runtime/time.go.html#line-195">time.go#L195</a>: func resetForSleep(gp *g, ut unsafe.Pointer) <b>bool</b> {
+		<a href="../src/runtime/time.go.html#line-213" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-213">#L213</a>: func stopTimer(t *timer) <b>bool</b> {
+		<a href="../src/runtime/time.go.html#line-220" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-220">#L220</a>: func resetTimer(t *timer, when int64) <b>bool</b> {
+		<a href="../src/runtime/time.go.html#line-292" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-292">#L292</a>: func deltimer(t *timer) <b>bool</b> {
+		<a href="../src/runtime/time.go.html#line-408" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-408">#L408</a>: func modtimer(t *timer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr) <b>bool</b> {
+		<a href="../src/runtime/time.go.html#line-415" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-415">#L415</a>: 	var pending <b>bool</b>
+		<a href="../src/runtime/time.go.html#line-528" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-528">#L528</a>: func resettimer(t *timer, when int64) <b>bool</b> {
+		<a href="../src/runtime/trace.go.html#line-111">trace.go#L111</a>: 	enabled       <b>bool</b>        // when set runtime traces events
+		<a href="../src/runtime/trace.go.html#line-112" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-112">#L112</a>: 	shutdown      <b>bool</b>        // set when we are waiting for trace reader to finish after setting enabled to false
+		<a href="../src/runtime/trace.go.html#line-113" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-113">#L113</a>: 	headerWritten <b>bool</b>        // whether ReadTrace has emitted trace header
+		<a href="../src/runtime/trace.go.html#line-114" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-114">#L114</a>: 	footerWritten <b>bool</b>        // whether ReadTrace has emitted trace footer
+		<a href="../src/runtime/traceback.go.html#line-50">traceback.go#L50</a>: func tracebackdefers(gp *g, callback func(*stkframe, unsafe.Pointer) <b>bool</b>, v unsafe.Pointer) {
+		<a href="../src/runtime/traceback.go.html#line-70" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-70">#L70</a>: 			var ok <b>bool</b>
+		<a href="../src/runtime/traceback.go.html#line-98" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-98">#L98</a>: func gentraceback(pc0, sp0, lr0 uintptr, gp *g, skip int, pcbuf *uintptr, max int, callback func(*stkframe, unsafe.Pointer) <b>bool</b>, v unsafe.Pointer, flags uint) int {
+		<a href="../src/runtime/traceback.go.html#line-298" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-298">#L298</a>: 			var ok <b>bool</b>
+		<a href="../src/runtime/traceback.go.html#line-578" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-578">#L578</a>: func getArgInfoFast(f funcInfo, needArgMap <b>bool</b>) (arglen uintptr, argmap *bitvector, ok <b>bool</b>) {
+		<a href="../src/runtime/traceback.go.html#line-590" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-590">#L590</a>: func getArgInfo(frame *stkframe, f funcInfo, needArgMap <b>bool</b>, ctxt *funcval) (arglen uintptr, argmap *bitvector) {
+		<a href="../src/runtime/traceback.go.html#line-599" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-599">#L599</a>: 			var retValid <b>bool</b>
+		<a href="../src/runtime/traceback.go.html#line-616" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-616">#L616</a>: 				retValid = *(*<b>bool</b>)(unsafe.Pointer(arg0 + 3*sys.PtrSize))
+		<a href="../src/runtime/traceback.go.html#line-636" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-636">#L636</a>: func tracebackCgoContext(pcbuf *uintptr, printing <b>bool</b>, ctxt uintptr, n, max int) int {
+		<a href="../src/runtime/traceback.go.html#line-815" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-815">#L815</a>: func showframe(f funcInfo, gp *g, firstFrame <b>bool</b>, funcID, childID funcID) <b>bool</b> {
+		<a href="../src/runtime/traceback.go.html#line-825" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-825">#L825</a>: func showfuncinfo(f funcInfo, firstFrame <b>bool</b>, funcID, childID funcID) <b>bool</b> {
+		<a href="../src/runtime/traceback.go.html#line-856" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-856">#L856</a>: func isExportedRuntime(name string) <b>bool</b> {
+		<a href="../src/runtime/traceback.go.html#line-863" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-863">#L863</a>: func elideWrapperCalling(id funcID) <b>bool</b> {
+		<a href="../src/runtime/traceback.go.html#line-998" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-998">#L998</a>: func topofstack(f funcInfo, g0 <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/traceback.go.html#line-1021" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1021">#L1021</a>: func isSystemGoroutine(gp *g, fixed <b>bool</b>) <b>bool</b> {
+		<a href="../src/runtime/type.go.html#line-41">type.go#L41</a>: 	equal func(unsafe.Pointer, unsafe.Pointer) <b>bool</b>
+		<a href="../src/runtime/type.go.html#line-331" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-331">#L331</a>: func (t *functype) dotdotdot() <b>bool</b> {
+		<a href="../src/runtime/type.go.html#line-380" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-380">#L380</a>: func (mt *maptype) indirectkey() <b>bool</b> { // store ptr to key instead of key itself
+		<a href="../src/runtime/type.go.html#line-383" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-383">#L383</a>: func (mt *maptype) indirectelem() <b>bool</b> { // store ptr to elem instead of elem itself
+		<a href="../src/runtime/type.go.html#line-386" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-386">#L386</a>: func (mt *maptype) reflexivekey() <b>bool</b> { // true if k==k for all keys
+		<a href="../src/runtime/type.go.html#line-389" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-389">#L389</a>: func (mt *maptype) needkeyupdate() <b>bool</b> { // true if we need to update key on an overwrite
+		<a href="../src/runtime/type.go.html#line-392" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-392">#L392</a>: func (mt *maptype) hashMightPanic() <b>bool</b> { // true if hash function might panic
+		<a href="../src/runtime/type.go.html#line-451" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-451">#L451</a>: func (n name) isExported() <b>bool</b> {
+		<a href="../src/runtime/type.go.html#line-507" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-507">#L507</a>: func (n name) isBlank() <b>bool</b> {
+		<a href="../src/runtime/type.go.html#line-588" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-588">#L588</a>: func typesEqual(t, v *_type, seen map[_typePair]struct{}) <b>bool</b> {
+		<a href="../src/runtime/typekind.go.html#line-41">typekind.go#L41</a>: func isDirectIface(t *_type) <b>bool</b> {
+		<a href="../src/runtime/vdso_linux.go.html#line-82">vdso_linux.go#L82</a>: 	valid <b>bool</b>
+		<a href="../src/runtime/vdso_linux.go.html#line-94" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-94">#L94</a>: 	isGNUHash  <b>bool</b>
+		<a href="../src/runtime/vdso_linux.go.html#line-111" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-111">#L111</a>: 	var foundVaddr <b>bool</b>
+		<a href="../src/runtime/vdso_linux.go.html#line-213" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-213">#L213</a>: 	apply := func(symIndex uint32, k vdsoSymbolKey) <b>bool</b> {
+		<a href="../src/runtime/vdso_linux.go.html#line-285" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-285">#L285</a>: func inVDSOPage(pc uintptr) <b>bool</b> {
+
+	<a href="../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>
+		<a href="../src/runtime/internal/atomic/atomic_amd64.go.html#line-71">atomic_amd64.go#L71</a>: func Cas64(ptr *uint64, old, new uint64) <b>bool</b>
+		<a href="../src/runtime/internal/atomic/atomic_amd64.go.html#line-74" class="path-duplicate">atomic_amd64.go</a><a href="../src/runtime/internal/atomic/atomic_amd64.go.html#line-74">#L74</a>: func CasRel(ptr *uint32, old, new uint32) <b>bool</b>
+		<a href="../src/runtime/internal/atomic/stubs.go.html#line-12">stubs.go#L12</a>: func Cas(ptr *uint32, old, new uint32) <b>bool</b>
+		<a href="../src/runtime/internal/atomic/stubs.go.html#line-15" class="path-duplicate">stubs.go</a><a href="../src/runtime/internal/atomic/stubs.go.html#line-15">#L15</a>: func Casp1(ptr *unsafe.Pointer, old, new unsafe.Pointer) <b>bool</b>
+		<a href="../src/runtime/internal/atomic/stubs.go.html#line-18" class="path-duplicate">stubs.go</a><a href="../src/runtime/internal/atomic/stubs.go.html#line-18">#L18</a>: func Casuintptr(ptr *uintptr, old, new uintptr) <b>bool</b>
+
+	<a href="../pkg/runtime/internal/math.html">runtime/internal/math</a>
+		<a href="../src/runtime/internal/math/math.go.html#line-13">math.go#L13</a>: func MulUintptr(a, b uintptr) (uintptr, <b>bool</b>) {
+
+	<a href="../pkg/sort.html">sort</a>
+		<a href="../src/sort/search.go.html#line-59">search.go#L59</a>: func Search(n int, f func(int) <b>bool</b>) int {
+		<a href="../src/sort/search.go.html#line-84" class="path-duplicate">search.go</a><a href="../src/sort/search.go.html#line-84">#L84</a>: 	return Search(len(a), func(i int) <b>bool</b> { return a[i] >= x })
+		<a href="../src/sort/search.go.html#line-93" class="path-duplicate">search.go</a><a href="../src/sort/search.go.html#line-93">#L93</a>: 	return Search(len(a), func(i int) <b>bool</b> { return a[i] >= x })
+		<a href="../src/sort/search.go.html#line-102" class="path-duplicate">search.go</a><a href="../src/sort/search.go.html#line-102">#L102</a>: 	return Search(len(a), func(i int) <b>bool</b> { return a[i] >= x })
+		<a href="../src/sort/slice.go.html#line-13">slice.go#L13</a>: func Slice(slice interface{}, less func(i, j int) <b>bool</b>) {
+		<a href="../src/sort/slice.go.html#line-24" class="path-duplicate">slice.go</a><a href="../src/sort/slice.go.html#line-24">#L24</a>: func SliceStable(slice interface{}, less func(i, j int) <b>bool</b>) {
+		<a href="../src/sort/slice.go.html#line-33" class="path-duplicate">slice.go</a><a href="../src/sort/slice.go.html#line-33">#L33</a>: func SliceIsSorted(slice interface{}, less func(i, j int) <b>bool</b>) <b>bool</b> {
+		<a href="../src/sort/sort.go.html#line-19">sort.go#L19</a>: 	Less(i, j int) <b>bool</b>
+		<a href="../src/sort/sort.go.html#line-235" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-235">#L235</a>: 	Less func(i, j int) <b>bool</b>
+		<a href="../src/sort/sort.go.html#line-246" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-246">#L246</a>: func (r reverse) Less(i, j int) <b>bool</b> {
+		<a href="../src/sort/sort.go.html#line-256" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-256">#L256</a>: func IsSorted(data Interface) <b>bool</b> {
+		<a href="../src/sort/sort.go.html#line-272" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-272">#L272</a>: func (p IntSlice) Less(i, j int) <b>bool</b> { return p[i] < p[j] }
+		<a href="../src/sort/sort.go.html#line-283" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-283">#L283</a>: func (p Float64Slice) Less(i, j int) <b>bool</b> { return p[i] < p[j] || isNaN(p[i]) && !isNaN(p[j]) }
+		<a href="../src/sort/sort.go.html#line-287" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-287">#L287</a>: func isNaN(f float64) <b>bool</b> {
+		<a href="../src/sort/sort.go.html#line-298" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-298">#L298</a>: func (p StringSlice) Less(i, j int) <b>bool</b> { return p[i] < p[j] }
+		<a href="../src/sort/sort.go.html#line-317" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-317">#L317</a>: func IntsAreSorted(a []int) <b>bool</b> { return IsSorted(IntSlice(a)) }
+		<a href="../src/sort/sort.go.html#line-321" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-321">#L321</a>: func Float64sAreSorted(a []float64) <b>bool</b> { return IsSorted(Float64Slice(a)) }
+		<a href="../src/sort/sort.go.html#line-324" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-324">#L324</a>: func StringsAreSorted(a []string) <b>bool</b> { return IsSorted(StringSlice(a)) }
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atob.go.html#line-10">atob.go#L10</a>: func ParseBool(str string) (<b>bool</b>, error) {
+		<a href="../src/strconv/atob.go.html#line-21" class="path-duplicate">atob.go</a><a href="../src/strconv/atob.go.html#line-21">#L21</a>: func FormatBool(b <b>bool</b>) string {
+		<a href="../src/strconv/atob.go.html#line-30" class="path-duplicate">atob.go</a><a href="../src/strconv/atob.go.html#line-30">#L30</a>: func AppendBool(dst []byte, b <b>bool</b>) []byte {
+		<a href="../src/strconv/atof.go.html#line-42">atof.go#L42</a>: func special(s string) (f float64, n int, ok <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-74" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-74">#L74</a>: func (b *decimal) set(s string) (ok <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-175" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-175">#L175</a>: func readFloat(s string) (mantissa uint64, exp int, neg, trunc, hex <b>bool</b>, i int, ok <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-314" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-314">#L314</a>: func (d *decimal) floatBits(flt *floatInfo) (b uint64, overflow <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-427" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-427">#L427</a>: func atof64exact(mantissa uint64, exp int, neg <b>bool</b>) (f float64, ok <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-461" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-461">#L461</a>: func atof32exact(mantissa uint64, exp int, neg <b>bool</b>) (f float32, ok <b>bool</b>) {
+		<a href="../src/strconv/atof.go.html#line-497" class="path-duplicate">atof.go</a><a href="../src/strconv/atof.go.html#line-497">#L497</a>: func atofHex(s string, flt *floatInfo, mantissa uint64, exp int, neg, trunc <b>bool</b>) (float64, error) {
+		<a href="../src/strconv/atoi.go.html#line-264">atoi.go#L264</a>: func underscoreOK(s string) <b>bool</b> {
+		<a href="../src/strconv/decimal.go.html#line-18">decimal.go#L18</a>: 	neg   <b>bool</b>      // negative flag
+		<a href="../src/strconv/decimal.go.html#line-19" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-19">#L19</a>: 	trunc <b>bool</b>      // discarded nonzero digits beyond d[:nd]
+		<a href="../src/strconv/decimal.go.html#line-256" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-256">#L256</a>: func prefixIsLessThan(b []byte, s string) <b>bool</b> {
+		<a href="../src/strconv/decimal.go.html#line-335" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-335">#L335</a>: func shouldRoundUp(a *decimal, nd int) <b>bool</b> {
+		<a href="../src/strconv/extfloat.go.html#line-18">extfloat.go#L18</a>: 	neg  <b>bool</b>
+		<a href="../src/strconv/extfloat.go.html#line-132" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-132">#L132</a>: func (f *extFloat) floatBits(flt *floatInfo) (bits uint64, overflow <b>bool</b>) {
+		<a href="../src/strconv/extfloat.go.html#line-180" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-180">#L180</a>: func (f *extFloat) AssignComputeBounds(mant uint64, exp int, neg <b>bool</b>, flt *floatInfo) (lower, upper extFloat) {
+		<a href="../src/strconv/extfloat.go.html#line-232" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-232">#L232</a>: func (f *extFloat) AssignDecimal(mantissa uint64, exp10 int, neg <b>bool</b>, trunc <b>bool</b>, flt *floatInfo) (ok <b>bool</b>) {
+		<a href="../src/strconv/extfloat.go.html#line-370" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-370">#L370</a>: func (f *extFloat) FixedDecimal(d *decimalSlice, n int) <b>bool</b> {
+		<a href="../src/strconv/extfloat.go.html#line-488" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-488">#L488</a>: func adjustLastDigitFixed(d *decimalSlice, num, den uint64, shift uint, ε uint64) <b>bool</b> {
+		<a href="../src/strconv/extfloat.go.html#line-524" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-524">#L524</a>: func (f *extFloat) ShortestDecimal(d *decimalSlice, lower, upper *extFloat) <b>bool</b> {
+		<a href="../src/strconv/extfloat.go.html#line-637" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-637">#L637</a>: func adjustLastDigit(d *decimalSlice, currentDiff, targetDiff, maxDiff, ulpDecimal, ulpBinary uint64) <b>bool</b> {
+		<a href="../src/strconv/ftoa.go.html#line-161">ftoa.go#L161</a>: func bigFtoa(dst []byte, prec int, fmt byte, neg <b>bool</b>, mant uint64, exp int, flt *floatInfo) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-197" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-197">#L197</a>: func formatDigits(dst []byte, shortest <b>bool</b>, neg <b>bool</b>, digs decimalSlice, prec int, fmt byte) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-374" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-374">#L374</a>: 	neg    <b>bool</b>
+		<a href="../src/strconv/ftoa.go.html#line-378" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-378">#L378</a>: func fmtE(dst []byte, neg <b>bool</b>, d decimalSlice, prec int, fmt byte) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-433" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-433">#L433</a>: func fmtF(dst []byte, neg <b>bool</b>, d decimalSlice, prec int) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-466" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-466">#L466</a>: func fmtB(dst []byte, neg <b>bool</b>, mant uint64, exp int, flt *floatInfo) []byte {
+		<a href="../src/strconv/ftoa.go.html#line-489" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-489">#L489</a>: func fmtX(dst []byte, prec int, fmt byte, neg <b>bool</b>, mant uint64, exp int, flt *floatInfo) []byte {
+		<a href="../src/strconv/itoa.go.html#line-89">itoa.go#L89</a>: func formatBits(dst []byte, u uint64, base int, neg, append_ <b>bool</b>) (d []byte, s string) {
+		<a href="../src/strconv/itoa.go.html#line-204" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-204">#L204</a>: func isPowerOfTwo(x int) <b>bool</b> {
+		<a href="../src/strconv/quote.go.html#line-19">quote.go#L19</a>: func quoteWith(s string, quote byte, ASCIIonly, graphicOnly <b>bool</b>) string {
+		<a href="../src/strconv/quote.go.html#line-23" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-23">#L23</a>: func quoteRuneWith(r rune, quote byte, ASCIIonly, graphicOnly <b>bool</b>) string {
+		<a href="../src/strconv/quote.go.html#line-27" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-27">#L27</a>: func appendQuotedWith(buf []byte, s string, quote byte, ASCIIonly, graphicOnly <b>bool</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-54" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-54">#L54</a>: func appendQuotedRuneWith(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly <b>bool</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-64" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-64">#L64</a>: func appendEscapedRune(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly <b>bool</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-205" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-205">#L205</a>: func CanBackquote(s string) <b>bool</b> {
+		<a href="../src/strconv/quote.go.html#line-225" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-225">#L225</a>: func unhex(b byte) (v rune, ok <b>bool</b>) {
+		<a href="../src/strconv/quote.go.html#line-252" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-252">#L252</a>: func UnquoteChar(s string, quote byte) (value rune, multibyte <b>bool</b>, tail string, err error) {
+		<a href="../src/strconv/quote.go.html#line-440" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-440">#L440</a>: func contains(s string, c byte) <b>bool</b> {
+		<a href="../src/strconv/quote.go.html#line-483" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-483">#L483</a>: func IsPrint(r rune) <b>bool</b> {
+		<a href="../src/strconv/quote.go.html#line-529" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-529">#L529</a>: func IsGraphic(r rune) <b>bool</b> {
+		<a href="../src/strconv/quote.go.html#line-539" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-539">#L539</a>: func isInGraphicList(r rune) <b>bool</b> {
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/replace.go.html#line-221">replace.go#L221</a>: func (r *genericReplacer) lookup(s string, ignoreRoot <b>bool</b>) (val string, keylen int, found <b>bool</b>) {
+		<a href="../src/strings/replace.go.html#line-339" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-339">#L339</a>: 	var prevMatchEmpty <b>bool</b>
+		<a href="../src/strings/strings.go.html#line-61">strings.go#L61</a>: func Contains(s, substr string) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-66" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-66">#L66</a>: func ContainsAny(s, chars string) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-71" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-71">#L71</a>: func ContainsRune(s string, r rune) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-375" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-375">#L375</a>: func FieldsFunc(s string, f func(rune) <b>bool</b>) []string {
+		<a href="../src/strings/strings.go.html#line-444" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-444">#L444</a>: func HasPrefix(s, prefix string) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-449" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-449">#L449</a>: func HasSuffix(s, suffix string) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-683" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-683">#L683</a>: func isSeparator(r rune) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-729" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-729">#L729</a>: func TrimLeftFunc(s string, f func(rune) <b>bool</b>) string {
+		<a href="../src/strings/strings.go.html#line-739" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-739">#L739</a>: func TrimRightFunc(s string, f func(rune) <b>bool</b>) string {
+		<a href="../src/strings/strings.go.html#line-752" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-752">#L752</a>: func TrimFunc(s string, f func(rune) <b>bool</b>) string {
+		<a href="../src/strings/strings.go.html#line-758" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-758">#L758</a>: func IndexFunc(s string, f func(rune) <b>bool</b>) int {
+		<a href="../src/strings/strings.go.html#line-764" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-764">#L764</a>: func LastIndexFunc(s string, f func(rune) <b>bool</b>) int {
+		<a href="../src/strings/strings.go.html#line-771" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-771">#L771</a>: func indexFunc(s string, f func(rune) <b>bool</b>, truth <b>bool</b>) int {
+		<a href="../src/strings/strings.go.html#line-783" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-783">#L783</a>: func lastIndexFunc(s string, f func(rune) <b>bool</b>, truth <b>bool</b>) int {
+		<a href="../src/strings/strings.go.html#line-804" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-804">#L804</a>: func makeASCIISet(chars string) (as asciiSet, ok <b>bool</b>) {
+		<a href="../src/strings/strings.go.html#line-816" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-816">#L816</a>: func (as *asciiSet) contains(c byte) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-820" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-820">#L820</a>: func makeCutsetFunc(cutset string) func(rune) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-822" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-822">#L822</a>: 		return func(r rune) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-827" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-827">#L827</a>: 		return func(r rune) <b>bool</b> {
+		<a href="../src/strings/strings.go.html#line-831" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-831">#L831</a>: 	return func(r rune) <b>bool</b> { return IndexRune(cutset, r) >= 0 }
+		<a href="../src/strings/strings.go.html#line-970" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-970">#L970</a>: func EqualFold(s, t string) <b>bool</b> {
+
+	<a href="../pkg/sync.html">sync</a>
+		<a href="../src/sync/map.go.html#line-65">map.go#L65</a>: 	amended <b>bool</b> // true if the dirty map contains some key not in m.
+		<a href="../src/sync/map.go.html#line-102" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-102">#L102</a>: func (m *Map) Load(key interface{}) (value interface{}, ok <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-127" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-127">#L127</a>: func (e *entry) load() (value interface{}, ok <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-169" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-169">#L169</a>: func (e *entry) tryStore(i *interface{}) <b>bool</b> {
+		<a href="../src/sync/map.go.html#line-185" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-185">#L185</a>: func (e *entry) unexpungeLocked() (wasExpunged <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-199" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-199">#L199</a>: func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-239" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-239">#L239</a>: func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-268" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-268">#L268</a>: func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-296" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-296">#L296</a>: func (e *entry) delete() (value interface{}, ok <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-318" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-318">#L318</a>: func (m *Map) Range(f func(key, value interface{}) <b>bool</b>) {
+		<a href="../src/sync/map.go.html#line-375" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-375">#L375</a>: func (e *entry) tryExpungeLocked() (isExpunged <b>bool</b>) {
+		<a href="../src/sync/poolqueue.go.html#line-80">poolqueue.go#L80</a>: func (d *poolDequeue) pushHead(val interface{}) <b>bool</b> {
+		<a href="../src/sync/poolqueue.go.html#line-112" class="path-duplicate">poolqueue.go</a><a href="../src/sync/poolqueue.go.html#line-112">#L112</a>: func (d *poolDequeue) popHead() (interface{}, <b>bool</b>) {
+		<a href="../src/sync/poolqueue.go.html#line-147" class="path-duplicate">poolqueue.go</a><a href="../src/sync/poolqueue.go.html#line-147">#L147</a>: func (d *poolDequeue) popTail() (interface{}, <b>bool</b>) {
+		<a href="../src/sync/poolqueue.go.html#line-258" class="path-duplicate">poolqueue.go</a><a href="../src/sync/poolqueue.go.html#line-258">#L258</a>: func (c *poolChain) popHead() (interface{}, <b>bool</b>) {
+		<a href="../src/sync/poolqueue.go.html#line-271" class="path-duplicate">poolqueue.go</a><a href="../src/sync/poolqueue.go.html#line-271">#L271</a>: func (c *poolChain) popTail() (interface{}, <b>bool</b>) {
+		<a href="../src/sync/runtime.go.html#line-20">runtime.go#L20</a>: func runtime_SemacquireMutex(s *uint32, lifo <b>bool</b>, skipframes int)
+		<a href="../src/sync/runtime.go.html#line-29" class="path-duplicate">runtime.go</a><a href="../src/sync/runtime.go.html#line-29">#L29</a>: func runtime_Semrelease(s *uint32, handoff <b>bool</b>, skipframes int)
+		<a href="../src/sync/runtime.go.html#line-52" class="path-duplicate">runtime.go</a><a href="../src/sync/runtime.go.html#line-52">#L52</a>: func runtime_canSpin(i int) <b>bool</b>
+
+	<a href="../pkg/sync/atomic.html">sync/atomic</a>
+		<a href="../src/sync/atomic/doc.go.html#line-75">doc.go#L75</a>: func CompareAndSwapInt32(addr *int32, old, new int32) (swapped <b>bool</b>)
+		<a href="../src/sync/atomic/doc.go.html#line-78" class="path-duplicate">doc.go</a><a href="../src/sync/atomic/doc.go.html#line-78">#L78</a>: func CompareAndSwapInt64(addr *int64, old, new int64) (swapped <b>bool</b>)
+		<a href="../src/sync/atomic/doc.go.html#line-81" class="path-duplicate">doc.go</a><a href="../src/sync/atomic/doc.go.html#line-81">#L81</a>: func CompareAndSwapUint32(addr *uint32, old, new uint32) (swapped <b>bool</b>)
+		<a href="../src/sync/atomic/doc.go.html#line-84" class="path-duplicate">doc.go</a><a href="../src/sync/atomic/doc.go.html#line-84">#L84</a>: func CompareAndSwapUint64(addr *uint64, old, new uint64) (swapped <b>bool</b>)
+		<a href="../src/sync/atomic/doc.go.html#line-87" class="path-duplicate">doc.go</a><a href="../src/sync/atomic/doc.go.html#line-87">#L87</a>: func CompareAndSwapUintptr(addr *uintptr, old, new uintptr) (swapped <b>bool</b>)
+		<a href="../src/sync/atomic/doc.go.html#line-90" class="path-duplicate">doc.go</a><a href="../src/sync/atomic/doc.go.html#line-90">#L90</a>: func CompareAndSwapPointer(addr *unsafe.Pointer, old, new unsafe.Pointer) (swapped <b>bool</b>)
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/dirent.go.html#line-12">dirent.go#L12</a>: func readInt(b []byte, off, size uintptr) (u uint64, ok <b>bool</b>) {
+		<a href="../src/syscall/env_unix.go.html#line-74">env_unix.go#L74</a>: func Getenv(key string) (value string, found <b>bool</b>) {
+		<a href="../src/syscall/exec_linux.go.html#line-28">exec_linux.go#L28</a>: 	Ptrace <b>bool</b>
+		<a href="../src/syscall/exec_linux.go.html#line-29" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-29">#L29</a>: 	Setsid <b>bool</b> // Create session.
+		<a href="../src/syscall/exec_linux.go.html#line-32" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-32">#L32</a>: 	Setpgid <b>bool</b>
+		<a href="../src/syscall/exec_linux.go.html#line-37" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-37">#L37</a>: 	Setctty <b>bool</b>
+		<a href="../src/syscall/exec_linux.go.html#line-38" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-38">#L38</a>: 	Noctty  <b>bool</b> // Detach fd 0 from controlling terminal
+		<a href="../src/syscall/exec_linux.go.html#line-45" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-45">#L45</a>: 	Foreground   <b>bool</b>
+		<a href="../src/syscall/exec_linux.go.html#line-56" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-56">#L56</a>: 	GidMappingsEnableSetgroups <b>bool</b>
+		<a href="../src/syscall/exec_linux.go.html#line-144" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-144">#L144</a>: func forkAndExecInChild1(argv0 *byte, argv, envv []*byte, chroot, dir *byte, attr *ProcAttr, sys *SysProcAttr, pipe int) (r1 uintptr, err1 Errno, p [2]int, locked <b>bool</b>) {
+		<a href="../src/syscall/exec_linux.go.html#line-600" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-600">#L600</a>: func writeSetgroups(pid int, enable <b>bool</b>) error {
+		<a href="../src/syscall/exec_unix.go.html#line-106">exec_unix.go#L106</a>: func SetNonblock(fd int, nonblocking <b>bool</b>) (err error) {
+		<a href="../src/syscall/exec_unix.go.html#line-126" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-126">#L126</a>: 	NoSetGroups <b>bool</b>     // If true, don't set supplementary groups
+		<a href="../src/syscall/lsf_linux.go.html#line-50">lsf_linux.go#L50</a>: func SetLsfPromisc(name string, m <b>bool</b>) error {
+		<a href="../src/syscall/net.go.html#line-23">net.go#L23</a>: 	Read(f func(fd uintptr) (done <b>bool</b>)) error
+		<a href="../src/syscall/net.go.html#line-26" class="path-duplicate">net.go</a><a href="../src/syscall/net.go.html#line-26">#L26</a>: 	Write(f func(fd uintptr) (done <b>bool</b>)) error
+		<a href="../src/syscall/syscall_linux.go.html#line-38">syscall_linux.go#L38</a>: func isGroupMember(gid int) <b>bool</b> {
+		<a href="../src/syscall/syscall_linux.go.html#line-305" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-305">#L305</a>: func (w WaitStatus) Exited() <b>bool</b> { return w&mask == exited }
+		<a href="../src/syscall/syscall_linux.go.html#line-307" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-307">#L307</a>: func (w WaitStatus) Signaled() <b>bool</b> { return w&mask != stopped && w&mask != exited }
+		<a href="../src/syscall/syscall_linux.go.html#line-309" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-309">#L309</a>: func (w WaitStatus) Stopped() <b>bool</b> { return w&0xFF == stopped }
+		<a href="../src/syscall/syscall_linux.go.html#line-311" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-311">#L311</a>: func (w WaitStatus) Continued() <b>bool</b> { return w == 0xFFFF }
+		<a href="../src/syscall/syscall_linux.go.html#line-313" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-313">#L313</a>: func (w WaitStatus) CoreDump() <b>bool</b> { return w.Signaled() && w&core != 0 }
+		<a href="../src/syscall/syscall_linux.go.html#line-872" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-872">#L872</a>: func direntIno(buf []byte) (uint64, <b>bool</b>) {
+		<a href="../src/syscall/syscall_linux.go.html#line-876" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-876">#L876</a>: func direntReclen(buf []byte) (uint64, <b>bool</b>) {
+		<a href="../src/syscall/syscall_linux.go.html#line-880" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-880">#L880</a>: func direntNamlen(buf []byte) (uint64, <b>bool</b>) {
+		<a href="../src/syscall/syscall_unix.go.html#line-126">syscall_unix.go#L126</a>: func (e Errno) Is(target error) <b>bool</b> {
+		<a href="../src/syscall/syscall_unix.go.html#line-138" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-138">#L138</a>: func (e Errno) Temporary() <b>bool</b> {
+		<a href="../src/syscall/syscall_unix.go.html#line-142" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-142">#L142</a>: func (e Errno) Timeout() <b>bool</b> {
+		<a href="../src/syscall/syscall_unix.go.html#line-225" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-225">#L225</a>: var SocketDisableIPv6 <b>bool</b>
+
+	<a href="../pkg/time.html">time</a>
+		<a href="../src/time/format.go.html#line-141">format.go#L141</a>: func startsWithLowerCase(str string) <b>bool</b> {
+		<a href="../src/time/format.go.html#line-338" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-338">#L338</a>: func match(s1, s2 string) <b>bool</b> {
+		<a href="../src/time/format.go.html#line-416" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-416">#L416</a>: func formatNano(b []byte, nanosec uint, n int, trim <b>bool</b>) []byte {
+		<a href="../src/time/format.go.html#line-707" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-707">#L707</a>: func isDigit(s string, i int) <b>bool</b> {
+		<a href="../src/time/format.go.html#line-718" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-718">#L718</a>: func getnum(s string, fixed <b>bool</b>) (int, string, error) {
+		<a href="../src/time/format.go.html#line-734" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-734">#L734</a>: func getnum3(s string, fixed <b>bool</b>) (int, string, error) {
+		<a href="../src/time/format.go.html#line-1200" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1200">#L1200</a>: func parseTimeZone(value string) (length int, ok <b>bool</b>) {
+		<a href="../src/time/sleep.go.html#line-40">sleep.go#L40</a>: func stopTimer(*runtimeTimer) <b>bool</b>
+		<a href="../src/time/sleep.go.html#line-41" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-41">#L41</a>: func resetTimer(*runtimeTimer, int64) <b>bool</b>
+		<a href="../src/time/sleep.go.html#line-75" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-75">#L75</a>: func (t *Timer) Stop() <b>bool</b> {
+		<a href="../src/time/sleep.go.html#line-121" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-121">#L121</a>: func (t *Timer) Reset(d Duration) <b>bool</b> {
+		<a href="../src/time/time.go.html#line-241">time.go#L241</a>: func (t Time) After(u Time) <b>bool</b> {
+		<a href="../src/time/time.go.html#line-251" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-251">#L251</a>: func (t Time) Before(u Time) <b>bool</b> {
+		<a href="../src/time/time.go.html#line-265" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-265">#L265</a>: func (t Time) Equal(u Time) <b>bool</b> {
+		<a href="../src/time/time.go.html#line-426" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-426">#L426</a>: func (t Time) IsZero() <b>bool</b> {
+		<a href="../src/time/time.go.html#line-778" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-778">#L778</a>: func lessThanHalf(x, y Duration) <b>bool</b> {
+		<a href="../src/time/time.go.html#line-918" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-918">#L918</a>: func (t Time) date(full <b>bool</b>) (year int, month Month, day int, yday int) {
+		<a href="../src/time/time.go.html#line-923" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-923">#L923</a>: func absDate(abs uint64, full <b>bool</b>) (year int, month Month, day int, yday int) {
+		<a href="../src/time/time.go.html#line-1305" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1305">#L1305</a>: func isLeap(year int) <b>bool</b> {
+		<a href="../src/time/zoneinfo.go.html#line-49">zoneinfo.go#L49</a>: 	isDST  <b>bool</b>   // is this zone Daylight Savings Time?
+		<a href="../src/time/zoneinfo.go.html#line-56" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-56">#L56</a>: 	isstd, isutc <b>bool</b>  // ignored - no idea what these mean
+		<a href="../src/time/zoneinfo.go.html#line-232" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-232">#L232</a>: func (l *Location) firstZoneUsed() <b>bool</b> {
+		<a href="../src/time/zoneinfo.go.html#line-247" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-247">#L247</a>: func tzset(s string, initEnd, sec int64) (name string, offset int, start, end int64, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-337" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-337">#L337</a>: func tzsetName(s string) (string, string, <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-368" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-368">#L368</a>: func tzsetOffset(s string) (offset int, rest string, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-439" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-439">#L439</a>: func tzsetRule(s string) (rule, string, <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-501" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-501">#L501</a>: func tzsetNum(s string, min, max int) (num int, rest string, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-576" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-576">#L576</a>: func (l *Location) lookupName(name string, unix int64) (offset int, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo.go.html#line-665" class="path-duplicate">zoneinfo.go</a><a href="../src/time/zoneinfo.go.html#line-665">#L665</a>: func containsDotDot(s string) <b>bool</b> {
+		<a href="../src/time/zoneinfo_read.go.html#line-51">zoneinfo_read.go#L51</a>: 	error <b>bool</b>
+		<a href="../src/time/zoneinfo_read.go.html#line-65" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-65">#L65</a>: func (d *dataIO) big4() (n uint32, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo_read.go.html#line-74" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-74">#L74</a>: func (d *dataIO) big8() (n uint64, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo_read.go.html#line-84" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-84">#L84</a>: func (d *dataIO) byte() (n byte, ok <b>bool</b>) {
+		<a href="../src/time/zoneinfo_read.go.html#line-252" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-252">#L252</a>: 		var ok <b>bool</b>
+
+	<a href="../pkg/unicode.html">unicode</a>
+		<a href="../src/unicode/digit.go.html#line-8">digit.go#L8</a>: func IsDigit(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-36">graphic.go#L36</a>: func IsGraphic(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-50" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-50">#L50</a>: func IsPrint(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-59" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-59">#L59</a>: func IsOneOf(ranges []*RangeTable, r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-69" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-69">#L69</a>: func In(r rune, ranges ...*RangeTable) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-81" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-81">#L81</a>: func IsControl(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-90" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-90">#L90</a>: func IsLetter(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-98" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-98">#L98</a>: func IsMark(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-104" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-104">#L104</a>: func IsNumber(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-113" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-113">#L113</a>: func IsPunct(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-126" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-126">#L126</a>: func IsSpace(r rune) <b>bool</b> {
+		<a href="../src/unicode/graphic.go.html#line-139" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-139">#L139</a>: func IsSymbol(r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-89">letter.go#L89</a>: func is16(ranges []Range16, r uint16) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-122" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-122">#L122</a>: func is32(ranges []Range32, r uint32) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-155" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-155">#L155</a>: func Is(rangeTab *RangeTable, r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-167" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-167">#L167</a>: func isExcludingLatin(rangeTab *RangeTable, r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-180" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-180">#L180</a>: func IsUpper(r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-189" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-189">#L189</a>: func IsLower(r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-198" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-198">#L198</a>: func IsTitle(r rune) <b>bool</b> {
+		<a href="../src/unicode/letter.go.html#line-207" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-207">#L207</a>: func to(_case int, r rune, caseRange []CaseRange) (mappedRune rune, foundMapping <b>bool</b>) {
+
+	<a href="../pkg/unicode/utf8.html">unicode/utf8</a>
+		<a href="../src/unicode/utf8/utf8.go.html#line-104">utf8.go#L104</a>: func FullRune(p []byte) <b>bool</b> {
+		<a href="../src/unicode/utf8/utf8.go.html#line-124" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-124">#L124</a>: func FullRuneInString(s string) <b>bool</b> {
+		<a href="../src/unicode/utf8/utf8.go.html#line-447" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-447">#L447</a>: func RuneStart(b byte) <b>bool</b> { return b&0xC0 != 0x80 }
+		<a href="../src/unicode/utf8/utf8.go.html#line-450" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-450">#L450</a>: func Valid(p []byte) <b>bool</b> {
+		<a href="../src/unicode/utf8/utf8.go.html#line-496" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-496">#L496</a>: func ValidString(s string) <b>bool</b> {
+		<a href="../src/unicode/utf8/utf8.go.html#line-543" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-543">#L543</a>: func ValidRune(r rune) <b>bool</b> {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

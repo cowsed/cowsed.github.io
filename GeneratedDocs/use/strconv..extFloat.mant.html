@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: strconv.extFloat.mant</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/strconv.html">strconv</a>.<a href="../src/strconv/extfloat.go.html#line-15">extFloat</a>.<a href="../src/strconv/extfloat.go.html#line-16">mant</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+36 uses:
+
+	strconv <i>(current package)</i>
+		<a href="../src/strconv/extfloat.go.html#line-16">extfloat.go#L16</a>: 	<b>mant</b> uint64
+		<a href="../src/strconv/extfloat.go.html#line-140" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-140">#L140</a>: 		f.<b>mant</b> >>= uint(n)
+		<a href="../src/strconv/extfloat.go.html#line-145" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-145">#L145</a>: 	mant := f.<b>mant</b> >> (63 - flt.mantbits)
+		<a href="../src/strconv/extfloat.go.html#line-146" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-146">#L146</a>: 	if f.<b>mant</b>&(1<<(62-flt.mantbits)) != 0 {
+		<a href="../src/strconv/extfloat.go.html#line-181" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-181">#L181</a>: 	f.<b>mant</b> = mant
+		<a href="../src/strconv/extfloat.go.html#line-186" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-186">#L186</a>: 		f.<b>mant</b> >>= uint(-f.exp)
+		<a href="../src/strconv/extfloat.go.html#line-192" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-192">#L192</a>: 	upper = extFloat{<b>mant</b>: 2*f.<b>mant</b> + 1, exp: f.exp - 1, neg: f.neg}
+		<a href="../src/strconv/extfloat.go.html#line-194" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-194">#L194</a>: 		lower = extFloat{<b>mant</b>: 2*f.<b>mant</b> - 1, exp: f.exp - 1, neg: f.neg}
+		<a href="../src/strconv/extfloat.go.html#line-196" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-196">#L196</a>: 		lower = extFloat{<b>mant</b>: 4*f.<b>mant</b> - 1, exp: f.exp - 2, neg: f.neg}
+		<a href="../src/strconv/extfloat.go.html#line-205" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-205">#L205</a>: 	if f.<b>mant</b> == 0 {
+		<a href="../src/strconv/extfloat.go.html#line-208" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-208">#L208</a>: 	shift := bits.LeadingZeros64(f.<b>mant</b>)
+		<a href="../src/strconv/extfloat.go.html#line-209" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-209">#L209</a>: 	f.<b>mant</b> <<= uint(shift)
+		<a href="../src/strconv/extfloat.go.html#line-217" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-217">#L217</a>: 	hi, lo := bits.Mul64(f.<b>mant</b>, g.<b>mant</b>)
+		<a href="../src/strconv/extfloat.go.html#line-219" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-219">#L219</a>: 	f.<b>mant</b> = hi + (lo >> 63)
+		<a href="../src/strconv/extfloat.go.html#line-263" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-263">#L263</a>: 	f.<b>mant</b> = mantissa
+		<a href="../src/strconv/extfloat.go.html#line-277" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-277">#L277</a>: 		f.<b>mant</b> *= uint64pow10[adjExp]
+		<a href="../src/strconv/extfloat.go.html#line-312" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-312">#L312</a>: 	mant_extra := f.<b>mant</b> & (1<<extrabits - 1)
+		<a href="../src/strconv/extfloat.go.html#line-371" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-371">#L371</a>: 	if f.<b>mant</b> == 0 {
+		<a href="../src/strconv/extfloat.go.html#line-386" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-386">#L386</a>: 	integer := uint32(f.<b>mant</b> >> shift)
+		<a href="../src/strconv/extfloat.go.html#line-387" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-387">#L387</a>: 	fraction := f.<b>mant</b> - (uint64(integer) << shift)
+		<a href="../src/strconv/extfloat.go.html#line-525" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-525">#L525</a>: 	if f.<b>mant</b> == 0 {
+		<a href="../src/strconv/extfloat.go.html#line-535" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-535">#L535</a>: 		for v := f.<b>mant</b>; v > 0; {
+		<a href="../src/strconv/extfloat.go.html#line-559" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-559">#L559</a>: 		f.<b>mant</b> <<= uint(f.exp - upper.exp)
+		<a href="../src/strconv/extfloat.go.html#line-563" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-563">#L563</a>: 		lower.<b>mant</b> <<= uint(lower.exp - upper.exp)
+		<a href="../src/strconv/extfloat.go.html#line-569" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-569">#L569</a>: 	upper.<b>mant</b>++
+		<a href="../src/strconv/extfloat.go.html#line-570" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-570">#L570</a>: 	lower.<b>mant</b>--
+		<a href="../src/strconv/extfloat.go.html#line-575" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-575">#L575</a>: 	integer := uint32(upper.<b>mant</b> >> shift)
+		<a href="../src/strconv/extfloat.go.html#line-576" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-576">#L576</a>: 	fraction := upper.<b>mant</b> - (uint64(integer) << shift)
+		<a href="../src/strconv/extfloat.go.html#line-579" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-579">#L579</a>: 	allowance := upper.<b>mant</b> - lower.<b>mant</b>
+		<a href="../src/strconv/extfloat.go.html#line-581" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-581">#L581</a>: 	targetDiff := upper.<b>mant</b> - f.<b>mant</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

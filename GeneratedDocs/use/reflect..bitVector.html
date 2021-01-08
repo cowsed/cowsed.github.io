@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.bitVector</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-3072">bitVector</a></b></span>
+
+9 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/makefunc.go.html#line-20">makefunc.go#L20</a>: 	stack  *<b>bitVector</b> // ptrmap for both args and results
+		<a href="../src/reflect/makefunc.go.html#line-82" class="path-duplicate">makefunc.go</a><a href="../src/reflect/makefunc.go.html#line-82">#L82</a>: 	stack  *<b>bitVector</b> // ptrmap for both args and results
+		<a href="../src/reflect/type.go.html#line-2725">type.go#L2725</a>: 		bv := new(<b>bitVector</b>)
+		<a href="../src/reflect/type.go.html#line-2979" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2979">#L2979</a>: 	stack     *<b>bitVector</b>
+		<a href="../src/reflect/type.go.html#line-2991" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2991">#L2991</a>: func funcLayout(t *funcType, rcvr *rtype) (frametype *rtype, argSize, retOffset uintptr, stk *<b>bitVector</b>, framePool *sync.Pool) {
+		<a href="../src/reflect/type.go.html#line-3005" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3005">#L3005</a>: 	ptrmap := new(<b>bitVector</b>)
+		<a href="../src/reflect/type.go.html#line-3072" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3072">#L3072</a>: type <b>bitVector</b> struct {
+		<a href="../src/reflect/type.go.html#line-3078" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3078">#L3078</a>: func (bv *<b>bitVector</b>) append(bit uint8) {
+		<a href="../src/reflect/type.go.html#line-3086" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3086">#L3086</a>: func addTypeBits(bv *<b>bitVector</b>, offset uintptr, t *rtype) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

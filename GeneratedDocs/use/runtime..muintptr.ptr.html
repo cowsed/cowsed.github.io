@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.muintptr.ptr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-297">muintptr</a>.<a href="../src/runtime/runtime2.go.html#line-300">ptr</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+20 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/debugcall.go.html#line-142">debugcall.go#L142</a>: 			if mp != gp.lockedm.<b>ptr</b>() {
+		<a href="../src/runtime/mgc.go.html#line-1896">mgc.go#L1896</a>: 			releasem(park.m.<b>ptr</b>())
+		<a href="../src/runtime/mgc.go.html#line-2016" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2016">#L2016</a>: 			releasem(park.m.<b>ptr</b>())
+		<a href="../src/runtime/proc.go.html#line-1077">proc.go#L1077</a>: 			mp := p.m.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-1554" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1554">#L1554</a>: 	unlockextra(mp.schedlink.<b>ptr</b>())
+		<a href="../src/runtime/proc.go.html#line-1882" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1882">#L1882</a>: 			newm := newmHandoff.newm.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-1886" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1886">#L1886</a>: 				next := newm.schedlink.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-2069" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2069">#L2069</a>: 	if _g_.m.lockedg == 0 || _g_.m.lockedg.ptr().lockedm.<b>ptr</b>() != _g_.m {
+		<a href="../src/runtime/proc.go.html#line-2097" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2097">#L2097</a>: 	mp := gp.lockedm.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-2806" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2806">#L2806</a>: 	mp := p2.m.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-4483" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4483">#L4483</a>: 			id = _p_.m.<b>ptr</b>().id
+		<a href="../src/runtime/proc.go.html#line-4501" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4501">#L4501</a>: 	if _p_.m.<b>ptr</b>() != _g_.m || _p_.status != _Prunning {
+		<a href="../src/runtime/proc.go.html#line-4865" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4865">#L4865</a>: 	mp := _p_.m.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-4908" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4908">#L4908</a>: 		mp := _p_.m.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-4959" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4959">#L4959</a>: 		lockedm := gp.lockedm.<b>ptr</b>()
+		<a href="../src/runtime/proc.go.html#line-5024" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5024">#L5024</a>: 	mp := sched.midle.<b>ptr</b>()
+		<a href="../src/runtime/runtime2.go.html#line-300">runtime2.go#L300</a>: func (mp muintptr) <b>ptr</b>() *m { return (*m)(unsafe.Pointer(mp)) }
+		<a href="../src/runtime/rwmutex.go.html#line-71">rwmutex.go#L71</a>: 			w := rw.writer.<b>ptr</b>()
+		<a href="../src/runtime/rwmutex.go.html#line-112" class="path-duplicate">rwmutex.go</a><a href="../src/runtime/rwmutex.go.html#line-112">#L112</a>: 	for rw.readers.<b>ptr</b>() != nil {
+		<a href="../src/runtime/rwmutex.go.html#line-113" class="path-duplicate">rwmutex.go</a><a href="../src/runtime/rwmutex.go.html#line-113">#L113</a>: 		reader := rw.readers.<b>ptr</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

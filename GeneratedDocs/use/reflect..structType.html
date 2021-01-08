@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.structType</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-435">structType</a></b></span>
+
+28 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-435">type.go#L435</a>: type <b>structType</b> struct {
+		<a href="../src/reflect/type.go.html#line-920" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-920">#L920</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-928" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-928">#L928</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-936" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-936">#L936</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-944" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-944">#L944</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-976" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-976">#L976</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-1184" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1184">#L1184</a>: func (t *<b>structType</b>) Field(i int) (f StructField) {
+		<a href="../src/reflect/type.go.html#line-1215" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1215">#L1215</a>: func (t *<b>structType</b>) FieldByIndex(index []int) (f StructField) {
+		<a href="../src/reflect/type.go.html#line-1232" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1232">#L1232</a>: 	typ   *<b>structType</b>
+		<a href="../src/reflect/type.go.html#line-1238" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1238">#L1238</a>: func (t *<b>structType</b>) FieldByNameFunc(match func(string) bool) (result StructField, ok bool) {
+		<a href="../src/reflect/type.go.html#line-1256" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1256">#L1256</a>: 	var nextCount map[*<b>structType</b>]int
+		<a href="../src/reflect/type.go.html#line-1263" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1263">#L1263</a>: 	visited := map[*<b>structType</b>]bool{}
+		<a href="../src/reflect/type.go.html#line-1317" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1317">#L1317</a>: 				styp := (*<b>structType</b>)(unsafe.Pointer(ntyp))
+		<a href="../src/reflect/type.go.html#line-1323" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1323">#L1323</a>: 					nextCount = map[*<b>structType</b>]int{}
+		<a href="../src/reflect/type.go.html#line-1344" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1344">#L1344</a>: func (t *<b>structType</b>) FieldByName(name string) (f StructField, present bool) {
+		<a href="../src/reflect/type.go.html#line-1654" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1654">#L1654</a>: 		t := (*<b>structType</b>)(unsafe.Pointer(T))
+		<a href="../src/reflect/type.go.html#line-1655" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1655">#L1655</a>: 		v := (*<b>structType</b>)(unsafe.Pointer(V))
+		<a href="../src/reflect/type.go.html#line-2091" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2091">#L2091</a>: 		tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-2118" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2118">#L2118</a>: 		tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-2140" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2140">#L2140</a>: 		tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-2582" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2582">#L2582</a>: 	var typ *<b>structType</b>
+		<a href="../src/reflect/type.go.html#line-2596" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2596">#L2596</a>: 			{Name: "S", Type: TypeOf(<b>structType</b>{})},
+		<a href="../src/reflect/type.go.html#line-2601" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2601">#L2601</a>: 		typ = (*<b>structType</b>)(unsafe.Pointer(tt.Elem().Field(0).UnsafeAddr()))
+		<a href="../src/reflect/type.go.html#line-2626" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2626">#L2626</a>: 	prototype := *(**<b>structType</b>)(unsafe.Pointer(&istruct))
+		<a href="../src/reflect/type.go.html#line-2794" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2794">#L2794</a>: 		st := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/type.go.html#line-3116" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3116">#L3116</a>: 		tt := (*<b>structType</b>)(unsafe.Pointer(t))
+		<a href="../src/reflect/value.go.html#line-852">value.go#L852</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(v.typ))
+		<a href="../src/reflect/value.go.html#line-1370" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1370">#L1370</a>: 	tt := (*<b>structType</b>)(unsafe.Pointer(v.typ))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

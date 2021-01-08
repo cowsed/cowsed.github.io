@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mheap.scavengeGoal</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-66">mheap</a>.<a href="../src/runtime/mheap.go.html#line-132">scavengeGoal</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+7 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgcscavenge.go.html#line-122">mgcscavenge.go#L122</a>: 		mheap_.<b>scavengeGoal</b> = ^uint64(0)
+		<a href="../src/runtime/mgcscavenge.go.html#line-154" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-154">#L154</a>: 		mheap_.<b>scavengeGoal</b> = ^uint64(0)
+		<a href="../src/runtime/mgcscavenge.go.html#line-157" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-157">#L157</a>: 	mheap_.<b>scavengeGoal</b> = retainedGoal
+		<a href="../src/runtime/mgcscavenge.go.html#line-296" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-296">#L296</a>: 			retained, goal := heapRetained(), mheap_.<b>scavengeGoal</b>
+		<a href="../src/runtime/mheap.go.html#line-132">mheap.go#L132</a>: 	<b>scavengeGoal</b> uint64
+		<a href="../src/runtime/mheap.go.html#line-1393" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1393">#L1393</a>: 	if retained := heapRetained(); retained+uint64(totalGrowth) &gt; h.<b>scavengeGoal</b> {
+		<a href="../src/runtime/mheap.go.html#line-1395" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1395">#L1395</a>: 		if overage := uintptr(retained + uint64(totalGrowth) - h.<b>scavengeGoal</b>); todo > overage {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

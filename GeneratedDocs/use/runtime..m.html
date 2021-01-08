@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.m</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-488">m</a></b></span>
+
+42 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/debug.go.html#line-50">debug.go#L50</a>: 	for mp := (*<b>m</b>)(atomic.Loadp(unsafe.Pointer(&allm))); mp != nil; mp = mp.alllink {
+		<a href="../src/runtime/malloc.go.html#line-1225">malloc.go#L1225</a>: func profilealloc(mp *<b>m</b>, x unsafe.Pointer, size uintptr) {
+		<a href="../src/runtime/mprof.go.html#line-699">mprof.go#L699</a>: 	first := (*<b>m</b>)(atomic.Loadp(unsafe.Pointer(&allm)))
+		<a href="../src/runtime/os_linux.go.html#line-140">os_linux.go#L140</a>: func newosproc(mp *<b>m</b>) {
+		<a href="../src/runtime/os_linux.go.html#line-339" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-339">#L339</a>: func mpreinit(mp *<b>m</b>) {
+		<a href="../src/runtime/os_linux.go.html#line-496" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-496">#L496</a>: func signalM(mp *<b>m</b>, sig int) {
+		<a href="../src/runtime/preempt.go.html#line-124">preempt.go#L124</a>: 	var asyncM *<b>m</b>
+		<a href="../src/runtime/preempt.go.html#line-292" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-292">#L292</a>: func canPreemptM(mp *<b>m</b>) bool {
+		<a href="../src/runtime/preempt_nonwindows.go.html#line-10">preempt_nonwindows.go#L10</a>: func osPreemptExtEnter(mp *<b>m</b>) {}
+		<a href="../src/runtime/preempt_nonwindows.go.html#line-13" class="path-duplicate">preempt_nonwindows.go</a><a href="../src/runtime/preempt_nonwindows.go.html#line-13">#L13</a>: func osPreemptExtExit(mp *<b>m</b>) {}
+		<a href="../src/runtime/proc.go.html#line-83">proc.go#L83</a>: 	m0           <b>m</b>
+		<a href="../src/runtime/proc.go.html#line-641" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-641">#L641</a>: func mcommoninit(mp *<b>m</b>, id int64) {
+		<a href="../src/runtime/proc.go.html#line-1445" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1445">#L1445</a>: func allocm(_p_ *p, fn func(), id int64) *<b>m</b> {
+		<a href="../src/runtime/proc.go.html#line-1456" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1456">#L1456</a>: 		var newList *<b>m</b>
+		<a href="../src/runtime/proc.go.html#line-1472" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1472">#L1472</a>: 	mp := new(<b>m</b>)
+		<a href="../src/runtime/proc.go.html#line-1722" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1722">#L1722</a>: func lockextra(nilokay bool) *<b>m</b> {
+		<a href="../src/runtime/proc.go.html#line-1744" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1744">#L1744</a>: 			return (*<b>m</b>)(unsafe.Pointer(old))
+		<a href="../src/runtime/proc.go.html#line-1752" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1752">#L1752</a>: func unlockextra(mp *<b>m</b>) {
+		<a href="../src/runtime/proc.go.html#line-1819" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1819">#L1819</a>: func newm1(mp *<b>m</b>) {
+		<a href="../src/runtime/proc.go.html#line-3942" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3942">#L3942</a>: func sigprof(pc, sp, lr uintptr, gp *g, mp *<b>m</b>) {
+		<a href="../src/runtime/proc.go.html#line-5012" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5012">#L5012</a>: func mput(mp *<b>m</b>) {
+		<a href="../src/runtime/proc.go.html#line-5023" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5023">#L5023</a>: func mget() *<b>m</b> {
+		<a href="../src/runtime/runtime1.go.html#line-446">runtime1.go#L446</a>: func acquirem() *<b>m</b> {
+		<a href="../src/runtime/runtime1.go.html#line-453" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-453">#L453</a>: func releasem(mp *<b>m</b>) {
+		<a href="../src/runtime/runtime2.go.html#line-300">runtime2.go#L300</a>: func (mp muintptr) ptr() *<b>m</b> { return (*<b>m</b>)(unsafe.Pointer(mp)) }
+		<a href="../src/runtime/runtime2.go.html#line-303" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-303">#L303</a>: func (mp *muintptr) set(m *<b>m</b>) { *mp = muintptr(unsafe.Pointer(m)) }
+		<a href="../src/runtime/runtime2.go.html#line-309" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-309">#L309</a>: func setMNoWB(mp **<b>m</b>, new *<b>m</b>) {
+		<a href="../src/runtime/runtime2.go.html#line-420" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-420">#L420</a>: 	m            *<b>m</b>      // current m; offset known to arm liblink
+		<a href="../src/runtime/runtime2.go.html#line-488" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-488">#L488</a>: type <b>m</b> struct {
+		<a href="../src/runtime/runtime2.go.html#line-526" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-526">#L526</a>: 	alllink       *<b>m</b> // on allm
+		<a href="../src/runtime/runtime2.go.html#line-539" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-539">#L539</a>: 	freelink      *<b>m</b> // on sched.freem
+		<a href="../src/runtime/runtime2.go.html#line-757" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-757">#L757</a>: 	freem *<b>m</b>
+		<a href="../src/runtime/runtime2.go.html#line-1035" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-1035">#L1035</a>: 	allm       *<b>m</b>
+		<a href="../src/runtime/signal_unix.go.html#line-353">signal_unix.go#L353</a>: func preemptM(mp *<b>m</b>) {
+		<a href="../src/runtime/signal_unix.go.html#line-484" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-484">#L484</a>: func adjustSignalStack(sig uint32, mp *<b>m</b>, gsigStack *gsignalStack) bool {
+		<a href="../src/runtime/signal_unix.go.html#line-1042" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-1042">#L1042</a>: func msigsave(mp *<b>m</b>) {
+		<a href="../src/runtime/time.go.html#line-416">time.go#L416</a>: 	var mp *<b>m</b>
+		<a href="../src/runtime/trace.go.html#line-542">trace.go#L542</a>: func traceEventLocked(extraBytes int, mp *<b>m</b>, pid int32, bufp *traceBufPtr, ev byte, skip int, args ...uint64) {
+		<a href="../src/runtime/trace.go.html#line-590" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-590">#L590</a>: func traceStackID(mp *<b>m</b>, buf []uintptr, skip int) uint64 {
+		<a href="../src/runtime/trace.go.html#line-611" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-611">#L611</a>: func traceAcquireBuffer() (mp *<b>m</b>, pid int32, bufp *traceBufPtr) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

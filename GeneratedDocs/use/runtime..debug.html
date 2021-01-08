@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.debug</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">var <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime1.go.html#line-301">debug</a></b></span>
+
+72 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/cgocall.go.html#line-429">cgocall.go#L429</a>: 	if <b>debug</b>.cgocheck == 0 {
+		<a href="../src/runtime/cgocall.go.html#line-668" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-668">#L668</a>: 	if <b>debug</b>.cgocheck == 0 {
+		<a href="../src/runtime/malloc.go.html#line-912">malloc.go#L912</a>: 	if <b>debug</b>.sbrk != 0 {
+		<a href="../src/runtime/malloc.go.html#line-1131" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1131">#L1131</a>: 	if <b>debug</b>.allocfreetrace != 0 {
+		<a href="../src/runtime/mbitmap.go.html#line-415">mbitmap.go#L415</a>: 		if <b>debug</b>.invalidptr != 0 {
+		<a href="../src/runtime/mem_linux.go.html#line-106">mem_linux.go#L106</a>: 	if <b>debug</b>.madvdontneed != 0 {
+		<a href="../src/runtime/mfinal.go.html#line-310">mfinal.go#L310</a>: 	if <b>debug</b>.sbrk != 0 {
+		<a href="../src/runtime/mgc.go.html#line-456">mgc.go#L456</a>: 	if <b>debug</b>.gcstoptheworld > 0 {
+		<a href="../src/runtime/mgc.go.html#line-471" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-471">#L471</a>: 	if <b>debug</b>.gcpacertrace > 0 {
+		<a href="../src/runtime/mgc.go.html#line-602" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-602">#L602</a>: 	if <b>debug</b>.gcpacertrace > 0 {
+		<a href="../src/runtime/mgc.go.html#line-1274" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1274">#L1274</a>: 	if <b>debug</b>.gcstoptheworld == 1 {
+		<a href="../src/runtime/mgc.go.html#line-1276" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1276">#L1276</a>: 	} else if <b>debug</b>.gcstoptheworld == 2 {
+		<a href="../src/runtime/mgc.go.html#line-1668" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1668">#L1668</a>: 		if <b>debug</b>.gccheckmark > 0 {
+		<a href="../src/runtime/mgc.go.html#line-1779" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1779">#L1779</a>: 	if <b>debug</b>.gctrace > 0 {
+		<a href="../src/runtime/mgc.go.html#line-2052" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2052">#L2052</a>: 	if <b>debug</b>.allocfreetrace > 0 {
+		<a href="../src/runtime/mgc.go.html#line-2067" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2067">#L2067</a>: 	if <b>debug</b>.gccheckmark > 0 {
+		<a href="../src/runtime/mgc.go.html#line-2088" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2088">#L2088</a>: 		if <b>debug</b>.gccheckmark > 0 || throwOnGCWork {
+		<a href="../src/runtime/mgcmark.go.html#line-1538">mgcmark.go#L1538</a>: 		if <b>debug</b>.gccheckmark > 0 && span.isFree(objIndex) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-449">mgcscavenge.go#L449</a>: 	if <b>debug</b>.scavtrace > 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-270">mgcsweep.go#L270</a>: 		if <b>debug</b>.gcpacertrace > 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-416" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-416">#L416</a>: 	if <b>debug</b>.allocfreetrace != 0 || <b>debug</b>.clobberfree != 0 || raceenabled || msanenabled {
+		<a href="../src/runtime/mgcsweep.go.html#line-424" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-424">#L424</a>: 				if <b>debug</b>.allocfreetrace != 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-427" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-427">#L427</a>: 				if <b>debug</b>.clobberfree != 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-554" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-554">#L554</a>: 			if <b>debug</b>.efence > 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-669" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-669">#L669</a>: 	if <b>debug</b>.allocfreetrace != 0 || <b>debug</b>.clobberfree != 0 || raceenabled || msanenabled {
+		<a href="../src/runtime/mgcsweep.go.html#line-677" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-677">#L677</a>: 				if <b>debug</b>.allocfreetrace != 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-680" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-680">#L680</a>: 				if <b>debug</b>.clobberfree != 0 {
+		<a href="../src/runtime/mgcsweep.go.html#line-761" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-761">#L761</a>: 		if <b>debug</b>.efence > 0 {
+		<a href="../src/runtime/mheap.go.html#line-1500">mheap.go#L1500</a>: 	if <b>debug</b>.scavtrace > 0 {
+		<a href="../src/runtime/panic.go.html#line-1261">panic.go#L1261</a>: 		if <b>debug</b>.schedtrace &gt; 0 || <b>debug</b>.scheddetail > 0 {
+		<a href="../src/runtime/preempt.go.html#line-228">preempt.go#L228</a>: 			if preemptMSupported &amp;&amp; <b>debug</b>.asyncpreemptoff == 0 && needAsync {
+		<a href="../src/runtime/proc.go.html#line-257">proc.go#L257</a>: 		if <b>debug</b>.gctrace > 0 {
+		<a href="../src/runtime/proc.go.html#line-592" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-592">#L592</a>: 	if <b>debug</b>.cgocheck > 1 {
+		<a href="../src/runtime/proc.go.html#line-3675" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3675">#L3675</a>: 	if <b>debug</b>.tracebackancestors <= 0 || callergp.goid == 0 {
+		<a href="../src/runtime/proc.go.html#line-3683" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3683">#L3683</a>: 	if n &gt; <b>debug</b>.tracebackancestors {
+		<a href="../src/runtime/proc.go.html#line-3684" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3684">#L3684</a>: 		n = <b>debug</b>.tracebackancestors
+		<a href="../src/runtime/proc.go.html#line-4657" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4657">#L4657</a>: 		if <b>debug</b>.schedtrace <= 0 && (sched.gcwaiting != 0 || atomic.Load(&sched.npidle) == uint32(gomaxprocs)) {
+		<a href="../src/runtime/proc.go.html#line-4748" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4748">#L4748</a>: 		if <b>debug</b>.schedtrace &gt; 0 &amp;&amp; lasttrace+int64(<b>debug</b>.schedtrace)*1000000 <= now {
+		<a href="../src/runtime/proc.go.html#line-4750" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4750">#L4750</a>: 			schedtrace(<b>debug</b>.scheddetail > 0)
+		<a href="../src/runtime/proc.go.html#line-4883" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4883">#L4883</a>: 	if preemptMSupported &amp;&amp; <b>debug</b>.asyncpreemptoff == 0 {
+		<a href="../src/runtime/runtime1.go.html#line-301">runtime1.go#L301</a>: var <b>debug</b> struct {
+		<a href="../src/runtime/runtime1.go.html#line-323" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-323">#L323</a>: 	{"allocfreetrace", &amp;<b>debug</b>.allocfreetrace},
+		<a href="../src/runtime/runtime1.go.html#line-324" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-324">#L324</a>: 	{"clobberfree", &amp;<b>debug</b>.clobberfree},
+		<a href="../src/runtime/runtime1.go.html#line-325" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-325">#L325</a>: 	{"cgocheck", &amp;<b>debug</b>.cgocheck},
+		<a href="../src/runtime/runtime1.go.html#line-326" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-326">#L326</a>: 	{"efence", &amp;<b>debug</b>.efence},
+		<a href="../src/runtime/runtime1.go.html#line-327" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-327">#L327</a>: 	{"gccheckmark", &amp;<b>debug</b>.gccheckmark},
+		<a href="../src/runtime/runtime1.go.html#line-328" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-328">#L328</a>: 	{"gcpacertrace", &amp;<b>debug</b>.gcpacertrace},
+		<a href="../src/runtime/runtime1.go.html#line-329" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-329">#L329</a>: 	{"gcshrinkstackoff", &amp;<b>debug</b>.gcshrinkstackoff},
+		<a href="../src/runtime/runtime1.go.html#line-330" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-330">#L330</a>: 	{"gcstoptheworld", &amp;<b>debug</b>.gcstoptheworld},
+		<a href="../src/runtime/runtime1.go.html#line-331" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-331">#L331</a>: 	{"gctrace", &amp;<b>debug</b>.gctrace},
+		<a href="../src/runtime/runtime1.go.html#line-332" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-332">#L332</a>: 	{"invalidptr", &amp;<b>debug</b>.invalidptr},
+		<a href="../src/runtime/runtime1.go.html#line-333" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-333">#L333</a>: 	{"madvdontneed", &amp;<b>debug</b>.madvdontneed},
+		<a href="../src/runtime/runtime1.go.html#line-334" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-334">#L334</a>: 	{"sbrk", &amp;<b>debug</b>.sbrk},
+		<a href="../src/runtime/runtime1.go.html#line-335" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-335">#L335</a>: 	{"scavenge", &amp;<b>debug</b>.scavenge},
+		<a href="../src/runtime/runtime1.go.html#line-336" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-336">#L336</a>: 	{"scavtrace", &amp;<b>debug</b>.scavtrace},
+		<a href="../src/runtime/runtime1.go.html#line-337" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-337">#L337</a>: 	{"scheddetail", &amp;<b>debug</b>.scheddetail},
+		<a href="../src/runtime/runtime1.go.html#line-338" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-338">#L338</a>: 	{"schedtrace", &amp;<b>debug</b>.schedtrace},
+		<a href="../src/runtime/runtime1.go.html#line-339" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-339">#L339</a>: 	{"tracebackancestors", &amp;<b>debug</b>.tracebackancestors},
+		<a href="../src/runtime/runtime1.go.html#line-340" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-340">#L340</a>: 	{"asyncpreemptoff", &amp;<b>debug</b>.asyncpreemptoff},
+		<a href="../src/runtime/runtime1.go.html#line-345" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-345">#L345</a>: 	<b>debug</b>.cgocheck = 1
+		<a href="../src/runtime/runtime1.go.html#line-346" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-346">#L346</a>: 	<b>debug</b>.invalidptr = 1
+		<a href="../src/runtime/signal_unix.go.html#line-439">signal_unix.go#L439</a>: 		if sig == sigPreempt &amp;&amp; preemptMSupported &amp;&amp; <b>debug</b>.asyncpreemptoff == 0 {
+		<a href="../src/runtime/signal_unix.go.html#line-561" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-561">#L561</a>: 	if sig == sigPreempt &amp;&amp; <b>debug</b>.asyncpreemptoff == 0 {
+		<a href="../src/runtime/stack.go.html#line-342">stack.go#L342</a>: 	if <b>debug</b>.efence != 0 || stackFromSystem != 0 {
+		<a href="../src/runtime/stack.go.html#line-441" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-441">#L441</a>: 	if <b>debug</b>.efence != 0 || stackFromSystem != 0 {
+		<a href="../src/runtime/stack.go.html#line-442" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-442">#L442</a>: 		if <b>debug</b>.efence != 0 || stackFaultOnFree != 0 {
+		<a href="../src/runtime/stack.go.html#line-600" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-600">#L600</a>: 			if f.valid() &amp;&amp; 0 &lt; p &amp;&amp; p &lt; minLegalPointer &amp;&amp; <b>debug</b>.invalidptr != 0 {
+		<a href="../src/runtime/stack.go.html#line-1147" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1147">#L1147</a>: 	if <b>debug</b>.gcshrinkstackoff > 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.WaitStatus</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/syscall_linux.go.html#line-286">WaitStatus</a></b></span>
+
+16 uses:
+
+	syscall <i>(current package)</i>
+		<a href="../src/syscall/exec_unix.go.html#line-145">exec_unix.go#L145</a>: 	var wstatus <b>WaitStatus</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-286">syscall_linux.go#L286</a>: type <b>WaitStatus</b> uint32
+		<a href="../src/syscall/syscall_linux.go.html#line-305" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-305">#L305</a>: func (w <b>WaitStatus</b>) Exited() bool { return w&mask == exited }
+		<a href="../src/syscall/syscall_linux.go.html#line-307" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-307">#L307</a>: func (w <b>WaitStatus</b>) Signaled() bool { return w&mask != stopped && w&mask != exited }
+		<a href="../src/syscall/syscall_linux.go.html#line-309" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-309">#L309</a>: func (w <b>WaitStatus</b>) Stopped() bool { return w&0xFF == stopped }
+		<a href="../src/syscall/syscall_linux.go.html#line-311" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-311">#L311</a>: func (w <b>WaitStatus</b>) Continued() bool { return w == 0xFFFF }
+		<a href="../src/syscall/syscall_linux.go.html#line-313" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-313">#L313</a>: func (w <b>WaitStatus</b>) CoreDump() bool { return w.Signaled() && w&core != 0 }
+		<a href="../src/syscall/syscall_linux.go.html#line-315" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-315">#L315</a>: func (w <b>WaitStatus</b>) ExitStatus() int {
+		<a href="../src/syscall/syscall_linux.go.html#line-322" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-322">#L322</a>: func (w <b>WaitStatus</b>) Signal() Signal {
+		<a href="../src/syscall/syscall_linux.go.html#line-329" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-329">#L329</a>: func (w <b>WaitStatus</b>) StopSignal() Signal {
+		<a href="../src/syscall/syscall_linux.go.html#line-336" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-336">#L336</a>: func (w <b>WaitStatus</b>) TrapCause() int {
+		<a href="../src/syscall/syscall_linux.go.html#line-345" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-345">#L345</a>: func Wait4(pid int, wstatus *<b>WaitStatus</b>, options int, rusage *Rusage) (wpid int, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-349" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-349">#L349</a>: 		*wstatus = <b>WaitStatus</b>(status)
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/exec_posix.go.html#line-72">exec_posix.go#L72</a>: 	status syscall.<b>WaitStatus</b> // System-dependent status info.
+		<a href="../src/os/exec_posix.go.html#line-101" class="path-duplicate">exec_posix.go</a><a href="../src/os/exec_posix.go.html#line-101">#L101</a>: 	status := p.Sys().(syscall.<b>WaitStatus</b>)
+		<a href="../src/os/exec_unix.go.html#line-37">exec_unix.go#L37</a>: 		status syscall.<b>WaitStatus</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

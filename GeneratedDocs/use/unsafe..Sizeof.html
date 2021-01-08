@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: unsafe.Sizeof</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/unsafe.html">unsafe</a>.<a href="../src/unsafe/unsafe.go.html#line-188">Sizeof</a></b></span>
+
+146 uses:
+
+	unsafe <i>(current package)</i>
+		<a href="../src/unsafe/unsafe.go.html#line-188">unsafe.go#L188</a>: func <b>Sizeof</b>(x ArbitraryType) uintptr
+
+	<a href="../pkg/internal/reflectlite.html">internal/reflectlite</a>
+		<a href="../src/internal/reflectlite/type.go.html#line-626">type.go#L626</a>: 	uadd := unsafe.<b>Sizeof</b>(*t)
+		<a href="../src/internal/reflectlite/type.go.html#line-628" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-628">#L628</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommonType{})
+		<a href="../src/internal/reflectlite/type.go.html#line-637" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-637">#L637</a>: 	uadd := unsafe.<b>Sizeof</b>(*t)
+		<a href="../src/internal/reflectlite/type.go.html#line-639" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-639">#L639</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommonType{})
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-1005">type.go#L1005</a>: 	uadd := unsafe.<b>Sizeof</b>(*t)
+		<a href="../src/reflect/type.go.html#line-1007" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1007">#L1007</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommonType{})
+		<a href="../src/reflect/type.go.html#line-1016" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1016">#L1016</a>: 	uadd := unsafe.<b>Sizeof</b>(*t)
+		<a href="../src/reflect/type.go.html#line-1018" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1018">#L1018</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommonType{})
+		<a href="../src/reflect/type.go.html#line-2612" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2612">#L2612</a>: 	ut.moff = uint32(unsafe.<b>Sizeof</b>(uncommonType{}))
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/alg.go.html#line-56">alg.go#L56</a>: 	size := *(*uintptr)(unsafe.Pointer(ptr + unsafe.<b>Sizeof</b>(h)))
+		<a href="../src/runtime/cgo_sigaction.go.html#line-28">cgo_sigaction.go#L28</a>: 		msanwrite(unsafe.Pointer(new), unsafe.<b>Sizeof</b>(*new))
+		<a href="../src/runtime/cgo_sigaction.go.html#line-80" class="path-duplicate">cgo_sigaction.go</a><a href="../src/runtime/cgo_sigaction.go.html#line-80">#L80</a>: 		msanread(unsafe.Pointer(old), unsafe.<b>Sizeof</b>(*old))
+		<a href="../src/runtime/chan.go.html#line-28">chan.go#L28</a>: 	hchanSize = unsafe.<b>Sizeof</b>(hchan{}) + uintptr(-int(unsafe.<b>Sizeof</b>(hchan{}))&(maxAlign-1))
+		<a href="../src/runtime/debugcall.go.html#line-135">debugcall.go#L135</a>: 		newg := newproc1(*(**funcval)(unsafe.Pointer(&amp;fn)), unsafe.Pointer(&amp;args), int32(unsafe.<b>Sizeof</b>(args)), gp, callerpc)
+		<a href="../src/runtime/debuglog.go.html#line-75">debuglog.go#L75</a>: 		l = (*dlogger)(sysAlloc(unsafe.<b>Sizeof</b>(dlogger{}), nil))
+		<a href="../src/runtime/debuglog.go.html#line-717" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-717">#L717</a>: 	state1 := sysAlloc(unsafe.<b>Sizeof</b>(readState{})*uintptr(n), nil)
+		<a href="../src/runtime/heapdump.go.html#line-649">heapdump.go#L649</a>: 	memclrNoHeapPointers(unsafe.Pointer(&amp;typecache), unsafe.<b>Sizeof</b>(typecache))
+		<a href="../src/runtime/iface.go.html#line-66">iface.go#L66</a>: 	m = (*itab)(persistentalloc(unsafe.<b>Sizeof</b>(itab{})+uintptr(len(inter.mhdr)-1)*sys.PtrSize, 0, &memstats.other_sys))
+		<a href="../src/runtime/iface.go.html#line-374" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-374">#L374</a>: 		x = mallocgc(unsafe.<b>Sizeof</b>(val), stringType, true)
+		<a href="../src/runtime/iface.go.html#line-385" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-385">#L385</a>: 		x = mallocgc(unsafe.<b>Sizeof</b>(val), sliceType, true)
+		<a href="../src/runtime/malloc.go.html#line-568">malloc.go#L568</a>: 		const arenaMetaSize = (1 &lt;&lt; arenaBits) * unsafe.<b>Sizeof</b>(heapArena{})
+		<a href="../src/runtime/malloc.go.html#line-735" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-735">#L735</a>: 			l2 = (*[1 &lt;&lt; arenaL2Bits]*heapArena)(persistentalloc(unsafe.<b>Sizeof</b>(*l2), sys.PtrSize, nil))
+		<a href="../src/runtime/malloc.go.html#line-746" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-746">#L746</a>: 		r = (*heapArena)(h.heapArenaAlloc.alloc(unsafe.<b>Sizeof</b>(*r), sys.PtrSize, &memstats.gc_sys))
+		<a href="../src/runtime/malloc.go.html#line-748" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-748">#L748</a>: 			r = (*heapArena)(persistentalloc(unsafe.<b>Sizeof</b>(*r), sys.PtrSize, &memstats.gc_sys))
+		<a href="../src/runtime/malloc.go.html#line-1088" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1088">#L1088</a>: 			dataSize = unsafe.<b>Sizeof</b>(_defer{})
+		<a href="../src/runtime/map.go.html#line-807">map.go#L807</a>: 	if unsafe.<b>Sizeof</b>(hiter{})/sys.PtrSize != 12 {
+		<a href="../src/runtime/mfinal.go.html#line-28">mfinal.go#L28</a>: 	fin     [(_FinBlockSize - 2*sys.PtrSize - 2*4) / unsafe.<b>Sizeof</b>(finalizer{})]finalizer
+		<a href="../src/runtime/mfinal.go.html#line-97" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-97">#L97</a>: 				if (unsafe.<b>Sizeof</b>(finalizer{}) != 5*sys.PtrSize ||
+		<a href="../src/runtime/mfinal.go.html#line-186" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-186">#L186</a>: 				framesz := unsafe.<b>Sizeof</b>((interface{})(nil)) + f.nret
+		<a href="../src/runtime/mgc.go.html#line-173">mgc.go#L173</a>: 	if unsafe.<b>Sizeof</b>(workbuf{}) != _WorkbufSize {
+		<a href="../src/runtime/mgcmark.go.html#line-188">mgcmark.go#L188</a>: 			scanblock(uintptr(unsafe.Pointer(&amp;fb.fin[0])), cnt*unsafe.<b>Sizeof</b>(fb.fin[0]), &finptrmask[0], gcw, nil)
+		<a href="../src/runtime/mgcstack.go.html#line-110">mgcstack.go#L110</a>: 	obj [(_WorkbufSize - unsafe.<b>Sizeof</b>(stackWorkBufHdr{})) / sys.PtrSize]uintptr
+		<a href="../src/runtime/mgcstack.go.html#line-130" class="path-duplicate">mgcstack.go</a><a href="../src/runtime/mgcstack.go.html#line-130">#L130</a>: 	obj [(_WorkbufSize - unsafe.<b>Sizeof</b>(stackObjectBufHdr{})) / unsafe.<b>Sizeof</b>(stackObject{})]stackObject
+		<a href="../src/runtime/mgcstack.go.html#line-140" class="path-duplicate">mgcstack.go</a><a href="../src/runtime/mgcstack.go.html#line-140">#L140</a>: 	if unsafe.<b>Sizeof</b>(stackWorkBuf{}) &gt; unsafe.<b>Sizeof</b>(workbuf{}) {
+		<a href="../src/runtime/mgcstack.go.html#line-143" class="path-duplicate">mgcstack.go</a><a href="../src/runtime/mgcstack.go.html#line-143">#L143</a>: 	if unsafe.<b>Sizeof</b>(stackObjectBuf{}) &gt; unsafe.<b>Sizeof</b>(workbuf{}) {
+		<a href="../src/runtime/mgcsweepbuf.go.html#line-106">mgcsweepbuf.go#L106</a>: 		block = (*gcSweepBlock)(persistentalloc(unsafe.<b>Sizeof</b>(gcSweepBlock{}), cpu.CacheLineSize, &memstats.gc_sys))
+		<a href="../src/runtime/mgcwork.go.html#line-399">mgcwork.go#L399</a>: 	obj [(_WorkbufSize - unsafe.<b>Sizeof</b>(workbufhdr{})) / sys.PtrSize]uintptr
+		<a href="../src/runtime/mgcwork.go.html#line-510" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-510">#L510</a>: 	memmove(unsafe.Pointer(&amp;b1.obj[0]), unsafe.Pointer(&amp;b.obj[b.nobj]), uintptr(n)*unsafe.<b>Sizeof</b>(b1.obj[0]))
+		<a href="../src/runtime/mheap.go.html#line-232">mheap.go#L232</a>: 		pad      [cpu.CacheLinePadSize - unsafe.<b>Sizeof</b>(mcentral{})%cpu.CacheLinePadSize]byte
+		<a href="../src/runtime/mheap.go.html#line-534" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-534">#L534</a>: 			sysFree(unsafe.Pointer(&amp;oldAllspans[0]), uintptr(cap(oldAllspans))*unsafe.<b>Sizeof</b>(oldAllspans[0]), &memstats.other_sys)
+		<a href="../src/runtime/mheap.go.html#line-722" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-722">#L722</a>: 	h.spanalloc.init(unsafe.<b>Sizeof</b>(mspan{}), recordspan, unsafe.Pointer(h), &memstats.mspan_sys)
+		<a href="../src/runtime/mheap.go.html#line-723" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-723">#L723</a>: 	h.cachealloc.init(unsafe.<b>Sizeof</b>(mcache{}), nil, nil, &memstats.mcache_sys)
+		<a href="../src/runtime/mheap.go.html#line-724" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-724">#L724</a>: 	h.specialfinalizeralloc.init(unsafe.<b>Sizeof</b>(specialfinalizer{}), nil, nil, &memstats.other_sys)
+		<a href="../src/runtime/mheap.go.html#line-725" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-725">#L725</a>: 	h.specialprofilealloc.init(unsafe.<b>Sizeof</b>(specialprofile{}), nil, nil, &memstats.other_sys)
+		<a href="../src/runtime/mheap.go.html#line-726" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-726">#L726</a>: 	h.arenaHintAlloc.init(unsafe.<b>Sizeof</b>(arenaHint{}), nil, nil, &memstats.other_sys)
+		<a href="../src/runtime/mheap.go.html#line-1876" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1876">#L1876</a>: const gcBitsHeaderBytes = unsafe.<b>Sizeof</b>(gcBitsHeader{})
+		<a href="../src/runtime/mpagealloc.go.html#line-395">mpagealloc.go#L395</a>: 			r := sysAlloc(unsafe.<b>Sizeof</b>(*s.chunks[0]), s.sysStat)
+		<a href="../src/runtime/mpagealloc.go.html#line-880" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-880">#L880</a>: 	pallocSumBytes = unsafe.<b>Sizeof</b>(pallocSum(0))
+		<a href="../src/runtime/mpagecache.go.html#line-12">mpagecache.go#L12</a>: const pageCachePages = 8 * unsafe.<b>Sizeof</b>(pageCache{}.cache)
+		<a href="../src/runtime/mprof.go.html#line-163">mprof.go#L163</a>: 	size := unsafe.<b>Sizeof</b>(bucket{}) + uintptr(nstk)*unsafe.<b>Sizeof</b>(uintptr(0))
+		<a href="../src/runtime/mprof.go.html#line-168" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-168">#L168</a>: 		size += unsafe.<b>Sizeof</b>(memRecord{})
+		<a href="../src/runtime/mprof.go.html#line-170" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-170">#L170</a>: 		size += unsafe.<b>Sizeof</b>(blockRecord{})
+		<a href="../src/runtime/mprof.go.html#line-182" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-182">#L182</a>: 	stk := (*[maxStack]uintptr)(add(unsafe.Pointer(b), unsafe.<b>Sizeof</b>(*b)))
+		<a href="../src/runtime/mprof.go.html#line-191" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-191">#L191</a>: 	data := add(unsafe.Pointer(b), unsafe.<b>Sizeof</b>(*b)+b.nstk*unsafe.<b>Sizeof</b>(uintptr(0)))
+		<a href="../src/runtime/mprof.go.html#line-200" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-200">#L200</a>: 	data := add(unsafe.Pointer(b), unsafe.<b>Sizeof</b>(*b)+b.nstk*unsafe.<b>Sizeof</b>(uintptr(0)))
+		<a href="../src/runtime/mprof.go.html#line-207" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-207">#L207</a>: 		buckhash = (*[buckHashSize]*bucket)(sysAlloc(unsafe.<b>Sizeof</b>(*buckhash), &memstats.buckhash_sys))
+		<a href="../src/runtime/mprof.go.html#line-599" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-599">#L599</a>: 		racewriterangepc(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.<b>Sizeof</b>(r.Stack0), getcallerpc(), funcPC(MemProfile))
+		<a href="../src/runtime/mprof.go.html#line-602" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-602">#L602</a>: 		msanwrite(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.<b>Sizeof</b>(r.Stack0))
+		<a href="../src/runtime/mprof.go.html#line-647" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-647">#L647</a>: 				racewriterangepc(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.<b>Sizeof</b>(r.Stack0), getcallerpc(), funcPC(BlockProfile))
+		<a href="../src/runtime/mprof.go.html#line-650" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-650">#L650</a>: 				msanwrite(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.<b>Sizeof</b>(r.Stack0))
+		<a href="../src/runtime/mranges.go.html#line-170">mranges.go#L170</a>: 	ranges.array = (*notInHeap)(persistentalloc(unsafe.<b>Sizeof</b>(addrRange{})*uintptr(ranges.cap), sys.PtrSize, sysStat))
+		<a href="../src/runtime/mranges.go.html#line-265" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-265">#L265</a>: 			ranges.array = (*notInHeap)(persistentalloc(unsafe.<b>Sizeof</b>(addrRange{})*uintptr(ranges.cap), sys.PtrSize, a.sysStat))
+		<a href="../src/runtime/mranges.go.html#line-335" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-335">#L335</a>: 		ranges.array = (*notInHeap)(persistentalloc(unsafe.<b>Sizeof</b>(addrRange{})*uintptr(ranges.cap), sys.PtrSize, b.sysStat))
+		<a href="../src/runtime/mspanset.go.html#line-286">mspanset.go#L286</a>: 	return (*spanSetBlock)(persistentalloc(unsafe.<b>Sizeof</b>(spanSetBlock{}), cpu.CacheLineSize, &memstats.gc_sys))
+		<a href="../src/runtime/mstats.go.html#line-427">mstats.go#L427</a>: var sizeof_C_MStats = unsafe.Offsetof(memstats.by_size) + 61*unsafe.<b>Sizeof</b>(memstats.by_size[0])
+		<a href="../src/runtime/mstats.go.html#line-431" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-431">#L431</a>: 	if sizeof_C_MStats != unsafe.<b>Sizeof</b>(memStats) {
+		<a href="../src/runtime/mstats.go.html#line-432" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-432">#L432</a>: 		println(sizeof_C_MStats, unsafe.<b>Sizeof</b>(memStats))
+		<a href="../src/runtime/mwbbuf.go.html#line-100">mwbbuf.go#L100</a>: 		b.end = start + uintptr(len(b.buf))*unsafe.<b>Sizeof</b>(b.buf[0])
+		<a href="../src/runtime/mwbbuf.go.html#line-103" class="path-duplicate">mwbbuf.go</a><a href="../src/runtime/mwbbuf.go.html#line-103">#L103</a>: 	if (b.end-b.next)%(wbBufEntryPointers*unsafe.<b>Sizeof</b>(b.buf[0])) != 0 {
+		<a href="../src/runtime/mwbbuf.go.html#line-246" class="path-duplicate">mwbbuf.go</a><a href="../src/runtime/mwbbuf.go.html#line-246">#L246</a>: 	n := (_p_.wbBuf.next - start) / unsafe.<b>Sizeof</b>(_p_.wbBuf.buf[0])
+		<a href="../src/runtime/netpoll.go.html#line-532">netpoll.go#L532</a>: 		const pdSize = unsafe.<b>Sizeof</b>(pollDesc{})
+		<a href="../src/runtime/os_linux.go.html#line-82">os_linux.go#L82</a>: 	r := sched_getaffinity(0, unsafe.<b>Sizeof</b>(buf), &buf[0])
+		<a href="../src/runtime/os_linux.go.html#line-241" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-241">#L241</a>: 	n = read(fd, noescape(unsafe.Pointer(&amp;buf[0])), int32(unsafe.<b>Sizeof</b>(buf)))
+		<a href="../src/runtime/os_linux.go.html#line-386" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-386">#L386</a>: 	rtsigprocmask(how, new, old, int32(unsafe.<b>Sizeof</b>(*new)))
+		<a href="../src/runtime/os_linux.go.html#line-456" class="path-duplicate">os_linux.go</a><a href="../src/runtime/os_linux.go.html#line-456">#L456</a>: 	if rt_sigaction(uintptr(sig), new, old, unsafe.<b>Sizeof</b>(sigactiont{}.sa_mask)) != 0 {
+		<a href="../src/runtime/panic.go.html#line-231">panic.go#L231</a>: 	argp := uintptr(unsafe.Pointer(&amp;fn)) + unsafe.<b>Sizeof</b>(fn)
+		<a href="../src/runtime/panic.go.html#line-313" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-313">#L313</a>: 	deferHeaderSize = unsafe.<b>Sizeof</b>(_defer{})
+		<a href="../src/runtime/panic.go.html#line-368" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-368">#L368</a>: 	return add(unsafe.Pointer(d), unsafe.<b>Sizeof</b>(*d))
+		<a href="../src/runtime/panic.go.html#line-798" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-798">#L798</a>: 		fd = add(fd, unsafe.<b>Sizeof</b>(b))
+		<a href="../src/runtime/proc.go.html#line-686">proc.go#L686</a>: 	s := (*[unsafe.<b>Sizeof</b>(fastrandseed)]byte)(unsafe.Pointer(&fastrandseed))[:]
+		<a href="../src/runtime/proc.go.html#line-1829" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1829">#L1829</a>: 			msanwrite(unsafe.Pointer(&amp;ts), unsafe.<b>Sizeof</b>(ts))
+		<a href="../src/runtime/proc.go.html#line-3632" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3632">#L3632</a>: 	memclrNoHeapPointers(unsafe.Pointer(&amp;newg.sched), unsafe.<b>Sizeof</b>(newg.sched))
+		<a href="../src/runtime/runtime1.go.html#line-162">runtime1.go#L162</a>: 	if unsafe.<b>Sizeof</b>(a) != 1 {
+		<a href="../src/runtime/runtime1.go.html#line-165" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-165">#L165</a>: 	if unsafe.<b>Sizeof</b>(b) != 1 {
+		<a href="../src/runtime/runtime1.go.html#line-168" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-168">#L168</a>: 	if unsafe.<b>Sizeof</b>(c) != 2 {
+		<a href="../src/runtime/runtime1.go.html#line-171" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-171">#L171</a>: 	if unsafe.<b>Sizeof</b>(d) != 2 {
+		<a href="../src/runtime/runtime1.go.html#line-174" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-174">#L174</a>: 	if unsafe.<b>Sizeof</b>(e) != 4 {
+		<a href="../src/runtime/runtime1.go.html#line-177" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-177">#L177</a>: 	if unsafe.<b>Sizeof</b>(f) != 4 {
+		<a href="../src/runtime/runtime1.go.html#line-180" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-180">#L180</a>: 	if unsafe.<b>Sizeof</b>(g) != 8 {
+		<a href="../src/runtime/runtime1.go.html#line-183" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-183">#L183</a>: 	if unsafe.<b>Sizeof</b>(h) != 8 {
+		<a href="../src/runtime/runtime1.go.html#line-186" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-186">#L186</a>: 	if unsafe.<b>Sizeof</b>(i) != 4 {
+		<a href="../src/runtime/runtime1.go.html#line-189" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-189">#L189</a>: 	if unsafe.<b>Sizeof</b>(j) != 8 {
+		<a href="../src/runtime/runtime1.go.html#line-192" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-192">#L192</a>: 	if unsafe.<b>Sizeof</b>(k) != sys.PtrSize {
+		<a href="../src/runtime/runtime1.go.html#line-195" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-195">#L195</a>: 	if unsafe.<b>Sizeof</b>(l) != sys.PtrSize {
+		<a href="../src/runtime/runtime1.go.html#line-198" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-198">#L198</a>: 	if unsafe.<b>Sizeof</b>(x1) != 1 {
+		<a href="../src/runtime/runtime1.go.html#line-204" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-204">#L204</a>: 	if unsafe.<b>Sizeof</b>(y1) != 2 {
+		<a href="../src/runtime/sema.go.html#line-51">sema.go#L51</a>: 	pad  [cpu.CacheLinePadSize - unsafe.<b>Sizeof</b>(semaRoot{})]byte
+		<a href="../src/runtime/sema.go.html#line-608" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-608">#L608</a>: 	if sz != unsafe.<b>Sizeof</b>(notifyList{}) {
+		<a href="../src/runtime/sema.go.html#line-609" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-609">#L609</a>: 		print("runtime: bad notifyList size - sync=", sz, " runtime=", unsafe.<b>Sizeof</b>(notifyList{}), "\n")
+		<a href="../src/runtime/stack.go.html#line-143">stack.go#L143</a>: 	_    [cpu.CacheLinePadSize - unsafe.<b>Sizeof</b>(stackpoolItem{})%cpu.CacheLinePadSize]byte
+		<a href="../src/runtime/string.go.html#line-204">string.go#L204</a>: 			uintptr(len(a))*unsafe.<b>Sizeof</b>(a[0]),
+		<a href="../src/runtime/string.go.html#line-209" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-209">#L209</a>: 		msanread(unsafe.Pointer(&amp;a[0]), uintptr(len(a))*unsafe.<b>Sizeof</b>(a[0]))
+		<a href="../src/runtime/symtab.go.html#line-666">symtab.go#L666</a>: 	ffb := (*findfuncbucket)(add(unsafe.Pointer(datap.findfunctab), b*unsafe.<b>Sizeof</b>(findfuncbucket{})))
+		<a href="../src/runtime/symtab.go.html#line-894" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-894">#L894</a>: 	return *(*int32)(add(unsafe.Pointer(&amp;f.nfuncdata), unsafe.<b>Sizeof</b>(f.nfuncdata)+uintptr(table)*4))
+		<a href="../src/runtime/symtab.go.html#line-926" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-926">#L926</a>: 	p := add(unsafe.Pointer(&amp;f.nfuncdata), unsafe.<b>Sizeof</b>(f.nfuncdata)+uintptr(f.npcdata)*4)
+		<a href="../src/runtime/trace.go.html#line-159">trace.go#L159</a>: 	arr [64&lt;&lt;10 - unsafe.<b>Sizeof</b>(traceBufHeader{})]byte // underlying buffer for traceBufHeader.buf
+		<a href="../src/runtime/trace.go.html#line-363" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-363">#L363</a>: 		sysFree(unsafe.Pointer(buf), unsafe.<b>Sizeof</b>(*buf.ptr()), &memstats.other_sys)
+		<a href="../src/runtime/trace.go.html#line-642" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-642">#L642</a>: 		buf = traceBufPtr(sysAlloc(unsafe.<b>Sizeof</b>(traceBuf{}), &memstats.other_sys))
+		<a href="../src/runtime/trace.go.html#line-783" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-783">#L783</a>: 	hash := memhash(unsafe.Pointer(&amp;pcs[0]), 0, uintptr(len(pcs))*unsafe.<b>Sizeof</b>(pcs[0]))
+		<a href="../src/runtime/trace.go.html#line-830" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-830">#L830</a>: 	return (*traceStack)(tab.mem.alloc(unsafe.<b>Sizeof</b>(traceStack{}) + uintptr(n)*sys.PtrSize))
+		<a href="../src/runtime/trace.go.html#line-946" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-946">#L946</a>: 		block := (*traceAllocBlock)(sysAlloc(unsafe.<b>Sizeof</b>(traceAllocBlock{}), &memstats.other_sys))
+		<a href="../src/runtime/trace.go.html#line-964" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-964">#L964</a>: 		sysFree(unsafe.Pointer(block), unsafe.<b>Sizeof</b>(traceAllocBlock{}), &memstats.other_sys)
+		<a href="../src/runtime/traceback.go.html#line-1315">traceback.go#L1315</a>: 		msanwrite(unsafe.Pointer(arg), unsafe.<b>Sizeof</b>(cgoSymbolizerArg{}))
+		<a href="../src/runtime/traceback.go.html#line-1337" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1337">#L1337</a>: 		msanwrite(unsafe.Pointer(&amp;arg), unsafe.<b>Sizeof</b>(arg))
+		<a href="../src/runtime/type.go.html#line-314">type.go#L314</a>: 	uadd := uintptr(unsafe.<b>Sizeof</b>(functype{}))
+		<a href="../src/runtime/type.go.html#line-316" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-316">#L316</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommontype{})
+		<a href="../src/runtime/type.go.html#line-323" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-323">#L323</a>: 	uadd := uintptr(unsafe.<b>Sizeof</b>(functype{}))
+		<a href="../src/runtime/type.go.html#line-325" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-325">#L325</a>: 		uadd += unsafe.<b>Sizeof</b>(uncommontype{})
+		<a href="../src/runtime/vdso_linux.go.html#line-54">vdso_linux.go#L54</a>: 	vdsoSymTabSize     = vdsoArrayMax / unsafe.<b>Sizeof</b>(elfSym{})
+		<a href="../src/runtime/vdso_linux.go.html#line-55" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-55">#L55</a>: 	vdsoDynSize        = vdsoArrayMax / unsafe.<b>Sizeof</b>(elfDyn{})
+		<a href="../src/runtime/vdso_linux.go.html#line-62" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-62">#L62</a>: 	vdsoBloomSizeScale = unsafe.<b>Sizeof</b>(uintptr(0)) / 4 // uint32
+		<a href="../src/runtime/vdso_linux.go.html#line-114" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-114">#L114</a>: 		pt := (*elfPhdr)(add(pt, uintptr(i)*unsafe.<b>Sizeof</b>(elfPhdr{})))
+
+	<a href="../pkg/sync.html">sync</a>
+		<a href="../src/sync/pool.go.html#line-70">pool.go#L70</a>: 	pad [128 - unsafe.<b>Sizeof</b>(poolLocalInternal{})%128]byte
+		<a href="../src/sync/pool.go.html#line-277" class="path-duplicate">pool.go</a><a href="../src/sync/pool.go.html#line-277">#L277</a>: 	lp := unsafe.Pointer(uintptr(l) + uintptr(i)*unsafe.<b>Sizeof</b>(poolLocal{}))
+		<a href="../src/sync/runtime.go.html#line-47">runtime.go#L47</a>: 	runtime_notifyListCheck(unsafe.<b>Sizeof</b>(n))
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/exec_linux.go.html#line-104">exec_linux.go#L104</a>: 		RawSyscall(SYS_WRITE, uintptr(p[1]), uintptr(unsafe.Pointer(&amp;err2)), unsafe.<b>Sizeof</b>(err2))
+		<a href="../src/syscall/exec_linux.go.html#line-251" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-251">#L251</a>: 		r1, _, err1 = RawSyscall(SYS_READ, uintptr(p[0]), uintptr(unsafe.Pointer(&amp;err2)), unsafe.<b>Sizeof</b>(err2))
+		<a href="../src/syscall/exec_linux.go.html#line-255" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-255">#L255</a>: 		if r1 != unsafe.<b>Sizeof</b>(err2) {
+		<a href="../src/syscall/exec_linux.go.html#line-546" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-546">#L546</a>: 	RawSyscall(SYS_WRITE, uintptr(pipe), uintptr(unsafe.Pointer(&amp;err1)), unsafe.<b>Sizeof</b>(err1))
+		<a href="../src/syscall/exec_unix.go.html#line-221">exec_unix.go#L221</a>: 		n, err = readlen(p[0], (*byte)(unsafe.Pointer(&amp;err1)), int(unsafe.<b>Sizeof</b>(err1)))
+		<a href="../src/syscall/exec_unix.go.html#line-228" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-228">#L228</a>: 		if n == int(unsafe.<b>Sizeof</b>(err1)) {
+		<a href="../src/syscall/lsf_linux.go.html#line-79">lsf_linux.go#L79</a>: 	return setsockopt(fd, SOL_SOCKET, SO_ATTACH_FILTER, unsafe.Pointer(&amp;p), unsafe.<b>Sizeof</b>(p))
+		<a href="../src/syscall/lsf_linux.go.html#line-85" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-85">#L85</a>: 	return setsockopt(fd, SOL_SOCKET, SO_DETACH_FILTER, unsafe.Pointer(&amp;dummy), unsafe.<b>Sizeof</b>(dummy))
+		<a href="../src/syscall/sockcmsg_linux.go.html#line-34">sockcmsg_linux.go#L34</a>: 	if uintptr(len(m.Data)) &lt; unsafe.<b>Sizeof</b>(Ucred{}) {
+		<a href="../src/syscall/syscall_linux.go.html#line-620">syscall_linux.go#L620</a>: 	return setsockopt(fd, level, opt, unsafe.Pointer(mreq), unsafe.<b>Sizeof</b>(*mreq))
+		<a href="../src/syscall/syscall_linux.go.html#line-873" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-873">#L873</a>: 	return readInt(buf, unsafe.Offsetof(Dirent{}.Ino), unsafe.<b>Sizeof</b>(Dirent{}.Ino))
+		<a href="../src/syscall/syscall_linux.go.html#line-877" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-877">#L877</a>: 	return readInt(buf, unsafe.Offsetof(Dirent{}.Reclen), unsafe.<b>Sizeof</b>(Dirent{}.Reclen))
+		<a href="../src/syscall/syscall_unix.go.html#line-339">syscall_unix.go#L339</a>: 	return setsockopt(fd, level, opt, unsafe.Pointer(tv), unsafe.<b>Sizeof</b>(*tv))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

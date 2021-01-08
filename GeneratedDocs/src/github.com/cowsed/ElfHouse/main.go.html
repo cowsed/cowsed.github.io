@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source: main.go in package github.com/cowsed/ElfHouse</title>
+<link href="../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre id="header"><code><span class="title">Source File</span>
+	main.go
+
+<span class="title">Belonging Package</span>
+	<a href="../../../../pkg/github.com/cowsed/ElfHouse.html">github.com/cowsed/ElfHouse</a>
+</code></pre>
+<style>input[type=radio] {display: none;}
+input[id=r0]:checked ~pre label[for=r0],
+input[id=r1]:checked ~pre label[for=r1],
+input[id=r2]:checked ~pre label[for=r2]
+{ background: #226; color: #ff8; padding-left: 1px;}
+</style><input id="r0" type="radio" name="g"/>
+<input id="r1" type="radio" name="g"/>
+<input id="r2" type="radio" name="g"/>
+
+<pre class="line-numbers">
+<span class="codeline" id="line-1"><code><span class="keyword">package</span> main</code></span>
+<span class="codeline" id="line-2"><code></code></span>
+<span class="codeline" id="line-3"><code><span class="keyword">import</span> (<span class="lit-string">"fmt"</span></code></span>
+<span class="codeline" id="line-4"><code>        <span class="lit-string">"github.com/cowsed/ElfHouse/FineSim/Beings"</span></code></span>
+<span class="codeline" id="line-5"><code></code></span>
+<span class="codeline" id="line-6"><code><span class="comment">//        "github.com/cowsed/ElfHouse/FineSim/Forms"</span></code></span>
+<span class="codeline" id="line-7"><code><span class="comment">//        "github.com/cowsed/ElfHouse/FineSim/AIs"</span></code></span>
+<span class="codeline" id="line-8"><code>        <span class="lit-string">"github.com/cowsed/ElfHouse/FineSim/Memory"</span></code></span>
+<span class="codeline" id="line-9"><code><span class="comment">//        "./FineSim/Beings/Forms"</span></code></span>
+<span class="codeline" id="line-10"><code><span class="comment">//        "./FineSim/Beings/AIs"</span></code></span>
+<span class="codeline" id="line-11"><code><span class="comment">//        "./Helpers/Time"</span></code></span>
+<span class="codeline" id="line-12"><code><span class="comment">//        "./Items/Food"</span></code></span>
+<span class="codeline" id="line-13"><code><span class="comment">//        "./FineSim/Locations"</span></code></span>
+<span class="codeline" id="line-14"><code>        <span class="lit-string">"github.com/cowsed/ElfHouse/Helpers/Grammar"</span></code></span>
+<span class="codeline" id="line-15"><code></code></span>
+<span class="codeline" id="line-16"><code><span class="comment">//        "./Helpers/Grammar"</span></code></span>
+<span class="codeline" id="line-17"><code><span class="comment">//        "./Helpers"</span></code></span>
+<span class="codeline" id="line-18"><code>    )</code></span>
+<span class="codeline" id="line-19"><code></code></span>
+<span class="codeline" id="line-20"><code><span class="keyword">func</span> <a href="../../../../use/github.com/cowsed/ElfHouse..main.html" class="ident">main</a>()  {</code></span>
+<span class="codeline" id="line-21"><code>    <span class="comment">//Test location</span></code></span>
+<span class="codeline" id="line-22"><code><span class="comment">    /*</span></code></span>
+<span class="codeline" id="line-23"><code><span class="comment">   o:=location.ConiferousForest</span></code></span>
+<span class="codeline" id="line-24"><code><span class="comment">    fmt.Println(o.Describe(2))</span></code></span>
+<span class="codeline" id="line-25"><code></code></span>
+<span class="codeline" id="line-26"><code><span class="comment">    fmt.Println("====")</span></code></span>
+<span class="codeline" id="line-27"><code></code></span>
+<span class="codeline" id="line-28"><code><span class="comment">    //Create test human</span></code></span>
+<span class="codeline" id="line-29"><code><span class="comment">    testDate:=time.Date{Year: 2004, Month: 3, Day: 16}</span></code></span>
+<span class="codeline" id="line-30"><code><span class="comment">    fmt.Println(testDate.GetDateString())</span></code></span>
+<span class="codeline" id="line-31"><code></code></span>
+<span class="codeline" id="line-32"><code><span class="comment">    fmt.Println("====")</span></code></span>
+<span class="codeline" id="line-33"><code><span class="comment">*/</span></code></span>
+<span class="codeline" id="line-34"><code><span class="comment">	/*</span></code></span>
+<span class="codeline" id="line-35"><code><span class="comment">	testBeing := beings.Human{</span></code></span>
+<span class="codeline" id="line-36"><code><span class="comment">		FirstName: "Samantha",</span></code></span>
+<span class="codeline" id="line-37"><code><span class="comment">		LastName:  "Johnson",</span></code></span>
+<span class="codeline" id="line-38"><code><span class="comment">		NickName:  "Sam",</span></code></span>
+<span class="codeline" id="line-39"><code><span class="comment">		Age:       22.6,</span></code></span>
+<span class="codeline" id="line-40"><code><span class="comment">		Gender:    "m",</span></code></span>
+<span class="codeline" id="line-41"><code><span class="comment">		Mind:       &amp;ai.NormalFollowerAI,</span></code></span>
+<span class="codeline" id="line-42"><code><span class="comment">		Form:       physicalform.Human,</span></code></span>
+<span class="codeline" id="line-43"><code><span class="comment">	}</span></code></span>
+<span class="codeline" id="line-44"><code><span class="comment">    */</span></code></span>
+<span class="codeline" id="line-45"><code>    <label for="r1" class="ident">testBeing</label>:=<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Beings.html" class="ident">beings</a>.<a href="FineSim/Beings/Premade.go.html#line-14" class="ident">BaseHuman</a></code></span>
+<span class="codeline" id="line-46"><code>	<a href="../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../fmt/print.go.html#line-273" class="ident">Println</a>(<label for="r1" class="ident">testBeing</label>.<a href="FineSim/Beings/Human.go.html#line-30" class="ident">Describe</a>(<span class="lit-number">1</span>))</code></span>
+<span class="codeline" id="line-47"><code>    <a href="../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../fmt/print.go.html#line-273" class="ident">Println</a>(<a href="../../../../pkg/github.com/cowsed/ElfHouse/Helpers/Grammar.html" class="ident">grammar</a>.<a href="Helpers/Grammar/pronouns.go.html#line-59" class="ident">GetPronouns</a>(<span class="lit-string">"m"</span>))</code></span>
+<span class="codeline" id="line-48"><code></code></span>
+<span class="codeline" id="line-49"><code>    <a href="../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../fmt/print.go.html#line-273" class="ident">Println</a>(<span class="lit-string">"===="</span>)</code></span>
+<span class="codeline" id="line-50"><code></code></span>
+<span class="codeline" id="line-51"><code>    <label for="r2" class="ident">MH</label>:=<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="FineSim/Memory/Premade.go.html#line-24" class="ident">BasicCommonSense</a> </code></span>
+<span class="codeline" id="line-52"><code>    <label for="r2" class="ident">MH</label>.<a href="FineSim/Memory/MemoryHolder.go.html#line-22" class="ident">AddMemory</a>(<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="FineSim/Memory/Premade.go.html#line-3" class="ident">TestMemory</a>) </code></span>
+<span class="codeline" id="line-53"><code>    <label for="r2" class="ident">MH</label>.<a href="FineSim/Memory/MemoryHolder.go.html#line-22" class="ident">AddMemory</a>(<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="FineSim/Memory/Premade.go.html#line-9" class="ident">TestMemory2</a>)</code></span>
+<span class="codeline" id="line-54"><code>    <label for="r2" class="ident">MH</label>.<a href="FineSim/Memory/MemoryHolder.go.html#line-22" class="ident">AddMemory</a>(<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="FineSim/Memory/Premade.go.html#line-16" class="ident">PineTreeMemory</a>)</code></span>
+<span class="codeline" id="line-55"><code></code></span>
+<span class="codeline" id="line-56"><code>    <label for="r2" class="ident">MH</label>.<a href="FineSim/Memory/MemoryHolder.go.html#line-37" class="ident">Debug</a>()</code></span>
+<span class="codeline" id="line-57"><code>    <a href="../../../../pkg/fmt.html" class="ident">fmt</a>.<a href="../../../fmt/print.go.html#line-273" class="ident">Println</a>(<label for="r2" class="ident">MH</label>.<a href="FineSim/Memory/MemoryHolder.go.html#line-31" class="ident">Query</a>(<a href="../../../../pkg/github.com/cowsed/ElfHouse/FineSim/Memory.html" class="ident">memory</a>.<a href="FineSim/Memory/Premade.go.html#line-26" class="ident">TestRequest</a>))</code></span>
+<span class="codeline" id="line-58"><code>}</code></span>
+</pre><pre id="footer">
+<table><tr><td><img src="../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

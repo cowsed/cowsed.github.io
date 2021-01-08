@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: fmt</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>fmt</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../index.html#pkg-fmt">fmt</a><i> (on <a href="https://golang.org/pkg/fmt/" target="_blank">golang.org</a> and <a href="https://pkg.go.dev/fmt" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../dep/fmt.html">9 packages</a>, and imported by <a href="../dep/fmt.html#imported-by">6 packages</a>
+
+<span class="title">Involved Source Files</span>
+	<a href="../src/fmt/doc.go.html#doc">d-&gt;</a> <a href="../src/fmt/doc.go.html">doc.go</a>
+	    <a href="../src/fmt/errors.go.html">errors.go</a>
+	    <a href="../src/fmt/format.go.html">format.go</a>
+	    <a href="../src/fmt/print.go.html">print.go</a>
+	    <a href="../src/fmt/scan.go.html">scan.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-Formatter" data-popularity="50">	<a href="../use/fmt..Formatter.html">type</a> <a href="../src/fmt/print.go.html#line-53">Formatter</a> <b<i>(interface)</i></b>
+		Formatter is the interface implemented by values with a custom formatter.
+		The implementation of Format may call Sprint(f) or Fprint(f) etc.
+		to generate its output.
+
+		<input type='checkbox' class="stat" id="Formatter-stat-methods"><label for="Formatter-stat-methods">One Exported Method</label><span id='Formatter-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/fmt/print.go.html#line-54">Format</a>(f <a href="#name-State">State</a>, c <a href="builtin.html#name-rune">rune</a>)</span></span></div>
+<div class="anchor" id="name-GoStringer" data-popularity="50">	<a href="../use/fmt..GoStringer.html">type</a> <a href="../src/fmt/print.go.html#line-70">GoStringer</a> <b<i>(interface)</i></b>
+		GoStringer is implemented by any value that has a GoString method,
+		which defines the Go syntax for that value.
+		The GoString method is used to print values passed as an operand
+		to a %#v format.
+
+		<input type='checkbox' class="stat" id="GoStringer-stat-methods"><label for="GoStringer-stat-methods">One Exported Method</label><span id='GoStringer-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/fmt/print.go.html#line-71">GoString</a>() <a href="builtin.html#name-string">string</a></span></span></div>
+<div class="anchor" id="name-Scanner" data-popularity="50">	<a href="../use/fmt..Scanner.html">type</a> <a href="../src/fmt/scan.go.html#line-55">Scanner</a> <b<i>(interface)</i></b>
+		Scanner is implemented by any value that has a Scan method, which scans
+		the input for the representation of a value and stores the result in the
+		receiver, which must be a pointer to be useful. The Scan method is called
+		for any argument to Scan, Scanf, or Scanln that implements it.
+
+		<input type='checkbox' class="stat" id="Scanner-stat-methods"><label for="Scanner-stat-methods">One Exported Method</label><span id='Scanner-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/fmt/scan.go.html#line-56">Scan</a>(state <a href="#name-ScanState">ScanState</a>, verb <a href="builtin.html#name-rune">rune</a>) <a href="builtin.html#name-error">error</a></span></span></div>
+<div class="anchor" id="name-ScanState" data-popularity="485">	<a href="../use/fmt..ScanState.html">type</a> <a href="../src/fmt/scan.go.html#line-21">ScanState</a> <b<i>(interface)</i></b>
+		ScanState represents the scanner state passed to custom scanners.
+		Scanners may do rune-at-a-time scanning or ask the ScanState
+		to discover the next space-delimited token.
+
+		<input type='checkbox' class="stat" id="ScanState-stat-methods"><label for="ScanState-stat-methods">Exported Methods (6)</label><span id='ScanState-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="ScanState-stat-method-Read"><label for="ScanState-stat-method-Read">( T) <a href="../src/fmt/scan.go.html#line-48">Read</a>(buf []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='ScanState-stat-method-Read-content' class="stat-content">
+				Because ReadRune is implemented by the interface, Read should never be
+				called by the scanning routines and a valid implementation of
+				ScanState may choose always to return an error from Read.
+</span>
+			<input type='checkbox' class="stat" id="ScanState-stat-method-ReadRune"><label for="ScanState-stat-method-ReadRune">( T) <a href="../src/fmt/scan.go.html#line-26">ReadRune</a>() (r <a href="builtin.html#name-rune">rune</a>, size <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='ScanState-stat-method-ReadRune-content' class="stat-content">
+				ReadRune reads the next rune (Unicode code point) from the input.
+				If invoked during Scanln, Fscanln, or Sscanln, ReadRune() will
+				return EOF after returning the first '\n' or when reading beyond
+				the specified width.
+</span>
+			<input type='checkbox' class="stat" id="ScanState-stat-method-SkipSpace"><label for="ScanState-stat-method-SkipSpace">( T) <a href="../src/fmt/scan.go.html#line-32">SkipSpace</a>()</label><span id='ScanState-stat-method-SkipSpace-content' class="stat-content">
+				SkipSpace skips space in the input. Newlines are treated appropriately
+				for the operation being performed; see the package documentation
+				for more information.
+</span>
+			<input type='checkbox' class="stat" id="ScanState-stat-method-Token"><label for="ScanState-stat-method-Token">( T) <a href="../src/fmt/scan.go.html#line-41">Token</a>(skipSpace <a href="builtin.html#name-bool">bool</a>, f func(<a href="builtin.html#name-rune">rune</a>) <a href="builtin.html#name-bool">bool</a>) (token []<a href="builtin.html#name-byte">byte</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='ScanState-stat-method-Token-content' class="stat-content">
+				Token skips space in the input if skipSpace is true, then returns the
+				run of Unicode code points c satisfying f(c).  If f is nil,
+				!unicode.IsSpace(c) is used; that is, the token will hold non-space
+				characters. Newlines are treated appropriately for the operation being
+				performed; see the package documentation for more information.
+				The returned slice points to shared data that may be overwritten
+				by the next call to Token, a call to a Scan function using the ScanState
+				as input, or when the calling Scan method returns.
+</span>
+			<input type='checkbox' class="stat" id="ScanState-stat-method-UnreadRune"><label for="ScanState-stat-method-UnreadRune">( T) <a href="../src/fmt/scan.go.html#line-28">UnreadRune</a>() <a href="builtin.html#name-error">error</a></label><span id='ScanState-stat-method-UnreadRune-content' class="stat-content">
+				UnreadRune causes the next call to ReadRune to return the same rune.
+</span>
+			<input type='checkbox' class="stat" id="ScanState-stat-method-Width"><label for="ScanState-stat-method-Width">( T) <a href="../src/fmt/scan.go.html#line-44">Width</a>() (wid <a href="builtin.html#name-int">int</a>, ok <a href="builtin.html#name-bool">bool</a>)</label><span id='ScanState-stat-method-Width-content' class="stat-content">
+				Width returns the value of the width option and whether it has been set.
+				The unit is Unicode code points.
+</span></span>
+		<input type='checkbox' class="stat" id="ScanState-stat-impls"><label for="ScanState-stat-impls">Implements (3+)</label><span id='ScanState-stat-impls-content' class="stat-content">
+			 T : io.<a href="io.html#name-Reader">Reader</a>
+			 T : io.<a href="io.html#name-RuneReader">RuneReader</a>
+			 T : io.<a href="io.html#name-RuneScanner">RuneScanner</a></span>
+		<input type='checkbox' class="stat" id="ScanState-stat-params"><label for="ScanState-stat-params">As Inputs Of (1+)</label><span id='ScanState-stat-params-content' class="stat-content">
+			func <a href="#name-Scanner">Scanner</a>.<a href="../src/fmt/scan.go.html#line-56">Scan</a>(state <b>ScanState</b>, verb <a href="builtin.html#name-rune">rune</a>) <a href="builtin.html#name-error">error</a></span></div>
+<div class="anchor" id="name-State" data-popularity="285">	<a href="../use/fmt..State.html">type</a> <a href="../src/fmt/print.go.html#line-38">State</a> <b<i>(interface)</i></b>
+		State represents the printer state passed to custom formatters.
+		It provides access to the io.Writer interface plus information about
+		the flags and options for the operand's format specifier.
+
+		<input type='checkbox' class="stat" id="State-stat-methods"><label for="State-stat-methods">Exported Methods (4)</label><span id='State-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="State-stat-method-Flag"><label for="State-stat-method-Flag">( T) <a href="../src/fmt/print.go.html#line-47">Flag</a>(c <a href="builtin.html#name-int">int</a>) <a href="builtin.html#name-bool">bool</a></label><span id='State-stat-method-Flag-content' class="stat-content">
+				Flag reports whether the flag c, a character, has been set.
+</span>
+			<input type='checkbox' class="stat" id="State-stat-method-Precision"><label for="State-stat-method-Precision">( T) <a href="../src/fmt/print.go.html#line-44">Precision</a>() (prec <a href="builtin.html#name-int">int</a>, ok <a href="builtin.html#name-bool">bool</a>)</label><span id='State-stat-method-Precision-content' class="stat-content">
+				Precision returns the value of the precision option and whether it has been set.
+</span>
+			<input type='checkbox' class="stat" id="State-stat-method-Width"><label for="State-stat-method-Width">( T) <a href="../src/fmt/print.go.html#line-42">Width</a>() (wid <a href="builtin.html#name-int">int</a>, ok <a href="builtin.html#name-bool">bool</a>)</label><span id='State-stat-method-Width-content' class="stat-content">
+				Width returns the value of the width option and whether it has been set.
+</span>
+			<input type='checkbox' class="stat" id="State-stat-method-Write"><label for="State-stat-method-Write">( T) <a href="../src/fmt/print.go.html#line-40">Write</a>(b []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='State-stat-method-Write-content' class="stat-content">
+				Write is the function to call to emit formatted output to be printed.
+</span></span>
+		<input type='checkbox' class="stat" id="State-stat-impls"><label for="State-stat-impls">Implements (1+)</label><span id='State-stat-impls-content' class="stat-content">
+			 T : io.<a href="io.html#name-Writer">Writer</a></span>
+		<input type='checkbox' class="stat" id="State-stat-params"><label for="State-stat-params">As Inputs Of (1+)</label><span id='State-stat-params-content' class="stat-content">
+			func <a href="#name-Formatter">Formatter</a>.<a href="../src/fmt/print.go.html#line-54">Format</a>(f <b>State</b>, c <a href="builtin.html#name-rune">rune</a>)</span></div>
+<div class="anchor" id="name-Stringer" data-popularity="2300">	<a href="../use/fmt..Stringer.html">type</a> <a href="../src/fmt/print.go.html#line-62">Stringer</a> <b<i>(interface)</i></b>
+		Stringer is implemented by any value that has a String method,
+		which defines the ``native'' format for that value.
+		The String method is used to print values passed as an operand
+		to any format that accepts a string or to an unformatted printer
+		such as Print.
+
+		<input type='checkbox' class="stat" id="Stringer-stat-methods"><label for="Stringer-stat-methods">One Exported Method</label><span id='Stringer-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/runtime/error.go.html#line-185">String</a>() <a href="builtin.html#name-string">string</a></span></span>
+		<input type='checkbox' class="stat" id="Stringer-stat-impledby"><label for="Stringer-stat-impledby">Implemented By (15+)</label><span id='Stringer-stat-impledby-content' class="stat-content">
+			internal/reflectlite.<a href="internal/reflectlite.html#name-Type">Type</a> <i>(interface)</i>
+			os.<a href="os.html#name-FileMode">FileMode</a>
+			os.(*<a href="os.html#name-ProcessState">ProcessState</a>)
+			os.<a href="os.html#name-Signal">Signal</a> <i>(interface)</i>
+			reflect.<a href="reflect.html#name-ChanDir">ChanDir</a>
+			reflect.<a href="reflect.html#name-Kind">Kind</a>
+			reflect.<a href="reflect.html#name-Type">Type</a> <i>(interface)</i>
+			reflect.<a href="reflect.html#name-Value">Value</a>
+			strings.(*<a href="strings.html#name-Builder">Builder</a>)
+			syscall.<a href="syscall.html#name-Signal">Signal</a>
+			time.<a href="time.html#name-Duration">Duration</a>
+			time.(*<a href="time.html#name-Location">Location</a>)
+			time.<a href="time.html#name-Month">Month</a>
+			time.<a href="time.html#name-Time">Time</a>
+			time.<a href="time.html#name-Weekday">Weekday</a></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-Errorf">	 <a href="../use/fmt..Errorf.html">func</a> <a href="../src/fmt/errors.go.html#line-17">Errorf</a>(format <a href="builtin.html#name-string">string</a>, a ...interface{}) <a href="builtin.html#name-error">error</a>
+		Errorf formats according to a format specifier and returns the string as a
+		value that satisfies error.
+
+		If the format specifier includes a %w verb with an error operand,
+		the returned error will implement an Unwrap method returning the operand. It is
+		invalid to include more than one %w verb or to supply it with an operand
+		that does not implement the error interface. The %w verb is otherwise
+		a synonym for %v.</div>
+<div class="anchor" id="name-Fprint">	 <a href="../use/fmt..Fprint.html">func</a> <a href="../src/fmt/print.go.html#line-230">Fprint</a>(w <a href="io.html">io</a>.<a href="io.html#name-Writer">Writer</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fprint formats using the default formats for its operands and writes to w.
+		Spaces are added between operands when neither is a string.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Fprintf">	 <a href="../use/fmt..Fprintf.html">func</a> <a href="../src/fmt/print.go.html#line-202">Fprintf</a>(w <a href="io.html">io</a>.<a href="io.html#name-Writer">Writer</a>, format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fprintf formats according to a format specifier and writes to w.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Fprintln">	 <a href="../use/fmt..Fprintln.html">func</a> <a href="../src/fmt/print.go.html#line-262">Fprintln</a>(w <a href="io.html">io</a>.<a href="io.html#name-Writer">Writer</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fprintln formats using the default formats for its operands and writes to w.
+		Spaces are always added between operands and a newline is appended.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Fscan">	 <a href="../use/fmt..Fscan.html">func</a> <a href="../src/fmt/scan.go.html#line-121">Fscan</a>(r <a href="io.html">io</a>.<a href="io.html#name-Reader">Reader</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fscan scans text read from r, storing successive space-separated
+		values into successive arguments. Newlines count as space. It
+		returns the number of items successfully scanned. If that is less
+		than the number of arguments, err will report why.</div>
+<div class="anchor" id="name-Fscanf">	 <a href="../use/fmt..Fscanf.html">func</a> <a href="../src/fmt/scan.go.html#line-141">Fscanf</a>(r <a href="io.html">io</a>.<a href="io.html#name-Reader">Reader</a>, format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fscanf scans text read from r, storing successive space-separated
+		values into successive arguments as determined by the format. It
+		returns the number of items successfully parsed.
+		Newlines in the input must match newlines in the format.</div>
+<div class="anchor" id="name-Fscanln">	 <a href="../use/fmt..Fscanln.html">func</a> <a href="../src/fmt/scan.go.html#line-130">Fscanln</a>(r <a href="io.html">io</a>.<a href="io.html#name-Reader">Reader</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Fscanln is similar to Fscan, but stops scanning at a newline and
+		after the final item there must be a newline or EOF.</div>
+<div class="anchor" id="name-Print">	 <a href="../use/fmt..Print.html">func</a> <a href="../src/fmt/print.go.html#line-241">Print</a>(a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Print formats using the default formats for its operands and writes to standard output.
+		Spaces are added between operands when neither is a string.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Printf">	 <a href="../use/fmt..Printf.html">func</a> <a href="../src/fmt/print.go.html#line-212">Printf</a>(format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Printf formats according to a format specifier and writes to standard output.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Println">	 <a href="../use/fmt..Println.html">func</a> <a href="../src/fmt/print.go.html#line-273">Println</a>(a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Println formats using the default formats for its operands and writes to standard output.
+		Spaces are always added between operands and a newline is appended.
+		It returns the number of bytes written and any write error encountered.</div>
+<div class="anchor" id="name-Scan">	 <a href="../use/fmt..Scan.html">func</a> <a href="../src/fmt/scan.go.html#line-63">Scan</a>(a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Scan scans text read from standard input, storing successive
+		space-separated values into successive arguments. Newlines count
+		as space. It returns the number of items successfully scanned.
+		If that is less than the number of arguments, err will report why.</div>
+<div class="anchor" id="name-Scanf">	 <a href="../use/fmt..Scanf.html">func</a> <a href="../src/fmt/scan.go.html#line-80">Scanf</a>(format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Scanf scans text read from standard input, storing successive
+		space-separated values into successive arguments as determined by
+		the format. It returns the number of items successfully scanned.
+		If that is less than the number of arguments, err will report why.
+		Newlines in the input must match newlines in the format.
+		The one exception: the verb %c always scans the next rune in the
+		input, even if it is a space (or tab etc.) or newline.</div>
+<div class="anchor" id="name-Scanln">	 <a href="../use/fmt..Scanln.html">func</a> <a href="../src/fmt/scan.go.html#line-69">Scanln</a>(a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Scanln is similar to Scan, but stops scanning at a newline and
+		after the final item there must be a newline or EOF.</div>
+<div class="anchor" id="name-Sprint">	 <a href="../use/fmt..Sprint.html">func</a> <a href="../src/fmt/print.go.html#line-247">Sprint</a>(a ...interface{}) <a href="builtin.html#name-string">string</a>
+		Sprint formats using the default formats for its operands and returns the resulting string.
+		Spaces are added between operands when neither is a string.</div>
+<div class="anchor" id="name-Sprintf">	 <a href="../use/fmt..Sprintf.html">func</a> <a href="../src/fmt/print.go.html#line-217">Sprintf</a>(format <a href="builtin.html#name-string">string</a>, a ...interface{}) <a href="builtin.html#name-string">string</a>
+		Sprintf formats according to a format specifier and returns the resulting string.</div>
+<div class="anchor" id="name-Sprintln">	 <a href="../use/fmt..Sprintln.html">func</a> <a href="../src/fmt/print.go.html#line-279">Sprintln</a>(a ...interface{}) <a href="builtin.html#name-string">string</a>
+		Sprintln formats using the default formats for its operands and returns the resulting string.
+		Spaces are always added between operands and a newline is appended.</div>
+<div class="anchor" id="name-Sscan">	 <a href="../use/fmt..Sscan.html">func</a> <a href="../src/fmt/scan.go.html#line-99">Sscan</a>(str <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Sscan scans the argument string, storing successive space-separated
+		values into successive arguments. Newlines count as space. It
+		returns the number of items successfully scanned. If that is less
+		than the number of arguments, err will report why.</div>
+<div class="anchor" id="name-Sscanf">	 <a href="../use/fmt..Sscanf.html">func</a> <a href="../src/fmt/scan.go.html#line-113">Sscanf</a>(str <a href="builtin.html#name-string">string</a>, format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Sscanf scans the argument string, storing successive space-separated
+		values into successive arguments as determined by the format. It
+		returns the number of items successfully parsed.
+		Newlines in the input must match newlines in the format.</div>
+<div class="anchor" id="name-Sscanln">	 <a href="../use/fmt..Sscanln.html">func</a> <a href="../src/fmt/scan.go.html#line-105">Sscanln</a>(str <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		Sscanln is similar to Sscan, but stops scanning at a newline and
+		after the final item there must be a newline or EOF.</div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

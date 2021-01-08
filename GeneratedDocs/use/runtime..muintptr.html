@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.muintptr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-297">muintptr</a></b></span>
+
+14 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgc.go.html#line-1866">mgc.go#L1866</a>: 		m      <b>muintptr</b> // Release this m on park.
+		<a href="../src/runtime/proc.go.html#line-1768">proc.go#L1768</a>: 	newm <b>muintptr</b>
+		<a href="../src/runtime/runtime2.go.html#line-297">runtime2.go#L297</a>: type <b>muintptr</b> uintptr
+		<a href="../src/runtime/runtime2.go.html#line-300" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-300">#L300</a>: func (mp <b>muintptr</b>) ptr() *m { return (*m)(unsafe.Pointer(mp)) }
+		<a href="../src/runtime/runtime2.go.html#line-303" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-303">#L303</a>: func (mp *<b>muintptr</b>) set(m *m) { *mp = <b>muintptr</b>(unsafe.Pointer(m)) }
+		<a href="../src/runtime/runtime2.go.html#line-310" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-310">#L310</a>: 	(*<b>muintptr</b>)(unsafe.Pointer(mp)).set(new)
+		<a href="../src/runtime/runtime2.go.html#line-460" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-460">#L460</a>: 	lockedm        <b>muintptr</b>
+		<a href="../src/runtime/runtime2.go.html#line-527" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-527">#L527</a>: 	schedlink     <b>muintptr</b>
+		<a href="../src/runtime/runtime2.go.html#line-532" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-532">#L532</a>: 	nextwaitm     <b>muintptr</b>    // next m waiting for lock
+		<a href="../src/runtime/runtime2.go.html#line-577" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-577">#L577</a>: 	m           <b>muintptr</b>   // back-link to associated m (nil if idle)
+		<a href="../src/runtime/runtime2.go.html#line-709" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-709">#L709</a>: 	midle        <b>muintptr</b> // idle m's waiting for work
+		<a href="../src/runtime/rwmutex.go.html#line-20">rwmutex.go#L20</a>: 	readers    <b>muintptr</b> // list of pending readers
+		<a href="../src/runtime/rwmutex.go.html#line-24" class="path-duplicate">rwmutex.go</a><a href="../src/runtime/rwmutex.go.html#line-24">#L24</a>: 	writer <b>muintptr</b> // pending writer waiting for completing readers
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

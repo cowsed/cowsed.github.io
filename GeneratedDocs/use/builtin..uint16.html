@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.uint16</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-uint16">uint16</a></b></span>
+
+184 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-689">print.go#L689</a>: 	case <b>uint16</b>:
+		<a href="../src/fmt/scan.go.html#line-267">scan.go#L267</a>: var space = [][2]<b>uint16</b>{
+		<a href="../src/fmt/scan.go.html#line-284" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-284">#L284</a>: 	rx := <b>uint16</b>(r)
+		<a href="../src/fmt/scan.go.html#line-989" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-989">#L989</a>: 	case *<b>uint16</b>:
+		<a href="../src/fmt/scan.go.html#line-990" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-990">#L990</a>: 		*v = <b>uint16</b>(s.scanUint(verb, 16))
+
+	<a href="../pkg/internal/reflectlite.html">internal/reflectlite</a>
+		<a href="../src/internal/reflectlite/type.go.html#line-181">type.go#L181</a>: 	mcount  <b>uint16</b>  // number of methods
+		<a href="../src/internal/reflectlite/type.go.html#line-182" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-182">#L182</a>: 	xcount  <b>uint16</b>  // number of exported methods
+		<a href="../src/internal/reflectlite/type.go.html#line-224" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-224">#L224</a>: 	inCount  <b>uint16</b>
+		<a href="../src/internal/reflectlite/type.go.html#line-225" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-225">#L225</a>: 	outCount <b>uint16</b> // top bit is set if last input parameter is ...
+		<a href="../src/internal/reflectlite/type.go.html#line-251" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-251">#L251</a>: 	bucketsize <b>uint16</b> // size of bucket
+		<a href="../src/internal/reflectlite/type.go.html#line-325" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-325">#L325</a>: 	return int(<b>uint16</b>(*n.data(1, "name len field"))&lt;&lt;8 | <b>uint16</b>(*n.data(2, "name len field")))
+		<a href="../src/internal/reflectlite/type.go.html#line-333" class="path-duplicate">type.go</a><a href="../src/internal/reflectlite/type.go.html#line-333">#L333</a>: 	return int(<b>uint16</b>(*n.data(off, "name taglen field"))&lt;&lt;8 | <b>uint16</b>(*n.data(off+1, "name taglen field")))
+
+	<a href="../pkg/math/bits.html">math/bits</a>
+		<a href="../src/math/bits/bits.go.html#line-25">bits.go#L25</a>: func LeadingZeros16(x <b>uint16</b>) int { return 16 - Len16(x) }
+		<a href="../src/math/bits/bits.go.html#line-66" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-66">#L66</a>: func TrailingZeros16(x <b>uint16</b>) int {
+		<a href="../src/math/bits/bits.go.html#line-124" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-124">#L124</a>: func OnesCount16(x <b>uint16</b>) int {
+		<a href="../src/math/bits/bits.go.html#line-191" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-191">#L191</a>: func RotateLeft16(x <b>uint16</b>, k int) <b>uint16</b> {
+		<a href="../src/math/bits/bits.go.html#line-233" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-233">#L233</a>: func Reverse16(x <b>uint16</b>) <b>uint16</b> {
+		<a href="../src/math/bits/bits.go.html#line-234" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-234">#L234</a>: 	return <b>uint16</b>(rev8tab[x&gt;&gt;8]) | <b>uint16</b>(rev8tab[x&0xff])<<8
+		<a href="../src/math/bits/bits.go.html#line-270" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-270">#L270</a>: func ReverseBytes16(x <b>uint16</b>) <b>uint16</b> {
+		<a href="../src/math/bits/bits.go.html#line-309" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-309">#L309</a>: func Len16(x <b>uint16</b>) (n int) {
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-333">type.go#L333</a>: 	mcount  <b>uint16</b>  // number of methods
+		<a href="../src/reflect/type.go.html#line-334" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-334">#L334</a>: 	xcount  <b>uint16</b>  // number of exported methods
+		<a href="../src/reflect/type.go.html#line-376" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-376">#L376</a>: 	inCount  <b>uint16</b>
+		<a href="../src/reflect/type.go.html#line-377" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-377">#L377</a>: 	outCount <b>uint16</b> // top bit is set if last input parameter is ...
+		<a href="../src/reflect/type.go.html#line-403" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-403">#L403</a>: 	bucketsize <b>uint16</b> // size of bucket
+		<a href="../src/reflect/type.go.html#line-477" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-477">#L477</a>: 	return int(<b>uint16</b>(*n.data(1, "name len field"))&lt;&lt;8 | <b>uint16</b>(*n.data(2, "name len field")))
+		<a href="../src/reflect/type.go.html#line-485" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-485">#L485</a>: 	return int(<b>uint16</b>(*n.data(off, "name taglen field"))&lt;&lt;8 | <b>uint16</b>(*n.data(off+1, "name taglen field")))
+		<a href="../src/reflect/type.go.html#line-1883" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1883">#L1883</a>: 	mt.bucketsize = <b>uint16</b>(mt.bucket.size)
+		<a href="../src/reflect/type.go.html#line-1996" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1996">#L1996</a>: 	ft.inCount = <b>uint16</b>(len(in))
+		<a href="../src/reflect/type.go.html#line-1997" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1997">#L1997</a>: 	ft.outCount = <b>uint16</b>(len(out))
+		<a href="../src/reflect/type.go.html#line-2610" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2610">#L2610</a>: 	ut.mcount = <b>uint16</b>(len(methods))
+		<a href="../src/reflect/value.go.html#line-1721">value.go#L1721</a>: 		*(*<b>uint16</b>)(v.ptr) = <b>uint16</b>(x)
+		<a href="../src/reflect/value.go.html#line-1943" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1943">#L1943</a>: 		return uint64(*(*<b>uint16</b>)(p))
+		<a href="../src/reflect/value.go.html#line-2549" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2549">#L2549</a>: 		*(*<b>uint16</b>)(ptr) = <b>uint16</b>(bits)
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/chan.go.html#line-36">chan.go#L36</a>: 	elemsize <b>uint16</b>
+		<a href="../src/runtime/chan.go.html#line-109" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-109">#L109</a>: 	c.elemsize = <b>uint16</b>(elem.size)
+		<a href="../src/runtime/debuglog.go.html#line-239">debuglog.go#L239</a>: func (l *dlogger) u16(x <b>uint16</b>) *dlogger {
+		<a href="../src/runtime/debuglog.go.html#line-513" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-513">#L513</a>: func (r *debugLogReader) readUint16LEAt(pos uint64) <b>uint16</b> {
+		<a href="../src/runtime/debuglog.go.html#line-514" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-514">#L514</a>: 	return <b>uint16</b>(r.data[pos%uint64(len(r.data))]) |
+		<a href="../src/runtime/debuglog.go.html#line-515" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-515">#L515</a>: 		<b>uint16</b>(r.data[(pos+1)%uint64(len(r.data))])<<8
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-156">defs_linux_amd64.go#L156</a>: 	significand [4]<b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-157" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-157">#L157</a>: 	exponent    <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-158" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-158">#L158</a>: 	padding     [3]<b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-166" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-166">#L166</a>: 	cwd       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-167" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-167">#L167</a>: 	swd       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-168" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-168">#L168</a>: 	ftw       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-169" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-169">#L169</a>: 	fop       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-180" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-180">#L180</a>: 	significand [4]<b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-181" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-181">#L181</a>: 	exponent    <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-182" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-182">#L182</a>: 	padding     [3]<b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-190" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-190">#L190</a>: 	cwd       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-191" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-191">#L191</a>: 	swd       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-192" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-192">#L192</a>: 	ftw       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-193" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-193">#L193</a>: 	fop       <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-204" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-204">#L204</a>: 	significand [4]<b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-205" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-205">#L205</a>: 	exponent    <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-249" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-249">#L249</a>: 	cs          <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-250" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-250">#L250</a>: 	gs          <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-251" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-251">#L251</a>: 	fs          <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-252" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-252">#L252</a>: 	__pad0      <b>uint16</b>
+		<a href="../src/runtime/defs_linux_amd64.go.html#line-262" class="path-duplicate">defs_linux_amd64.go</a><a href="../src/runtime/defs_linux_amd64.go.html#line-262">#L262</a>: 	family <b>uint16</b>
+		<a href="../src/runtime/error.go.html#line-211">error.go#L211</a>: 	case <b>uint16</b>:
+		<a href="../src/runtime/error.go.html#line-258" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-258">#L258</a>: 		print(typestring, "(", *(*<b>uint16</b>)(eface.data), ")")
+		<a href="../src/runtime/iface.go.html#line-290">iface.go#L290</a>: 	uint16InterfacePtr <b>uint16</b>
+		<a href="../src/runtime/iface.go.html#line-334" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-334">#L334</a>: func convT16(val <b>uint16</b>) (x unsafe.Pointer) {
+		<a href="../src/runtime/iface.go.html#line-335" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-335">#L335</a>: 	if val &lt; <b>uint16</b>(len(staticuint64s)) {
+		<a href="../src/runtime/iface.go.html#line-342" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-342">#L342</a>: 		*(*<b>uint16</b>)(x) = val
+		<a href="../src/runtime/map.go.html#line-121">map.go#L121</a>: 	noverflow <b>uint16</b> // approximate number of overflow buckets; see incrnoverflow for details
+		<a href="../src/runtime/map.go.html#line-1068" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1068">#L1068</a>: func tooManyOverflowBuckets(noverflow <b>uint16</b>, B uint8) bool {
+		<a href="../src/runtime/map.go.html#line-1077" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1077">#L1077</a>: 	return noverflow &gt;= <b>uint16</b>(1)<<(B&15)
+		<a href="../src/runtime/mgcsweep.go.html#line-462">mgcsweep.go#L462</a>: 	nalloc := <b>uint16</b>(s.countAlloc())
+		<a href="../src/runtime/mgcsweep.go.html#line-696" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-696">#L696</a>: 	nalloc := <b>uint16</b>(s.countAlloc())
+		<a href="../src/runtime/mheap.go.html#line-474">mheap.go#L474</a>: 	divMul      <b>uint16</b>        // for divide by elemsize - divMagic.mul
+		<a href="../src/runtime/mheap.go.html#line-475" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-475">#L475</a>: 	baseMask    <b>uint16</b>        // if non-0, elemsize is a power of 2, & this will get object allocation base
+		<a href="../src/runtime/mheap.go.html#line-476" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-476">#L476</a>: 	allocCount  <b>uint16</b>        // number of allocated objects
+		<a href="../src/runtime/mheap.go.html#line-1639" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1639">#L1639</a>: 	offset <b>uint16</b>   // span offset of object
+		<a href="../src/runtime/mheap.go.html#line-1701" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1701">#L1701</a>: 	s.offset = <b>uint16</b>(offset)
+		<a href="../src/runtime/runtime1.go.html#line-141">runtime1.go#L141</a>: 		d     <b>uint16</b>
+		<a href="../src/runtime/runtime1.go.html#line-149" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-149">#L149</a>: 		l     *<b>uint16</b>
+		<a href="../src/runtime/select.go.html#line-32">select.go#L32</a>: 	kind        <b>uint16</b>
+		<a href="../src/runtime/select.go.html#line-46" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-46">#L46</a>: func sellock(scases []scase, lockorder []<b>uint16</b>) {
+		<a href="../src/runtime/select.go.html#line-57" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-57">#L57</a>: func selunlock(scases []scase, lockorder []<b>uint16</b>) {
+		<a href="../src/runtime/select.go.html#line-133" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-133">#L133</a>: func selectgo(cas0 *scase, order0 *<b>uint16</b>, ncases int) (int, bool) {
+		<a href="../src/runtime/select.go.html#line-141" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-141">#L141</a>: 	order1 := (*[1 &lt;&lt; 17]<b>uint16</b>)(unsafe.Pointer(order0))
+		<a href="../src/runtime/select.go.html#line-176" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-176">#L176</a>: 		pollorder[j] = <b>uint16</b>(i)
+		<a href="../src/runtime/select.go.html#line-550" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-550">#L550</a>: 	order := make([]<b>uint16</b>, 2*len(cases))
+		<a href="../src/runtime/sizeclasses.go.html#line-83">sizeclasses.go#L83</a>: var class_to_size = [_NumSizeClasses]<b>uint16</b>{0, 8, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 896, 1024, 1152, 1280, 1408, 1536, 1792, 2048, 2304, 2688, 3072, 3200, 3456, 4096, 4864, 5376, 6144, 6528, 6784, 6912, 8192, 9472, 9728, 10240, 10880, 12288, 13568, 14336, 16384, 18432, 19072, 20480, 21760, 24576, 27264, 28672, 32768}
+		<a href="../src/runtime/sizeclasses.go.html#line-89" class="path-duplicate">sizeclasses.go</a><a href="../src/runtime/sizeclasses.go.html#line-89">#L89</a>: 	mul      <b>uint16</b>
+		<a href="../src/runtime/sizeclasses.go.html#line-90" class="path-duplicate">sizeclasses.go</a><a href="../src/runtime/sizeclasses.go.html#line-90">#L90</a>: 	baseMask <b>uint16</b>
+		<a href="../src/runtime/string.go.html#line-464">string.go#L464</a>: func findnullw(s *<b>uint16</b>) int {
+		<a href="../src/runtime/string.go.html#line-468" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-468">#L468</a>: 	p := (*[maxAlloc/2/2 - 1]<b>uint16</b>)(unsafe.Pointer(s))
+		<a href="../src/runtime/string.go.html#line-483" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-483">#L483</a>: func gostringw(strw *<b>uint16</b>) string {
+		<a href="../src/runtime/string.go.html#line-485" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-485">#L485</a>: 	str := (*[maxAlloc/2/2 - 1]<b>uint16</b>)(unsafe.Pointer(strw))
+		<a href="../src/runtime/type.go.html#line-348">type.go#L348</a>: 	mcount  <b>uint16</b> // number of methods
+		<a href="../src/runtime/type.go.html#line-349" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-349">#L349</a>: 	xcount  <b>uint16</b> // number of exported methods
+		<a href="../src/runtime/type.go.html#line-374" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-374">#L374</a>: 	bucketsize <b>uint16</b> // size of bucket
+		<a href="../src/runtime/type.go.html#line-416" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-416">#L416</a>: 	inCount  <b>uint16</b>
+		<a href="../src/runtime/type.go.html#line-417" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-417">#L417</a>: 	outCount <b>uint16</b>
+		<a href="../src/runtime/type.go.html#line-456" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-456">#L456</a>: 	return int(<b>uint16</b>(*n.data(1))&lt;&lt;8 | <b>uint16</b>(*n.data(2)))
+		<a href="../src/runtime/type.go.html#line-464" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-464">#L464</a>: 	return int(<b>uint16</b>(*n.data(off))&lt;&lt;8 | <b>uint16</b>(*n.data(off + 1)))
+		<a href="../src/runtime/vdso_elf64.go.html#line-16">vdso_elf64.go#L16</a>: 	st_shndx <b>uint16</b>
+		<a href="../src/runtime/vdso_elf64.go.html#line-22" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-22">#L22</a>: 	vd_version <b>uint16</b> /* Version revision */
+		<a href="../src/runtime/vdso_elf64.go.html#line-23" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-23">#L23</a>: 	vd_flags   <b>uint16</b> /* Version information */
+		<a href="../src/runtime/vdso_elf64.go.html#line-24" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-24">#L24</a>: 	vd_ndx     <b>uint16</b> /* Version Index */
+		<a href="../src/runtime/vdso_elf64.go.html#line-25" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-25">#L25</a>: 	vd_cnt     <b>uint16</b> /* Number of associated aux entries */
+		<a href="../src/runtime/vdso_elf64.go.html#line-33" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-33">#L33</a>: 	e_type      <b>uint16</b>           /* Object file type */
+		<a href="../src/runtime/vdso_elf64.go.html#line-34" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-34">#L34</a>: 	e_machine   <b>uint16</b>           /* Architecture */
+		<a href="../src/runtime/vdso_elf64.go.html#line-40" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-40">#L40</a>: 	e_ehsize    <b>uint16</b>           /* ELF header size in bytes */
+		<a href="../src/runtime/vdso_elf64.go.html#line-41" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-41">#L41</a>: 	e_phentsize <b>uint16</b>           /* Program header table entry size */
+		<a href="../src/runtime/vdso_elf64.go.html#line-42" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-42">#L42</a>: 	e_phnum     <b>uint16</b>           /* Program header table entry count */
+		<a href="../src/runtime/vdso_elf64.go.html#line-43" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-43">#L43</a>: 	e_shentsize <b>uint16</b>           /* Section header table entry size */
+		<a href="../src/runtime/vdso_elf64.go.html#line-44" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-44">#L44</a>: 	e_shnum     <b>uint16</b>           /* Section header table entry count */
+		<a href="../src/runtime/vdso_elf64.go.html#line-45" class="path-duplicate">vdso_elf64.go</a><a href="../src/runtime/vdso_elf64.go.html#line-45">#L45</a>: 	e_shstrndx  <b>uint16</b>           /* Section header string table index */
+		<a href="../src/runtime/vdso_linux.go.html#line-97">vdso_linux.go#L97</a>: 	versym *[vdsoVerSymSize]<b>uint16</b>
+		<a href="../src/runtime/vdso_linux.go.html#line-113" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-113">#L113</a>: 	for i := <b>uint16</b>(0); i < hdr.e_phnum; i++ {
+		<a href="../src/runtime/vdso_linux.go.html#line-151" class="path-duplicate">vdso_linux.go</a><a href="../src/runtime/vdso_linux.go.html#line-151">#L151</a>: 			info.versym = (*[vdsoVerSymSize]<b>uint16</b>)(unsafe.Pointer(p))
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/isprint.go.html#line-11">isprint.go#L11</a>: var isPrint16 = []<b>uint16</b>{
+		<a href="../src/strconv/isprint.go.html#line-235" class="path-duplicate">isprint.go</a><a href="../src/strconv/isprint.go.html#line-235">#L235</a>: var isNotPrint16 = []<b>uint16</b>{
+		<a href="../src/strconv/isprint.go.html#line-598" class="path-duplicate">isprint.go</a><a href="../src/strconv/isprint.go.html#line-598">#L598</a>: var isNotPrint32 = []<b>uint16</b>{ // add 0x10000 to each entry
+		<a href="../src/strconv/isprint.go.html#line-692" class="path-duplicate">isprint.go</a><a href="../src/strconv/isprint.go.html#line-692">#L692</a>: var isGraphic = []<b>uint16</b>{
+		<a href="../src/strconv/quote.go.html#line-446">quote.go#L446</a>: func bsearch16(a []<b>uint16</b>, x <b>uint16</b>) int {
+		<a href="../src/strconv/quote.go.html#line-504" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-504">#L504</a>: 		rr, isPrint, isNotPrint := <b>uint16</b>(r), isPrint16, isNotPrint16
+		<a href="../src/strconv/quote.go.html#line-522" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-522">#L522</a>: 	j := bsearch16(isNotPrint, <b>uint16</b>(r))
+		<a href="../src/strconv/quote.go.html#line-523" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-523">#L523</a>: 	return j &gt;= len(isNotPrint) || isNotPrint[j] != <b>uint16</b>(r)
+		<a href="../src/strconv/quote.go.html#line-544" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-544">#L544</a>: 	rr := <b>uint16</b>(r)
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/lsf_linux.go.html#line-15">lsf_linux.go#L15</a>: 	return &amp;SockFilter{Code: <b>uint16</b>(code), K: uint32(k)}
+		<a href="../src/syscall/lsf_linux.go.html#line-20" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-20">#L20</a>: 	return &amp;SockFilter{Code: <b>uint16</b>(code), Jt: uint8(jt), Jf: uint8(jf), K: uint32(k)}
+		<a href="../src/syscall/lsf_linux.go.html#line-46" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-46">#L46</a>: 	flags <b>uint16</b>
+		<a href="../src/syscall/lsf_linux.go.html#line-63" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-63">#L63</a>: 		ifl.flags |= <b>uint16</b>(IFF_PROMISC)
+		<a href="../src/syscall/lsf_linux.go.html#line-65" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-65">#L65</a>: 		ifl.flags &amp;^= <b>uint16</b>(IFF_PROMISC)
+		<a href="../src/syscall/lsf_linux.go.html#line-77" class="path-duplicate">lsf_linux.go</a><a href="../src/syscall/lsf_linux.go.html#line-77">#L77</a>: 	p.Len = <b>uint16</b>(len(i))
+		<a href="../src/syscall/netlink_linux.go.html#line-32">netlink_linux.go#L32</a>: 	*(*<b>uint16</b>)(unsafe.Pointer(&b[4:6][0])) = rr.Header.Type
+		<a href="../src/syscall/netlink_linux.go.html#line-33" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-33">#L33</a>: 	*(*<b>uint16</b>)(unsafe.Pointer(&b[6:8][0])) = rr.Header.Flags
+		<a href="../src/syscall/netlink_linux.go.html#line-43" class="path-duplicate">netlink_linux.go</a><a href="../src/syscall/netlink_linux.go.html#line-43">#L43</a>: 	rr.Header.Type = <b>uint16</b>(proto)
+		<a href="../src/syscall/syscall_linux.go.html#line-415">syscall_linux.go#L415</a>: 	Protocol <b>uint16</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-417" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-417">#L417</a>: 	Hatype   <b>uint16</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-441" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-441">#L441</a>: 	Family <b>uint16</b>
+		<a href="../src/syscall/syscall_linux.go.html#line-442" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-442">#L442</a>: 	Pad    <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-137">ztypes_linux_amd64.go#L137</a>: 	Reclen    <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-158" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-158">#L158</a>: 	Family <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-159" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-159">#L159</a>: 	Port   <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-165" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-165">#L165</a>: 	Family   <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-166" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-166">#L166</a>: 	Port     <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-173" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-173">#L173</a>: 	Family <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-178" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-178">#L178</a>: 	Family   <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-179" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-179">#L179</a>: 	Protocol <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-181" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-181">#L181</a>: 	Hatype   <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-188" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-188">#L188</a>: 	Family <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-189" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-189">#L189</a>: 	Pad    <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-195" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-195">#L195</a>: 	Family <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-427" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-427">#L427</a>: 	Type  <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-428" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-428">#L428</a>: 	Flags <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-443" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-443">#L443</a>: 	Len  <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-444" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-444">#L444</a>: 	Type <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-448" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-448">#L448</a>: 	Len  <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-449" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-449">#L449</a>: 	Type <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-455" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-455">#L455</a>: 	Type       <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-482" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-482">#L482</a>: 	Len     <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-494" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-494">#L494</a>: 	Code <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-501" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-501">#L501</a>: 	Len       <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-559" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-559">#L559</a>: 	Procs     <b>uint16</b>
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-560" class="path-duplicate">ztypes_linux_amd64.go</a><a href="../src/syscall/ztypes_linux_amd64.go.html#line-560">#L560</a>: 	Pad       <b>uint16</b>
+
+	<a href="../pkg/unicode.html">unicode</a>
+		<a href="../src/unicode/letter.go.html#line-30">letter.go#L30</a>: 	Lo     <b>uint16</b>
+		<a href="../src/unicode/letter.go.html#line-31" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-31">#L31</a>: 	Hi     <b>uint16</b>
+		<a href="../src/unicode/letter.go.html#line-32" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-32">#L32</a>: 	Stride <b>uint16</b>
+		<a href="../src/unicode/letter.go.html#line-89" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-89">#L89</a>: func is16(ranges []Range16, r <b>uint16</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-158" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-158">#L158</a>: 		return is16(r16, <b>uint16</b>(r))
+		<a href="../src/unicode/letter.go.html#line-170" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-170">#L170</a>: 		return is16(r16[off:], <b>uint16</b>(r))
+		<a href="../src/unicode/letter.go.html#line-314" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-314">#L314</a>: 	From <b>uint16</b>
+		<a href="../src/unicode/letter.go.html#line-315" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-315">#L315</a>: 	To   <b>uint16</b>
+		<a href="../src/unicode/tables.go.html#line-7367">tables.go#L7367</a>: var asciiFold = [MaxASCII + 1]<b>uint16</b>{
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

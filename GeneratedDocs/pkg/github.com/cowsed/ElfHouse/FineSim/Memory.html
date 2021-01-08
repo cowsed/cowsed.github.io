@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: github.com/cowsed/ElfHouse/FineSim/Memory</title>
+<link href="../../../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>memory</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../../../../../index.html#pkg-github.com/cowsed/ElfHouse/FineSim/Memory">github.com/cowsed/ElfHouse/FineSim/Memory</a><i> (on <a href="https://pkg.go.dev/github.com/cowsed/ElfHouse/FineSim/Memory" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../../../../../dep/github.com/cowsed/ElfHouse/FineSim/Memory.html">one package</a>, and imported by <a href="../../../../../dep/github.com/cowsed/ElfHouse/FineSim/Memory.html#imported-by">2 packages</a>
+
+<span class="title">Involved Source Files</span>
+	<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#doc">d-&gt;</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html">Memory.go</a>
+	    <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html">MemoryHolder.go</a>
+	    <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html">MemoryRequest.go</a>
+	    <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html">Premade.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-Memory" data-popularity="125">	<a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..Memory.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-8">Memory</a> <i>(struct)</i>
+		In future make Memory an interface so there can be memories of people, last seen, how much you hate them and such, and
+		memories about the world - theres fish in oceans and wood in forests in trees
+
+		<input type='checkbox' class="stat" id="Memory-stat-fields"><label for="Memory-stat-fields">Exported Fields (6)</label><span id='Memory-stat-fields-content' class="stat-content">
+			<input type='checkbox' class="stat" id="Memory-stat-field-Category"><label for="Memory-stat-field-Category"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-15">Category</a> <i><a href="../../../../builtin.html#name-string">string</a></i></label><span id='Memory-stat-field-Category-content' class="stat-content">
+					   Category, Subcategory, id
+					   Owner
+					   LastKnownLocation
+					   Sub Memories - Items it holds, Locations inside (Tavern inside town)
+</span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-20">CommonLocation</a> <i><a href="../../../../builtin.html#name-string">string</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-17">Id</a> <i><a href="../../../../builtin.html#name-string">string</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-19">LocationIndex</a> <i><a href="../../../../builtin.html#name-int">int</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-16">SubCategory</a> <i><a href="../../../../builtin.html#name-string">string</a></i></span>
+			<input type='checkbox' class="stat" id="Memory-stat-field-Trust"><label for="Memory-stat-field-Trust"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Memory.go.html#line-23">Trust</a> <i><a href="../../../../builtin.html#name-int">int</a></i></label><span id='Memory-stat-field-Trust-content' class="stat-content">
+				Trackers
+</span></span>
+		<input type='checkbox' class="stat" id="Memory-stat-results"><label for="Memory-stat-results">As Outputs Of (1+)</label><span id='Memory-stat-results-content' class="stat-content">
+			func (*<a href="#name-MemoryHolder">MemoryHolder</a>).<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-31">Query</a>(request <a href="#name-TrackerMemoryRequest">TrackerMemoryRequest</a>) []*<b>Memory</b></span>
+		<input type='checkbox' class="stat" id="Memory-stat-params"><label for="Memory-stat-params">As Inputs Of (1+)</label><span id='Memory-stat-params-content' class="stat-content">
+			func (*<a href="#name-MemoryHolder">MemoryHolder</a>).<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-22">AddMemory</a>(mem <b>Memory</b>)</span>
+		<input type='checkbox' class="stat" id="Memory-stat-values"><label for="Memory-stat-values">As Types Of (3+)</label><span id='Memory-stat-values-content' class="stat-content">
+			  var <a href="#name-PineTreeMemory">PineTreeMemory</a>
+			  var <a href="#name-TestMemory">TestMemory</a>
+			  var <a href="#name-TestMemory2">TestMemory2</a></span></div>
+<div class="anchor" id="name-MemoryHolder" data-popularity="155">	<a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..MemoryHolder.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-5">MemoryHolder</a> <i>(struct)</i>
+
+		<input type='checkbox' class="stat" id="MemoryHolder-stat-fields"><label for="MemoryHolder-stat-fields">Exported Fields (2)</label><span id='MemoryHolder-stat-fields-content' class="stat-content">
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-7">CategoryMap</a> <i>map[<a href="../../../../builtin.html#name-string">string</a>][]*<a href="#name-Memory">Memory</a></i></span>
+			<span class="nodocs"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-6">Memories</a> <i>[]<a href="#name-Memory">Memory</a></i></span></span>
+		<input type='checkbox' class="stat" id="MemoryHolder-stat-methods"><label for="MemoryHolder-stat-methods">Exported Methods (3)</label><span id='MemoryHolder-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="MemoryHolder-stat-method-AddMemory"><label for="MemoryHolder-stat-method-AddMemory">(*T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-22">AddMemory</a>(mem <a href="#name-Memory">Memory</a>)</label><span id='MemoryHolder-stat-method-AddMemory-content' class="stat-content">
+				Add a memory to the collection of memories
+</span>
+			<input type='checkbox' class="stat" id="MemoryHolder-stat-method-Debug"><label for="MemoryHolder-stat-method-Debug">(*T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-37">Debug</a>()</label><span id='MemoryHolder-stat-method-Debug-content' class="stat-content">
+				Show a readable-ish view of a set of memories
+</span>
+			<input type='checkbox' class="stat" id="MemoryHolder-stat-method-Query"><label for="MemoryHolder-stat-method-Query">(*T) <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-31">Query</a>(request <a href="#name-TrackerMemoryRequest">TrackerMemoryRequest</a>) []*<a href="#name-Memory">Memory</a></label><span id='MemoryHolder-stat-method-Query-content' class="stat-content">
+				Query a memory holder for a specific or group of memories
+</span></span>
+		<input type='checkbox' class="stat" id="MemoryHolder-stat-values"><label for="MemoryHolder-stat-values">As Types Of (1+)</label><span id='MemoryHolder-stat-values-content' class="stat-content">
+			  var <a href="#name-BasicCommonSense">BasicCommonSense</a></span></div>
+<div class="anchor" id="name-TrackerMemoryRequest" data-popularity="40">	<a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..TrackerMemoryRequest.html">type</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html#line-10">TrackerMemoryRequest</a> <i>(struct)</i>
+		EVERYTHING SHOULD BE LOWERCASE - but that shouldn't affect anything other than coding
+
+		Example: Cat: being, Subcat: profession, Id: fname-lastname, Requested: Location
+
+		<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-fields"><label for="TrackerMemoryRequest-stat-fields">Exported Fields (4)</label><span id='TrackerMemoryRequest-stat-fields-content' class="stat-content">
+			<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-field-Category"><label for="TrackerMemoryRequest-stat-field-Category"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html#line-11">Category</a> <i><a href="../../../../builtin.html#name-string">string</a></i></label><span id='TrackerMemoryRequest-stat-field-Category-content' class="stat-content">
+				// Category of memory
+</span>
+			<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-field-Id"><label for="TrackerMemoryRequest-stat-field-Id"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html#line-13">Id</a> <i><a href="../../../../builtin.html#name-string">string</a></i></label><span id='TrackerMemoryRequest-stat-field-Id-content' class="stat-content">
+				// Identifier of memory
+</span>
+			<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-field-Requested"><label for="TrackerMemoryRequest-stat-field-Requested"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html#line-14">Requested</a> <i><a href="../../../../builtin.html#name-string">string</a></i></label><span id='TrackerMemoryRequest-stat-field-Requested-content' class="stat-content">
+				// What element is requested - may not be used
+</span>
+			<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-field-SubCategory"><label for="TrackerMemoryRequest-stat-field-SubCategory"><a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryRequest.go.html#line-12">SubCategory</a> <i><a href="../../../../builtin.html#name-string">string</a></i></label><span id='TrackerMemoryRequest-stat-field-SubCategory-content' class="stat-content">
+				// Subcategory of memory
+</span></span>
+		<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-params"><label for="TrackerMemoryRequest-stat-params">As Inputs Of (1+)</label><span id='TrackerMemoryRequest-stat-params-content' class="stat-content">
+			func (*<a href="#name-MemoryHolder">MemoryHolder</a>).<a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/MemoryHolder.go.html#line-31">Query</a>(request <b>TrackerMemoryRequest</b>) []*<a href="#name-Memory">Memory</a></span>
+		<input type='checkbox' class="stat" id="TrackerMemoryRequest-stat-values"><label for="TrackerMemoryRequest-stat-values">As Types Of (1+)</label><span id='TrackerMemoryRequest-stat-values-content' class="stat-content">
+			  var <a href="#name-TestRequest">TestRequest</a></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-BasicCommonSense">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..BasicCommonSense.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html#line-24">BasicCommonSense</a> <a href="#name-MemoryHolder">MemoryHolder</a></div>
+<div class="anchor" id="name-PineTreeMemory">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..PineTreeMemory.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html#line-16">PineTreeMemory</a> <a href="#name-Memory">Memory</a></div>
+<div class="anchor" id="name-TestMemory">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..TestMemory.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html#line-3">TestMemory</a> <a href="#name-Memory">Memory</a></div>
+<div class="anchor" id="name-TestMemory2">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..TestMemory2.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html#line-9">TestMemory2</a> <a href="#name-Memory">Memory</a></div>
+<div class="anchor" id="name-TestRequest">	  <a href="../../../../../use/github.com/cowsed/ElfHouse/FineSim/Memory..TestRequest.html">var</a> <a href="../../../../../src/github.com/cowsed/ElfHouse/FineSim/Memory/Premade.go.html#line-26">TestRequest</a> <a href="#name-TrackerMemoryRequest">TrackerMemoryRequest</a></div></code></pre><pre id="footer">
+<table><tr><td><img src="../../../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.heapBitsForAddr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mbitmap.go.html#line-337">heapBitsForAddr</a></b></span>
+
+20 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/cgocall.go.html#line-605">cgocall.go#L605</a>: 		hbits := <b>heapBitsForAddr</b>(base)
+		<a href="../src/runtime/cgocheck.go.html#line-153">cgocheck.go#L153</a>: 	hbits := <b>heapBitsForAddr</b>(uintptr(src))
+		<a href="../src/runtime/heapdump.go.html#line-714">heapdump.go#L714</a>: 	hbits := <b>heapBitsForAddr</b>(p)
+		<a href="../src/runtime/malloc.go.html#line-1187">malloc.go#L1187</a>: 	<b>heapBitsForAddr</b>(s.base()).initSpan(s)
+		<a href="../src/runtime/mbitmap.go.html#line-337">mbitmap.go#L337</a>: func <b>heapBitsForAddr</b>(addr uintptr) (h heapBits) {
+		<a href="../src/runtime/mbitmap.go.html#line-642" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-642">#L642</a>: 	h := <b>heapBitsForAddr</b>(dst)
+		<a href="../src/runtime/mbitmap.go.html#line-684" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-684">#L684</a>: 	h := <b>heapBitsForAddr</b>(dst)
+		<a href="../src/runtime/mbitmap.go.html#line-928" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-928">#L928</a>: 			h := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-939" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-939">#L939</a>: 	h := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-1339" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1339">#L1339</a>: 		h := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-1407" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1407">#L1407</a>: 		end := <b>heapBitsForAddr</b>(x + size - sys.PtrSize).next()
+		<a href="../src/runtime/mbitmap.go.html#line-1422" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1422">#L1422</a>: 			h0 := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-1430" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1430">#L1430</a>: 		h := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-1459" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1459">#L1459</a>: 				h0 := <b>heapBitsForAddr</b>(x)
+		<a href="../src/runtime/mbitmap.go.html#line-2005" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2005">#L2005</a>: 		hbits := <b>heapBitsForAddr</b>(base)
+		<a href="../src/runtime/mcentral.go.html#line-515">mcentral.go#L515</a>: 	<b>heapBitsForAddr</b>(s.base()).initSpan(s)
+		<a href="../src/runtime/mgcmark.go.html#line-1306">mgcmark.go#L1306</a>: 	hbits := <b>heapBitsForAddr</b>(b)
+		<a href="../src/runtime/mgcmark.go.html#line-1529" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1529">#L1529</a>: 		hbits := <b>heapBitsForAddr</b>(obj)
+		<a href="../src/runtime/mgcmark.go.html#line-1694" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1694">#L1694</a>: 			<b>heapBitsForAddr</b>(s.base()).initCheckmarkSpan(s.layout())
+		<a href="../src/runtime/mgcmark.go.html#line-1703" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1703">#L1703</a>: 			<b>heapBitsForAddr</b>(s.base()).clearCheckmarkSpan(s.layout())
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

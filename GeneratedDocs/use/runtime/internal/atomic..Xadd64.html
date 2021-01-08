@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Xadd64</title>
+<link href="../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-42">Xadd64</a></b></span>
+
+24 uses:
+
+	runtime/internal/atomic <i>(current package)</i>
+		<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-42">atomic_amd64.go#L42</a>: func <b>Xadd64</b>(ptr *uint64, delta int64) uint64
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mcentral.go.html#line-193">mcentral.go#L193</a>: 	atomic.<b>Xadd64</b>(&c.nmalloc, int64(n))
+		<a href="../../../src/runtime/mcentral.go.html#line-195" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-195">#L195</a>: 	atomic.<b>Xadd64</b>(&memstats.heap_live, int64(spanBytes)-int64(usedBytes))
+		<a href="../../../src/runtime/mcentral.go.html#line-305" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-305">#L305</a>: 	atomic.<b>Xadd64</b>(&c.nmalloc, int64(n))
+		<a href="../../../src/runtime/mcentral.go.html#line-307" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-307">#L307</a>: 	atomic.<b>Xadd64</b>(&memstats.heap_live, int64(spanBytes)-int64(usedBytes))
+		<a href="../../../src/runtime/mcentral.go.html#line-365" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-365">#L365</a>: 		atomic.<b>Xadd64</b>(&c.nmalloc, -int64(n))
+		<a href="../../../src/runtime/mcentral.go.html#line-375" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-375">#L375</a>: 			atomic.<b>Xadd64</b>(&memstats.heap_live, -int64(n)*int64(s.elemsize))
+		<a href="../../../src/runtime/mcentral.go.html#line-425" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-425">#L425</a>: 		atomic.<b>Xadd64</b>(&c.nmalloc, -int64(n))
+		<a href="../../../src/runtime/mcentral.go.html#line-438" class="path-duplicate">mcentral.go</a><a href="../../../src/runtime/mcentral.go.html#line-438">#L438</a>: 			atomic.<b>Xadd64</b>(&memstats.heap_live, -int64(n)*int64(s.elemsize))
+		<a href="../../../src/runtime/mgcsweep.go.html#line-344">mgcsweep.go#L344</a>: 	atomic.<b>Xadd64</b>(&mheap_.pagesSwept, int64(s.npages))
+		<a href="../../../src/runtime/mgcsweep.go.html#line-595" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-595">#L595</a>: 	atomic.<b>Xadd64</b>(&mheap_.pagesSwept, int64(s.npages))
+		<a href="../../../src/runtime/mgcwork.go.html#line-346">mgcwork.go#L346</a>: 		atomic.<b>Xadd64</b>(&work.bytesMarked, int64(w.bytesMarked))
+		<a href="../../../src/runtime/mheap.go.html#line-789">mheap.go#L789</a>: 		idx := uintptr(atomic.<b>Xadd64</b>(&h.reclaimIndex, pagesPerReclaimerChunk) - pagesPerReclaimerChunk)
+		<a href="../../../src/runtime/mheap.go.html#line-1200" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-1200">#L1200</a>: 			atomic.<b>Xadd64</b>(&memstats.heap_live, int64(npages*pageSize))
+		<a href="../../../src/runtime/mheap.go.html#line-1312" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-1312">#L1312</a>: 		atomic.<b>Xadd64</b>(&h.pagesInUse, int64(npages))
+		<a href="../../../src/runtime/mheap.go.html#line-1458" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-1458">#L1458</a>: 		atomic.<b>Xadd64</b>(&h.pagesInUse, -int64(s.npages))
+		<a href="../../../src/runtime/mspanset.go.html#line-332">mspanset.go#L332</a>: 	return headTailIndex(atomic.<b>Xadd64</b>((*uint64)(h), (1 << 32)))
+		<a href="../../../src/runtime/mspanset.go.html#line-337" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-337">#L337</a>: 	return headTailIndex(atomic.<b>Xadd64</b>((*uint64)(h), -(1 << 32)))
+		<a href="../../../src/runtime/mspanset.go.html#line-342" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-342">#L342</a>: 	ht := headTailIndex(atomic.<b>Xadd64</b>((*uint64)(h), +1))
+		<a href="../../../src/runtime/mstats.go.html#line-666">mstats.go#L666</a>: 		atomic.<b>Xadd64</b>(sysStat, int64(n))
+		<a href="../../../src/runtime/mstats.go.html#line-683" class="path-duplicate">mstats.go</a><a href="../../../src/runtime/mstats.go.html#line-683">#L683</a>: 		atomic.<b>Xadd64</b>(sysStat, -int64(n))
+		<a href="../../../src/runtime/proc.go.html#line-1633">proc.go#L1633</a>: 	gp.goid = int64(atomic.<b>Xadd64</b>(&sched.goidgen, 1))
+		<a href="../../../src/runtime/proc.go.html#line-3653" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3653">#L3653</a>: 		_p_.goidcache = atomic.<b>Xadd64</b>(&sched.goidgen, _GoidCacheBatch)
+		<a href="../../../src/runtime/runtime1.go.html#line-122">runtime1.go#L122</a>: 	if atomic.<b>Xadd64</b>(&test_z64, (1<<40)+1) != (2<<40)+2 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

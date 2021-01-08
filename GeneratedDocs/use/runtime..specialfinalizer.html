@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.specialfinalizer</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-1761">specialfinalizer</a></b></span>
+
+9 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-444">heapdump.go#L444</a>: 				spf := (*<b>specialfinalizer</b>)(unsafe.Pointer(sp))
+		<a href="../src/runtime/mgcmark.go.html#line-382">mgcmark.go#L382</a>: 				spf := (*<b>specialfinalizer</b>)(unsafe.Pointer(sp))
+		<a href="../src/runtime/mgcmark.go.html#line-466" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-466">#L466</a>: 			spf := (*<b>specialfinalizer</b>)(unsafe.Pointer(sp))
+		<a href="../src/runtime/mheap.go.html#line-242">mheap.go#L242</a>: 	unused *<b>specialfinalizer</b> // never set, just here to force the specialfinalizer type into DWARF
+		<a href="../src/runtime/mheap.go.html#line-724" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-724">#L724</a>: 	h.specialfinalizeralloc.init(unsafe.Sizeof(<b>specialfinalizer</b>{}), nil, nil, &memstats.other_sys)
+		<a href="../src/runtime/mheap.go.html#line-1761" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1761">#L1761</a>: type <b>specialfinalizer</b> struct {
+		<a href="../src/runtime/mheap.go.html#line-1772" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1772">#L1772</a>: 	s := (*<b>specialfinalizer</b>)(mheap_.specialfinalizeralloc.alloc())
+		<a href="../src/runtime/mheap.go.html#line-1808" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1808">#L1808</a>: 	s := (*<b>specialfinalizer</b>)(unsafe.Pointer(removespecial(p, _KindSpecialFinalizer)))
+		<a href="../src/runtime/mheap.go.html#line-1842" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1842">#L1842</a>: 		sf := (*<b>specialfinalizer</b>)(unsafe.Pointer(s))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

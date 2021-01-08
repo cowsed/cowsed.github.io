@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Package: io</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:xx-large;">package <b>io</b></span>
+
+<span class="title">Import Path</span>
+	<a href="../index.html#pkg-io">io</a><i> (on <a href="https://golang.org/pkg/io/" target="_blank">golang.org</a> and <a href="https://pkg.go.dev/io" target="_blank">go.dev</a>)</i>
+
+<span class="title">Dependency Relation</span>
+	imports <a href="../dep/io.html">2 packages</a>, and imported by <a href="../dep/io.html#imported-by">4 packages</a>
+
+<span class="title">Involved Source Files</span>
+	<a href="../src/io/io.go.html#doc">d-&gt;</a> <a href="../src/io/io.go.html">io.go</a>
+	    <a href="../src/io/multi.go.html">multi.go</a>
+	    <a href="../src/io/pipe.go.html">pipe.go</a>
+
+<span class="title">Exported Type Names</span>
+
+<div class="anchor" id="name-ByteReader" data-popularity="350">	<a href="../use/io..ByteReader.html">type</a> <a href="../src/io/io.go.html#line-243">ByteReader</a> <b<i>(interface)</i></b>
+		ByteReader is the interface that wraps the ReadByte method.
+
+		ReadByte reads and returns the next byte from the input or
+		any error encountered. If ReadByte returns an error, no input
+		byte was consumed, and the returned byte value is undefined.
+
+		ReadByte provides an efficient interface for byte-at-time
+		processing. A Reader that does not implement  ByteReader
+		can be wrapped using bufio.NewReader to add this method.
+
+		<input type='checkbox' class="stat" id="ByteReader-stat-methods"><label for="ByteReader-stat-methods">One Exported Method</label><span id='ByteReader-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-244">ReadByte</a>() (<a href="builtin.html#name-byte">byte</a>, <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ByteReader-stat-impledby"><label for="ByteReader-stat-impledby">Implemented By (2+)</label><span id='ByteReader-stat-impledby-content' class="stat-content">
+			<a href="#name-ByteScanner">ByteScanner</a> <i>(interface)</i>
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span></div>
+<div class="anchor" id="name-ByteScanner" data-popularity="300">	<a href="../use/io..ByteScanner.html">type</a> <a href="../src/io/io.go.html#line-254">ByteScanner</a> <b<i>(interface)</i></b>
+		ByteScanner is the interface that adds the UnreadByte method to the
+		basic ReadByte method.
+
+		UnreadByte causes the next call to ReadByte to return the same byte
+		as the previous call to ReadByte.
+		It may be an error to call UnreadByte twice without an intervening
+		call to ReadByte.
+
+		<input type='checkbox' class="stat" id="ByteScanner-stat-methods"><label for="ByteScanner-stat-methods">Exported Methods (2)</label><span id='ByteScanner-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-244">ReadByte</a>() (<a href="builtin.html#name-byte">byte</a>, <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-256">UnreadByte</a>() <a href="builtin.html#name-error">error</a></span></span>
+		<input type='checkbox' class="stat" id="ByteScanner-stat-impledby"><label for="ByteScanner-stat-impledby">Implemented By (1+)</label><span id='ByteScanner-stat-impledby-content' class="stat-content">
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span>
+		<input type='checkbox' class="stat" id="ByteScanner-stat-impls"><label for="ByteScanner-stat-impls">Implements (1+)</label><span id='ByteScanner-stat-impls-content' class="stat-content">
+			 T : <a href="#name-ByteReader">ByteReader</a></span></div>
+<div class="anchor" id="name-ByteWriter" data-popularity="200">	<a href="../use/io..ByteWriter.html">type</a> <a href="../src/io/io.go.html#line-260">ByteWriter</a> <b<i>(interface)</i></b>
+		ByteWriter is the interface that wraps the WriteByte method.
+
+		<input type='checkbox' class="stat" id="ByteWriter-stat-methods"><label for="ByteWriter-stat-methods">One Exported Method</label><span id='ByteWriter-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-261">WriteByte</a>(c <a href="builtin.html#name-byte">byte</a>) <a href="builtin.html#name-error">error</a></span></span>
+		<input type='checkbox' class="stat" id="ByteWriter-stat-impledby"><label for="ByteWriter-stat-impledby">Implemented By (1+)</label><span id='ByteWriter-stat-impledby-content' class="stat-content">
+			strings.(*<a href="strings.html#name-Builder">Builder</a>)</span></div>
+<div class="anchor" id="name-Closer" data-popularity="1100">	<a href="../use/io..Closer.html">type</a> <a href="../src/io/io.go.html#line-98">Closer</a> <b<i>(interface)</i></b>
+		Closer is the interface that wraps the basic Close method.
+
+		The behavior of Close after the first call is undefined.
+		Specific implementations may document their own behavior.
+
+		<input type='checkbox' class="stat" id="Closer-stat-methods"><label for="Closer-stat-methods">One Exported Method</label><span id='Closer-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-99">Close</a>() <a href="builtin.html#name-error">error</a></span></span>
+		<input type='checkbox' class="stat" id="Closer-stat-impledby"><label for="Closer-stat-impledby">Implemented By (7+)</label><span id='Closer-stat-impledby-content' class="stat-content">
+			*<a href="#name-PipeReader">PipeReader</a>
+			*<a href="#name-PipeWriter">PipeWriter</a>
+			<a href="#name-ReadCloser">ReadCloser</a> <i>(interface)</i>
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			<a href="#name-WriteCloser">WriteCloser</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span></div>
+<div class="anchor" id="name-LimitedReader" data-popularity="100">	<a href="../use/io..LimitedReader.html">type</a> <a href="../src/io/io.go.html#line-443">LimitedReader</a> <i>(struct)</i>
+		A LimitedReader reads from R but limits the amount of
+		data returned to just N bytes. Each call to Read
+		updates N to reflect the new amount remaining.
+		Read returns EOF when N &lt;= 0 or when the underlying R returns EOF.
+
+		<input type='checkbox' class="stat" id="LimitedReader-stat-fields"><label for="LimitedReader-stat-fields">Exported Fields (2)</label><span id='LimitedReader-stat-fields-content' class="stat-content">
+			<input type='checkbox' class="stat" id="LimitedReader-stat-field-N"><label for="LimitedReader-stat-field-N"><a href="../src/io/io.go.html#line-445">N</a> <i><a href="builtin.html#name-int64">int64</a></i></label><span id='LimitedReader-stat-field-N-content' class="stat-content">
+				// max bytes remaining
+</span>
+			<input type='checkbox' class="stat" id="LimitedReader-stat-field-R"><label for="LimitedReader-stat-field-R"><a href="../src/io/io.go.html#line-444">R</a> <i><a href="#name-Reader">Reader</a></i></label><span id='LimitedReader-stat-field-R-content' class="stat-content">
+				// underlying reader
+</span></span>
+		<input type='checkbox' class="stat" id="LimitedReader-stat-methods"><label for="LimitedReader-stat-methods">One Exported Method</label><span id='LimitedReader-stat-methods-content' class="stat-content">
+			<span class="nodocs">(*T) <a href="../src/io/io.go.html#line-448">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="LimitedReader-stat-impls"><label for="LimitedReader-stat-impls">Implements (1+)</label><span id='LimitedReader-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Reader">Reader</a></span></div>
+<div class="anchor" id="name-PipeReader" data-popularity="375">	<a href="../use/io..PipeReader.html">type</a> <a href="../src/io/pipe.go.html#line-124">PipeReader</a> <i>(struct)</i>
+		A PipeReader is the read half of a pipe.
+
+		<input type='checkbox' class="stat" id="PipeReader-stat-methods"><label for="PipeReader-stat-methods">Exported Methods (3)</label><span id='PipeReader-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="PipeReader-stat-method-Close"><label for="PipeReader-stat-method-Close">(*T) <a href="../src/io/pipe.go.html#line-139">Close</a>() <a href="builtin.html#name-error">error</a></label><span id='PipeReader-stat-method-Close-content' class="stat-content">
+				Close closes the reader; subsequent writes to the
+				write half of the pipe will return the error ErrClosedPipe.
+</span>
+			<input type='checkbox' class="stat" id="PipeReader-stat-method-CloseWithError"><label for="PipeReader-stat-method-CloseWithError">(*T) <a href="../src/io/pipe.go.html#line-148">CloseWithError</a>(err <a href="builtin.html#name-error">error</a>) <a href="builtin.html#name-error">error</a></label><span id='PipeReader-stat-method-CloseWithError-content' class="stat-content">
+				CloseWithError closes the reader; subsequent writes
+				to the write half of the pipe will return the error err.
+
+				CloseWithError never overwrites the previous error if it exists
+				and always returns nil.
+</span>
+			<input type='checkbox' class="stat" id="PipeReader-stat-method-Read"><label for="PipeReader-stat-method-Read">(*T) <a href="../src/io/pipe.go.html#line-133">Read</a>(data []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='PipeReader-stat-method-Read-content' class="stat-content">
+				Read implements the standard Read interface:
+				it reads data from the pipe, blocking until a writer
+				arrives or the write end is closed.
+				If the write end is closed with an error, that error is
+				returned as err; otherwise err is EOF.
+</span></span>
+		<input type='checkbox' class="stat" id="PipeReader-stat-impls"><label for="PipeReader-stat-impls">Implements (3+)</label><span id='PipeReader-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Closer">Closer</a>
+			*T : <a href="#name-ReadCloser">ReadCloser</a>
+			*T : <a href="#name-Reader">Reader</a></span>
+		<input type='checkbox' class="stat" id="PipeReader-stat-results"><label for="PipeReader-stat-results">As Outputs Of (1+)</label><span id='PipeReader-stat-results-content' class="stat-content">
+			func <a href="#name-Pipe">Pipe</a>() (*<b>PipeReader</b>, *<a href="#name-PipeWriter">PipeWriter</a>)</span></div>
+<div class="anchor" id="name-PipeWriter" data-popularity="375">	<a href="../use/io..PipeWriter.html">type</a> <a href="../src/io/pipe.go.html#line-153">PipeWriter</a> <i>(struct)</i>
+		A PipeWriter is the write half of a pipe.
+
+		<input type='checkbox' class="stat" id="PipeWriter-stat-methods"><label for="PipeWriter-stat-methods">Exported Methods (3)</label><span id='PipeWriter-stat-methods-content' class="stat-content">
+			<input type='checkbox' class="stat" id="PipeWriter-stat-method-Close"><label for="PipeWriter-stat-method-Close">(*T) <a href="../src/io/pipe.go.html#line-168">Close</a>() <a href="builtin.html#name-error">error</a></label><span id='PipeWriter-stat-method-Close-content' class="stat-content">
+				Close closes the writer; subsequent reads from the
+				read half of the pipe will return no bytes and EOF.
+</span>
+			<input type='checkbox' class="stat" id="PipeWriter-stat-method-CloseWithError"><label for="PipeWriter-stat-method-CloseWithError">(*T) <a href="../src/io/pipe.go.html#line-178">CloseWithError</a>(err <a href="builtin.html#name-error">error</a>) <a href="builtin.html#name-error">error</a></label><span id='PipeWriter-stat-method-CloseWithError-content' class="stat-content">
+				CloseWithError closes the writer; subsequent reads from the
+				read half of the pipe will return no bytes and the error err,
+				or EOF if err is nil.
+
+				CloseWithError never overwrites the previous error if it exists
+				and always returns nil.
+</span>
+			<input type='checkbox' class="stat" id="PipeWriter-stat-method-Write"><label for="PipeWriter-stat-method-Write">(*T) <a href="../src/io/pipe.go.html#line-162">Write</a>(data []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</label><span id='PipeWriter-stat-method-Write-content' class="stat-content">
+				Write implements the standard Write interface:
+				it writes data to the pipe, blocking until one or more readers
+				have consumed all the data or the read end is closed.
+				If the read end is closed with an error, that err is
+				returned as err; otherwise err is ErrClosedPipe.
+</span></span>
+		<input type='checkbox' class="stat" id="PipeWriter-stat-impls"><label for="PipeWriter-stat-impls">Implements (3+)</label><span id='PipeWriter-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Closer">Closer</a>
+			*T : <a href="#name-WriteCloser">WriteCloser</a>
+			*T : <a href="#name-Writer">Writer</a></span>
+		<input type='checkbox' class="stat" id="PipeWriter-stat-results"><label for="PipeWriter-stat-results">As Outputs Of (1+)</label><span id='PipeWriter-stat-results-content' class="stat-content">
+			func <a href="#name-Pipe">Pipe</a>() (*<a href="#name-PipeReader">PipeReader</a>, *<b>PipeWriter</b>)</span></div>
+<div class="anchor" id="name-ReadCloser" data-popularity="800">	<a href="../use/io..ReadCloser.html">type</a> <a href="../src/io/io.go.html#line-126">ReadCloser</a> <b<i>(interface)</i></b>
+		ReadCloser is the interface that groups the basic Read and Close methods.
+
+		<input type='checkbox' class="stat" id="ReadCloser-stat-methods"><label for="ReadCloser-stat-methods">Exported Methods (2)</label><span id='ReadCloser-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-99">Close</a>() <a href="builtin.html#name-error">error</a></span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReadCloser-stat-impledby"><label for="ReadCloser-stat-impledby">Implemented By (4+)</label><span id='ReadCloser-stat-impledby-content' class="stat-content">
+			*<a href="#name-PipeReader">PipeReader</a>
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="ReadCloser-stat-impls"><label for="ReadCloser-stat-impls">Implements (2+)</label><span id='ReadCloser-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Closer">Closer</a>
+			 T : <a href="#name-Reader">Reader</a></span></div>
+<div class="anchor" id="name-Reader" data-popularity="2530">	<a href="../use/io..Reader.html">type</a> <a href="../src/io/io.go.html#line-77">Reader</a> <b<i>(interface)</i></b>
+		Reader is the interface that wraps the basic Read method.
+
+		Read reads up to len(p) bytes into p. It returns the number of bytes
+		read (0 &lt;= n &lt;= len(p)) and any error encountered. Even if Read
+		returns n &lt; len(p), it may use all of p as scratch space during the call.
+		If some data is available but not len(p) bytes, Read conventionally
+		returns what is available instead of waiting for more.
+
+		When Read encounters an error or end-of-file condition after
+		successfully reading n &gt; 0 bytes, it returns the number of
+		bytes read. It may return the (non-nil) error from the same call
+		or return the error (and n == 0) from a subsequent call.
+		An instance of this general case is that a Reader returning
+		a non-zero number of bytes at the end of the input stream may
+		return either err == EOF or err == nil. The next Read should
+		return 0, EOF.
+
+		Callers should always process the n &gt; 0 bytes returned before
+		considering the error err. Doing so correctly handles I/O errors
+		that happen after reading some bytes and also both of the
+		allowed EOF behaviors.
+
+		Implementations of Read are discouraged from returning a
+		zero byte count with a nil error, except when len(p) == 0.
+		Callers should treat a return of 0 and nil as indicating that
+		nothing happened; in particular it does not indicate EOF.
+
+		Implementations must not retain p.
+
+		<input type='checkbox' class="stat" id="Reader-stat-methods"><label for="Reader-stat-methods">One Exported Method</label><span id='Reader-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="Reader-stat-impledby"><label for="Reader-stat-impledby">Implemented By (12+)</label><span id='Reader-stat-impledby-content' class="stat-content">
+			*<a href="#name-LimitedReader">LimitedReader</a>
+			*<a href="#name-PipeReader">PipeReader</a>
+			<a href="#name-ReadCloser">ReadCloser</a> <i>(interface)</i>
+			<a href="#name-ReadSeeker">ReadSeeker</a> <i>(interface)</i>
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			<a href="#name-ReadWriter">ReadWriter</a> <i>(interface)</i>
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			*<a href="#name-SectionReader">SectionReader</a>
+			fmt.<a href="fmt.html#name-ScanState">ScanState</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span>
+		<input type='checkbox' class="stat" id="Reader-stat-results"><label for="Reader-stat-results">As Outputs Of (3+)</label><span id='Reader-stat-results-content' class="stat-content">
+			func <a href="#name-LimitReader">LimitReader</a>(r <b>Reader</b>, n <a href="builtin.html#name-int64">int64</a>) <b>Reader</b>
+			func <a href="#name-MultiReader">MultiReader</a>(readers ...<b>Reader</b>) <b>Reader</b>
+			func <a href="#name-TeeReader">TeeReader</a>(r <b>Reader</b>, w <a href="#name-Writer">Writer</a>) <b>Reader</b></span>
+		<input type='checkbox' class="stat" id="Reader-stat-params"><label for="Reader-stat-params">As Inputs Of (13+)</label><span id='Reader-stat-params-content' class="stat-content">
+			func <a href="#name-Copy">Copy</a>(dst <a href="#name-Writer">Writer</a>, src <b>Reader</b>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-CopyBuffer">CopyBuffer</a>(dst <a href="#name-Writer">Writer</a>, src <b>Reader</b>, buf []<a href="builtin.html#name-byte">byte</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-CopyN">CopyN</a>(dst <a href="#name-Writer">Writer</a>, src <b>Reader</b>, n <a href="builtin.html#name-int64">int64</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-LimitReader">LimitReader</a>(r <b>Reader</b>, n <a href="builtin.html#name-int64">int64</a>) <b>Reader</b>
+			func <a href="#name-MultiReader">MultiReader</a>(readers ...<b>Reader</b>) <b>Reader</b>
+			func <a href="#name-ReadAtLeast">ReadAtLeast</a>(r <b>Reader</b>, buf []<a href="builtin.html#name-byte">byte</a>, min <a href="builtin.html#name-int">int</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-ReadFull">ReadFull</a>(r <b>Reader</b>, buf []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-TeeReader">TeeReader</a>(r <b>Reader</b>, w <a href="#name-Writer">Writer</a>) <b>Reader</b>
+			func <a href="#name-ReaderFrom">ReaderFrom</a>.<a href="../src/io/io.go.html#line-171">ReadFrom</a>(r <b>Reader</b>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fscan">Fscan</a>(r <b>Reader</b>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fscanf">Fscanf</a>(r <b>Reader</b>, format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fscanln">Fscanln</a>(r <b>Reader</b>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func os.(*<a href="os.html#name-File">File</a>).<a href="../src/os/file.go.html#line-147">ReadFrom</a>(r <b>Reader</b>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)</span></div>
+<div class="anchor" id="name-ReaderAt" data-popularity="535">	<a href="../use/io..ReaderAt.html">type</a> <a href="../src/io/io.go.html#line-211">ReaderAt</a> <b<i>(interface)</i></b>
+		ReaderAt is the interface that wraps the basic ReadAt method.
+
+		ReadAt reads len(p) bytes into p starting at offset off in the
+		underlying input source. It returns the number of bytes
+		read (0 &lt;= n &lt;= len(p)) and any error encountered.
+
+		When ReadAt returns n &lt; len(p), it returns a non-nil error
+		explaining why more bytes were not returned. In this respect,
+		ReadAt is stricter than Read.
+
+		Even if ReadAt returns n &lt; len(p), it may use all of p as scratch
+		space during the call. If some data is available but not len(p) bytes,
+		ReadAt blocks until either all the data is available or an error occurs.
+		In this respect ReadAt is different from Read.
+
+		If the n = len(p) bytes returned by ReadAt are at the end of the
+		input source, ReadAt may return either err == EOF or err == nil.
+
+		If ReadAt is reading from an input source with a seek offset,
+		ReadAt should not affect nor be affected by the underlying
+		seek offset.
+
+		Clients of ReadAt can execute parallel ReadAt calls on the
+		same input source.
+
+		Implementations must not retain p.
+
+		<input type='checkbox' class="stat" id="ReaderAt-stat-methods"><label for="ReaderAt-stat-methods">One Exported Method</label><span id='ReaderAt-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-212">ReadAt</a>(p []<a href="builtin.html#name-byte">byte</a>, off <a href="builtin.html#name-int64">int64</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReaderAt-stat-impledby"><label for="ReaderAt-stat-impledby">Implemented By (3+)</label><span id='ReaderAt-stat-impledby-content' class="stat-content">
+			*<a href="#name-SectionReader">SectionReader</a>
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span>
+		<input type='checkbox' class="stat" id="ReaderAt-stat-params"><label for="ReaderAt-stat-params">As Inputs Of (1+)</label><span id='ReaderAt-stat-params-content' class="stat-content">
+			func <a href="#name-NewSectionReader">NewSectionReader</a>(r <b>ReaderAt</b>, off <a href="builtin.html#name-int64">int64</a>, n <a href="builtin.html#name-int64">int64</a>) *<a href="#name-SectionReader">SectionReader</a></span></div>
+<div class="anchor" id="name-ReaderFrom" data-popularity="200">	<a href="../use/io..ReaderFrom.html">type</a> <a href="../src/io/io.go.html#line-170">ReaderFrom</a> <b<i>(interface)</i></b>
+		ReaderFrom is the interface that wraps the ReadFrom method.
+
+		ReadFrom reads data from r until EOF or error.
+		The return value n is the number of bytes read.
+		Any error except io.EOF encountered during the read is also returned.
+
+		The Copy function uses ReaderFrom if available.
+
+		<input type='checkbox' class="stat" id="ReaderFrom-stat-methods"><label for="ReaderFrom-stat-methods">One Exported Method</label><span id='ReaderFrom-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-171">ReadFrom</a>(r <a href="#name-Reader">Reader</a>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReaderFrom-stat-impledby"><label for="ReaderFrom-stat-impledby">Implemented By (1+)</label><span id='ReaderFrom-stat-impledby-content' class="stat-content">
+			os.(*<a href="os.html#name-File">File</a>)</span></div>
+<div class="anchor" id="name-ReadSeeker" data-popularity="950">	<a href="../use/io..ReadSeeker.html">type</a> <a href="../src/io/io.go.html#line-145">ReadSeeker</a> <b<i>(interface)</i></b>
+		ReadSeeker is the interface that groups the basic Read and Seek methods.
+
+		<input type='checkbox' class="stat" id="ReadSeeker-stat-methods"><label for="ReadSeeker-stat-methods">Exported Methods (2)</label><span id='ReadSeeker-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-116">Seek</a>(offset <a href="builtin.html#name-int64">int64</a>, whence <a href="builtin.html#name-int">int</a>) (<a href="builtin.html#name-int64">int64</a>, <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReadSeeker-stat-impledby"><label for="ReadSeeker-stat-impledby">Implemented By (5+)</label><span id='ReadSeeker-stat-impledby-content' class="stat-content">
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			*<a href="#name-SectionReader">SectionReader</a>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span>
+		<input type='checkbox' class="stat" id="ReadSeeker-stat-impls"><label for="ReadSeeker-stat-impls">Implements (2+)</label><span id='ReadSeeker-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Reader">Reader</a>
+			 T : <a href="#name-Seeker">Seeker</a></span></div>
+<div class="anchor" id="name-ReadWriteCloser" data-popularity="750">	<a href="../use/io..ReadWriteCloser.html">type</a> <a href="../src/io/io.go.html#line-138">ReadWriteCloser</a> <b<i>(interface)</i></b>
+		ReadWriteCloser is the interface that groups the basic Read, Write and Close methods.
+
+		<input type='checkbox' class="stat" id="ReadWriteCloser-stat-methods"><label for="ReadWriteCloser-stat-methods">Exported Methods (3)</label><span id='ReadWriteCloser-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-99">Close</a>() <a href="builtin.html#name-error">error</a></span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReadWriteCloser-stat-impledby"><label for="ReadWriteCloser-stat-impledby">Implemented By (2+)</label><span id='ReadWriteCloser-stat-impledby-content' class="stat-content">
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="ReadWriteCloser-stat-impls"><label for="ReadWriteCloser-stat-impls">Implements (6+)</label><span id='ReadWriteCloser-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Closer">Closer</a>
+			 T : <a href="#name-ReadCloser">ReadCloser</a>
+			 T : <a href="#name-Reader">Reader</a>
+			 T : <a href="#name-ReadWriter">ReadWriter</a>
+			 T : <a href="#name-WriteCloser">WriteCloser</a>
+			 T : <a href="#name-Writer">Writer</a></span></div>
+<div class="anchor" id="name-ReadWriter" data-popularity="800">	<a href="../use/io..ReadWriter.html">type</a> <a href="../src/io/io.go.html#line-120">ReadWriter</a> <b<i>(interface)</i></b>
+		ReadWriter is the interface that groups the basic Read and Write methods.
+
+		<input type='checkbox' class="stat" id="ReadWriter-stat-methods"><label for="ReadWriter-stat-methods">Exported Methods (2)</label><span id='ReadWriter-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReadWriter-stat-impledby"><label for="ReadWriter-stat-impledby">Implemented By (4+)</label><span id='ReadWriter-stat-impledby-content' class="stat-content">
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="ReadWriter-stat-impls"><label for="ReadWriter-stat-impls">Implements (2+)</label><span id='ReadWriter-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Reader">Reader</a>
+			 T : <a href="#name-Writer">Writer</a></span></div>
+<div class="anchor" id="name-ReadWriteSeeker" data-popularity="750">	<a href="../use/io..ReadWriteSeeker.html">type</a> <a href="../src/io/io.go.html#line-157">ReadWriteSeeker</a> <b<i>(interface)</i></b>
+		ReadWriteSeeker is the interface that groups the basic Read, Write and Seek methods.
+
+		<input type='checkbox' class="stat" id="ReadWriteSeeker-stat-methods"><label for="ReadWriteSeeker-stat-methods">Exported Methods (3)</label><span id='ReadWriteSeeker-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-78">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-116">Seek</a>(offset <a href="builtin.html#name-int64">int64</a>, whence <a href="builtin.html#name-int">int</a>) (<a href="builtin.html#name-int64">int64</a>, <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="ReadWriteSeeker-stat-impledby"><label for="ReadWriteSeeker-stat-impledby">Implemented By (2+)</label><span id='ReadWriteSeeker-stat-impledby-content' class="stat-content">
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="ReadWriteSeeker-stat-impls"><label for="ReadWriteSeeker-stat-impls">Implements (6+)</label><span id='ReadWriteSeeker-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Reader">Reader</a>
+			 T : <a href="#name-ReadSeeker">ReadSeeker</a>
+			 T : <a href="#name-ReadWriter">ReadWriter</a>
+			 T : <a href="#name-Seeker">Seeker</a>
+			 T : <a href="#name-Writer">Writer</a>
+			 T : <a href="#name-WriteSeeker">WriteSeeker</a></span></div>
+<div class="anchor" id="name-RuneReader" data-popularity="500">	<a href="../use/io..RuneReader.html">type</a> <a href="../src/io/io.go.html#line-269">RuneReader</a> <b<i>(interface)</i></b>
+		RuneReader is the interface that wraps the ReadRune method.
+
+		ReadRune reads a single UTF-8 encoded Unicode character
+		and returns the rune and its size in bytes. If no character is
+		available, err will be set.
+
+		<input type='checkbox' class="stat" id="RuneReader-stat-methods"><label for="RuneReader-stat-methods">One Exported Method</label><span id='RuneReader-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-270">ReadRune</a>() (r <a href="builtin.html#name-rune">rune</a>, size <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="RuneReader-stat-impledby"><label for="RuneReader-stat-impledby">Implemented By (3+)</label><span id='RuneReader-stat-impledby-content' class="stat-content">
+			<a href="#name-RuneScanner">RuneScanner</a> <i>(interface)</i>
+			fmt.<a href="fmt.html#name-ScanState">ScanState</a> <i>(interface)</i>
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span></div>
+<div class="anchor" id="name-RuneScanner" data-popularity="450">	<a href="../use/io..RuneScanner.html">type</a> <a href="../src/io/io.go.html#line-280">RuneScanner</a> <b<i>(interface)</i></b>
+		RuneScanner is the interface that adds the UnreadRune method to the
+		basic ReadRune method.
+
+		UnreadRune causes the next call to ReadRune to return the same rune
+		as the previous call to ReadRune.
+		It may be an error to call UnreadRune twice without an intervening
+		call to ReadRune.
+
+		<input type='checkbox' class="stat" id="RuneScanner-stat-methods"><label for="RuneScanner-stat-methods">Exported Methods (2)</label><span id='RuneScanner-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-270">ReadRune</a>() (r <a href="builtin.html#name-rune">rune</a>, size <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-282">UnreadRune</a>() <a href="builtin.html#name-error">error</a></span></span>
+		<input type='checkbox' class="stat" id="RuneScanner-stat-impledby"><label for="RuneScanner-stat-impledby">Implemented By (2+)</label><span id='RuneScanner-stat-impledby-content' class="stat-content">
+			fmt.<a href="fmt.html#name-ScanState">ScanState</a> <i>(interface)</i>
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span>
+		<input type='checkbox' class="stat" id="RuneScanner-stat-impls"><label for="RuneScanner-stat-impls">Implements (1+)</label><span id='RuneScanner-stat-impls-content' class="stat-content">
+			 T : <a href="#name-RuneReader">RuneReader</a></span></div>
+<div class="anchor" id="name-SectionReader" data-popularity="475">	<a href="../use/io..SectionReader.html">type</a> <a href="../src/io/io.go.html#line-468">SectionReader</a> <i>(struct)</i>
+		SectionReader implements Read, Seek, and ReadAt on a section
+		of an underlying ReaderAt.
+
+		<input type='checkbox' class="stat" id="SectionReader-stat-methods"><label for="SectionReader-stat-methods">Exported Methods (4)</label><span id='SectionReader-stat-methods-content' class="stat-content">
+			<span class="nodocs">(*T) <a href="../src/io/io.go.html#line-475">Read</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">(*T) <a href="../src/io/io.go.html#line-508">ReadAt</a>(p []<a href="builtin.html#name-byte">byte</a>, off <a href="builtin.html#name-int64">int64</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">(*T) <a href="../src/io/io.go.html#line-490">Seek</a>(offset <a href="builtin.html#name-int64">int64</a>, whence <a href="builtin.html#name-int">int</a>) (<a href="builtin.html#name-int64">int64</a>, <a href="builtin.html#name-error">error</a>)</span>
+			<input type='checkbox' class="stat" id="SectionReader-stat-method-Size"><label for="SectionReader-stat-method-Size">(*T) <a href="../src/io/io.go.html#line-525">Size</a>() <a href="builtin.html#name-int64">int64</a></label><span id='SectionReader-stat-method-Size-content' class="stat-content">
+				Size returns the size of the section in bytes.
+</span></span>
+		<input type='checkbox' class="stat" id="SectionReader-stat-impls"><label for="SectionReader-stat-impls">Implements (4+)</label><span id='SectionReader-stat-impls-content' class="stat-content">
+			*T : <a href="#name-Reader">Reader</a>
+			*T : <a href="#name-ReaderAt">ReaderAt</a>
+			*T : <a href="#name-ReadSeeker">ReadSeeker</a>
+			*T : <a href="#name-Seeker">Seeker</a></span>
+		<input type='checkbox' class="stat" id="SectionReader-stat-results"><label for="SectionReader-stat-results">As Outputs Of (1+)</label><span id='SectionReader-stat-results-content' class="stat-content">
+			func <a href="#name-NewSectionReader">NewSectionReader</a>(r <a href="#name-ReaderAt">ReaderAt</a>, off <a href="builtin.html#name-int64">int64</a>, n <a href="builtin.html#name-int64">int64</a>) *<b>SectionReader</b></span></div>
+<div class="anchor" id="name-Seeker" data-popularity="1100">	<a href="../use/io..Seeker.html">type</a> <a href="../src/io/io.go.html#line-115">Seeker</a> <b<i>(interface)</i></b>
+		Seeker is the interface that wraps the basic Seek method.
+
+		Seek sets the offset for the next Read or Write to offset,
+		interpreted according to whence:
+		SeekStart means relative to the start of the file,
+		SeekCurrent means relative to the current offset, and
+		SeekEnd means relative to the end.
+		Seek returns the new offset relative to the start of the
+		file and an error, if any.
+
+		Seeking to an offset before the start of the file is an error.
+		Seeking to any positive offset is legal, but the behavior of subsequent
+		I/O operations on the underlying object is implementation-dependent.
+
+		<input type='checkbox' class="stat" id="Seeker-stat-methods"><label for="Seeker-stat-methods">One Exported Method</label><span id='Seeker-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-116">Seek</a>(offset <a href="builtin.html#name-int64">int64</a>, whence <a href="builtin.html#name-int">int</a>) (<a href="builtin.html#name-int64">int64</a>, <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="Seeker-stat-impledby"><label for="Seeker-stat-impledby">Implemented By (7+)</label><span id='Seeker-stat-impledby-content' class="stat-content">
+			<a href="#name-ReadSeeker">ReadSeeker</a> <i>(interface)</i>
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			*<a href="#name-SectionReader">SectionReader</a>
+			<a href="#name-WriteSeeker">WriteSeeker</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span></div>
+<div class="anchor" id="name-StringWriter" data-popularity="350">	<a href="../use/io..StringWriter.html">type</a> <a href="../src/io/io.go.html#line-286">StringWriter</a> <b<i>(interface)</i></b>
+		StringWriter is the interface that wraps the WriteString method.
+
+		<input type='checkbox' class="stat" id="StringWriter-stat-methods"><label for="StringWriter-stat-methods">One Exported Method</label><span id='StringWriter-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-287">WriteString</a>(s <a href="builtin.html#name-string">string</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="StringWriter-stat-impledby"><label for="StringWriter-stat-impledby">Implemented By (2+)</label><span id='StringWriter-stat-impledby-content' class="stat-content">
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Builder">Builder</a>)</span></div>
+<div class="anchor" id="name-WriteCloser" data-popularity="800">	<a href="../use/io..WriteCloser.html">type</a> <a href="../src/io/io.go.html#line-132">WriteCloser</a> <b<i>(interface)</i></b>
+		WriteCloser is the interface that groups the basic Write and Close methods.
+
+		<input type='checkbox' class="stat" id="WriteCloser-stat-methods"><label for="WriteCloser-stat-methods">Exported Methods (2)</label><span id='WriteCloser-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-99">Close</a>() <a href="builtin.html#name-error">error</a></span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="WriteCloser-stat-impledby"><label for="WriteCloser-stat-impledby">Implemented By (4+)</label><span id='WriteCloser-stat-impledby-content' class="stat-content">
+			*<a href="#name-PipeWriter">PipeWriter</a>
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="WriteCloser-stat-impls"><label for="WriteCloser-stat-impls">Implements (2+)</label><span id='WriteCloser-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Closer">Closer</a>
+			 T : <a href="#name-Writer">Writer</a></span></div>
+<div class="anchor" id="name-Writer" data-popularity="2045">	<a href="../use/io..Writer.html">type</a> <a href="../src/io/io.go.html#line-90">Writer</a> <b<i>(interface)</i></b>
+		Writer is the interface that wraps the basic Write method.
+
+		Write writes len(p) bytes from p to the underlying data stream.
+		It returns the number of bytes written from p (0 &lt;= n &lt;= len(p))
+		and any error encountered that caused the write to stop early.
+		Write must return a non-nil error if it returns n &lt; len(p).
+		Write must not modify the slice data, even temporarily.
+
+		Implementations must not retain p.
+
+		<input type='checkbox' class="stat" id="Writer-stat-methods"><label for="Writer-stat-methods">One Exported Method</label><span id='Writer-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="Writer-stat-impledby"><label for="Writer-stat-impledby">Implemented By (10+)</label><span id='Writer-stat-impledby-content' class="stat-content">
+			*<a href="#name-PipeWriter">PipeWriter</a>
+			<a href="#name-ReadWriteCloser">ReadWriteCloser</a> <i>(interface)</i>
+			<a href="#name-ReadWriter">ReadWriter</a> <i>(interface)</i>
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			<a href="#name-WriteCloser">WriteCloser</a> <i>(interface)</i>
+			<a href="#name-WriteSeeker">WriteSeeker</a> <i>(interface)</i>
+			fmt.<a href="fmt.html#name-State">State</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)
+			strings.(*<a href="strings.html#name-Builder">Builder</a>)</span>
+		<input type='checkbox' class="stat" id="Writer-stat-results"><label for="Writer-stat-results">As Outputs Of (1+)</label><span id='Writer-stat-results-content' class="stat-content">
+			func <a href="#name-MultiWriter">MultiWriter</a>(writers ...<b>Writer</b>) <b>Writer</b></span>
+		<input type='checkbox' class="stat" id="Writer-stat-params"><label for="Writer-stat-params">As Inputs Of (12+)</label><span id='Writer-stat-params-content' class="stat-content">
+			func <a href="#name-Copy">Copy</a>(dst <b>Writer</b>, src <a href="#name-Reader">Reader</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-CopyBuffer">CopyBuffer</a>(dst <b>Writer</b>, src <a href="#name-Reader">Reader</a>, buf []<a href="builtin.html#name-byte">byte</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-CopyN">CopyN</a>(dst <b>Writer</b>, src <a href="#name-Reader">Reader</a>, n <a href="builtin.html#name-int64">int64</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-MultiWriter">MultiWriter</a>(writers ...<b>Writer</b>) <b>Writer</b>
+			func <a href="#name-TeeReader">TeeReader</a>(r <a href="#name-Reader">Reader</a>, w <b>Writer</b>) <a href="#name-Reader">Reader</a>
+			func <a href="#name-WriteString">WriteString</a>(w <b>Writer</b>, s <a href="builtin.html#name-string">string</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func <a href="#name-WriterTo">WriterTo</a>.<a href="../src/io/io.go.html#line-182">WriteTo</a>(w <b>Writer</b>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fprint">Fprint</a>(w <b>Writer</b>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fprintf">Fprintf</a>(w <b>Writer</b>, format <a href="builtin.html#name-string">string</a>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func fmt.<a href="fmt.html#name-Fprintln">Fprintln</a>(w <b>Writer</b>, a ...interface{}) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+			func strings.(*<a href="strings.html#name-Reader">Reader</a>).<a href="../src/strings/reader.go.html#line-131">WriteTo</a>(w <b>Writer</b>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+			func strings.(*<a href="strings.html#name-Replacer">Replacer</a>).<a href="../src/strings/replace.go.html#line-101">WriteString</a>(w <b>Writer</b>, s <a href="builtin.html#name-string">string</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></div>
+<div class="anchor" id="name-WriterAt" data-popularity="200">	<a href="../use/io..WriterAt.html">type</a> <a href="../src/io/io.go.html#line-230">WriterAt</a> <b<i>(interface)</i></b>
+		WriterAt is the interface that wraps the basic WriteAt method.
+
+		WriteAt writes len(p) bytes from p to the underlying data stream
+		at offset off. It returns the number of bytes written from p (0 &lt;= n &lt;= len(p))
+		and any error encountered that caused the write to stop early.
+		WriteAt must return a non-nil error if it returns n &lt; len(p).
+
+		If WriteAt is writing to a destination with a seek offset,
+		WriteAt should not affect nor be affected by the underlying
+		seek offset.
+
+		Clients of WriteAt can execute parallel WriteAt calls on the same
+		destination if the ranges do not overlap.
+
+		Implementations must not retain p.
+
+		<input type='checkbox' class="stat" id="WriterAt-stat-methods"><label for="WriterAt-stat-methods">One Exported Method</label><span id='WriterAt-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-231">WriteAt</a>(p []<a href="builtin.html#name-byte">byte</a>, off <a href="builtin.html#name-int64">int64</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="WriterAt-stat-impledby"><label for="WriterAt-stat-impledby">Implemented By (1+)</label><span id='WriterAt-stat-impledby-content' class="stat-content">
+			os.(*<a href="os.html#name-File">File</a>)</span></div>
+<div class="anchor" id="name-WriterTo" data-popularity="200">	<a href="../use/io..WriterTo.html">type</a> <a href="../src/io/io.go.html#line-181">WriterTo</a> <b<i>(interface)</i></b>
+		WriterTo is the interface that wraps the WriteTo method.
+
+		WriteTo writes data to w until there's no more data to write or
+		when an error occurs. The return value n is the number of bytes
+		written. Any error encountered during the write is also returned.
+
+		The Copy function uses WriterTo if available.
+
+		<input type='checkbox' class="stat" id="WriterTo-stat-methods"><label for="WriterTo-stat-methods">One Exported Method</label><span id='WriterTo-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-182">WriteTo</a>(w <a href="#name-Writer">Writer</a>) (n <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="WriterTo-stat-impledby"><label for="WriterTo-stat-impledby">Implemented By (1+)</label><span id='WriterTo-stat-impledby-content' class="stat-content">
+			strings.(*<a href="strings.html#name-Reader">Reader</a>)</span></div>
+<div class="anchor" id="name-WriteSeeker" data-popularity="650">	<a href="../use/io..WriteSeeker.html">type</a> <a href="../src/io/io.go.html#line-151">WriteSeeker</a> <b<i>(interface)</i></b>
+		WriteSeeker is the interface that groups the basic Write and Seek methods.
+
+		<input type='checkbox' class="stat" id="WriteSeeker-stat-methods"><label for="WriteSeeker-stat-methods">Exported Methods (2)</label><span id='WriteSeeker-stat-methods-content' class="stat-content">
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-116">Seek</a>(offset <a href="builtin.html#name-int64">int64</a>, whence <a href="builtin.html#name-int">int</a>) (<a href="builtin.html#name-int64">int64</a>, <a href="builtin.html#name-error">error</a>)</span>
+			<span class="nodocs">( T) <a href="../src/io/io.go.html#line-91">Write</a>(p []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)</span></span>
+		<input type='checkbox' class="stat" id="WriteSeeker-stat-impledby"><label for="WriteSeeker-stat-impledby">Implemented By (3+)</label><span id='WriteSeeker-stat-impledby-content' class="stat-content">
+			<a href="#name-ReadWriteSeeker">ReadWriteSeeker</a> <i>(interface)</i>
+			internal/poll.(*<a href="internal/poll.html#name-FD">FD</a>)
+			os.(*<a href="os.html#name-File">File</a>)</span>
+		<input type='checkbox' class="stat" id="WriteSeeker-stat-impls"><label for="WriteSeeker-stat-impls">Implements (2+)</label><span id='WriteSeeker-stat-impls-content' class="stat-content">
+			 T : <a href="#name-Seeker">Seeker</a>
+			 T : <a href="#name-Writer">Writer</a></span></div>
+<span class="title">Exported Values</span>
+
+<div class="anchor" id="name-Copy">	 <a href="../use/io..Copy.html">func</a> <a href="../src/io/io.go.html#line-367">Copy</a>(dst <a href="#name-Writer">Writer</a>, src <a href="#name-Reader">Reader</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+		Copy copies from src to dst until either EOF is reached
+		on src or an error occurs. It returns the number of bytes
+		copied and the first error encountered while copying, if any.
+
+		A successful Copy returns err == nil, not err == EOF.
+		Because Copy is defined to read from src until EOF, it does
+		not treat an EOF from Read as an error to be reported.
+
+		If src implements the WriterTo interface,
+		the copy is implemented by calling src.WriteTo(dst).
+		Otherwise, if dst implements the ReaderFrom interface,
+		the copy is implemented by calling dst.ReadFrom(src).</div>
+<div class="anchor" id="name-CopyBuffer">	 <a href="../use/io..CopyBuffer.html">func</a> <a href="../src/io/io.go.html#line-378">CopyBuffer</a>(dst <a href="#name-Writer">Writer</a>, src <a href="#name-Reader">Reader</a>, buf []<a href="builtin.html#name-byte">byte</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+		CopyBuffer is identical to Copy except that it stages through the
+		provided buffer (if one is required) rather than allocating a
+		temporary one. If buf is nil, one is allocated; otherwise if it has
+		zero length, CopyBuffer panics.
+
+		If either src implements WriterTo or dst implements ReaderFrom,
+		buf will not be used to perform the copy.</div>
+<div class="anchor" id="name-CopyN">	 <a href="../use/io..CopyN.html">func</a> <a href="../src/io/io.go.html#line-343">CopyN</a>(dst <a href="#name-Writer">Writer</a>, src <a href="#name-Reader">Reader</a>, n <a href="builtin.html#name-int64">int64</a>) (written <a href="builtin.html#name-int64">int64</a>, err <a href="builtin.html#name-error">error</a>)
+		CopyN copies n bytes (or until an error) from src to dst.
+		It returns the number of bytes copied and the earliest
+		error encountered while copying.
+		On return, written == n if and only if err == nil.
+
+		If dst implements the ReaderFrom interface,
+		the copy is implemented using it.</div>
+<div class="anchor" id="name-EOF">	  <a href="../use/io..EOF.html">var</a> <a href="../src/io/io.go.html#line-38">EOF</a> <a href="builtin.html#name-error">error</a>
+		EOF is the error returned by Read when no more input is available.
+		Functions should return EOF only to signal a graceful end of input.
+		If the EOF occurs unexpectedly in a structured data stream,
+		the appropriate error is either ErrUnexpectedEOF or some other error
+		giving more detail.</div>
+<div class="anchor" id="name-ErrClosedPipe">	  <a href="../use/io..ErrClosedPipe.html">var</a> <a href="../src/io/pipe.go.html#line-36">ErrClosedPipe</a> <a href="builtin.html#name-error">error</a>
+		ErrClosedPipe is the error used for read or write operations on a closed pipe.</div>
+<div class="anchor" id="name-ErrNoProgress">	  <a href="../use/io..ErrNoProgress.html">var</a> <a href="../src/io/io.go.html#line-47">ErrNoProgress</a> <a href="builtin.html#name-error">error</a>
+		ErrNoProgress is returned by some clients of an io.Reader when
+		many calls to Read have failed to return any data or error,
+		usually the sign of a broken io.Reader implementation.</div>
+<div class="anchor" id="name-ErrShortBuffer">	  <a href="../use/io..ErrShortBuffer.html">var</a> <a href="../src/io/io.go.html#line-31">ErrShortBuffer</a> <a href="builtin.html#name-error">error</a>
+		ErrShortBuffer means that a read required a longer buffer than was provided.</div>
+<div class="anchor" id="name-ErrShortWrite">	  <a href="../use/io..ErrShortWrite.html">var</a> <a href="../src/io/io.go.html#line-28">ErrShortWrite</a> <a href="builtin.html#name-error">error</a>
+		ErrShortWrite means that a write accepted fewer bytes than requested
+		but failed to return an explicit error.</div>
+<div class="anchor" id="name-ErrUnexpectedEOF">	  <a href="../use/io..ErrUnexpectedEOF.html">var</a> <a href="../src/io/io.go.html#line-42">ErrUnexpectedEOF</a> <a href="builtin.html#name-error">error</a>
+		ErrUnexpectedEOF means that EOF was encountered in the
+		middle of reading a fixed-size block or data structure.</div>
+<div class="anchor" id="name-LimitReader">	 <a href="../use/io..LimitReader.html">func</a> <a href="../src/io/io.go.html#line-437">LimitReader</a>(r <a href="#name-Reader">Reader</a>, n <a href="builtin.html#name-int64">int64</a>) <a href="#name-Reader">Reader</a>
+		LimitReader returns a Reader that reads from r
+		but stops with EOF after n bytes.
+		The underlying implementation is a *LimitedReader.</div>
+<div class="anchor" id="name-MultiReader">	 <a href="../use/io..MultiReader.html">func</a> <a href="../src/io/multi.go.html#line-48">MultiReader</a>(readers ...<a href="#name-Reader">Reader</a>) <a href="#name-Reader">Reader</a>
+		MultiReader returns a Reader that's the logical concatenation of
+		the provided input readers. They're read sequentially. Once all
+		inputs have returned EOF, Read will return EOF.  If any of the readers
+		return a non-nil, non-EOF error, Read will return that error.</div>
+<div class="anchor" id="name-MultiWriter">	 <a href="../use/io..MultiWriter.html">func</a> <a href="../src/io/multi.go.html#line-102">MultiWriter</a>(writers ...<a href="#name-Writer">Writer</a>) <a href="#name-Writer">Writer</a>
+		MultiWriter creates a writer that duplicates its writes to all the
+		provided writers, similar to the Unix tee(1) command.
+
+		Each write is written to each listed writer, one at a time.
+		If a listed writer returns an error, that overall write operation
+		stops and returns the error; it does not continue down the list.</div>
+<div class="anchor" id="name-NewSectionReader">	 <a href="../use/io..NewSectionReader.html">func</a> <a href="../src/io/io.go.html#line-462">NewSectionReader</a>(r <a href="#name-ReaderAt">ReaderAt</a>, off <a href="builtin.html#name-int64">int64</a>, n <a href="builtin.html#name-int64">int64</a>) *<a href="#name-SectionReader">SectionReader</a>
+		NewSectionReader returns a SectionReader that reads from r
+		starting at offset off and stops with EOF after n bytes.</div>
+<div class="anchor" id="name-Pipe">	 <a href="../use/io..Pipe.html">func</a> <a href="../src/io/pipe.go.html#line-197">Pipe</a>() (*<a href="#name-PipeReader">PipeReader</a>, *<a href="#name-PipeWriter">PipeWriter</a>)
+		Pipe creates a synchronous in-memory pipe.
+		It can be used to connect code expecting an io.Reader
+		with code expecting an io.Writer.
+
+		Reads and Writes on the pipe are matched one to one
+		except when multiple Reads are needed to consume a single Write.
+		That is, each Write to the PipeWriter blocks until it has satisfied
+		one or more Reads from the PipeReader that fully consume
+		the written data.
+		The data is copied directly from the Write to the corresponding
+		Read (or Reads); there is no internal buffering.
+
+		It is safe to call Read and Write in parallel with each other or with Close.
+		Parallel calls to Read and parallel calls to Write are also safe:
+		the individual calls will be gated sequentially.</div>
+<div class="anchor" id="name-ReadAtLeast">	 <a href="../use/io..ReadAtLeast.html">func</a> <a href="../src/io/io.go.html#line-308">ReadAtLeast</a>(r <a href="#name-Reader">Reader</a>, buf []<a href="builtin.html#name-byte">byte</a>, min <a href="builtin.html#name-int">int</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		ReadAtLeast reads from r into buf until it has read at least min bytes.
+		It returns the number of bytes copied and an error if fewer bytes were read.
+		The error is EOF only if no bytes were read.
+		If an EOF happens after reading fewer than min bytes,
+		ReadAtLeast returns ErrUnexpectedEOF.
+		If min is greater than the length of buf, ReadAtLeast returns ErrShortBuffer.
+		On return, n &gt;= min if and only if err == nil.
+		If r returns an error having read at least min bytes, the error is dropped.</div>
+<div class="anchor" id="name-ReadFull">	 <a href="../use/io..ReadFull.html">func</a> <a href="../src/io/io.go.html#line-332">ReadFull</a>(r <a href="#name-Reader">Reader</a>, buf []<a href="builtin.html#name-byte">byte</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		ReadFull reads exactly len(buf) bytes from r into buf.
+		It returns the number of bytes copied and an error if fewer bytes were read.
+		The error is EOF only if no bytes were read.
+		If an EOF happens after reading some but not all the bytes,
+		ReadFull returns ErrUnexpectedEOF.
+		On return, n == len(buf) if and only if err == nil.
+		If r returns an error having read at least len(buf) bytes, the error is dropped.</div>
+<div class="anchor" id="name-SeekCurrent">	<a href="../use/io..SeekCurrent.html">const</a> <a href="../src/io/io.go.html#line-22">SeekCurrent</a> = 1 // seek relative to the current offset
+		Seek whence values.</div>
+<div class="anchor" id="name-SeekEnd">	<a href="../use/io..SeekEnd.html">const</a> <a href="../src/io/io.go.html#line-23">SeekEnd</a> = 2 // seek relative to the end
+		Seek whence values.</div>
+<div class="anchor" id="name-SeekStart">	<a href="../use/io..SeekStart.html">const</a> <a href="../src/io/io.go.html#line-21">SeekStart</a> = 0 // seek relative to the origin of the file
+		Seek whence values.</div>
+<div class="anchor" id="name-TeeReader">	 <a href="../use/io..TeeReader.html">func</a> <a href="../src/io/io.go.html#line-532">TeeReader</a>(r <a href="#name-Reader">Reader</a>, w <a href="#name-Writer">Writer</a>) <a href="#name-Reader">Reader</a>
+		TeeReader returns a Reader that writes to w what it reads from r.
+		All reads from r performed through it are matched with
+		corresponding writes to w. There is no internal buffering -
+		the write must complete before the read completes.
+		Any error encountered while writing is reported as a read error.</div>
+<div class="anchor" id="name-WriteString">	 <a href="../use/io..WriteString.html">func</a> <a href="../src/io/io.go.html#line-293">WriteString</a>(w <a href="#name-Writer">Writer</a>, s <a href="builtin.html#name-string">string</a>) (n <a href="builtin.html#name-int">int</a>, err <a href="builtin.html#name-error">error</a>)
+		WriteString writes the contents of the string s to w, which accepts a slice of bytes.
+		If w implements StringWriter, its WriteString method is invoked directly.
+		Otherwise, w.Write is called exactly once.</div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

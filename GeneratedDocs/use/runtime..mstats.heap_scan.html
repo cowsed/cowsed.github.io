@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.heap_scan</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-24">mstats</a>.<a href="../src/runtime/mstats.go.html#line-138">heap_scan</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+8 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgc.go.html#line-473">mgc.go#L473</a>: 			" (scan ", memstats.<b>heap_scan</b>>>20, " MB in ",
+		<a href="../src/runtime/mgc.go.html#line-511" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-511">#L511</a>: 	scanWorkExpected := int64(float64(memstats.<b>heap_scan</b>) * 100 / float64(100+gcpercent))
+		<a href="../src/runtime/mgc.go.html#line-521" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-521">#L521</a>: 		scanWorkExpected = int64(memstats.<b>heap_scan</b>)
+		<a href="../src/runtime/mgc.go.html#line-2131" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2131">#L2131</a>: 	memstats.<b>heap_scan</b> = uint64(gcController.scanWork)
+		<a href="../src/runtime/mheap.go.html#line-1191">mheap.go#L1191</a>: 		memstats.<b>heap_scan</b> += uint64(c.local_scan)
+		<a href="../src/runtime/mheap.go.html#line-1408" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1408">#L1408</a>: 		memstats.<b>heap_scan</b> += uint64(c.local_scan)
+		<a href="../src/runtime/mstats.go.html#line-138">mstats.go#L138</a>: 	<b>heap_scan</b> uint64
+		<a href="../src/runtime/mstats.go.html#line-634" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-634">#L634</a>: 	memstats.<b>heap_scan</b> += uint64(c.local_scan)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

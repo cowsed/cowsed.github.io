@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.timerNoStatus</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/time.go.html#line-119">timerNoStatus</a></b></span>
+
+10 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/time.go.html#line-119">time.go#L119</a>: 	<b>timerNoStatus</b> = iota
+		<a href="../src/runtime/time.go.html#line-250" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-250">#L250</a>: 	if t.status != <b>timerNoStatus</b> {
+		<a href="../src/runtime/time.go.html#line-340" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-340">#L340</a>: 		case <b>timerNoStatus</b>:
+		<a href="../src/runtime/time.go.html#line-413" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-413">#L413</a>: 	status := uint32(<b>timerNoStatus</b>)
+		<a href="../src/runtime/time.go.html#line-429" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-429">#L429</a>: 		case <b>timerNoStatus</b>, timerRemoved:
+		<a href="../src/runtime/time.go.html#line-621" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-621">#L621</a>: 			case <b>timerNoStatus</b>, timerRemoved:
+		<a href="../src/runtime/time.go.html#line-686" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-686">#L686</a>: 		case <b>timerNoStatus</b>, timerRunning, timerRemoving, timerRemoved, timerMoving:
+		<a href="../src/runtime/time.go.html#line-793" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-793">#L793</a>: 		case <b>timerNoStatus</b>, timerRemoved:
+		<a href="../src/runtime/time.go.html#line-835" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-835">#L835</a>: 		if !atomic.Cas(&amp;t.status, timerRunning, <b>timerNoStatus</b>) {
+		<a href="../src/runtime/time.go.html#line-915" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-915">#L915</a>: 			case <b>timerNoStatus</b>, timerRemoved:
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

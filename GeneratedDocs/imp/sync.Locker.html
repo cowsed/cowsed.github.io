@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method Implmentations: sync.Locker</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+<pre><code><span style="font-size:x-large;">type <a href="../pkg/sync.html">sync</a>.<b><a href="../src/sync/mutex.go.html#line-31">Locker</a></b></span><span style="font-size:large;"> <b<i>(interface)</i></b></span>
+
+<code><span class="title">Method Implmentations</span>
+
+<div class="anchor" id="name-Lock">	<a href="../use/sync..Locker.Lock.html">Lock</a>()
+		*<a href="../pkg/sync.html#name-Mutex">Mutex</a>.<b><a href="../src/sync/mutex.go.html#line-72">Lock</a></b>
+		*<a href="../src/sync/cond.go.html#line-94">noCopy</a>.<b><a href="../src/sync/cond.go.html#line-97">Lock</a></b>
+		*<a href="../src/sync/rwmutex.go.html#line-148">rlocker</a>.<b><a href="../src/sync/rwmutex.go.html#line-150">Lock</a></b>
+		*<a href="../pkg/sync.html#name-RWMutex">RWMutex</a>.<b><a href="../src/sync/rwmutex.go.html#line-92">Lock</a></b>
+		io.(*<a href="../src/io/pipe.go.html#line-16">onceError</a>).<i><a href="../src/io/pipe.go.html#line-17">Mutex</a></i>.<b><a href="../src/sync/mutex.go.html#line-72">Lock</a></b>
+		syscall.(*<a href="../src/syscall/syscall_unix.go.html#line-46">mmapper</a>).<i><a href="../src/syscall/syscall_unix.go.html#line-47">Mutex</a></i>.<b><a href="../src/sync/mutex.go.html#line-72">Lock</a></b></div>
+<div class="anchor" id="name-Unlock">	<a href="../use/sync..Locker.Unlock.html">Unlock</a>()
+		*<a href="../pkg/sync.html#name-Mutex">Mutex</a>.<b><a href="../src/sync/mutex.go.html#line-179">Unlock</a></b>
+		*<a href="../src/sync/cond.go.html#line-94">noCopy</a>.<b><a href="../src/sync/cond.go.html#line-98">Unlock</a></b>
+		*<a href="../src/sync/rwmutex.go.html#line-148">rlocker</a>.<b><a href="../src/sync/rwmutex.go.html#line-151">Unlock</a></b>
+		*<a href="../pkg/sync.html#name-RWMutex">RWMutex</a>.<b><a href="../src/sync/rwmutex.go.html#line-118">Unlock</a></b>
+		io.(*<a href="../src/io/pipe.go.html#line-16">onceError</a>).<i><a href="../src/io/pipe.go.html#line-17">Mutex</a></i>.<b><a href="../src/sync/mutex.go.html#line-179">Unlock</a></b>
+		syscall.(*<a href="../src/syscall/syscall_unix.go.html#line-46">mmapper</a>).<i><a href="../src/syscall/syscall_unix.go.html#line-47">Mutex</a></i>.<b><a href="../src/sync/mutex.go.html#line-179">Unlock</a></b></div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

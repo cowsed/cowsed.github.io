@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: errors.New</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/errors.html">errors</a>.<a href="../src/errors/errors.go.html#line-58">New</a></b></span>
+
+83 uses:
+
+	errors <i>(current package)</i>
+		<a href="../src/errors/errors.go.html#line-58">errors.go#L58</a>: func <b>New</b>(text string) error {
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/errors.go.html#line-24">errors.go#L24</a>: 		err = errors.<b>New</b>(s)
+		<a href="../src/fmt/scan.go.html#line-180">scan.go#L180</a>: 	return 0, errors.<b>New</b>("ScanState's Read should not be called. Use ReadRune")
+		<a href="../src/fmt/scan.go.html#line-244" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-244">#L244</a>: 	panic(scanError{errors.<b>New</b>(err)})
+		<a href="../src/fmt/scan.go.html#line-371" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-371">#L371</a>: 		return errors.<b>New</b>("fmt: scanning called UnreadRune with no rune available")
+		<a href="../src/fmt/scan.go.html#line-465" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-465">#L465</a>: var complexError = errors.<b>New</b>("syntax error scanning complex number")
+		<a href="../src/fmt/scan.go.html#line-466" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-466">#L466</a>: var boolError = errors.<b>New</b>("syntax error scanning boolean")
+
+	<a href="../pkg/internal/oserror.html">internal/oserror</a>
+		<a href="../src/internal/oserror/errors.go.html#line-13">errors.go#L13</a>: 	ErrInvalid    = errors.<b>New</b>("invalid argument")
+		<a href="../src/internal/oserror/errors.go.html#line-14" class="path-duplicate">errors.go</a><a href="../src/internal/oserror/errors.go.html#line-14">#L14</a>: 	ErrPermission = errors.<b>New</b>("permission denied")
+		<a href="../src/internal/oserror/errors.go.html#line-15" class="path-duplicate">errors.go</a><a href="../src/internal/oserror/errors.go.html#line-15">#L15</a>: 	ErrExist      = errors.<b>New</b>("file already exists")
+		<a href="../src/internal/oserror/errors.go.html#line-16" class="path-duplicate">errors.go</a><a href="../src/internal/oserror/errors.go.html#line-16">#L16</a>: 	ErrNotExist   = errors.<b>New</b>("file does not exist")
+		<a href="../src/internal/oserror/errors.go.html#line-17" class="path-duplicate">errors.go</a><a href="../src/internal/oserror/errors.go.html#line-17">#L17</a>: 	ErrClosed     = errors.<b>New</b>("file already closed")
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/fd.go.html#line-20">fd.go#L20</a>: var ErrNetClosing = errors.<b>New</b>("use of closed network connection")
+		<a href="../src/internal/poll/fd.go.html#line-24" class="path-duplicate">fd.go</a><a href="../src/internal/poll/fd.go.html#line-24">#L24</a>: var ErrFileClosing = errors.<b>New</b>("use of closed file")
+		<a href="../src/internal/poll/fd.go.html#line-28" class="path-duplicate">fd.go</a><a href="../src/internal/poll/fd.go.html#line-28">#L28</a>: var ErrNoDeadline = errors.<b>New</b>("file type does not support deadline")
+		<a href="../src/internal/poll/fd.go.html#line-55" class="path-duplicate">fd.go</a><a href="../src/internal/poll/fd.go.html#line-55">#L55</a>: var ErrNotPollable = errors.<b>New</b>("not pollable")
+		<a href="../src/internal/poll/fd_poll_runtime.go.html#line-85">fd_poll_runtime.go#L85</a>: 		return errors.<b>New</b>("waiting for unsupported file type")
+
+	<a href="../pkg/io.html">io</a>
+		<a href="../src/io/io.go.html#line-28">io.go#L28</a>: var ErrShortWrite = errors.<b>New</b>("short write")
+		<a href="../src/io/io.go.html#line-31" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-31">#L31</a>: var ErrShortBuffer = errors.<b>New</b>("short buffer")
+		<a href="../src/io/io.go.html#line-38" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-38">#L38</a>: var EOF = errors.<b>New</b>("EOF")
+		<a href="../src/io/io.go.html#line-42" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-42">#L42</a>: var ErrUnexpectedEOF = errors.<b>New</b>("unexpected EOF")
+		<a href="../src/io/io.go.html#line-47" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-47">#L47</a>: var ErrNoProgress = errors.<b>New</b>("multiple Read calls return no data or error")
+		<a href="../src/io/io.go.html#line-487" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-487">#L487</a>: var errWhence = errors.<b>New</b>("Seek: invalid whence")
+		<a href="../src/io/io.go.html#line-488" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-488">#L488</a>: var errOffset = errors.<b>New</b>("Seek: invalid offset")
+		<a href="../src/io/pipe.go.html#line-36">pipe.go#L36</a>: var ErrClosedPipe = errors.<b>New</b>("io: read/write on closed pipe")
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/exec_unix.go.html#line-62">exec_unix.go#L62</a>: var errFinished = errors.<b>New</b>("os: process already finished")
+		<a href="../src/os/exec_unix.go.html#line-66" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-66">#L66</a>: 		return errors.<b>New</b>("os: process already released")
+		<a href="../src/os/exec_unix.go.html#line-69" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-69">#L69</a>: 		return errors.<b>New</b>("os: process not initialized")
+		<a href="../src/os/exec_unix.go.html#line-78" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-78">#L78</a>: 		return errors.<b>New</b>("os: unsupported signal type")
+		<a href="../src/os/executable_procfs.go.html#line-21">executable_procfs.go#L21</a>: 		return "", errors.<b>New</b>("Executable not implemented for " + runtime.GOOS)
+		<a href="../src/os/file.go.html#line-130">file.go#L130</a>: 		return 0, &amp;PathError{"readat", f.name, errors.<b>New</b>("negative offset")}
+		<a href="../src/os/file.go.html#line-190" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-190">#L190</a>: var errWriteAtInAppendMode = errors.<b>New</b>("os: invalid use of WriteAt on file opened with O_APPEND")
+		<a href="../src/os/file.go.html#line-206" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-206">#L206</a>: 		return 0, &amp;PathError{"writeat", f.name, errors.<b>New</b>("negative offset")}
+		<a href="../src/os/file.go.html#line-402" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-402">#L402</a>: 			return "", errors.<b>New</b>("%LocalAppData% is not defined")
+		<a href="../src/os/file.go.html#line-408" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-408">#L408</a>: 			return "", errors.<b>New</b>("$HOME is not defined")
+		<a href="../src/os/file.go.html#line-415" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-415">#L415</a>: 			return "", errors.<b>New</b>("$home is not defined")
+		<a href="../src/os/file.go.html#line-424" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-424">#L424</a>: 				return "", errors.<b>New</b>("neither $XDG_CACHE_HOME nor $HOME are defined")
+		<a href="../src/os/file.go.html#line-453" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-453">#L453</a>: 			return "", errors.<b>New</b>("%AppData% is not defined")
+		<a href="../src/os/file.go.html#line-459" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-459">#L459</a>: 			return "", errors.<b>New</b>("$HOME is not defined")
+		<a href="../src/os/file.go.html#line-466" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-466">#L466</a>: 			return "", errors.<b>New</b>("$home is not defined")
+		<a href="../src/os/file.go.html#line-475" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-475">#L475</a>: 				return "", errors.<b>New</b>("neither $XDG_CONFIG_HOME nor $HOME are defined")
+		<a href="../src/os/file.go.html#line-509" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-509">#L509</a>: 	return "", errors.<b>New</b>(enverr + " is not defined")
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atoi.go.html#line-18">atoi.go#L18</a>: var ErrRange = errors.<b>New</b>("value out of range")
+		<a href="../src/strconv/atoi.go.html#line-21" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-21">#L21</a>: var ErrSyntax = errors.<b>New</b>("invalid syntax")
+		<a href="../src/strconv/atoi.go.html#line-45" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-45">#L45</a>: 	return &amp;NumError{fn, str, errors.<b>New</b>("invalid base " + Itoa(base))}
+		<a href="../src/strconv/atoi.go.html#line-49" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-49">#L49</a>: 	return &amp;NumError{fn, str, errors.<b>New</b>("invalid bit size " + Itoa(bitSize))}
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/reader.go.html#line-51">reader.go#L51</a>: 		return 0, errors.<b>New</b>("strings.Reader.ReadAt: negative offset")
+		<a href="../src/strings/reader.go.html#line-75" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-75">#L75</a>: 		return errors.<b>New</b>("strings.Reader.UnreadByte: at beginning of string")
+		<a href="../src/strings/reader.go.html#line-99" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-99">#L99</a>: 		return errors.<b>New</b>("strings.Reader.UnreadRune: at beginning of string")
+		<a href="../src/strings/reader.go.html#line-102" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-102">#L102</a>: 		return errors.<b>New</b>("strings.Reader.UnreadRune: previous operation was not ReadRune")
+		<a href="../src/strings/reader.go.html#line-121" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-121">#L121</a>: 		return 0, errors.<b>New</b>("strings.Reader.Seek: invalid whence")
+		<a href="../src/strings/reader.go.html#line-124" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-124">#L124</a>: 		return 0, errors.<b>New</b>("strings.Reader.Seek: negative position")
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/exec_unix.go.html#line-194">exec_unix.go#L194</a>: 		return 0, errorspkg.<b>New</b>("both Setctty and Foreground set in SysProcAttr")
+		<a href="../src/syscall/exec_unix.go.html#line-197" class="path-duplicate">exec_unix.go</a><a href="../src/syscall/exec_unix.go.html#line-197">#L197</a>: 		return 0, errorspkg.<b>New</b>("Setctty set but Ctty not valid in child")
+
+	<a href="../pkg/time.html">time</a>
+		<a href="../src/time/format.go.html#line-394">format.go#L394</a>: var atoiError = errors.<b>New</b>("time: invalid number")
+		<a href="../src/time/format.go.html#line-678" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-678">#L678</a>: var errBad = errors.<b>New</b>("bad value for field") // placeholder not passed to user
+		<a href="../src/time/format.go.html#line-1304" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1304">#L1304</a>: var errLeadingInt = errors.<b>New</b>("time: bad [0-9]*") // never printed
+		<a href="../src/time/format.go.html#line-1393" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1393">#L1393</a>: 		return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1405" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1405">#L1405</a>: 			return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1411" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1411">#L1411</a>: 			return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1425" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1425">#L1425</a>: 			return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1437" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1437">#L1437</a>: 			return 0, errors.<b>New</b>("time: missing unit in duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1443" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1443">#L1443</a>: 			return 0, errors.<b>New</b>("time: unknown unit " + quote(u) + " in duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1447" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1447">#L1447</a>: 			return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1456" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1456">#L1456</a>: 				return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/format.go.html#line-1462" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1462">#L1462</a>: 			return 0, errors.<b>New</b>("time: invalid duration " + quote(orig))
+		<a href="../src/time/sys_unix.go.html#line-47">sys_unix.go#L47</a>: 				return errors.<b>New</b>("short read")
+		<a href="../src/time/tick.go.html#line-23">tick.go#L23</a>: 		panic(errors.<b>New</b>("non-positive interval for NewTicker"))
+		<a href="../src/time/time.go.html#line-1152">time.go#L1152</a>: 			return nil, errors.<b>New</b>("Time.MarshalBinary: zone offset has fractional minute")
+		<a href="../src/time/time.go.html#line-1156" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1156">#L1156</a>: 			return nil, errors.<b>New</b>("Time.MarshalBinary: unexpected zone offset")
+		<a href="../src/time/time.go.html#line-1188" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1188">#L1188</a>: 		return errors.<b>New</b>("Time.UnmarshalBinary: no data")
+		<a href="../src/time/time.go.html#line-1192" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1192">#L1192</a>: 		return errors.<b>New</b>("Time.UnmarshalBinary: unsupported version")
+		<a href="../src/time/time.go.html#line-1196" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1196">#L1196</a>: 		return errors.<b>New</b>("Time.UnmarshalBinary: invalid length")
+		<a href="../src/time/time.go.html#line-1244" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1244">#L1244</a>: 		return nil, errors.<b>New</b>("Time.MarshalJSON: year outside of range [0,9999]")
+		<a href="../src/time/time.go.html#line-1271" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1271">#L1271</a>: 		return nil, errors.<b>New</b>("Time.MarshalText: year outside of range [0,9999]")
+		<a href="../src/time/zoneinfo.go.html#line-610">zoneinfo.go#L610</a>: var errLocation = errors.<b>New</b>("time: invalid location name")
+		<a href="../src/time/zoneinfo_read.go.html#line-110">zoneinfo_read.go#L110</a>: var badData = errors.<b>New</b>("malformed time zone information")
+		<a href="../src/time/zoneinfo_read.go.html#line-409" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-409">#L409</a>: 		return nil, errors.<b>New</b>("corrupt zip file " + zipfile)
+		<a href="../src/time/zoneinfo_read.go.html#line-417" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-417">#L417</a>: 		return nil, errors.<b>New</b>("corrupt zip file " + zipfile)
+		<a href="../src/time/zoneinfo_read.go.html#line-459" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-459">#L459</a>: 			return nil, errors.<b>New</b>("unsupported compression for " + name + " in " + zipfile)
+		<a href="../src/time/zoneinfo_read.go.html#line-484" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-484">#L484</a>: 			return nil, errors.<b>New</b>("corrupt zip file " + zipfile)
+		<a href="../src/time/zoneinfo_read.go.html#line-490" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-490">#L490</a>: 			return nil, errors.<b>New</b>("corrupt zip file " + zipfile)
+		<a href="../src/time/zoneinfo_read.go.html#line-545" class="path-duplicate">zoneinfo_read.go</a><a href="../src/time/zoneinfo_read.go.html#line-545">#L545</a>: 	return nil, errors.<b>New</b>("unknown time zone " + name)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

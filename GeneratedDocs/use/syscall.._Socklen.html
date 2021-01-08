@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall._Socklen</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/ztypes_linux_amd64.go.html#line-204">_Socklen</a></b></span>
+
+32 uses:
+
+	syscall <i>(current package)</i>
+		<a href="../src/syscall/syscall_linux.go.html#line-358">syscall_linux.go#L358</a>: func (sa *SockaddrInet4) sockaddr() (unsafe.Pointer, <b>_Socklen</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-372" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-372">#L372</a>: func (sa *SockaddrInet6) sockaddr() (unsafe.Pointer, <b>_Socklen</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-387" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-387">#L387</a>: func (sa *SockaddrUnix) sockaddr() (unsafe.Pointer, <b>_Socklen</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-401" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-401">#L401</a>: 	sl := <b>_Socklen</b>(2)
+		<a href="../src/syscall/syscall_linux.go.html#line-403" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-403">#L403</a>: 		sl += <b>_Socklen</b>(n) + 1
+		<a href="../src/syscall/syscall_linux.go.html#line-424" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-424">#L424</a>: func (sa *SockaddrLinklayer) sockaddr() (unsafe.Pointer, <b>_Socklen</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-448" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-448">#L448</a>: func (sa *SockaddrNetlink) sockaddr() (unsafe.Pointer, <b>_Socklen</b>, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-531" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-531">#L531</a>: 	var len <b>_Socklen</b> = SizeofSockaddrAny
+		<a href="../src/syscall/syscall_linux.go.html#line-546" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-546">#L546</a>: 	var len <b>_Socklen</b> = SizeofSockaddrAny
+		<a href="../src/syscall/syscall_linux.go.html#line-564" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-564">#L564</a>: 	var len <b>_Socklen</b> = SizeofSockaddrAny
+		<a href="../src/syscall/syscall_linux.go.html#line-572" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-572">#L572</a>: 	vallen := <b>_Socklen</b>(4)
+		<a href="../src/syscall/syscall_linux.go.html#line-579" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-579">#L579</a>: 	vallen := <b>_Socklen</b>(SizeofIPMreq)
+		<a href="../src/syscall/syscall_linux.go.html#line-586" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-586">#L586</a>: 	vallen := <b>_Socklen</b>(SizeofIPMreqn)
+		<a href="../src/syscall/syscall_linux.go.html#line-593" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-593">#L593</a>: 	vallen := <b>_Socklen</b>(SizeofIPv6Mreq)
+		<a href="../src/syscall/syscall_linux.go.html#line-600" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-600">#L600</a>: 	vallen := <b>_Socklen</b>(SizeofIPv6MTUInfo)
+		<a href="../src/syscall/syscall_linux.go.html#line-607" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-607">#L607</a>: 	vallen := <b>_Socklen</b>(SizeofICMPv6Filter)
+		<a href="../src/syscall/syscall_linux.go.html#line-614" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-614">#L614</a>: 	vallen := <b>_Socklen</b>(SizeofUcred)
+		<a href="../src/syscall/syscall_linux.go.html#line-671" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-671">#L671</a>: 	var salen <b>_Socklen</b>
+		<a href="../src/syscall/syscall_unix.go.html#line-228">syscall_unix.go#L228</a>: 	sockaddr() (ptr unsafe.Pointer, len <b>_Socklen</b>, err error) // lowercase; only we can define Sockaddrs
+		<a href="../src/syscall/syscall_unix.go.html#line-267" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-267">#L267</a>: 	var len <b>_Socklen</b> = SizeofSockaddrAny
+		<a href="../src/syscall/syscall_unix.go.html#line-276" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-276">#L276</a>: 	vallen := <b>_Socklen</b>(4)
+		<a href="../src/syscall/syscall_unix.go.html#line-283" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-283">#L283</a>: 	var len <b>_Socklen</b> = SizeofSockaddrAny
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1432">zsyscall_linux_amd64.go#L1432</a>: func accept(s int, rsa *RawSockaddrAny, addrlen *<b>_Socklen</b>) (fd int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1443" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1443">#L1443</a>: func accept4(s int, rsa *RawSockaddrAny, addrlen *<b>_Socklen</b>, flags int) (fd int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1454" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1454">#L1454</a>: func bind(s int, addr unsafe.Pointer, addrlen <b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1464" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1464">#L1464</a>: func connect(s int, addr unsafe.Pointer, addrlen <b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1510" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1510">#L1510</a>: func getsockopt(s int, level int, name int, val unsafe.Pointer, vallen *<b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1551" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1551">#L1551</a>: func getpeername(fd int, rsa *RawSockaddrAny, addrlen *<b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1561" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1561">#L1561</a>: func getsockname(fd int, rsa *RawSockaddrAny, addrlen *<b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1571" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1571">#L1571</a>: func recvfrom(fd int, p []byte, flags int, from *RawSockaddrAny, fromlen *<b>_Socklen</b>) (n int, err error) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1588" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1588">#L1588</a>: func sendto(s int, buf []byte, flags int, to unsafe.Pointer, addrlen <b>_Socklen</b>) (err error) {
+		<a href="../src/syscall/ztypes_linux_amd64.go.html#line-204">ztypes_linux_amd64.go#L204</a>: type <b>_Socklen</b> uint32
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

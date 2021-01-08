@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.traceBufPtr</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/trace.go.html#line-169">traceBufPtr</a></b></span>
+
+24 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/runtime2.go.html#line-624">runtime2.go#L624</a>: 	tracebuf <b>traceBufPtr</b>
+		<a href="../src/runtime/trace.go.html#line-122">trace.go#L122</a>: 	reading       <b>traceBufPtr</b> // buffer currently handed off to user
+		<a href="../src/runtime/trace.go.html#line-123" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-123">#L123</a>: 	empty         <b>traceBufPtr</b> // stack of empty buffers
+		<a href="../src/runtime/trace.go.html#line-124" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-124">#L124</a>: 	fullHead      <b>traceBufPtr</b> // queue of full buffers
+		<a href="../src/runtime/trace.go.html#line-125" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-125">#L125</a>: 	fullTail      <b>traceBufPtr</b>
+		<a href="../src/runtime/trace.go.html#line-143" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-143">#L143</a>: 	buf     <b>traceBufPtr</b> // global trace buffer, used when running without a p
+		<a href="../src/runtime/trace.go.html#line-148" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-148">#L148</a>: 	link      <b>traceBufPtr</b>             // in trace.empty/full
+		<a href="../src/runtime/trace.go.html#line-169" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-169">#L169</a>: type <b>traceBufPtr</b> uintptr
+		<a href="../src/runtime/trace.go.html#line-171" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-171">#L171</a>: func (tp <b>traceBufPtr</b>) ptr() *traceBuf   { return (*traceBuf)(unsafe.Pointer(tp)) }
+		<a href="../src/runtime/trace.go.html#line-172" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-172">#L172</a>: func (tp *<b>traceBufPtr</b>) set(b *traceBuf) { *tp = <b>traceBufPtr</b>(unsafe.Pointer(b)) }
+		<a href="../src/runtime/trace.go.html#line-173" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-173">#L173</a>: func traceBufPtrOf(b *traceBuf) <b>traceBufPtr</b> {
+		<a href="../src/runtime/trace.go.html#line-174" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-174">#L174</a>: 	return <b>traceBufPtr</b>(unsafe.Pointer(b))
+		<a href="../src/runtime/trace.go.html#line-486" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-486">#L486</a>: func traceFullQueue(buf <b>traceBufPtr</b>) {
+		<a href="../src/runtime/trace.go.html#line-497" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-497">#L497</a>: func traceFullDequeue() <b>traceBufPtr</b> {
+		<a href="../src/runtime/trace.go.html#line-542" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-542">#L542</a>: func traceEventLocked(extraBytes int, mp *m, pid int32, bufp *<b>traceBufPtr</b>, ev byte, skip int, args ...uint64) {
+		<a href="../src/runtime/trace.go.html#line-611" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-611">#L611</a>: func traceAcquireBuffer() (mp *m, pid int32, bufp *<b>traceBufPtr</b>) {
+		<a href="../src/runtime/trace.go.html#line-629" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-629">#L629</a>: func traceFlush(buf <b>traceBufPtr</b>, pid int32) <b>traceBufPtr</b> {
+		<a href="../src/runtime/trace.go.html#line-642" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-642">#L642</a>: 		buf = <b>traceBufPtr</b>(sysAlloc(unsafe.Sizeof(traceBuf{}), &memstats.other_sys))
+		<a href="../src/runtime/trace.go.html#line-665" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-665">#L665</a>: func traceString(bufp *<b>traceBufPtr</b>, pid int32, s string) (uint64, *<b>traceBufPtr</b>) {
+		<a href="../src/runtime/trace.go.html#line-895" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-895">#L895</a>: func traceFrameForPC(buf <b>traceBufPtr</b>, pid int32, f Frame) (traceFrame, <b>traceBufPtr</b>) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

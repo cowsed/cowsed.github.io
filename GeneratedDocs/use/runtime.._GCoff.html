@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime._GCoff</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mgc.go.html#line-271">_GCoff</a></b></span>
+
+13 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/malloc.go.html#line-1116">malloc.go#L1116</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mfinal.go.html#line-78">mfinal.go#L78</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mgc.go.html#line-271">mgc.go#L271</a>: 	<b>_GCoff</b>             = iota // GC not running; sweeping in background, write barrier disabled
+		<a href="../src/runtime/mgc.go.html#line-853" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-853">#L853</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mgc.go.html#line-1201" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1201">#L1201</a>: 	if !memstats.enablegc || panicking != 0 || gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mgc.go.html#line-1683" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1683">#L1683</a>: 		setGCPhase(<b>_GCoff</b>)
+		<a href="../src/runtime/mgc.go.html#line-1697" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1697">#L1697</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mgc.go.html#line-2145" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-2145">#L2145</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/mgcwork.go.html#line-538">mgcwork.go#L538</a>: 	if gcphase != <b>_GCoff</b> || work.wbufSpans.free.isEmpty() {
+		<a href="../src/runtime/mheap.go.html#line-1784">mheap.go#L1784</a>: 		if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/proc.go.html#line-4282">proc.go#L4282</a>: 	if gcphase != <b>_GCoff</b> {
+		<a href="../src/runtime/stack.go.html#line-235">stack.go#L235</a>: 	if gcphase == <b>_GCoff</b> && s.allocCount == 0 {
+		<a href="../src/runtime/stack.go.html#line-479" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-479">#L479</a>: 		if gcphase == <b>_GCoff</b> {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

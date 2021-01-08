@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method Implmentations: runtime.stringer</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+<pre><code><span style="font-size:x-large;">type <a href="../pkg/runtime.html">runtime</a>.<b><a href="../src/runtime/error.go.html#line-184">stringer</a></b></span><span style="font-size:large;"> <b<i>(interface)</i></b></span>
+
+<code><span class="title">Method Implmentations</span>
+
+<div class="anchor" id="name-String">	<a href="../use/runtime..stringer.String.html">String</a>() <a href="../pkg/builtin.html#name-string">string</a>
+		<a href="../src/runtime/lockrank.go.html#line-27">lockRank</a>.<b><a href="../src/runtime/lockrank.go.html#line-179">String</a></b>
+		<a href="../src/runtime/runtime2.go.html#line-964">waitReason</a>.<b><a href="../src/runtime/runtime2.go.html#line-1026">String</a></b>
+		fmt.<a href="../pkg/fmt.html#name-Stringer">Stringer</a>.<b><a href="../src/runtime/error.go.html#line-185">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-197">arrayType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-198">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-205">chanType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-206">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-222">funcType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-223">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-235">interfaceType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-236">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-242">mapType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-243">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-256">ptrType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-257">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-151">rtype</a>).<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-262">sliceType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-257">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-283">structType</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-284">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.(*<a href="../src/internal/reflectlite/type.go.html#line-906">structTypeUncommon</a>).<i><a href="../src/internal/reflectlite/type.go.html#line-907">structType</a></i>.<i><a href="../src/internal/reflectlite/type.go.html#line-284">rtype</a></i>.<b><a href="../src/internal/reflectlite/type.go.html#line-481">String</a></b>
+		internal/reflectlite.<a href="../pkg/internal/reflectlite.html#name-Type">Type</a>.<b><a href="../src/internal/reflectlite/type.go.html#line-60">String</a></b>
+		os.<a href="../pkg/os.html#name-FileMode">FileMode</a>.<b><a href="../src/os/types.go.html#line-65">String</a></b>
+		os.(*<a href="../pkg/os.html#name-ProcessState">ProcessState</a>).<b><a href="../src/os/exec_posix.go.html#line-97">String</a></b>
+		os.<a href="../pkg/os.html#name-Signal">Signal</a>.<b><a href="../src/os/exec.go.html#line-66">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-349">arrayType</a>).<i><a href="../src/reflect/type.go.html#line-350">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.<a href="../pkg/reflect.html#name-ChanDir">ChanDir</a>.<b><a href="../src/reflect/type.go.html#line-1038">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-357">chanType</a>).<i><a href="../src/reflect/type.go.html#line-358">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-374">funcType</a>).<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1921">funcTypeFixed128</a>).<i><a href="../src/reflect/type.go.html#line-1922">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1909">funcTypeFixed16</a>).<i><a href="../src/reflect/type.go.html#line-1910">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1913">funcTypeFixed32</a>).<i><a href="../src/reflect/type.go.html#line-1914">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1901">funcTypeFixed4</a>).<i><a href="../src/reflect/type.go.html#line-1902">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1917">funcTypeFixed64</a>).<i><a href="../src/reflect/type.go.html#line-1918">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-1905">funcTypeFixed8</a>).<i><a href="../src/reflect/type.go.html#line-1906">funcType</a></i>.<i><a href="../src/reflect/type.go.html#line-375">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-387">interfaceType</a>).<i><a href="../src/reflect/type.go.html#line-388">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.<a href="../pkg/reflect.html#name-Kind">Kind</a>.<b><a href="../src/reflect/type.go.html#line-589">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-394">mapType</a>).<i><a href="../src/reflect/type.go.html#line-395">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-408">ptrType</a>).<i><a href="../src/reflect/type.go.html#line-409">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-303">rtype</a>).<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-414">sliceType</a>).<i><a href="../src/reflect/type.go.html#line-409">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-435">structType</a>).<i><a href="../src/reflect/type.go.html#line-436">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.(*<a href="../src/reflect/type.go.html#line-2321">structTypeUncommon</a>).<i><a href="../src/reflect/type.go.html#line-2322">structType</a></i>.<i><a href="../src/reflect/type.go.html#line-436">rtype</a></i>.<b><a href="../src/reflect/type.go.html#line-753">String</a></b>
+		reflect.<a href="../pkg/reflect.html#name-Type">Type</a>.<b><a href="../src/reflect/type.go.html#line-95">String</a></b>
+		reflect.<a href="../pkg/reflect.html#name-Value">Value</a>.<b><a href="../src/reflect/value.go.html#line-1867">String</a></b>
+		strconv.(*<a href="../src/strconv/decimal.go.html#line-14">decimal</a>).<b><a href="../src/strconv/decimal.go.html#line-22">String</a></b>
+		strings.(*<a href="../pkg/strings.html#name-Builder">Builder</a>).<b><a href="../src/strings/builder.go.html#line-47">String</a></b>
+		syscall.<a href="../pkg/syscall.html#name-Signal">Signal</a>.<b><a href="../src/syscall/syscall_unix.go.html#line-176">String</a></b>
+		time.<a href="../pkg/time.html#name-Duration">Duration</a>.<b><a href="../src/time/time.go.html#line-614">String</a></b>
+		time.(*<a href="../pkg/time.html#name-Location">Location</a>).<b><a href="../src/time/zoneinfo.go.html#line-99">String</a></b>
+		time.<a href="../pkg/time.html#name-Month">Month</a>.<b><a href="../src/time/time.go.html#line-291">String</a></b>
+		time.<a href="../pkg/time.html#name-Time">Time</a>.<b><a href="../src/time/format.go.html#line-450">String</a></b>
+		time.<a href="../pkg/time.html#name-Weekday">Weekday</a>.<b><a href="../src/time/time.go.html#line-314">String</a></b></div></code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

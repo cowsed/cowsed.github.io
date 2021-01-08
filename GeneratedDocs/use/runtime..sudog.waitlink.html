@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.sudog.waitlink</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-345">sudog</a>.<a href="../src/runtime/runtime2.go.html#line-370">waitlink</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+20 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/chan.go.html#line-246">chan.go#L246</a>: 	mysg.<b>waitlink</b> = nil
+		<a href="../src/runtime/chan.go.html#line-565" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-565">#L565</a>: 	mysg.<b>waitlink</b> = nil
+		<a href="../src/runtime/proc.go.html#line-373">proc.go#L373</a>: 	if s.<b>waitlink</b> != nil {
+		<a href="../src/runtime/runtime2.go.html#line-370">runtime2.go#L370</a>: 	<b>waitlink</b> *sudog // g.waiting list or semaRoot
+		<a href="../src/runtime/select.go.html#line-100">select.go#L100</a>: 	for sg := gp.waiting; sg != nil; sg = sg.<b>waitlink</b> {
+		<a href="../src/runtime/select.go.html#line-320" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-320">#L320</a>: 		nextp = &amp;sg.<b>waitlink</b>
+		<a href="../src/runtime/select.go.html#line-355" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-355">#L355</a>: 	for sg1 := gp.waiting; sg1 != nil; sg1 = sg1.<b>waitlink</b> {
+		<a href="../src/runtime/select.go.html#line-382" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-382">#L382</a>: 		sgnext = sglist.<b>waitlink</b>
+		<a href="../src/runtime/select.go.html#line-383" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-383">#L383</a>: 		sglist.<b>waitlink</b> = nil
+		<a href="../src/runtime/sema.go.html#line-260">sema.go#L260</a>: 				s.<b>waitlink</b> = t
+		<a href="../src/runtime/sema.go.html#line-272" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-272">#L272</a>: 					t.<b>waitlink</b> = s
+		<a href="../src/runtime/sema.go.html#line-274" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-274">#L274</a>: 					t.waittail.<b>waitlink</b> = s
+		<a href="../src/runtime/sema.go.html#line-277" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-277">#L277</a>: 				s.<b>waitlink</b> = nil
+		<a href="../src/runtime/sema.go.html#line-341" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-341">#L341</a>: 	if t := s.<b>waitlink</b>; t != nil {
+		<a href="../src/runtime/sema.go.html#line-354" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-354">#L354</a>: 		if t.<b>waitlink</b> != nil {
+		<a href="../src/runtime/sema.go.html#line-360" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-360">#L360</a>: 		s.<b>waitlink</b> = nil
+		<a href="../src/runtime/stack.go.html#line-764">stack.go#L764</a>: 	for s := gp.waiting; s != nil; s = s.<b>waitlink</b> {
+		<a href="../src/runtime/stack.go.html#line-777" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-777">#L777</a>: 	for sg := gp.waiting; sg != nil; sg = sg.<b>waitlink</b> {
+		<a href="../src/runtime/stack.go.html#line-796" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-796">#L796</a>: 	for sg := gp.waiting; sg != nil; sg = sg.<b>waitlink</b> {
+		<a href="../src/runtime/stack.go.html#line-828" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-828">#L828</a>: 	for sg := gp.waiting; sg != nil; sg = sg.<b>waitlink</b> {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

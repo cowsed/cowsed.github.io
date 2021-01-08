@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: io.Reader</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/io.html">io</a>.<a href="../src/io/io.go.html#line-77">Reader</a></b></span>
+
+31 uses:
+
+	io <i>(current package)</i>
+		<a href="../src/io/io.go.html#line-77">io.go#L77</a>: type <b>Reader</b> interface {
+		<a href="../src/io/io.go.html#line-121" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-121">#L121</a>: 	<b>Reader</b>
+		<a href="../src/io/io.go.html#line-127" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-127">#L127</a>: 	<b>Reader</b>
+		<a href="../src/io/io.go.html#line-139" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-139">#L139</a>: 	<b>Reader</b>
+		<a href="../src/io/io.go.html#line-146" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-146">#L146</a>: 	<b>Reader</b>
+		<a href="../src/io/io.go.html#line-158" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-158">#L158</a>: 	<b>Reader</b>
+		<a href="../src/io/io.go.html#line-171" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-171">#L171</a>: 	ReadFrom(r <b>Reader</b>) (n int64, err error)
+		<a href="../src/io/io.go.html#line-308" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-308">#L308</a>: func ReadAtLeast(r <b>Reader</b>, buf []byte, min int) (n int, err error) {
+		<a href="../src/io/io.go.html#line-332" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-332">#L332</a>: func ReadFull(r <b>Reader</b>, buf []byte) (n int, err error) {
+		<a href="../src/io/io.go.html#line-343" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-343">#L343</a>: func CopyN(dst Writer, src <b>Reader</b>, n int64) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-367" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-367">#L367</a>: func Copy(dst Writer, src <b>Reader</b>) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-378" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-378">#L378</a>: func CopyBuffer(dst Writer, src <b>Reader</b>, buf []byte) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-387" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-387">#L387</a>: func copyBuffer(dst Writer, src <b>Reader</b>, buf []byte) (written int64, err error) {
+		<a href="../src/io/io.go.html#line-437" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-437">#L437</a>: func LimitReader(r <b>Reader</b>, n int64) <b>Reader</b> { return &LimitedReader{r, n} }
+		<a href="../src/io/io.go.html#line-444" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-444">#L444</a>: 	R <b>Reader</b> // underlying reader
+		<a href="../src/io/io.go.html#line-532" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-532">#L532</a>: func TeeReader(r <b>Reader</b>, w Writer) <b>Reader</b> {
+		<a href="../src/io/io.go.html#line-537" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-537">#L537</a>: 	r <b>Reader</b>
+		<a href="../src/io/multi.go.html#line-14">multi.go#L14</a>: 	readers []<b>Reader</b>
+		<a href="../src/io/multi.go.html#line-48" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-48">#L48</a>: func MultiReader(readers ...<b>Reader</b>) <b>Reader</b> {
+		<a href="../src/io/multi.go.html#line-49" class="path-duplicate">multi.go</a><a href="../src/io/multi.go.html#line-49">#L49</a>: 	r := make([]<b>Reader</b>, len(readers))
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/scan.go.html#line-121">scan.go#L121</a>: func Fscan(r io.<b>Reader</b>, a ...interface{}) (n int, err error) {
+		<a href="../src/fmt/scan.go.html#line-130" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-130">#L130</a>: func Fscanln(r io.<b>Reader</b>, a ...interface{}) (n int, err error) {
+		<a href="../src/fmt/scan.go.html#line-141" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-141">#L141</a>: func Fscanf(r io.<b>Reader</b>, format string, a ...interface{}) (n int, err error) {
+		<a href="../src/fmt/scan.go.html#line-305" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-305">#L305</a>: 	reader   io.<b>Reader</b>
+		<a href="../src/fmt/scan.go.html#line-383" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-383">#L383</a>: func newScanState(r io.<b>Reader</b>, nlIsSpace, nlIsEnd bool) (s *ss, old ssave) {
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/file.go.html#line-147">file.go#L147</a>: func (f *File) ReadFrom(r io.<b>Reader</b>) (n int64, err error) {
+		<a href="../src/os/file.go.html#line-158" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-158">#L158</a>: func genericReadFrom(f *File, r io.<b>Reader</b>) (int64, error) {
+		<a href="../src/os/readfrom_linux.go.html#line-14">readfrom_linux.go#L14</a>: func (f *File) readFrom(r io.<b>Reader</b>) (written int64, handled bool, err error) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

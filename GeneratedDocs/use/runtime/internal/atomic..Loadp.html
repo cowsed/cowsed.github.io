@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Loadp</title>
+<link href="../../../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-22">Loadp</a></b></span>
+
+20 uses:
+
+	runtime/internal/atomic <i>(current package)</i>
+		<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-22">atomic_amd64.go#L22</a>: func <b>Loadp</b>(ptr unsafe.Pointer) unsafe.Pointer {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/chan.go.html#line-431">chan.go#L431</a>: 		return atomic.<b>Loadp</b>(unsafe.Pointer(&c.sendq.first)) == nil
+		<a href="../../../src/runtime/debug.go.html#line-50">debug.go#L50</a>: 	for mp := (*m)(atomic.<b>Loadp</b>(unsafe.Pointer(&allm))); mp != nil; mp = mp.alllink {
+		<a href="../../../src/runtime/iface.go.html#line-53">iface.go#L53</a>: 	t := (*itabTableType)(atomic.<b>Loadp</b>(unsafe.Pointer(&itabTable)))
+		<a href="../../../src/runtime/iface.go.html#line-107" class="path-duplicate">iface.go</a><a href="../../../src/runtime/iface.go.html#line-107">#L107</a>: 		m := (*itab)(atomic.<b>Loadp</b>(unsafe.Pointer(p)))
+		<a href="../../../src/runtime/mgcmark.go.html#line-431">mgcmark.go#L431</a>: 		s := (*mspan)(atomic.<b>Loadp</b>(unsafe.Pointer(&spans[i])))
+		<a href="../../../src/runtime/mgcscavenge.go.html#line-644">mgcscavenge.go#L644</a>: 			l2 := (*[1 &lt;&lt; pallocChunksL2Bits]pallocData)(atomic.<b>Loadp</b>(unsafe.Pointer(&s.chunks[i.l1()])))
+		<a href="../../../src/runtime/mgcsweepbuf.go.html#line-66">mgcsweepbuf.go#L66</a>: 		spine := atomic.<b>Loadp</b>(unsafe.Pointer(&b.spine))
+		<a href="../../../src/runtime/mgcsweepbuf.go.html#line-68" class="path-duplicate">mgcsweepbuf.go</a><a href="../../../src/runtime/mgcsweepbuf.go.html#line-68">#L68</a>: 		block = (*gcSweepBlock)(atomic.<b>Loadp</b>(blockp))
+		<a href="../../../src/runtime/mgcsweepbuf.go.html#line-162" class="path-duplicate">mgcsweepbuf.go</a><a href="../../../src/runtime/mgcsweepbuf.go.html#line-162">#L162</a>: 	spine := atomic.<b>Loadp</b>(unsafe.Pointer(&b.spine))
+		<a href="../../../src/runtime/mgcsweepbuf.go.html#line-164" class="path-duplicate">mgcsweepbuf.go</a><a href="../../../src/runtime/mgcsweepbuf.go.html#line-164">#L164</a>: 	block := (*gcSweepBlock)(atomic.<b>Loadp</b>(blockp))
+		<a href="../../../src/runtime/mheap.go.html#line-1922">mheap.go#L1922</a>: 	head := (*gcBitsArena)(atomic.<b>Loadp</b>(unsafe.Pointer(&gcBitsArenas.next)))
+		<a href="../../../src/runtime/mprof.go.html#line-699">mprof.go#L699</a>: 	first := (*m)(atomic.<b>Loadp</b>(unsafe.Pointer(&allm)))
+		<a href="../../../src/runtime/mspanset.go.html#line-84">mspanset.go#L84</a>: 		spine := atomic.<b>Loadp</b>(unsafe.Pointer(&b.spine))
+		<a href="../../../src/runtime/mspanset.go.html#line-86" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-86">#L86</a>: 		block = (*spanSetBlock)(atomic.<b>Loadp</b>(blockp))
+		<a href="../../../src/runtime/mspanset.go.html#line-183" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-183">#L183</a>: 	spine := atomic.<b>Loadp</b>(unsafe.Pointer(&b.spine))
+		<a href="../../../src/runtime/mspanset.go.html#line-189" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-189">#L189</a>: 	block := (*spanSetBlock)(atomic.<b>Loadp</b>(blockp))
+		<a href="../../../src/runtime/mspanset.go.html#line-190" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-190">#L190</a>: 	s := (*mspan)(atomic.<b>Loadp</b>(unsafe.Pointer(&block.spans[bottom])))
+		<a href="../../../src/runtime/mspanset.go.html#line-195" class="path-duplicate">mspanset.go</a><a href="../../../src/runtime/mspanset.go.html#line-195">#L195</a>: 		s = (*mspan)(atomic.<b>Loadp</b>(unsafe.Pointer(&block.spans[bottom])))
+		<a href="../../../src/runtime/symtab.go.html#line-421">symtab.go#L421</a>: 	p := (*[]*moduledata)(atomic.<b>Loadp</b>(unsafe.Pointer(&modulesSlice)))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

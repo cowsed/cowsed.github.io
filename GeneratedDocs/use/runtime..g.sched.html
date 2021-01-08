@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.g.sched</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-406">g</a>.<a href="../src/runtime/runtime2.go.html#line-421">sched</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+71 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/cgocall.go.html#line-275">cgocall.go#L275</a>: 	sp := gp.m.g0.<b>sched</b>.sp
+		<a href="../src/runtime/cgocall.go.html#line-355" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-355">#L355</a>: 		sched := &amp;mp.g0.<b>sched</b>
+		<a href="../src/runtime/heapdump.go.html#line-338">heapdump.go#L338</a>: 		sp = gp.<b>sched</b>.sp
+		<a href="../src/runtime/heapdump.go.html#line-339" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-339">#L339</a>: 		pc = gp.<b>sched</b>.pc
+		<a href="../src/runtime/heapdump.go.html#line-340" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-340">#L340</a>: 		lr = gp.<b>sched</b>.lr
+		<a href="../src/runtime/heapdump.go.html#line-353" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-353">#L353</a>: 	dumpint(uint64(uintptr(gp.<b>sched</b>.ctxt)))
+		<a href="../src/runtime/mbitmap.go.html#line-2026">mbitmap.go#L2026</a>: 		gentraceback(_g_.m.curg.<b>sched</b>.pc, _g_.m.curg.<b>sched</b>.sp, 0, _g_.m.curg, 0, nil, 1000, getgcmaskcb, noescape(unsafe.Pointer(&frame)), 0)
+		<a href="../src/runtime/mgcmark.go.html#line-835">mgcmark.go#L835</a>: 	if gp.<b>sched</b>.ctxt != nil {
+		<a href="../src/runtime/mgcmark.go.html#line-836" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-836">#L836</a>: 		scanblock(uintptr(unsafe.Pointer(&amp;gp.<b>sched</b>.ctxt)), sys.PtrSize, &oneptrmask[0], gcw, &state)
+		<a href="../src/runtime/panic.go.html#line-1150">panic.go#L1150</a>: 	gp.<b>sched</b>.sp = sp
+		<a href="../src/runtime/panic.go.html#line-1151" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1151">#L1151</a>: 	gp.<b>sched</b>.pc = pc
+		<a href="../src/runtime/panic.go.html#line-1152" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1152">#L1152</a>: 	gp.<b>sched</b>.lr = 0
+		<a href="../src/runtime/panic.go.html#line-1153" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1153">#L1153</a>: 	gp.<b>sched</b>.ret = 1
+		<a href="../src/runtime/panic.go.html#line-1154" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1154">#L1154</a>: 	gogo(&amp;gp.<b>sched</b>)
+		<a href="../src/runtime/proc.go.html#line-1615">proc.go#L1615</a>: 	gp.<b>sched</b>.pc = funcPC(goexit) + sys.PCQuantum
+		<a href="../src/runtime/proc.go.html#line-1616" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1616">#L1616</a>: 	gp.<b>sched</b>.sp = gp.stack.hi
+		<a href="../src/runtime/proc.go.html#line-1617" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1617">#L1617</a>: 	gp.<b>sched</b>.sp -= 4 * sys.RegSize // extra space in case of reads slightly beyond frame
+		<a href="../src/runtime/proc.go.html#line-1618" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1618">#L1618</a>: 	gp.<b>sched</b>.lr = 0
+		<a href="../src/runtime/proc.go.html#line-1619" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1619">#L1619</a>: 	gp.<b>sched</b>.g = guintptr(unsafe.Pointer(gp))
+		<a href="../src/runtime/proc.go.html#line-1620" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1620">#L1620</a>: 	gp.syscallpc = gp.<b>sched</b>.pc
+		<a href="../src/runtime/proc.go.html#line-1621" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1621">#L1621</a>: 	gp.syscallsp = gp.<b>sched</b>.sp
+		<a href="../src/runtime/proc.go.html#line-1622" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1622">#L1622</a>: 	gp.stktopsp = gp.<b>sched</b>.sp
+		<a href="../src/runtime/proc.go.html#line-2178" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2178">#L2178</a>: 	gogo(&amp;gp.<b>sched</b>)
+		<a href="../src/runtime/proc.go.html#line-2875" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2875">#L2875</a>: 		gogo(&amp;gp.<b>sched</b>) // never return
+		<a href="../src/runtime/proc.go.html#line-2997" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2997">#L2997</a>: 			gogo(&amp;_g_.m.g0.<b>sched</b>)
+		<a href="../src/runtime/proc.go.html#line-3018" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3018">#L3018</a>: 	_g_.<b>sched</b>.pc = pc
+		<a href="../src/runtime/proc.go.html#line-3019" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3019">#L3019</a>: 	_g_.<b>sched</b>.sp = sp
+		<a href="../src/runtime/proc.go.html#line-3020" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3020">#L3020</a>: 	_g_.<b>sched</b>.lr = 0
+		<a href="../src/runtime/proc.go.html#line-3021" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3021">#L3021</a>: 	_g_.<b>sched</b>.ret = 0
+		<a href="../src/runtime/proc.go.html#line-3022" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3022">#L3022</a>: 	_g_.<b>sched</b>.g = guintptr(unsafe.Pointer(_g_))
+		<a href="../src/runtime/proc.go.html#line-3026" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3026">#L3026</a>: 	if _g_.<b>sched</b>.ctxt != nil {
+		<a href="../src/runtime/proc.go.html#line-3181" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3181">#L3181</a>: 	_g_.syscallsp = _g_.<b>sched</b>.sp
+		<a href="../src/runtime/proc.go.html#line-3182" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3182">#L3182</a>: 	_g_.syscallpc = _g_.<b>sched</b>.pc
+		<a href="../src/runtime/proc.go.html#line-3185" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3185">#L3185</a>: 		sp2 := _g_.<b>sched</b>.sp
+		<a href="../src/runtime/proc.go.html#line-3195" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3195">#L3195</a>: 			print("entersyscallblock inconsistent ", hex(sp), " ", hex(_g_.<b>sched</b>.sp), " ", hex(_g_.syscallsp), " [", hex(_g_.stack.lo), ",", hex(_g_.stack.hi), "]\n")
+		<a href="../src/runtime/proc.go.html#line-3632" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3632">#L3632</a>: 	memclrNoHeapPointers(unsafe.Pointer(&amp;newg.<b>sched</b>), unsafe.Sizeof(newg.<b>sched</b>))
+		<a href="../src/runtime/proc.go.html#line-3633" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3633">#L3633</a>: 	newg.<b>sched</b>.sp = sp
+		<a href="../src/runtime/proc.go.html#line-3635" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3635">#L3635</a>: 	newg.<b>sched</b>.pc = funcPC(goexit) + sys.PCQuantum // +PCQuantum so that previous instruction is in same function
+		<a href="../src/runtime/proc.go.html#line-3636" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3636">#L3636</a>: 	newg.<b>sched</b>.g = guintptr(unsafe.Pointer(newg))
+		<a href="../src/runtime/proc.go.html#line-3637" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3637">#L3637</a>: 	gostartcallfn(&amp;newg.<b>sched</b>, fn)
+		<a href="../src/runtime/runtime2.go.html#line-421">runtime2.go#L421</a>: 	<b>sched</b>        gobuf
+		<a href="../src/runtime/stack.go.html#line-720">stack.go#L720</a>: 	adjustpointer(adjinfo, unsafe.Pointer(&amp;gp.<b>sched</b>.ctxt))
+		<a href="../src/runtime/stack.go.html#line-725" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-725">#L725</a>: 		bp := gp.<b>sched</b>.bp
+		<a href="../src/runtime/stack.go.html#line-732" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-732">#L732</a>: 	adjustpointer(adjinfo, unsafe.Pointer(&amp;gp.<b>sched</b>.bp))
+		<a href="../src/runtime/stack.go.html#line-848" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-848">#L848</a>: 	used := old.hi - gp.<b>sched</b>.sp
+		<a href="../src/runtime/stack.go.html#line-906" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-906">#L906</a>: 	gp.<b>sched</b>.sp = new.hi - used
+		<a href="../src/runtime/stack.go.html#line-961" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-961">#L961</a>: 		f := findfunc(gp.<b>sched</b>.pc)
+		<a href="../src/runtime/stack.go.html#line-964" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-964">#L964</a>: 			pcoff = gp.<b>sched</b>.pc - f.entry
+		<a href="../src/runtime/stack.go.html#line-967" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-967">#L967</a>: 			" sp=", hex(gp.<b>sched</b>.sp), " stack=[", hex(gp.stack.lo), ", ", hex(gp.stack.hi), "]\n",
+		<a href="../src/runtime/stack.go.html#line-969" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-969">#L969</a>: 			"\tsched={pc:", hex(gp.<b>sched</b>.pc), " sp:", hex(gp.<b>sched</b>.sp), " lr:", hex(gp.<b>sched</b>.lr), " ctxt:", gp.<b>sched</b>.ctxt, "}\n")
+		<a href="../src/runtime/stack.go.html#line-1004" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1004">#L1004</a>: 			gogo(&amp;gp.<b>sched</b>) // never return
+		<a href="../src/runtime/stack.go.html#line-1011" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1011">#L1011</a>: 	sp := gp.<b>sched</b>.sp
+		<a href="../src/runtime/stack.go.html#line-1019" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1019">#L1019</a>: 			"\tsched={pc:", hex(gp.<b>sched</b>.pc), " sp:", hex(gp.<b>sched</b>.sp), " lr:", hex(gp.<b>sched</b>.lr), " ctxt:", gp.<b>sched</b>.ctxt, "}\n")
+		<a href="../src/runtime/stack.go.html#line-1057" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1057">#L1057</a>: 	if f := findfunc(gp.<b>sched</b>.pc); f.valid() {
+		<a href="../src/runtime/stack.go.html#line-1081" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1081">#L1081</a>: 	gogo(&amp;gp.<b>sched</b>)
+		<a href="../src/runtime/stack.go.html#line-1170" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1170">#L1170</a>: 	if used := gp.stack.hi - gp.<b>sched</b>.sp + _StackLimit; used >= avail/4 {
+		<a href="../src/runtime/traceback.go.html#line-132">traceback.go#L132</a>: 			pc0 = gp.<b>sched</b>.pc
+		<a href="../src/runtime/traceback.go.html#line-133" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-133">#L133</a>: 			sp0 = gp.<b>sched</b>.sp
+		<a href="../src/runtime/traceback.go.html#line-135" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-135">#L135</a>: 				lr0 = gp.<b>sched</b>.lr
+		<a href="../src/runtime/traceback.go.html#line-137" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-137">#L137</a>: 			ctxt = (*funcval)(gp.<b>sched</b>.ctxt)
+		<a href="../src/runtime/traceback.go.html#line-208" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-208">#L208</a>: 					frame.pc = gp.m.curg.<b>sched</b>.pc
+		<a href="../src/runtime/traceback.go.html#line-211" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-211">#L211</a>: 					frame.sp = gp.m.curg.<b>sched</b>.sp
+		<a href="../src/runtime/traceback.go.html#line-216" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-216">#L216</a>: 					frame.sp = gp.m.curg.<b>sched</b>.sp
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.structField.name</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-420">structField</a>.<a href="../src/reflect/type.go.html#line-421">name</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+16 uses:
+
+	reflect <i>(current package)</i>
+		<a href="../src/reflect/type.go.html#line-421">type.go#L421</a>: 	<b>name</b>        name    // name is always non-empty
+		<a href="../src/reflect/type.go.html#line-1190" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1190">#L1190</a>: 	f.Name = p.<b>name</b>.name()
+		<a href="../src/reflect/type.go.html#line-1192" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1192">#L1192</a>: 	if !p.<b>name</b>.isExported() {
+		<a href="../src/reflect/type.go.html#line-1195" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1195">#L1195</a>: 	if tag := p.<b>name</b>.tag(); tag != "" {
+		<a href="../src/reflect/type.go.html#line-1286" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1286">#L1286</a>: 				fname := f.<b>name</b>.name()
+		<a href="../src/reflect/type.go.html#line-1350" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1350">#L1350</a>: 			if tf.<b>name</b>.name() == name {
+		<a href="../src/reflect/type.go.html#line-1665" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1665">#L1665</a>: 			if tf.<b>name</b>.name() != vf.<b>name</b>.name() {
+		<a href="../src/reflect/type.go.html#line-1671" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1671">#L1671</a>: 			if cmpTags &amp;&amp; tf.<b>name</b>.tag() != vf.<b>name</b>.tag() {
+		<a href="../src/reflect/type.go.html#line-2400" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2400">#L2400</a>: 		name := f.<b>name</b>.name()
+		<a href="../src/reflect/type.go.html#line-2549" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2549">#L2549</a>: 		if f.<b>name</b>.tagLen() > 0 {
+		<a href="../src/reflect/type.go.html#line-2550" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2550">#L2550</a>: 			hash = fnv1(hash, []byte(f.<b>name</b>.tag())...)
+		<a href="../src/reflect/type.go.html#line-2551" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2551">#L2551</a>: 			repr = append(repr, (" " + strconv.Quote(f.<b>name</b>.tag()))...)
+		<a href="../src/reflect/type.go.html#line-2781" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2781">#L2781</a>: 		<b>name</b>:        newName(field.Name, string(field.Tag), exported),
+		<a href="../src/reflect/value.go.html#line-862">value.go#L862</a>: 	if !field.<b>name</b>.isExported() {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

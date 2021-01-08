@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.m.curg</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-488">m</a>.<a href="../src/runtime/runtime2.go.html#line-500">curg</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+88 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/cgocall.go.html#line-181">cgocall.go#L181</a>: 	if gp != gp.m.<b>curg</b> {
+		<a href="../src/runtime/debugcall.go.html#line-28">debugcall.go#L28</a>: 	if getg() != getg().m.<b>curg</b> {
+		<a href="../src/runtime/heapdump.go.html#line-665">heapdump.go#L665</a>: 	casgstatus(_g_.m.<b>curg</b>, _Grunning, _Gwaiting)
+		<a href="../src/runtime/heapdump.go.html#line-686" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-686">#L686</a>: 	casgstatus(_g_.m.<b>curg</b>, _Gwaiting, _Grunning)
+		<a href="../src/runtime/malloc.go.html#line-941">malloc.go#L941</a>: 		if assistG.m.<b>curg</b> != nil {
+		<a href="../src/runtime/malloc.go.html#line-942" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-942">#L942</a>: 			assistG = assistG.m.<b>curg</b>
+		<a href="../src/runtime/mbitmap.go.html#line-2022">mbitmap.go#L2022</a>: 	if _g_ := getg(); _g_.m.<b>curg</b>.stack.lo &lt;= uintptr(p) &amp;&amp; uintptr(p) &lt; _g_.m.<b>curg</b>.stack.hi {
+		<a href="../src/runtime/mbitmap.go.html#line-2026" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2026">#L2026</a>: 		gentraceback(_g_.m.<b>curg</b>.sched.pc, _g_.m.<b>curg</b>.sched.sp, 0, _g_.m.<b>curg</b>, 0, nil, 1000, getgcmaskcb, noescape(unsafe.Pointer(&frame)), 0)
+		<a href="../src/runtime/mgc.go.html#line-1468">mgc.go#L1468</a>: 		gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/mgc.go.html#line-1646" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1646">#L1646</a>: 	gp := _g_.m.<b>curg</b>
+		<a href="../src/runtime/mgcmark.go.html#line-223">mgcmark.go#L223</a>: 			userG := getg().m.<b>curg</b>
+		<a href="../src/runtime/mgcmark.go.html#line-1081" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1081">#L1081</a>: 	gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/mgcmark.go.html#line-1199" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1199">#L1199</a>: 	gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/mgcwork.go.html#line-543">mgcwork.go#L543</a>: 		gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/mprof.go.html#line-418">mprof.go#L418</a>: 	if gp.m.<b>curg</b> == nil || gp.m.<b>curg</b> == gp {
+		<a href="../src/runtime/mprof.go.html#line-421" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-421">#L421</a>: 		nstk = gcallers(gp.m.<b>curg</b>, skip, stk[:])
+		<a href="../src/runtime/mprof.go.html#line-850" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-850">#L850</a>: 	if gp.m.<b>curg</b> == nil || gp == gp.m.<b>curg</b> {
+		<a href="../src/runtime/mprof.go.html#line-858" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-858">#L858</a>: 		goroutineheader(gp.m.<b>curg</b>)
+		<a href="../src/runtime/mprof.go.html#line-859" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-859">#L859</a>: 		traceback(^uintptr(0), ^uintptr(0), 0, gp.m.<b>curg</b>)
+		<a href="../src/runtime/panic.go.html#line-220">panic.go#L220</a>: 	if gp.m.<b>curg</b> != gp {
+		<a href="../src/runtime/panic.go.html#line-273" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-273">#L273</a>: 	if gp.m.<b>curg</b> != gp {
+		<a href="../src/runtime/panic.go.html#line-891" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-891">#L891</a>: 	if gp.m.<b>curg</b> != gp {
+		<a href="../src/runtime/panic.go.html#line-1309" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1309">#L1309</a>: 		if gp != gp.m.<b>curg</b> {
+		<a href="../src/runtime/panic.go.html#line-1359" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1359">#L1359</a>: 	if gp == nil || gp != _m_.<b>curg</b> {
+		<a href="../src/runtime/preempt.go.html#line-111">preempt.go#L111</a>: 	if mp := getg().m; mp.<b>curg</b> != nil &amp;&amp; readgstatus(mp.<b>curg</b>) == _Grunning {
+		<a href="../src/runtime/preempt.go.html#line-374" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-374">#L374</a>: 	if mp.<b>curg</b> != gp {
+		<a href="../src/runtime/proc.go.html#line-294">proc.go#L294</a>: 	gp := mp.<b>curg</b>
+		<a href="../src/runtime/proc.go.html#line-1581" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1581">#L1581</a>: 	casgstatus(mp.<b>curg</b>, _Gdead, _Gsyscall)
+		<a href="../src/runtime/proc.go.html#line-1629" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1629">#L1629</a>: 	mp.<b>curg</b> = gp
+		<a href="../src/runtime/proc.go.html#line-1683" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1683">#L1683</a>: 	casgstatus(mp.<b>curg</b>, _Gsyscall, _Gdead)
+		<a href="../src/runtime/proc.go.html#line-1684" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1684">#L1684</a>: 	mp.<b>curg</b>.preemptStop = false
+		<a href="../src/runtime/proc.go.html#line-2153" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2153">#L2153</a>: 	_g_.m.<b>curg</b> = gp
+		<a href="../src/runtime/proc.go.html#line-2729" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2729">#L2729</a>: 	setMNoWB(&amp;_g_.m.<b>curg</b>.m, nil)
+		<a href="../src/runtime/proc.go.html#line-2730" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2730">#L2730</a>: 	setGNoWB(&amp;_g_.m.<b>curg</b>, nil)
+		<a href="../src/runtime/proc.go.html#line-2810" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2810">#L2810</a>: 	gp := mp.<b>curg</b>
+		<a href="../src/runtime/proc.go.html#line-3414" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3414">#L3414</a>: 	gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/proc.go.html#line-3438" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3438">#L3438</a>: 	gp := getg().m.<b>curg</b>
+		<a href="../src/runtime/proc.go.html#line-3621" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3621">#L3621</a>: 		if writeBarrier.needed &amp;&amp; !_g_.m.<b>curg</b>.gcscandone {
+		<a href="../src/runtime/proc.go.html#line-3641" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3641">#L3641</a>: 	if _g_.m.<b>curg</b> != nil {
+		<a href="../src/runtime/proc.go.html#line-3642" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3642">#L3642</a>: 		newg.labels = _g_.m.<b>curg</b>.labels
+		<a href="../src/runtime/proc.go.html#line-4041" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4041">#L4041</a>: 	if mp.ncgo &gt; 0 &amp;&amp; mp.<b>curg</b> != nil &amp;&amp; mp.<b>curg</b>.syscallpc != 0 &amp;&amp; mp.<b>curg</b>.syscallsp != 0 {
+		<a href="../src/runtime/proc.go.html#line-4057" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4057">#L4057</a>: 		n = gentraceback(mp.<b>curg</b>.syscallpc, mp.<b>curg</b>.syscallsp, 0, mp.<b>curg</b>, 0, &stk[cgoOff], len(stk)-cgoOff, nil, nil, 0)
+		<a href="../src/runtime/proc.go.html#line-4869" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4869">#L4869</a>: 	gp := mp.<b>curg</b>
+		<a href="../src/runtime/proc.go.html#line-4938" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4938">#L4938</a>: 		gp := mp.<b>curg</b>
+		<a href="../src/runtime/runtime2.go.html#line-500">runtime2.go#L500</a>: 	<b>curg</b>          *g       // current running goroutine
+		<a href="../src/runtime/sema.go.html#line-100">sema.go#L100</a>: 	if gp != gp.m.<b>curg</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-671">signal_unix.go#L671</a>: 		if crashing &gt; 0 &amp;&amp; gp != _g_.m.<b>curg</b> &amp;&amp; _g_.m.<b>curg</b> != nil &amp;&amp; readgstatus(_g_.m.<b>curg</b>)&^_Gscan == _Grunning {
+		<a href="../src/runtime/signal_unix.go.html#line-673" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-673">#L673</a>: 			goroutineheader(_g_.m.<b>curg</b>)
+		<a href="../src/runtime/signal_unix.go.html#line-674" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-674">#L674</a>: 			traceback(^uintptr(0), ^uintptr(0), 0, _g_.m.<b>curg</b>)
+		<a href="../src/runtime/signal_unix.go.html#line-1023" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-1023">#L1023</a>: 	if g != nil &amp;&amp; g.m != nil &amp;&amp; g.m.<b>curg</b> != nil && !g.m.incgo {
+		<a href="../src/runtime/stack.go.html#line-946">stack.go#L946</a>: 	if thisg.m.morebuf.g.ptr() != thisg.m.<b>curg</b> {
+		<a href="../src/runtime/stack.go.html#line-947" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-947">#L947</a>: 		print("runtime: newstack called from g=", hex(thisg.m.morebuf.g), "\n"+"\tm=", thisg.m, " m-&gt;curg=", thisg.m.<b>curg</b>, " m->g0=", thisg.m.g0, " m->gsignal=", thisg.m.gsignal, "\n")
+		<a href="../src/runtime/stack.go.html#line-953" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-953">#L953</a>: 	gp := thisg.m.<b>curg</b>
+		<a href="../src/runtime/stack.go.html#line-955" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-955">#L955</a>: 	if thisg.m.<b>curg</b>.throwsplit {
+		<a href="../src/runtime/stack.go.html#line-1132" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1132">#L1132</a>: 		if !(gp == getg().m.<b>curg</b> &amp;&amp; getg() != getg().m.<b>curg</b> && s == _Grunning) {
+		<a href="../src/runtime/stack.go.html#line-1143" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1143">#L1143</a>: 	if gp == getg().m.<b>curg</b> && gp.m.libcallsp != 0 {
+		<a href="../src/runtime/trace.go.html#line-534">trace.go#L534</a>: 		if getg() == mp.<b>curg</b> {
+		<a href="../src/runtime/trace.go.html#line-592" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-592">#L592</a>: 	gp := mp.<b>curg</b>
+		<a href="../src/runtime/trace.go.html#line-597" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-597">#L597</a>: 		gp = mp.<b>curg</b>
+		<a href="../src/runtime/trace.go.html#line-631" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-631">#L631</a>: 	dolock := owner == nil || owner != getg().m.<b>curg</b>
+		<a href="../src/runtime/trace.go.html#line-1063" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1063">#L1063</a>: 	_g_ := getg().m.<b>curg</b>
+		<a href="../src/runtime/trace.go.html#line-1127" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1127">#L1127</a>: 	_g_ := getg().m.<b>curg</b>
+		<a href="../src/runtime/traceback.go.html#line-104">traceback.go#L104</a>: 	if ourg := getg(); ourg == gp &amp;&amp; ourg == ourg.m.<b>curg</b> {
+		<a href="../src/runtime/traceback.go.html#line-200" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-200">#L200</a>: 			if flags&amp;_TraceJumpStack != 0 &amp;&amp; gp == gp.m.g0 &amp;&amp; gp.m.<b>curg</b> != nil {
+		<a href="../src/runtime/traceback.go.html#line-208" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-208">#L208</a>: 					frame.pc = gp.m.<b>curg</b>.sched.pc
+		<a href="../src/runtime/traceback.go.html#line-211" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-211">#L211</a>: 					frame.sp = gp.m.<b>curg</b>.sched.sp
+		<a href="../src/runtime/traceback.go.html#line-212" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-212">#L212</a>: 					cgoCtxt = gp.m.<b>curg</b>.cgoCtxt
+		<a href="../src/runtime/traceback.go.html#line-216" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-216">#L216</a>: 					frame.sp = gp.m.<b>curg</b>.sched.sp
+		<a href="../src/runtime/traceback.go.html#line-217" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-217">#L217</a>: 					cgoCtxt = gp.m.<b>curg</b>.cgoCtxt
+		<a href="../src/runtime/traceback.go.html#line-455" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-455">#L455</a>: 				if gp.m != nil &amp;&amp; gp.m.throwing &gt; 0 &amp;&amp; gp == gp.m.<b>curg</b> || level >= 2 {
+		<a href="../src/runtime/traceback.go.html#line-817" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-817">#L817</a>: 	if g.m.throwing &gt; 0 &amp;&amp; gp != nil &amp;&amp; (gp == g.m.<b>curg</b> || gp == g.m.caughtsig.ptr()) {
+		<a href="../src/runtime/traceback.go.html#line-922" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-922">#L922</a>: 	gp := g.m.<b>curg</b>
+		<a href="../src/runtime/traceback.go.html#line-931" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-931">#L931</a>: 		if gp == me || gp == g.m.<b>curg</b> || readgstatus(gp) == _Gdead || isSystemGoroutine(gp, false) && level < 2 {
+		<a href="../src/runtime/traceback.go.html#line-1309" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1309">#L1309</a>: 	if panicking &gt; 0 || getg().m.<b>curg</b> != getg() {
+		<a href="../src/runtime/traceback.go.html#line-1326" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1326">#L1326</a>: 	if panicking &gt; 0 || getg().m.<b>curg</b> != getg() {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

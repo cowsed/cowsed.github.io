@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.rune</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-rune">rune</a></b></span>
+
+212 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/format.go.html#line-155">format.go#L155</a>: 	if f.sharp &amp;&amp; u &lt;= utf8.MaxRune &amp;&amp; strconv.IsPrint(<b>rune</b>(u)) {
+		<a href="../src/fmt/format.go.html#line-158" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-158">#L158</a>: 		i -= utf8.RuneLen(<b>rune</b>(u))
+		<a href="../src/fmt/format.go.html#line-159" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-159">#L159</a>: 		utf8.EncodeRune(buf[i:], <b>rune</b>(u))
+		<a href="../src/fmt/format.go.html#line-194" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-194">#L194</a>: func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb <b>rune</b>, digits string) {
+		<a href="../src/fmt/format.go.html#line-464" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-464">#L464</a>: 	r := <b>rune</b>(c)
+		<a href="../src/fmt/format.go.html#line-476" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-476">#L476</a>: 	r := <b>rune</b>(c)
+		<a href="../src/fmt/format.go.html#line-490" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-490">#L490</a>: func (f *fmt) fmtFloat(v float64, size int, verb <b>rune</b>, prec int) {
+		<a href="../src/fmt/print.go.html#line-54">print.go#L54</a>: 	Format(f State, c <b>rune</b>)
+		<a href="../src/fmt/print.go.html#line-89" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-89">#L89</a>: func (bp *buffer) writeRune(r <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-330" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-330">#L330</a>: func (p *pp) badVerb(verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-351" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-351">#L351</a>: func (p *pp) fmtBool(v bool, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-370" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-370">#L370</a>: func (p *pp) fmtInteger(v uint64, isSigned bool, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-405" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-405">#L405</a>: func (p *pp) fmtFloat(v float64, size int, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-423" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-423">#L423</a>: func (p *pp) fmtComplex(v complex128, size int, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-441" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-441">#L441</a>: func (p *pp) fmtString(v string, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-462" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-462">#L462</a>: func (p *pp) fmtBytes(v []byte, verb <b>rune</b>, typeString string) {
+		<a href="../src/fmt/print.go.html#line-502" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-502">#L502</a>: func (p *pp) fmtPointer(value reflect.Value, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-540" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-540">#L540</a>: func (p *pp) catchPanic(arg interface{}, verb <b>rune</b>, method string) {
+		<a href="../src/fmt/print.go.html#line-574" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-574">#L574</a>: func (p *pp) handleMethods(verb <b>rune</b>) (handled bool) {
+		<a href="../src/fmt/print.go.html#line-638" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-638">#L638</a>: func (p *pp) printArg(arg interface{}, verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-723" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-723">#L723</a>: func (p *pp) printValue(value reflect.Value, verb <b>rune</b>, depth int) {
+		<a href="../src/fmt/print.go.html#line-966" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-966">#L966</a>: func (p *pp) badArgNum(verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-972" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-972">#L972</a>: func (p *pp) missingArg(verb <b>rune</b>) {
+		<a href="../src/fmt/print.go.html#line-1030" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1030">#L1030</a>: 					p.printArg(a[argNum], <b>rune</b>(c))
+		<a href="../src/fmt/print.go.html#line-1104" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1104">#L1104</a>: 		verb, size := <b>rune</b>(format[i]), 1
+		<a href="../src/fmt/scan.go.html#line-26">scan.go#L26</a>: 	ReadRune() (r <b>rune</b>, size int, err error)
+		<a href="../src/fmt/scan.go.html#line-41" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-41">#L41</a>: 	Token(skipSpace bool, f func(<b>rune</b>) bool) (token []byte, err error)
+		<a href="../src/fmt/scan.go.html#line-56" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-56">#L56</a>: 	Scan(state ScanState, verb <b>rune</b>) error
+		<a href="../src/fmt/scan.go.html#line-183" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-183">#L183</a>: func (s *ss) ReadRune() (r <b>rune</b>, size int, err error) {
+		<a href="../src/fmt/scan.go.html#line-210" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-210">#L210</a>: func (s *ss) getRune() (r <b>rune</b>) {
+		<a href="../src/fmt/scan.go.html#line-224" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-224">#L224</a>: func (s *ss) mustReadRune() (r <b>rune</b>) {
+		<a href="../src/fmt/scan.go.html#line-247" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-247">#L247</a>: func (s *ss) Token(skipSpace bool, f func(<b>rune</b>) bool) (tok []byte, err error) {
+		<a href="../src/fmt/scan.go.html#line-280" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-280">#L280</a>: func isSpace(r <b>rune</b>) bool {
+		<a href="../src/fmt/scan.go.html#line-297" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-297">#L297</a>: func notSpace(r <b>rune</b>) bool {
+		<a href="../src/fmt/scan.go.html#line-309" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-309">#L309</a>: 	peekRune <b>rune</b>              // if >=0 next rune; when <0 is ^(previous Rune)
+		<a href="../src/fmt/scan.go.html#line-330" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-330">#L330</a>: func (r *readRune) ReadRune() (rr <b>rune</b>, size int, err error) {
+		<a href="../src/fmt/scan.go.html#line-342" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-342">#L342</a>: 		rr = <b>rune</b>(r.buf[0])
+		<a href="../src/fmt/scan.go.html#line-446" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-446">#L446</a>: func (s *ss) token(skipSpace bool, f func(<b>rune</b>) bool) []byte {
+		<a href="../src/fmt/scan.go.html#line-468" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-468">#L468</a>: func indexRune(s string, r <b>rune</b>) int {
+		<a href="../src/fmt/scan.go.html#line-520" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-520">#L520</a>: func (s *ss) okVerb(verb <b>rune</b>, okVerbs, typ string) bool {
+		<a href="../src/fmt/scan.go.html#line-531" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-531">#L531</a>: func (s *ss) scanBool(verb <b>rune</b>) bool {
+		<a href="../src/fmt/scan.go.html#line-569" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-569">#L569</a>: func (s *ss) getBase(verb <b>rune</b>) (base int, digits string) {
+		<a href="../src/fmt/scan.go.html#line-638" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-638">#L638</a>: func (s *ss) scanInt(verb <b>rune</b>, bitSize int) int64 {
+		<a href="../src/fmt/scan.go.html#line-671" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-671">#L671</a>: func (s *ss) scanUint(verb <b>rune</b>, bitSize int) uint64 {
+		<a href="../src/fmt/scan.go.html#line-810" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-810">#L810</a>: func (s *ss) scanComplex(verb <b>rune</b>, n int) complex128 {
+		<a href="../src/fmt/scan.go.html#line-824" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-824">#L824</a>: func (s *ss) convertString(verb <b>rune</b>) (str string) {
+		<a href="../src/fmt/scan.go.html#line-883" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-883">#L883</a>: func hexDigit(d <b>rune</b>) (int, bool) {
+		<a href="../src/fmt/scan.go.html#line-953" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-953">#L953</a>: func (s *ss) scanOne(verb <b>rune</b>, arg interface{}) {
+
+	<a href="../pkg/github.com/cowsed/ElfHouse/Helpers/Grammar.html">github.com/cowsed/ElfHouse/Helpers/Grammar</a>
+		<a href="../src/github.com/cowsed/ElfHouse/Helpers/Grammar/pronouns.go.html#line-183">pronouns.go#L183</a>: 	asRunes := []<b>rune</b>(input)
+
+	<a href="../pkg/io.html">io</a>
+		<a href="../src/io/io.go.html#line-270">io.go#L270</a>: 	ReadRune() (r <b>rune</b>, size int, err error)
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-2327">type.go#L2327</a>: func isLetter(ch <b>rune</b>) bool {
+		<a href="../src/reflect/value.go.html#line-299">value.go#L299</a>: func (v Value) runes() []<b>rune</b> {
+		<a href="../src/reflect/value.go.html#line-305" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-305">#L305</a>: 	return *(*[]<b>rune</b>)(v.ptr)
+		<a href="../src/reflect/value.go.html#line-1593" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1593">#L1593</a>: func (v Value) setRunes(x []<b>rune</b>) {
+		<a href="../src/reflect/value.go.html#line-1599" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1599">#L1599</a>: 	*(*[]<b>rune</b>)(v.ptr) = x
+		<a href="../src/reflect/value.go.html#line-2608" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2608">#L2608</a>: func makeRunes(f flag, v []<b>rune</b>, t Type) Value {
+		<a href="../src/reflect/value.go.html#line-2668" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2668">#L2668</a>: 	return makeString(v.flag.ro(), string(<b>rune</b>(v.Int())), t)
+		<a href="../src/reflect/value.go.html#line-2673" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2673">#L2673</a>: 	return makeString(v.flag.ro(), string(<b>rune</b>(v.Uint())), t)
+		<a href="../src/reflect/value.go.html#line-2693" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-2693">#L2693</a>: 	return makeRunes(v.flag.ro(), []<b>rune</b>(v.String()), t)
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/string.go.html#line-177">string.go#L177</a>: func stringtoslicerune(buf *[tmpStringBufSize]<b>rune</b>, s string) []<b>rune</b> {
+		<a href="../src/runtime/string.go.html#line-185" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-185">#L185</a>: 	var a []<b>rune</b>
+		<a href="../src/runtime/string.go.html#line-187" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-187">#L187</a>: 		*buf = [tmpStringBufSize]<b>rune</b>{}
+		<a href="../src/runtime/string.go.html#line-201" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-201">#L201</a>: func slicerunetostring(buf *tmpBuf, a []<b>rune</b>) string {
+		<a href="../src/runtime/string.go.html#line-251" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-251">#L251</a>: 	if int64(<b>rune</b>(v)) != v {
+		<a href="../src/runtime/string.go.html#line-254" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-254">#L254</a>: 	n := encoderune(b, <b>rune</b>(v))
+		<a href="../src/runtime/string.go.html#line-286" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-286">#L286</a>: func rawruneslice(size int) (b []<b>rune</b>) {
+		<a href="../src/runtime/string.go.html#line-488" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-488">#L488</a>: 		n1 += encoderune(buf[:], <b>rune</b>(str[i]))
+		<a href="../src/runtime/string.go.html#line-497" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-497">#L497</a>: 		n2 += encoderune(b[n2:], <b>rune</b>(str[i]))
+		<a href="../src/runtime/utf8.go.html#line-60">utf8.go#L60</a>: func decoderune(s string, k int) (r <b>rune</b>, pos int) {
+		<a href="../src/runtime/utf8.go.html#line-73" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-73">#L73</a>: 			r = <b>rune</b>(s[0]&amp;mask2)&lt;&lt;6 | <b>rune</b>(s[1]&maskx)
+		<a href="../src/runtime/utf8.go.html#line-82" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-82">#L82</a>: 			r = <b>rune</b>(s[0]&amp;mask3)&lt;&lt;12 | <b>rune</b>(s[1]&amp;maskx)&lt;&lt;6 | <b>rune</b>(s[2]&maskx)
+		<a href="../src/runtime/utf8.go.html#line-91" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-91">#L91</a>: 			r = <b>rune</b>(s[0]&amp;mask4)&lt;&lt;18 | <b>rune</b>(s[1]&amp;maskx)&lt;&lt;12 | <b>rune</b>(s[2]&amp;maskx)&lt;&lt;6 | <b>rune</b>(s[3]&maskx)
+		<a href="../src/runtime/utf8.go.html#line-104" class="path-duplicate">utf8.go</a><a href="../src/runtime/utf8.go.html#line-104">#L104</a>: func encoderune(p []byte, r <b>rune</b>) int {
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/quote.go.html#line-23">quote.go#L23</a>: func quoteRuneWith(r <b>rune</b>, quote byte, ASCIIonly, graphicOnly bool) string {
+		<a href="../src/strconv/quote.go.html#line-37" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-37">#L37</a>: 		r := <b>rune</b>(s[0])
+		<a href="../src/strconv/quote.go.html#line-54" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-54">#L54</a>: func appendQuotedRuneWith(buf []byte, r <b>rune</b>, quote byte, ASCIIonly, graphicOnly bool) []byte {
+		<a href="../src/strconv/quote.go.html#line-64" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-64">#L64</a>: func appendEscapedRune(buf []byte, r <b>rune</b>, quote byte, ASCIIonly, graphicOnly bool) []byte {
+		<a href="../src/strconv/quote.go.html#line-66" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-66">#L66</a>: 	if r == <b>rune</b>(quote) || r == '\\' { // always backslashed
+		<a href="../src/strconv/quote.go.html#line-164" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-164">#L164</a>: func QuoteRune(r <b>rune</b>) string {
+		<a href="../src/strconv/quote.go.html#line-170" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-170">#L170</a>: func AppendQuoteRune(dst []byte, r <b>rune</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-178" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-178">#L178</a>: func QuoteRuneToASCII(r <b>rune</b>) string {
+		<a href="../src/strconv/quote.go.html#line-184" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-184">#L184</a>: func AppendQuoteRuneToASCII(dst []byte, r <b>rune</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-192" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-192">#L192</a>: func QuoteRuneToGraphic(r <b>rune</b>) string {
+		<a href="../src/strconv/quote.go.html#line-198" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-198">#L198</a>: func AppendQuoteRuneToGraphic(dst []byte, r <b>rune</b>) []byte {
+		<a href="../src/strconv/quote.go.html#line-225" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-225">#L225</a>: func unhex(b byte) (v <b>rune</b>, ok bool) {
+		<a href="../src/strconv/quote.go.html#line-226" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-226">#L226</a>: 	c := <b>rune</b>(b)
+		<a href="../src/strconv/quote.go.html#line-252" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-252">#L252</a>: func UnquoteChar(s string, quote byte) (value <b>rune</b>, multibyte bool, tail string, err error) {
+		<a href="../src/strconv/quote.go.html#line-266" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-266">#L266</a>: 		return <b>rune</b>(s[0]), false, s[1:], nil
+		<a href="../src/strconv/quote.go.html#line-302" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-302">#L302</a>: 		var v <b>rune</b>
+		<a href="../src/strconv/quote.go.html#line-328" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-328">#L328</a>: 		v := <b>rune</b>(c) - '0'
+		<a href="../src/strconv/quote.go.html#line-334" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-334">#L334</a>: 			x := <b>rune</b>(s[j]) - '0'
+		<a href="../src/strconv/quote.go.html#line-354" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-354">#L354</a>: 		value = <b>rune</b>(c)
+		<a href="../src/strconv/quote.go.html#line-483" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-483">#L483</a>: func IsPrint(r <b>rune</b>) bool {
+		<a href="../src/strconv/quote.go.html#line-529" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-529">#L529</a>: func IsGraphic(r <b>rune</b>) bool {
+		<a href="../src/strconv/quote.go.html#line-539" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-539">#L539</a>: func isInGraphicList(r <b>rune</b>) bool {
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/builder.go.html#line-104">builder.go#L104</a>: func (b *Builder) WriteRune(r <b>rune</b>) (int, error) {
+		<a href="../src/strings/reader.go.html#line-82">reader.go#L82</a>: func (r *Reader) ReadRune() (ch <b>rune</b>, size int, err error) {
+		<a href="../src/strings/reader.go.html#line-90" class="path-duplicate">reader.go</a><a href="../src/strings/reader.go.html#line-90">#L90</a>: 		return <b>rune</b>(c), 1, nil
+		<a href="../src/strings/strings.go.html#line-71">strings.go#L71</a>: func ContainsRune(s string, r <b>rune</b>) bool {
+		<a href="../src/strings/strings.go.html#line-121" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-121">#L121</a>: func IndexRune(s string, r <b>rune</b>) int {
+		<a href="../src/strings/strings.go.html#line-148" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-148">#L148</a>: 		r := <b>rune</b>(chars[0])
+		<a href="../src/strings/strings.go.html#line-181" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-181">#L181</a>: 		rc := <b>rune</b>(s[0])
+		<a href="../src/strings/strings.go.html#line-201" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-201">#L201</a>: 		rc := <b>rune</b>(chars[0])
+		<a href="../src/strings/strings.go.html#line-375" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-375">#L375</a>: func FieldsFunc(s string, f func(<b>rune</b>) bool) []string {
+		<a href="../src/strings/strings.go.html#line-456" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-456">#L456</a>: func Map(mapping func(<b>rune</b>) <b>rune</b>, s string) string {
+		<a href="../src/strings/strings.go.html#line-683" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-683">#L683</a>: func isSeparator(r <b>rune</b>) bool {
+		<a href="../src/strings/strings.go.html#line-716" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-716">#L716</a>: 		func(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/strings/strings.go.html#line-729" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-729">#L729</a>: func TrimLeftFunc(s string, f func(<b>rune</b>) bool) string {
+		<a href="../src/strings/strings.go.html#line-739" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-739">#L739</a>: func TrimRightFunc(s string, f func(<b>rune</b>) bool) string {
+		<a href="../src/strings/strings.go.html#line-752" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-752">#L752</a>: func TrimFunc(s string, f func(<b>rune</b>) bool) string {
+		<a href="../src/strings/strings.go.html#line-758" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-758">#L758</a>: func IndexFunc(s string, f func(<b>rune</b>) bool) int {
+		<a href="../src/strings/strings.go.html#line-764" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-764">#L764</a>: func LastIndexFunc(s string, f func(<b>rune</b>) bool) int {
+		<a href="../src/strings/strings.go.html#line-771" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-771">#L771</a>: func indexFunc(s string, f func(<b>rune</b>) bool, truth bool) int {
+		<a href="../src/strings/strings.go.html#line-783" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-783">#L783</a>: func lastIndexFunc(s string, f func(<b>rune</b>) bool, truth bool) int {
+		<a href="../src/strings/strings.go.html#line-820" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-820">#L820</a>: func makeCutsetFunc(cutset string) func(<b>rune</b>) bool {
+		<a href="../src/strings/strings.go.html#line-822" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-822">#L822</a>: 		return func(r <b>rune</b>) bool {
+		<a href="../src/strings/strings.go.html#line-823" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-823">#L823</a>: 			return r == <b>rune</b>(cutset[0])
+		<a href="../src/strings/strings.go.html#line-827" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-827">#L827</a>: 		return func(r <b>rune</b>) bool {
+		<a href="../src/strings/strings.go.html#line-831" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-831">#L831</a>: 	return func(r <b>rune</b>) bool { return IndexRune(cutset, r) >= 0 }
+		<a href="../src/strings/strings.go.html#line-973" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-973">#L973</a>: 		var sr, tr <b>rune</b>
+		<a href="../src/strings/strings.go.html#line-975" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-975">#L975</a>: 			sr, s = <b>rune</b>(s[0]), s[1:]
+		<a href="../src/strings/strings.go.html#line-981" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-981">#L981</a>: 			tr, t = <b>rune</b>(t[0]), t[1:]
+
+	<a href="../pkg/unicode.html">unicode</a>
+		<a href="../src/unicode/digit.go.html#line-8">digit.go#L8</a>: func IsDigit(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-36">graphic.go#L36</a>: func IsGraphic(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-50" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-50">#L50</a>: func IsPrint(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-59" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-59">#L59</a>: func IsOneOf(ranges []*RangeTable, r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-69" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-69">#L69</a>: func In(r <b>rune</b>, ranges ...*RangeTable) bool {
+		<a href="../src/unicode/graphic.go.html#line-81" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-81">#L81</a>: func IsControl(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-90" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-90">#L90</a>: func IsLetter(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-98" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-98">#L98</a>: func IsMark(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-104" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-104">#L104</a>: func IsNumber(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-113" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-113">#L113</a>: func IsPunct(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-126" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-126">#L126</a>: func IsSpace(r <b>rune</b>) bool {
+		<a href="../src/unicode/graphic.go.html#line-139" class="path-duplicate">graphic.go</a><a href="../src/unicode/graphic.go.html#line-139">#L139</a>: func IsSymbol(r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-75">letter.go#L75</a>: type d [MaxCase]<b>rune</b> // to make the CaseRanges text shorter
+		<a href="../src/unicode/letter.go.html#line-155" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-155">#L155</a>: func Is(rangeTab *RangeTable, r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-157" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-157">#L157</a>: 	if len(r16) &gt; 0 &amp;&amp; r &lt;= <b>rune</b>(r16[len(r16)-1].Hi) {
+		<a href="../src/unicode/letter.go.html#line-161" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-161">#L161</a>: 	if len(r32) &gt; 0 &amp;&amp; r &gt;= <b>rune</b>(r32[0].Lo) {
+		<a href="../src/unicode/letter.go.html#line-167" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-167">#L167</a>: func isExcludingLatin(rangeTab *RangeTable, r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-169" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-169">#L169</a>: 	if off := rangeTab.LatinOffset; len(r16) &gt; off &amp;&amp; r &lt;= <b>rune</b>(r16[len(r16)-1].Hi) {
+		<a href="../src/unicode/letter.go.html#line-173" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-173">#L173</a>: 	if len(r32) &gt; 0 &amp;&amp; r &gt;= <b>rune</b>(r32[0].Lo) {
+		<a href="../src/unicode/letter.go.html#line-180" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-180">#L180</a>: func IsUpper(r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-189" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-189">#L189</a>: func IsLower(r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-198" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-198">#L198</a>: func IsTitle(r <b>rune</b>) bool {
+		<a href="../src/unicode/letter.go.html#line-207" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-207">#L207</a>: func to(_case int, r <b>rune</b>, caseRange []CaseRange) (mappedRune <b>rune</b>, foundMapping bool) {
+		<a href="../src/unicode/letter.go.html#line-217" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-217">#L217</a>: 		if <b>rune</b>(cr.Lo) &lt;= r &amp;&amp; r &lt;= <b>rune</b>(cr.Hi) {
+		<a href="../src/unicode/letter.go.html#line-230" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-230">#L230</a>: 				return <b>rune</b>(cr.Lo) + ((r-<b>rune</b>(cr.Lo))&amp;^1 | <b>rune</b>(_case&1)), true
+		<a href="../src/unicode/letter.go.html#line-234" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-234">#L234</a>: 		if r &lt; <b>rune</b>(cr.Lo) {
+		<a href="../src/unicode/letter.go.html#line-244" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-244">#L244</a>: func To(_case int, r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-250" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-250">#L250</a>: func ToUpper(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-261" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-261">#L261</a>: func ToLower(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-272" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-272">#L272</a>: func ToTitle(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-283" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-283">#L283</a>: func (special SpecialCase) ToUpper(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-292" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-292">#L292</a>: func (special SpecialCase) ToTitle(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-301" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-301">#L301</a>: func (special SpecialCase) ToLower(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-336" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-336">#L336</a>: func SimpleFold(r <b>rune</b>) <b>rune</b> {
+		<a href="../src/unicode/letter.go.html#line-342" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-342">#L342</a>: 		return <b>rune</b>(asciiFold[r])
+		<a href="../src/unicode/letter.go.html#line-350" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-350">#L350</a>: 		if <b>rune</b>(caseOrbit[m].From) < r {
+		<a href="../src/unicode/letter.go.html#line-356" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-356">#L356</a>: 	if lo &lt; len(caseOrbit) &amp;&amp; <b>rune</b>(caseOrbit[lo].From) == r {
+		<a href="../src/unicode/letter.go.html#line-357" class="path-duplicate">letter.go</a><a href="../src/unicode/letter.go.html#line-357">#L357</a>: 		return <b>rune</b>(caseOrbit[lo].To)
+
+	<a href="../pkg/unicode/utf8.html">unicode/utf8</a>
+		<a href="../src/unicode/utf8/utf8.go.html#line-151">utf8.go#L151</a>: func DecodeRune(p []byte) (r <b>rune</b>, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-162" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-162">#L162</a>: 		mask := <b>rune</b>(x) << 31 >> 31 // Create 0x0000 or 0xFFFF.
+		<a href="../src/unicode/utf8/utf8.go.html#line-163" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-163">#L163</a>: 		return <b>rune</b>(p[0])&^mask | RuneError&mask, 1
+		<a href="../src/unicode/utf8/utf8.go.html#line-175" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-175">#L175</a>: 		return <b>rune</b>(p0&amp;mask2)&lt;&lt;6 | <b>rune</b>(b1&maskx), 2
+		<a href="../src/unicode/utf8/utf8.go.html#line-182" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-182">#L182</a>: 		return <b>rune</b>(p0&amp;mask3)&lt;&lt;12 | <b>rune</b>(b1&amp;maskx)&lt;&lt;6 | <b>rune</b>(b2&maskx), 3
+		<a href="../src/unicode/utf8/utf8.go.html#line-188" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-188">#L188</a>: 	return <b>rune</b>(p0&amp;mask4)&lt;&lt;18 | <b>rune</b>(b1&amp;maskx)&lt;&lt;12 | <b>rune</b>(b2&amp;maskx)&lt;&lt;6 | <b>rune</b>(b3&maskx), 4
+		<a href="../src/unicode/utf8/utf8.go.html#line-199" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-199">#L199</a>: func DecodeRuneInString(s string) (r <b>rune</b>, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-210" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-210">#L210</a>: 		mask := <b>rune</b>(x) << 31 >> 31 // Create 0x0000 or 0xFFFF.
+		<a href="../src/unicode/utf8/utf8.go.html#line-211" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-211">#L211</a>: 		return <b>rune</b>(s[0])&^mask | RuneError&mask, 1
+		<a href="../src/unicode/utf8/utf8.go.html#line-223" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-223">#L223</a>: 		return <b>rune</b>(s0&amp;mask2)&lt;&lt;6 | <b>rune</b>(s1&maskx), 2
+		<a href="../src/unicode/utf8/utf8.go.html#line-230" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-230">#L230</a>: 		return <b>rune</b>(s0&amp;mask3)&lt;&lt;12 | <b>rune</b>(s1&amp;maskx)&lt;&lt;6 | <b>rune</b>(s2&maskx), 3
+		<a href="../src/unicode/utf8/utf8.go.html#line-236" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-236">#L236</a>: 	return <b>rune</b>(s0&amp;mask4)&lt;&lt;18 | <b>rune</b>(s1&amp;maskx)&lt;&lt;12 | <b>rune</b>(s2&amp;maskx)&lt;&lt;6 | <b>rune</b>(s3&maskx), 4
+		<a href="../src/unicode/utf8/utf8.go.html#line-247" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-247">#L247</a>: func DecodeLastRune(p []byte) (r <b>rune</b>, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-253" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-253">#L253</a>: 	r = <b>rune</b>(p[start])
+		<a href="../src/unicode/utf8/utf8.go.html#line-287" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-287">#L287</a>: func DecodeLastRuneInString(s string) (r <b>rune</b>, size int) {
+		<a href="../src/unicode/utf8/utf8.go.html#line-293" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-293">#L293</a>: 	r = <b>rune</b>(s[start])
+		<a href="../src/unicode/utf8/utf8.go.html#line-321" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-321">#L321</a>: func RuneLen(r <b>rune</b>) int {
+		<a href="../src/unicode/utf8/utf8.go.html#line-341" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-341">#L341</a>: func EncodeRune(p []byte, r <b>rune</b>) int {
+		<a href="../src/unicode/utf8/utf8.go.html#line-543" class="path-duplicate">utf8.go</a><a href="../src/unicode/utf8/utf8.go.html#line-543">#L543</a>: func ValidRune(r <b>rune</b>) bool {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

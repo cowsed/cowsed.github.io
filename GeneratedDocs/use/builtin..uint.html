@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: builtin.uint</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/builtin.html">builtin</a>.<a href="../pkg/builtin.html#name-uint">uint</a></b></span>
+
+378 uses:
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-685">print.go#L685</a>: 	case <b>uint</b>:
+		<a href="../src/fmt/scan.go.html#line-604">scan.go#L604</a>: 	n := <b>uint</b>(bitSize)
+		<a href="../src/fmt/scan.go.html#line-661" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-661">#L661</a>: 	n := <b>uint</b>(bitSize)
+		<a href="../src/fmt/scan.go.html#line-691" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-691">#L691</a>: 	n := <b>uint</b>(bitSize)
+		<a href="../src/fmt/scan.go.html#line-939" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-939">#L939</a>: 	intBits     = 32 &lt;&lt; (^<b>uint</b>(0) >> 63)
+		<a href="../src/fmt/scan.go.html#line-985" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-985">#L985</a>: 	case *<b>uint</b>:
+		<a href="../src/fmt/scan.go.html#line-986" class="path-duplicate">scan.go</a><a href="../src/fmt/scan.go.html#line-986">#L986</a>: 		*v = <b>uint</b>(s.scanUint(verb, intBits))
+
+	<a href="../pkg/internal/reflectlite.html">internal/reflectlite</a>
+		<a href="../src/internal/reflectlite/swapper.go.html#line-68">swapper.go#L68</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(s.Len) || <b>uint</b>(j) &gt;= <b>uint</b>(s.Len) {
+		<a href="../src/internal/reflectlite/type.go.html#line-78">type.go#L78</a>: type Kind <b>uint</b>
+
+	<a href="../pkg/math.html">math</a>
+		<a href="../src/math/expm1.go.html#line-227">expm1.go#L227</a>: 		t := Float64frombits(0x3ff0000000000000 - (0x20000000000000 &gt;&gt; <b>uint</b>(k))) // t=1-2**-k
+		<a href="../src/math/floor.go.html#line-75">floor.go#L75</a>: 	e := <b>uint</b>(bits>>shift) & mask
+		<a href="../src/math/floor.go.html#line-113" class="path-duplicate">floor.go</a><a href="../src/math/floor.go.html#line-113">#L113</a>: 	e := <b>uint</b>(bits>>shift) & mask
+		<a href="../src/math/fma.go.html#line-27">fma.go#L27</a>: func shl(u1, u2 uint64, n <b>uint</b>) (r1, r2 uint64) {
+		<a href="../src/math/fma.go.html#line-33" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-33">#L33</a>: func shr(u1, u2 uint64, n <b>uint</b>) (r1, r2 uint64) {
+		<a href="../src/math/fma.go.html#line-43" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-43">#L43</a>: func shrcompress(u1, u2 uint64, n <b>uint</b>) (r1, r2 uint64) {
+		<a href="../src/math/fma.go.html#line-83" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-83">#L83</a>: 		shift := <b>uint</b>(bits.LeadingZeros64(mantissa) - 11)
+		<a href="../src/math/fma.go.html#line-126" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-126">#L126</a>: 	is62zero := <b>uint</b>((^pm1 >> 62) & 1)
+		<a href="../src/math/fma.go.html#line-136" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-136">#L136</a>: 	zm1, zm2 = shrcompress(zm1, zm2, <b>uint</b>(pe-ze))
+		<a href="../src/math/fma.go.html#line-145" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-145">#L145</a>: 		pm1, m = shrcompress(pm1, pm2, <b>uint</b>(64+pm1>>63))
+		<a href="../src/math/fma.go.html#line-153" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-153">#L153</a>: 		m, pm2 = shl(pm1, pm2, <b>uint</b>(nz-1))
+		<a href="../src/math/fma.go.html#line-163" class="path-duplicate">fma.go</a><a href="../src/math/fma.go.html#line-163">#L163</a>: 		n := <b>uint</b>(-pe)
+		<a href="../src/math/modf.go.html#line-28">modf.go#L28</a>: 	e := <b>uint</b>(x>>shift)&mask - bias
+		<a href="../src/math/pow10.go.html#line-32">pow10.go#L32</a>: 		return pow10postab32[<b>uint</b>(n)/32] * pow10tab[<b>uint</b>(n)%32]
+		<a href="../src/math/pow10.go.html#line-36" class="path-duplicate">pow10.go</a><a href="../src/math/pow10.go.html#line-36">#L36</a>: 		return pow10negtab32[<b>uint</b>(-n)/32] / pow10tab[<b>uint</b>(-n)%32]
+		<a href="../src/math/trig_reduce.go.html#line-43">trig_reduce.go#L43</a>: 	digit, bitshift := <b>uint</b>(exp+61)/64, <b>uint</b>(exp+61)%64
+		<a href="../src/math/trig_reduce.go.html#line-57" class="path-duplicate">trig_reduce.go</a><a href="../src/math/trig_reduce.go.html#line-57">#L57</a>: 	lz := <b>uint</b>(bits.LeadingZeros64(hi))
+
+	<a href="../pkg/math/bits.html">math/bits</a>
+		<a href="../src/math/bits/bits.go.html#line-11">bits.go#L11</a>: const uintSize = 32 &lt;&lt; (^<b>uint</b>(0) >> 32 & 1) // 32 or 64
+		<a href="../src/math/bits/bits.go.html#line-19" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-19">#L19</a>: func LeadingZeros(x <b>uint</b>) int { return UintSize - Len(x) }
+		<a href="../src/math/bits/bits.go.html#line-53" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-53">#L53</a>: func TrailingZeros(x <b>uint</b>) int {
+		<a href="../src/math/bits/bits.go.html#line-111" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-111">#L111</a>: func OnesCount(x <b>uint</b>) int {
+		<a href="../src/math/bits/bits.go.html#line-170" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-170">#L170</a>: func RotateLeft(x <b>uint</b>, k int) <b>uint</b> {
+		<a href="../src/math/bits/bits.go.html#line-172" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-172">#L172</a>: 		return <b>uint</b>(RotateLeft32(uint32(x), k))
+		<a href="../src/math/bits/bits.go.html#line-174" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-174">#L174</a>: 	return <b>uint</b>(RotateLeft64(uint64(x), k))
+		<a href="../src/math/bits/bits.go.html#line-183" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-183">#L183</a>: 	s := <b>uint</b>(k) & (n - 1)
+		<a href="../src/math/bits/bits.go.html#line-193" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-193">#L193</a>: 	s := <b>uint</b>(k) & (n - 1)
+		<a href="../src/math/bits/bits.go.html#line-203" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-203">#L203</a>: 	s := <b>uint</b>(k) & (n - 1)
+		<a href="../src/math/bits/bits.go.html#line-213" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-213">#L213</a>: 	s := <b>uint</b>(k) & (n - 1)
+		<a href="../src/math/bits/bits.go.html#line-220" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-220">#L220</a>: func Reverse(x <b>uint</b>) <b>uint</b> {
+		<a href="../src/math/bits/bits.go.html#line-222" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-222">#L222</a>: 		return <b>uint</b>(Reverse32(uint32(x)))
+		<a href="../src/math/bits/bits.go.html#line-224" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-224">#L224</a>: 	return <b>uint</b>(Reverse64(uint64(x)))
+		<a href="../src/math/bits/bits.go.html#line-260" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-260">#L260</a>: func ReverseBytes(x <b>uint</b>) <b>uint</b> {
+		<a href="../src/math/bits/bits.go.html#line-262" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-262">#L262</a>: 		return <b>uint</b>(ReverseBytes32(uint32(x)))
+		<a href="../src/math/bits/bits.go.html#line-264" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-264">#L264</a>: 	return <b>uint</b>(ReverseBytes64(uint64(x)))
+		<a href="../src/math/bits/bits.go.html#line-296" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-296">#L296</a>: func Len(x <b>uint</b>) int {
+		<a href="../src/math/bits/bits.go.html#line-354" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-354">#L354</a>: func Add(x, y, carry <b>uint</b>) (sum, carryOut <b>uint</b>) {
+		<a href="../src/math/bits/bits.go.html#line-357" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-357">#L357</a>: 		return <b>uint</b>(s32), <b>uint</b>(c32)
+		<a href="../src/math/bits/bits.go.html#line-360" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-360">#L360</a>: 	return <b>uint</b>(s64), <b>uint</b>(c64)
+		<a href="../src/math/bits/bits.go.html#line-396" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-396">#L396</a>: func Sub(x, y, borrow <b>uint</b>) (diff, borrowOut <b>uint</b>) {
+		<a href="../src/math/bits/bits.go.html#line-399" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-399">#L399</a>: 		return <b>uint</b>(d32), <b>uint</b>(b32)
+		<a href="../src/math/bits/bits.go.html#line-402" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-402">#L402</a>: 	return <b>uint</b>(d64), <b>uint</b>(b64)
+		<a href="../src/math/bits/bits.go.html#line-439" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-439">#L439</a>: func Mul(x, y <b>uint</b>) (hi, lo <b>uint</b>) {
+		<a href="../src/math/bits/bits.go.html#line-442" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-442">#L442</a>: 		return <b>uint</b>(h), <b>uint</b>(l)
+		<a href="../src/math/bits/bits.go.html#line-445" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-445">#L445</a>: 	return <b>uint</b>(h), <b>uint</b>(l)
+		<a href="../src/math/bits/bits.go.html#line-486" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-486">#L486</a>: func Div(hi, lo, y <b>uint</b>) (quo, rem <b>uint</b>) {
+		<a href="../src/math/bits/bits.go.html#line-489" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-489">#L489</a>: 		return <b>uint</b>(q), <b>uint</b>(r)
+		<a href="../src/math/bits/bits.go.html#line-492" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-492">#L492</a>: 	return <b>uint</b>(q), <b>uint</b>(r)
+		<a href="../src/math/bits/bits.go.html#line-524" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-524">#L524</a>: 	s := <b>uint</b>(LeadingZeros64(y))
+		<a href="../src/math/bits/bits.go.html#line-562" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-562">#L562</a>: func Rem(hi, lo, y <b>uint</b>) <b>uint</b> {
+		<a href="../src/math/bits/bits.go.html#line-564" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-564">#L564</a>: 		return <b>uint</b>(Rem32(uint32(hi), uint32(lo), uint32(y)))
+		<a href="../src/math/bits/bits.go.html#line-566" class="path-duplicate">bits.go</a><a href="../src/math/bits/bits.go.html#line-566">#L566</a>: 	return <b>uint</b>(Rem64(uint64(hi), uint64(lo), uint64(y)))
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/str.go.html#line-12">str.go#L12</a>: 		return "-" + uitoa(<b>uint</b>(-val))
+		<a href="../src/os/str.go.html#line-14" class="path-duplicate">str.go</a><a href="../src/os/str.go.html#line-14">#L14</a>: 	return uitoa(<b>uint</b>(val))
+		<a href="../src/os/str.go.html#line-18" class="path-duplicate">str.go</a><a href="../src/os/str.go.html#line-18">#L18</a>: func uitoa(val <b>uint</b>) string {
+		<a href="../src/os/types.go.html#line-70">types.go#L70</a>: 		if m&amp;(1&lt;&lt;<b>uint</b>(32-1-i)) != 0 {
+		<a href="../src/os/types.go.html#line-81" class="path-duplicate">types.go</a><a href="../src/os/types.go.html#line-81">#L81</a>: 		if m&amp;(1&lt;&lt;<b>uint</b>(9-1-i)) != 0 {
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/swapper.go.html#line-68">swapper.go#L68</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(s.Len) || <b>uint</b>(j) &gt;= <b>uint</b>(s.Len) {
+		<a href="../src/reflect/type.go.html#line-230">type.go#L230</a>: type Kind <b>uint</b>
+		<a href="../src/reflect/value.go.html#line-639">value.go#L639</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(len(tt.methods)) {
+		<a href="../src/reflect/value.go.html#line-656" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-656">#L656</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(len(ms)) {
+		<a href="../src/reflect/value.go.html#line-853" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-853">#L853</a>: 	if <b>uint</b>(i) &gt;= <b>uint</b>(len(tt.fields)) {
+		<a href="../src/reflect/value.go.html#line-942" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-942">#L942</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(tt.len) {
+		<a href="../src/reflect/value.go.html#line-961" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-961">#L961</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(s.Len) {
+		<a href="../src/reflect/value.go.html#line-972" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-972">#L972</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(s.Len) {
+		<a href="../src/reflect/value.go.html#line-1324" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1324">#L1324</a>: 	if v.flag&amp;flagMethod != 0 || <b>uint</b>(i) &gt;= <b>uint</b>(v.typ.NumMethod()) {
+		<a href="../src/reflect/value.go.html#line-1657" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1657">#L1657</a>: 	if <b>uint</b>(n) &gt; <b>uint</b>(s.Cap) {
+		<a href="../src/reflect/value.go.html#line-1717" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1717">#L1717</a>: 		*(*<b>uint</b>)(v.ptr) = <b>uint</b>(x)
+		<a href="../src/reflect/value.go.html#line-1917" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1917">#L1917</a>: 		if <b>uint</b>(i) &gt;= <b>uint</b>(len(tt.methods)) {
+		<a href="../src/reflect/value.go.html#line-1925" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1925">#L1925</a>: 	if <b>uint</b>(i) &gt;= <b>uint</b>(len(ms)) {
+		<a href="../src/reflect/value.go.html#line-1939" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1939">#L1939</a>: 		return uint64(*(*<b>uint</b>)(p))
+
+	<a href="../pkg/runtime.html">runtime</a>
+		<a href="../src/runtime/chan.go.html#line-33">chan.go#L33</a>: 	qcount   <b>uint</b>           // total data in the queue
+		<a href="../src/runtime/chan.go.html#line-34" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-34">#L34</a>: 	dataqsiz <b>uint</b>           // size of the circular queue
+		<a href="../src/runtime/chan.go.html#line-39" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-39">#L39</a>: 	sendx    <b>uint</b>   // send index
+		<a href="../src/runtime/chan.go.html#line-40" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-40">#L40</a>: 	recvx    <b>uint</b>   // receive index
+		<a href="../src/runtime/chan.go.html#line-111" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-111">#L111</a>: 	c.dataqsiz = <b>uint</b>(size)
+		<a href="../src/runtime/chan.go.html#line-121" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-121">#L121</a>: func chanbuf(c *hchan, i <b>uint</b>) unsafe.Pointer {
+		<a href="../src/runtime/debuglog.go.html#line-224">debuglog.go#L224</a>: func (l *dlogger) u(x <b>uint</b>) *dlogger {
+		<a href="../src/runtime/debuglog.go.html#line-557" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-557">#L557</a>: 	for i := <b>uint</b>(0); ; i += 7 {
+		<a href="../src/runtime/debuglog.go.html#line-588" class="path-duplicate">debuglog.go</a><a href="../src/runtime/debuglog.go.html#line-588">#L588</a>: 	for i := <b>uint</b>(0); ; i += 7 {
+		<a href="../src/runtime/error.go.html#line-207">error.go#L207</a>: 	case <b>uint</b>:
+		<a href="../src/runtime/error.go.html#line-254" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-254">#L254</a>: 		print(typestring, "(", *(*<b>uint</b>)(eface.data), ")")
+		<a href="../src/runtime/malloc.go.html#line-345">malloc.go#L345</a>: 	physHugePageShift <b>uint</b>
+		<a href="../src/runtime/malloc.go.html#line-852" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-852">#L852</a>: 			s.allocCache &gt;&gt;= <b>uint</b>(theBit + 1)
+		<a href="../src/runtime/mbitmap.go.html#line-229">mbitmap.go#L229</a>: 	s.allocCache &gt;&gt;= <b>uint</b>(bitIndex + 1)
+		<a href="../src/runtime/mbitmap.go.html#line-1678" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1678">#L1678</a>: 			for off := <b>uint</b>(0); ; off += 7 {
+		<a href="../src/runtime/mbitmap.go.html#line-1690" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1690">#L1690</a>: 		for off := <b>uint</b>(0); ; off += 7 {
+		<a href="../src/runtime/mbitmap.go.html#line-1921" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1921">#L1921</a>: 				for nb := <b>uint</b>(0); ; nb += 7 {
+		<a href="../src/runtime/mbitmap.go.html#line-1931" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1931">#L1931</a>: 			for nb := <b>uint</b>(0); ; nb += 7 {
+		<a href="../src/runtime/mgcmark.go.html#line-337">mgcmark.go#L337</a>: 	arenaPage := <b>uint</b>(uintptr(shard) * pagesPerSpanRoot % pagesPerArena)
+		<a href="../src/runtime/mgcmark.go.html#line-348" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-348">#L348</a>: 		for j := <b>uint</b>(0); j < 8; j++ {
+		<a href="../src/runtime/mgcmark.go.html#line-358" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-358">#L358</a>: 			s := ha.spans[arenaPage+<b>uint</b>(i)*8+j]
+		<a href="../src/runtime/mgcscavenge.go.html#line-605">mgcscavenge.go#L605</a>: 	if s.summary[len(s.summary)-1][maxChunk].max() &gt;= <b>uint</b>(minPages) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-634" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-634">#L634</a>: 			if s.summary[len(s.summary)-1][i].max() &lt; <b>uint</b>(minPages) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-694" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-694">#L694</a>: func (s *pageAlloc) scavengeRangeLocked(ci chunkIdx, base, npages <b>uint</b>) uintptr {
+		<a href="../src/runtime/mgcscavenge.go.html#line-726" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-726">#L726</a>: func fillAligned(x uint64, m <b>uint</b>) uint64 {
+		<a href="../src/runtime/mgcscavenge.go.html#line-799" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-799">#L799</a>: 		x := fillAligned(m.scavenged[i]|m.pallocBits[i], <b>uint</b>(min))
+		<a href="../src/runtime/mgcscavenge.go.html#line-829" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-829">#L829</a>: func (m *pallocData) findScavengeCandidate(searchIdx <b>uint</b>, min, max uintptr) (<b>uint</b>, <b>uint</b>) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-852" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-852">#L852</a>: 		x := fillAligned(m.scavenged[i]|m.pallocBits[i], <b>uint</b>(min))
+		<a href="../src/runtime/mgcscavenge.go.html#line-865" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-865">#L865</a>: 	x := fillAligned(m.scavenged[i]|m.pallocBits[i], <b>uint</b>(min))
+		<a href="../src/runtime/mgcscavenge.go.html#line-866" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-866">#L866</a>: 	z1 := <b>uint</b>(sys.LeadingZeros64(^x))
+		<a href="../src/runtime/mgcscavenge.go.html#line-867" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-867">#L867</a>: 	run, end := <b>uint</b>(0), <b>uint</b>(i)*64+(64-z1)
+		<a href="../src/runtime/mgcscavenge.go.html#line-871" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-871">#L871</a>: 		run = <b>uint</b>(sys.LeadingZeros64(x << z1))
+		<a href="../src/runtime/mgcscavenge.go.html#line-878" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-878">#L878</a>: 			x := fillAligned(m.scavenged[j]|m.pallocBits[j], <b>uint</b>(min))
+		<a href="../src/runtime/mgcscavenge.go.html#line-879" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-879">#L879</a>: 			run += <b>uint</b>(sys.LeadingZeros64(x))
+		<a href="../src/runtime/mgcscavenge.go.html#line-890" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-890">#L890</a>: 	if size &gt; <b>uint</b>(max) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-891" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-891">#L891</a>: 		size = <b>uint</b>(max)
+		<a href="../src/runtime/mgcscavenge.go.html#line-908" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-908">#L908</a>: 		hugePageAbove := <b>uint</b>(alignUp(uintptr(start), pagesPerHugePage))
+		<a href="../src/runtime/mgcscavenge.go.html#line-914" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-914">#L914</a>: 			hugePageBelow := <b>uint</b>(alignDown(uintptr(start), pagesPerHugePage))
+		<a href="../src/runtime/mheap.go.html#line-588">mheap.go#L588</a>: type arenaIdx <b>uint</b>
+		<a href="../src/runtime/mheap.go.html#line-590" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-590">#L590</a>: func (i arenaIdx) l1() <b>uint</b> {
+		<a href="../src/runtime/mheap.go.html#line-596" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-596">#L596</a>: 		return <b>uint</b>(i) >> arenaL1Shift
+		<a href="../src/runtime/mheap.go.html#line-600" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-600">#L600</a>: func (i arenaIdx) l2() <b>uint</b> {
+		<a href="../src/runtime/mheap.go.html#line-602" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-602">#L602</a>: 		return <b>uint</b>(i)
+		<a href="../src/runtime/mheap.go.html#line-604" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-604">#L604</a>: 		return <b>uint</b>(i) & (1<<arenaL2Bits - 1)
+		<a href="../src/runtime/mheap.go.html#line-655" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-655">#L655</a>: 		if ri.l2() &gt;= <b>uint</b>(len(mheap_.arenas[0])) {
+		<a href="../src/runtime/mheap.go.html#line-660" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-660">#L660</a>: 		if ri.l1() &gt;= <b>uint</b>(len(mheap_.arenas)) {
+		<a href="../src/runtime/mheap.go.html#line-842" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-842">#L842</a>: 		arenaPage := <b>uint</b>(pageIdx % pagesPerArena)
+		<a href="../src/runtime/mheap.go.html#line-858" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-858">#L858</a>: 			for j := <b>uint</b>(0); j < 8; j++ {
+		<a href="../src/runtime/mheap.go.html#line-860" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-860">#L860</a>: 					s := ha.spans[arenaPage+<b>uint</b>(i)*8+j]
+		<a href="../src/runtime/mpagealloc.go.html#line-97">mpagealloc.go#L97</a>: type chunkIdx <b>uint</b>
+		<a href="../src/runtime/mpagealloc.go.html#line-112" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-112">#L112</a>: func chunkPageIndex(p uintptr) <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-113" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-113">#L113</a>: 	return <b>uint</b>(p % pallocChunkBytes / pageSize)
+		<a href="../src/runtime/mpagealloc.go.html#line-117" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-117">#L117</a>: func (i chunkIdx) l1() <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-123" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-123">#L123</a>: 		return <b>uint</b>(i) >> pallocChunksL1Shift
+		<a href="../src/runtime/mpagealloc.go.html#line-128" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-128">#L128</a>: func (i chunkIdx) l2() <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-130" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-130">#L130</a>: 		return <b>uint</b>(i)
+		<a href="../src/runtime/mpagealloc.go.html#line-132" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-132">#L132</a>: 		return <b>uint</b>(i) & (1<<pallocChunksL2Bits - 1)
+		<a href="../src/runtime/mpagealloc.go.html#line-506" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-506">#L506</a>: 	scav := <b>uint</b>(0)
+		<a href="../src/runtime/mpagealloc.go.html#line-681" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-681">#L681</a>: 		var base, size <b>uint</b>
+		<a href="../src/runtime/mpagealloc.go.html#line-696" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-696">#L696</a>: 			if size+s &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-701" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-701">#L701</a>: 					base = <b>uint</b>(j) << logMaxPages
+		<a href="../src/runtime/mpagealloc.go.html#line-707" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-707">#L707</a>: 			if sum.max() &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-722" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-722">#L722</a>: 				base = <b>uint</b>(j+1)<<logMaxPages - size
+		<a href="../src/runtime/mpagealloc.go.html#line-728" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-728">#L728</a>: 		if size &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-762" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-762">#L762</a>: 	if j == ^<b>uint</b>(0) {
+		<a href="../src/runtime/mpagealloc.go.html#line-799" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-799">#L799</a>: 	if pallocChunkPages-chunkPageIndex(s.searchAddr.addr()) &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-802" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-802">#L802</a>: 		if max := s.summary[len(s.summary)-1][i].max(); max &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-804" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-804">#L804</a>: 			if j == ^<b>uint</b>(0) {
+		<a href="../src/runtime/mpagealloc.go.html#line-900" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-900">#L900</a>: func packPallocSum(start, max, end <b>uint</b>) pallocSum {
+		<a href="../src/runtime/mpagealloc.go.html#line-910" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-910">#L910</a>: func (p pallocSum) start() <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-914" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-914">#L914</a>: 	return <b>uint</b>(uint64(p) & (maxPackedValue - 1))
+		<a href="../src/runtime/mpagealloc.go.html#line-918" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-918">#L918</a>: func (p pallocSum) max() <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-922" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-922">#L922</a>: 	return <b>uint</b>((uint64(p) >> logMaxPackedValue) & (maxPackedValue - 1))
+		<a href="../src/runtime/mpagealloc.go.html#line-926" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-926">#L926</a>: func (p pallocSum) end() <b>uint</b> {
+		<a href="../src/runtime/mpagealloc.go.html#line-930" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-930">#L930</a>: 	return <b>uint</b>((uint64(p) >> (2 * logMaxPackedValue)) & (maxPackedValue - 1))
+		<a href="../src/runtime/mpagealloc.go.html#line-934" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-934">#L934</a>: func (p pallocSum) unpack() (<b>uint</b>, <b>uint</b>, <b>uint</b>) {
+		<a href="../src/runtime/mpagealloc.go.html#line-938" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-938">#L938</a>: 	return <b>uint</b>(uint64(p) & (maxPackedValue - 1)),
+		<a href="../src/runtime/mpagealloc.go.html#line-939" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-939">#L939</a>: 		<b>uint</b>((uint64(p) >> logMaxPackedValue) & (maxPackedValue - 1)),
+		<a href="../src/runtime/mpagealloc.go.html#line-940" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-940">#L940</a>: 		<b>uint</b>((uint64(p) >> (2 * logMaxPackedValue)) & (maxPackedValue - 1))
+		<a href="../src/runtime/mpagealloc.go.html#line-945" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-945">#L945</a>: func mergeSummaries(sums []pallocSum, logMaxPagesPerSum <b>uint</b>) pallocSum {
+		<a href="../src/runtime/mpagealloc.go.html#line-958" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-958">#L958</a>: 		if start == <b>uint</b>(i)<<logMaxPagesPerSum {
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-33">mpagealloc_64bit.go#L33</a>: var levelBits = [summaryLevels]<b>uint</b>{
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-47" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-47">#L47</a>: var levelShift = [summaryLevels]<b>uint</b>{
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-59" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-59">#L59</a>: var levelLogPages = [summaryLevels]<b>uint</b>{
+		<a href="../src/runtime/mpagecache.go.html#line-59">mpagecache.go#L59</a>: 	i := findBitRange64(c.cache, <b>uint</b>(npages))
+		<a href="../src/runtime/mpagecache.go.html#line-84" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-84">#L84</a>: 	for i := <b>uint</b>(0); i < 64; i++ {
+		<a href="../src/runtime/mpagecache.go.html#line-118" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-118">#L118</a>: 		if j == ^<b>uint</b>(0) {
+		<a href="../src/runtime/mpallocbits.go.html#line-15">mpallocbits.go#L15</a>: func (b *pageBits) get(i <b>uint</b>) <b>uint</b> {
+		<a href="../src/runtime/mpallocbits.go.html#line-16" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-16">#L16</a>: 	return <b>uint</b>((b[i/64] >> (i % 64)) & 1)
+		<a href="../src/runtime/mpallocbits.go.html#line-20" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-20">#L20</a>: func (b *pageBits) block64(i <b>uint</b>) uint64 {
+		<a href="../src/runtime/mpallocbits.go.html#line-25" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-25">#L25</a>: func (b *pageBits) set(i <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-30" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-30">#L30</a>: func (b *pageBits) setRange(i, n <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-61" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-61">#L61</a>: func (b *pageBits) clear(i <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-66" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-66">#L66</a>: func (b *pageBits) clearRange(i, n <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-98" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-98">#L98</a>: func (b *pageBits) popcntRange(i, n <b>uint</b>) (s <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-100" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-100">#L100</a>: 		return <b>uint</b>((b[i/64] >> (i % 64)) & 1)
+		<a href="../src/runtime/mpallocbits.go.html#line-105" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-105">#L105</a>: 		return <b>uint</b>(sys.OnesCount64((b[i/64] >> (i % 64)) & ((1 << n) - 1)))
+		<a href="../src/runtime/mpallocbits.go.html#line-108" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-108">#L108</a>: 	s += <b>uint</b>(sys.OnesCount64(b[i/64] >> (i % 64)))
+		<a href="../src/runtime/mpallocbits.go.html#line-110" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-110">#L110</a>: 		s += <b>uint</b>(sys.OnesCount64(b[k]))
+		<a href="../src/runtime/mpallocbits.go.html#line-112" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-112">#L112</a>: 	s += <b>uint</b>(sys.OnesCount64(b[j/64] & ((1 << (j%64 + 1)) - 1)))
+		<a href="../src/runtime/mpallocbits.go.html#line-140" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-140">#L140</a>: var consec8tab = [256]<b>uint</b>{
+		<a href="../src/runtime/mpallocbits.go.html#line-166" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-166">#L166</a>: 	var start, max, end <b>uint</b>
+		<a href="../src/runtime/mpallocbits.go.html#line-173" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-173">#L173</a>: 			si := <b>uint</b>(sys.TrailingZeros8(k))
+		<a href="../src/runtime/mpallocbits.go.html#line-174" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-174">#L174</a>: 			if start == <b>uint</b>(i*64+j) {
+		<a href="../src/runtime/mpallocbits.go.html#line-190" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-190">#L190</a>: 				end = <b>uint</b>(sys.LeadingZeros8(k))
+		<a href="../src/runtime/mpallocbits.go.html#line-206" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-206">#L206</a>: func (b *pallocBits) find(npages uintptr, searchIdx <b>uint</b>) (<b>uint</b>, <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-220" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-220">#L220</a>: func (b *pallocBits) find1(searchIdx <b>uint</b>) <b>uint</b> {
+		<a href="../src/runtime/mpallocbits.go.html#line-221" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-221">#L221</a>: 	for i := searchIdx / 64; i &lt; <b>uint</b>(len(b)); i++ {
+		<a href="../src/runtime/mpallocbits.go.html#line-226" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-226">#L226</a>: 		return i*64 + <b>uint</b>(sys.TrailingZeros64(^x))
+		<a href="../src/runtime/mpallocbits.go.html#line-228" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-228">#L228</a>: 	return ^<b>uint</b>(0)
+		<a href="../src/runtime/mpallocbits.go.html#line-241" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-241">#L241</a>: func (b *pallocBits) findSmallN(npages uintptr, searchIdx <b>uint</b>) (<b>uint</b>, <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-242" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-242">#L242</a>: 	end, newSearchIdx := <b>uint</b>(0), ^<b>uint</b>(0)
+		<a href="../src/runtime/mpallocbits.go.html#line-243" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-243">#L243</a>: 	for i := searchIdx / 64; i &lt; <b>uint</b>(len(b)); i++ {
+		<a href="../src/runtime/mpallocbits.go.html#line-251" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-251">#L251</a>: 		start := <b>uint</b>(sys.TrailingZeros64(bi))
+		<a href="../src/runtime/mpallocbits.go.html#line-252" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-252">#L252</a>: 		if newSearchIdx == ^<b>uint</b>(0) {
+		<a href="../src/runtime/mpallocbits.go.html#line-255" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-255">#L255</a>: 			newSearchIdx = i*64 + <b>uint</b>(sys.TrailingZeros64(^bi))
+		<a href="../src/runtime/mpallocbits.go.html#line-257" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-257">#L257</a>: 		if end+start &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpallocbits.go.html#line-261" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-261">#L261</a>: 		j := findBitRange64(^bi, <b>uint</b>(npages))
+		<a href="../src/runtime/mpallocbits.go.html#line-265" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-265">#L265</a>: 		end = <b>uint</b>(sys.LeadingZeros64(bi))
+		<a href="../src/runtime/mpallocbits.go.html#line-267" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-267">#L267</a>: 	return ^<b>uint</b>(0), newSearchIdx
+		<a href="../src/runtime/mpallocbits.go.html#line-280" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-280">#L280</a>: func (b *pallocBits) findLargeN(npages uintptr, searchIdx <b>uint</b>) (<b>uint</b>, <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-281" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-281">#L281</a>: 	start, size, newSearchIdx := ^<b>uint</b>(0), <b>uint</b>(0), ^<b>uint</b>(0)
+		<a href="../src/runtime/mpallocbits.go.html#line-282" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-282">#L282</a>: 	for i := searchIdx / 64; i &lt; <b>uint</b>(len(b)); i++ {
+		<a href="../src/runtime/mpallocbits.go.html#line-288" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-288">#L288</a>: 		if newSearchIdx == ^<b>uint</b>(0) {
+		<a href="../src/runtime/mpallocbits.go.html#line-291" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-291">#L291</a>: 			newSearchIdx = i*64 + <b>uint</b>(sys.TrailingZeros64(^x))
+		<a href="../src/runtime/mpallocbits.go.html#line-294" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-294">#L294</a>: 			size = <b>uint</b>(sys.LeadingZeros64(x))
+		<a href="../src/runtime/mpallocbits.go.html#line-298" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-298">#L298</a>: 		s := <b>uint</b>(sys.TrailingZeros64(x))
+		<a href="../src/runtime/mpallocbits.go.html#line-299" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-299">#L299</a>: 		if s+size &gt;= <b>uint</b>(npages) {
+		<a href="../src/runtime/mpallocbits.go.html#line-304" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-304">#L304</a>: 			size = <b>uint</b>(sys.LeadingZeros64(x))
+		<a href="../src/runtime/mpallocbits.go.html#line-310" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-310">#L310</a>: 	if size &lt; <b>uint</b>(npages) {
+		<a href="../src/runtime/mpallocbits.go.html#line-311" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-311">#L311</a>: 		return ^<b>uint</b>(0), newSearchIdx
+		<a href="../src/runtime/mpallocbits.go.html#line-317" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-317">#L317</a>: func (b *pallocBits) allocRange(i, n <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-327" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-327">#L327</a>: func (b *pallocBits) free1(i <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-332" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-332">#L332</a>: func (b *pallocBits) free(i, n <b>uint</b>) {
+		<a href="../src/runtime/mpallocbits.go.html#line-344" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-344">#L344</a>: func (b *pallocBits) pages64(i <b>uint</b>) uint64 {
+		<a href="../src/runtime/mpallocbits.go.html#line-351" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-351">#L351</a>: func findBitRange64(c uint64, n <b>uint</b>) <b>uint</b> {
+		<a href="../src/runtime/mpallocbits.go.html#line-352" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-352">#L352</a>: 	i := <b>uint</b>(0)
+		<a href="../src/runtime/mpallocbits.go.html#line-353" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-353">#L353</a>: 	cont := <b>uint</b>(sys.TrailingZeros64(^c))
+		<a href="../src/runtime/mpallocbits.go.html#line-356" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-356">#L356</a>: 		i += <b>uint</b>(sys.TrailingZeros64(c >> i))
+		<a href="../src/runtime/mpallocbits.go.html#line-357" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-357">#L357</a>: 		cont = <b>uint</b>(sys.TrailingZeros64(^(c >> i)))
+		<a href="../src/runtime/mpallocbits.go.html#line-376" class="path-duplicate">mpallocbits.go</a><a href="../src/runtime/mpallocbits.go.html#line-376">#L376</a>: func (m *pallocData) allocRange(i, n <b>uint</b>) {
+		<a href="../src/runtime/panic.go.html#line-90">panic.go#L90</a>: func goPanicIndexU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-100" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-100">#L100</a>: func goPanicSliceAlenU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-108" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-108">#L108</a>: func goPanicSliceAcapU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-118" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-118">#L118</a>: func goPanicSliceBU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-128" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-128">#L128</a>: func goPanicSlice3AlenU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-136" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-136">#L136</a>: func goPanicSlice3AcapU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-146" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-146">#L146</a>: func goPanicSlice3BU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-156" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-156">#L156</a>: func goPanicSlice3CU(x <b>uint</b>, y int) {
+		<a href="../src/runtime/panic.go.html#line-164" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-164">#L164</a>: func panicIndexU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-166" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-166">#L166</a>: func panicSliceAlenU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-168" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-168">#L168</a>: func panicSliceAcapU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-170" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-170">#L170</a>: func panicSliceBU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-172" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-172">#L172</a>: func panicSlice3AlenU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-174" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-174">#L174</a>: func panicSlice3AcapU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-176" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-176">#L176</a>: func panicSlice3BU(x <b>uint</b>, y int)
+		<a href="../src/runtime/panic.go.html#line-178" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-178">#L178</a>: func panicSlice3CU(x <b>uint</b>, y int)
+		<a href="../src/runtime/runtime1.go.html#line-424">runtime1.go#L424</a>: 		if v &gt;= int64(div)&lt;&lt;<b>uint</b>(bit) {
+		<a href="../src/runtime/runtime1.go.html#line-425" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-425">#L425</a>: 			v = v - (int64(div) &lt;&lt; <b>uint</b>(bit))
+		<a href="../src/runtime/runtime1.go.html#line-428" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-428">#L428</a>: 			res |= 1 &lt;&lt; <b>uint</b>(bit)
+		<a href="../src/runtime/sigqueue.go.html#line-68">sigqueue.go#L68</a>: 	bit := uint32(1) &lt;&lt; <b>uint</b>(s&31)
+		<a href="../src/runtime/softfloat64.go.html#line-12">softfloat64.go#L12</a>: 	mantbits64 <b>uint</b> = 52
+		<a href="../src/runtime/softfloat64.go.html#line-13" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-13">#L13</a>: 	expbits64  <b>uint</b> = 11
+		<a href="../src/runtime/softfloat64.go.html#line-20" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-20">#L20</a>: 	mantbits32 <b>uint</b> = 23
+		<a href="../src/runtime/softfloat64.go.html#line-21" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-21">#L21</a>: 	expbits32  <b>uint</b> = 8
+		<a href="../src/runtime/softfloat64.go.html#line-231" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-231">#L231</a>: 	shift := <b>uint</b>(fe - ge)
+		<a href="../src/runtime/softfloat64.go.html#line-447" class="path-duplicate">softfloat64.go</a><a href="../src/runtime/softfloat64.go.html#line-447">#L447</a>: 	s := <b>uint</b>(0)
+		<a href="../src/runtime/stack.go.html#line-921">stack.go#L921</a>: 	s := <b>uint</b>(0)
+		<a href="../src/runtime/string.go.html#line-359">string.go#L359</a>: 	maxUint = ^<b>uint</b>(0)
+		<a href="../src/runtime/string.go.html#line-377" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-377">#L377</a>: 	un := <b>uint</b>(0)
+		<a href="../src/runtime/string.go.html#line-388" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-388">#L388</a>: 		un1 := un + <b>uint</b>(c) - '0'
+		<a href="../src/runtime/string.go.html#line-396" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-396">#L396</a>: 	if !neg &amp;&amp; un &gt; <b>uint</b>(maxInt) {
+		<a href="../src/runtime/string.go.html#line-399" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-399">#L399</a>: 	if neg &amp;&amp; un &gt; <b>uint</b>(maxInt)+1 {
+		<a href="../src/runtime/traceback.go.html#line-98">traceback.go#L98</a>: func gentraceback(pc0, sp0, lr0 uintptr, gp *g, skip int, pcbuf *uintptr, max int, callback func(*stkframe, unsafe.Pointer) bool, v unsafe.Pointer, flags <b>uint</b>) int {
+		<a href="../src/runtime/traceback.go.html#line-710" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-710">#L710</a>: func traceback1(pc, sp, lr uintptr, gp *g, flags <b>uint</b>) {
+
+	<a href="../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>
+		<a href="../src/runtime/internal/atomic/stubs.go.html#line-27">stubs.go#L27</a>: func Loaduint(ptr *<b>uint</b>) <b>uint</b>
+
+	<a href="../pkg/sort.html">sort</a>
+		<a href="../src/sort/search.go.html#line-64">search.go#L64</a>: 		h := int(<b>uint</b>(i+j) >> 1) // avoid overflow when computing h
+		<a href="../src/sort/sort.go.html#line-97">sort.go#L97</a>: 	m := int(<b>uint</b>(lo+hi) >> 1) // Written like this to avoid integer overflow.
+		<a href="../src/sort/sort.go.html#line-414" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-414">#L414</a>: 			h := int(<b>uint</b>(i+j) >> 1)
+		<a href="../src/sort/sort.go.html#line-438" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-438">#L438</a>: 			h := int(<b>uint</b>(i+j) >> 1)
+		<a href="../src/sort/sort.go.html#line-452" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-452">#L452</a>: 	mid := int(<b>uint</b>(a+b) >> 1)
+		<a href="../src/sort/sort.go.html#line-465" class="path-duplicate">sort.go</a><a href="../src/sort/sort.go.html#line-465">#L465</a>: 		c := int(<b>uint</b>(start+r) >> 1)
+		<a href="../src/sort/zfuncversion.go.html#line-73">zfuncversion.go#L73</a>: 	m := int(<b>uint</b>(lo+hi) >> 1)
+		<a href="../src/sort/zfuncversion.go.html#line-192" class="path-duplicate">zfuncversion.go</a><a href="../src/sort/zfuncversion.go.html#line-192">#L192</a>: 			h := int(<b>uint</b>(i+j) >> 1)
+		<a href="../src/sort/zfuncversion.go.html#line-208" class="path-duplicate">zfuncversion.go</a><a href="../src/sort/zfuncversion.go.html#line-208">#L208</a>: 			h := int(<b>uint</b>(i+j) >> 1)
+		<a href="../src/sort/zfuncversion.go.html#line-220" class="path-duplicate">zfuncversion.go</a><a href="../src/sort/zfuncversion.go.html#line-220">#L220</a>: 	mid := int(<b>uint</b>(a+b) >> 1)
+		<a href="../src/sort/zfuncversion.go.html#line-232" class="path-duplicate">zfuncversion.go</a><a href="../src/sort/zfuncversion.go.html#line-232">#L232</a>: 		c := int(<b>uint</b>(start+r) >> 1)
+
+	<a href="../pkg/strconv.html">strconv</a>
+		<a href="../src/strconv/atoi.go.html#line-52">atoi.go#L52</a>: const intSize = 32 &lt;&lt; (^<b>uint</b>(0) >> 63)
+		<a href="../src/strconv/atoi.go.html#line-116" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-116">#L116</a>: 	maxVal := uint64(1)&lt;&lt;<b>uint</b>(bitSize) - 1
+		<a href="../src/strconv/atoi.go.html#line-209" class="path-duplicate">atoi.go</a><a href="../src/strconv/atoi.go.html#line-209">#L209</a>: 	cutoff := uint64(1 &lt;&lt; <b>uint</b>(bitSize-1))
+		<a href="../src/strconv/decimal.go.html#line-106">decimal.go#L106</a>: const uintSize = 32 &lt;&lt; (^<b>uint</b>(0) >> 63)
+		<a href="../src/strconv/decimal.go.html#line-110" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-110">#L110</a>: func rightShift(a *decimal, k <b>uint</b>) {
+		<a href="../src/strconv/decimal.go.html#line-115" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-115">#L115</a>: 	var n <b>uint</b>
+		<a href="../src/strconv/decimal.go.html#line-129" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-129">#L129</a>: 		c := <b>uint</b>(a.d[r])
+		<a href="../src/strconv/decimal.go.html#line-134" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-134">#L134</a>: 	var mask <b>uint</b> = (1 << k) - 1
+		<a href="../src/strconv/decimal.go.html#line-138" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-138">#L138</a>: 		c := <b>uint</b>(a.d[r])
+		<a href="../src/strconv/decimal.go.html#line-269" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-269">#L269</a>: func leftShift(a *decimal, k <b>uint</b>) {
+		<a href="../src/strconv/decimal.go.html#line-279" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-279">#L279</a>: 	var n <b>uint</b>
+		<a href="../src/strconv/decimal.go.html#line-281" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-281">#L281</a>: 		n += (<b>uint</b>(a.d[r]) - '0') << k
+		<a href="../src/strconv/decimal.go.html#line-324" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-324">#L324</a>: 		leftShift(a, <b>uint</b>(k))
+		<a href="../src/strconv/decimal.go.html#line-330" class="path-duplicate">decimal.go</a><a href="../src/strconv/decimal.go.html#line-330">#L330</a>: 		rightShift(a, <b>uint</b>(-k))
+		<a href="../src/strconv/extfloat.go.html#line-140">extfloat.go#L140</a>: 		f.mant &gt;&gt;= <b>uint</b>(n)
+		<a href="../src/strconv/extfloat.go.html#line-184" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-184">#L184</a>: 	if f.exp &lt;= 0 &amp;&amp; mant == (mant&gt;&gt;<b>uint</b>(-f.exp))&lt;&lt;<b>uint</b>(-f.exp) {
+		<a href="../src/strconv/extfloat.go.html#line-186" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-186">#L186</a>: 		f.mant &gt;&gt;= <b>uint</b>(-f.exp)
+		<a href="../src/strconv/extfloat.go.html#line-203" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-203">#L203</a>: func (f *extFloat) Normalize() <b>uint</b> {
+		<a href="../src/strconv/extfloat.go.html#line-209" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-209">#L209</a>: 	f.mant &lt;&lt;= <b>uint</b>(shift)
+		<a href="../src/strconv/extfloat.go.html#line-211" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-211">#L211</a>: 	return <b>uint</b>(shift)
+		<a href="../src/strconv/extfloat.go.html#line-303" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-303">#L303</a>: 	var extrabits <b>uint</b>
+		<a href="../src/strconv/extfloat.go.html#line-306" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-306">#L306</a>: 		extrabits = 63 - flt.mantbits + 1 + <b>uint</b>(denormalExp-f.exp)
+		<a href="../src/strconv/extfloat.go.html#line-385" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-385">#L385</a>: 	shift := <b>uint</b>(-f.exp)
+		<a href="../src/strconv/extfloat.go.html#line-488" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-488">#L488</a>: func adjustLastDigitFixed(d *decimalSlice, num, den uint64, shift <b>uint</b>, ε uint64) bool {
+		<a href="../src/strconv/extfloat.go.html#line-559" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-559">#L559</a>: 		f.mant &lt;&lt;= <b>uint</b>(f.exp - upper.exp)
+		<a href="../src/strconv/extfloat.go.html#line-563" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-563">#L563</a>: 		lower.mant &lt;&lt;= <b>uint</b>(lower.exp - upper.exp)
+		<a href="../src/strconv/extfloat.go.html#line-574" class="path-duplicate">extfloat.go</a><a href="../src/strconv/extfloat.go.html#line-574">#L574</a>: 	shift := <b>uint</b>(-upper.exp)
+		<a href="../src/strconv/ftoa.go.html#line-17">ftoa.go#L17</a>: 	mantbits <b>uint</b>
+		<a href="../src/strconv/ftoa.go.html#line-18" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-18">#L18</a>: 	expbits  <b>uint</b>
+		<a href="../src/strconv/ftoa.go.html#line-503" class="path-duplicate">ftoa.go</a><a href="../src/strconv/ftoa.go.html#line-503">#L503</a>: 		shift := <b>uint</b>(prec * 4)
+		<a href="../src/strconv/itoa.go.html#line-79">itoa.go#L79</a>: const host32bit = ^<b>uint</b>(0)>>32 == 0
+		<a href="../src/strconv/itoa.go.html#line-116" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-116">#L116</a>: 				us := <b>uint</b>(u - q*1e9) // u % 1e9 fits into a uint
+		<a href="../src/strconv/itoa.go.html#line-136" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-136">#L136</a>: 		us := <b>uint</b>(u)
+		<a href="../src/strconv/itoa.go.html#line-162" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-162">#L162</a>: 		shift := <b>uint</b>(bits.TrailingZeros(<b>uint</b>(base))) & 7
+		<a href="../src/strconv/itoa.go.html#line-164" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-164">#L164</a>: 		m := <b>uint</b>(base) - 1 // == 1<<shift - 1
+		<a href="../src/strconv/itoa.go.html#line-167" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-167">#L167</a>: 			a[i] = digits[<b>uint</b>(u)&m]
+		<a href="../src/strconv/itoa.go.html#line-172" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-172">#L172</a>: 		a[i] = digits[<b>uint</b>(u)]
+		<a href="../src/strconv/itoa.go.html#line-182" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-182">#L182</a>: 			a[i] = digits[<b>uint</b>(u-q*b)]
+		<a href="../src/strconv/itoa.go.html#line-187" class="path-duplicate">itoa.go</a><a href="../src/strconv/itoa.go.html#line-187">#L187</a>: 		a[i] = digits[<b>uint</b>(u)]
+		<a href="../src/strconv/quote.go.html#line-108">quote.go#L108</a>: 				buf = append(buf, lowerhex[r&gt;&gt;<b>uint</b>(s)&0xF])
+		<a href="../src/strconv/quote.go.html#line-113" class="path-duplicate">quote.go</a><a href="../src/strconv/quote.go.html#line-113">#L113</a>: 				buf = append(buf, lowerhex[r&gt;&gt;<b>uint</b>(s)&0xF])
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/strings.go.html#line-810">strings.go#L810</a>: 		as[c&gt;&gt;5] |= 1 &lt;&lt; <b>uint</b>(c&31)
+		<a href="../src/strings/strings.go.html#line-817" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-817">#L817</a>: 	return (as[c&gt;&gt;5] &amp; (1 &lt;&lt; <b>uint</b>(c&31))) != 0
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/exec_linux.go.html#line-132">exec_linux.go#L132</a>: func capToMask(cap uintptr) uint32 { return 1 &lt;&lt; <b>uint</b>(cap&31) }
+		<a href="../src/syscall/str.go.html#line-9">str.go#L9</a>: 		return "-" + uitoa(<b>uint</b>(-val))
+		<a href="../src/syscall/str.go.html#line-11" class="path-duplicate">str.go</a><a href="../src/syscall/str.go.html#line-11">#L11</a>: 	return uitoa(<b>uint</b>(val))
+		<a href="../src/syscall/str.go.html#line-14" class="path-duplicate">str.go</a><a href="../src/syscall/str.go.html#line-14">#L14</a>: func uitoa(val <b>uint</b>) string {
+		<a href="../src/syscall/syscall_linux.go.html#line-841">syscall_linux.go#L841</a>: func PtraceGetEventMsg(pid int) (msg <b>uint</b>, err error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-844" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-844">#L844</a>: 	msg = <b>uint</b>(data)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-188">zsyscall_linux_amd64.go#L188</a>: func reboot(magic1 <b>uint</b>, magic2 <b>uint</b>, cmd int, arg string) (err error) {
+
+	<a href="../pkg/time.html">time</a>
+		<a href="../src/time/format.go.html#line-367">format.go#L367</a>: 	u := <b>uint</b>(x)
+		<a href="../src/time/format.go.html#line-370" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-370">#L370</a>: 		u = <b>uint</b>(-x)
+		<a href="../src/time/format.go.html#line-416" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-416">#L416</a>: func formatNano(b []byte, nanosec <b>uint</b>, n int, trim bool) []byte {
+		<a href="../src/time/format.go.html#line-672" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-672">#L672</a>: 			b = formatNano(b, <b>uint</b>(t.Nanosecond()), std>>stdArgShift, std&stdMask == stdFracSecond9)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

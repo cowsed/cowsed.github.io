@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.chunkIndex</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mpagealloc.go.html#line-101">chunkIndex</a></b></span>
+
+21 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgcscavenge.go.html#line-604">mgcscavenge.go#L604</a>: 	maxChunk := <b>chunkIndex</b>(maxAddr)
+		<a href="../src/runtime/mgcscavenge.go.html#line-626" class="path-duplicate">mgcscavenge.go</a><a href="../src/runtime/mgcscavenge.go.html#line-626">#L626</a>: 		for i := <b>chunkIndex</b>(work.limit.addr() - 1); i &gt;= <b>chunkIndex</b>(work.base.addr()); i-- {
+		<a href="../src/runtime/mpagealloc.go.html#line-101">mpagealloc.go#L101</a>: func <b>chunkIndex</b>(p uintptr) chunkIdx {
+		<a href="../src/runtime/mpagealloc.go.html#line-365" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-365">#L365</a>: 	start, end := <b>chunkIndex</b>(base), <b>chunkIndex</b>(limit)
+		<a href="../src/runtime/mpagealloc.go.html#line-389" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-389">#L389</a>: 	for c := <b>chunkIndex</b>(base); c &lt; <b>chunkIndex</b>(limit); c++ {
+		<a href="../src/runtime/mpagealloc.go.html#line-418" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-418">#L418</a>: 	sc, ec := <b>chunkIndex</b>(base), <b>chunkIndex</b>(limit)
+		<a href="../src/runtime/mpagealloc.go.html#line-503" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-503">#L503</a>: 	sc, ec := <b>chunkIndex</b>(base), <b>chunkIndex</b>(limit)
+		<a href="../src/runtime/mpagealloc.go.html#line-792" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-792">#L792</a>: 	if <b>chunkIndex</b>(s.searchAddr.addr()) >= s.end {
+		<a href="../src/runtime/mpagealloc.go.html#line-801" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-801">#L801</a>: 		i := <b>chunkIndex</b>(s.searchAddr.addr())
+		<a href="../src/runtime/mpagealloc.go.html#line-857" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-857">#L857</a>: 		i := <b>chunkIndex</b>(base)
+		<a href="../src/runtime/mpagealloc.go.html#line-861" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-861">#L861</a>: 		sc, ec := <b>chunkIndex</b>(base), <b>chunkIndex</b>(limit)
+		<a href="../src/runtime/mpagecache.go.html#line-79">mpagecache.go#L79</a>: 	ci := <b>chunkIndex</b>(c.base)
+		<a href="../src/runtime/mpagecache.go.html#line-109" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-109">#L109</a>: 	if <b>chunkIndex</b>(s.searchAddr.addr()) >= s.end {
+		<a href="../src/runtime/mpagecache.go.html#line-113" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-113">#L113</a>: 	ci := <b>chunkIndex</b>(s.searchAddr.addr()) // chunk index
+		<a href="../src/runtime/mpagecache.go.html#line-136" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-136">#L136</a>: 		ci := <b>chunkIndex</b>(addr)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.maptype.indirectelem</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/type.go.html#line-365">maptype</a>.<a href="../src/runtime/type.go.html#line-383">indirectelem</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+11 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/map.go.html#line-442">map.go#L442</a>: 				if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-500" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-500">#L500</a>: 				if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-544" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-544">#L544</a>: 				if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-666" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-666">#L666</a>: 	if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-679" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-679">#L679</a>: 	if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-742" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-742">#L742</a>: 			if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-940" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-940">#L940</a>: 			if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-1212" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1212">#L1212</a>: 				if t.<b>indirectelem</b>() {
+		<a href="../src/runtime/map.go.html#line-1278" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1278">#L1278</a>: 	if t.elem.size &gt; maxElemSize &amp;&amp; (!t.<b>indirectelem</b>() || t.elemsize != uint8(sys.PtrSize)) ||
+		<a href="../src/runtime/map.go.html#line-1279" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-1279">#L1279</a>: 		t.elem.size &lt;= maxElemSize &amp;&amp; (t.<b>indirectelem</b>() || t.elemsize != uint8(t.elem.size)) {
+		<a href="../src/runtime/type.go.html#line-383">type.go#L383</a>: func (mt *maptype) <b>indirectelem</b>() bool { // store ptr to elem instead of elem itself
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

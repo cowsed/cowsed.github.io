@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.sudog</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-345">sudog</a></b></span>
+
+40 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/chan.go.html#line-54">chan.go#L54</a>: 	first *<b>sudog</b>
+		<a href="../src/runtime/chan.go.html#line-55" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-55">#L55</a>: 	last  *<b>sudog</b>
+		<a href="../src/runtime/chan.go.html#line-292" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-292">#L292</a>: func send(c *hchan, sg *<b>sudog</b>, ep unsafe.Pointer, unlockf func(), skip int) {
+		<a href="../src/runtime/chan.go.html#line-335" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-335">#L335</a>: func sendDirect(t *_type, sg *<b>sudog</b>, src unsafe.Pointer) {
+		<a href="../src/runtime/chan.go.html#line-348" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-348">#L348</a>: func recvDirect(t *_type, sg *<b>sudog</b>, dst unsafe.Pointer) {
+		<a href="../src/runtime/chan.go.html#line-608" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-608">#L608</a>: func recv(c *hchan, sg *<b>sudog</b>, ep unsafe.Pointer, unlockf func(), skip int) {
+		<a href="../src/runtime/chan.go.html#line-776" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-776">#L776</a>: func (q *waitq) enqueue(sgp *<b>sudog</b>) {
+		<a href="../src/runtime/chan.go.html#line-790" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-790">#L790</a>: func (q *waitq) dequeue() *<b>sudog</b> {
+		<a href="../src/runtime/chan.go.html#line-831" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-831">#L831</a>: func racesync(c *hchan, sg *<b>sudog</b>) {
+		<a href="../src/runtime/mgc.go.html#line-2255">mgc.go#L2255</a>: 	var sg, sgnext *<b>sudog</b>
+		<a href="../src/runtime/proc.go.html#line-322">proc.go#L322</a>: func acquireSudog() *<b>sudog</b> {
+		<a href="../src/runtime/proc.go.html#line-345" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-345">#L345</a>: 			pp.sudogcache = append(pp.sudogcache, new(<b>sudog</b>))
+		<a href="../src/runtime/proc.go.html#line-360" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-360">#L360</a>: func releaseSudog(s *<b>sudog</b>) {
+		<a href="../src/runtime/proc.go.html#line-387" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-387">#L387</a>: 		var first, last *<b>sudog</b>
+		<a href="../src/runtime/runtime2.go.html#line-345">runtime2.go#L345</a>: type <b>sudog</b> struct {
+		<a href="../src/runtime/runtime2.go.html#line-352" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-352">#L352</a>: 	next *<b>sudog</b>
+		<a href="../src/runtime/runtime2.go.html#line-353" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-353">#L353</a>: 	prev *<b>sudog</b>
+		<a href="../src/runtime/runtime2.go.html#line-369" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-369">#L369</a>: 	parent   *<b>sudog</b> // semaRoot binary tree
+		<a href="../src/runtime/runtime2.go.html#line-370" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-370">#L370</a>: 	waitlink *<b>sudog</b> // g.waiting list or semaRoot
+		<a href="../src/runtime/runtime2.go.html#line-371" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-371">#L371</a>: 	waittail *<b>sudog</b> // semaRoot
+		<a href="../src/runtime/runtime2.go.html#line-470" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-470">#L470</a>: 	waiting        *<b>sudog</b>         // sudog structures this g is waiting on (that have a valid elem ptr); in lock order
+		<a href="../src/runtime/runtime2.go.html#line-610" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-610">#L610</a>: 	sudogcache []*<b>sudog</b>
+		<a href="../src/runtime/runtime2.go.html#line-611" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-611">#L611</a>: 	sudogbuf   [128]*<b>sudog</b>
+		<a href="../src/runtime/runtime2.go.html#line-749" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-749">#L749</a>: 	sudogcache *<b>sudog</b>
+		<a href="../src/runtime/select.go.html#line-229">select.go#L229</a>: 		sg     *<b>sudog</b>
+		<a href="../src/runtime/select.go.html#line-232" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-232">#L232</a>: 		sglist *<b>sudog</b>
+		<a href="../src/runtime/select.go.html#line-233" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-233">#L233</a>: 		sgnext *<b>sudog</b>
+		<a href="../src/runtime/select.go.html#line-235" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-235">#L235</a>: 		nextp  **<b>sudog</b>
+		<a href="../src/runtime/select.go.html#line-344" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-344">#L344</a>: 	sg = (*<b>sudog</b>)(gp.param)
+		<a href="../src/runtime/select.go.html#line-569" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-569">#L569</a>: func (q *waitq) dequeueSudoG(sgp *<b>sudog</b>) {
+		<a href="../src/runtime/sema.go.html#line-42">sema.go#L42</a>: 	treap *<b>sudog</b> // root of balanced tree of unique waiters.
+		<a href="../src/runtime/sema.go.html#line-79" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-79">#L79</a>: func readyWithTime(s *<b>sudog</b>, traceskip int) {
+		<a href="../src/runtime/sema.go.html#line-234" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-234">#L234</a>: func (root *semaRoot) queue(addr *uint32, s *<b>sudog</b>, lifo bool) {
+		<a href="../src/runtime/sema.go.html#line-240" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-240">#L240</a>: 	var last *<b>sudog</b>
+		<a href="../src/runtime/sema.go.html#line-321" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-321">#L321</a>: func (root *semaRoot) dequeue(addr *uint32) (found *<b>sudog</b>, now int64) {
+		<a href="../src/runtime/sema.go.html#line-392" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-392">#L392</a>: func (root *semaRoot) rotateLeft(x *<b>sudog</b>) {
+		<a href="../src/runtime/sema.go.html#line-420" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-420">#L420</a>: func (root *semaRoot) rotateRight(y *<b>sudog</b>) {
+		<a href="../src/runtime/sema.go.html#line-465" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-465">#L465</a>: 	head *<b>sudog</b>
+		<a href="../src/runtime/sema.go.html#line-466" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-466">#L466</a>: 	tail *<b>sudog</b>
+		<a href="../src/runtime/sema.go.html#line-586" class="path-duplicate">sema.go</a><a href="../src/runtime/sema.go.html#line-586">#L586</a>: 	for p, s := (*<b>sudog</b>)(nil), l.head; s != nil; p, s = s, s.next {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

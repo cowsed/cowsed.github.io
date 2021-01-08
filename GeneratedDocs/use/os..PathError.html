@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: os.PathError</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/os.html">os</a>.<a href="../src/os/error.go.html#line-50">PathError</a></b></span>
+
+36 uses:
+
+	os <i>(current package)</i>
+		<a href="../src/os/error.go.html#line-50">error.go#L50</a>: type <b>PathError</b> struct {
+		<a href="../src/os/error.go.html#line-56" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-56">#L56</a>: func (e *<b>PathError</b>) Error() string { return e.Op + " " + e.Path + ": " + e.Err.Error() }
+		<a href="../src/os/error.go.html#line-58" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-58">#L58</a>: func (e *<b>PathError</b>) Unwrap() error { return e.Err }
+		<a href="../src/os/error.go.html#line-61" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-61">#L61</a>: func (e *<b>PathError</b>) Timeout() bool {
+		<a href="../src/os/error.go.html#line-136" class="path-duplicate">error.go</a><a href="../src/os/error.go.html#line-136">#L136</a>: 	case *<b>PathError</b>:
+		<a href="../src/os/exec_posix.go.html#line-31">exec_posix.go#L31</a>: 			pe := err.(*<b>PathError</b>)
+		<a href="../src/os/exec_posix.go.html#line-59" class="path-duplicate">exec_posix.go</a><a href="../src/os/exec_posix.go.html#line-59">#L59</a>: 		return nil, &amp;<b>PathError</b>{"fork/exec", name, e}
+		<a href="../src/os/file.go.html#line-130">file.go#L130</a>: 		return 0, &amp;<b>PathError</b>{"readat", f.name, errors.New("negative offset")}
+		<a href="../src/os/file.go.html#line-206" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-206">#L206</a>: 		return 0, &amp;<b>PathError</b>{"writeat", f.name, errors.New("negative offset")}
+		<a href="../src/os/file.go.html#line-256" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-256">#L256</a>: 		return &amp;<b>PathError</b>{"mkdir", name, syscall.ENOTDIR}
+		<a href="../src/os/file.go.html#line-261" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-261">#L261</a>: 		return &amp;<b>PathError</b>{"mkdir", name, e}
+		<a href="../src/os/file.go.html#line-291" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-291">#L291</a>: 		return &amp;<b>PathError</b>{"chdir", dir, e}
+		<a href="../src/os/file.go.html#line-366" class="path-duplicate">file.go</a><a href="../src/os/file.go.html#line-366">#L366</a>: 	return &amp;<b>PathError</b>{op, f.name, err}
+		<a href="../src/os/file_posix.go.html#line-80">file_posix.go#L80</a>: 		return &amp;<b>PathError</b>{"chmod", name, e}
+		<a href="../src/os/file_posix.go.html#line-105" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-105">#L105</a>: 		return &amp;<b>PathError</b>{"chown", name, e}
+		<a href="../src/os/file_posix.go.html#line-118" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-118">#L118</a>: 		return &amp;<b>PathError</b>{"lchown", name, e}
+		<a href="../src/os/file_posix.go.html#line-175" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-175">#L175</a>: 		return &amp;<b>PathError</b>{"chtimes", name, e}
+		<a href="../src/os/file_unix.go.html#line-34">file_unix.go#L34</a>: 			if pe, ok := err.(*<b>PathError</b>); ok {
+		<a href="../src/os/file_unix.go.html#line-210" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-210">#L210</a>: 		return nil, &amp;<b>PathError</b>{"open", name, e}
+		<a href="../src/os/file_unix.go.html#line-239" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-239">#L239</a>: 		err = &amp;<b>PathError</b>{"close", file.name, e}
+		<a href="../src/os/file_unix.go.html#line-268" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-268">#L268</a>: 		return &amp;<b>PathError</b>{"truncate", name, e}
+		<a href="../src/os/file_unix.go.html#line-301" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-301">#L301</a>: 	return &amp;<b>PathError</b>{"remove", name, e}
+		<a href="../src/os/file_unix.go.html#line-374" class="path-duplicate">file_unix.go</a><a href="../src/os/file_unix.go.html#line-374">#L374</a>: 			return "", &amp;<b>PathError</b>{"readlink", name, e}
+		<a href="../src/os/path.go.html#line-25">path.go#L25</a>: 		return &amp;<b>PathError</b>{"mkdir", path, syscall.ENOTDIR}
+		<a href="../src/os/removeall_at.go.html#line-25">removeall_at.go#L25</a>: 		return &amp;<b>PathError</b>{"RemoveAll", path, syscall.EINVAL}
+		<a href="../src/os/removeall_at.go.html#line-49" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-49">#L49</a>: 		if pathErr, ok := err.(*<b>PathError</b>); ok {
+		<a href="../src/os/removeall_at.go.html#line-73" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-73">#L73</a>: 		return &amp;<b>PathError</b>{"unlinkat", base, err}
+		<a href="../src/os/removeall_at.go.html#line-83" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-83">#L83</a>: 		return &amp;<b>PathError</b>{"fstatat", base, statErr}
+		<a href="../src/os/removeall_at.go.html#line-87" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-87">#L87</a>: 		return &amp;<b>PathError</b>{"unlinkat", base, err}
+		<a href="../src/os/removeall_at.go.html#line-102" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-102">#L102</a>: 			recurseErr = &amp;<b>PathError</b>{"openfdat", base, err}
+		<a href="../src/os/removeall_at.go.html#line-116" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-116">#L116</a>: 				return &amp;<b>PathError</b>{"readdirnames", base, readErr}
+		<a href="../src/os/removeall_at.go.html#line-123" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-123">#L123</a>: 					if pathErr, ok := err.(*<b>PathError</b>); ok {
+		<a href="../src/os/removeall_at.go.html#line-162" class="path-duplicate">removeall_at.go</a><a href="../src/os/removeall_at.go.html#line-162">#L162</a>: 	return &amp;<b>PathError</b>{"unlinkat", base, unlinkError}
+		<a href="../src/os/stat_unix.go.html#line-22">stat_unix.go#L22</a>: 		return nil, &amp;<b>PathError</b>{"stat", f.name, err}
+		<a href="../src/os/stat_unix.go.html#line-33" class="path-duplicate">stat_unix.go</a><a href="../src/os/stat_unix.go.html#line-33">#L33</a>: 		return nil, &amp;<b>PathError</b>{"stat", name, err}
+		<a href="../src/os/stat_unix.go.html#line-44" class="path-duplicate">stat_unix.go</a><a href="../src/os/stat_unix.go.html#line-44">#L44</a>: 		return nil, &amp;<b>PathError</b>{"lstat", name, err}
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

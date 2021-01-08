@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.specials</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-402">mspan</a>.<a href="../src/runtime/mheap.go.html#line-485">specials</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+16 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/heapdump.go.html#line-440">heapdump.go#L440</a>: 			for sp := s.<b>specials</b>; sp != nil; sp = sp.next {
+		<a href="../src/runtime/heapdump.go.html#line-627" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-627">#L627</a>: 		for sp := s.<b>specials</b>; sp != nil; sp = sp.next {
+		<a href="../src/runtime/mgcmark.go.html#line-376">mgcmark.go#L376</a>: 			for sp := s.<b>specials</b>; sp != nil; sp = sp.next {
+		<a href="../src/runtime/mgcmark.go.html#line-452" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-452">#L452</a>: 		if s.<b>specials</b> == nil {
+		<a href="../src/runtime/mgcmark.go.html#line-460" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-460">#L460</a>: 		for sp := s.<b>specials</b>; sp != nil; sp = sp.next {
+		<a href="../src/runtime/mgcsweep.go.html#line-367">mgcsweep.go#L367</a>: 	hadSpecials := s.<b>specials</b> != nil
+		<a href="../src/runtime/mgcsweep.go.html#line-368" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-368">#L368</a>: 	specialp := &amp;s.<b>specials</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-412" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-412">#L412</a>: 	if hadSpecials &amp;&amp; s.<b>specials</b> == nil {
+		<a href="../src/runtime/mgcsweep.go.html#line-620" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-620">#L620</a>: 	hadSpecials := s.<b>specials</b> != nil
+		<a href="../src/runtime/mgcsweep.go.html#line-621" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-621">#L621</a>: 	specialp := &amp;s.<b>specials</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-665" class="path-duplicate">mgcsweep.go</a><a href="../src/runtime/mgcsweep.go.html#line-665">#L665</a>: 	if go115NewMarkrootSpans &amp;&amp; hadSpecials &amp;&amp; s.<b>specials</b> == nil {
+		<a href="../src/runtime/mheap.go.html#line-485">mheap.go#L485</a>: 	<b>specials</b>    *special      // linked list of special records sorted by offset.
+		<a href="../src/runtime/mheap.go.html#line-1523" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1523">#L1523</a>: 	span.<b>specials</b> = nil
+		<a href="../src/runtime/mheap.go.html#line-1683" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1683">#L1683</a>: 	t := &amp;span.<b>specials</b>
+		<a href="../src/runtime/mheap.go.html#line-1732" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1732">#L1732</a>: 	t := &amp;span.<b>specials</b>
+		<a href="../src/runtime/mheap.go.html#line-1747" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1747">#L1747</a>: 	if go115NewMarkrootSpans &amp;&amp; span.<b>specials</b> == nil {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

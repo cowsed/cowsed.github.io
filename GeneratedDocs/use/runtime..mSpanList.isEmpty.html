@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mSpanList.isEmpty</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-396">mSpanList</a>.<a href="../src/runtime/mheap.go.html#line-1563">isEmpty</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+6 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mgcwork.go.html#line-538">mgcwork.go#L538</a>: 	if gcphase != _GCoff || work.wbufSpans.free.<b>isEmpty</b>() {
+		<a href="../src/runtime/mgcwork.go.html#line-553" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-553">#L553</a>: 	more := !work.wbufSpans.free.<b>isEmpty</b>()
+		<a href="../src/runtime/mheap.go.html#line-1563">mheap.go#L1563</a>: func (list *mSpanList) <b>isEmpty</b>() bool {
+		<a href="../src/runtime/mheap.go.html#line-1605" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1605">#L1605</a>: 	if other.<b>isEmpty</b>() {
+		<a href="../src/runtime/mheap.go.html#line-1615" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1615">#L1615</a>: 	if list.<b>isEmpty</b>() {
+		<a href="../src/runtime/stack.go.html#line-389">stack.go#L389</a>: 		if !stackLarge.free[log2npage].<b>isEmpty</b>() {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

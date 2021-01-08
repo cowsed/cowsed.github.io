@@ -1,0 +1,31 @@
+<svg width="528" height="189" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#fff" id="canvas_background" width="530" height="191" y="-1" x="-1"/>
+<text xml:space="preserve" text-anchor="middle" font-weight="bold" font-family='"Courier New", Courier, monospace' font-size="12" x="264" y="19" fill="#000">Numbers of Go Source Files by Import Counts</text>
+<rect x="112" y="33" width="320.00" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="42" fill="#000">0</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="435.00" y="42" fill="#000">(139)</text>
+<rect x="112" y="50" width="230.22" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="59" fill="#000">1</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="345.22" y="59" fill="#000">(100)</text>
+<rect x="112" y="67" width="156.55" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="76" fill="#000">2</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="271.55" y="76" fill="#000">(68)</text>
+<rect x="112" y="84" width="94.39" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="93" fill="#000">3</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="209.39" y="93" fill="#000">(41)</text>
+<rect x="112" y="101" width="32.23" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="110" fill="#000">4</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="147.23" y="110" fill="#000">(14)</text>
+<rect x="112" y="118" width="6.91" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="127" fill="#000">5</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="121.91" y="127" fill="#000">(3)</text>
+<rect x="112" y="135" width="13.81" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="144" fill="#000">6</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="128.81" y="144" fill="#000">(6)</text>
+<rect x="112" y="152" width="2.30" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="161" fill="#000">7</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.30" y="161" fill="#000">(1)</text>
+<rect x="112" y="169" width="2.30" height="12" fill="#000" />
+<text xml:space="preserve" text-anchor="end" font-family='"Courier New", Courier, monospace' font-size="12" x="109" y="178" fill="#000">8</text>
+<text xml:space="preserve" text-anchor="start" font-style="italic" font-family='"Courier New", Courier, monospace' font-size="12" x="117.30" y="178" fill="#000">(1)</text>
+</svg>

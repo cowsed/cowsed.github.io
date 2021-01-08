@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.bitScan</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mbitmap.go.html#line-85">bitScan</a></b></span>
+
+32 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/mbitmap.go.html#line-85">mbitmap.go#L85</a>: 	<b>bitScan</b>    = 1 << 4
+		<a href="../src/runtime/mbitmap.go.html#line-91" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-91">#L91</a>: 	bitScanAll    = <b>bitScan</b> | <b>bitScan</b>&lt;&lt;heapBitsShift | <b>bitScan</b>&lt;&lt;(2*heapBitsShift) | <b>bitScan</b><<(3*heapBitsShift)
+		<a href="../src/runtime/mbitmap.go.html#line-543" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-543">#L543</a>: 	return h.bits()&amp;<b>bitScan</b> != 0
+		<a href="../src/runtime/mbitmap.go.html#line-566" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-566">#L566</a>: 	return (*h.bitp&gt;&gt;(heapBitsShift+h.shift))&amp;<b>bitScan</b> != 0
+		<a href="../src/runtime/mbitmap.go.html#line-578" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-578">#L578</a>: 	atomic.Or8(h.bitp, <b>bitScan</b><<(heapBitsShift+h.shift))
+		<a href="../src/runtime/mbitmap.go.html#line-845" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-845">#L845</a>: 		*h.bitp &amp;^= <b>bitScan</b> << (heapBitsShift + h.shift)
+		<a href="../src/runtime/mbitmap.go.html#line-960" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-960">#L960</a>: 				*h.bitp &amp;^= (bitPointer | <b>bitScan</b> | ((bitPointer | <b>bitScan</b>) << heapBitsShift)) << h.shift
+		<a href="../src/runtime/mbitmap.go.html#line-961" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-961">#L961</a>: 				*h.bitp |= (bitPointer | <b>bitScan</b>) << h.shift
+		<a href="../src/runtime/mbitmap.go.html#line-964" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-964">#L964</a>: 				*h.bitp |= (bitPointer | <b>bitScan</b> | bitPointer<<heapBitsShift) << h.shift
+		<a href="../src/runtime/mbitmap.go.html#line-977" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-977">#L977</a>: 		hb := (b &amp; 3) | <b>bitScan</b>
+		<a href="../src/runtime/mbitmap.go.html#line-982" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-982">#L982</a>: 		*h.bitp &amp;^= (bitPointer | <b>bitScan</b> | ((bitPointer | <b>bitScan</b>) << heapBitsShift)) << h.shift
+		<a href="../src/runtime/mbitmap.go.html#line-1189" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1189">#L1189</a>: 		hb |= <b>bitScan</b> | <b>bitScan</b>&lt;&lt;(2*heapBitsShift) | <b>bitScan</b><<(3*heapBitsShift)
+		<a href="../src/runtime/mbitmap.go.html#line-1208" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1208">#L1208</a>: 		hb |= <b>bitScan</b> << (2 * heapBitsShift)
+		<a href="../src/runtime/mbitmap.go.html#line-1213" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1213">#L1213</a>: 		*hbitp &amp;^= uint8((bitPointer | <b>bitScan</b> | (bitPointer << heapBitsShift)) << (2 * heapBitsShift))
+		<a href="../src/runtime/mbitmap.go.html#line-1331" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1331">#L1331</a>: 		*hbitp = *hbitp&amp;^(bitPointer|<b>bitScan</b>|(bitPointer|<b>bitScan</b>)<<heapBitsShift) | uint8(hb)
+		<a href="../src/runtime/mbitmap.go.html#line-1358" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1358">#L1358</a>: 			*h.bitp = *h.bitp&amp;^((bitPointer|<b>bitScan</b>|(bitPointer|<b>bitScan</b>)<<heapBitsShift)<<(2*heapBitsShift)) | *src
+		<a href="../src/runtime/mbitmap.go.html#line-1384" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1384">#L1384</a>: 			*h.bitp = *h.bitp&amp;^(bitPointer|<b>bitScan</b>|(bitPointer|<b>bitScan</b>)<<heapBitsShift) | *src
+		<a href="../src/runtime/mbitmap.go.html#line-1438" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1438">#L1438</a>: 			have = (*h.bitp &gt;&gt; h.shift) &amp; (bitPointer | <b>bitScan</b>)
+		<a href="../src/runtime/mbitmap.go.html#line-1442" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1442">#L1442</a>: 					want = <b>bitScan</b>
+		<a href="../src/runtime/mbitmap.go.html#line-1449" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1449">#L1449</a>: 					want |= <b>bitScan</b>
+		<a href="../src/runtime/mbitmap.go.html#line-1451" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1451">#L1451</a>: 					have &amp;^= <b>bitScan</b>
+		<a href="../src/runtime/mgcmark.go.html#line-1362">mgcmark.go#L1362</a>: 		if i != 1*sys.PtrSize &amp;&amp; bits&amp;<b>bitScan</b> == 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>

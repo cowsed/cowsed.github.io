@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime._defer</title>
+<link href="../css/light-v0.1.8-preview.css" rel="stylesheet">
+<script src="../jvs/golds-v0.1.8-preview.js"></script>
+<body><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-885">_defer</a></b></span>
+
+21 uses:
+
+	runtime <i>(current package)</i>
+		<a href="../src/runtime/malloc.go.html#line-1088">malloc.go#L1088</a>: 			dataSize = unsafe.Sizeof(<b>_defer</b>{})
+		<a href="../src/runtime/mgc.go.html#line-2269">mgc.go#L2269</a>: 		var d, dlink *<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-271">panic.go#L271</a>: func deferprocStack(d *<b>_defer</b>) {
+		<a href="../src/runtime/panic.go.html#line-313" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-313">#L313</a>: 	deferHeaderSize = unsafe.Sizeof(<b>_defer</b>{})
+		<a href="../src/runtime/panic.go.html#line-363" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-363">#L363</a>: func deferArgs(d *<b>_defer</b>) unsafe.Pointer {
+		<a href="../src/runtime/panic.go.html#line-375" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-375">#L375</a>: 	x = (*<b>_defer</b>)(nil)
+		<a href="../src/runtime/panic.go.html#line-387" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-387">#L387</a>: func newdefer(siz int32) *<b>_defer</b> {
+		<a href="../src/runtime/panic.go.html#line-388" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-388">#L388</a>: 	var d *<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-417" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-417">#L417</a>: 			d = (*<b>_defer</b>)(mallocgc(total, deferType, true))
+		<a href="../src/runtime/panic.go.html#line-441" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-441">#L441</a>: func freedefer(d *<b>_defer</b>) {
+		<a href="../src/runtime/panic.go.html#line-462" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-462">#L462</a>: 			var first, last *<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-714" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-714">#L714</a>: 	var prevDefer *<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-737" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-737">#L737</a>: 				var prev *<b>_defer</b>
+		<a href="../src/runtime/panic.go.html#line-814" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-814">#L814</a>: func runOpenDeferFrame(gp *g, d *<b>_defer</b>) bool {
+		<a href="../src/runtime/panic.go.html#line-1015" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1015">#L1015</a>: 				var prev *<b>_defer</b>
+		<a href="../src/runtime/runtime2.go.html#line-419">runtime2.go#L419</a>: 	_defer       *<b>_defer</b> // innermost defer
+		<a href="../src/runtime/runtime2.go.html#line-582" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-582">#L582</a>: 	deferpool    [5][]*<b>_defer</b> // pool of available defer structs of different sizes (see panic.go)
+		<a href="../src/runtime/runtime2.go.html#line-583" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-583">#L583</a>: 	deferpoolbuf [5][32]*<b>_defer</b>
+		<a href="../src/runtime/runtime2.go.html#line-753" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-753">#L753</a>: 	deferpool [5]*<b>_defer</b>
+		<a href="../src/runtime/runtime2.go.html#line-885" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-885">#L885</a>: type <b>_defer</b> struct {
+		<a href="../src/runtime/runtime2.go.html#line-897" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-897">#L897</a>: 	link      *<b>_defer</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/article/tool-golds.html"><b>Golds</b></a> <i>v0.1.8-preview</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project and developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table
+</pre>
+</div></body></html>
